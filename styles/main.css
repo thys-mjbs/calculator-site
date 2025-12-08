@@ -1,6 +1,17 @@
 /* Base style reset to ensure consistent layout */
+
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 40px 0 0 0;
   padding: 0;
+}
+
+/* Center all calculator blocks horizontally */
+.calculator-container {
+  margin: 0 auto;
+}
+
+/* Center the main heading */
+h1 {
+  text-align: center;
 }
