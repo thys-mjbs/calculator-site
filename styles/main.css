@@ -1,0 +1,6 @@
+/* Base style reset to ensure consistent layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+}
