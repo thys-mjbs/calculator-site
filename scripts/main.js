@@ -1,8 +1,13 @@
 /* Global script file for all calculators */
 
-/* Utility: safely convert numeric input */
+/* Utility: safely convert numeric input (removes commas) */
 function toNumber(value) {
-  const num = parseFloat(value);
+  if (typeof value !== "string") {
+    value = String(value || "");
+  }
+
+  const cleaned = value.replace(/,/g, "").trim();
+  const num = parseFloat(cleaned);
   return isNaN(num) ? 0 : num;
 }
 
@@ -19,9 +24,41 @@ function formatNumberTwoDecimals(value) {
   });
 }
 
-/* Utility: format a currency with a symbol (default R) */
-function formatCurrency(amount, symbol = "R") {
-  return symbol + formatNumberTwoDecimals(amount);
+/* Utility: format an input string with commas (no forced decimals) */
+function formatInputWithCommas(value) {
+  if (typeof value !== "string") {
+    value = String(value || "");
+  }
+
+  // Remove existing commas
+  let cleaned = value.replace(/,/g, "");
+
+  // Split integer and decimal part
+  const parts = cleaned.split(".");
+  let integerPart = parts[0] || "";
+  const decimalPart = parts[1] || "";
+
+  // If not a number at all, just return empty
+  if (integerPart === "" && decimalPart === "") {
+    return "";
+  }
+
+  // Remove any non-digit from integer part
+  integerPart = integerPart.replace(/\D/g, "");
+
+  if (integerPart === "") {
+    return "";
+  }
+
+  // Add commas to integer part
+  const withCommas = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  // Reattach decimal part if user typed it
+  if (decimalPart !== "") {
+    return withCommas + "." + decimalPart;
+  }
+
+  return withCommas;
 }
 
 /* Placeholder: calculators can call this if needed */
