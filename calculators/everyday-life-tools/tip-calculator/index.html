@@ -10,30 +10,73 @@
   </head>
 
   <body>
-    <h1>Tip Calculator</h1>
+    <div class="page-layout">
+      <h1>Tip Calculator</h1>
 
-    <div class="calculator-container">
-      <label for="billAmount">Bill Amount:</label>
-      <input
-        type="text"
-        id="billAmount"
-        placeholder="Enter bill amount"
-        inputmode="decimal"
-      >
+      <div class="page-main">
+        <!-- Left side: calculator + suggestion box -->
+        <div class="calculator-column">
+          <div class="calculator-container">
+            <label for="billAmount">Bill Amount:</label>
+            <input
+              type="text"
+              id="billAmount"
+              placeholder="Enter bill amount"
+              inputmode="decimal"
+            >
 
-      <label for="tipPercentage">Tip Percentage (%):</label>
-      <input
-        type="number"
-        id="tipPercentage"
-        placeholder="Enter tip %"
-        min="0"
-        max="1000"
-        step="0.1"
-      >
+            <label for="tipPercentage">Tip Percentage (%):</label>
+            <input
+              type="number"
+              id="tipPercentage"
+              placeholder="Enter tip %"
+              min="0"
+              max="1000"
+              step="0.1"
+            >
 
-      <button id="calculateButton">Calculate Tip</button>
+            <button id="calculateButton">Calculate Tip</button>
 
-      <div id="result"></div>
+            <div id="result"></div>
+          </div>
+
+          <div class="suggestion-box">
+            <h2>Suggestions or improvements?</h2>
+            <p>
+              If you notice something off, or have an idea to make this calculator more useful,
+              make a note for now. A proper feedback form will be added here later.
+            </p>
+            <p>
+              This box is the standard placeholder for user feedback on every calculator page.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right side: ad / affiliate placeholders -->
+        <aside class="side-column">
+          <div class="ad-block">
+            <div class="ad-title">Ad placeholder</div>
+            <div class="ad-placeholder-img">
+              300×250 banner image
+            </div>
+            <p>
+              This space is reserved for a future display ad (e.g. Google AdSense). The final code
+              snippet will replace this block.
+            </p>
+          </div>
+
+          <div class="ad-block">
+            <div class="ad-title">Affiliate placeholder</div>
+            <div class="ad-placeholder-img">
+              Affiliate product image
+            </div>
+            <p>
+              This space is reserved for a future affiliate tile with image and link.
+              For now, this is static placeholder content.
+            </p>
+          </div>
+        </aside>
+      </div>
     </div>
   </body>
 </html>
