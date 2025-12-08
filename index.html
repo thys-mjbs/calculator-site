@@ -7,177 +7,199 @@
   </head>
 
   <body>
-    <div class="home-layout">
-      <div class="home-header">
-        <h1>Calculator Site</h1>
-        <p>Select a category to view calculators.</p>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/calculator-site/" class="site-logo">Calculator Site</a>
+        <nav class="site-nav">
+          <a href="/calculator-site/">Home</a>
+          <a href="/calculator-site/#categories">Categories</a>
+          <a href="/calculator-site/contact.html">Contact</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="home-grid">
-        <!-- 1. Personal Finance -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/personal-finance/"
-        >
-          <div class="home-card-title">Personal Finance</div>
-          <div class="home-card-desc">
-            Budgeting, income, expenses, everyday money decisions.
-          </div>
-        </a>
+    <main class="site-main">
+      <div class="home-layout" id="categories">
+        <div class="home-header">
+          <h1>Calculator Site</h1>
+          <p>Select a category to view calculators.</p>
+        </div>
 
-        <!-- 2. Business & Accounting -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/business-accounting/"
-        >
-          <div class="home-card-title">Business &amp; Accounting</div>
-          <div class="home-card-desc">
-            Cash flow, margins, pricing, tax and simple reporting tools.
-          </div>
-        </a>
+        <div class="home-grid">
+          <!-- 1. Personal Finance -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/personal-finance/"
+          >
+            <div class="home-card-title">Personal Finance</div>
+            <div class="home-card-desc">
+              Budgeting, income, expenses, everyday money decisions.
+            </div>
+          </a>
 
-        <!-- 3. Loans & Credit -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/loans-credit/"
-        >
-          <div class="home-card-title">Loans &amp; Credit</div>
-          <div class="home-card-desc">
-            Repayments, interest, payoff timelines and debt comparisons.
-          </div>
-        </a>
+          <!-- 2. Business & Accounting -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/business-accounting/"
+          >
+            <div class="home-card-title">Business &amp; Accounting</div>
+            <div class="home-card-desc">
+              Cash flow, margins, pricing, tax and simple reporting tools.
+            </div>
+          </a>
 
-        <!-- 4. Savings & Investments -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/savings-investments/"
-        >
-          <div class="home-card-title">Savings &amp; Investments</div>
-          <div class="home-card-desc">
-            Compound growth, regular deposits and long-term planning.
-          </div>
-        </a>
+          <!-- 3. Loans & Credit -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/loans-credit/"
+          >
+            <div class="home-card-title">Loans &amp; Credit</div>
+            <div class="home-card-desc">
+              Repayments, interest, payoff timelines and debt comparisons.
+            </div>
+          </a>
 
-        <!-- 5. Real Estate & Property -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/real-estate-property/"
-        >
-          <div class="home-card-title">Real Estate &amp; Property</div>
-          <div class="home-card-desc">
-            Mortgages, rent vs buy, affordability and property metrics.
-          </div>
-        </a>
+          <!-- 4. Savings & Investments -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/savings-investments/"
+          >
+            <div class="home-card-title">Savings &amp; Investments</div>
+            <div class="home-card-desc">
+              Compound growth, regular deposits and long-term planning.
+            </div>
+          </a>
 
-        <!-- 6. Health & Fitness -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/health-fitness/"
-        >
-          <div class="home-card-title">Health &amp; Fitness</div>
-          <div class="home-card-desc">
-            Everyday health, activity and basic fitness calculations.
-          </div>
-        </a>
+          <!-- 5. Real Estate & Property -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/real-estate-property/"
+          >
+            <div class="home-card-title">Real Estate &amp; Property</div>
+            <div class="home-card-desc">
+              Mortgages, rent vs buy, affordability and property metrics.
+            </div>
+          </a>
 
-        <!-- 7. Math & General Calculators -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/math-general-calculators/"
-        >
-          <div class="home-card-title">Math &amp; General Calculators</div>
-          <div class="home-card-desc">
-            Percentages, ratios, simple math helpers and general tools.
-          </div>
-        </a>
+          <!-- 6. Health & Fitness -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/health-fitness/"
+          >
+            <div class="home-card-title">Health &amp; Fitness</div>
+            <div class="home-card-desc">
+              Everyday health, activity and basic fitness calculations.
+            </div>
+          </a>
 
-        <!-- 8. Time, Date & Scheduling -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/time-date-scheduling/"
-        >
-          <div class="home-card-title">Time, Date &amp; Scheduling</div>
-          <div class="home-card-desc">
-            Durations, deadlines, workdays and schedule planning.
-          </div>
-        </a>
+          <!-- 7. Math & General Calculators -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/math-general-calculators/"
+          >
+            <div class="home-card-title">Math &amp; General Calculators</div>
+            <div class="home-card-desc">
+              Percentages, ratios, simple math helpers and general tools.
+            </div>
+          </a>
 
-        <!-- 9. Engineering & Technical -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/engineering-technical/"
-        >
-          <div class="home-card-title">Engineering &amp; Technical</div>
-          <div class="home-card-desc">
-            Simple engineering, physics and technical calculations.
-          </div>
-        </a>
+          <!-- 8. Time, Date & Scheduling -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/time-date-scheduling/"
+          >
+            <div class="home-card-title">Time, Date &amp; Scheduling</div>
+            <div class="home-card-desc">
+              Durations, deadlines, workdays and schedule planning.
+            </div>
+          </a>
 
-        <!-- 10. Construction & Materials -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/construction-materials/"
-        >
-          <div class="home-card-title">Construction &amp; Materials</div>
-          <div class="home-card-desc">
-            Basic quantities, volumes and material estimates.
-          </div>
-        </a>
+          <!-- 9. Engineering & Technical -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/engineering-technical/"
+          >
+            <div class="home-card-title">Engineering &amp; Technical</div>
+            <div class="home-card-desc">
+              Simple engineering, physics and technical calculations.
+            </div>
+          </a>
 
-        <!-- 11. Conversions (Units, Currencies, etc.) -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/conversions-units-currencies/"
-        >
-          <div class="home-card-title">
-            Conversions (Units, Currencies, etc.)
-          </div>
-          <div class="home-card-desc">
-            Unit, currency and other everyday conversion tools.
-          </div>
-        </a>
+          <!-- 10. Construction & Materials -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/construction-materials/"
+          >
+            <div class="home-card-title">Construction &amp; Materials</div>
+            <div class="home-card-desc">
+              Basic quantities, volumes and material estimates.
+            </div>
+          </a>
 
-        <!-- 12. Education & Exams -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/education-exams/"
-        >
-          <div class="home-card-title">Education &amp; Exams</div>
-          <div class="home-card-desc">
-            Marks, weightings and basic academic planning.
-          </div>
-        </a>
+          <!-- 11. Conversions (Units, Currencies, etc.) -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/conversions-units-currencies/"
+          >
+            <div class="home-card-title">
+              Conversions (Units, Currencies, etc.)
+            </div>
+            <div class="home-card-desc">
+              Unit, currency and other everyday conversion tools.
+            </div>
+          </a>
 
-        <!-- 13. Travel & Transport -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/travel-transport/"
-        >
-          <div class="home-card-title">Travel &amp; Transport</div>
-          <div class="home-card-desc">
-            Trip costs, fuel, time estimates and routing helpers.
-          </div>
-        </a>
+          <!-- 12. Education & Exams -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/education-exams/"
+          >
+            <div class="home-card-title">Education &amp; Exams</div>
+            <div class="home-card-desc">
+              Marks, weightings and basic academic planning.
+            </div>
+          </a>
 
-        <!-- 14. Everyday Life Tools -->
-        <a
-          class="home-card"
-          href="/calculator-site/categories/everyday-life-tools/"
-        >
-          <div class="home-card-title">Everyday Life Tools</div>
-          <div class="home-card-desc">
-            Day-to-day calculators for household and personal tasks.
-          </div>
-        </a>
+          <!-- 13. Travel & Transport -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/travel-transport/"
+          >
+            <div class="home-card-title">Travel &amp; Transport</div>
+            <div class="home-card-desc">
+              Trip costs, fuel, time estimates and routing helpers.
+            </div>
+          </a>
 
-        <!-- 15. Contact / Feedback placeholder (no link yet) -->
-        <div class="home-card home-card-empty">
-          <div class="home-card-title">Contact / Feedback</div>
-          <div class="home-card-desc">
-            Placeholder for a future contact or feedback page.
+          <!-- 14. Everyday Life Tools -->
+          <a
+            class="home-card"
+            href="/calculator-site/categories/everyday-life-tools/"
+          >
+            <div class="home-card-title">Everyday Life Tools</div>
+            <div class="home-card-desc">
+              Day-to-day calculators for household and personal tasks.
+            </div>
+          </a>
+
+          <!-- 15. Contact / Feedback placeholder (no link yet) -->
+          <div class="home-card home-card-empty">
+            <div class="home-card-title">Contact / Feedback</div>
+            <div class="home-card-desc">
+              Placeholder for a future contact or feedback page.
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 Calculator Site</span>
+        <a href="/calculator-site/privacy-policy.html">Privacy Policy</a>
+        <a href="/calculator-site/terms.html">Terms</a>
+        <a href="/calculator-site/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
   </body>
 </html>
