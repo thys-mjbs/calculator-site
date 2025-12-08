@@ -13,9 +13,22 @@
     <div class="page-layout">
       <h1>Tip Calculator</h1>
 
-      <div class="page-main">
-        <!-- Left side: calculator + suggestion box -->
-        <div class="calculator-column">
+      <div class="page-grid">
+        <!-- Top left: Ad slot 1 -->
+        <div class="grid-slot">
+          <div class="ad-block">
+            <div class="ad-title">Ad placeholder 1</div>
+            <div class="ad-placeholder-img">
+              300×250 banner image
+            </div>
+            <p>
+              Reserved for a display ad block. Final AdSense code will replace this container.
+            </p>
+          </div>
+        </div>
+
+        <!-- Top middle: Calculator -->
+        <div class="grid-slot">
           <div class="calculator-container">
             <label for="billAmount">Bill Amount:</label>
             <input
@@ -39,43 +52,87 @@
 
             <div id="result"></div>
           </div>
-
-          <div class="suggestion-box">
-            <h2>Suggestions or improvements?</h2>
-            <p>
-              If you notice something off, or have an idea to make this calculator more useful,
-              make a note for now. A proper feedback form will be added here later.
-            </p>
-            <p>
-              This box is the standard placeholder for user feedback on every calculator page.
-            </p>
-          </div>
         </div>
 
-        <!-- Right side: ad / affiliate placeholders -->
-        <aside class="side-column">
+        <!-- Top right: Ad slot 2 -->
+        <div class="grid-slot">
           <div class="ad-block">
-            <div class="ad-title">Ad placeholder</div>
+            <div class="ad-title">Ad placeholder 2</div>
             <div class="ad-placeholder-img">
               300×250 banner image
             </div>
             <p>
-              This space is reserved for a future display ad (e.g. Google AdSense). The final code
-              snippet will replace this block.
+              Reserved for a second display ad unit or house promotion.
             </p>
           </div>
+        </div>
 
+        <!-- Bottom left: Affiliate slot 1 -->
+        <div class="grid-slot">
           <div class="ad-block">
-            <div class="ad-title">Affiliate placeholder</div>
+            <div class="ad-title">Affiliate placeholder 1</div>
             <div class="ad-placeholder-img">
               Affiliate product image
             </div>
             <p>
-              This space is reserved for a future affiliate tile with image and link.
-              For now, this is static placeholder content.
+              Placeholder for an affiliate offer (image + text + link).
+              Example link target for now: <a href="https://www.google.com" target="_blank">google.com</a>.
             </p>
           </div>
-        </aside>
+        </div>
+
+        <!-- Bottom middle: SEO description + mini FAQ -->
+        <div class="grid-slot">
+          <section class="seo-section">
+            <h2>About this tip calculator</h2>
+            <p>
+              This tip calculator helps you work out how much extra to add to a bill and what your
+              final total will be. Enter the bill amount, choose a tip percentage, and the tool
+              shows you both the tip and the combined total in one line. It is designed for quick,
+              practical use at restaurants, bars, taxis or any situation where you want to add a
+              percentage on top of a base amount.
+            </p>
+            <p>
+              You can type whole numbers or decimals (for example 550.50). The input automatically
+              formats larger numbers with commas so they are easier to read, while still calculating
+              with the exact value in the background. The goal is simple: reduce mental arithmetic
+              and make it obvious what you are actually paying.
+            </p>
+
+            <h3>Common questions</h3>
+            <h3>Do I have to use a specific currency?</h3>
+            <p>
+              No. The calculator is currency-agnostic. It only works with numbers. You decide which
+              currency the amounts represent.
+            </p>
+
+            <h3>Can I use custom percentages?</h3>
+            <p>
+              Yes. Any percentage from 0 up to 1000 is allowed, so you can test normal tips,
+              no tip, or extreme scenarios without limits.
+            </p>
+
+            <h3>Will this page change later?</h3>
+            <p>
+              Yes. The ad and affiliate areas are placeholders and will be replaced with live
+              units once the site is fully configured. The core calculation behaviour will stay
+              the same.
+            </p>
+          </section>
+        </div>
+
+        <!-- Bottom right: Affiliate slot 2 -->
+        <div class="grid-slot">
+          <div class="ad-block">
+            <div class="ad-title">Affiliate placeholder 2</div>
+            <div class="ad-placeholder-img">
+              Affiliate product image
+            </div>
+            <p>
+              Second slot reserved for another affiliate product or partner tool relevant to this calculator.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
