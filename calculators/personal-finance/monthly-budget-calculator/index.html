@@ -9,213 +9,236 @@
     <script src="/calculator-site/scripts/main.js" defer></script>
     <script src="script.js" defer></script>
   </head>
+
   <body>
-    <div class="page-layout">
-      <h1>Monthly Budget Calculator</h1>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/calculator-site/" class="site-logo">Calculator Site</a>
+        <nav class="site-nav">
+          <a href="/calculator-site/">Home</a>
+          <a href="/calculator-site/#categories">Categories</a>
+          <a href="/calculator-site/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-      <div class="page-grid">
-        <!-- Row 1: Ads + main calculator -->
-        <!-- Top left: Ad slot 1 -->
-        <div class="grid-slot">
-          <div class="ad-block">
-            <div class="ad-title">Ad placeholder 1</div>
-            <div class="ad-placeholder-img">
-              300×250 banner image
-            </div>
-            <p>
-              Reserved for a display ad block. Final ad code for budgeting or money tools will replace this container.
-            </p>
-          </div>
-        </div>
+    <main class="site-main">
+      <div class="page-layout">
+        <h1>Monthly Budget Calculator</h1>
 
-        <!-- Top middle: Calculator -->
-        <div class="grid-slot">
-          <div class="calculator-container">
-            <label for="monthlyIncome">Monthly take home income:</label>
-            <input
-              type="text"
-              id="monthlyIncome"
-              placeholder="Total income after tax"
-              inputmode="decimal"
-            >
-
-            <label for="housing">Housing and rent:</label>
-            <input
-              type="text"
-              id="housing"
-              placeholder="Rent or bond payment"
-              inputmode="decimal"
-            >
-
-            <label for="utilities">Utilities and bills:</label>
-            <input
-              type="text"
-              id="utilities"
-              placeholder="Electricity, water, phone, internet"
-              inputmode="decimal"
-            >
-
-            <label for="groceries">Groceries and food:</label>
-            <input
-              type="text"
-              id="groceries"
-              placeholder="Supermarket and takeaways"
-              inputmode="decimal"
-            >
-
-            <label for="transport">Transport:</label>
-            <input
-              type="text"
-              id="transport"
-              placeholder="Fuel, public transport, car costs"
-              inputmode="decimal"
-            >
-
-            <label for="debt">Debt repayments:</label>
-            <input
-              type="text"
-              id="debt"
-              placeholder="Loans, credit cards, store accounts"
-              inputmode="decimal"
-            >
-
-            <label for="otherSpending">Other monthly spending:</label>
-            <input
-              type="text"
-              id="otherSpending"
-              placeholder="Entertainment, eating out, extras"
-              inputmode="decimal"
-            >
-
-            <label for="savingsGoal">Monthly savings goal (optional):</label>
-            <input
-              type="text"
-              id="savingsGoal"
-              placeholder="Amount you want to save"
-              inputmode="decimal"
-            >
-
-            <button id="calculateButton" type="button">Calculate budget</button>
-
-            <div id="result"></div>
-
-            <div class="share-buttons">
-              <button id="shareWhatsAppButton" type="button">
-                Share this calculator on WhatsApp
-              </button>
+        <div class="page-grid">
+          <!-- Row 1: Ads + main calculator -->
+          <!-- Top left: Ad slot 1 -->
+          <div class="grid-slot">
+            <div class="ad-block">
+              <div class="ad-title">Ad placeholder 1</div>
+              <div class="ad-placeholder-img">
+                300×250 banner image
+              </div>
+              <p>
+                Reserved for a display ad block. Final ad code for budgeting or money tools will replace this container.
+              </p>
             </div>
           </div>
-        </div>
 
-        <!-- Top right: Ad slot 2 -->
-        <div class="grid-slot">
-          <div class="ad-block">
-            <div class="ad-title">Ad placeholder 2</div>
-            <div class="ad-placeholder-img">
-              300×250 banner image
+          <!-- Top middle: Calculator -->
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <label for="monthlyIncome">Monthly take home income:</label>
+              <input
+                type="text"
+                id="monthlyIncome"
+                placeholder="Total income after tax"
+                inputmode="decimal"
+              >
+
+              <label for="housing">Housing and rent:</label>
+              <input
+                type="text"
+                id="housing"
+                placeholder="Rent or bond payment"
+                inputmode="decimal"
+              >
+
+              <label for="utilities">Utilities and bills:</label>
+              <input
+                type="text"
+                id="utilities"
+                placeholder="Electricity, water, phone, internet"
+                inputmode="decimal"
+              >
+
+              <label for="groceries">Groceries and food:</label>
+              <input
+                type="text"
+                id="groceries"
+                placeholder="Supermarket and takeaways"
+                inputmode="decimal"
+              >
+
+              <label for="transport">Transport:</label>
+              <input
+                type="text"
+                id="transport"
+                placeholder="Fuel, public transport, car costs"
+                inputmode="decimal"
+              >
+
+              <label for="debt">Debt repayments:</label>
+              <input
+                type="text"
+                id="debt"
+                placeholder="Loans, credit cards, store accounts"
+                inputmode="decimal"
+              >
+
+              <label for="otherSpending">Other monthly spending:</label>
+              <input
+                type="text"
+                id="otherSpending"
+                placeholder="Entertainment, eating out, extras"
+                inputmode="decimal"
+              >
+
+              <label for="savingsGoal">Monthly savings goal (optional):</label>
+              <input
+                type="text"
+                id="savingsGoal"
+                placeholder="Amount you want to save"
+                inputmode="decimal"
+              >
+
+              <button id="calculateButton" type="button">Calculate budget</button>
+
+              <div id="result"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
             </div>
-            <p>
-              Reserved for a second display ad unit or a house promotion linking to other money tools on this site.
-            </p>
           </div>
-        </div>
 
-        <!-- Row 2: Related category cards -->
-        <div class="grid-slot">
-          <a class="related-card" href="/calculator-site/categories/personal-finance/">
-            <div class="related-title">Personal Finance</div>
-            <div class="related-desc">
-              Explore more tools to plan your income, track expenses, and improve everyday money decisions.
+          <!-- Top right: Ad slot 2 -->
+          <div class="grid-slot">
+            <div class="ad-block">
+              <div class="ad-title">Ad placeholder 2</div>
+              <div class="ad-placeholder-img">
+                300×250 banner image
+              </div>
+              <p>
+                Reserved for a second display ad unit or a house promotion linking to other money tools on this site.
+              </p>
             </div>
-          </a>
-        </div>
-
-        <div class="grid-slot">
-          <a class="related-card" href="/calculator-site/categories/savings-investments/">
-            <div class="related-title">Savings &amp; Investments</div>
-            <div class="related-desc">
-              Run the numbers on savings goals, compound growth, and how your spare cash can work for you.
-            </div>
-          </a>
-        </div>
-
-        <div class="grid-slot">
-          <a class="related-card" href="/calculator-site/categories/loans-credit/">
-            <div class="related-title">Loans &amp; Credit</div>
-            <div class="related-desc">
-              Check repayments, interest costs, and how debt payments affect the rest of your monthly budget.
-            </div>
-          </a>
-        </div>
-
-        <!-- Row 3: Affiliate + SEO + affiliate -->
-        <div class="grid-slot">
-          <div class="ad-block">
-            <div class="ad-title">Affiliate placeholder 1</div>
-            <div class="ad-placeholder-img">
-              Money or budgeting product image
-            </div>
-            <p>
-              Placeholder for an affiliate offer such as a budgeting app, banking product, or personal finance course.
-            </p>
           </div>
-        </div>
 
-        <div class="grid-slot">
-          <section class="seo-section">
-            <h2>About this monthly budget calculator</h2>
-            <p>
-              This monthly budget calculator helps you compare your take home income to your core expenses and savings goals in one view. Enter your net income for the month and then fill in the main spending categories such as housing, utilities, groceries, transport, debt repayments, and other day to day costs. The calculator totals your expenses, shows how much of your income they use, and tells you how much is left over.
-            </p>
-            <p>
-              There is also a space for a monthly savings goal. Once you enter a savings amount, the calculator checks whether your current budget can support it. If there is enough money left after expenses, you will see how much remains after saving. If there is not enough, the tool shows how short you are so you can decide where to cut back or whether to adjust your savings target.
-            </p>
+          <!-- Row 2: Related category cards -->
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/personal-finance/">
+              <div class="related-title">Personal Finance</div>
+              <div class="related-desc">
+                Explore more tools to plan your income, track expenses, and improve everyday money decisions.
+              </div>
+            </a>
+          </div>
 
-            <h3>Assumptions and how to use the tool</h3>
-            <ul>
-              <li>The income field is meant to be your net monthly pay after tax and deductions, not your gross salary.</li>
-              <li>You do not have to fill every expense line. Any blank or zero field is treated as no spending in that category.</li>
-              <li>The calculator is built around typical household categories. You can treat them as buckets and group similar costs together if you want a quick view.</li>
-              <li>If your total expenses are higher than your income, the result will highlight the overspend so you can see how far out your budget is.</li>
-              <li>The savings goal is optional but useful if you are trying to build an emergency fund, pay off debt faster, or save for a specific target.</li>
-            </ul>
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/savings-investments/">
+              <div class="related-title">Savings &amp; Investments</div>
+              <div class="related-desc">
+                Run the numbers on savings goals, compound growth, and how your spare cash can work for you.
+              </div>
+            </a>
+          </div>
 
-            <h3>Common questions</h3>
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/loans-credit/">
+              <div class="related-title">Loans &amp; Credit</div>
+              <div class="related-desc">
+                Check repayments, interest costs, and how debt payments affect the rest of your monthly budget.
+              </div>
+            </a>
+          </div>
 
-            <h3>What counts as monthly income?</h3>
-            <p>
-              Use the amount that actually reaches your bank account each month after tax, pension, and other automatic deductions. If your income is irregular, take a realistic monthly average over the last few months instead of a best case number.
-            </p>
-
-            <h3>Do I need exact amounts for every expense?</h3>
-            <p>
-              Exact numbers are ideal, but estimates are still useful. You can start with rough averages pulled from your bank statements, then refine the amounts later. The goal is to see the big picture of where your money is going.
-            </p>
-
-            <h3>What if my expenses are higher than my income?</h3>
-            <p>
-              The calculator will show that you are overspending and by how much. This is a signal to reduce costs, look for extra income, or both. Start with flexible categories such as other spending, entertainment, and eating out before cutting essential items.
-            </p>
-
-            <h3>Is this financial advice?</h3>
-            <p>
-              No. This is a simple arithmetic tool that works with the numbers you enter. It does not connect to your bank or make decisions for you. Treat the output as a clear snapshot that you can use alongside your own judgment or professional advice if needed.
-            </p>
-          </section>
-        </div>
-
-        <div class="grid-slot">
-          <div class="ad-block">
-            <div class="ad-title">Affiliate placeholder 2</div>
-            <div class="ad-placeholder-img">
-              Money or budgeting product image
+          <!-- Row 3: Affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block">
+              <div class="ad-title">Affiliate placeholder 1</div>
+              <div class="ad-placeholder-img">
+                Money or budgeting product image
+              </div>
+              <p>
+                Placeholder for an affiliate offer such as a budgeting app, banking product, or personal finance course.
+              </p>
             </div>
-            <p>
-              Second slot reserved for another partner offer such as a savings account, investment platform, or credit improvement tool.
-            </p>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>About this monthly budget calculator</h2>
+              <p>
+                This monthly budget calculator helps you compare your take home income to your core expenses and savings goals in one view. Enter your net income for the month and then fill in the main spending categories such as housing, utilities, groceries, transport, debt repayments, and other day to day costs. The calculator totals your expenses, shows how much of your income they use, and tells you how much is left over.
+              </p>
+              <p>
+                There is also a space for a monthly savings goal. Once you enter a savings amount, the calculator checks whether your current budget can support it. If there is enough money left after expenses, you will see how much remains after saving. If there is not enough, the tool shows how short you are so you can decide where to cut back or whether to adjust your savings target.
+              </p>
+
+              <h3>Assumptions and how to use the tool</h3>
+              <ul>
+                <li>The income field is meant to be your net monthly pay after tax and deductions, not your gross salary.</li>
+                <li>You do not have to fill every expense line. Any blank or zero field is treated as no spending in that category.</li>
+                <li>The calculator is built around typical household categories. You can treat them as buckets and group similar costs together if you want a quick view.</li>
+                <li>If your total expenses are higher than your income, the result will highlight the overspend so you can see how far out your budget is.</li>
+                <li>The savings goal is optional but useful if you are trying to build an emergency fund, pay off debt faster, or save for a specific target.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What counts as monthly income?</h3>
+              <p>
+                Use the amount that actually reaches your bank account each month after tax, pension, and other automatic deductions. If your income is irregular, take a realistic monthly average over the last few months instead of a best case number.
+              </p>
+
+              <h3>Do I need exact amounts for every expense?</h3>
+              <p>
+                Exact numbers are ideal, but estimates are still useful. You can start with rough averages pulled from your bank statements, then refine the amounts later. The goal is to see the big picture of where your money is going.
+              </p>
+
+              <h3>What if my expenses are higher than my income?</h3>
+              <p>
+                The calculator will show that you are overspending and by how much. This is a signal to reduce costs, look for extra income, or both. Start with flexible categories such as other spending, entertainment, and eating out before cutting essential items.
+              </p>
+
+              <h3>Is this financial advice?</h3>
+              <p>
+                No. This is a simple arithmetic tool that works with the numbers you enter. It does not connect to your bank or make decisions for you. Treat the output as a clear snapshot that you can use alongside your own judgment or professional advice if needed.
+              </p>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block">
+              <div class="ad-title">Affiliate placeholder 2</div>
+              <div class="ad-placeholder-img">
+                Money or budgeting product image
+              </div>
+              <p>
+                Second slot reserved for another partner offer such as a savings account, investment platform, or credit improvement tool.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 Calculator Site</span>
+        <a href="/calculator-site/privacy-policy.html">Privacy Policy</a>
+        <a href="/calculator-site/terms.html">Terms</a>
+        <a href="/calculator-site/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
   </body>
 </html>
