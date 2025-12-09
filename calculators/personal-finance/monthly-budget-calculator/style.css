@@ -1,0 +1,72 @@
+/* Monthly Budget Calculator — Local Styles */
+
+.calculator-container {
+  max-width: 320px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Share button wrapper */
+.share-buttons {
+  margin-top: 16px;
+}
+
+.share-buttons button {
+  font-size: 14px;
+}
+
+/* Related category cards in middle row */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.related-card:hover {
+  border-color: #bbb;
+}
+
+.related-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+}
