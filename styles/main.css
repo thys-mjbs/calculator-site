@@ -34,7 +34,8 @@ body {
   font-size: 18px;
 }
 
- {
+/* FIXED: nav container + hover selector */
+.site-nav {
   display: flex;
   gap: 12px;
 }
@@ -45,7 +46,7 @@ body {
   font-size: 14px;
 }
 
- a:hover {
+.site-nav a:hover {
   text-decoration: underline;
 }
 
@@ -217,8 +218,12 @@ h1 {
 }
 
 /* Individual category / contact blocks */
+/* UPDATED: center content horizontally and vertically */
 .home-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 10px;
@@ -228,6 +233,7 @@ h1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: transform 0.08s ease, box-shadow 0.08s ease, border-color 0.08s ease;
   min-height: 120px;
+  text-align: center;
 }
 
 .home-card:hover {
@@ -305,11 +311,17 @@ h1 {
   gap: 10px;
 }
 
+/* UPDATED: center text inside category tiles */
 .category-item {
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 8px;
   padding: 10px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .category-item a {
