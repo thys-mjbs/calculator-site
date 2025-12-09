@@ -1,0 +1,88 @@
+/* Break-Even Point Calculator — Local Styles */
+
+.calculator-container {
+  max-width: 320px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#result p {
+  margin: 6px 0;
+}
+
+#result ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.share-buttons {
+  margin-top: 16px;
+}
+
+.share-buttons button {
+  width: 100%;
+}
+
+/* Related category tiles */
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.related-card:hover,
+.related-card:focus-visible {
+  border-color: #999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.related-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+}
+
+/* Ensure SEO section text is readable inside grid slot */
+.seo-section h2,
+.seo-section h3 {
+  margin-top: 0;
+}
