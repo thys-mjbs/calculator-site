@@ -1,10 +1,7 @@
-// Break-Even Point Calculator — Logic
-
 document.addEventListener("DOMContentLoaded", function () {
   const fixedCostsInput = document.getElementById("fixedCosts");
   const sellingPriceInput = document.getElementById("sellingPrice");
   const variableCostInput = document.getElementById("variableCost");
-  const expectedUnitsInput = document.getElementById("expectedUnits");
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
@@ -20,86 +17,74 @@ document.addEventListener("DOMContentLoaded", function () {
   attachLiveFormatting(fixedCostsInput);
   attachLiveFormatting(sellingPriceInput);
   attachLiveFormatting(variableCostInput);
-  // expectedUnitsInput kept as numeric input; no comma formatting needed
+
+  function showError(message) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("success");
+    resultDiv.classList.add("error");
+    resultDiv.textContent = message;
+  }
+
+  function showResult(html) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error");
+    resultDiv.classList.add("success");
+    resultDiv.innerHTML = html;
+  }
 
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      const fixedCosts = toNumber(fixedCostsInput.value);
-      const sellingPrice = toNumber(sellingPriceInput.value);
-      const variableCost = toNumber(variableCostInput.value);
-      const expectedUnitsRaw = expectedUnitsInput.value.trim();
-      const expectedUnits = expectedUnitsRaw === "" ? null : toNumber(expectedUnitsRaw);
+      const fixedCosts = toNumber(fixedCostsInput ? fixedCostsInput.value : "");
+      const sellingPrice = toNumber(sellingPriceInput ? sellingPriceInput.value : "");
+      const variableCost = toNumber(variableCostInput ? variableCostInput.value : "");
 
-      if (fixedCosts <= 0 || sellingPrice <= 0 || variableCost < 0) {
-        resultDiv.textContent = "Enter valid numbers for all required fields.";
+      if (!fixedCostsInput || !sellingPriceInput || !variableCostInput) {
         return;
       }
 
-      const contributionPerUnit = sellingPrice - variableCost;
-
-      if (contributionPerUnit <= 0) {
-        resultDiv.textContent =
-          "Selling price must be higher than variable cost per unit to reach break-even.";
+      if (isNaN(fixedCosts) || fixedCosts <= 0) {
+        showError("Please enter a valid fixed cost greater than zero.");
         return;
       }
 
-      const breakEvenUnitsExact = fixedCosts / contributionPerUnit;
-      const breakEvenUnits = Math.ceil(breakEvenUnitsExact);
+      if (isNaN(sellingPrice) || sellingPrice <= 0) {
+        showError("Please enter a valid selling price per unit greater than zero.");
+        return;
+      }
+
+      if (isNaN(variableCost) || variableCost < 0) {
+        showError("Please enter a valid variable cost per unit (zero or higher).");
+        return;
+      }
+
+      const contributionMargin = sellingPrice - variableCost;
+
+      if (contributionMargin <= 0) {
+        showError("The margin per unit must be positive. Increase the selling price or reduce the variable cost.");
+        return;
+      }
+
+      const breakEvenUnits = Math.ceil(fixedCosts / contributionMargin);
       const breakEvenRevenue = breakEvenUnits * sellingPrice;
 
-      let html = "";
+      const contributionMarginFormatted = formatNumberTwoDecimals(contributionMargin);
+      const breakEvenRevenueFormatted = formatNumberTwoDecimals(breakEvenRevenue);
+      const breakEvenUnitsFormatted = breakEvenUnits.toLocaleString("en-US");
 
-      html +=
-        "<p><strong>Break-even quantity:</strong> " +
-        breakEvenUnits.toLocaleString() +
-        " units</p>";
-      html +=
-        "<p><strong>Break-even sales value:</strong> " +
-        formatNumberTwoDecimals(breakEvenRevenue) +
-        "</p>";
+      const resultHtml = `
+        <p>You need to sell approximately <strong>${breakEvenUnitsFormatted} units</strong> to break even.</p>
+        <p>Contribution margin per unit: <strong>${contributionMarginFormatted}</strong></p>
+        <p>Break-even revenue: <strong>${breakEvenRevenueFormatted}</strong></p>
+      `;
 
-      if (expectedUnits !== null && expectedUnits >= 0) {
-        const profit = contributionPerUnit * expectedUnits - fixedCosts;
-        const marginOfSafetyUnits = expectedUnits - breakEvenUnits;
-        const hasSafety = marginOfSafetyUnits > 0;
-        const marginOfSafetyPercent = hasSafety
-          ? (marginOfSafetyUnits / expectedUnits) * 100
-          : 0;
-
-        const profitLabel = profit >= 0 ? "Estimated profit" : "Estimated loss";
-        const profitValueText = formatNumberTwoDecimals(Math.abs(profit));
-
-        html += "<p><strong>" + profitLabel + " at " +
-          expectedUnits.toLocaleString() +
-          " units:</strong> " + profitValueText + "</p>";
-
-        if (expectedUnits === 0) {
-          html += "<p>You have entered 0 units sold, so there is no margin of safety.</p>";
-        } else if (hasSafety) {
-          html +=
-            "<p><strong>Margin of safety:</strong> " +
-            marginOfSafetyUnits.toLocaleString() +
-            " units (" +
-            formatNumberTwoDecimals(marginOfSafetyPercent) +
-            "% above break-even)</p>";
-        } else if (expectedUnits < breakEvenUnits) {
-          html +=
-            "<p>Your expected sales are below break-even, so you are projected to make a loss at this volume.</p>";
-        } else if (expectedUnits === breakEvenUnits) {
-          html +=
-            "<p>Your expected sales are exactly at the break-even point, so profit is approximately zero.</p>";
-        }
-      }
-
-      resultDiv.innerHTML = html;
+      showResult(resultHtml);
     });
   }
 
   if (shareButton) {
     shareButton.addEventListener("click", function () {
       const pageUrl = window.location.href;
-      const message =
-        "Break-Even Point Calculator – check this calculator: " + pageUrl;
+      const message = "Break-Even Point Calculator - check this calculator: " + pageUrl;
       const encoded = encodeURIComponent(message);
       const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
       window.open(waUrl, "_blank");

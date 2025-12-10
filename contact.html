@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Calculator Site</title>
-    <link rel="stylesheet" href="/calculator-site/styles/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="/calculator-site/styles/main.css" />
   </head>
 
   <body>
@@ -23,27 +23,63 @@
       <div class="page-layout">
         <h1>Contact</h1>
 
-        <section class="seo-section">
-          <p>If you want to report an issue, suggest a new calculator, or ask about the site, you can contact us below.</p>
+        <div class="page-grid">
+          <div class="grid-slot"></div>
 
-          <form action="mailto:thys@mjbstrategic.com" method="POST" enctype="text/plain" style="margin-top: 16px;">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+          <div class="grid-slot">
+            <section class="seo-section">
+              <p>
+                If you want to report an issue, suggest a new calculator, or
+                ask about the site, you can contact us below.
+              </p>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+              <form
+                action="mailto:thys@mjbstrategic.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <div class="contact-field">
+                  <label for="name">Your Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+                <div class="contact-field">
+                  <label for="email">Your Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
 
-            <button type="submit">Send Message</button>
-          </form>
+                <div class="contact-field">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
 
-          <p style="margin-top: 12px; font-size: 13px; color: #666;">
-            This is a simple static mail form using your device’s email client.
-          </p>
-        </section>
+                <button type="submit">Send Message</button>
 
+                <p class="contact-note">
+                  This is a simple static mail form that opens your device’s
+                  email client with the details you entered.
+                </p>
+              </form>
+            </section>
+          </div>
+
+          <div class="grid-slot"></div>
+        </div>
       </div>
     </main>
 

@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Break-Even Point Calculator</title>
+
+    <!-- SEO: title and description -->
+    <title>Break-Even Point Calculator | Calculator Site</title>
+    <meta name="description" content="Calculate your business break-even point in units and revenue by entering fixed costs, selling price per unit, and variable cost per unit.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://thys-mjbs.github.io/calculator-site/calculators/business-accounting/break-even-point-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Break-Even Point Calculator | Calculator Site">
+    <meta property="og:description" content="Calculate your business break-even point in units and revenue by entering fixed costs, selling price per unit, and variable cost per unit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thys-mjbs.github.io/calculator-site/calculators/business-accounting/break-even-point-calculator/">
+    <meta property="og:image" content="https://thys-mjbs.github.io/calculator-site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Break-Even Point Calculator | Calculator Site">
+    <meta name="twitter:description" content="Calculate your business break-even point in units and revenue by entering fixed costs, selling price per unit, and variable cost per unit.">
+    <meta name="twitter:image" content="https://thys-mjbs.github.io/calculator-site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Break-Even Point Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://thys-mjbs.github.io/calculator-site/calculators/business-accounting/break-even-point-calculator/",
+      "description": "Calculate your business break-even point in units and revenue by entering fixed costs, selling price per unit, and variable cost per unit."
+    }
+    </script>
+
     <link rel="stylesheet" href="/calculator-site/styles/main.css">
     <link rel="stylesheet" href="style.css">
     <script src="/calculator-site/scripts/main.js" defer></script>
@@ -23,63 +56,49 @@
     </header>
 
     <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/calculator-site/">Home</a> ›
+        <a href="/calculator-site/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>Break-Even Point Calculator</span>
+      </nav>
+
       <div class="page-layout">
         <h1>Break-Even Point Calculator</h1>
-
         <div class="page-grid">
           <!-- Row 1: ads + main calculator -->
           <div class="grid-slot">
-            <div class="ad-block">
-              <div class="ad-title">Ad placeholder 1</div>
-              <div class="ad-placeholder-img">
-                300×250 banner image
-              </div>
-              <p>
-                Reserved for a display ad block. Ideal for bookkeeping, accounting software, or small business tools once live ads are configured.
-              </p>
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
             </div>
           </div>
 
           <div class="grid-slot">
             <div class="calculator-container">
-              <label for="fixedCosts">Total fixed costs (per month or year):</label>
-              <input
-                type="text"
-                id="fixedCosts"
-                placeholder="e.g. 50,000"
-                inputmode="decimal"
-              >
+              <h2>Find your break-even point</h2>
+              <p class="calculator-intro">
+                Enter your fixed costs, selling price per unit, and variable cost per unit to see how many units you need to sell to break even.
+              </p>
 
-              <label for="sellingPrice">Selling price per unit:</label>
-              <input
-                type="text"
-                id="sellingPrice"
-                placeholder="e.g. 499"
-                inputmode="decimal"
-              >
+              <div class="form-group">
+                <label for="fixedCosts">Fixed costs</label>
+                <input id="fixedCosts" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 150 000">
+              </div>
 
-              <label for="variableCost">Variable cost per unit:</label>
-              <input
-                type="text"
-                id="variableCost"
-                placeholder="e.g. 220"
-                inputmode="decimal"
-              >
+              <div class="form-group">
+                <label for="sellingPrice">Selling price per unit</label>
+                <input id="sellingPrice" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 500">
+              </div>
 
-              <label for="expectedUnits">Expected units sold (optional):</label>
-              <input
-                type="number"
-                id="expectedUnits"
-                placeholder="e.g. 300"
-                min="0"
-                step="1"
-              >
+              <div class="form-group">
+                <label for="variableCost">Variable cost per unit</label>
+                <input id="variableCost" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 300">
+              </div>
 
-              <button id="calculateButton" type="button">
-                Calculate break-even point
-              </button>
+              <button id="calculateButton" type="button">Calculate break-even point</button>
 
-              <div id="result"></div>
+              <div id="result" aria-live="polite"></div>
 
               <div class="share-buttons">
                 <button id="shareWhatsAppButton" type="button">
@@ -90,112 +109,108 @@
           </div>
 
           <div class="grid-slot">
-            <div class="ad-block">
-              <div class="ad-title">Ad placeholder 2</div>
-              <div class="ad-placeholder-img">
-                300×250 banner image
-              </div>
-              <p>
-                Reserved for a second display ad or house promotion related to business planning, online courses, or accounting tools.
-              </p>
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
             </div>
           </div>
 
           <!-- Row 2: related CATEGORIES (three thin tiles) -->
           <div class="grid-slot">
             <a class="related-card" href="/calculator-site/categories/business-accounting/">
-              <div class="related-title">Business &amp; Accounting</div>
-              <div class="related-desc">
-                Explore calculators for pricing, profit, cash flow, and basic accounting support for small businesses.
-              </div>
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Plan prices, margins, and key business numbers for better decisions.</p>
             </a>
           </div>
-
           <div class="grid-slot">
             <a class="related-card" href="/calculator-site/categories/personal-finance/">
-              <div class="related-title">Personal Finance</div>
-              <div class="related-desc">
-                Plan budgets, track spending, and test savings scenarios to keep your personal money under control.
-              </div>
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Track budgets, plan savings, and understand everyday money choices.</p>
             </a>
           </div>
-
           <div class="grid-slot">
-            <a class="related-card" href="/calculator-site/categories/savings-investments/">
-              <div class="related-title">Savings &amp; Investments</div>
-              <div class="related-desc">
-                Run numbers on long-term savings, investment growth, and wealth-building strategies.
-              </div>
+            <a class="related-card" href="/calculator-site/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Use simple tools for quick calculations and everyday problem solving.</p>
             </a>
           </div>
 
           <!-- Row 3: affiliate + SEO + affiliate -->
           <div class="grid-slot">
-            <div class="ad-block">
-              <div class="ad-title">Affiliate placeholder 1</div>
-              <div class="ad-placeholder-img">
-                Affiliate product image
-              </div>
-              <p>
-                Placeholder for a small business or accounting-related affiliate offer, such as invoicing apps or POS systems.
-              </p>
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
             </div>
           </div>
 
           <div class="grid-slot">
             <section class="seo-section">
-              <h2>About this break-even point calculator</h2>
+              <h2>Break-even point calculator for small businesses and side hustles</h2>
               <p>
-                This Break-Even Point Calculator shows how many units you need to sell before your total revenue covers your total costs.
-                You enter your total fixed costs for a period (for example per month or per year), your selling price per unit, and the variable
-                cost per unit. The calculator then works out your contribution margin and calculates the break-even quantity and break-even sales value.
+                This break-even point calculator helps you work out how many units you need to sell before your business starts covering its total costs.
+                By entering your fixed costs, selling price per unit, and variable cost per unit, you can see where your sales move from loss to profit.
               </p>
               <p>
-                You can also enter an expected units sold figure to see an estimated profit or loss at that volume, plus a margin of safety.
-                This helps you check whether your current sales targets are realistic relative to your cost structure, instead of guessing.
-                It is a simple way for owners, freelancers, and managers to see if a product, service, or branch is financially viable.
+                The break-even point is a simple but powerful way to test whether your pricing and cost structure make sense.
+                It shows how sensitive your business is to changes in price, costs, or sales volume, and can guide decisions about promotions, discounts, and cost cutting.
+              </p>
+              <p>
+                Use this tool when you are planning a new product, checking if an existing product is still viable, or comparing different pricing scenarios.
+                You can quickly adjust the inputs and see how your required sales volume changes.
               </p>
 
-              <h3>Key assumptions used by this calculator</h3>
+              <h3>Assumptions and how to use this calculator</h3>
               <ul>
-                <li>Single product or an average selling price and average variable cost across your mix.</li>
-                <li>Fixed costs stay constant over the period you select (month, quarter, or year).</li>
-                <li>Selling price and variable cost per unit do not change as volume changes.</li>
-                <li>All units produced can be sold at the same price (no stock build-up is considered).</li>
+                <li>Fixed costs include expenses that do not change with sales volume, such as rent, salaries, insurance, and software subscriptions.</li>
+                <li>Selling price per unit is the price you charge customers for one unit of your product or service.</li>
+                <li>Variable cost per unit includes costs that increase with each unit sold, such as materials, packaging, or per unit commissions.</li>
+                <li>The calculator assumes that your selling price and variable cost per unit stay constant across all units sold.</li>
+                <li>The break-even units result is rounded up to the nearest whole unit, because you cannot sell a fraction of a unit in most cases.</li>
               </ul>
+
+              <h3>Common questions</h3>
 
               <h3>What is the break-even point?</h3>
               <p>
-                The break-even point is the level of sales at which your total revenue equals your total costs.
-                At break-even you make zero profit and zero loss. Below that point you are losing money; above it you are profitable.
-                In this calculator the break-even units are rounded up to the next whole unit, because you cannot sell a fraction of a unit in real life.
+                The break-even point is the sales volume where your total revenue equals your total costs.
+                At this point you are not making a profit yet, but you are also no longer making a loss.
+                Selling more units beyond this point should start generating profit, assuming your prices and costs remain the same.
               </p>
 
-              <h3>How should I choose the period for fixed costs?</h3>
+              <h3>What formula does this calculator use?</h3>
               <p>
-                You can use any period as long as you stay consistent. If you enter monthly fixed costs, the break-even units result is the
-                number of units you need to sell per month. If you enter annual fixed costs, the result is units per year. The same logic
-                applies to the break-even sales value and the profit estimate when you enter expected units.
+                The calculator uses the standard formula:
+                break-even units = fixed costs divided by (selling price per unit minus variable cost per unit).
+                It then multiplies the break-even units by the selling price to estimate the break-even revenue.
               </p>
 
-              <h3>What are the limitations of this break-even calculator?</h3>
+              <h3>Why does the calculator say the margin per unit must be positive?</h3>
               <p>
-                This tool is designed for quick, straight-line scenarios. It does not handle stepped fixed costs, volume discounts, multiple
-                product mixes, or taxes. For more complex situations you would normally build a full financial model, but this calculator is
-                sufficient for initial pricing decisions and basic feasibility checks.
+                If your variable cost per unit is equal to or higher than your selling price per unit, you lose money on every unit sold.
+                In that situation there is no realistic break-even point, because selling more units only increases your losses.
+                You would need to increase your price, reduce variable costs, or both.
               </p>
+
+              <h3>Should I include my own salary in fixed costs?</h3>
+              <p>
+                Many owners exclude their own time when they start out, but this can hide the true economics of the business.
+                For a more realistic view, it is better to include a reasonable salary for yourself in fixed costs, even if you are not drawing it yet.
+              </p>
+
+              <h3>Can I use this for services and not only products?</h3>
+              <p>
+                Yes. Services often have a clear price per job and a variable cost per job, such as travel, materials, or outsourced work.
+                As long as you can estimate a price and variable cost per unit of service, the same break-even logic applies.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-10</div>
             </section>
           </div>
 
           <div class="grid-slot">
-            <div class="ad-block">
-              <div class="ad-title">Affiliate placeholder 2</div>
-              <div class="ad-placeholder-img">
-                Affiliate product image
-              </div>
-              <p>
-                Second slot reserved for another partner offer such as online bookkeeping, business banking, or cash flow tools.
-              </p>
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
             </div>
           </div>
         </div>

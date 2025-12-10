@@ -1,55 +1,81 @@
-/* Break-Even Point Calculator — Local Styles */
-
 .calculator-container {
   max-width: 320px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background: #f9f9f9;
+  margin: 0 auto;
 }
 
-label {
+.calculator-container h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
   display: block;
-  margin-top: 12px;
-  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
-input {
+.form-group input[type="text"] {
   width: 100%;
   padding: 8px;
-  margin-top: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
   box-sizing: border-box;
 }
 
-button {
+#calculateButton {
   width: 100%;
-  margin-top: 16px;
   padding: 10px;
-  font-size: 16px;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
 #result {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: normal;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-#result p {
-  margin: 6px 0;
+#result.error {
+  color: #b00020;
+  font-weight: 600;
 }
 
-#result ul {
-  margin: 8px 0 0;
-  padding-left: 20px;
+#result.success {
+  color: #0b4f2a;
 }
 
 .share-buttons {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .share-buttons button {
   width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* Related category tiles */
@@ -57,17 +83,12 @@ button {
 .related-card {
   display: block;
   text-decoration: none;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   padding: 10px;
   background: #ffffff;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-.related-card:hover,
-.related-card:focus-visible {
-  border-color: #999;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .related-title {
@@ -81,8 +102,61 @@ button {
   color: #555555;
 }
 
-/* Ensure SEO section text is readable inside grid slot */
-.seo-section h2,
+/* SEO section */
+
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
 .seo-section h3 {
-  margin-top: 0;
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholder visuals */
+
+.ad-block {
+  width: 100%;
+  height: 100%;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px dashed #cccccc;
+  background-color: #f3f3f3;
+}
+
+/* Breadcrumbs small tweak in case they are not styled globally */
+
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
 }
