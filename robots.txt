@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thys-mjbs.github.io/calculator-site/sitemap.xml
+Sitemap: https://snapcalc.site/sitemap.xml
