@@ -1,14 +1,14 @@
 title: "Calculator Site"
 
-url: "https://thys-mjbs.github.io"
-baseurl: "/calculator-site"
+url: "https://snapcalc.site"
+baseurl: ""
 
 plugins:
   - jekyll-sitemap
 
 # Keep Jekyll behaviour minimal so your static HTML keeps working.
 # No theme, no layouts, no collections are defined here.
-# GitHub Pages will run Jekyll, see this config, and auto-generate:
-#   /calculator-site/sitemap.xml
+# GitHub Pages will run Jekyll and auto-generate:
+#   /sitemap.xml
 #
-# You must ensure there is NO `.nojekyll` file in the repo root.
+# Ensure there is NO `.nojekyll` file in the repo root.
