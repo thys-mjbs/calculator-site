@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Tip Calculator | Calculator Site</title>
+    <meta name="description" content="Use this tip calculator to quickly work out how much to tip, what the total bill will be, and how much each person should pay.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://thys-mjbs.github.io/calculator-site/calculators/everyday-life-tools/tip-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Tip Calculator | Calculator Site">
+    <meta property="og:description" content="Use this tip calculator to quickly work out how much to tip, what the total bill will be, and how much each person should pay.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thys-mjbs.github.io/calculator-site/calculators/everyday-life-tools/tip-calculator/">
+    <meta property="og:image" content="https://thys-mjbs.github.io/calculator-site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tip Calculator | Calculator Site">
+    <meta name="twitter:description" content="Use this tip calculator to quickly work out how much to tip, what the total bill will be, and how much each person should pay.">
+    <meta name="twitter:image" content="https://thys-mjbs.github.io/calculator-site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tip Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://thys-mjbs.github.io/calculator-site/calculators/everyday-life-tools/tip-calculator/",
+      "description": "This tip calculator helps you split a restaurant bill by working out the tip amount, total bill, and per person share."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/calculator-site/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/calculator-site/scripts/main.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/calculator-site/" class="site-logo">Calculator Site</a>
+        <nav class="site-nav">
+          <a href="/calculator-site/">Home</a>
+          <a href="/calculator-site/#categories">Categories</a>
+          <a href="/calculator-site/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/calculator-site/">Home</a> ›
+        <a href="/calculator-site/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Tip Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Tip Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ads + main calculator -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Work out your tip and split the bill</h2>
+              <div class="calculator-form">
+                <div class="form-group">
+                  <label for="billAmount">Bill amount</label>
+                  <input type="text" id="billAmount" inputmode="decimal" autocomplete="off" placeholder="e.g. 650">
+                </div>
+
+                <div class="form-group">
+                  <label for="tipPercentage">Tip percentage (%)</label>
+                  <input type="text" id="tipPercentage" inputmode="decimal" autocomplete="off" placeholder="e.g. 10, 12.5, 15">
+                </div>
+
+                <div class="form-group">
+                  <label for="peopleCount">Number of people splitting the bill</label>
+                  <input type="text" id="peopleCount" inputmode="decimal" autocomplete="off" placeholder="e.g. 2">
+                </div>
+
+                <button id="calculateButton" type="button">Calculate tip and totals</button>
+                <div id="result"></div>
+
+                <div class="share-buttons">
+                  <button id="shareWhatsAppButton" type="button">
+                    Share this calculator on WhatsApp
+                  </button>
+                </div>
+
+                <p class="calculator-note">
+                  Tip: Enter the full bill amount including VAT. The calculator assumes the same tip percentage on the full bill.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick tools to sort out small daily calculations like tips, bill splits, and household numbers.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan your money with budgeting, savings, and debt calculators that keep your finances on track.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/calculator-site/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Estimate trip costs, fuel usage, and other travel numbers before you head out.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Tip calculator to split your restaurant bill fairly</h2>
+              <p>
+                This tip calculator helps you work out how much to tip on a restaurant or bar bill and how much each person should pay.
+                Enter the total bill, choose a tip percentage, and add how many people are sharing. The calculator returns the tip amount,
+                the new total bill including tip, and a per person split.
+              </p>
+              <p>
+                The tool is useful when you are at a table with friends, family, or colleagues and want a quick, fair way to divide the cost.
+                It avoids mental arithmetic at the table and reduces arguments about who should pay what.
+              </p>
+              <p>
+                You can adjust the tip percentage to match local customs, service quality, or your own preference.
+                If you want one person to pay more than others, you can still use this calculator as a baseline and then adjust manually.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The bill amount is the full amount charged by the restaurant, including tax or VAT.</li>
+                <li>The tip percentage applies to the full bill amount, not per person.</li>
+                <li>The number of people is a positive whole number and everyone pays the same amount.</li>
+                <li>The calculator does not handle different shares or discounts for specific people.</li>
+                <li>All results are rounded to two decimal places for clarity on typical card or cash payments.</li>
+              </ul>
+              <p>
+                To use the calculator, start by entering the bill amount as it appears on the slip. Then choose a tip percentage that feels
+                appropriate for the service. Finally, enter the number of people who will share the bill. Click the calculate button to see
+                the tip amount, the total to pay including tip, and how that breaks down per person.
+              </p>
+
+              <h3>Common questions</h3>
+
+              <h3>What tip percentage should I use?</h3>
+              <p>
+                This depends on local customs and service quality. In many places, 10 percent is a basic tip, 12.5 to 15 percent is common for
+                good service, and higher percentages are used for exceptional service. If you are unsure, start with 10 to 12.5 percent.
+              </p>
+
+              <h3>Should I tip on the total bill including tax?</h3>
+              <p>
+                The calculator assumes that you tip on the full bill amount, including tax or VAT. Some people prefer to tip only on the
+                pre-tax amount. If you want to do that, enter the pre-tax amount instead of the full total.
+              </p>
+
+              <h3>How do I handle someone who wants to pay more or less?</h3>
+              <p>
+                This tool splits the total evenly across everyone. If one person wants to pay more or less, you can still use the per person
+                figure as a starting point and then adjust manually. For example, one person can pay a little more to cover drinks or starter dishes.
+              </p>
+
+              <h3>Can I use this calculator for delivery orders or takeaways?</h3>
+              <p>
+                Yes. The calculator works for any situation where you want to add a tip to a bill and possibly split it between people.
+                This includes food delivery, takeaway orders, and in person meals.
+              </p>
+
+              <h3>Why does the people count need to be a whole number?</h3>
+              <p>
+                In most real situations you are splitting the bill between a fixed number of people. Using a whole number keeps the split simple.
+                If you need a more complex split, you can still use the total with tip output and then divide it manually according to your own rules.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-10</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 Calculator Site</span>
+        <a href="/calculator-site/privacy-policy.html">Privacy Policy</a>
+        <a href="/calculator-site/terms.html">Terms</a>
+        <a href="/calculator-site/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+  </body>
+</html>
