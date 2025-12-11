@@ -82,7 +82,7 @@
                 Choose what you want to calculate, enter your values, then press Calculate.
               </p>
 
-              <form class="calculator-form" onsubmit="return false;">
+              <div class="calculator-form">
                 <div class="calculator-mode-options">
                   <label class="mode-option">
                     <input type="radio" name="mode" value="percent-of" checked>
@@ -98,22 +98,32 @@
                   </label>
                 </div>
 
-                <div class="input-group">
+                <div class="form-group">
                   <label id="label-input-a" for="inputA">Percentage (X%)</label>
-                  <input type="text" id="inputA" autocomplete="off" placeholder="e.g. 15">
+                  <input
+                    id="inputA"
+                    type="text"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    placeholder="e.g. 15">
                 </div>
 
-                <div class="input-group">
+                <div class="form-group">
                   <label id="label-input-b" for="inputB">Base value (Y)</label>
-                  <input type="text" id="inputB" autocomplete="off" placeholder="e.g. 250">
+                  <input
+                    id="inputB"
+                    type="text"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    placeholder="e.g. 250">
                 </div>
 
                 <button id="calculateButton" type="button">
                   Calculate
                 </button>
-              </form>
+              </div>
 
-              <div id="result"></div>
+              <div id="result" aria-live="polite"></div>
 
               <div class="share-buttons">
                 <button id="shareWhatsAppButton" type="button">
@@ -137,14 +147,12 @@
               <p class="related-desc">Quick tools for everyday math problems like percentages, ratios, and basic number checks.</p>
             </a>
           </div>
-
           <div class="grid-slot">
             <a class="related-card" href="/categories/personal-finance/">
               <h3 class="related-title">Personal Finance</h3>
               <p class="related-desc">Estimate budgets, compare interest rates, and see how small percentage changes affect your money.</p>
             </a>
           </div>
-
           <div class="grid-slot">
             <a class="related-card" href="/categories/education-exams/">
               <h3 class="related-title">Education &amp; Exams</h3>
@@ -154,8 +162,8 @@
 
           <!-- Row 3: affiliate + SEO + affiliate -->
           <div class="grid-slot">
-            <div class="ad-block" aria-label="Advertisement area">
-              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
               <p></p>
             </div>
           </div>
@@ -214,8 +222,8 @@
           </div>
 
           <div class="grid-slot">
-            <div class="ad-block" aria-label="Advertisement area">
-              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
               <p></p>
             </div>
           </div>
@@ -231,9 +239,10 @@
         <a href="/disclaimer.html">Disclaimer</a>
       </div>
     </footer>
-
+  
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
+    </script>  
+
   </body>
 </html>
