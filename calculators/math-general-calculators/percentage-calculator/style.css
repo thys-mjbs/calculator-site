@@ -1,0 +1,173 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const modeInputs = document.querySelectorAll('input[name="mode"]');
+  const inputA = document.getElementById("inputA");
+  const inputB = document.getElementById("inputB");
+  const labelInputA = document.getElementById("label-input-a");
+  const labelInputB = document.getElementById("label-input-b");
+  const calculateButton = document.getElementById("calculateButton");
+  const resultDiv = document.getElementById("result");
+  const shareButton = document.getElementById("shareWhatsAppButton");
+
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      const formatted = formatInputWithCommas(inputEl.value);
+      inputEl.value = formatted;
+    });
+  }
+
+  attachLiveFormatting(inputA);
+  attachLiveFormatting(inputB);
+
+  function getSelectedMode() {
+    let value = "percent-of";
+    modeInputs.forEach(function (radio) {
+      if (radio.checked) {
+        value = radio.value;
+      }
+    });
+    return value;
+  }
+
+  function updateLabelsForMode() {
+    const mode = getSelectedMode();
+
+    if (mode === "percent-of") {
+      labelInputA.textContent = "Percentage (X%)";
+      labelInputB.textContent = "Base value (Y)";
+      inputA.placeholder = "e.g. 15";
+      inputB.placeholder = "e.g. 250";
+    } else if (mode === "what-percent") {
+      labelInputA.textContent = "Part value (X)";
+      labelInputB.textContent = "Whole value (Y)";
+      inputA.placeholder = "e.g. 45";
+      inputB.placeholder = "e.g. 120";
+    } else if (mode === "percent-change") {
+      labelInputA.textContent = "Original value (X)";
+      labelInputB.textContent = "New value (Y)";
+      inputA.placeholder = "e.g. 500";
+      inputB.placeholder = "e.g. 650";
+    }
+    resultDiv.textContent = "";
+    resultDiv.className = "";
+  }
+
+  modeInputs.forEach(function (radio) {
+    radio.addEventListener("change", updateLabelsForMode);
+  });
+
+  updateLabelsForMode();
+
+  function showError(message) {
+    resultDiv.textContent = message;
+    resultDiv.className = "error";
+  }
+
+  function showSuccess(message) {
+    resultDiv.innerHTML = message;
+    resultDiv.className = "success";
+  }
+
+  function handleCalculation() {
+    const mode = getSelectedMode();
+    const rawA = inputA.value;
+    const rawB = inputB.value;
+
+    const valueA = toNumber(rawA);
+    const valueB = toNumber(rawB);
+
+    if (isNaN(valueA) || isNaN(valueB)) {
+      showError("Please enter valid numeric values in both fields.");
+      return;
+    }
+
+    if (mode === "percent-of") {
+      const result = (valueA / 100) * valueB;
+      const formatted = formatNumberTwoDecimals(result);
+      const percentText = formatNumberTwoDecimals(valueA);
+      const baseText = formatNumberTwoDecimals(valueB);
+      showSuccess(
+        "<strong>" +
+          percentText +
+          "% of " +
+          baseText +
+          " = " +
+          formatted +
+          "</strong>"
+      );
+    } else if (mode === "what-percent") {
+      if (valueB === 0) {
+        showError("The whole value (Y) cannot be zero for this calculation.");
+        return;
+      }
+      const result = (valueA / valueB) * 100;
+      const formatted = formatNumberTwoDecimals(result);
+      const partText = formatNumberTwoDecimals(valueA);
+      const wholeText = formatNumberTwoDecimals(valueB);
+      showSuccess(
+        "<strong>" +
+          partText +
+          " is " +
+          formatted +
+          "% of " +
+          wholeText +
+          "</strong>"
+      );
+    } else if (mode === "percent-change") {
+      if (valueA === 0) {
+        showError("The original value (X) cannot be zero for percent change.");
+        return;
+      }
+      const diff = valueB - valueA;
+      const result = (diff / valueA) * 100;
+      const formatted = formatNumberTwoDecimals(Math.abs(result));
+      const originalText = formatNumberTwoDecimals(valueA);
+      const newText = formatNumberTwoDecimals(valueB);
+
+      let direction;
+      if (result > 0) {
+        direction = "increase";
+      } else if (result < 0) {
+        direction = "decrease";
+      } else {
+        direction = "no change";
+      }
+
+      if (direction === "no change") {
+        showSuccess(
+          "<strong>There is no percentage change between " +
+            originalText +
+            " and " +
+            newText +
+            ".</strong>"
+        );
+      } else {
+        showSuccess(
+          "<strong>The change from " +
+            originalText +
+            " to " +
+            newText +
+            " is a " +
+            formatted +
+            "% " +
+            direction +
+            ".</strong>"
+        );
+      }
+    }
+  }
+
+  if (calculateButton) {
+    calculateButton.addEventListener("click", handleCalculation);
+  }
+
+  if (shareButton) {
+    shareButton.addEventListener("click", function () {
+      const pageUrl = window.location.href;
+      const message = "Percentage Calculator – check this calculator: " + pageUrl;
+      const encoded = encodeURIComponent(message);
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
+    });
+  }
+});
