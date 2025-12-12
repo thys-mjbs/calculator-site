@@ -1,229 +1,210 @@
-.calculator-container {
-  max-width: 360px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const modeInputs = document.querySelectorAll('input[name="mode"]');
+  const inputA = document.getElementById("inputA");
+  const inputB = document.getElementById("inputB");
+  const labelInputA = document.getElementById("label-input-a");
+  const labelInputB = document.getElementById("label-input-b");
+  const calculateButton = document.getElementById("calculateButton");
+  const resultDiv = document.getElementById("result");
+  const shareButton = document.getElementById("shareWhatsAppButton");
 
-.calculator-container h2 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 18px;
-}
+  let recalcTimer = null;
 
-/* Generic input groups (both .form-group and .input-group) */
-.form-group,
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 12px;
-}
-
-.form-group label,
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.form-group input[type="text"],
-.input-group input[type="text"] {
-  width: 100%;
-  padding: 6px 8px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
-}
-
-.form-group input[type="text"]:focus,
-.input-group input[type="text"]:focus {
-  outline: none;
-  border-color: #0077cc;
-  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
-}
-
-#calculateButton {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
-#result {
-  margin-top: 14px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  font-size: 14px;
-}
-
-#result.error {
-  color: #b00020;
-  font-weight: 600;
-}
-
-#result.success {
-  color: #0b4f2a;
-}
-
-.share-buttons {
-  margin-top: 12px;
-}
-
-.share-buttons button {
-  width: 100%;
-  padding: 9px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #007f3b;
-  background-color: #00a651;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-/* Related category tiles */
-.related-card {
-  display: block;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background: #ffffff;
-  box-sizing: border-box;
-  height: 100%;
-}
-
-.related-title {
-  font-weight: bold;
-  margin: 0 0 4px;
-  font-size: 14px;
-}
-
-.related-desc {
-  font-size: 13px;
-  color: #555555;
-  margin: 0;
-}
-
-/* SEO section */
-.seo-section {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.seo-section h2 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-.seo-section h3 {
-  font-size: 15px;
-  margin-top: 14px;
-  margin-bottom: 6px;
-}
-
-.seo-section p {
-  margin-bottom: 8px;
-}
-
-.seo-section ul {
-  padding-left: 18px;
-  margin-bottom: 10px;
-}
-
-.last-updated {
-  margin-top: 12px;
-  font-size: 12px;
-  color: #777777;
-}
-
-/* Ad and affiliate placeholders – shared look */
-.ad-block {
-  border-radius: 8px;
-  border: 1px dashed #d0d0d0;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.ad-placeholder-img {
-  width: 100%;
-  height: 80px;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-  background: repeating-linear-gradient(
-    45deg,
-    #f5f5f5,
-    #f5f5f5 6px,
-    #e9e9e9 6px,
-    #e9e9e9 12px
-  );
-}
-
-/* Breadcrumbs – force same look everywhere */
-.breadcrumbs {
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-}
-
-/* Basic mobile tweak */
-@media (max-width: 768px) {
-  .calculator-container {
-    max-width: 100%;
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      const formatted = formatInputWithCommas(inputEl.value);
+      inputEl.value = formatted;
+    });
   }
-}
 
-/* Calculator-specific styling */
+  attachLiveFormatting(inputA);
+  attachLiveFormatting(inputB);
 
-.calculator-intro {
-  font-size: 13px;
-  margin-bottom: 12px;
-  color: #444444;
-}
+  function getSelectedMode() {
+    let value = "percent-of";
+    modeInputs.forEach(function (radio) {
+      if (radio.checked) value = radio.value;
+    });
+    return value;
+  }
 
-.calculator-form {
-  margin-top: 6px;
-}
+  function clearResult() {
+    resultDiv.textContent = "";
+    resultDiv.className = "";
+  }
 
-.calculator-mode-options {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
-}
+  function showHint(message) {
+    resultDiv.textContent = message;
+    resultDiv.className = "";
+  }
 
-.mode-option {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-}
+  function showError(message) {
+    resultDiv.textContent = message;
+    resultDiv.className = "error";
+  }
 
-.mode-option input[type="radio"] {
-  margin: 0;
-}
+  function showSuccess(html) {
+    resultDiv.innerHTML = html;
+    resultDiv.className = "success";
+  }
 
-#calculateButton {
-  background-color: #0077cc;
-  color: #ffffff;
-}
+  function updateLabelsForMode() {
+    const mode = getSelectedMode();
 
-#calculateButton:hover {
-  opacity: 0.95;
-}
+    if (mode === "percent-of") {
+      labelInputA.textContent = "Percentage (X%)";
+      labelInputB.textContent = "Base value (Y)";
+      inputA.placeholder = "e.g. 15";
+      inputB.placeholder = "e.g. 250";
+    } else if (mode === "what-percent") {
+      labelInputA.textContent = "Part value (X)";
+      labelInputB.textContent = "Whole value (Y)";
+      inputA.placeholder = "e.g. 45";
+      inputB.placeholder = "e.g. 120";
+    } else if (mode === "percent-change") {
+      labelInputA.textContent = "Original value (X)";
+      labelInputB.textContent = "New value (Y)";
+      inputA.placeholder = "e.g. 500";
+      inputB.placeholder = "e.g. 650";
+    }
 
-.share-buttons button:hover {
-  opacity: 0.95;
-}
+    scheduleRecalc();
+  }
+
+  function hasAnyInput() {
+    const a = (inputA.value || "").trim();
+    const b = (inputB.value || "").trim();
+    return a.length > 0 || b.length > 0;
+  }
+
+  function attemptCalculate(isAuto) {
+    const mode = getSelectedMode();
+    const rawA = (inputA.value || "").trim();
+    const rawB = (inputB.value || "").trim();
+
+    if (!rawA && !rawB) {
+      clearResult();
+      return;
+    }
+
+    if (!rawA || !rawB) {
+      showHint("Enter values in both fields to see the result.");
+      return;
+    }
+
+    const valueA = toNumber(rawA);
+    const valueB = toNumber(rawB);
+
+    if (isNaN(valueA) || isNaN(valueB)) {
+      showError("Please enter valid numeric values in both fields.");
+      return;
+    }
+
+    if (mode === "percent-of") {
+      const result = (valueA / 100) * valueB;
+      const formatted = formatNumberTwoDecimals(result);
+      const percentText = formatNumberTwoDecimals(valueA);
+      const baseText = formatNumberTwoDecimals(valueB);
+
+      showSuccess(
+        "<strong>" + percentText + "% of " + baseText + " = " + formatted + "</strong>"
+      );
+      return;
+    }
+
+    if (mode === "what-percent") {
+      if (valueB === 0) {
+        showError("The whole value (Y) cannot be zero for this calculation.");
+        return;
+      }
+
+      const result = (valueA / valueB) * 100;
+      const formatted = formatNumberTwoDecimals(result);
+      const partText = formatNumberTwoDecimals(valueA);
+      const wholeText = formatNumberTwoDecimals(valueB);
+
+      showSuccess(
+        "<strong>" + partText + " is " + formatted + "% of " + wholeText + "</strong>"
+      );
+      return;
+    }
+
+    if (mode === "percent-change") {
+      if (valueA === 0) {
+        showError("The original value (X) cannot be zero for percent change.");
+        return;
+      }
+
+      const diff = valueB - valueA;
+      const pct = (diff / valueA) * 100;
+
+      const originalText = formatNumberTwoDecimals(valueA);
+      const newText = formatNumberTwoDecimals(valueB);
+
+      if (pct === 0) {
+        showSuccess(
+          "<strong>There is no percentage change between " + originalText + " and " + newText + ".</strong>"
+        );
+        return;
+      }
+
+      const direction = pct > 0 ? "increase" : "decrease";
+      const formatted = formatNumberTwoDecimals(Math.abs(pct));
+
+      showSuccess(
+        "<strong>The change from " + originalText + " to " + newText + " is a " + formatted + "% " + direction + ".</strong>"
+      );
+      return;
+    }
+
+    if (!isAuto) {
+      showError("Please select a calculation type.");
+    }
+  }
+
+  function scheduleRecalc() {
+    if (recalcTimer) {
+      clearTimeout(recalcTimer);
+    }
+    recalcTimer = setTimeout(function () {
+      attemptCalculate(true);
+    }, 200);
+  }
+
+  modeInputs.forEach(function (radio) {
+    radio.addEventListener("change", updateLabelsForMode);
+  });
+
+  if (inputA) {
+    inputA.addEventListener("input", scheduleRecalc);
+    inputA.addEventListener("blur", function () {
+      attemptCalculate(true);
+    });
+  }
+
+  if (inputB) {
+    inputB.addEventListener("input", scheduleRecalc);
+    inputB.addEventListener("blur", function () {
+      attemptCalculate(true);
+    });
+  }
+
+  if (calculateButton) {
+    calculateButton.addEventListener("click", function () {
+      attemptCalculate(false);
+    });
+  }
+
+  updateLabelsForMode();
+
+  if (shareButton) {
+    shareButton.addEventListener("click", function () {
+      const pageUrl = window.location.href;
+      const message = "Percentage Calculator – check this calculator: " + pageUrl;
+      const encoded = encodeURIComponent(message);
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
+    });
+  }
+});
