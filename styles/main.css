@@ -127,6 +127,27 @@ h1 {
   border-radius: 8px;
   padding: 12px;
   font-size: 14px;
+
+  /* NEW: center affiliate images and prevent huge images from breaking layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-block a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ad-block img {
+  display: block;
+  max-width: 100%;
+  max-height: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .ad-title {
