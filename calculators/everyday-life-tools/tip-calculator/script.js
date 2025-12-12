@@ -19,17 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.innerHTML = html;
   }
 
-  function ensureHelpersExist() {
-    if (typeof toNumber !== "function") return false;
-    if (typeof formatNumberTwoDecimals !== "function") return false;
-    if (typeof formatInputWithCommas !== "function") return false;
-    return true;
+  function helpersOk() {
+    return (
+      typeof toNumber === "function" &&
+      typeof formatNumberTwoDecimals === "function" &&
+      typeof formatInputWithCommas === "function"
+    );
   }
 
   function attachLiveFormatting(inputEl) {
     if (!inputEl) return;
     inputEl.addEventListener("input", function () {
-      if (!ensureHelpersExist()) return;
+      if (!helpersOk()) return;
       inputEl.value = formatInputWithCommas(inputEl.value);
     });
   }
@@ -38,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
   attachLiveFormatting(tipPercentageInput);
 
   function calculate() {
-    if (!ensureHelpersExist()) {
-      setError("Site scripts failed to load. Please refresh. If it persists, main.js is not loading.");
+    if (!helpersOk()) {
+      setError("Required site scripts did not load. Check /scripts/main.js and /styles/main.css are reachable.");
       return;
     }
 
