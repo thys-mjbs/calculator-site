@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const billAmountInput = document.getElementById("billAmount");
   const tipPercentageInput = document.getElementById("tipPercentage");
-  const peopleCountInput = document.getElementById("peopleCount");
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   attachLiveFormatting(billAmountInput);
   attachLiveFormatting(tipPercentageInput);
-  attachLiveFormatting(peopleCountInput);
 
   function setError(message) {
     if (!resultDiv) return;
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     calculateButton.addEventListener("click", function () {
       const billAmount = toNumber(billAmountInput.value);
       const tipPercentage = toNumber(tipPercentageInput.value);
-      const rawPeople = toNumber(peopleCountInput.value);
 
       if (isNaN(billAmount) || billAmount <= 0) {
         setError("Please enter a valid bill amount greater than zero.");
@@ -48,27 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      if (isNaN(rawPeople) || rawPeople <= 0) {
-        setError("Please enter the number of people as a value greater than zero.");
-        return;
-      }
-
-      const peopleCount = Math.floor(rawPeople);
-
-      if (peopleCount < 1) {
-        setError("The number of people must be at least 1.");
-        return;
-      }
-
       const tipAmount = billAmount * (tipPercentage / 100);
       const totalWithTip = billAmount + tipAmount;
-      const tipPerPerson = tipAmount / peopleCount;
-      const totalPerPerson = totalWithTip / peopleCount;
 
       const tipAmountFormatted = formatNumberTwoDecimals(tipAmount);
       const totalWithTipFormatted = formatNumberTwoDecimals(totalWithTip);
-      const tipPerPersonFormatted = formatNumberTwoDecimals(tipPerPerson);
-      const totalPerPersonFormatted = formatNumberTwoDecimals(totalPerPerson);
 
       const contentHtml =
         '<div class="result-row">' +
@@ -81,18 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '<span class="result-label">Total with tip:</span>' +
         '<span class="result-value">' +
         totalWithTipFormatted +
-        "</span>" +
-        "</div>" +
-        '<div class="result-row">' +
-        '<span class="result-label">Tip per person:</span>' +
-        '<span class="result-value">' +
-        tipPerPersonFormatted +
-        "</span>" +
-        "</div>" +
-        '<div class="result-row">' +
-        '<span class="result-label">Total per person:</span>' +
-        '<span class="result-value">' +
-        totalPerPersonFormatted +
         "</span>" +
         "</div>";
 
