@@ -186,7 +186,6 @@
 }
 
 /* Tip calculator specific styling */
-
 .calculator-form {
   margin-top: 4px;
 }
@@ -200,7 +199,8 @@
 .result-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4px;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
 .result-label {
@@ -208,7 +208,7 @@
 }
 
 .result-value {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (max-width: 480px) {

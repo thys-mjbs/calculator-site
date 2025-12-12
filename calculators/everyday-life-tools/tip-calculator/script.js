@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function attachLiveFormatting(inputEl) {
     if (!inputEl) return;
     inputEl.addEventListener("input", function () {
-      const formatted = formatInputWithCommas(inputEl.value);
-      inputEl.value = formatted;
+      inputEl.value = formatInputWithCommas(inputEl.value);
     });
   }
 
@@ -23,49 +22,63 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.textContent = message;
   }
 
-  function setSuccess(contentHtml) {
+  function setSuccess(html) {
     if (!resultDiv) return;
     resultDiv.classList.remove("error");
     resultDiv.classList.add("success");
-    resultDiv.innerHTML = contentHtml;
+    resultDiv.innerHTML = html;
+  }
+
+  function calculate() {
+    const billAmount = toNumber(billAmountInput ? billAmountInput.value : "");
+    const tipPercentage = toNumber(tipPercentageInput ? tipPercentageInput.value : "");
+
+    if (isNaN(billAmount) || billAmount <= 0) {
+      setError("Please enter a valid bill amount greater than zero.");
+      return;
+    }
+
+    if (isNaN(tipPercentage) || tipPercentage < 0) {
+      setError("Please enter a valid tip percentage (zero or higher).");
+      return;
+    }
+
+    const tipAmount = billAmount * (tipPercentage / 100);
+    const totalWithTip = billAmount + tipAmount;
+
+    const tipAmountFormatted = formatNumberTwoDecimals(tipAmount);
+    const totalWithTipFormatted = formatNumberTwoDecimals(totalWithTip);
+
+    const html =
+      '<div class="result-row">' +
+      '<span class="result-label">Tip amount:</span>' +
+      '<span class="result-value">' +
+      tipAmountFormatted +
+      "</span>" +
+      "</div>" +
+      '<div class="result-row">' +
+      '<span class="result-label">Total with tip:</span>' +
+      '<span class="result-value">' +
+      totalWithTipFormatted +
+      "</span>" +
+      "</div>";
+
+    setSuccess(html);
   }
 
   if (calculateButton) {
-    calculateButton.addEventListener("click", function () {
-      const billAmount = toNumber(billAmountInput.value);
-      const tipPercentage = toNumber(tipPercentageInput.value);
+    calculateButton.addEventListener("click", calculate);
+  }
 
-      if (isNaN(billAmount) || billAmount <= 0) {
-        setError("Please enter a valid bill amount greater than zero.");
-        return;
-      }
+  if (tipPercentageInput) {
+    tipPercentageInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") calculate();
+    });
+  }
 
-      if (isNaN(tipPercentage) || tipPercentage < 0) {
-        setError("Please enter a valid tip percentage (zero or higher).");
-        return;
-      }
-
-      const tipAmount = billAmount * (tipPercentage / 100);
-      const totalWithTip = billAmount + tipAmount;
-
-      const tipAmountFormatted = formatNumberTwoDecimals(tipAmount);
-      const totalWithTipFormatted = formatNumberTwoDecimals(totalWithTip);
-
-      const contentHtml =
-        '<div class="result-row">' +
-        '<span class="result-label">Tip amount:</span>' +
-        '<span class="result-value">' +
-        tipAmountFormatted +
-        "</span>" +
-        "</div>" +
-        '<div class="result-row">' +
-        '<span class="result-label">Total with tip:</span>' +
-        '<span class="result-value">' +
-        totalWithTipFormatted +
-        "</span>" +
-        "</div>";
-
-      setSuccess(contentHtml);
+  if (billAmountInput) {
+    billAmountInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") calculate();
     });
   }
 
