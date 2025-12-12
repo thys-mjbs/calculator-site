@@ -5,16 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
 
-  function attachLiveFormatting(inputEl) {
-    if (!inputEl) return;
-    inputEl.addEventListener("input", function () {
-      inputEl.value = formatInputWithCommas(inputEl.value);
-    });
-  }
-
-  attachLiveFormatting(billAmountInput);
-  attachLiveFormatting(tipPercentageInput);
-
   function setError(message) {
     if (!resultDiv) return;
     resultDiv.classList.remove("success");
@@ -29,7 +19,30 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.innerHTML = html;
   }
 
+  function ensureHelpersExist() {
+    if (typeof toNumber !== "function") return false;
+    if (typeof formatNumberTwoDecimals !== "function") return false;
+    if (typeof formatInputWithCommas !== "function") return false;
+    return true;
+  }
+
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      if (!ensureHelpersExist()) return;
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
+  }
+
+  attachLiveFormatting(billAmountInput);
+  attachLiveFormatting(tipPercentageInput);
+
   function calculate() {
+    if (!ensureHelpersExist()) {
+      setError("Site scripts failed to load. Please refresh. If it persists, main.js is not loading.");
+      return;
+    }
+
     const billAmount = toNumber(billAmountInput ? billAmountInput.value : "");
     const tipPercentage = toNumber(tipPercentageInput ? tipPercentageInput.value : "");
 
@@ -70,14 +83,14 @@ document.addEventListener("DOMContentLoaded", function () {
     calculateButton.addEventListener("click", calculate);
   }
 
-  if (tipPercentageInput) {
-    tipPercentageInput.addEventListener("keydown", function (e) {
+  if (billAmountInput) {
+    billAmountInput.addEventListener("keydown", function (e) {
       if (e.key === "Enter") calculate();
     });
   }
 
-  if (billAmountInput) {
-    billAmountInput.addEventListener("keydown", function (e) {
+  if (tipPercentageInput) {
+    tipPercentageInput.addEventListener("keydown", function (e) {
       if (e.key === "Enter") calculate();
     });
   }
