@@ -265,3 +265,22 @@
 .ad-block .affiliate-cta{
   margin-top:auto;
 }
+
+/* Force text affiliate tiles to stack vertically, regardless of global/link styles */
+.ad-block a.affiliate-link{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  width:100% !important;
+  height:100% !important;
+  text-align:left !important;
+}
+
+.ad-block a.affiliate-link > *{
+  display:block !important;
+  width:100% !important;
+}
+
+.ad-block{
+  display:block !important;
+}
