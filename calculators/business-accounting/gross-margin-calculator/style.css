@@ -266,3 +266,46 @@
     max-width: 100%;
   }
 }
+/* FORCE text-affiliate tiles to be 300×300 and stacked (works even if HTML regresses) */
+.ad-block:has(.affiliate-label),
+.ad-block:has(.affiliate-copy),
+.ad-block:has(.affiliate-cta){
+  width:300px !important;
+  height:300px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:center !important;
+  padding:18px !important;
+  box-sizing:border-box !important;
+  gap:16px !important;
+}
+
+.ad-block:has(.affiliate-label) .affiliate-label,
+.ad-block:has(.affiliate-copy) .affiliate-copy,
+.ad-block:has(.affiliate-cta) .affiliate-cta{
+  width:100% !important;
+  text-align:center !important;
+  margin:0 !important;
+}
+
+.ad-block:has(.affiliate-label) .affiliate-label{
+  font-weight:900 !important;
+  font-size:20px !important;
+  color:#111111 !important;
+}
+
+.ad-block:has(.affiliate-copy) .affiliate-copy{
+  font-size:14px !important;
+  line-height:1.4 !important;
+  color:#666666 !important;
+  max-width:320px;
+}
+
+.ad-block:has(.affiliate-cta) .affiliate-cta{
+  margin-top:auto !important;
+  font-weight:600 !important;
+  text-decoration:underline !important;
+  color:#222222 !important;
+}
