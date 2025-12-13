@@ -309,3 +309,12 @@
   text-decoration:underline !important;
   color:#222222 !important;
 }
+
+/* FINAL vertical centering for text affiliate tiles */
+.ad-block:has(.affiliate-label){
+  justify-content:center !important;
+}
+
+.ad-block:has(.affiliate-cta) .affiliate-cta{
+  margin-top:12px !important;
+}
