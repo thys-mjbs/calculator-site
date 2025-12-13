@@ -191,7 +191,7 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: flex-start;
+  justify-content: center !important;
   text-align: center !important;
   text-decoration: none;
   color: inherit;
@@ -227,7 +227,7 @@
 }
 
 .ad-block a.affiliate-link .affiliate-cta {
-  margin-top: auto;
+  margin-top: 12px;
   font-weight: 600;
   font-size: 14px;
   text-decoration: underline;
@@ -238,83 +238,46 @@
   filter: brightness(0.98);
 }
 
-/* Uniform book-cover rendering (max 300×300 visual footprint) */
-.ad-block img {
-  max-width: 300px;
-  max-height: 300px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
+/* Fallback: ONLY when text affiliate HTML regresses to sibling elements (no .affiliate-link wrapper) */
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) {
+  width: 300px !important;
+  height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
 }
 
-/* Breadcrumbs – force same look everywhere */
-.breadcrumbs {
-  font-size: 13px;
-  margin-bottom: 10px;
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label,
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy,
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
 }
 
-.breadcrumbs a {
-  text-decoration: none;
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #111111 !important;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .calculator-container {
-    max-width: 100%;
-  }
-}
-/* FORCE text-affiliate tiles to be 300×300 and stacked (works even if HTML regresses) */
-.ad-block:has(.affiliate-label),
-.ad-block:has(.affiliate-copy),
-.ad-block:has(.affiliate-cta){
-  width:300px !important;
-  height:300px !important;
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:flex-start !important;
-  text-align:center !important;
-  padding:18px !important;
-  box-sizing:border-box !important;
-  gap:16px !important;
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #666666 !important;
+  max-width: 320px;
 }
 
-.ad-block:has(.affiliate-label) .affiliate-label,
-.ad-block:has(.affiliate-copy) .affiliate-copy,
-.ad-block:has(.affiliate-cta) .affiliate-cta{
-  width:100% !important;
-  text-align:center !important;
-  margin:0 !important;
-}
-
-.ad-block:has(.affiliate-label) .affiliate-label{
-  font-weight:900 !important;
-  font-size:20px !important;
-  color:#111111 !important;
-}
-
-.ad-block:has(.affiliate-copy) .affiliate-copy{
-  font-size:14px !important;
-  line-height:1.4 !important;
-  color:#666666 !important;
-  max-width:320px;
-}
-
-.ad-block:has(.affiliate-cta) .affiliate-cta{
-  margin-top:auto !important;
-  font-weight:600 !important;
-  text-decoration:underline !important;
-  color:#222222 !important;
-}
-
-/* FINAL vertical centering for text affiliate tiles */
-.ad-block:has(.affiliate-label){
-  justify-content:center !important;
-}
-
-.ad-block:has(.affiliate-cta) .affiliate-cta{
-  margin-top:12px !important;
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  margin-top: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  color: #222222 !important;
 }
