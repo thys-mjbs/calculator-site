@@ -186,7 +186,7 @@
   );
 }
 
-/* Text-based affiliate tile (canonical, override-safe) */
+/* Text-based affiliate tile (canonical: 300px tall, centered, override-safe) */
 .ad-block a.affiliate-link {
   display: flex !important;
   flex-direction: column !important;
@@ -197,9 +197,9 @@
   color: inherit;
   width: 100% !important;
   height: 100% !important;
-  min-height: 200px !important;
+  min-height: 300px !important;
   padding: 18px !important;
-  gap: 14px !important;
+  gap: 16px !important;
   border-radius: 12px;
   box-sizing: border-box;
 }
@@ -211,27 +211,27 @@
 }
 
 .ad-block a.affiliate-link .affiliate-label {
-  font-weight: 800;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 20px;
   line-height: 1.2;
   margin: 0;
-  color: #333333;
+  color: #111111;
 }
 
 .ad-block a.affiliate-link .affiliate-copy {
   margin: 0;
   font-size: 14px;
-  line-height: 1.35;
-  opacity: 0.9;
-  color: #555555;
+  line-height: 1.4;
+  color: #666666;
   max-width: 320px;
 }
 
 .ad-block a.affiliate-link .affiliate-cta {
   margin-top: auto;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 14px;
   text-decoration: underline;
+  color: #222222;
 }
 
 .ad-block a.affiliate-link:hover {
