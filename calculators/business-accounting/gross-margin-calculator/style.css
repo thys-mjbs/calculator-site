@@ -256,3 +256,12 @@
     max-width: 100%;
   }
 }
+
+.ad-block .affiliate-link{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start;
+}
+.ad-block .affiliate-cta{
+  margin-top:auto;
+}
