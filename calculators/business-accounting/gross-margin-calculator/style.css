@@ -186,49 +186,59 @@
   );
 }
 
-/* Text-based affiliate blocks (full-card clickable, scoped to .ad-block only) */
-.ad-block .affiliate-link {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Text-based affiliate tile (canonical, override-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  text-align: center !important;
   text-decoration: none;
   color: inherit;
-  width: 100%;
-  height: 100%;
-  padding: 14px;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 200px !important;
+  padding: 18px !important;
+  gap: 14px !important;
   border-radius: 12px;
   box-sizing: border-box;
 }
 
-.ad-block .affiliate-label {
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
-  color: #333333;
-  margin: 0;
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
-.ad-block .affiliate-copy {
+.ad-block a.affiliate-link .affiliate-label {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  color: #333333;
+}
+
+.ad-block a.affiliate-link .affiliate-copy {
   margin: 0;
   font-size: 14px;
   line-height: 1.35;
   opacity: 0.9;
   color: #555555;
+  max-width: 320px;
 }
 
-.ad-block .affiliate-cta {
+.ad-block a.affiliate-link .affiliate-cta {
   margin-top: auto;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
   text-decoration: underline;
 }
 
-.ad-block .affiliate-link:hover {
+.ad-block a.affiliate-link:hover {
   filter: brightness(0.98);
 }
 
-/* Uniform book-cover rendering (max 300x300 visual footprint) */
+/* Uniform book-cover rendering (max 300×300 visual footprint) */
 .ad-block img {
   max-width: 300px;
   max-height: 300px;
@@ -255,60 +265,4 @@
   .calculator-container {
     max-width: 100%;
   }
-}
-
-.ad-block .affiliate-link{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:flex-start;
-}
-.ad-block .affiliate-cta{
-  margin-top:auto;
-}
-
-/* Force text affiliate tiles to stack vertically, regardless of global/link styles */
-.ad-block a.affiliate-link{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:flex-start !important;
-  width:100% !important;
-  height:100% !important;
-  text-align:left !important;
-}
-
-.ad-block a.affiliate-link > *{
-  display:block !important;
-  width:100% !important;
-}
-
-.ad-block{
-  display:block !important;
-}
-
-/* Text affiliate tile: centered + taller + more breathing room */
-.ad-block a.affiliate-link{
-  align-items:center !important;
-  justify-content:flex-start;
-  text-align:center !important;
-  min-height:200px !important;
-  padding:18px !important;
-  gap:14px !important;
-}
-
-.ad-block a.affiliate-link .affiliate-label{
-  font-size:18px;
-  font-weight:800;
-  margin:0;
-}
-
-.ad-block a.affiliate-link .affiliate-copy{
-  font-size:14px;
-  margin:0;
-  max-width:320px;
-}
-
-.ad-block a.affiliate-link .affiliate-cta{
-  margin-top:auto;
-  font-weight:800;
-  text-decoration:underline;
 }
