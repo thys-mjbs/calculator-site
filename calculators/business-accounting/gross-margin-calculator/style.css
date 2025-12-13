@@ -284,3 +284,31 @@
 .ad-block{
   display:block !important;
 }
+
+/* Text affiliate tile: centered + taller + more breathing room */
+.ad-block a.affiliate-link{
+  align-items:center !important;
+  justify-content:flex-start;
+  text-align:center !important;
+  min-height:200px !important;
+  padding:18px !important;
+  gap:14px !important;
+}
+
+.ad-block a.affiliate-link .affiliate-label{
+  font-size:18px;
+  font-weight:800;
+  margin:0;
+}
+
+.ad-block a.affiliate-link .affiliate-copy{
+  font-size:14px;
+  margin:0;
+  max-width:320px;
+}
+
+.ad-block a.affiliate-link .affiliate-cta{
+  margin-top:auto;
+  font-weight:800;
+  text-decoration:underline;
+}
