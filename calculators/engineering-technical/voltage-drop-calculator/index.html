@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Voltage Drop Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate voltage drop, percentage drop, and end-of-run voltage for DC, single-phase, or three-phase circuits based on cable size, length, and load current.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/voltage-drop-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Voltage Drop Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate voltage drop, percentage drop, and end-of-run voltage for DC, single-phase, or three-phase circuits based on cable size, length, and load current.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/voltage-drop-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Voltage Drop Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate voltage drop, percentage drop, and end-of-run voltage for DC, single-phase, or three-phase circuits based on cable size, length, and load current.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Voltage Drop Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/voltage-drop-calculator/",
+      "description": "Estimate voltage drop, percentage drop, and end-of-run voltage for DC, single-phase, or three-phase circuits based on cable size, length, and load current."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Voltage Drop Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Voltage Drop Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate voltage drop and end-of-run voltage</h2>
+
+              <p class="calculator-intro">Enter your system type, supply voltage, load current, one-way cable length, and cable size. The calculator estimates voltage drop, percent drop, and the voltage available at the load.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="systemType">System type</label>
+                <select id="systemType">
+                  <option value="dc">DC (2-wire)</option>
+                  <option value="ac1">AC single-phase</option>
+                  <option value="ac3">AC three-phase</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="supplyVoltage">Supply voltage (V)</label>
+                <input id="supplyVoltage" type="text" inputmode="decimal" placeholder="e.g. 12, 24, 230, 400">
+              </div>
+
+              <div class="form-group">
+                <label for="loadCurrent">Load current (A)</label>
+                <input id="loadCurrent" type="text" inputmode="decimal" placeholder="e.g. 10">
+              </div>
+
+              <div class="form-group">
+                <label for="oneWayLength">One-way cable length (m)</label>
+                <input id="oneWayLength" type="text" inputmode="decimal" placeholder="e.g. 25">
+              </div>
+
+              <div class="form-group">
+                <label for="conductorMaterial">Conductor material</label>
+                <select id="conductorMaterial">
+                  <option value="copper">Copper</option>
+                  <option value="aluminum">Aluminum</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cableSize">Cable size (mm²)</label>
+                <select id="cableSize">
+                  <option value="1.5">1.5</option>
+                  <option value="2.5">2.5</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="10">10</option>
+                  <option value="16">16</option>
+                  <option value="25">25</option>
+                  <option value="35">35</option>
+                  <option value="50">50</option>
+                  <option value="70">70</option>
+                  <option value="95">95</option>
+                  <option value="120">120</option>
+                  <option value="150">150</option>
+                  <option value="185">185</option>
+                  <option value="240">240</option>
+                  <option value="custom">Custom (enter Ω/km)</option>
+                </select>
+              </div>
+
+              <div id="customResistanceBlock" class="form-group hidden">
+                <label for="customResistance">Conductor resistance (Ω/km)</label>
+                <input id="customResistance" type="text" inputmode="decimal" placeholder="e.g. 1.83">
+              </div>
+
+              <div class="form-group">
+                <label for="maxDropPercent">Target max voltage drop (%)</label>
+                <input id="maxDropPercent" type="text" inputmode="decimal" placeholder="e.g. 3">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate voltage drop</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Electrical, power, and technical calculators for practical design checks and estimates.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Plan quantities, sizing, and job estimates for common building materials and projects.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and measurements quickly for everyday and technical work.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3KOFMK7" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Study resources</div>
+                <p class="affiliate-copy">Study guides and preparation materials for exams and certifications.</p>
+                <div class="affiliate-cta">Browse study guides on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Voltage drop calculator for DC, single-phase, and three-phase circuits</h2>
+
+              <p>Voltage drop is the loss in voltage that happens as current flows through a conductor. The longer the cable and the higher the current, the more voltage is lost before power reaches the load. In the real world this shows up as dim lights, motors that struggle to start, equipment that trips or behaves erratically, and unnecessary heat in cables. This calculator gives you a quick estimate of that drop using typical conductor resistance values and your chosen circuit type.</p>
+
+              <p>Use the calculator when you are planning a circuit run and you want to sanity-check whether a cable size is reasonable before you commit. It is also useful for troubleshooting: if a device works fine near the supply but fails at the end of a long run, voltage drop is a common culprit. The results are presented as voltage drop (in volts), percent drop (relative to the supply), and estimated end-of-run voltage at the load.</p>
+
+              <p>Start by choosing the system type. DC (2-wire) and AC single-phase both use a go-and-return path, so the total conductor length that contributes to resistance is roughly twice the one-way length. Three-phase uses a different relationship, so the calculated drop is based on a standard three-phase approximation. Next enter the supply voltage, the expected load current, and the one-way cable length in meters. Finally select conductor material and cable size. If your cable is not listed, you can use the custom option and enter a resistance value in ohms per kilometer from a datasheet.</p>
+
+              <p>The “Target max voltage drop” field is a practical check. Different standards and applications use different acceptable limits. Some people use around 3% for lighting and around 5% for general power as a rule of thumb, but what matters is whether the end voltage stays within your equipment’s tolerance. This calculator flags whether your estimated drop is above your target, so you can quickly iterate cable sizes or shorten the run.</p>
+
+              <p>Remember that this is an estimate. Real installations can differ because cable resistance changes with temperature, joints add resistance, and AC circuits can also have reactance depending on cable type and installation method. Still, a clean resistance-based estimate is often enough to spot an undersized cable early and avoid obvious mistakes.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Uses typical conductor resistance values at about 20°C. Hot cables have higher resistance, so real drop can be worse.</li>
+                <li>Length is one-way run length. For DC and single-phase, the calculator assumes a return conductor of similar size and length.</li>
+                <li>Three-phase voltage drop is estimated using a common approximation and assumes a balanced load.</li>
+                <li>Does not include extra losses from terminations, breakers, connectors, or poor joints.</li>
+                <li>Custom Ω/km values should come from a manufacturer datasheet for the specific cable you are using.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does voltage drop matter?</h3>
+              <p>Because equipment is designed to operate within a voltage range. If the voltage at the load falls too low under normal current draw, motors can overheat, electronics can reset or fail, and your cable can waste power as heat. Voltage drop is also a sign that the conductor is working harder than it should for the run.</p>
+
+              <h3>Is the “one-way length” the distance along the cable route?</h3>
+              <p>Yes. Enter the physical distance from supply to load along the planned cable path. The calculator accounts for the return path automatically for DC and single-phase. For three-phase, use the one-way length as well.</p>
+
+              <h3>What current should I use if the load varies?</h3>
+              <p>Use the expected operating current for normal conditions if you are checking performance, and a higher value if you want a conservative design check. For motors, you might check both running current and a higher starting or inrush current if voltage drop during start is a concern.</p>
+
+              <h3>What if my cable size is not listed?</h3>
+              <p>Select “Custom (enter Ω/km)” and input the resistance from your cable datasheet. This is the most accurate way to use the calculator if you are working with a specific cable type, stranded vs solid conductors, or unusual sizes.</p>
+
+              <h3>Does this include power factor or reactance for AC?</h3>
+              <p>No. This version focuses on resistive drop because it is the fastest, most common estimate for typical low-voltage runs. In many everyday cases it is close enough to identify whether a cable is obviously undersized. For high-accuracy design work, consult electrical standards and cable datasheets and include reactance, installation conditions, and allowable limits for your jurisdiction.</p>
+
+              <div class="last-updated">Last updated: 2025-12-14</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/44sML21" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Practical resources</div>
+                <p class="affiliate-copy">Hands-on workbooks for financial learning and planning.</p>
+                <div class="affiliate-cta">View financial workbooks on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
+</html>
