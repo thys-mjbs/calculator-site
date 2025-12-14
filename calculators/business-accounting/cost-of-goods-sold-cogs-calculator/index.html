@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Cost of Goods Sold (COGS) Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate cost of goods sold (COGS) using beginning inventory, purchases, adjustments, and ending inventory. Optional gross profit and gross margin included.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-and-accounting/cost-of-goods-sold-cogs-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Cost of Goods Sold (COGS) Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate cost of goods sold (COGS) using beginning inventory, purchases, adjustments, and ending inventory. Optional gross profit and gross margin included.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-and-accounting/cost-of-goods-sold-cogs-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cost of Goods Sold (COGS) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate cost of goods sold (COGS) using beginning inventory, purchases, adjustments, and ending inventory. Optional gross profit and gross margin included.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cost of Goods Sold (COGS) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-and-accounting/cost-of-goods-sold-cogs-calculator/",
+      "description": "Calculate cost of goods sold (COGS) from beginning inventory, purchases, adjustments, and ending inventory, with optional gross profit and gross margin."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-and-accounting/">Business & Accounting</a> ›
+        <span>Cost of Goods Sold (COGS) Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Cost of Goods Sold (COGS) Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4qsGvQv" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Management Accounting</div>
+                <p class="affiliate-copy">Use accounting information to support decision making and operational control.</p>
+                <div class="affiliate-cta">Explore management accounting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate COGS from inventory and purchases</h2>
+
+              <p class="calculator-intro">Enter your inventory and purchase figures to estimate cost of goods sold. Add optional adjustments for shipping and returns. If you also enter sales revenue, you will get gross profit and gross margin.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="beginningInventory">Beginning inventory (currency)</label>
+                <input type="text" id="beginningInventory" inputmode="decimal" placeholder="e.g., 50,000">
+              </div>
+
+              <div class="form-group">
+                <label for="purchases">Purchases during the period (currency)</label>
+                <input type="text" id="purchases" inputmode="decimal" placeholder="e.g., 120,000">
+              </div>
+
+              <div class="form-group">
+                <label for="freightIn">Freight-in / shipping on purchases (optional)</label>
+                <input type="text" id="freightIn" inputmode="decimal" placeholder="e.g., 3,500">
+              </div>
+
+              <div class="form-group">
+                <label for="purchaseReturns">Purchase returns / allowances (optional)</label>
+                <input type="text" id="purchaseReturns" inputmode="decimal" placeholder="e.g., 2,000">
+              </div>
+
+              <div class="form-group">
+                <label for="purchaseDiscounts">Purchase discounts (optional)</label>
+                <input type="text" id="purchaseDiscounts" inputmode="decimal" placeholder="e.g., 1,250">
+              </div>
+
+              <div class="form-group">
+                <label for="endingInventory">Ending inventory (currency)</label>
+                <input type="text" id="endingInventory" inputmode="decimal" placeholder="e.g., 40,000">
+              </div>
+
+              <div class="form-group">
+                <label for="salesRevenue">Sales revenue (optional, to compute gross profit)</label>
+                <input type="text" id="salesRevenue" inputmode="decimal" placeholder="e.g., 250,000">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate COGS</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Work out margins, break-even points, markups, and common accounting totals for your business.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, compare costs, and run quick money calculations for everyday decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Estimate growth, returns, and targets when saving or investing over time.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3KYBOi4" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Cost Accounting</div>
+                <p class="affiliate-copy">Understand cost structures, allocation methods, and expense control techniques.</p>
+                <div class="affiliate-cta">Browse cost accounting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Cost of goods sold calculator for inventory-based businesses</h2>
+
+              <p>Cost of goods sold (COGS) is the direct cost of the products you sold during a period. If you buy products and resell them, or if you manufacture items and carry inventory, COGS is one of the most important numbers in your accounts because it drives gross profit and gross margin. When COGS is wrong, your profitability reporting is wrong, and you can end up pricing badly, ordering too much stock, or making decisions based on misleading margins.</p>
+
+              <p>This calculator estimates COGS using the standard inventory formula: beginning inventory plus purchases (and other purchase-related costs), minus ending inventory. The key idea is simple. You start the period with stock on hand. You then add stock you acquired during the period. At the end of the period, you count what you still have. Everything that is no longer on hand was either sold, written off, or otherwise removed. In a clean set of books, that “missing” portion is the cost of goods sold.</p>
+
+              <p>In practice, the tricky part is deciding which costs belong in purchases and which belong elsewhere. The calculator includes common adjustments like freight-in (shipping on purchases) and purchase returns, allowances, and discounts. These are typical items that affect the true landed cost of inventory. If you also enter sales revenue, the calculator will compute gross profit (sales minus COGS) and gross margin (gross profit divided by sales). Gross margin is often the fastest way to spot pricing problems, shrinkage, or supplier cost increases.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Use figures for the same period (for example, a month, quarter, or year). Do not mix time ranges.</li>
+                <li>Beginning inventory should match the prior period’s ending inventory, based on your stock count or your accounting system.</li>
+                <li>Purchases should reflect inventory purchases for resale or production, not operating expenses like rent, salaries, or marketing.</li>
+                <li>Freight-in is meant for shipping and import costs that are required to get goods into your store or warehouse. Outbound delivery to customers is usually not part of COGS.</li>
+                <li>Ending inventory should be based on a stock count or a reliable inventory system. If ending inventory is underestimated, COGS will be overstated and margins will look worse than reality.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the basic COGS formula?</h3>
+              <p>The standard formula is: COGS = Beginning Inventory + Net Purchases − Ending Inventory. Net purchases typically means purchases plus freight-in, minus returns, allowances, and purchase discounts. This approach works for most retail, wholesale, and inventory-based businesses.</p>
+
+              <h3>What is the difference between purchases and COGS?</h3>
+              <p>Purchases are what you bought during the period. COGS is what you sold during the period, measured at cost. If you buy more than you sell, ending inventory increases and COGS will be lower than purchases. If you sell more than you buy, ending inventory falls and COGS can be higher than purchases.</p>
+
+              <h3>Should labor be included in COGS?</h3>
+              <p>It depends on the business. For manufacturers, direct labor used to produce goods is often included in production costs and ends up in inventory and COGS. For retailers and service businesses, most wages are operating expenses rather than COGS. If you are not tracking production costs formally, keep labor out of this calculator and treat it as an operating expense.</p>
+
+              <h3>Why does my gross margin change when inventory changes?</h3>
+              <p>Because inventory counts change the COGS figure. If ending inventory is higher, the formula subtracts a larger amount and COGS goes down, increasing gross profit. If ending inventory is lower, COGS goes up and gross profit drops. This is why accurate stock counts matter for reliable margins.</p>
+
+              <h3>What if my COGS seems too high or too low?</h3>
+              <p>Start by checking ending inventory, then confirm that purchases are inventory items only. Next, check whether freight-in and discounts are treated consistently. Finally, consider shrinkage, write-offs, and damaged stock. Those often need separate tracking, but they still affect the real economics of COGS and gross profit.</p>
+
+              <div class="last-updated">Last updated: 2025-12-14</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3KKFzHW" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Business Budgeting</div>
+                <p class="affiliate-copy">Build and manage business budgets to support sustainable operations.</p>
+                <div class="affiliate-cta">View business budgeting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
+</html>
