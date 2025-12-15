@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Take-Home Pay Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your take-home pay after tax and common deductions. Get net pay per pay period plus monthly and annual equivalents with a clear breakdown.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/take-home-pay-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Take-Home Pay Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your take-home pay after tax and common deductions. Get net pay per pay period plus monthly and annual equivalents with a clear breakdown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/take-home-pay-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Take-Home Pay Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your take-home pay after tax and common deductions. Get net pay per pay period plus monthly and annual equivalents with a clear breakdown.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Take-Home Pay Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/take-home-pay-calculator/",
+      "description": "Estimate your take-home pay after tax and common deductions. Get net pay per pay period plus monthly and annual equivalents with a clear breakdown."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Take-Home Pay Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Take-Home Pay Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4afZDMx" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Personal Finance Planning</div>
+                <p class="affiliate-copy">Organize income, expenses, savings, and long-term plans into one clear system.</p>
+                <div class="affiliate-cta">View personal finance planning books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your take-home pay</h2>
+
+              <p class="calculator-intro">Enter your gross pay and a tax rate estimate to see your net pay with a simple, practical breakdown.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="grossPay">Gross pay (before tax)</label>
+                <input id="grossPay" type="text" inputmode="decimal" placeholder="e.g., 25,000">
+              </div>
+
+              <div class="form-group">
+                <label for="payFrequency">Pay frequency</label>
+                <select id="payFrequency">
+                  <option value="monthly">Monthly (12 per year)</option>
+                  <option value="biweekly">Biweekly (26 per year)</option>
+                  <option value="weekly">Weekly (52 per year)</option>
+                  <option value="annual">Annual (1 per year)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="taxRate">Estimated tax rate (%)</label>
+                <input id="taxRate" type="text" inputmode="decimal" placeholder="e.g., 25">
+              </div>
+
+              <div class="form-group">
+                <label for="retirementRate">Retirement contribution (%) (optional)</label>
+                <input id="retirementRate" type="text" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="otherDeductions">Other deductions per pay period (optional)</label>
+                <input id="otherDeductions" type="text" inputmode="decimal" placeholder="e.g., 1,200">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate take-home pay</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4iX5nNC" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Budget Planning</div>
+                <p class="affiliate-copy">Work through budgeting exercises to build a realistic and sustainable spending plan.</p>
+                <div class="affiliate-cta">Browse budget planner workbooks on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan spending, track cash flow, and run day-to-day money calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Estimate repayments, interest costs, and debt payoff timelines.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Project growth, contributions, and time needed to reach savings goals.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48CAPNx" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Financial Independence</div>
+                <p class="affiliate-copy">Learn strategies for saving, investing, and reaching long-term financial independence.</p>
+                <div class="affiliate-cta">Explore financial independence books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Take-home pay calculator for net salary after tax and deductions</h2>
+
+              <p>This take-home pay calculator estimates what you actually receive after tax and common payroll deductions. Most people know their gross pay (what the job offer or payslip shows before deductions), but what matters for budgeting is net pay, sometimes called take-home pay. This tool gives you a usable estimate quickly, and it also shows a clear breakdown so you can see what is driving the difference between gross and net.</p>
+
+              <p>Start by entering your gross pay and selecting the pay frequency. If you are paid monthly, enter your monthly gross pay. If you are paid weekly or biweekly, enter that per-period gross figure. If you only know an annual salary, select “Annual” and enter your total yearly gross pay. Next, enter a tax rate estimate. If you do not know your exact marginal rate, a reasonable estimate is still useful for planning, especially when you are comparing offers or trying to understand how much room you have for rent, debt repayments, and savings.</p>
+
+              <p>Optional fields let you refine the result without forcing complexity. If you contribute to a retirement plan, add a percentage. Many retirement contributions reduce taxable pay in some systems, so this calculator treats the retirement percentage as a pre-tax deduction before applying the tax rate. If you have other recurring deductions per pay period, such as medical contributions, union fees, garnishee orders, or insurance premiums, enter them as a flat amount. The calculator will still work if you leave optional inputs blank, and it will clearly show the assumptions used.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li><strong>Tax is estimated as a simple percentage.</strong> Real payroll tax is often progressive and may include rebates, thresholds, credits, and separate levies.</li>
+                <li><strong>Retirement contributions are treated as pre-tax.</strong> This is common, but not universal. If your retirement contribution is post-tax, set retirement to 0% and include it under “other deductions.”</li>
+                <li><strong>Other deductions are per pay period.</strong> If you have monthly deductions but you are paid weekly, convert them to a weekly estimate first.</li>
+                <li><strong>Pay frequency uses standard counts.</strong> Weekly = 52, biweekly = 26, monthly = 12, annual = 1. Some payroll systems use slightly different calendars.</li>
+                <li><strong>This is for planning, not filing.</strong> Use your payslip or official payroll tables for exact figures, especially for compliance and tax returns.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What tax rate should I use if I do not know my exact rate?</h3>
+              <p>Use a best-effort estimate based on your income bracket or past payslips. If you are comparing jobs, the point is consistency: apply the same assumption across scenarios. If you want a quick sensitivity check, run the calculator again with a higher and lower tax rate (for example, plus or minus 5 percentage points) and see how much your net pay changes.</p>
+
+              <h3>Why does take-home pay change more than I expect when I adjust the tax rate?</h3>
+              <p>Because tax is usually the biggest deduction, even a small percentage change can move net pay meaningfully. The breakdown helps you see whether tax or other deductions are the main driver. If your “other deductions” are large, changing tax will have a smaller impact relative to the total deductions.</p>
+
+              <h3>Do bonuses, commissions, and overtime work with this calculator?</h3>
+              <p>Yes, as an estimate. Include variable pay in your gross pay for the period you are modeling. For example, if you expect an average monthly commission, add it to monthly gross pay. Keep in mind that variable income can be taxed differently in some payroll systems, so treat the output as a planning estimate rather than an exact payslip prediction.</p>
+
+              <h3>What if some deductions are taken before tax and some are taken after tax?</h3>
+              <p>This calculator uses a simple split: retirement contribution is modeled as pre-tax, and “other deductions” are modeled as post-tax. If your system is different, you can still get a practical estimate by putting pre-tax deductions into the retirement percentage and putting post-tax deductions into the flat “other deductions” field. The goal is to approximate the direction and scale of the outcome.</p>
+
+              <h3>How can I make the result more accurate?</h3>
+              <p>Use figures from your most recent payslip: actual tax percentage, actual retirement percentage, and the sum of all recurring deductions. If your pay frequency varies (for example, hourly work), model a typical period rather than a best-case period. If you are budgeting monthly, focus on the monthly net and keep a buffer for months where deductions or tax are higher than usual.</p>
+
+              <div class="last-updated">Last updated: 2025-12-15</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

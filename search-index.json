@@ -831,5 +831,90 @@
       "discount tool",
       "dc"
     ]
+  },
+  {
+    "title": "Paycheck-to-Paycheck Survival Calculator",
+    "url": "/calculators/personal-finance/paycheck-to-paycheck-survival-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "paycheck-to-paycheck survival calculator",
+      "paycheck-to-paycheck survival",
+      "paycheck-to-paycheck-survival-calculator",
+      "paychecktopaychecksurvivalcalculator",
+      "paycheck survival calculator",
+      "paycheck survival",
+      "paycheck to paycheck survival",
+      "paycheck to paycheck calculator",
+      "p2p survival calculator",
+      "p2p survival"
+    ]
+  },
+  {
+    "title": "Paycheck Breakdown Calculator",
+    "url": "/calculators/personal-finance/paycheck-breakdown-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "paycheck breakdown calculator",
+      "paycheck breakdown",
+      "paycheck-breakdown-calculator",
+      "paycheckbreakdowncalculator",
+      "paycheck calc",
+      "paycheck breakdown calc",
+      "paycheck breakdown tool",
+      "paycheck breakdown estimator",
+      "paycheck-breakdown",
+      "paycheckbreakdown"
+    ]
+  },
+  {
+    "title": "Take-Home Pay Calculator",
+    "url": "/calculators/personal-finance/take-home-pay-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "take-home pay calculator",
+      "take-home pay",
+      "take-home-pay-calculator",
+      "takehomepaycalculator",
+      "take home pay calc",
+      "take home pay",
+      "takehome pay",
+      "take home pay estimator",
+      "takehome pay estimator",
+      "thpc"
+    ]
+  },
+  {
+    "title": "Income Tax Estimator",
+    "url": "/calculators/personal-finance/income-tax-estimator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "income tax estimator",
+      "income tax estimator",
+      "income-tax-estimator",
+      "incometaxestimator",
+      "tax estimator",
+      "income tax",
+      "tax estimate",
+      "income tax estimate",
+      "income tax calc",
+      "incometaxest"
+    ]
+  },
+  {
+    "title": "Hourly Wage to Salary Converter",
+    "url": "/calculators/personal-finance/hourly-wage-to-salary-converter/",
+    "category": "Personal Finance",
+    "aliases": [
+      "hourly wage to salary converter",
+      "hourly wage to salary",
+      "hourly-wage-to-salary-converter",
+      "hourlywagetosalaryconverter",
+      "hourly to salary converter",
+      "hourly to salary",
+      "hourly salary converter",
+      "wage to salary converter",
+      "hourly wage salary",
+      "hourly salary"
+    ]
   }  
 ]
