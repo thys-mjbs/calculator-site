@@ -1069,5 +1069,124 @@
       "extra payment calc",
       "extra payment"
     ]
-  }  
+  },
+  {
+    "title": "Monthly Investment Contribution Calculator",
+    "url": "/calculators/savings-investments/monthly-investment-contribution-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "monthly investment contribution calculator",
+      "monthly investment contribution",
+      "monthly-investment-contribution-calculator",
+      "monthlyinvestmentcontributioncalculator",
+      "monthly contribution calculator",
+      "monthly contribution",
+      "investment contribution calculator",
+      "investment contribution",
+      "monthly invest contribution",
+      "monthly investment contribution calc"
+    ]
+  },
+  {
+    "title": "Lump Sum vs Monthly Investment Comparison",
+    "url": "/calculators/savings-investments/lump-sum-vs-monthly-investment-comparison/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "lump sum vs monthly investment comparison",
+      "lump sum vs monthly investment",
+      "lump-sum-vs-monthly-investment-comparison",
+      "lumpsumvsmonthlyinvestmentcomparison",
+      "lump sum vs monthly",
+      "lump sum vs monthly investing",
+      "lump sum vs monthly contributions",
+      "lump sum vs monthly investment",
+      "monthly vs lump sum investment",
+      "lump sum monthly comparison"
+    ]
+  },
+  {
+    "title": "Investment Return Required Calculator",
+    "url": "/calculators/savings-investments/investment-return-required-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "investment return required calculator",
+      "investment return required",
+      "investment-return-required-calculator",
+      "investmentreturnrequiredcalculator",
+      "required return calculator",
+      "required return",
+      "return required calculator",
+      "investment return required calc",
+      "required investment return",
+      "investment return required tool"
+    ]
+  },
+  {
+    "title": "Future Value Calculator",
+    "url": "/calculators/savings-investments/future-value-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "future value calculator",
+      "future value",
+      "future-value-calculator",
+      "futurevaluecalculator",
+      "future value calc",
+      "future value cal",
+      "fv calculator",
+      "fv calc",
+      "future value investment calculator",
+      "future value savings calculator"
+    ]
+  },
+  {
+    "title": "Present Value Calculator",
+    "url": "/calculators/savings-investments/present-value-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "present value calculator",
+      "present value",
+      "present-value-calculator",
+      "presentvaluecalculator",
+      "pv calculator",
+      "pv",
+      "present value calc",
+      "present value formula",
+      "calculate present value",
+      "present value tool"
+    ]
+  },
+  {
+    "title": "Retirement Savings Growth Calculator",
+    "url": "/calculators/savings-investments/retirement-savings-growth-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "retirement savings growth calculator",
+      "retirement savings growth",
+      "retirement-savings-growth-calculator",
+      "retirementsavingsgrowthcalculator",
+      "retirement growth calculator",
+      "retirement savings calculator",
+      "retirement growth",
+      "retirement savings growth",
+      "savings growth calculator",
+      "retirement savings projection"
+    ]
+  },
+  {
+    "title": "Retirement Contribution Impact Calculator",
+    "url": "/calculators/savings-investments/retirement-contribution-impact-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "retirement contribution impact calculator",
+      "retirement contribution impact",
+      "retirement-contribution-impact-calculator",
+      "retirementcontributionimpactcalculator",
+      "retirement contribution impact calc",
+      "retirement contribution calculator",
+      "retirement contribution impact tool",
+      "retirement contribution impact estimator",
+      "retirement contribution impact projection",
+      "retirement contribution impact savings"
+    ]
+  }
 ]
