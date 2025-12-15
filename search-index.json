@@ -1,37 +1,835 @@
 [
-    {
-      "title": "Accounts Receivable Days Calculator",
-      "url": "/calculators/business-and-accounting/accounts-receivable-days-calculator/",
-      "category": "Business & Accounting",
-      "aliases": [
-        "accounts receivable days",
-        "ar days",
-        "receivables days",
-        "days sales outstanding",
-        "dso",
-        "accounts receivable period",
-        "average receivable days",
-        "ar turnover days",
-        "receivables turnover days",
-        "accounts receivable metric"
-      ]
-    },
-    {
-      "title": "Break-Even Point Calculator",
-      "url": "/calculators/business-accounting/break-even-point-calculator/",
-      "category": "Business & Accounting",
-      "aliases": [
-        "break even point",
-        "break-even analysis",
-        "breakeven calculator",
-        "break even sales",
-        "break even revenue",
-        "break even units",
-        "cost volume profit",
-        "cvp analysis",
-        "fixed cost breakeven",
-        "profit break even"
-      ]
-    }
-  ]
-  
+  {
+    "title": "Monthly Budget Calculator",
+    "url": "/calculators/personal-finance/monthly-budget-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "monthly budget calculator",
+      "monthly budget",
+      "budget monthly",
+      "budget calculator",
+      "personal finance monthly budget",
+      "monthly budgeting",
+      "monthly budget plan",
+      "monthly budget tool",
+      "monthly budget calc",
+      "mbc"
+    ]
+  },
+  {
+    "title": "Detailed Budget Category Allocator",
+    "url": "/calculators/personal-finance/detailed-budget-category-allocator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "detailed budget category allocator",
+      "budget category allocator",
+      "detailed budget allocator",
+      "budget allocator",
+      "personal finance category budget",
+      "detailed budget categories",
+      "budget categories allocator",
+      "detailed category alloc",
+      "budget category tool",
+      "dbca"
+    ]
+  },
+  {
+    "title": "Zero Based Budget Calculator",
+    "url": "/calculators/personal-finance/zero-based-budget-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "zero based budget calculator",
+      "zero based budget",
+      "budget zero based",
+      "zero based budgeting",
+      "budget calculator",
+      "personal finance zero based",
+      "zero budget planner",
+      "zero based budget tool",
+      "zero based budget calc",
+      "zbbc"
+    ]
+  },
+  {
+    "title": "50 30 20 Budget Rule Calculator",
+    "url": "/calculators/personal-finance/50-30-20-budget-rule-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "50 30 20 budget rule calculator",
+      "50 30 20 budget",
+      "503020 budget rule",
+      "50 30 20 rule calculator",
+      "budget rule calculator",
+      "personal finance 50 30 20",
+      "503020 budget plan",
+      "budget rule tool",
+      "503020 calculator",
+      "5020"
+    ]
+  },
+  {
+    "title": "Break-Even Point Calculator",
+    "url": "/calculators/business-accounting/break-even-point-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "break even point calculator",
+      "break even point",
+      "breakeven point calculator",
+      "break even analysis",
+      "business break even",
+      "breakeven revenue calculator",
+      "breakeven units calculator",
+      "break even tool",
+      "profit break even calculator",
+      "bep"
+    ]
+  },
+  {
+    "title": "Contribution Margin Calculator",
+    "url": "/calculators/business-accounting/contribution-margin-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "contribution margin calculator",
+      "contribution margin",
+      "margin contribution",
+      "business contribution margin",
+      "contribution ratio calculator",
+      "cm calculator",
+      "contribution percentage calculator",
+      "contribution margin tool",
+      "cm tool",
+      "contribution margin analysis"
+    ]
+  },
+  {
+    "title": "Gross Margin Calculator",
+    "url": "/calculators/business-accounting/gross-margin-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "gross margin calculator",
+      "gross margin",
+      "margin gross",
+      "business gross margin",
+      "gross profit margin calculator",
+      "gpm calculator",
+      "gross margin percentage",
+      "gross margin tool",
+      "gross margin analysis",
+      "gross margin ratio"
+    ]
+  },
+  {
+    "title": "Net Margin Calculator",
+    "url": "/calculators/business-accounting/net-margin-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "net margin calculator",
+      "net margin",
+      "net profit margin calculator",
+      "business net margin",
+      "npm calculator",
+      "net margin percentage",
+      "net profit ratio tool",
+      "net margin analysis",
+      "net margin tool",
+      "net margin ratio"
+    ]
+  },
+  {
+    "title": "Markup Calculator",
+    "url": "/calculators/business-accounting/markup-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "markup calculator",
+      "markup",
+      "business markup calculator",
+      "price markup calculator",
+      "markup percentage calculator",
+      "markup tool",
+      "markup formula calculator",
+      "markup analysis",
+      "price increase calculator",
+      "markup rate"
+    ]
+  },
+  {
+    "title": "Cost Of Goods Sold COGS Calculator",
+    "url": "/calculators/business-accounting/cost-of-goods-sold-cogs-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "cost of goods sold cogs calculator",
+      "cogs calculator",
+      "cost of goods sold",
+      "business cogs calculator",
+      "cogs analysis",
+      "cost of goods calculator",
+      "cogs tool",
+      "goods sold cost calculator",
+      "cogs percentage",
+      "cost goods sold"
+    ]
+  },
+  {
+    "title": "Inventory Turnover Calculator",
+    "url": "/calculators/business-accounting/inventory-turnover-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "inventory turnover calculator",
+      "inventory turnover",
+      "turnover inventory calculator",
+      "business inventory turnover",
+      "inventory ratio calculator",
+      "turnover ratio tool",
+      "inventory analysis",
+      "inventory efficiency calculator",
+      "turnover tool",
+      "inv turnover"
+    ]
+  },
+  {
+    "title": "Days Inventory Outstanding Calculator",
+    "url": "/calculators/business-accounting/days-inventory-outstanding-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "days inventory outstanding calculator",
+      "days inventory outstanding",
+      "dio calculator",
+      "inventory days calculator",
+      "business dio calculator",
+      "days inventory tool",
+      "inventory outstanding calculator",
+      "inventory days outstanding",
+      "days inventory analysis",
+      "inventory day ratio"
+    ]
+  },
+  {
+    "title": "Accounts Receivable Days Calculator",
+    "url": "/calculators/business-accounting/accounts-receivable-days-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "accounts receivable days calculator",
+      "accounts receivable days",
+      "ar days calculator",
+      "receivable days",
+      "days sales outstanding calculator",
+      "dso calculator",
+      "accounts receivable tool",
+      "receivables days calculator",
+      "ar day ratio",
+      "accounts receivable analysis"
+    ]
+  },
+  {
+    "title": "Mortgage Repayment Calculator",
+    "url": "/calculators/real-estate-property/mortgage-repayment-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "mortgage repayment calculator",
+      "mortgage repayment",
+      "home loan repayment calculator",
+      "mortgage payment calculator",
+      "monthly mortgage repayment",
+      "property mortgage repayment",
+      "mortgage calculator",
+      "home loan repayment",
+      "mortgage repayment tool",
+      "mrp"
+    ]
+  },
+  {
+    "title": "Mortgage Affordability Calculator",
+    "url": "/calculators/real-estate-property/mortgage-affordability-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "mortgage affordability calculator",
+      "mortgage affordability",
+      "home loan affordability calculator",
+      "how much mortgage can i afford",
+      "property affordability calculator",
+      "mortgage affordability tool",
+      "home loan affordability",
+      "mortgage budget calculator",
+      "affordable mortgage",
+      "mac"
+    ]
+  },
+  {
+    "title": "Rent Vs Buy Calculator",
+    "url": "/calculators/real-estate-property/rent-vs-buy-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "rent vs buy calculator",
+      "rent or buy calculator",
+      "rent versus buy",
+      "buy vs rent calculator",
+      "rent buy comparison",
+      "housing decision calculator",
+      "rent vs buy analysis",
+      "property rent vs buy",
+      "rent buy tool",
+      "rvb"
+    ]
+  },
+  {
+    "title": "BMI Calculator",
+    "url": "/calculators/health-fitness/bmi-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "bmi calculator",
+      "body mass index calculator",
+      "bmi",
+      "calculate bmi",
+      "body mass index",
+      "health bmi calculator",
+      "bmi tool",
+      "bmi measurement",
+      "bmi chart calculator",
+      "bmic"
+    ]
+  },
+  {
+    "title": "Body Fat Percentage Calculator Basic",
+    "url": "/calculators/health-fitness/body-fat-percentage-calculator-basic/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "body fat percentage calculator",
+      "body fat calculator",
+      "body fat percentage",
+      "fat percentage calculator",
+      "basic body fat calculator",
+      "body fat estimation",
+      "body fat tool",
+      "health body fat calculator",
+      "body fat measure",
+      "bfpc"
+    ]
+  },
+  {
+    "title": "Calorie Maintenance Calculator",
+    "url": "/calculators/health-fitness/calorie-maintenance-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie maintenance calculator",
+      "maintenance calories calculator",
+      "daily calorie maintenance",
+      "calorie maintenance",
+      "calorie needs calculator",
+      "maintenance calorie tool",
+      "daily calorie calculator",
+      "calorie balance calculator",
+      "calorie maintenance estimate",
+      "cmc"
+    ]
+  },
+  {
+    "title": "Loan Payment Calculator",
+    "url": "/calculators/loans-credit/loan-payment-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan payment calculator",
+      "loan repayment calculator",
+      "monthly loan payment",
+      "loan installment calculator",
+      "credit loan payment",
+      "loan payment tool",
+      "loan payment estimate",
+      "loan calculator",
+      "loan cost calculator",
+      "lpc"
+    ]
+  },
+  {
+    "title": "Loan Affordability Calculator",
+    "url": "/calculators/loans-credit/loan-affordability-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan affordability calculator",
+      "loan affordability",
+      "how much loan can i afford",
+      "credit affordability calculator",
+      "loan budget calculator",
+      "affordable loan amount",
+      "loan affordability tool",
+      "loan affordability estimate",
+      "loan capacity calculator",
+      "lac"
+    ]
+  },
+  {
+    "title": "Loan Comparison Calculator",
+    "url": "/calculators/loans-credit/loan-comparison-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan comparison calculator",
+      "compare loans calculator",
+      "loan comparison",
+      "loan options comparison",
+      "credit comparison calculator",
+      "loan comparison tool",
+      "compare loan offers",
+      "loan comparison analysis",
+      "loan choice calculator",
+      "lcc"
+    ]
+  },
+  {
+    "title": "Compound Interest Calculator",
+    "url": "/calculators/savings-investments/compound-interest-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "compound interest calculator",
+      "compound interest",
+      "compound growth calculator",
+      "investment compound calculator",
+      "interest compounding calculator",
+      "compound interest tool",
+      "compound return calculator",
+      "compound growth tool",
+      "compound interest estimate",
+      "cic"
+    ]
+  },
+  {
+    "title": "Simple Interest Calculator",
+    "url": "/calculators/savings-investments/simple-interest-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "simple interest calculator",
+      "simple interest",
+      "simple interest calculation",
+      "interest calculator simple",
+      "investment simple interest",
+      "simple interest tool",
+      "simple interest estimate",
+      "interest calculation tool",
+      "simple interest formula",
+      "sic"
+    ]
+  },
+  {
+    "title": "Investment Growth Over Time Calculator",
+    "url": "/calculators/savings-investments/investment-growth-over-time-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "investment growth over time calculator",
+      "investment growth calculator",
+      "investment growth over time",
+      "portfolio growth calculator",
+      "long term investment growth",
+      "investment return over time",
+      "investment growth tool",
+      "future investment value",
+      "investment timeline calculator",
+      "igot"
+    ]
+  },
+  {
+    "title": "Percentage Calculator",
+    "url": "/calculators/math-general-calculators/percentage-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage calculator",
+      "calculate percentage",
+      "percent calculator",
+      "percentage calculation",
+      "percentage tool",
+      "percent math calculator",
+      "percentage finder",
+      "percentage formula calculator",
+      "percent value calculator",
+      "pc"
+    ]
+  },
+  {
+    "title": "Percentage Increase Calculator",
+    "url": "/calculators/math-general-calculators/percentage-increase-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage increase calculator",
+      "percent increase calculator",
+      "percentage growth calculator",
+      "calculate percentage increase",
+      "increase percentage",
+      "percentage rise calculator",
+      "growth percentage calculator",
+      "percentage change increase",
+      "percent growth calculator",
+      "pic"
+    ]
+  },
+  {
+    "title": "Percentage Decrease Calculator",
+    "url": "/calculators/math-general-calculators/percentage-decrease-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage decrease calculator",
+      "percent decrease calculator",
+      "percentage reduction calculator",
+      "calculate percentage decrease",
+      "decrease percentage",
+      "percentage drop calculator",
+      "reduction percentage calculator",
+      "percentage change decrease",
+      "percent reduction calculator",
+      "pdc"
+    ]
+  },
+  {
+    "title": "Time Duration Calculator",
+    "url": "/calculators/time-date-scheduling/time-duration-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "time duration calculator",
+      "calculate time duration",
+      "time difference calculator",
+      "duration between times",
+      "time span calculator",
+      "elapsed time calculator",
+      "time length calculator",
+      "time duration tool",
+      "time interval calculator",
+      "tdc"
+    ]
+  },
+  {
+    "title": "Time Addition And Subtraction Calculator",
+    "url": "/calculators/time-date-scheduling/time-addition-and-subtraction-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "time addition calculator",
+      "time subtraction calculator",
+      "add subtract time",
+      "time math calculator",
+      "time addition and subtraction",
+      "calculate time plus minus",
+      "time arithmetic calculator",
+      "time calculation tool",
+      "time offset calculator",
+      "tasc"
+    ]
+  },
+  {
+    "title": "Hours Worked Calculator",
+    "url": "/calculators/time-date-scheduling/hours-worked-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "hours worked calculator",
+      "work hours calculator",
+      "calculate hours worked",
+      "timesheet calculator",
+      "working hours calculator",
+      "pay hours calculator",
+      "hours calculation tool",
+      "shift hours calculator",
+      "hours tracker calculator",
+      "hwc"
+    ]
+  },
+  {
+    "title": "Ohms Law Calculator",
+    "url": "/calculators/engineering-technical/ohms-law-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "ohms law calculator",
+      "ohm law calculator",
+      "voltage current resistance calculator",
+      "ohms law formula",
+      "electrical ohms calculator",
+      "ohm law tool",
+      "electrical calculation calculator",
+      "resistance voltage current",
+      "ohms law equation",
+      "olc"
+    ]
+  },
+  {
+    "title": "Wattage Calculator",
+    "url": "/calculators/engineering-technical/wattage-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "wattage calculator",
+      "calculate wattage",
+      "power watt calculator",
+      "electrical watt calculator",
+      "power consumption calculator",
+      "watts calculator",
+      "wattage estimation tool",
+      "power calculation calculator",
+      "watt calculation",
+      "wc"
+    ]
+  },
+  {
+    "title": "Voltage Drop Calculator",
+    "url": "/calculators/engineering-technical/voltage-drop-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "voltage drop calculator",
+      "calculate voltage drop",
+      "electrical voltage drop",
+      "wire voltage drop calculator",
+      "cable voltage drop",
+      "voltage loss calculator",
+      "voltage drop tool",
+      "electrical wire calculator",
+      "voltage reduction calculator",
+      "vdc"
+    ]
+  },
+  {
+    "title": "Concrete Volume Calculator",
+    "url": "/calculators/construction-materials/concrete-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "concrete volume calculator",
+      "calculate concrete volume",
+      "concrete quantity calculator",
+      "concrete slab calculator",
+      "concrete volume estimation",
+      "cement volume calculator",
+      "concrete measurement calculator",
+      "concrete volume tool",
+      "concrete amount calculator",
+      "cvc"
+    ]
+  },
+  {
+    "title": "Concrete Bag Calculator",
+    "url": "/calculators/construction-materials/concrete-bag-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "concrete bag calculator",
+      "concrete bags calculator",
+      "cement bag calculator",
+      "bags of concrete needed",
+      "premix concrete calculator",
+      "concrete bag estimation",
+      "cement bags calculator",
+      "concrete quantity bags",
+      "concrete mix bag calculator",
+      "cbc"
+    ]
+  },
+  {
+    "title": "Cement Sand Stone Mix Ratio Calculator",
+    "url": "/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "cement sand stone mix calculator",
+      "concrete mix ratio calculator",
+      "cement mix ratio calculator",
+      "sand cement stone ratio",
+      "concrete ratio calculator",
+      "mix ratio calculator",
+      "cement sand mix calculator",
+      "construction mix ratio",
+      "cement proportion calculator",
+      "cms"
+    ]
+  },
+  {
+    "title": "Length Converter",
+    "url": "/calculators/conversions-units-currencies/length-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "length converter",
+      "convert length units",
+      "distance converter",
+      "length unit converter",
+      "meters feet converter",
+      "length conversion calculator",
+      "measurement length converter",
+      "distance unit converter",
+      "length conversion tool",
+      "lc"
+    ]
+  },
+  {
+    "title": "Weight Mass Converter",
+    "url": "/calculators/conversions-units-currencies/weightmass-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "weight converter",
+      "mass converter",
+      "weight mass converter",
+      "kg lb converter",
+      "weight unit converter",
+      "mass conversion calculator",
+      "weight conversion tool",
+      "mass unit converter",
+      "weight measurement converter",
+      "wmc"
+    ]
+  },
+  {
+    "title": "Volume Converter",
+    "url": "/calculators/conversions-units-currencies/volume-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "volume converter",
+      "convert volume units",
+      "volume unit converter",
+      "liters gallons converter",
+      "volume conversion calculator",
+      "volume measurement converter",
+      "capacity converter",
+      "volume conversion tool",
+      "liquid volume converter",
+      "vc"
+    ]
+  },
+  {
+    "title": "Grade Percentage Calculator",
+    "url": "/calculators/education-exams/grade-percentage-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "grade percentage calculator",
+      "calculate grade percentage",
+      "exam percentage calculator",
+      "score percentage calculator",
+      "grade calculator",
+      "percentage grade tool",
+      "marks percentage calculator",
+      "exam score calculator",
+      "grade calculation tool",
+      "gpc"
+    ]
+  },
+  {
+    "title": "Weighted Grade Calculator",
+    "url": "/calculators/education-exams/weighted-grade-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "weighted grade calculator",
+      "weighted average grade",
+      "grade weighting calculator",
+      "weighted marks calculator",
+      "weighted score calculator",
+      "course grade calculator",
+      "weighted grading tool",
+      "final grade calculator",
+      "grade weight calculator",
+      "wgc"
+    ]
+  },
+  {
+    "title": "Final Exam Score Needed Calculator",
+    "url": "/calculators/education-exams/final-exam-score-needed-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "final exam score needed calculator",
+      "exam score needed",
+      "what score do i need calculator",
+      "final exam grade calculator",
+      "required exam score",
+      "exam target calculator",
+      "final exam requirement",
+      "grade needed calculator",
+      "exam score estimator",
+      "fes"
+    ]
+  },
+  {
+    "title": "Fuel Cost Per Trip Calculator",
+    "url": "/calculators/travel-transport/fuel-cost-per-trip-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "fuel cost per trip calculator",
+      "trip fuel cost calculator",
+      "fuel trip cost",
+      "driving fuel cost calculator",
+      "travel fuel cost calculator",
+      "fuel expense per trip",
+      "trip cost fuel tool",
+      "fuel usage trip calculator",
+      "fuel trip estimator",
+      "fct"
+    ]
+  },
+  {
+    "title": "Fuel Consumption Calculator",
+    "url": "/calculators/travel-transport/fuel-consumption-calculator-kml-l100km-mpg/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "fuel consumption calculator",
+      "fuel efficiency calculator",
+      "fuel economy calculator",
+      "km l mpg calculator",
+      "fuel usage calculator",
+      "vehicle fuel consumption",
+      "fuel efficiency tool",
+      "car fuel calculator",
+      "fuel economy estimator",
+      "fcc"
+    ]
+  },
+  {
+    "title": "Annual Fuel Cost Calculator",
+    "url": "/calculators/travel-transport/annual-fuel-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "annual fuel cost calculator",
+      "yearly fuel cost calculator",
+      "fuel cost per year",
+      "annual fuel expense",
+      "vehicle fuel cost yearly",
+      "fuel budget calculator",
+      "annual fuel estimate",
+      "fuel spending calculator",
+      "yearly fuel usage",
+      "afc"
+    ]
+  },
+  {
+    "title": "Tip Calculator",
+    "url": "/calculators/everyday-life-tools/tip-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "tip calculator",
+      "calculate tip",
+      "restaurant tip calculator",
+      "gratuity calculator",
+      "service tip calculator",
+      "tip amount calculator",
+      "bill tip calculator",
+      "tip percentage calculator",
+      "tip split calculator",
+      "tc"
+    ]
+  },
+  {
+    "title": "Split Bill Calculator",
+    "url": "/calculators/everyday-life-tools/split-bill-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "split bill calculator",
+      "bill splitting calculator",
+      "split expenses calculator",
+      "shared bill calculator",
+      "divide bill calculator",
+      "group bill split",
+      "bill sharing tool",
+      "expense split calculator",
+      "split payment calculator",
+      "sbc"
+    ]
+  },
+  {
+    "title": "Discount Calculator",
+    "url": "/calculators/everyday-life-tools/discount-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "discount calculator",
+      "price discount calculator",
+      "calculate discount",
+      "sale discount calculator",
+      "discount percentage calculator",
+      "price reduction calculator",
+      "discount amount calculator",
+      "savings calculator",
+      "discount tool",
+      "dc"
+    ]
+  }  
+]
