@@ -916,5 +916,73 @@
       "hourly wage salary",
       "hourly salary"
     ]
+  },
+  {
+    "title": "Real Hourly Wage Calculator",
+    "url": "/calculators/personal-finance/real-hourly-wage-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "real hourly wage calculator",
+      "real hourly wage",
+      "real-hourly-wage-calculator",
+      "realhourlywagecalculator",
+      "real hourly wage calc",
+      "real wage calculator",
+      "hourly wage calculator",
+      "true hourly wage calculator",
+      "real hourly pay calculator",
+      "real hourly wage tool"
+    ]
+  },
+  {
+    "title": "Accounts Payable Days Calculator",
+    "url": "/calculators/business-accounting/accounts-payable-days-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "accounts payable days calculator",
+      "accounts payable days",
+      "accounts-payable-days-calculator",
+      "accountspayabledayscalculator",
+      "ap days calculator",
+      "ap days",
+      "accounts payable days calc",
+      "accounts payable days tool",
+      "accounts payable days calcualtor",
+      "accounts payable days snapcalc"
+    ]
+  },
+  {
+    "title": "Personal Loan EMI Calculator",
+    "url": "/calculators/loans-credit/personal-loan-emi-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "personal loan emi calculator",
+      "personal loan emi",
+      "personal-loan-emi-calculator",
+      "personalloanemicalculator",
+      "loan emi calculator",
+      "loan emi",
+      "emi calculator",
+      "emi calc",
+      "personal loan emi calc",
+      "personal loan emi tool"
+    ]
+  },
+  {
+    "title": "Simple Interest Loan Calculator",
+    "url": "/calculators/loans-credit/simple-interest-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "simple interest loan calculator",
+      "simple interest loan",
+      "simple-interest-loan-calculator",
+      "simpleinterestloancalculator",
+      "simple interest loan calc",
+      "simple interest loan tool",
+      "simple interest loan estimator",
+      "simple interest loan formula",
+      "simple interest loan repayment",
+      "simple interest loan interest"
+    ]
   }  
 ]
