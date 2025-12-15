@@ -984,5 +984,90 @@
       "simple interest loan repayment",
       "simple interest loan interest"
     ]
+  },
+  {
+    "title": "Compound Interest Loan Calculator",
+    "url": "/calculators/loans-credit/compound-interest-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "compound interest loan calculator",
+      "compound interest loan",
+      "compound-interest-loan-calculator",
+      "compoundinterestloancalculator",
+      "compound interest loan calc",
+      "compound loan calculator",
+      "compound loan calc",
+      "loan compound interest calculator",
+      "loan compound interest",
+      "compound interest loan tool"
+    ]
+  },
+  {
+    "title": "Interest-Only Loan Calculator",
+    "url": "/calculators/loans-credit/interest-only-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "interest-only loan calculator",
+      "interest-only loan",
+      "interest-only-loan-calculator",
+      "interestonlyloancalculator",
+      "interest only loan",
+      "interest only payment",
+      "interest-only payment",
+      "io loan calculator",
+      "interest only calc",
+      "io loan"
+    ]
+  },
+  {
+    "title": "Balloon Payment Loan Calculator",
+    "url": "/calculators/loans-credit/balloon-payment-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "balloon payment loan calculator",
+      "balloon payment loan",
+      "balloon-payment-loan-calculator",
+      "balloonpaymentloancalculator",
+      "balloon loan calculator",
+      "balloon loan",
+      "balloon payment calc",
+      "balloon loan calc",
+      "balloon payment estimator",
+      "balloon loan estimator"
+    ]
+  },
+  {
+    "title": "Amortization Schedule Calculator",
+    "url": "/calculators/loans-credit/amortization-schedule-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "amortization schedule calculator",
+      "amortization schedule",
+      "amortization-schedule-calculator",
+      "amortizationschedulecalculator",
+      "amortizationschedule",
+      "amort schedule calculator",
+      "amort schedule",
+      "amort calc",
+      "amortization calc",
+      "amortization-schedule"
+    ]
+  },
+  {
+    "title": "Extra Payment Impact Calculator",
+    "url": "/calculators/loans-credit/extra-payment-impact-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "extra payment impact calculator",
+      "extra payment impact",
+      "extra-payment-impact-calculator",
+      "extrapaymentimpactcalculator",
+      "extra payment calculator",
+      "extra-payment-calculator",
+      "extrapaymentcalculator",
+      "extra payment impact calc",
+      "extra payment calc",
+      "extra payment"
+    ]
   }  
 ]
