@@ -440,3 +440,14 @@ h1 {
     color: #666666;
   }
   
+  /* =========================
+   HOMEPAGE / CATEGORIES – ABOUT / CONTEXT BLOCK
+   ========================= */
+
+.home-layout .seo-section {
+  width: 100%;
+  max-width: none;          /* match full tile grid width */
+  margin: 40px auto 0;      /* spacing below tiles */
+  box-sizing: border-box;
+  text-align: center;       /* center heading + body text */
+}
