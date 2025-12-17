@@ -1783,5 +1783,124 @@
       "pf",
       "powerfactor"
     ]
-  }  
+  },
+  {
+    "title": "Mortar Mix Calculator",
+    "url": "/calculators/construction-and-materials/mortar-mix-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "mortar mix calculator",
+      "mortar mix",
+      "mortar-mix-calculator",
+      "mortarmixcalculator",
+      "mortar calculator",
+      "mortar mix calc",
+      "mortar mix qty",
+      "mortar mix quantities",
+      "mortar mix estimate",
+      "mortar-mix"
+    ]
+  },
+  {
+    "title": "Brick Quantity Calculator",
+    "url": "/calculators/construction-materials/brick-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "brick quantity calculator",
+      "brick quantity",
+      "brick-quantity-calculator",
+      "brickquantitycalculator",
+      "brick qty calculator",
+      "brick qty",
+      "brick count calculator",
+      "brick count",
+      "bricks needed calculator",
+      "bricks needed"
+    ]
+  },
+  {
+    "title": "Block Quantity Calculator",
+    "url": "/calculators/construction-materials/block-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "block quantity calculator",
+      "block quantity",
+      "block-quantity-calculator",
+      "blockquantitycalculator",
+      "block qty calculator",
+      "block qty",
+      "blocks calculator",
+      "block calculator",
+      "block count calculator",
+      "block quantity calc"
+    ]
+  },
+  {
+    "title": "Rebar Length Calculator",
+    "url": "/calculators/construction-materials/rebar-length-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar length calculator",
+      "rebar length",
+      "rebar-length-calculator",
+      "rebarlengthcalculator",
+      "rebar calculator",
+      "rebar length calc",
+      "rebar length tool",
+      "rebar bar length calculator",
+      "total rebar length calculator",
+      "rebar length estimator"
+    ]
+  },
+  {
+    "title": "Rebar Weight Calculator",
+    "url": "/calculators/construction-materials/rebar-weight-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar weight calculator",
+      "rebar weight",
+      "rebar-weight-calculator",
+      "rebarweightcalculator",
+      "rebar wt calculator",
+      "rebar wt",
+      "rebar weight calc",
+      "rebarweightcalc",
+      "rebar weight estimator",
+      "rebar weight tool"
+    ]
+  },
+  {
+    "title": "Rebar Spacing Calculator",
+    "url": "/calculators/construction-materials/rebar-spacing-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar spacing calculator",
+      "rebar spacing",
+      "rebar-spacing-calculator",
+      "rebarspacingcalculator",
+      "rebar spacing calc",
+      "rebar spacing tool",
+      "rebar spacing formula",
+      "bar spacing calculator",
+      "rebar bar spacing",
+      "rebar spacing guide"
+    ]
+  },
+  {
+    "title": "Formwork Area Calculator",
+    "url": "/calculators/construction-materials/formwork-area-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "formwork area calculator",
+      "formwork area",
+      "formwork-area-calculator",
+      "formworkareacalculator",
+      "formwork area calc",
+      "formwork calc",
+      "formwork area tool",
+      "formwork area estimator",
+      "formwork-area",
+      "formworkarea"
+    ]
+  }
 ]
