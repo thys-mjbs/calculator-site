@@ -1188,5 +1188,124 @@
       "retirement contribution impact projection",
       "retirement contribution impact savings"
     ]
-  }
+  },
+  {
+    "title": "Home Loan Comparison Calculator",
+    "url": "/calculators/real-estate-property/home-loan-comparison-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "home loan comparison calculator",
+      "home loan comparison",
+      "home-loan-comparison-calculator",
+      "homeloancomparisoncalculator",
+      "home loan compare",
+      "compare home loan",
+      "home loan compare calculator",
+      "compare home loans",
+      "loan comparison calculator",
+      "home loan calculator comparison"
+    ]
+  },
+  {
+    "title": "Refinance Savings Calculator",
+    "url": "/calculators/real-estate-property/refinance-savings-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "refinance savings calculator",
+      "refinance savings",
+      "refinance-savings-calculator",
+      "refinancesavingscalculator",
+      "refinance calculator savings",
+      "mortgage refinance savings calculator",
+      "refi savings calculator",
+      "refinance break even calculator",
+      "mortgage refi savings",
+      "refinance savings tool"
+    ]
+  },
+  {
+    "title": "Refinance Break-Even Calculator",
+    "url": "/calculators/real-estate-property/refinance-break-even-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "refinance break-even calculator",
+      "refinance break-even",
+      "refinance-break-even-calculator",
+      "refinancebreakevencalculator",
+      "refi break even",
+      "refi breakeven",
+      "refinance breakeven",
+      "break even refinance",
+      "break-even refinance calculator",
+      "refinance breakeven calculator"
+    ]
+  },
+  {
+    "title": "Interest-Only Mortgage Calculator",
+    "url": "/calculators/real-estate-property/interest-only-mortgage-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "interest-only mortgage calculator",
+      "interest-only mortgage",
+      "interest-only-mortgage-calculator",
+      "interestonlymortgagecalculator",
+      "interest-only payment",
+      "interest only mortgage",
+      "interest only payment",
+      "io mortgage calculator",
+      "interest only loan calculator",
+      "interest-only loan calculator"
+    ]
+  },
+  {
+    "title": "Balloon Mortgage Calculator",
+    "url": "/calculators/real-estate-property/balloon-mortgage-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "balloon mortgage calculator",
+      "balloon mortgage",
+      "balloon-mortgage-calculator",
+      "balloonmortgagecalculator",
+      "balloon payment mortgage calculator",
+      "balloon payment mortgage",
+      "balloon mortgage payment",
+      "mortgage balloon calculator",
+      "balloon loan calculator",
+      "balloon mortgage calc"
+    ]
+  },
+  {
+    "title": "Adjustable-Rate Mortgage (ARM) Calculator",
+    "url": "/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "adjustable-rate mortgage (arm) calculator",
+      "adjustable-rate mortgage (arm)",
+      "adjustable-rate-mortgage-arm-calculator",
+      "adjustableratemortgagearmcalculator",
+      "arm calculator",
+      "arm mortgage calculator",
+      "adjustable rate mortgage calculator",
+      "adjustable rate mortgage arm calculator",
+      "adjustable rate mortgage (arm)",
+      "arm mortgage"
+    ]
+  },
+  {
+    "title": "Amortization Schedule Calculator",
+    "url": "/calculators/real-estate-property/amortization-schedule-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "amortization schedule calculator",
+      "amortization schedule",
+      "amortization-schedule-calculator",
+      "amortizationschedulecalculator",
+      "loan amortization schedule",
+      "mortgage amortization schedule",
+      "amortization table",
+      "amortization schedule calc",
+      "amortization calculator",
+      "amortization schedule tool"
+    ]
+  }  
 ]
