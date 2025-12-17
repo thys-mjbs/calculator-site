@@ -1307,5 +1307,124 @@
       "amortization calculator",
       "amortization schedule tool"
     ]
+  },
+  {
+    "title": "Calorie Deficit Calculator",
+    "url": "/calculators/health-fitness/calorie-deficit-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie deficit calculator",
+      "calorie deficit",
+      "calorie-deficit-calculator",
+      "caloriedeficitcalculator",
+      "calorie deficit calc",
+      "calorie deficit tool",
+      "deficit calculator",
+      "calorie deficit estimate",
+      "calorie-deficit",
+      "caloriedeficit"
+    ]
+  },
+  {
+    "title": "Calorie Surplus Calculator",
+    "url": "/calculators/health-fitness/calorie-surplus-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie surplus calculator",
+      "calorie surplus",
+      "calorie-surplus-calculator",
+      "caloriesurpluscalculator",
+      "surplus calories calculator",
+      "daily calorie surplus",
+      "calorie surplus calc",
+      "surplus calculator",
+      "calorie surplus estimate",
+      "calorie surplus target"
+    ]
+  },
+  {
+    "title": "Protein Intake Calculator",
+    "url": "/calculators/health-fitness/protein-intake-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "protein intake calculator",
+      "protein intake",
+      "protein-intake-calculator",
+      "proteinintakecalculator",
+      "protein calculator",
+      "protein intake calc",
+      "protein target calculator",
+      "daily protein calculator",
+      "protein intake target",
+      "protein intake tool"
+    ]
+  },
+  {
+    "title": "Macro Split Calculator",
+    "url": "/calculators/health-fitness/macro-split-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "macro split calculator",
+      "macro split",
+      "macro-split-calculator",
+      "macrosplitcalculator",
+      "macro split calc",
+      "macro calculator",
+      "macro split tool",
+      "macro split macros",
+      "macro split calories",
+      "macro split grams"
+    ]
+  },
+  {
+    "title": "Daily Water Intake Calculator",
+    "url": "/calculators/health-fitness/daily-water-intake-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "daily water intake calculator",
+      "daily water intake",
+      "daily-water-intake-calculator",
+      "dailywaterintakecalculator",
+      "water intake calculator",
+      "water intake",
+      "daily hydration calculator",
+      "hydration calculator",
+      "daily water calculator",
+      "water intake calc"
+    ]
+  },
+  {
+    "title": "Ideal Body Weight Calculator",
+    "url": "/calculators/health-fitness/ideal-body-weight-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "ideal body weight calculator",
+      "ideal body weight",
+      "ideal-body-weight-calculator",
+      "idealbodyweightcalculator",
+      "ibw calculator",
+      "ibw",
+      "ideal weight calculator",
+      "ideal weight",
+      "ideal bodyweight",
+      "ideal-body-weight"
+    ]
+  },
+  {
+    "title": "Basal Metabolic Rate (BMR) Calculator",
+    "url": "/calculators/health-fitness/basal-metabolic-rate-bmr-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "basal metabolic rate (bmr) calculator",
+      "basal metabolic rate (bmr)",
+      "basal-metabolic-rate-bmr-calculator",
+      "basalmetabolicratebmrcalculator",
+      "bmr calculator",
+      "bmr",
+      "basal metabolic rate calculator",
+      "basal metabolic rate",
+      "bmr calc",
+      "bmr calculation"
+    ]
   }  
 ]
