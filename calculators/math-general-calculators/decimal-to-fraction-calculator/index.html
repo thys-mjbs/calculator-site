@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Decimal to Fraction Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert any decimal into a simplified fraction (and optional mixed number). Handles common decimals, rounding, and safe approximations for repeating values.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/decimal-to-fraction-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Decimal to Fraction Calculator | SnapCalc">
+    <meta property="og:description" content="Convert any decimal into a simplified fraction (and optional mixed number). Handles common decimals, rounding, and safe approximations for repeating values.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/decimal-to-fraction-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Decimal to Fraction Calculator | SnapCalc">
+    <meta name="twitter:description" content="Convert any decimal into a simplified fraction (and optional mixed number). Handles common decimals, rounding, and safe approximations for repeating values.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Decimal to Fraction Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/decimal-to-fraction-calculator/",
+      "description": "Convert a decimal into a simplified fraction and optional mixed number. Supports rounding and approximation for repeating decimals using a maximum denominator."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Decimal to Fraction Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Decimal to Fraction Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rTwGMG" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Basic Math Practice</div>
+                <p class="affiliate-copy">Practice essential arithmetic skills including addition, subtraction, multiplication, and division.</p>
+                <div class="affiliate-cta">Explore basic math practice books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert a decimal to a simplified fraction</h2>
+
+              <p class="calculator-intro">Enter a decimal and get the simplest fraction form. You can also round the input and show a mixed number for easier reading.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="decimalInput">Decimal value</label>
+                <input id="decimalInput" type="text" inputmode="decimal" placeholder="Example: 2.75 or -0.125">
+              </div>
+
+              <div class="form-group">
+                <label for="roundDigits">Optional: round input to this many decimal places</label>
+                <input id="roundDigits" type="text" inputmode="numeric" placeholder="Example: 4 (leave blank for no rounding)">
+              </div>
+
+              <div class="form-group">
+                <label for="maxDenominator">Optional: maximum denominator for approximations</label>
+                <input id="maxDenominator" type="text" inputmode="numeric" placeholder="Example: 10000">
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input id="showMixed" type="checkbox">
+                  Also show mixed number (when applicable)
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input id="showSteps" type="checkbox">
+                  Show calculation notes
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert to fraction</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Work with percentages, ratios, rounding, and everyday math problems with quick calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">Practice exam-style calculations and convert formats like fractions, decimals, and percentages.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and values cleanly when you need consistent formats for work, study, or budgeting.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aNZmR6" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Mental Math</div>
+                <p class="affiliate-copy">Improve speed and accuracy when performing calculations without tools.</p>
+                <div class="affiliate-cta">Browse mental math books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Decimal to fraction conversion for homework, shopping, and real-world measurements</h2>
+
+              <p>This decimal to fraction calculator converts a decimal number into a fraction in simplest form. It is useful when a value is shown as a decimal but you need a fraction for a recipe, construction measurement, schoolwork, test prep, or any situation where fractions are more readable than long decimals. A common example is converting 0.75 into 3/4, or turning 2.125 into 17/8. The calculator supports negative decimals, whole numbers, and typical “everyday” decimals that come from rounding or measurements.</p>
+
+              <p>In the simplest case, a decimal that ends (a terminating decimal) can be converted exactly. For example, 2.75 means “two and seventy five hundredths.” That is 275/100, which simplifies to 11/4. The simplification step matters because it gives the cleanest fraction. A clean fraction is easier to compare, easier to use in later calculations, and reduces mistakes. If you prefer, you can also show the result as a mixed number, such as 2 3/4 instead of 11/4.</p>
+
+              <p>Not all decimals end neatly. Many decimals are repeating in reality, even if they are displayed as rounded values. For example, 0.3333 is often a rounded display of the repeating decimal 0.333333..., which equals 1/3. The calculator includes an optional maximum denominator setting to handle these cases. When the decimal cannot be represented exactly from the typed digits, the calculator finds a close fraction approximation with a denominator limit. This is a practical approach for real-world use because it avoids huge denominators that are not meaningful in everyday scenarios.</p>
+
+              <p>To use the calculator, type your decimal in the input field and click the convert button. If you want a quick answer, leave the optional fields blank. If you want more control, you can round the input to a specific number of decimal places before conversion. This is helpful when your decimal comes from a measurement tool or a report that is already rounded. You can also set a maximum denominator to force simple fractions like 1/3, 7/8, or 13/16 instead of unusually large denominators. Finally, you can enable mixed number output and calculation notes to see how the result was produced.</p>
+
+              <p>The result area shows the simplified fraction first. If mixed numbers are enabled and the fraction is improper, it also shows a mixed form. When the calculator uses an approximation, it will tell you that the result is the closest fraction under your denominator limit. This makes it easier to judge whether the fraction is appropriate for your use case. For example, for pricing and budgeting, a small approximation error might be fine. For engineering tolerances, you may want to increase the maximum denominator or avoid rounding.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If the decimal has a limited number of digits after the point, the calculator treats it as a terminating decimal and converts it exactly after trimming trailing zeros.</li>
+                <li>If the input is very long or uses scientific notation, the calculator may use an approximation method and a maximum denominator to keep the output practical.</li>
+                <li>If you enter a rounding value, the calculator rounds the decimal first, then converts the rounded value (this can change the exact fraction).</li>
+                <li>The “maximum denominator” setting exists to keep fractions readable; smaller limits favor simpler fractions but may reduce accuracy.</li>
+                <li>Mixed number output is a display choice only; it does not change the underlying fraction or its numeric value.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the calculator sometimes say the result is an approximation?</h3>
+              <p>Some decimals cannot be represented exactly as a simple fraction from a standard rounded display. For example, 0.1 is exactly 1/10 if you mean one tenth, but many values shown on screens are rounded versions of repeating values. When the calculator cannot reliably convert the typed digits into a clean exact fraction (or when the number is effectively a floating value), it finds the closest fraction under a maximum denominator so you get a usable result.</p>
+
+              <h3>What should I set for the maximum denominator?</h3>
+              <p>If you want simple fractions for everyday use, 1000 to 10000 is usually enough. If you are working with common measurement fractions like sixteenths or thirty-seconds, a limit like 64, 128, or 256 can help the calculator prefer those styles. If you need higher precision, increase the limit, but be aware that larger denominators can produce fractions that are hard to interpret and easy to misread.</p>
+
+              <h3>How does rounding affect the fraction?</h3>
+              <p>Rounding changes the value you convert. For example, 0.3333 rounded to 2 decimal places becomes 0.33, which converts to 33/100. Without rounding, the calculator can often find a better fraction approximation like 1/3 under a reasonable denominator limit. Use rounding when your source value is already rounded and you want the fraction to match what is shown, not what the “true” repeating value might be.</p>
+
+              <h3>Does it handle negative decimals and whole numbers?</h3>
+              <p>Yes. A negative sign is preserved in the fraction. Whole numbers like 5 convert to 5/1, and the simplified fraction display will show them cleanly as an integer where appropriate.</p>
+
+              <h3>How can I check if the fraction is correct?</h3>
+              <p>You can divide the numerator by the denominator to confirm it matches the decimal. If the calculator indicates an approximation, compare the fraction value to your original decimal and decide if the difference is acceptable. If not, remove rounding, increase the maximum denominator, or enter more digits of the decimal if you have them.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48DYihu" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Everyday Math</div>
+                <p class="affiliate-copy">Apply math concepts to daily life problems and practical scenarios.</p>
+                <div class="affiliate-cta">View everyday math books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

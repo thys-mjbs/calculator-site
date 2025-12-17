@@ -1426,5 +1426,124 @@
       "bmr calc",
       "bmr calculation"
     ]
+  },
+  {
+    "title": "Percentage Change Calculator",
+    "url": "/calculators/math-general-calculators/percentage-change-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage change calculator",
+      "percentage change",
+      "percentage-change-calculator",
+      "percentagechangecalculator",
+      "percent change",
+      "pct change",
+      "% change",
+      "percentage increase decrease",
+      "percentage change calc",
+      "percent change calculator"
+    ]
+  },
+  {
+    "title": "Ratio Calculator",
+    "url": "/calculators/math-and-general-calculators/ratio-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "ratio calculator",
+      "ratio",
+      "ratio-calculator",
+      "ratiocalculator",
+      "a b ratio calculator",
+      "a:b ratio calculator",
+      "simplify ratio calculator",
+      "ratio simplifier",
+      "scale ratio calculator",
+      "ratio scale"
+    ]
+  },
+  {
+    "title": "Proportion Calculator",
+    "url": "/calculators/math-general-calculators/proportion-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "proportion calculator",
+      "proportion",
+      "proportion-calculator",
+      "proportioncalculator",
+      "proportion calc",
+      "proportioncal",
+      "proportion solve",
+      "proportion solver",
+      "a/b=c/d",
+      "a b c d proportion"
+    ]
+  },
+  {
+    "title": "Fraction to Decimal Calculator",
+    "url": "/calculators/math-general-calculators/fraction-to-decimal-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "fraction to decimal calculator",
+      "fraction to decimal",
+      "fraction-to-decimal-calculator",
+      "fractiontodecimalcalculator",
+      "fraction to decimal calc",
+      "frac to decimal",
+      "fraction decimal",
+      "fraction to decimal converter",
+      "fraction to decimal conversion",
+      "fraction-to-decimal"
+    ]
+  },
+  {
+    "title": "Decimal to Fraction Calculator",
+    "url": "/calculators/math-general-calculators/decimal-to-fraction-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "decimal to fraction calculator",
+      "decimal to fraction",
+      "decimal-to-fraction-calculator",
+      "decimaltorfractioncalculator",
+      "decimal to fraction calc",
+      "decimal fraction calculator",
+      "decimal to fraction converter",
+      "decimal to fraction tool",
+      "decimal to fraction conversion",
+      "decimal-to-fraction"
+    ]
+  },
+  {
+    "title": "Fraction Simplifier",
+    "url": "/calculators/math-general-calculators/fraction-simplifier/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "fraction simplifier",
+      "fraction simplifier calculator",
+      "fraction-simplifier",
+      "fractionsimplifier",
+      "simplify fraction",
+      "simplify fractions",
+      "simplifying fractions",
+      "simplify a fraction",
+      "reduce fraction",
+      "reduce fractions"
+    ]
+  },
+  {
+    "title": "Greatest Common Divisor Calculator",
+    "url": "/calculators/math-general-calculators/greatest-common-divisor-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "greatest common divisor calculator",
+      "greatest common divisor",
+      "greatest-common-divisor-calculator",
+      "greatestcommondivisorcalculator",
+      "gcd calculator",
+      "gcd",
+      "gcd calc",
+      "gcf calculator",
+      "greatest common factor calculator",
+      "greatest-common-divisor"
+    ]
   }  
 ]
