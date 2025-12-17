@@ -1545,5 +1545,124 @@
       "greatest common factor calculator",
       "greatest-common-divisor"
     ]
+  },
+  {
+    "title": "Timesheet Calculator",
+    "url": "/calculators/time-date-scheduling/timesheet-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "timesheet calculator",
+      "timesheet",
+      "timesheet-calculator",
+      "timesheetcalculator",
+      "timesheet calc",
+      "timesheetcalc",
+      "time sheet calculator",
+      "time sheet",
+      "timesheet hours",
+      "work hours timesheet"
+    ]
+  },
+  {
+    "title": "Overtime Hours Calculator",
+    "url": "/calculators/time-date-scheduling/overtime-hours-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "overtime hours calculator",
+      "overtime hours",
+      "overtime-hours-calculator",
+      "overtimehourscalculator",
+      "overtime calculator",
+      "ot hours calculator",
+      "overtime pay calculator",
+      "calculate overtime hours",
+      "overtime hours calc",
+      "overtimehours"
+    ]
+  },
+  {
+    "title": "Weekly Work Hours Calculator",
+    "url": "/calculators/time-date-scheduling/weekly-work-hours-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "weekly work hours calculator",
+      "weekly work hours",
+      "weekly-work-hours-calculator",
+      "weeklyworkhourscalculator",
+      "work hours calculator",
+      "weekly hours calculator",
+      "weekly hours",
+      "work hours",
+      "weekly work hours",
+      "weekly hours worked"
+    ]
+  },
+  {
+    "title": "Daily Schedule Planner",
+    "url": "/calculators/time-date-scheduling/daily-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "daily schedule planner",
+      "daily schedule planner",
+      "daily-schedule-planner",
+      "dailyscheduleplanner",
+      "daily planner",
+      "day planner",
+      "schedule planner",
+      "daily schedule",
+      "schedule plan",
+      "dsp"
+    ]
+  },
+  {
+    "title": "Weekly Schedule Planner",
+    "url": "/calculators/time-date-scheduling/weekly-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "weekly schedule planner",
+      "weekly schedule planner calculator",
+      "weekly-schedule-planner",
+      "weeklyscheduleplanner",
+      "weekly planner",
+      "week planner",
+      "weekly schedule",
+      "schedule planner",
+      "weekly time planner",
+      "weekly time blocks"
+    ]
+  },
+  {
+    "title": "Monthly Schedule Planner",
+    "url": "/calculators/time-date-scheduling/monthly-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "monthly schedule planner",
+      "monthly schedule planner",
+      "monthly-schedule-planner",
+      "monthlyscheduleplanner",
+      "monthly planner",
+      "month planner",
+      "monthly schedule",
+      "month schedule",
+      "monthly calendar planner",
+      "monthly planning"
+    ]
+  },
+  {
+    "title": "Meeting Time Zone Converter",
+    "url": "/calculators/time-date-scheduling/meeting-time-zone-converter/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "meeting time zone converter",
+      "meeting time zone",
+      "meeting-time-zone-converter",
+      "meetingtimezoneconverter",
+      "time zone meeting converter",
+      "meeting timezone converter",
+      "timezone converter meeting",
+      "meeting tz converter",
+      "meeting time converter",
+      "timezone meeting"
+    ]
   }  
 ]

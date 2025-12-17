@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Timesheet Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate total worked hours from start and end times, subtract breaks, and optionally estimate daily pay and overtime using an hourly rate.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/timesheet-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Timesheet Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate total worked hours from start and end times, subtract breaks, and optionally estimate daily pay and overtime using an hourly rate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/timesheet-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Timesheet Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate total worked hours from start and end times, subtract breaks, and optionally estimate daily pay and overtime using an hourly rate.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Timesheet Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/timesheet-calculator/",
+      "description": "Calculate total worked hours from start and end times, subtract breaks, and optionally estimate daily pay and overtime using an hourly rate."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Timesheet Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Timesheet Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rUNgvR" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Deadline Tracking</div>
+                <p class="affiliate-copy">Monitor deadlines and avoid missed dates across tasks and projects.</p>
+                <div class="affiliate-cta">Explore deadline tracking tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Work hours and pay from a single shift</h2>
+
+              <p class="calculator-intro">Enter your start time, end time, and break. Add an hourly rate if you want pay and overtime estimates.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="startTime">Start time (HH:MM)</label>
+                <input id="startTime" type="text" inputmode="numeric" placeholder="08:30">
+              </div>
+
+              <div class="form-group">
+                <label for="endTime">End time (HH:MM)</label>
+                <input id="endTime" type="text" inputmode="numeric" placeholder="17:00">
+              </div>
+
+              <div class="form-group">
+                <label for="breakMinutes">Break minutes (optional)</label>
+                <input id="breakMinutes" type="text" inputmode="numeric" placeholder="30">
+              </div>
+
+              <div class="form-group">
+                <label for="hourlyRate">Hourly rate (optional)</label>
+                <input id="hourlyRate" type="text" inputmode="decimal" placeholder="250">
+              </div>
+
+              <div class="form-group">
+                <label for="overtimeThreshold">Overtime starts after hours (optional)</label>
+                <input id="overtimeThreshold" type="text" inputmode="decimal" placeholder="8">
+              </div>
+
+              <div class="form-group">
+                <label for="overtimeMultiplier">Overtime multiplier (optional)</label>
+                <input id="overtimeMultiplier" type="text" inputmode="decimal" placeholder="1.5">
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input id="overnightShift" type="checkbox" checked>
+                  Treat end time as next day if it is earlier than start time
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate timesheet</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Plan time, track durations, and calculate deadlines for work and daily life.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Estimate costs, payroll, margins, and other business numbers quickly.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, compare income and expenses, and make better money decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aP8zJ0" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Long-Term Planning</div>
+                <p class="affiliate-copy">Plan months and years ahead using structured time frameworks.</p>
+                <div class="affiliate-cta">View long-term planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Timesheet calculator for work hours, breaks, and daily pay</h2>
+
+              <p>A timesheet is only useful if it turns start and end times into something you can submit, invoice, or check against payroll. This timesheet calculator converts a single shift into total worked time, subtracts breaks, and shows your hours in both formats most people need: hours and minutes (HH:MM) and decimal hours (for timesheets and billing).</p>
+
+              <p>To use it, enter your start time and end time in HH:MM (for example 08:30 and 17:00). Add your break time in minutes if you took one. The calculator then produces the net time worked after breaks. If you also enter an hourly rate, it estimates your pay for that shift. If you want a more realistic payroll estimate, you can set an overtime threshold and an overtime multiplier so the calculator can split your hours into regular time and overtime.</p>
+
+              <p>This calculator is designed for normal real life situations, including overnight shifts. If your shift ends after midnight (for example 19:00 to 03:00), keep the overnight option enabled. The calculator will treat an end time earlier than the start time as the next day. That avoids common errors where a legitimate shift looks like a negative duration.</p>
+
+              <p>The output is more than a single number. You get a time summary that you can copy into a timesheet, plus a pay breakdown when an hourly rate is provided. If your hours cross your overtime threshold, you also get separate regular and overtime hours and the estimated overtime pay. This makes it practical for hourly employees, contractors, freelancers billing clients, and managers doing a quick sanity check before submitting timesheets.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Times must be entered in 24-hour HH:MM format (for example 07:05 or 17:30).</li>
+                <li>If the end time is earlier than the start time, the calculator assumes the shift ended the next day only when the overnight option is enabled.</li>
+                <li>Break minutes are treated as unpaid time and are subtracted from the shift total.</li>
+                <li>If you do not enter an hourly rate, the calculator will still compute hours worked but will not estimate pay.</li>
+                <li>Overtime is calculated using a simple threshold and multiplier model and may differ from your employer’s rules, union agreements, or local law.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does my result change when I toggle overnight shift?</h3>
+              <p>If you work overnight, your end time can be earlier than your start time on the clock. For example, 22:00 to 06:00 is a valid 8-hour shift, but the end time is earlier than the start time. With overnight enabled, the calculator treats the end time as the next day and produces the correct duration. If you did not work overnight, disable the option so earlier end times are treated as a likely input mistake.</p>
+
+              <h3>What time format should I use if my workplace uses AM and PM?</h3>
+              <p>Convert to 24-hour time before entering values. For example, 5:30 PM becomes 17:30, and 7:15 AM stays 07:15. If you are not sure, a quick rule is that for PM times (except 12 PM), add 12 to the hour. This avoids confusion and keeps the calculator predictable.</p>
+
+              <h3>How should I enter breaks if I took multiple short breaks?</h3>
+              <p>Add them up and enter the total in minutes. For example, two 10-minute breaks and a 30-minute lunch becomes 50 minutes. If some breaks are paid and some are unpaid, enter only the unpaid portion. If you are unsure, treat breaks as unpaid to avoid overestimating your paid time.</p>
+
+              <h3>My pay does not match my payslip. Is the calculator wrong?</h3>
+              <p>Not necessarily. Payslips can include rounding rules, different overtime categories, shift differentials, allowances, or payroll policies such as rounding to the nearest 5 or 15 minutes. This calculator uses straight time math: net minutes worked after breaks, then hourly rate, then a single overtime threshold and multiplier if provided. Use it as a check and a planning tool, not as a legal payroll determination.</p>
+
+              <h3>How can I improve accuracy for invoices or client billing?</h3>
+              <p>Use the exact clock times and the exact total unpaid break time. If your client bills in increments (for example, 0.25 hours), use the decimal hours output and round only at the final step using the client’s policy. If you regularly bill the same client, keep the overtime and multiplier fields aligned to the contract terms so your estimates match the way you invoice.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4q0wB88" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Reminders</div>
+                <p class="affiliate-copy">Set reminders and alerts to stay on top of important dates.</p>
+                <div class="affiliate-cta">Browse reminder tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
