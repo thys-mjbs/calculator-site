@@ -119,6 +119,11 @@
                 </select>
               </div>
 
+              <div class="form-group">
+                <label id="heightHeadingLabel">Height</label>
+                <div id="heightUnitHint" class="height-hint">Enter your height in centimeters.</div>
+              </div>
+
               <div id="heightBlockCm">
                 <div class="form-group">
                   <label for="heightCm">Height (cm)</label>
@@ -148,7 +153,7 @@
               </div>
 
               <div class="form-group">
-                <label>
+                <label class="checkbox-label">
                   <input id="showAllFormulas" type="checkbox" aria-label="Show all formulas">
                   Show results for all formulas (comparison)
                 </label>
@@ -218,27 +223,27 @@
 
               <p>This calculator gives you a practical IBW estimate using a selected formula (Devine, Robinson, Miller, or Hamwi). Because these formulas were created by different authors and for different use cases, they do not always agree. That is not a bug. It is the point of showing more than one option. If you want a fast answer, leave the defaults and calculate. If you want more context, enable the comparison option to see multiple formula outputs side by side.</p>
 
-              <p>To make the result more useful in real life, the calculator also shows a healthy weight range based on BMI (body mass index). BMI is not perfect either, but it gives you a reasonable “corridor” for weight at your height. The IBW estimate will often land somewhere inside that corridor, but depending on the formula and your height, it may land closer to one end. The combination helps you avoid treating a single number as a strict target.</p>
+              <p>To make the result more useful in real life, the calculator also shows a healthy weight range based on BMI (body mass index). BMI is not perfect either, but it gives you a reasonable corridor for weight at your height. The IBW estimate will often land somewhere inside that corridor, but depending on the formula and your height, it may land closer to one end. The combination helps you avoid treating a single number as a strict target.</p>
 
               <h3>Assumptions and how to use this calculator</h3>
               <ul>
                 <li><strong>Height drives everything.</strong> IBW formulas are height-based. If your height input is off, your result is off.</li>
-                <li><strong>Sex-based equations.</strong> The IBW formulas here use male/female constants as traditionally published, and do not account for body composition.</li>
+                <li><strong>Sex-based equations.</strong> The IBW formulas here use male and female constants as traditionally published, and do not account for body composition.</li>
                 <li><strong>Linear adjustment around 5 ft.</strong> These formulas change by a fixed amount per inch above (or below) 5 ft (60 inches).</li>
-                <li><strong>BMI range uses typical cutoffs.</strong> The “healthy BMI range” uses BMI 18.5 to 24.9 as a general reference for adults.</li>
+                <li><strong>BMI range uses typical cutoffs.</strong> The healthy BMI range uses BMI 18.5 to 24.9 as a general reference for adults.</li>
                 <li><strong>Not a diagnosis or a goal.</strong> IBW and BMI are screening tools. Athletic builds, higher muscle mass, pregnancy, and certain health conditions can make these ranges less meaningful.</li>
               </ul>
 
               <h3>Common questions</h3>
 
               <h3>Which IBW formula should I use?</h3>
-              <p>If you want a single default, Devine is the most commonly referenced in many clinical settings and is a reasonable baseline for a quick estimate. If you are using the number for general planning (not medical dosing), it is better to view multiple formulas and treat the results as a small range rather than a single “correct” value.</p>
+              <p>If you want a single default, Devine is the most commonly referenced in many clinical settings and is a reasonable baseline for a quick estimate. If you are using the number for general planning (not medical dosing), it is better to view multiple formulas and treat the results as a small range rather than a single correct value.</p>
 
               <h3>Why do the formulas give different answers?</h3>
               <p>They were created by different authors using different datasets and goals. Small differences in the base constant at 5 ft and the per-inch adjustment add up, especially as height moves farther from 5 ft. Seeing the differences helps you understand uncertainty rather than hiding it.</p>
 
               <h3>Is ideal body weight the same as a healthy weight?</h3>
-              <p>No. IBW is one standardized estimate. “Healthy weight” depends on more than height: body composition, medical history, strength, and lifestyle matter. That is why this calculator also shows a healthy BMI-based weight range. In most normal cases, using IBW as a rough midpoint and BMI as a corridor is more realistic than using IBW alone.</p>
+              <p>No. IBW is one standardized estimate. Healthy weight depends on more than height: body composition, medical history, strength, and lifestyle matter. That is why this calculator also shows a healthy BMI-based weight range. In most normal cases, using IBW as a rough midpoint and BMI as a corridor is more realistic than using IBW alone.</p>
 
               <h3>What if I do not know my exact height?</h3>
               <p>Use your best estimate. The impact is usually predictable: a small height change creates a small weight change. If you are unsure, try two nearby heights (for example, 170 cm and 172 cm) and see how much the outputs move. If you are using the result for anything medical, measure your height properly.</p>
