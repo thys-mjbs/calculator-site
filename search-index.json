@@ -1664,5 +1664,124 @@
       "meeting time converter",
       "timezone meeting"
     ]
+  },
+  {
+    "title": "Resistor Color Code Calculator",
+    "url": "/calculators/engineering-technical/resistor-color-code-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "resistor color code calculator",
+      "resistor color code",
+      "resistor-color-code-calculator",
+      "resistorcolorcodecalculator",
+      "resistor color code calc",
+      "resistor code calculator",
+      "resistor bands calculator",
+      "color code resistor calculator",
+      "resistor band decoder",
+      "resistor color code decoder"
+    ]
+  },
+  {
+    "title": "Series & Parallel Resistor Calculator",
+    "url": "/calculators/engineering-technical/series-and-parallel-resistor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "series & parallel resistor calculator",
+      "series & parallel resistor",
+      "series-and-parallel-resistor-calculator",
+      "series&parallelresistorcalculator",
+      "series parallel resistor calculator",
+      "series parallel resistor",
+      "series resistor calculator",
+      "parallel resistor calculator",
+      "series parallel resistors",
+      "resistor calculator series parallel"
+    ]
+  },
+  {
+    "title": "Series & Parallel Capacitor Calculator",
+    "url": "/calculators/engineering-technical/series-and-parallel-capacitor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "series & parallel capacitor calculator",
+      "series & parallel capacitor",
+      "series-and-parallel-capacitor-calculator",
+      "series&parallelcapacitorcalculator",
+      "series capacitor calculator",
+      "parallel capacitor calculator",
+      "capacitor series parallel calculator",
+      "series parallel capacitor",
+      "series-parallel-capacitor",
+      "capacitance series parallel calculator"
+    ]
+  },
+  {
+    "title": "Inductor Reactance Calculator",
+    "url": "/calculators/engineering-technical/inductor-reactance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "inductor reactance calculator",
+      "inductor reactance",
+      "inductor-reactance-calculator",
+      "inductorreactancecalculator",
+      "reactance calculator",
+      "xl calculator",
+      "inductive reactance calculator",
+      "inductive reactance",
+      "inductive-reactance-calculator",
+      "inductivereactancecalculator"
+    ]
+  },
+  {
+    "title": "Capacitive Reactance Calculator",
+    "url": "/calculators/engineering-technical/capacitive-reactance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "capacitive reactance calculator",
+      "capacitive reactance",
+      "capacitive-reactance-calculator",
+      "capacitiverreactancecalculator",
+      "xc calculator",
+      "reactance calculator",
+      "capacitive xc calculator",
+      "capacitive reactance calc",
+      "xc calc",
+      "capacitive-reactance"
+    ]
+  },
+  {
+    "title": "Impedance Calculator (Basic)",
+    "url": "/calculators/engineering-technical/impedance-calculator-basic/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "impedance calculator (basic)",
+      "impedance (basic)",
+      "impedance-calculator-basic",
+      "impedancecalculatorbasic",
+      "impedance calc basic",
+      "impedance calc",
+      "impedance basic",
+      "impedance",
+      "basic impedance calculator",
+      "basic impedance"
+    ]
+  },
+  {
+    "title": "Power Factor Calculator",
+    "url": "/calculators/engineering-technical/power-factor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "power factor calculator",
+      "power factor",
+      "power-factor-calculator",
+      "powerfactorcalculator",
+      "pf calculator",
+      "pf calc",
+      "power factor calc",
+      "power-factor",
+      "pf",
+      "powerfactor"
+    ]
   }  
 ]

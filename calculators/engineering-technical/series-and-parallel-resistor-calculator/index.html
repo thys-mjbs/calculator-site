@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Series & Parallel Resistor Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate equivalent resistance for resistors in series or parallel. Paste a list of resistor values and get total resistance plus optional tolerance range.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/series-and-parallel-resistor-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Series & Parallel Resistor Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate equivalent resistance for resistors in series or parallel. Paste a list of resistor values and get total resistance plus optional tolerance range.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/series-and-parallel-resistor-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Series & Parallel Resistor Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate equivalent resistance for resistors in series or parallel. Paste a list of resistor values and get total resistance plus optional tolerance range.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Series & Parallel Resistor Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/series-and-parallel-resistor-calculator/",
+      "description": "Calculate equivalent resistance for resistors in series or parallel by entering a list of resistor values and optionally applying a tolerance percentage."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering & Technical</a> ›
+        <span>Series & Parallel Resistor Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Series & Parallel Resistor Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4iXUY4i" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Fluid Mechanics</div>
+                <p class="affiliate-copy">Tools for flow rate, pressure, and fluid behaviour calculations.</p>
+                <div class="affiliate-cta">Explore fluid mechanics tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate total resistance for series or parallel circuits</h2>
+
+              <p class="calculator-intro">Choose series or parallel, enter your resistor values, and get the equivalent resistance. Add an optional tolerance to see a realistic min and max range.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="connectionType">Connection type</label>
+                <select id="connectionType" aria-label="Select series or parallel">
+                  <option value="series" selected>Series</option>
+                  <option value="parallel">Parallel</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="unitSelect">Input unit</label>
+                <select id="unitSelect" aria-label="Select resistor input unit">
+                  <option value="ohm" selected>Ohms (Ω)</option>
+                  <option value="kohm">kΩ</option>
+                  <option value="mohm">MΩ</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="resistorsList">Resistor values</label>
+                <textarea
+                  id="resistorsList"
+                  rows="5"
+                  placeholder="Example: 100, 220, 330&#10;Or: 1k 4.7k 10k&#10;Or: 0.47 0.47 1"
+                  aria-label="Enter resistor values separated by commas, spaces, or new lines"
+                ></textarea>
+                <div class="field-hint">Separators supported: comma, space, or new line. You can include units per value like 1k, 4.7k, 2M, or 330Ω.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="tolerancePercent">Tolerance (optional)</label>
+                <input
+                  id="tolerancePercent"
+                  type="text"
+                  inputmode="decimal"
+                  placeholder="Example: 5"
+                  aria-label="Enter tolerance percent optional"
+                />
+                <div class="field-hint">If provided, the calculator shows an estimated min and max for the equivalent resistance using the same tolerance across all resistors.</div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate equivalent resistance</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/496ZJoJ" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Thermal Calculations</div>
+                <p class="affiliate-copy">Calculate heat transfer, temperature change, and energy flow.</p>
+                <div class="affiliate-cta">View thermal engineering tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering & Technical</h3>
+              <p class="related-desc">Solve practical engineering problems with calculators for circuits, physics, mechanics, and more.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common engineering and everyday units quickly, including length, mass, temperature, and more.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Handle core math tasks like percentages, ratios, rounding, and number conversions with simple tools.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4agcTko" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Unit Conversions</div>
+                <p class="affiliate-copy">Convert engineering units quickly and accurately.</p>
+                <div class="affiliate-cta">Browse engineering unit conversion tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Series and parallel resistor calculator for equivalent resistance</h2>
+
+              <p>This series and parallel resistor calculator helps you find the equivalent resistance of multiple resistors connected in a circuit. If you are building a simple circuit, checking a breadboard layout, choosing a current limiting resistor, or validating a quick design calculation, the most common step is converting many resistors into one total resistance. This tool does that from a pasted list of values, with a choice of series or parallel wiring.</p>
+
+              <p>The goal is practical: you enter the resistor values you actually have, pick how they are connected, and the calculator returns the equivalent resistance in ohms plus a readable breakdown of the math used. If you add an optional tolerance, it also estimates a realistic min and max range for the total resistance. That is useful when you want to understand how far the final value can drift because resistors are rarely exact.</p>
+
+              <p>You can paste values separated by commas, spaces, or new lines. You can also mix in shorthand units per value such as 1k, 4.7k, or 2M. If you prefer, you can set a single input unit (Ω, kΩ, MΩ) and enter plain numbers. The calculator converts everything into ohms internally, performs the series or parallel computation, then formats the result for quick reading.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Series total resistance is calculated as the sum of all resistor values: Rtotal = R1 + R2 + … + Rn.</li>
+                <li>Parallel total resistance is calculated using the reciprocal sum: 1/Rtotal = 1/R1 + 1/R2 + … + 1/Rn.</li>
+                <li>All resistor values must be positive numbers. Zero or negative values are rejected because they do not represent standard resistors.</li>
+                <li>If you enter a tolerance percentage, the min and max range is estimated using the same tolerance for every resistor, which is a simplification.</li>
+                <li>This calculator assumes ideal resistors and does not account for temperature coefficient, power rating limits, lead resistance, contact resistance, or frequency dependent behavior.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between series and parallel resistors?</h3>
+              <p>In a series connection, resistors are placed end to end so the same current flows through each one. The total resistance increases because each resistor adds to the overall opposition to current. In a parallel connection, resistors share the same voltage across them while current splits between branches. The total resistance decreases because multiple paths allow more current to flow for the same voltage.</p>
+
+              <h3>Why does the parallel formula use reciprocals?</h3>
+              <p>Parallel resistors combine by adding conductance, not resistance. Conductance is the reciprocal of resistance. Each parallel branch contributes an amount of conductance, and the total conductance is the sum of the branch conductances. After adding them, the equivalent resistance is the reciprocal of the total conductance.</p>
+
+              <h3>Can I mix units like 1k and 330 in the same list?</h3>
+              <p>Yes, if you include units in the values. For example, you can enter 1k, 330, and 2.2k together. The calculator reads the suffix and converts each value to ohms. If you do not include suffixes, then the “Input unit” dropdown is used as the unit for all values.</p>
+
+              <h3>How accurate is the tolerance min and max range?</h3>
+              <p>It is an estimate designed for quick intuition. Real worst case tolerance stacking can be more complex, especially for parallel networks where changes do not scale linearly. This calculator applies the same tolerance to each resistor and computes a best case and worst case total by moving all resistors in the direction that makes the total lowest or highest. That is often good enough for sanity checks, but not a substitute for a full tolerance analysis when the circuit is sensitive.</p>
+
+              <h3>What if I only have two resistors in parallel?</h3>
+              <p>The calculator works with any count, including two. For two resistors in parallel there is also a shortcut formula: Rtotal = (R1 × R2) ÷ (R1 + R2). The calculator will still use the general reciprocal method, which produces the same answer and scales to more resistors.</p>
+
+              <h3>When might this calculator not apply?</h3>
+              <p>If your circuit involves reactive components (capacitors or inductors) at AC frequencies, or if your resistors behave differently with temperature or power dissipation, then a simple DC resistance model may be incomplete. In those cases, you may need impedance calculations, temperature rise estimates, or power checks in addition to equivalent resistance.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

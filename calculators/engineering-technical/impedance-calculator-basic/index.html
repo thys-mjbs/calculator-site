@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Impedance Calculator (Basic) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate electrical impedance from resistance and reactance, or from R, L, C, and frequency. Get magnitude, phase angle, rectangular form, and power factor.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/impedance-calculator-basic/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Impedance Calculator (Basic) | SnapCalc">
+    <meta property="og:description" content="Calculate electrical impedance from resistance and reactance, or from R, L, C, and frequency. Get magnitude, phase angle, rectangular form, and power factor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/impedance-calculator-basic/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Impedance Calculator (Basic) | SnapCalc">
+    <meta name="twitter:description" content="Calculate electrical impedance from resistance and reactance, or from R, L, C, and frequency. Get magnitude, phase angle, rectangular form, and power factor.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Impedance Calculator (Basic)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/impedance-calculator-basic/",
+      "description": "Calculate electrical impedance from resistance and reactance, or from R, L, C, and frequency, with magnitude, phase angle, rectangular form, and power factor."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Impedance Calculator (Basic)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Impedance Calculator (Basic)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4pNLKde" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Technical Problem Solving</div>
+                <p class="affiliate-copy">Structured tools for solving technical and engineering problems.</p>
+                <div class="affiliate-cta">Explore technical problem solving tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate impedance from R and X, or from RLC and frequency</h2>
+
+              <p class="calculator-intro">
+                Choose a quick input method and get impedance magnitude, phase angle, rectangular form (R + jX), and power factor. Works for a simple series impedance model.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+
+              <div class="input-group">
+                <label for="modeSelect">Input method</label>
+                <select id="modeSelect">
+                  <option value="r-x">Resistance and reactance (R and X)</option>
+                  <option value="rlc">Series RLC with frequency (R, L, C, f)</option>
+                </select>
+              </div>
+
+              <div id="modeBlockRX">
+                <div class="input-group">
+                  <label for="resistanceOhmsRX">Resistance R (Ω)</label>
+                  <input id="resistanceOhmsRX" type="text" inputmode="decimal" placeholder="e.g., 10">
+                </div>
+
+                <div class="input-group">
+                  <label for="reactanceOhmsRX">Reactance X (Ω)</label>
+                  <input id="reactanceOhmsRX" type="text" inputmode="decimal" placeholder="e.g., 15 (inductive) or -15 (capacitive)">
+                </div>
+              </div>
+
+              <div id="modeBlockRLC" class="hidden">
+                <div class="input-group">
+                  <label for="resistanceOhmsRLC">Resistance R (Ω)</label>
+                  <input id="resistanceOhmsRLC" type="text" inputmode="decimal" placeholder="e.g., 10">
+                </div>
+
+                <div class="input-group">
+                  <label for="frequencyHz">Frequency f (Hz)</label>
+                  <input id="frequencyHz" type="text" inputmode="decimal" placeholder="e.g., 50">
+                </div>
+
+                <div class="input-group">
+                  <label for="inductanceH">Inductance L (H) (optional)</label>
+                  <input id="inductanceH" type="text" inputmode="decimal" placeholder="e.g., 0.02">
+                </div>
+
+                <div class="input-group">
+                  <label for="capacitanceF">Capacitance C (F) (optional)</label>
+                  <input id="capacitanceF" type="text" inputmode="decimal" placeholder="e.g., 0.000001">
+                </div>
+              </div>
+
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate impedance</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4aOjsL6" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Engineering Workflows</div>
+                <p class="affiliate-copy">Improve engineering workflows with planning and calculation aids.</p>
+                <div class="affiliate-cta">View engineering workflow tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Run practical electrical, mechanical, and technical calculations for real-world work and study.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle core math tasks like fractions, ratios, rounding, and numeric conversions that support technical work.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and values quickly, including common engineering units and measurement formats.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48Ybrkn" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Documentation</div>
+                <p class="affiliate-copy">Create and manage technical documentation efficiently.</p>
+                <div class="affiliate-cta">Browse technical documentation tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Impedance calculator for R, X, and basic series RLC circuits</h2>
+
+              <p>
+                Electrical impedance is the “total opposition” a circuit presents to alternating current (AC). It combines resistance (the part that dissipates energy as heat) and reactance (the part that stores and releases energy in magnetic or electric fields). Reactance can be inductive (from inductors) or capacitive (from capacitors). Because reactance depends on frequency, impedance usually changes when the frequency changes.
+              </p>
+
+              <p>
+                This Impedance Calculator (Basic) is designed for the most common quick calculations: converting resistance and reactance into impedance magnitude and phase angle, and estimating series RLC impedance using frequency plus optional inductance and capacitance. It gives you more than one number, because impedance is a complex value. For practical work, the two most useful outputs are the magnitude |Z| in ohms (Ω) and the phase angle in degrees, which tells you how far current leads or lags voltage.
+              </p>
+
+              <p>
+                Use the “Resistance and reactance (R and X)” method when you already know the real part (R) and the imaginary part (X). This is common when you have measurements, datasheet values, or you have already calculated reactance elsewhere. Use the “Series RLC with frequency” method when you want the calculator to derive reactance from inductance, capacitance, and frequency. Inductance and capacitance are optional so you can still get a useful result even if you only know one of them, or if you want to treat one component as negligible.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator uses a simple series impedance model: Z = R + jX, where X is net reactance (XL − XC).</li>
+                <li>Inductor reactance is calculated as XL = 2πfL, and capacitor reactance as XC = 1 ÷ (2πfC) when C is provided and greater than 0.</li>
+                <li>If you leave L or C blank in the series RLC mode, it is treated as 0, meaning that component is ignored for the net reactance.</li>
+                <li>Phase angle is computed as atan(X/R) in degrees. When R is 0, the phase is treated as +90° or −90° based on the sign of X, and 0° when both R and X are 0.</li>
+                <li>Power factor is reported as cos(phase angle). This is a simplified indicator for series loads and is not a full power analysis for non-sinusoidal waveforms or complex networks.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between impedance and resistance?</h3>
+              <p>
+                Resistance is the “real” part of opposition to current and does not depend on frequency for ideal resistors. Impedance includes resistance plus reactance, and reactance changes with frequency. In AC circuits, impedance is the correct total value to use when calculating current from voltage.
+              </p>
+
+              <h3>Why can reactance be negative?</h3>
+              <p>
+                In the common sign convention, inductive reactance is positive and capacitive reactance is negative. A negative reactance means the circuit behaves more like a capacitor overall, which typically causes current to lead voltage. A positive reactance means it behaves more like an inductor, which typically causes current to lag voltage.
+              </p>
+
+              <h3>What does the phase angle tell me in practice?</h3>
+              <p>
+                The phase angle indicates the timing relationship between voltage and current for a sinusoidal AC signal. A positive angle suggests an inductive load (current lags), and a negative angle suggests a capacitive load (current leads). This directly affects power factor and can impact system efficiency, sizing, and power quality considerations.
+              </p>
+
+              <h3>Can I use this for parallel circuits or complex networks?</h3>
+              <p>
+                Not reliably. This calculator is intentionally basic and assumes a series model. Parallel circuits require converting to admittance or combining impedances using reciprocal formulas. If you have multiple branches, frequency-dependent losses, or multiple stages, you should use a network calculator or circuit simulation tool.
+              </p>
+
+              <h3>How can I improve accuracy if I only have rough values?</h3>
+              <p>
+                Start with the quick mode using estimated R and X to get a fast magnitude and phase. If you know the frequency and at least one of L or C, switch to the series RLC mode and add the missing component if you can. For higher accuracy, use measured values at the actual operating frequency and include realistic resistance for coils and capacitor ESR where possible.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
