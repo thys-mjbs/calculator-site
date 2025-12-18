@@ -2378,5 +2378,124 @@
       "annual petrol cost calculator",
       "annual fuel cost calc"
     ]
+  },
+  {
+    "title": "Cash Envelope Allocation Calculator",
+    "url": "/calculators/personal-finance/cash-envelope-allocation-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "cash envelope allocation calculator",
+      "cash envelope allocation",
+      "cash-envelope-allocation-calculator",
+      "cashenvelopeallocationcalculator",
+      "cash envelope calculator",
+      "envelope allocation calculator",
+      "envelope budget calculator",
+      "cash envelope budget",
+      "envelope budgeting calculator",
+      "cash envelope allocation tool"
+    ]
+  },
+  {
+    "title": "Irregular Income Budget Planner",
+    "url": "/calculators/personal-finance/irregular-income-budget-planner/",
+    "category": "Personal Finance",
+    "aliases": [
+      "irregular income budget planner",
+      "irregular income budget planner",
+      "irregular-income-budget-planner",
+      "irregularincomebudgetplanner",
+      "irregular income budget",
+      "irregular budget planner",
+      "income budget planner",
+      "variable income budget planner",
+      "irregular income planner",
+      "irregular income budget"
+    ]
+  },
+  {
+    "title": "Side Income Break-Even Calculator",
+    "url": "/calculators/personal-finance/side-income-break-even-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "side income break-even calculator",
+      "side income break-even",
+      "side-income-break-even-calculator",
+      "sideincomebreakevencalculator",
+      "side income breakeven",
+      "side hustle break-even",
+      "side hustle breakeven",
+      "break even side income",
+      "side income payback period",
+      "side income break even"
+    ]
+  },
+  {
+    "title": "Annual Bills Monthly Equivalent Calculator",
+    "url": "/calculators/personal-finance/annual-bills-monthly-equivalent-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "annual bills monthly equivalent calculator",
+      "annual bills monthly equivalent",
+      "annual-bills-monthly-equivalent-calculator",
+      "annualbillsmonthlyequivalentcalculator",
+      "annual bills monthly",
+      "monthly equivalent annual bills",
+      "annual bills monthly equivalent",
+      "annual bills monthly cost",
+      "annual bills per month",
+      "annual bills monthly calc"
+    ]
+  },
+  {
+    "title": "Cost-of-Living Comparison Calculator",
+    "url": "/calculators/personal-finance/cost-of-living-comparison-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "cost-of-living comparison calculator",
+      "cost-of-living comparison",
+      "cost-of-living-comparison-calculator",
+      "cost-of-livingcomparisoncalculator",
+      "cost of living comparison",
+      "cost of living compare",
+      "col comparison",
+      "cost of living calculator",
+      "compare cost of living",
+      "living cost comparison"
+    ]
+  },
+  {
+    "title": "Rent Affordability Calculator",
+    "url": "/calculators/personal-finance/rent-affordability-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "rent affordability calculator",
+      "rent affordability",
+      "rent-affordability-calculator",
+      "rentaffordabilitycalculator",
+      "rent affordability calc",
+      "rent affordability tool",
+      "rent affordability check",
+      "rent affordability estimator",
+      "rent affordability test",
+      "rent affordability"
+    ]
+  },
+  {
+    "title": "Mortgage Affordability (Personal Finance Version)",
+    "url": "/calculators/personal-finance/mortgage-affordability-personal-finance-version/",
+    "category": "Personal Finance",
+    "aliases": [
+      "mortgage affordability (personal finance version)",
+      "mortgage affordability personal finance version",
+      "mortgage-affordability-personal-finance-version",
+      "mortgageaffordabilitypersonalfinanceversion",
+      "mortgage affordability",
+      "mortgage affordability version",
+      "mortgage affordability pf version",
+      "mortgage affordability personal finance",
+      "mortgage affordability pf",
+      "mortgage affordability personal finance version calculator"
+    ]
   }  
 ]
