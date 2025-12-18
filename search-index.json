@@ -1902,5 +1902,124 @@
       "formwork-area",
       "formworkarea"
     ]
-  }
+  },
+  {
+    "title": "Area Converter",
+    "url": "/calculators/conversions-units-currencies/area-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "area converter",
+      "area converter",
+      "area-converter",
+      "areaconverter",
+      "area conv",
+      "area convert",
+      "area conversion",
+      "convert area",
+      "area unit converter",
+      "area conversion tool"
+    ]
+  },
+  {
+    "title": "Temperature Converter",
+    "url": "/calculators/conversions-units-currencies/temperature-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "temperature converter",
+      "temperature converter",
+      "temperature-converter",
+      "temperatureconverter",
+      "temp converter",
+      "temp conversion",
+      "temperature convert",
+      "convert temperature",
+      "temperature-converter calculator",
+      "temperature converter tool"
+    ]
+  },
+  {
+    "title": "Speed Converter",
+    "url": "/calculators/conversions-units-currencies/speed-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "speed converter",
+      "speed",
+      "speed-converter",
+      "speedconverter",
+      "speed conversion",
+      "convert speed",
+      "speed unit converter",
+      "speed units",
+      "convert kmh to mph",
+      "kmh to mph"
+    ]
+  },
+  {
+    "title": "Time Converter",
+    "url": "/calculators/conversions-units-currencies/time-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "time converter",
+      "time convert",
+      "time-converter",
+      "timeconverter",
+      "time conv",
+      "time convertor",
+      "convert time",
+      "time conversion",
+      "convert time units",
+      "time units converter"
+    ]
+  },
+  {
+    "title": "Pressure Converter",
+    "url": "/calculators/conversions-units-currencies/pressure-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "pressure converter",
+      "pressure",
+      "pressure-converter",
+      "pressureconverter",
+      "pressure conv",
+      "press conv",
+      "pressure convert",
+      "pressureconversion",
+      "pressure convertor",
+      "pressure-convert"
+    ]
+  },
+  {
+    "title": "Energy Converter",
+    "url": "/calculators/conversions-units-currencies/energy-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "energy converter",
+      "energy",
+      "energy-converter",
+      "energyconverter",
+      "energy conversion",
+      "convert energy",
+      "energy unit converter",
+      "energy units converter",
+      "energy conversion tool",
+      "energy converter calculator"
+    ]
+  },
+  {
+    "title": "Power Converter",
+    "url": "/calculators/conversions-units-currencies/power-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "power converter",
+      "power",
+      "power-converter",
+      "powerconverter",
+      "power conv",
+      "power convert",
+      "powerconversion",
+      "power-conversion",
+      "power unit converter",
+      "power-unit-converter"
+    ]
+  }  
 ]
