@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Trip Time Estimator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/trip-time-estimator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Trip Time Estimator | SnapCalc">
+    <meta property="og:description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/trip-time-estimator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trip Time Estimator | SnapCalc">
+    <meta name="twitter:description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Trip Time Estimator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/trip-time-estimator/",
+      "description": "Estimate trip time using distance and average speed, with optional stops, stop duration, traffic delay percent, and departure time to estimate arrival time."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Trip Time Estimator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Trip Time Estimator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rXIcXp" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Commute Planning</div>
+                <p class="affiliate-copy">Optimise daily commutes for time, cost, and convenience.</p>
+                <div class="affiliate-cta">Explore commute planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your trip duration and arrival time</h2>
+
+              <p class="calculator-intro">Enter distance and average speed for a quick estimate. Add stops, traffic delay, and a departure time for a more realistic total.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="distanceValue">Distance</label>
+                <input id="distanceValue" type="text" inputmode="decimal" placeholder="e.g., 120">
+              </div>
+
+              <div class="form-group">
+                <label for="distanceUnit">Distance unit</label>
+                <select id="distanceUnit">
+                  <option value="km" selected>Kilometres (km)</option>
+                  <option value="mi">Miles (mi)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="speedValue">Average speed</label>
+                <input id="speedValue" type="text" inputmode="decimal" placeholder="e.g., 90">
+              </div>
+
+              <div class="form-group">
+                <label for="speedUnit">Speed unit</label>
+                <select id="speedUnit">
+                  <option value="kmh" selected>km/h</option>
+                  <option value="mph">mph</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="stopsCount">Stops (optional)</label>
+                <input id="stopsCount" type="text" inputmode="numeric" placeholder="e.g., 1">
+              </div>
+
+              <div class="form-group">
+                <label for="stopMinutes">Minutes per stop (optional)</label>
+                <input id="stopMinutes" type="text" inputmode="numeric" placeholder="e.g., 10">
+              </div>
+
+              <div class="form-group">
+                <label for="trafficDelayPercent">Traffic delay percent (optional)</label>
+                <input id="trafficDelayPercent" type="text" inputmode="decimal" placeholder="e.g., 15">
+              </div>
+
+              <div class="form-group">
+                <label for="departureTime">Departure time (optional)</label>
+                <input id="departureTime" type="time">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Estimate trip time</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan routes, estimate travel time, and compare transport options for everyday trips and long journeys.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Convert time units, plan schedules, and estimate timelines for meetings, projects, and daily routines.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units and measurements to keep calculations consistent across systems and regions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4agAzVQ" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Costs Tracking</div>
+                <p class="affiliate-copy">Track transport expenses across personal and business travel.</p>
+                <div class="affiliate-cta">View transport cost tracking tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Trip time estimator for driving time, total travel duration, and arrival time</h2>
+
+              <p>This trip time estimator helps you estimate how long a journey will take based on distance and average speed. If you only want a quick answer, you can enter those two numbers and get an immediate driving-time estimate. If you want something closer to real life, you can also include stops and a traffic delay percentage, and you can optionally add a departure time to estimate your arrival time.</p>
+
+              <p>The core calculation is simple: time equals distance divided by speed. That produces a base driving duration. Real trips rarely match the base number because traffic slows you down and breaks add fixed time. This calculator combines both by applying a traffic delay percentage to the driving portion, then adding stop time as a separate block. This keeps the results understandable and adjustable without forcing you to guess every detail.</p>
+
+              <p>The output is designed to be useful at a glance. You get the base driving time, an estimate of extra time from traffic, an estimate of extra time from stops, and the total trip duration. If you enter a departure time, you also get an estimated arrival time. This is helpful for commute planning, setting realistic ETAs, deciding when to leave, and comparing two route options using different distances or speeds.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Average speed should reflect the whole route, not your peak speed. Use a lower number if you expect towns, hills, or congestion.</li>
+                <li>Traffic delay percent applies to driving time only. Stops are added separately so you can model breaks more realistically.</li>
+                <li>If you do not know stops or stop duration, leave them blank and the calculator assumes zero stop time.</li>
+                <li>Arrival time is estimated using your local device time settings and does not account for time zones or overnight rest stops.</li>
+                <li>Results are estimates. Weather, roadworks, refuelling, border crossings, and parking time can materially change the real outcome.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What average speed should I use if I do not know it?</h3>
+              <p>Use a conservative estimate based on the type of driving. Highways often average lower than the posted limit once you include slower sections and merges. Urban driving averages can be much lower. If unsure, start with a cautious number, then rerun the calculator with a higher and lower speed to see a realistic range.</p>
+
+              <h3>How does the traffic delay percent work?</h3>
+              <p>The traffic delay percent increases the driving portion of the trip by that percentage. For example, a 2 hour base drive with a 20% traffic delay becomes 2 hours and 24 minutes for the driving portion. Stops are then added on top of that.</p>
+
+              <h3>Do I have to enter stops and minutes per stop?</h3>
+              <p>No. Stops are optional. If you leave them blank, the calculator assumes zero stop time and still returns a valid result. If you only know that you will take one break but are unsure how long, enter a rough estimate like 10 or 15 minutes and adjust later.</p>
+
+              <h3>Why does my real trip still take longer than the estimate?</h3>
+              <p>The biggest causes are an average speed that was too optimistic, unplanned stops, and delays that are not “traffic” in the simple sense, such as roadworks, accidents, parking, waiting for passengers, or detours. If your real trips consistently run long, lower your average speed or increase the traffic delay percent until the estimate matches your typical experience.</p>
+
+              <h3>Can I use this for walking, cycling, or public transport?</h3>
+              <p>Yes, if you enter an appropriate average speed. For walking and cycling it can be reasonably accurate on flat routes. For public transport it is more variable because waiting time and transfers dominate, so model those as stops with minutes per stop, and treat the speed as an average over the moving portions only.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aQfYI3" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Travel Logistics</div>
+                <p class="affiliate-copy">Manage travel logistics including timing, routes, and connections.</p>
+                <div class="affiliate-cta">Browse travel logistics tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

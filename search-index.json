@@ -2140,5 +2140,124 @@
       "quiz score average",
       "average quiz score"
     ]
+  },
+  {
+    "title": "Trip Time Estimator",
+    "url": "/calculators/travel-and-transport/trip-time-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "trip time estimator",
+      "trip time estimator",
+      "trip-time-estimator",
+      "triptimeestimator",
+      "trip time",
+      "trip estimator",
+      "time estimator",
+      "trip time estimate",
+      "trip duration estimator",
+      "travel time estimator"
+    ]
+  },
+  {
+    "title": "Route Distance Calculator",
+    "url": "/calculators/travel-transport/route-distance-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "route distance calculator",
+      "route distance",
+      "route-distance-calculator",
+      "routedistancecalculator",
+      "route distance calc",
+      "route distance tool",
+      "distance calculator route",
+      "route distance estimator",
+      "route distance km",
+      "route distance mi"
+    ]
+  },
+  {
+    "title": "Commute Cost Calculator",
+    "url": "/calculators/travel-transport/commute-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "commute cost calculator",
+      "commute cost",
+      "commute-cost-calculator",
+      "commutecostcalculator",
+      "commute cost calc",
+      "commute calculator",
+      "commute cost estimate",
+      "commuting cost calculator",
+      "commuting cost",
+      "commute costs"
+    ]
+  },
+  {
+    "title": "Commute Time Calculator",
+    "url": "/calculators/travel-transport/commute-time-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "commute time calculator",
+      "commute time",
+      "commute-time-calculator",
+      "commutetimecalculator",
+      "commute calculator",
+      "commute time calc",
+      "commute time estimator",
+      "commute time tool",
+      "commute duration calculator",
+      "commute duration"
+    ]
+  },
+  {
+    "title": "Toll Cost Estimator",
+    "url": "/calculators/travel-transport/toll-cost-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "toll cost estimator",
+      "toll cost estimator",
+      "toll-cost-estimator",
+      "tollcostestimator",
+      "toll estimator",
+      "toll cost",
+      "toll fees estimator",
+      "toll fee estimate",
+      "toll cost estimate",
+      "toll costs"
+    ]
+  },
+  {
+    "title": "Parking Cost Estimator",
+    "url": "/calculators/travel-transport/parking-cost-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "parking cost estimator",
+      "parking cost estimator",
+      "parking-cost-estimator",
+      "parkingcostestimator",
+      "parking estimator",
+      "parking cost",
+      "parking fee estimator",
+      "parking fees",
+      "parking cost estimate",
+      "parkingcost"
+    ]
+  },
+  {
+    "title": "Vehicle Ownership Cost Calculator",
+    "url": "/calculators/travel-transport/vehicle-ownership-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "vehicle ownership cost calculator",
+      "vehicle ownership cost",
+      "vehicle-ownership-cost-calculator",
+      "vehicleownershipcostcalculator",
+      "ownership cost calculator",
+      "vehicle cost calculator",
+      "car ownership cost calculator",
+      "ownership cost",
+      "vehicle ownership cost",
+      "car ownership cost"
+    ]
   }  
 ]
