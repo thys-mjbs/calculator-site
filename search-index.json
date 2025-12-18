@@ -2259,5 +2259,124 @@
       "vehicle ownership cost",
       "car ownership cost"
     ]
+  },
+  {
+    "title": "Sales Price Calculator",
+    "url": "/calculators/everyday-life-tools/sales-price-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "sales price calculator",
+      "sales price",
+      "sales-price-calculator",
+      "salespricecalculator",
+      "sale price calculator",
+      "sale price",
+      "sale-price-calculator",
+      "final price calculator",
+      "discounted price calculator",
+      "price after discount"
+    ]
+  },
+  {
+    "title": "VAT/Sales Tax Calculator (Everyday Use Version)",
+    "url": "/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "vat/sales tax calculator (everyday use version)",
+      "vat/sales tax (everyday use version)",
+      "vat-sales-tax-calculator-everyday-use-version",
+      "vatsalestaxcalculatoreverydayuseversion",
+      "vat sales tax calculator",
+      "vat calculator everyday use",
+      "sales tax calculator everyday use",
+      "vat sales tax everyday use",
+      "vat sales tax",
+      "sales tax"
+    ]
+  },
+  {
+    "title": "Meal Cost Per Person Calculator",
+    "url": "/calculators/everyday-life-tools/meal-cost-per-person-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "meal cost per person calculator",
+      "meal cost per person",
+      "meal-cost-per-person-calculator",
+      "mealcostperpersoncalculator",
+      "cost per person",
+      "per person cost",
+      "meal split",
+      "split meal cost",
+      "bill per person",
+      "meal cost per person calc"
+    ]
+  },
+  {
+    "title": "Grocery Budget Calculator",
+    "url": "/calculators/everyday-life-tools/grocery-budget-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "grocery budget calculator",
+      "grocery budget",
+      "grocery-budget-calculator",
+      "grocerybudgetcalculator",
+      "grocery budget",
+      "grocery budget calc",
+      "grocery calculator",
+      "grocery budget planner",
+      "grocery budgeting",
+      "grocery budget tool"
+    ]
+  },
+  {
+    "title": "Fuel Cost per Trip Calculator",
+    "url": "/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "fuel cost per trip calculator",
+      "fuel cost per trip",
+      "fuel-cost-per-trip-calculator",
+      "fuelcostpertripcalculator",
+      "fuel cost trip",
+      "trip fuel cost",
+      "fuel trip cost",
+      "fuel cost per trip calc",
+      "fuel-cost-per-trip",
+      "fuelcostpertrip"
+    ]
+  },
+  {
+    "title": "Fuel Efficiency Calculator (km/l or l/100km)",
+    "url": "/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "fuel efficiency calculator (km/l or l/100km)",
+      "fuel efficiency (km/l or l/100km)",
+      "fuel-efficiency-calculator-km-l-or-l-100km",
+      "fuelefficiencycalculatorkmllor l100km",
+      "fuel efficiency",
+      "fuel efficiency km/l",
+      "fuel efficiency l/100km",
+      "km per liter calculator",
+      "l per 100km calculator",
+      "fuel efficiency km l l 100km"
+    ]
+  },
+  {
+    "title": "Annual Fuel Cost Calculator",
+    "url": "/calculators/everyday-life-tools/annual-fuel-cost-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "annual fuel cost calculator",
+      "annual fuel cost",
+      "annual-fuel-cost-calculator",
+      "annualfuelcostcalculator",
+      "yearly fuel cost calculator",
+      "yearly fuel cost",
+      "fuel cost per year",
+      "annual gas cost calculator",
+      "annual petrol cost calculator",
+      "annual fuel cost calc"
+    ]
   }  
 ]
