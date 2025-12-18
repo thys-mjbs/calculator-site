@@ -2021,5 +2021,124 @@
       "power unit converter",
       "power-unit-converter"
     ]
+  },
+  {
+    "title": "Cumulative GPA Calculator",
+    "url": "/calculators/education-exams/cumulative-gpa-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "cumulative gpa calculator",
+      "cumulative gpa",
+      "cumulative-gpa-calculator",
+      "cumulativegpacalculator",
+      "cumulative gpa calc",
+      "gpa calculator",
+      "gpa calc",
+      "overall gpa calculator",
+      "cumulative grade point average",
+      "cumulative gpa tool"
+    ]
+  },
+  {
+    "title": "Semester GPA Calculator",
+    "url": "/calculators/education-and-exams/semester-gpa-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "semester gpa calculator",
+      "semester gpa",
+      "semester-gpa-calculator",
+      "semestergpacalculator",
+      "semester gpa calc",
+      "sem gpa calculator",
+      "sem gpa",
+      "gpa calculator semester",
+      "semester gpa tool",
+      "semester gpa compute"
+    ]
+  },
+  {
+    "title": "GPA Conversion Calculator",
+    "url": "/calculators/education-exams/gpa-conversion-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "gpa conversion calculator",
+      "gpa conversion",
+      "gpa-conversion-calculator",
+      "gpaconversioncalculator",
+      "gpa converter",
+      "gpa conversion tool",
+      "convert gpa",
+      "gpa scale converter",
+      "gpa scale conversion",
+      "gpa conversion calc"
+    ]
+  },
+  {
+    "title": "Grade Curve Adjuster (Simple)",
+    "url": "/calculators/education-exams/grade-curve-adjuster-simple/",
+    "category": "Education & Exams",
+    "aliases": [
+      "grade curve adjuster (simple)",
+      "grade curve adjuster simple",
+      "grade-curve-adjuster-simple",
+      "gradecurveadjustersimple",
+      "grade curve adjuster",
+      "grade curve",
+      "curve adjuster",
+      "grade curve simple",
+      "grade curve tool",
+      "grade curve adjuster calculator"
+    ]
+  },
+  {
+    "title": "Pass/Fail Threshold Calculator",
+    "url": "/calculators/education-exams/pass-fail-threshold-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "pass/fail threshold calculator",
+      "pass/fail threshold",
+      "pass-fail-threshold-calculator",
+      "passfailthresholdcalculator",
+      "pass fail threshold calculator",
+      "pass fail threshold",
+      "pass fail threshold calc",
+      "pass fail calculator",
+      "pass threshold calculator",
+      "fail threshold calculator"
+    ]
+  },
+  {
+    "title": "Assignment Weighting Calculator",
+    "url": "/calculators/education-exams/assignment-weighting-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "assignment weighting calculator",
+      "assignment weighting",
+      "assignment-weighting-calculator",
+      "assignmentweightingcalculator",
+      "assignment weights",
+      "weighted assignment grade",
+      "assignment weight calc",
+      "weighted grade calculator",
+      "assignment grade weighting",
+      "assignment weighting tool"
+    ]
+  },
+  {
+    "title": "Quiz Average Calculator",
+    "url": "/calculators/education-exams/quiz-average-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "quiz average calculator",
+      "quiz average",
+      "quiz-average-calculator",
+      "quizaveragecalculator",
+      "quiz avg",
+      "quiz average calc",
+      "quiz average tool",
+      "quiz average percent",
+      "quiz score average",
+      "average quiz score"
+    ]
   }  
 ]

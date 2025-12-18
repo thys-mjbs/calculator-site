@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>GPA Conversion Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert your GPA between common grading scales (4.0, 4.3, 5.0, 7.0, 10.0, and percentage) using a clear, transparent conversion method.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/gpa-conversion-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="GPA Conversion Calculator | SnapCalc">
+    <meta property="og:description" content="Convert your GPA between common grading scales (4.0, 4.3, 5.0, 7.0, 10.0, and percentage) using a clear, transparent conversion method.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/gpa-conversion-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GPA Conversion Calculator | SnapCalc">
+    <meta name="twitter:description" content="Convert your GPA between common grading scales (4.0, 4.3, 5.0, 7.0, 10.0, and percentage) using a clear, transparent conversion method.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GPA Conversion Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/gpa-conversion-calculator/",
+      "description": "Convert a GPA between common grading scales (4.0, 4.3, 5.0, 7.0, 10.0, and percentage) using a transparent, approximate conversion method."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education & Exams</a> ›
+        <span>GPA Conversion Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>GPA Conversion Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3MXeXnw" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Practice Tests</div>
+                <p class="affiliate-copy">Simulate exam conditions with practice questions and mock tests.</p>
+                <div class="affiliate-cta">Explore practice test tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert GPA between grading scales</h2>
+
+              <p class="calculator-intro">Enter your GPA and convert it to another scale. This uses a transparent proportional conversion (an estimate, not an official equivalency).</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="gpaValue">Your GPA</label>
+                <input type="text" id="gpaValue" inputmode="decimal" placeholder="e.g., 3.45">
+              </div>
+
+              <div class="form-group">
+                <label for="fromScale">Convert from</label>
+                <select id="fromScale">
+                  <option value="4.0">4.0 scale</option>
+                  <option value="4.3">4.3 scale</option>
+                  <option value="5.0">5.0 scale</option>
+                  <option value="7.0">7.0 scale</option>
+                  <option value="10.0">10.0 scale</option>
+                  <option value="100">Percentage (0–100)</option>
+                  <option value="custom">Custom (enter max)</option>
+                </select>
+              </div>
+
+              <div class="form-group hidden" id="fromCustomWrap">
+                <label for="fromCustomMax">From scale maximum (custom)</label>
+                <input type="text" id="fromCustomMax" inputmode="decimal" placeholder="e.g., 9.0">
+                <div class="field-note">Use the maximum possible value on your transcript (for example 9.0, 20.0, 12.0).</div>
+              </div>
+
+              <div class="form-group">
+                <label for="toScale">Convert to</label>
+                <select id="toScale">
+                  <option value="4.0">4.0 scale</option>
+                  <option value="4.3">4.3 scale</option>
+                  <option value="5.0">5.0 scale</option>
+                  <option value="7.0">7.0 scale</option>
+                  <option value="10.0">10.0 scale</option>
+                  <option value="100">Percentage (0–100)</option>
+                  <option value="custom">Custom (enter max)</option>
+                </select>
+              </div>
+
+              <div class="form-group hidden" id="toCustomWrap">
+                <label for="toCustomMax">To scale maximum (custom)</label>
+                <input type="text" id="toCustomMax" inputmode="decimal" placeholder="e.g., 20.0">
+                <div class="field-note">Use the maximum possible value for the target system you want to compare against.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="rounding">Decimals (rounding)</label>
+                <select id="rounding">
+                  <option value="2" selected>2 decimals</option>
+                  <option value="3">3 decimals</option>
+                  <option value="4">4 decimals</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert GPA</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/457Bc0e" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Memory Skills</div>
+                <p class="affiliate-copy">Improve recall and retention for study and exam performance.</p>
+                <div class="affiliate-cta">View memory improvement tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study tools for grades, exams, GPA planning, and academic decision-making.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Everyday math tools for percentages, ratios, conversions, and quick checks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan study time, deadlines, timetables, and date-based schedules accurately.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>GPA conversion calculator for 4.0, 4.3, 5.0, 7.0, 10.0, and percentage scales</h2>
+
+              <p>A GPA conversion calculator helps you estimate what your grade point average would look like under a different grading scale. This is useful when you are applying to a university in another country, comparing transcripts from different schools, filling in application forms that only accept one scale, or just trying to sanity-check how your results might translate.</p>
+
+              <p>This calculator is intentionally practical. Most people do not have access to a school’s official conversion table, and many institutions do not publish one. So instead of pretending there is a single universal standard, this tool uses a transparent proportional method: it converts your score to a ratio of the maximum possible score, and then applies that ratio to the target scale. If your GPA is 3.2 on a 4.0 scale, that is 80% of the scale. The calculator estimates what 80% would be on a 7.0 scale, a 10.0 scale, or as a percentage.</p>
+
+              <p>Because GPA systems differ in how they assign points to letter grades, how they weight courses, and whether they use plus and minus grades, the result is an estimate. The real value of the tool is consistency and clarity. You get a conversion that is easy to understand, easy to repeat, and easy to explain. If you want a more accurate result, use the “Custom” option and enter the maximum scale used by your school and by the target system you are comparing to.</p>
+
+              <p>To use the calculator, enter your GPA, choose the scale it comes from, and choose the scale you want to convert to. If your original GPA is already a percentage, select “Percentage (0–100)” as the “Convert from” scale. If your school uses a different maximum (for example 9.0, 12.0, 20.0, or 100 with special rules), choose “Custom” and enter the maximum score shown in your grading policy or transcript documentation.</p>
+
+              <p>The output includes more than a single converted number. You will see your estimated converted GPA, your implied percentage of the source scale, and a quick comparison table showing what the same performance looks like across several common scales. That table is useful when different application portals ask for different formats or when you are comparing yourself to a benchmark that is stated in another scale.</p>
+
+              <p>One more practical note: if your institution uses a weighted GPA (for example honors or advanced placement weighting), conversions become even less portable. In that case, this calculator is best used as a personal reference and not as proof. When accuracy matters for an application, always follow the receiving institution’s official instructions and provide your transcript as requested.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The conversion is proportional to the maximum scale (a simple ratio method), not an official university equivalency.</li>
+                <li>Your entered GPA is assumed to be on a 0 to max scale, where max is the selected scale maximum or your custom maximum.</li>
+                <li>Percentage output is treated as a 0–100 scale and is computed from the same ratio.</li>
+                <li>This tool does not account for course weighting, credit differences, grade distributions, or institutional conversion tables.</li>
+                <li>If your grading system has a non-linear mapping (for example letter grades with uneven point spacing), the estimate may differ from official conversions.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is GPA conversion exact?</h3>
+              <p>No. There is no single universal standard. Different institutions assign grade points differently and may apply unique rules (plus and minus grades, weighting, pass fail handling, and transcript normalization). This calculator provides a clear estimate using a proportional method so you can compare quickly and consistently.</p>
+
+              <h3>What should I do if my school uses a different maximum scale?</h3>
+              <p>Use the “Custom” option and enter the maximum value used by your school. If your transcript policy says your GPA is out of 9.0 or 20.0, that is the number you should enter. This reduces guesswork and improves the relevance of the estimate.</p>
+
+              <h3>My GPA is 0 on the scale. Will this still work?</h3>
+              <p>Yes. A GPA of 0 converts to 0 on other scales using the same ratio method. This tool accepts values from 0 up to the maximum of the selected scale. If you enter a value above the maximum, you will see a clear error so you can correct it.</p>
+
+              <h3>How do I convert between GPA and percentage?</h3>
+              <p>Select “Percentage (0–100)” as either the “Convert from” or “Convert to” option. The calculator treats percentage as another scale with a maximum of 100. For example, a 75% result is treated as 75 out of 100 and converted proportionally to 4.0, 7.0, and other scales.</p>
+
+              <h3>When should I not rely on this calculator?</h3>
+              <p>If you are submitting an application that requires an official conversion or if the receiving institution provides a specific conversion table, you should use their method. Also be cautious if your GPA is weighted, if grades are curved, or if your school uses a non-linear mapping. In those cases, the estimate can still be helpful for personal understanding, but it may not match an official evaluation.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4pFwIqa" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Active Learning</div>
+                <p class="affiliate-copy">Engage with material using active recall and practice techniques.</p>
+                <div class="affiliate-cta">Browse active learning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

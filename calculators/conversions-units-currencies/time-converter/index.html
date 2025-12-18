@@ -136,12 +136,12 @@
 
                 <div class="form-group">
                   <label for="monthDays">Days per month</label>
-                  <input id="monthDays" type="text" inputmode="decimal" placeholder="Default: 30.4375" value="30.4375">
+                  <input id="monthDays" type="text" inputmode="decimal" placeholder="Default: 30.44" value="30.44">
                 </div>
 
                 <div class="form-group">
                   <label for="yearDays">Days per year</label>
-                  <input id="yearDays" type="text" inputmode="decimal" placeholder="Default: 365.2425" value="365.2425">
+                  <input id="yearDays" type="text" inputmode="decimal" placeholder="Default: 365.24" value="365.24">
                 </div>
               </fieldset>
               <!-- CALCULATOR UI END -->
@@ -208,7 +208,7 @@
               <h3>Assumptions and how to use this calculator</h3>
               <ul>
                 <li>Seconds, minutes, hours, days, and weeks use fixed definitions (60 seconds per minute, 60 minutes per hour, 24 hours per day, 7 days per week).</li>
-                <li>Months and years require an assumption. By default this calculator uses 30.4375 days per month and 365.2425 days per year, which are widely used average approximations.</li>
+                <li>Months and years require an assumption. By default this calculator uses 30.44 days per month and 365.24 days per year, which are widely used average approximations.</li>
                 <li>If your scenario is tied to real calendar dates, convert using dates in a calendar tool or calculate the actual number of days between two dates, then convert to your target unit.</li>
                 <li>For billing or reporting, use the conventions in your contract or policy. Some organizations define a month as 30 days, or use 365 days per year for simplicity.</li>
                 <li>Rounding is normal. For large conversions (for example, seconds to years), small rounding differences are expected depending on your month/year assumptions.</li>
@@ -222,8 +222,8 @@
               <h3>What should I enter for “days per month”?</h3>
               <p>If you just want a general-purpose result, keep the default. If you are using a business rule, set it to that rule (for example, 30). If you are working with a specific month, you can set it to 28, 29, 30, or 31, but remember that doing so makes the conversion “month-specific” and may not apply elsewhere.</p>
 
-              <h3>What’s the difference between 365 and 365.2425 days per year?</h3>
-              <p>365 is the common “non-leap-year” assumption and is often used in simple models. 365.2425 is an average that better reflects the long-term length of a calendar year when leap years are accounted for. Neither is universally correct; the right choice depends on whether you need a simple convention or a more realistic average.</p>
+              <h3>What’s the difference between 365 and 365.24 days per year?</h3>
+              <p>365 is the common “non-leap-year” assumption and is often used in simple models. 365.24 is an average that better reflects the long-term length of a calendar year when leap years are accounted for. Neither is universally correct; the right choice depends on whether you need a simple convention or a more realistic average.</p>
 
               <h3>Can this calculator tell me the exact number of months between two dates?</h3>
               <p>No. That is a date problem, not a unit conversion problem. If you need exact calendar differences, you should calculate the difference between two dates (including calendar month boundaries) and then convert the resulting days or hours. This calculator focuses on converting a duration value between units under a stated assumption.</p>
