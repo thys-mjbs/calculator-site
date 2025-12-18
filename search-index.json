@@ -2497,5 +2497,124 @@
       "mortgage affordability pf",
       "mortgage affordability personal finance version calculator"
     ]
+  },
+  {
+    "title": "Cash Conversion Cycle Calculator",
+    "url": "/calculators/business-accounting/cash-conversion-cycle-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "cash conversion cycle calculator",
+      "cash conversion cycle",
+      "cash-conversion-cycle-calculator",
+      "cashconversioncyclecalculator",
+      "ccc calculator",
+      "ccc",
+      "cash cycle calculator",
+      "cash conversion cycle calc",
+      "cash conversion cycle tool",
+      "cash conversion cycle days"
+    ]
+  },
+  {
+    "title": "Operating Profit Calculator",
+    "url": "/calculators/business-accounting/operating-profit-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "operating profit calculator",
+      "operating profit",
+      "operating-profit-calculator",
+      "operatingprofitcalculator",
+      "operating profit calc",
+      "operating profit tool",
+      "op profit calculator",
+      "operating profit margin calculator",
+      "operating margin calculator",
+      "operating-profit"
+    ]
+  },
+  {
+    "title": "EBITDA Calculator",
+    "url": "/calculators/business-accounting/ebitda-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "ebitda calculator",
+      "ebitda",
+      "ebitda-calculator",
+      "ebitdacalculator",
+      "calculate ebitda",
+      "ebitda margin",
+      "ebitda calc",
+      "ebitda tool",
+      "ebitda formula",
+      "ebitda-calculator"
+    ]
+  },
+  {
+    "title": "Operating Leverage Calculator",
+    "url": "/calculators/business-accounting/operating-leverage-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "operating leverage calculator",
+      "operating leverage",
+      "operating-leverage-calculator",
+      "operatingleveragecalculator",
+      "dol calculator",
+      "degree of operating leverage calculator",
+      "degree of operating leverage",
+      "operating leverage dol",
+      "operating leverage calc",
+      "dol"
+    ]
+  },
+  {
+    "title": "Fixed vs Variable Cost Allocator",
+    "url": "/calculators/business-and-accounting/fixed-vs-variable-cost-allocator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "fixed vs variable cost allocator",
+      "fixed vs variable cost",
+      "fixed-vs-variable-cost-allocator",
+      "fixedvsvariablecostallocator",
+      "fixed variable cost allocator",
+      "fixed variable costs allocator",
+      "fixed vs variable allocator",
+      "fixed variable cost split",
+      "fixed vs variable cost split",
+      "fixed variable cost allocation"
+    ]
+  },
+  {
+    "title": "Unit Economics Calculator",
+    "url": "/calculators/business-accounting/unit-economics-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "unit economics calculator",
+      "unit economics",
+      "unit-economics-calculator",
+      "uniteconomicscalculator",
+      "unit economics calc",
+      "unit econ calculator",
+      "unit econ calc",
+      "unit economics tool",
+      "unit economics margin",
+      "unit economics break even"
+    ]
+  },
+  {
+    "title": "Customer Acquisition Cost (CAC) Calculator",
+    "url": "/calculators/business-accounting/customer-acquisition-cost-cac-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "customer acquisition cost (cac) calculator",
+      "customer acquisition cost (cac)",
+      "customer-acquisition-cost-cac-calculator",
+      "customeracquisitioncostcaccalculator",
+      "cac calculator",
+      "customer acquisition cost calculator",
+      "cac",
+      "customer acquisition cost",
+      "customer acquisition cost cac",
+      "customeracquisitioncost"
+    ]
   }  
 ]

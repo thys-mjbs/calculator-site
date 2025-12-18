@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Unit Economics Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate contribution margin, margin percentage, break-even units, and CAC payback using simple unit economics inputs.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/unit-economics-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Unit Economics Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate contribution margin, margin percentage, break-even units, and CAC payback using simple unit economics inputs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/unit-economics-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unit Economics Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate contribution margin, margin percentage, break-even units, and CAC payback using simple unit economics inputs.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Unit Economics Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/unit-economics-calculator/",
+      "description": "Calculate contribution margin per unit, margin percentage, break-even units (with fixed costs), and CAC payback (with optional customer acquisition cost inputs)."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business & Accounting</a> ›
+        <span>Unit Economics Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Unit Economics Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3L1xUVF" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Small Business Bookkeeping</div>
+                <p class="affiliate-copy">Learn hands-on bookkeeping techniques for small and growing businesses.</p>
+                <div class="affiliate-cta">Explore small business bookkeeping books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Unit economics from price, costs, and CAC</h2>
+
+              <p class="calculator-intro">Use this to estimate profit per unit, margin percentage, break-even units, and CAC payback. Only the first two fields are required.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="pricePerUnit">Selling price per unit</label>
+                <input type="text" id="pricePerUnit" inputmode="decimal" placeholder="e.g., 199.99">
+              </div>
+
+              <div class="form-group">
+                <label for="variableCostPerUnit">Variable cost per unit</label>
+                <input type="text" id="variableCostPerUnit" inputmode="decimal" placeholder="e.g., 79.50">
+              </div>
+
+              <div class="form-group">
+                <label for="fixedCosts">Fixed costs (per period, optional)</label>
+                <input type="text" id="fixedCosts" inputmode="decimal" placeholder="e.g., 25000">
+              </div>
+
+              <div class="form-group">
+                <label for="unitsInPeriod">Units sold in period (optional)</label>
+                <input type="text" id="unitsInPeriod" inputmode="numeric" placeholder="e.g., 450">
+              </div>
+
+              <div class="form-group">
+                <label for="cacPerCustomer">Customer acquisition cost (CAC) per customer (optional)</label>
+                <input type="text" id="cacPerCustomer" inputmode="decimal" placeholder="e.g., 120.00">
+              </div>
+
+              <div class="form-group">
+                <label for="unitsPerCustomer">Units per customer (optional)</label>
+                <input type="text" id="unitsPerCustomer" inputmode="decimal" placeholder="e.g., 1">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate unit economics</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48CQjBh" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Cash Flow Forecasting</div>
+                <p class="affiliate-copy">Forecast future cash needs to avoid liquidity issues.</p>
+                <div class="affiliate-cta">Browse cash flow forecasting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Run quick checks on profitability, pricing, costs, margins, and operating performance.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, plan monthly spending, and make clearer money decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Estimate growth, returns, and targets for saving plans and investment outcomes.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Unit economics calculator for contribution margin, break-even, and CAC payback</h2>
+
+              <p>Unit economics answers a simple question: when you sell one more unit, do you make money or lose money, and by how much? This matters whether you run a small service business, an ecommerce store, a subscription product, or a local delivery operation. If you do not know your profit per unit and your margin percentage, you cannot price confidently, scale safely, or spot problems early.</p>
+
+              <p>This unit economics calculator focuses on the numbers most people can estimate quickly. The required inputs are your selling price per unit and your variable cost per unit. From those, the calculator gives you your contribution margin per unit and your contribution margin percentage. These are the core unit economics outputs because they show how much each unit contributes toward covering fixed costs and eventually generating profit.</p>
+
+              <p>If you also enter fixed costs for a period (for example, monthly rent, salaries, software subscriptions, insurance, and overhead) the calculator estimates your break-even units for that period. If you also enter expected units sold in the same period, you will see an estimated operating profit or loss based on your unit margin. Finally, if you enter CAC (customer acquisition cost) and units per customer, the calculator estimates CAC payback in units and whether you make money per customer after acquisition cost.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li><strong>Units are consistent.</strong> Your price and variable cost are assumed to be per the same unit (per item, per hour, per delivery, or per subscription month).</li>
+                <li><strong>Variable cost is incremental.</strong> Include costs that scale with each unit sold (cost of goods, packaging, transaction fees, delivery fees, commissions). Do not include fixed overhead here.</li>
+                <li><strong>Fixed costs are period-based.</strong> If you enter fixed costs, your break-even result is for that same period. Mixing monthly fixed costs with weekly unit sales will distort results.</li>
+                <li><strong>CAC is per customer, not per unit.</strong> If you provide CAC, also provide units per customer so the payback calculation makes sense. If you do not know this, use a rough average and refine later.</li>
+                <li><strong>Results are directional.</strong> This is a planning calculator, not audited financial statements. Use it to sanity-check pricing, promotions, and growth plans.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is contribution margin and why does it matter?</h3>
+              <p>Contribution margin is selling price minus variable cost. It is the money each additional unit contributes toward fixed costs and profit. If contribution margin is small, you need high volume to cover overhead. If it is negative, selling more increases losses, which is a pricing or cost problem you should fix before scaling.</p>
+
+              <h3>What should I include as variable cost per unit?</h3>
+              <p>Include costs that happen because you sold one more unit. Examples include cost of goods sold, materials, fulfillment, packaging, delivery costs tied to the order, payment processing fees, marketplace fees, and per-unit labor paid only when work happens. Do not include costs that stay the same regardless of volume, like rent or fixed salaries.</p>
+
+              <h3>How does break-even units work?</h3>
+              <p>Break-even units is fixed costs divided by contribution margin per unit. It tells you how many units you must sell in the period before you start generating profit. If your contribution margin is low, break-even will be high. If your contribution margin is zero or negative, break-even is not meaningful and you should adjust price, reduce variable costs, or change the offer.</p>
+
+              <h3>What if I do not know my fixed costs or units sold yet?</h3>
+              <p>You can still use the calculator with just price and variable cost to get contribution margin and margin percentage. That alone is useful for comparing products, deciding on discounts, and checking whether a new offer can work. When you are ready, add rough fixed costs and a realistic unit estimate to get a more complete picture.</p>
+
+              <h3>How should I use CAC payback outputs?</h3>
+              <p>CAC payback in units estimates how many units you need to sell to a customer to recover your acquisition cost. If CAC is high and customers only buy once, unit economics may be negative even if the contribution margin looks healthy. If customers buy repeatedly, units per customer increases and payback improves. Use this to test marketing channels, pricing, and retention efforts.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4iTRq33" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Financial Reporting</div>
+                <p class="affiliate-copy">Improve accuracy and clarity in business financial reports.</p>
+                <div class="affiliate-cta">View financial reporting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
