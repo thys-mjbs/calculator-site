@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Debt Consolidation Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Compare your current debts to a consolidation loan. Estimate monthly payments, payoff time, total interest, and potential savings.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/loans-credit/debt-consolidation-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Debt Consolidation Calculator | SnapCalc">
+    <meta property="og:description" content="Compare your current debts to a consolidation loan. Estimate monthly payments, payoff time, total interest, and potential savings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/loans-credit/debt-consolidation-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Debt Consolidation Calculator | SnapCalc">
+    <meta name="twitter:description" content="Compare your current debts to a consolidation loan. Estimate monthly payments, payoff time, total interest, and potential savings.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Debt Consolidation Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/loans-credit/debt-consolidation-calculator/",
+      "description": "Compare your current debts to a consolidation loan. Estimate monthly payments, payoff time, total interest, and potential savings."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans & Credit</a> ›
+        <span>Debt Consolidation Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Debt Consolidation Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4pz0mNB" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Personal Loans</div>
+                <p class="affiliate-copy">Understand how personal loans work and how to plan repayments effectively.</p>
+                <div class="affiliate-cta">Explore personal loan books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Compare your current debt vs a consolidation loan</h2>
+
+              <p class="calculator-intro">
+                Enter your total balance, current average interest rate, and what you can pay per month. Then compare it to a consolidation loan rate and term to see payment changes, payoff time, and interest savings.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="totalDebt">Total current debt balance</label>
+                <input type="text" id="totalDebt" inputmode="decimal" placeholder="e.g., 85,000">
+              </div>
+
+              <div class="form-group">
+                <label for="currentApr">Current average APR (%)</label>
+                <input type="text" id="currentApr" inputmode="decimal" placeholder="e.g., 19.5">
+              </div>
+
+              <div class="form-group">
+                <label for="currentMonthlyPayment">Current monthly payment you can afford</label>
+                <input type="text" id="currentMonthlyPayment" inputmode="decimal" placeholder="e.g., 3,500">
+              </div>
+
+              <hr class="calc-divider">
+
+              <div class="form-group">
+                <label for="newApr">Consolidation loan APR (%)</label>
+                <input type="text" id="newApr" inputmode="decimal" placeholder="e.g., 14.0">
+              </div>
+
+              <div class="form-group">
+                <label for="termMonths">Consolidation loan term (months)</label>
+                <input type="text" id="termMonths" inputmode="numeric" placeholder="e.g., 60">
+              </div>
+
+              <div class="form-group">
+                <label for="originationFee">Origination / setup fee (optional)</label>
+                <input type="text" id="originationFee" inputmode="decimal" placeholder="e.g., 2,500">
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" id="feeAddedToLoan">
+                  Add fee to the loan balance (instead of paying upfront)
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48IGX5y" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Credit Reports</div>
+                <p class="affiliate-copy">Learn how to read and understand credit reports accurately.</p>
+                <div class="affiliate-cta">View credit report books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Estimate repayments, interest costs, payoff time, and key loan comparisons.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, cash flow, affordability, and day-to-day money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Work through profitability, costs, pricing, and business finance fundamentals.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Debt consolidation calculator for monthly payment and interest savings</h2>
+
+              <p>
+                Debt consolidation is usually a simple idea: replace multiple debts with one loan. The reason people search for a debt consolidation calculator is not the idea, it is the numbers. Will the new loan actually lower your monthly payment. Will it reduce your total interest. Will it help you pay off faster. And how much do fees change the deal.
+              </p>
+
+              <p>
+                This calculator compares two situations side by side. First, it estimates what happens if you keep your current debt as it is and pay a fixed monthly amount at your current average interest rate. Second, it estimates the monthly payment, total cost, and total interest for a consolidation loan at a different interest rate and a fixed term. You can optionally include an origination or setup fee and choose whether you pay it upfront or roll it into the new loan balance.
+              </p>
+
+              <p>
+                The most important outputs are practical. You will see the estimated payoff time under your current payment plan, the total interest you are likely to pay, and the total amount you will spend to become debt-free. You will also see the consolidation loan payment required for the term you choose, the total interest on that loan, and the overall cost once fees are included. The difference between these two totals shows whether consolidation is saving you money or simply rearranging the same cost into a different payment shape.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li><strong>Average interest rate:</strong> Your “current APR” is treated as one blended rate across your existing debts. If your debts have very different APRs, this becomes an approximation.</li>
+                <li><strong>Fixed monthly payment:</strong> The “current monthly payment” is treated as a steady amount you keep paying until the balance reaches zero. If your real payments vary, your results will vary too.</li>
+                <li><strong>Interest compounding:</strong> APR is converted into a monthly rate by dividing by 12. This matches typical amortized loan math, but real lenders may use different day count conventions.</li>
+                <li><strong>Fees:</strong> If you add the fee to the loan, the fee increases the balance and interest. If you pay it upfront, the fee is added to your total cost but does not earn interest.</li>
+                <li><strong>No extra borrowing:</strong> The comparison assumes you stop adding new debt. If you keep using paid-off credit lines, consolidation often fails regardless of the rate.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is debt consolidation always cheaper?</h3>
+              <p>
+                No. It is cheaper only if the effective cost of the new loan is lower than what you would pay under your current plan. A lower APR helps, but fees and a longer term can erase savings. If the new term is much longer, you can pay less per month while paying more total interest over time.
+              </p>
+
+              <h3>Why does the calculator ask for a “current monthly payment”?</h3>
+              <p>
+                Without a monthly payment, there is no clear payoff path. Different debts have minimum payments that change over time, and that becomes a separate model. Using a single monthly amount makes the comparison readable and lets you test realistic scenarios like “what I can actually afford each month.”
+              </p>
+
+              <h3>What if my current payment is too low to ever pay off the debt?</h3>
+              <p>
+                If your monthly payment is less than or equal to the monthly interest being added, the balance will not shrink. The calculator will warn you because payoff time becomes undefined. In real life, this is a red flag and usually means you need either a higher payment, a lower rate, or both.
+              </p>
+
+              <h3>Should I add the origination fee to the loan or pay it upfront?</h3>
+              <p>
+                Paying upfront keeps the loan balance lower and avoids paying interest on the fee, but it requires cash today. Adding the fee to the loan reduces upfront friction but increases interest cost. The difference is usually small on a small fee and short term, but it can be meaningful when fees are high or the term is long.
+              </p>
+
+              <h3>Does this calculator include credit score impact or lender approval?</h3>
+              <p>
+                No. This is a cost and repayment comparison tool. Approval, rate offers, and credit score effects are real considerations, but they depend on the lender and your profile. Use the calculator to set a target: the new APR and fee structure that would make consolidation worth it, then compare offers against that target.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-19</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3L0ibGk" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Debt Consolidation</div>
+                <p class="affiliate-copy">Learn how to combine debts to simplify payments and reduce interest.</p>
+                <div class="affiliate-cta">Browse debt consolidation books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
