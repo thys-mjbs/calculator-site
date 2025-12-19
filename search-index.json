@@ -1,2620 +1,2132 @@
 [
   {
-    "title": "Monthly Budget Calculator",
-    "url": "/calculators/personal-finance/monthly-budget-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "monthly budget calculator",
-      "monthly budget",
-      "budget monthly",
-      "budget calculator",
-      "personal finance monthly budget",
-      "monthly budgeting",
-      "monthly budget plan",
-      "monthly budget tool",
-      "monthly budget calc",
-      "mbc"
-    ]
-  },
-  {
-    "title": "Detailed Budget Category Allocator",
-    "url": "/calculators/personal-finance/detailed-budget-category-allocator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "detailed budget category allocator",
-      "budget category allocator",
-      "detailed budget allocator",
-      "budget allocator",
-      "personal finance category budget",
-      "detailed budget categories",
-      "budget categories allocator",
-      "detailed category alloc",
-      "budget category tool",
-      "dbca"
-    ]
-  },
-  {
-    "title": "Zero Based Budget Calculator",
-    "url": "/calculators/personal-finance/zero-based-budget-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "zero based budget calculator",
-      "zero based budget",
-      "budget zero based",
-      "zero based budgeting",
-      "budget calculator",
-      "personal finance zero based",
-      "zero budget planner",
-      "zero based budget tool",
-      "zero based budget calc",
-      "zbbc"
-    ]
-  },
-  {
-    "title": "50 30 20 Budget Rule Calculator",
-    "url": "/calculators/personal-finance/50-30-20-budget-rule-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "50 30 20 budget rule calculator",
-      "50 30 20 budget",
-      "503020 budget rule",
-      "50 30 20 rule calculator",
-      "budget rule calculator",
-      "personal finance 50 30 20",
-      "503020 budget plan",
-      "budget rule tool",
-      "503020 calculator",
-      "5020"
-    ]
-  },
-  {
-    "title": "Break-Even Point Calculator",
-    "url": "/calculators/business-accounting/break-even-point-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "break even point calculator",
-      "break even point",
-      "breakeven point calculator",
-      "break even analysis",
-      "business break even",
-      "breakeven revenue calculator",
-      "breakeven units calculator",
-      "break even tool",
-      "profit break even calculator",
-      "bep"
-    ]
-  },
-  {
-    "title": "Contribution Margin Calculator",
-    "url": "/calculators/business-accounting/contribution-margin-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "contribution margin calculator",
-      "contribution margin",
-      "margin contribution",
-      "business contribution margin",
-      "contribution ratio calculator",
-      "cm calculator",
-      "contribution percentage calculator",
-      "contribution margin tool",
-      "cm tool",
-      "contribution margin analysis"
-    ]
-  },
-  {
-    "title": "Gross Margin Calculator",
-    "url": "/calculators/business-accounting/gross-margin-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "gross margin calculator",
-      "gross margin",
-      "margin gross",
-      "business gross margin",
-      "gross profit margin calculator",
-      "gpm calculator",
-      "gross margin percentage",
-      "gross margin tool",
-      "gross margin analysis",
-      "gross margin ratio"
-    ]
-  },
-  {
-    "title": "Net Margin Calculator",
-    "url": "/calculators/business-accounting/net-margin-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "net margin calculator",
-      "net margin",
-      "net profit margin calculator",
-      "business net margin",
-      "npm calculator",
-      "net margin percentage",
-      "net profit ratio tool",
-      "net margin analysis",
-      "net margin tool",
-      "net margin ratio"
-    ]
-  },
-  {
-    "title": "Markup Calculator",
-    "url": "/calculators/business-accounting/markup-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "markup calculator",
-      "markup",
-      "business markup calculator",
-      "price markup calculator",
-      "markup percentage calculator",
-      "markup tool",
-      "markup formula calculator",
-      "markup analysis",
-      "price increase calculator",
-      "markup rate"
-    ]
-  },
-  {
-    "title": "Cost Of Goods Sold COGS Calculator",
-    "url": "/calculators/business-accounting/cost-of-goods-sold-cogs-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "cost of goods sold cogs calculator",
-      "cogs calculator",
-      "cost of goods sold",
-      "business cogs calculator",
-      "cogs analysis",
-      "cost of goods calculator",
-      "cogs tool",
-      "goods sold cost calculator",
-      "cogs percentage",
-      "cost goods sold"
-    ]
-  },
-  {
-    "title": "Inventory Turnover Calculator",
-    "url": "/calculators/business-accounting/inventory-turnover-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "inventory turnover calculator",
-      "inventory turnover",
-      "turnover inventory calculator",
-      "business inventory turnover",
-      "inventory ratio calculator",
-      "turnover ratio tool",
-      "inventory analysis",
-      "inventory efficiency calculator",
-      "turnover tool",
-      "inv turnover"
-    ]
-  },
-  {
-    "title": "Days Inventory Outstanding Calculator",
-    "url": "/calculators/business-accounting/days-inventory-outstanding-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "days inventory outstanding calculator",
-      "days inventory outstanding",
-      "dio calculator",
-      "inventory days calculator",
-      "business dio calculator",
-      "days inventory tool",
-      "inventory outstanding calculator",
-      "inventory days outstanding",
-      "days inventory analysis",
-      "inventory day ratio"
-    ]
-  },
-  {
-    "title": "Accounts Receivable Days Calculator",
-    "url": "/calculators/business-accounting/accounts-receivable-days-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "accounts receivable days calculator",
-      "accounts receivable days",
-      "ar days calculator",
-      "receivable days",
-      "days sales outstanding calculator",
-      "dso calculator",
-      "accounts receivable tool",
-      "receivables days calculator",
-      "ar day ratio",
-      "accounts receivable analysis"
-    ]
-  },
-  {
-    "title": "Mortgage Repayment Calculator",
-    "url": "/calculators/real-estate-property/mortgage-repayment-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "mortgage repayment calculator",
-      "mortgage repayment",
-      "home loan repayment calculator",
-      "mortgage payment calculator",
-      "monthly mortgage repayment",
-      "property mortgage repayment",
-      "mortgage calculator",
-      "home loan repayment",
-      "mortgage repayment tool",
-      "mrp"
-    ]
-  },
-  {
-    "title": "Mortgage Affordability Calculator",
-    "url": "/calculators/real-estate-property/mortgage-affordability-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "mortgage affordability calculator",
-      "mortgage affordability",
-      "home loan affordability calculator",
-      "how much mortgage can i afford",
-      "property affordability calculator",
-      "mortgage affordability tool",
-      "home loan affordability",
-      "mortgage budget calculator",
-      "affordable mortgage",
-      "mac"
-    ]
-  },
-  {
-    "title": "Rent Vs Buy Calculator",
-    "url": "/calculators/real-estate-property/rent-vs-buy-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "rent vs buy calculator",
-      "rent or buy calculator",
-      "rent versus buy",
-      "buy vs rent calculator",
-      "rent buy comparison",
-      "housing decision calculator",
-      "rent vs buy analysis",
-      "property rent vs buy",
-      "rent buy tool",
-      "rvb"
-    ]
-  },
-  {
-    "title": "BMI Calculator",
-    "url": "/calculators/health-fitness/bmi-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "bmi calculator",
-      "body mass index calculator",
-      "bmi",
-      "calculate bmi",
-      "body mass index",
-      "health bmi calculator",
-      "bmi tool",
-      "bmi measurement",
-      "bmi chart calculator",
-      "bmic"
-    ]
-  },
-  {
-    "title": "Body Fat Percentage Calculator Basic",
-    "url": "/calculators/health-fitness/body-fat-percentage-calculator-basic/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "body fat percentage calculator",
-      "body fat calculator",
-      "body fat percentage",
-      "fat percentage calculator",
-      "basic body fat calculator",
-      "body fat estimation",
-      "body fat tool",
-      "health body fat calculator",
-      "body fat measure",
-      "bfpc"
-    ]
-  },
-  {
-    "title": "Calorie Maintenance Calculator",
-    "url": "/calculators/health-fitness/calorie-maintenance-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "calorie maintenance calculator",
-      "maintenance calories calculator",
-      "daily calorie maintenance",
-      "calorie maintenance",
-      "calorie needs calculator",
-      "maintenance calorie tool",
-      "daily calorie calculator",
-      "calorie balance calculator",
-      "calorie maintenance estimate",
-      "cmc"
-    ]
-  },
-  {
-    "title": "Loan Payment Calculator",
-    "url": "/calculators/loans-credit/loan-payment-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "loan payment calculator",
-      "loan repayment calculator",
-      "monthly loan payment",
-      "loan installment calculator",
-      "credit loan payment",
-      "loan payment tool",
-      "loan payment estimate",
-      "loan calculator",
-      "loan cost calculator",
-      "lpc"
-    ]
-  },
-  {
-    "title": "Loan Affordability Calculator",
-    "url": "/calculators/loans-credit/loan-affordability-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "loan affordability calculator",
-      "loan affordability",
-      "how much loan can i afford",
-      "credit affordability calculator",
-      "loan budget calculator",
-      "affordable loan amount",
-      "loan affordability tool",
-      "loan affordability estimate",
-      "loan capacity calculator",
-      "lac"
-    ]
-  },
-  {
-    "title": "Loan Comparison Calculator",
-    "url": "/calculators/loans-credit/loan-comparison-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "loan comparison calculator",
-      "compare loans calculator",
-      "loan comparison",
-      "loan options comparison",
-      "credit comparison calculator",
-      "loan comparison tool",
-      "compare loan offers",
-      "loan comparison analysis",
-      "loan choice calculator",
-      "lcc"
-    ]
-  },
-  {
-    "title": "Compound Interest Calculator",
-    "url": "/calculators/savings-investments/compound-interest-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "compound interest calculator",
-      "compound interest",
-      "compound growth calculator",
-      "investment compound calculator",
-      "interest compounding calculator",
-      "compound interest tool",
-      "compound return calculator",
-      "compound growth tool",
-      "compound interest estimate",
-      "cic"
-    ]
-  },
-  {
-    "title": "Simple Interest Calculator",
-    "url": "/calculators/savings-investments/simple-interest-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "simple interest calculator",
-      "simple interest",
-      "simple interest calculation",
-      "interest calculator simple",
-      "investment simple interest",
-      "simple interest tool",
-      "simple interest estimate",
-      "interest calculation tool",
-      "simple interest formula",
-      "sic"
-    ]
-  },
-  {
-    "title": "Investment Growth Over Time Calculator",
-    "url": "/calculators/savings-investments/investment-growth-over-time-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "investment growth over time calculator",
-      "investment growth calculator",
-      "investment growth over time",
-      "portfolio growth calculator",
-      "long term investment growth",
-      "investment return over time",
-      "investment growth tool",
-      "future investment value",
-      "investment timeline calculator",
-      "igot"
-    ]
-  },
-  {
-    "title": "Percentage Calculator",
-    "url": "/calculators/math-general-calculators/percentage-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "percentage calculator",
-      "calculate percentage",
-      "percent calculator",
-      "percentage calculation",
-      "percentage tool",
-      "percent math calculator",
-      "percentage finder",
-      "percentage formula calculator",
-      "percent value calculator",
-      "pc"
-    ]
-  },
-  {
-    "title": "Percentage Increase Calculator",
-    "url": "/calculators/math-general-calculators/percentage-increase-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "percentage increase calculator",
-      "percent increase calculator",
-      "percentage growth calculator",
-      "calculate percentage increase",
-      "increase percentage",
-      "percentage rise calculator",
-      "growth percentage calculator",
-      "percentage change increase",
-      "percent growth calculator",
-      "pic"
-    ]
-  },
-  {
-    "title": "Percentage Decrease Calculator",
-    "url": "/calculators/math-general-calculators/percentage-decrease-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "percentage decrease calculator",
-      "percent decrease calculator",
-      "percentage reduction calculator",
-      "calculate percentage decrease",
-      "decrease percentage",
-      "percentage drop calculator",
-      "reduction percentage calculator",
-      "percentage change decrease",
-      "percent reduction calculator",
-      "pdc"
-    ]
-  },
-  {
-    "title": "Time Duration Calculator",
-    "url": "/calculators/time-date-scheduling/time-duration-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "time duration calculator",
-      "calculate time duration",
-      "time difference calculator",
-      "duration between times",
-      "time span calculator",
-      "elapsed time calculator",
-      "time length calculator",
-      "time duration tool",
-      "time interval calculator",
-      "tdc"
-    ]
-  },
-  {
-    "title": "Time Addition And Subtraction Calculator",
-    "url": "/calculators/time-date-scheduling/time-addition-and-subtraction-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "time addition calculator",
-      "time subtraction calculator",
-      "add subtract time",
-      "time math calculator",
-      "time addition and subtraction",
-      "calculate time plus minus",
-      "time arithmetic calculator",
-      "time calculation tool",
-      "time offset calculator",
-      "tasc"
-    ]
-  },
-  {
-    "title": "Hours Worked Calculator",
-    "url": "/calculators/time-date-scheduling/hours-worked-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "hours worked calculator",
-      "work hours calculator",
-      "calculate hours worked",
-      "timesheet calculator",
-      "working hours calculator",
-      "pay hours calculator",
-      "hours calculation tool",
-      "shift hours calculator",
-      "hours tracker calculator",
-      "hwc"
-    ]
-  },
-  {
-    "title": "Ohms Law Calculator",
-    "url": "/calculators/engineering-technical/ohms-law-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "ohms law calculator",
-      "ohm law calculator",
-      "voltage current resistance calculator",
-      "ohms law formula",
-      "electrical ohms calculator",
-      "ohm law tool",
-      "electrical calculation calculator",
-      "resistance voltage current",
-      "ohms law equation",
-      "olc"
-    ]
-  },
-  {
-    "title": "Wattage Calculator",
-    "url": "/calculators/engineering-technical/wattage-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "wattage calculator",
-      "calculate wattage",
-      "power watt calculator",
-      "electrical watt calculator",
-      "power consumption calculator",
-      "watts calculator",
-      "wattage estimation tool",
-      "power calculation calculator",
-      "watt calculation",
-      "wc"
-    ]
-  },
-  {
-    "title": "Voltage Drop Calculator",
-    "url": "/calculators/engineering-technical/voltage-drop-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "voltage drop calculator",
-      "calculate voltage drop",
-      "electrical voltage drop",
-      "wire voltage drop calculator",
-      "cable voltage drop",
-      "voltage loss calculator",
-      "voltage drop tool",
-      "electrical wire calculator",
-      "voltage reduction calculator",
-      "vdc"
-    ]
-  },
-  {
-    "title": "Concrete Volume Calculator",
-    "url": "/calculators/construction-materials/concrete-volume-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "concrete volume calculator",
-      "calculate concrete volume",
-      "concrete quantity calculator",
-      "concrete slab calculator",
-      "concrete volume estimation",
-      "cement volume calculator",
-      "concrete measurement calculator",
-      "concrete volume tool",
-      "concrete amount calculator",
-      "cvc"
-    ]
-  },
-  {
-    "title": "Concrete Bag Calculator",
-    "url": "/calculators/construction-materials/concrete-bag-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "concrete bag calculator",
-      "concrete bags calculator",
-      "cement bag calculator",
-      "bags of concrete needed",
-      "premix concrete calculator",
-      "concrete bag estimation",
-      "cement bags calculator",
-      "concrete quantity bags",
-      "concrete mix bag calculator",
-      "cbc"
-    ]
-  },
-  {
-    "title": "Cement Sand Stone Mix Ratio Calculator",
-    "url": "/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "cement sand stone mix calculator",
-      "concrete mix ratio calculator",
-      "cement mix ratio calculator",
-      "sand cement stone ratio",
-      "concrete ratio calculator",
-      "mix ratio calculator",
-      "cement sand mix calculator",
-      "construction mix ratio",
-      "cement proportion calculator",
-      "cms"
-    ]
-  },
-  {
-    "title": "Length Converter",
-    "url": "/calculators/conversions-units-currencies/length-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "length converter",
-      "convert length units",
-      "distance converter",
-      "length unit converter",
-      "meters feet converter",
-      "length conversion calculator",
-      "measurement length converter",
-      "distance unit converter",
-      "length conversion tool",
-      "lc"
-    ]
-  },
-  {
-    "title": "Weight Mass Converter",
-    "url": "/calculators/conversions-units-currencies/weightmass-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "weight converter",
-      "mass converter",
-      "weight mass converter",
-      "kg lb converter",
-      "weight unit converter",
-      "mass conversion calculator",
-      "weight conversion tool",
-      "mass unit converter",
-      "weight measurement converter",
-      "wmc"
-    ]
-  },
-  {
-    "title": "Volume Converter",
-    "url": "/calculators/conversions-units-currencies/volume-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "volume converter",
-      "convert volume units",
-      "volume unit converter",
-      "liters gallons converter",
-      "volume conversion calculator",
-      "volume measurement converter",
-      "capacity converter",
-      "volume conversion tool",
-      "liquid volume converter",
-      "vc"
-    ]
-  },
-  {
-    "title": "Grade Percentage Calculator",
-    "url": "/calculators/education-exams/grade-percentage-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "grade percentage calculator",
-      "calculate grade percentage",
-      "exam percentage calculator",
-      "score percentage calculator",
-      "grade calculator",
-      "percentage grade tool",
-      "marks percentage calculator",
-      "exam score calculator",
-      "grade calculation tool",
-      "gpc"
-    ]
-  },
-  {
-    "title": "Weighted Grade Calculator",
-    "url": "/calculators/education-exams/weighted-grade-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "weighted grade calculator",
-      "weighted average grade",
-      "grade weighting calculator",
-      "weighted marks calculator",
-      "weighted score calculator",
-      "course grade calculator",
-      "weighted grading tool",
-      "final grade calculator",
-      "grade weight calculator",
-      "wgc"
-    ]
-  },
-  {
-    "title": "Final Exam Score Needed Calculator",
-    "url": "/calculators/education-exams/final-exam-score-needed-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "final exam score needed calculator",
-      "exam score needed",
-      "what score do i need calculator",
-      "final exam grade calculator",
-      "required exam score",
-      "exam target calculator",
-      "final exam requirement",
-      "grade needed calculator",
-      "exam score estimator",
-      "fes"
-    ]
-  },
-  {
-    "title": "Fuel Cost Per Trip Calculator",
-    "url": "/calculators/travel-transport/fuel-cost-per-trip-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "fuel cost per trip calculator",
-      "trip fuel cost calculator",
-      "fuel trip cost",
-      "driving fuel cost calculator",
-      "travel fuel cost calculator",
-      "fuel expense per trip",
-      "trip cost fuel tool",
-      "fuel usage trip calculator",
-      "fuel trip estimator",
-      "fct"
-    ]
-  },
-  {
-    "title": "Fuel Consumption Calculator",
-    "url": "/calculators/travel-transport/fuel-consumption-calculator-kml-l100km-mpg/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "fuel consumption calculator",
-      "fuel efficiency calculator",
-      "fuel economy calculator",
-      "km l mpg calculator",
-      "fuel usage calculator",
-      "vehicle fuel consumption",
-      "fuel efficiency tool",
-      "car fuel calculator",
-      "fuel economy estimator",
-      "fcc"
-    ]
-  },
-  {
-    "title": "Annual Fuel Cost Calculator",
-    "url": "/calculators/travel-transport/annual-fuel-cost-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "annual fuel cost calculator",
-      "yearly fuel cost calculator",
-      "fuel cost per year",
-      "annual fuel expense",
-      "vehicle fuel cost yearly",
-      "fuel budget calculator",
-      "annual fuel estimate",
-      "fuel spending calculator",
-      "yearly fuel usage",
-      "afc"
-    ]
-  },
-  {
-    "title": "Tip Calculator",
-    "url": "/calculators/everyday-life-tools/tip-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "tip calculator",
-      "calculate tip",
-      "restaurant tip calculator",
-      "gratuity calculator",
-      "service tip calculator",
-      "tip amount calculator",
-      "bill tip calculator",
-      "tip percentage calculator",
-      "tip split calculator",
-      "tc"
-    ]
-  },
-  {
-    "title": "Split Bill Calculator",
-    "url": "/calculators/everyday-life-tools/split-bill-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "split bill calculator",
-      "bill splitting calculator",
-      "split expenses calculator",
-      "shared bill calculator",
-      "divide bill calculator",
-      "group bill split",
-      "bill sharing tool",
-      "expense split calculator",
-      "split payment calculator",
-      "sbc"
-    ]
-  },
-  {
-    "title": "Discount Calculator",
-    "url": "/calculators/everyday-life-tools/discount-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "discount calculator",
-      "price discount calculator",
-      "calculate discount",
-      "sale discount calculator",
-      "discount percentage calculator",
-      "price reduction calculator",
-      "discount amount calculator",
-      "savings calculator",
-      "discount tool",
-      "dc"
-    ]
-  },
-  {
-    "title": "Paycheck-to-Paycheck Survival Calculator",
-    "url": "/calculators/personal-finance/paycheck-to-paycheck-survival-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "paycheck-to-paycheck survival calculator",
-      "paycheck-to-paycheck survival",
-      "paycheck-to-paycheck-survival-calculator",
-      "paychecktopaychecksurvivalcalculator",
-      "paycheck survival calculator",
-      "paycheck survival",
-      "paycheck to paycheck survival",
-      "paycheck to paycheck calculator",
-      "p2p survival calculator",
-      "p2p survival"
-    ]
-  },
-  {
-    "title": "Paycheck Breakdown Calculator",
-    "url": "/calculators/personal-finance/paycheck-breakdown-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "paycheck breakdown calculator",
-      "paycheck breakdown",
-      "paycheck-breakdown-calculator",
-      "paycheckbreakdowncalculator",
-      "paycheck calc",
-      "paycheck breakdown calc",
-      "paycheck breakdown tool",
-      "paycheck breakdown estimator",
-      "paycheck-breakdown",
-      "paycheckbreakdown"
-    ]
-  },
-  {
-    "title": "Take-Home Pay Calculator",
-    "url": "/calculators/personal-finance/take-home-pay-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "take-home pay calculator",
-      "take-home pay",
-      "take-home-pay-calculator",
-      "takehomepaycalculator",
-      "take home pay calc",
-      "take home pay",
-      "takehome pay",
-      "take home pay estimator",
-      "takehome pay estimator",
-      "thpc"
-    ]
-  },
-  {
-    "title": "Income Tax Estimator",
-    "url": "/calculators/personal-finance/income-tax-estimator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "income tax estimator",
-      "income tax estimator",
-      "income-tax-estimator",
-      "incometaxestimator",
-      "tax estimator",
-      "income tax",
-      "tax estimate",
-      "income tax estimate",
-      "income tax calc",
-      "incometaxest"
-    ]
-  },
-  {
-    "title": "Hourly Wage to Salary Converter",
-    "url": "/calculators/personal-finance/hourly-wage-to-salary-converter/",
-    "category": "Personal Finance",
-    "aliases": [
-      "hourly wage to salary converter",
-      "hourly wage to salary",
-      "hourly-wage-to-salary-converter",
-      "hourlywagetosalaryconverter",
-      "hourly to salary converter",
-      "hourly to salary",
-      "hourly salary converter",
-      "wage to salary converter",
-      "hourly wage salary",
-      "hourly salary"
-    ]
-  },
-  {
-    "title": "Real Hourly Wage Calculator",
-    "url": "/calculators/personal-finance/real-hourly-wage-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "real hourly wage calculator",
-      "real hourly wage",
-      "real-hourly-wage-calculator",
-      "realhourlywagecalculator",
-      "real hourly wage calc",
-      "real wage calculator",
-      "hourly wage calculator",
-      "true hourly wage calculator",
-      "real hourly pay calculator",
-      "real hourly wage tool"
-    ]
-  },
-  {
-    "title": "Accounts Payable Days Calculator",
+    "title": "Accounts Payable Days Calculator | SnapCalc",
     "url": "/calculators/business-accounting/accounts-payable-days-calculator/",
     "category": "Business & Accounting",
     "aliases": [
+      "accounts payable days calculator | snapcalc",
+      "accounts payable days calculator snapcalc",
       "accounts payable days calculator",
-      "accounts payable days",
-      "accounts-payable-days-calculator",
-      "accountspayabledayscalculator",
-      "ap days calculator",
-      "ap days",
-      "accounts payable days calc",
-      "accounts payable days tool",
-      "accounts payable days calcualtor",
-      "accounts payable days snapcalc"
+      "business & accounting accounts payable days calculator snapcalc",
+      "business & accounting accounts payable days calculator",
+      "accounts payable days snapcalc",
+      "apdcs"
     ]
   },
   {
-    "title": "Personal Loan EMI Calculator",
-    "url": "/calculators/loans-credit/personal-loan-emi-calculator/",
-    "category": "Loans & Credit",
+    "title": "Accounts Receivable Days Calculator | SnapCalc",
+    "url": "/calculators/business-and-accounting/accounts-receivable-days-calculator/",
+    "category": "Business & Accounting",
     "aliases": [
-      "personal loan emi calculator",
-      "personal loan emi",
-      "personal-loan-emi-calculator",
-      "personalloanemicalculator",
-      "loan emi calculator",
-      "loan emi",
-      "emi calculator",
-      "emi calc",
-      "personal loan emi calc",
-      "personal loan emi tool"
+      "accounts receivable days calculator | snapcalc",
+      "accounts receivable days calculator snapcalc",
+      "accounts receivable days calculator",
+      "business & accounting accounts receivable days calculator snapcalc",
+      "business & accounting accounts receivable days calculator",
+      "accounts receivable days snapcalc",
+      "ardcs"
     ]
   },
   {
-    "title": "Simple Interest Loan Calculator",
-    "url": "/calculators/loans-credit/simple-interest-loan-calculator/",
-    "category": "Loans & Credit",
+    "title": "Break-Even Point Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/break-even-point-calculator/",
+    "category": "Business & Accounting",
     "aliases": [
-      "simple interest loan calculator",
-      "simple interest loan",
-      "simple-interest-loan-calculator",
-      "simpleinterestloancalculator",
-      "simple interest loan calc",
-      "simple interest loan tool",
-      "simple interest loan estimator",
-      "simple interest loan formula",
-      "simple interest loan repayment",
-      "simple interest loan interest"
+      "break-even point calculator | snapcalc",
+      "break even point calculator snapcalc",
+      "break even point calculator",
+      "business & accounting break even point calculator snapcalc",
+      "business & accounting break even point calculator",
+      "break even point snapcalc",
+      "bepcs"
     ]
   },
   {
-    "title": "Compound Interest Loan Calculator",
-    "url": "/calculators/loans-credit/compound-interest-loan-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "compound interest loan calculator",
-      "compound interest loan",
-      "compound-interest-loan-calculator",
-      "compoundinterestloancalculator",
-      "compound interest loan calc",
-      "compound loan calculator",
-      "compound loan calc",
-      "loan compound interest calculator",
-      "loan compound interest",
-      "compound interest loan tool"
-    ]
-  },
-  {
-    "title": "Interest-Only Loan Calculator",
-    "url": "/calculators/loans-credit/interest-only-loan-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "interest-only loan calculator",
-      "interest-only loan",
-      "interest-only-loan-calculator",
-      "interestonlyloancalculator",
-      "interest only loan",
-      "interest only payment",
-      "interest-only payment",
-      "io loan calculator",
-      "interest only calc",
-      "io loan"
-    ]
-  },
-  {
-    "title": "Balloon Payment Loan Calculator",
-    "url": "/calculators/loans-credit/balloon-payment-loan-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "balloon payment loan calculator",
-      "balloon payment loan",
-      "balloon-payment-loan-calculator",
-      "balloonpaymentloancalculator",
-      "balloon loan calculator",
-      "balloon loan",
-      "balloon payment calc",
-      "balloon loan calc",
-      "balloon payment estimator",
-      "balloon loan estimator"
-    ]
-  },
-  {
-    "title": "Amortization Schedule Calculator",
-    "url": "/calculators/loans-credit/amortization-schedule-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "amortization schedule calculator",
-      "amortization schedule",
-      "amortization-schedule-calculator",
-      "amortizationschedulecalculator",
-      "amortizationschedule",
-      "amort schedule calculator",
-      "amort schedule",
-      "amort calc",
-      "amortization calc",
-      "amortization-schedule"
-    ]
-  },
-  {
-    "title": "Extra Payment Impact Calculator",
-    "url": "/calculators/loans-credit/extra-payment-impact-calculator/",
-    "category": "Loans & Credit",
-    "aliases": [
-      "extra payment impact calculator",
-      "extra payment impact",
-      "extra-payment-impact-calculator",
-      "extrapaymentimpactcalculator",
-      "extra payment calculator",
-      "extra-payment-calculator",
-      "extrapaymentcalculator",
-      "extra payment impact calc",
-      "extra payment calc",
-      "extra payment"
-    ]
-  },
-  {
-    "title": "Monthly Investment Contribution Calculator",
-    "url": "/calculators/savings-investments/monthly-investment-contribution-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "monthly investment contribution calculator",
-      "monthly investment contribution",
-      "monthly-investment-contribution-calculator",
-      "monthlyinvestmentcontributioncalculator",
-      "monthly contribution calculator",
-      "monthly contribution",
-      "investment contribution calculator",
-      "investment contribution",
-      "monthly invest contribution",
-      "monthly investment contribution calc"
-    ]
-  },
-  {
-    "title": "Lump Sum vs Monthly Investment Comparison",
-    "url": "/calculators/savings-investments/lump-sum-vs-monthly-investment-comparison/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "lump sum vs monthly investment comparison",
-      "lump sum vs monthly investment",
-      "lump-sum-vs-monthly-investment-comparison",
-      "lumpsumvsmonthlyinvestmentcomparison",
-      "lump sum vs monthly",
-      "lump sum vs monthly investing",
-      "lump sum vs monthly contributions",
-      "lump sum vs monthly investment",
-      "monthly vs lump sum investment",
-      "lump sum monthly comparison"
-    ]
-  },
-  {
-    "title": "Investment Return Required Calculator",
-    "url": "/calculators/savings-investments/investment-return-required-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "investment return required calculator",
-      "investment return required",
-      "investment-return-required-calculator",
-      "investmentreturnrequiredcalculator",
-      "required return calculator",
-      "required return",
-      "return required calculator",
-      "investment return required calc",
-      "required investment return",
-      "investment return required tool"
-    ]
-  },
-  {
-    "title": "Future Value Calculator",
-    "url": "/calculators/savings-investments/future-value-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "future value calculator",
-      "future value",
-      "future-value-calculator",
-      "futurevaluecalculator",
-      "future value calc",
-      "future value cal",
-      "fv calculator",
-      "fv calc",
-      "future value investment calculator",
-      "future value savings calculator"
-    ]
-  },
-  {
-    "title": "Present Value Calculator",
-    "url": "/calculators/savings-investments/present-value-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "present value calculator",
-      "present value",
-      "present-value-calculator",
-      "presentvaluecalculator",
-      "pv calculator",
-      "pv",
-      "present value calc",
-      "present value formula",
-      "calculate present value",
-      "present value tool"
-    ]
-  },
-  {
-    "title": "Retirement Savings Growth Calculator",
-    "url": "/calculators/savings-investments/retirement-savings-growth-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "retirement savings growth calculator",
-      "retirement savings growth",
-      "retirement-savings-growth-calculator",
-      "retirementsavingsgrowthcalculator",
-      "retirement growth calculator",
-      "retirement savings calculator",
-      "retirement growth",
-      "retirement savings growth",
-      "savings growth calculator",
-      "retirement savings projection"
-    ]
-  },
-  {
-    "title": "Retirement Contribution Impact Calculator",
-    "url": "/calculators/savings-investments/retirement-contribution-impact-calculator/",
-    "category": "Savings & Investments",
-    "aliases": [
-      "retirement contribution impact calculator",
-      "retirement contribution impact",
-      "retirement-contribution-impact-calculator",
-      "retirementcontributionimpactcalculator",
-      "retirement contribution impact calc",
-      "retirement contribution calculator",
-      "retirement contribution impact tool",
-      "retirement contribution impact estimator",
-      "retirement contribution impact projection",
-      "retirement contribution impact savings"
-    ]
-  },
-  {
-    "title": "Home Loan Comparison Calculator",
-    "url": "/calculators/real-estate-property/home-loan-comparison-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "home loan comparison calculator",
-      "home loan comparison",
-      "home-loan-comparison-calculator",
-      "homeloancomparisoncalculator",
-      "home loan compare",
-      "compare home loan",
-      "home loan compare calculator",
-      "compare home loans",
-      "loan comparison calculator",
-      "home loan calculator comparison"
-    ]
-  },
-  {
-    "title": "Refinance Savings Calculator",
-    "url": "/calculators/real-estate-property/refinance-savings-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "refinance savings calculator",
-      "refinance savings",
-      "refinance-savings-calculator",
-      "refinancesavingscalculator",
-      "refinance calculator savings",
-      "mortgage refinance savings calculator",
-      "refi savings calculator",
-      "refinance break even calculator",
-      "mortgage refi savings",
-      "refinance savings tool"
-    ]
-  },
-  {
-    "title": "Refinance Break-Even Calculator",
-    "url": "/calculators/real-estate-property/refinance-break-even-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "refinance break-even calculator",
-      "refinance break-even",
-      "refinance-break-even-calculator",
-      "refinancebreakevencalculator",
-      "refi break even",
-      "refi breakeven",
-      "refinance breakeven",
-      "break even refinance",
-      "break-even refinance calculator",
-      "refinance breakeven calculator"
-    ]
-  },
-  {
-    "title": "Interest-Only Mortgage Calculator",
-    "url": "/calculators/real-estate-property/interest-only-mortgage-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "interest-only mortgage calculator",
-      "interest-only mortgage",
-      "interest-only-mortgage-calculator",
-      "interestonlymortgagecalculator",
-      "interest-only payment",
-      "interest only mortgage",
-      "interest only payment",
-      "io mortgage calculator",
-      "interest only loan calculator",
-      "interest-only loan calculator"
-    ]
-  },
-  {
-    "title": "Balloon Mortgage Calculator",
-    "url": "/calculators/real-estate-property/balloon-mortgage-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "balloon mortgage calculator",
-      "balloon mortgage",
-      "balloon-mortgage-calculator",
-      "balloonmortgagecalculator",
-      "balloon payment mortgage calculator",
-      "balloon payment mortgage",
-      "balloon mortgage payment",
-      "mortgage balloon calculator",
-      "balloon loan calculator",
-      "balloon mortgage calc"
-    ]
-  },
-  {
-    "title": "Adjustable-Rate Mortgage (ARM) Calculator",
-    "url": "/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "adjustable-rate mortgage (arm) calculator",
-      "adjustable-rate mortgage (arm)",
-      "adjustable-rate-mortgage-arm-calculator",
-      "adjustableratemortgagearmcalculator",
-      "arm calculator",
-      "arm mortgage calculator",
-      "adjustable rate mortgage calculator",
-      "adjustable rate mortgage arm calculator",
-      "adjustable rate mortgage (arm)",
-      "arm mortgage"
-    ]
-  },
-  {
-    "title": "Amortization Schedule Calculator",
-    "url": "/calculators/real-estate-property/amortization-schedule-calculator/",
-    "category": "Real Estate & Property",
-    "aliases": [
-      "amortization schedule calculator",
-      "amortization schedule",
-      "amortization-schedule-calculator",
-      "amortizationschedulecalculator",
-      "loan amortization schedule",
-      "mortgage amortization schedule",
-      "amortization table",
-      "amortization schedule calc",
-      "amortization calculator",
-      "amortization schedule tool"
-    ]
-  },
-  {
-    "title": "Calorie Deficit Calculator",
-    "url": "/calculators/health-fitness/calorie-deficit-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "calorie deficit calculator",
-      "calorie deficit",
-      "calorie-deficit-calculator",
-      "caloriedeficitcalculator",
-      "calorie deficit calc",
-      "calorie deficit tool",
-      "deficit calculator",
-      "calorie deficit estimate",
-      "calorie-deficit",
-      "caloriedeficit"
-    ]
-  },
-  {
-    "title": "Calorie Surplus Calculator",
-    "url": "/calculators/health-fitness/calorie-surplus-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "calorie surplus calculator",
-      "calorie surplus",
-      "calorie-surplus-calculator",
-      "caloriesurpluscalculator",
-      "surplus calories calculator",
-      "daily calorie surplus",
-      "calorie surplus calc",
-      "surplus calculator",
-      "calorie surplus estimate",
-      "calorie surplus target"
-    ]
-  },
-  {
-    "title": "Protein Intake Calculator",
-    "url": "/calculators/health-fitness/protein-intake-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "protein intake calculator",
-      "protein intake",
-      "protein-intake-calculator",
-      "proteinintakecalculator",
-      "protein calculator",
-      "protein intake calc",
-      "protein target calculator",
-      "daily protein calculator",
-      "protein intake target",
-      "protein intake tool"
-    ]
-  },
-  {
-    "title": "Macro Split Calculator",
-    "url": "/calculators/health-fitness/macro-split-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "macro split calculator",
-      "macro split",
-      "macro-split-calculator",
-      "macrosplitcalculator",
-      "macro split calc",
-      "macro calculator",
-      "macro split tool",
-      "macro split macros",
-      "macro split calories",
-      "macro split grams"
-    ]
-  },
-  {
-    "title": "Daily Water Intake Calculator",
-    "url": "/calculators/health-fitness/daily-water-intake-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "daily water intake calculator",
-      "daily water intake",
-      "daily-water-intake-calculator",
-      "dailywaterintakecalculator",
-      "water intake calculator",
-      "water intake",
-      "daily hydration calculator",
-      "hydration calculator",
-      "daily water calculator",
-      "water intake calc"
-    ]
-  },
-  {
-    "title": "Ideal Body Weight Calculator",
-    "url": "/calculators/health-fitness/ideal-body-weight-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "ideal body weight calculator",
-      "ideal body weight",
-      "ideal-body-weight-calculator",
-      "idealbodyweightcalculator",
-      "ibw calculator",
-      "ibw",
-      "ideal weight calculator",
-      "ideal weight",
-      "ideal bodyweight",
-      "ideal-body-weight"
-    ]
-  },
-  {
-    "title": "Basal Metabolic Rate (BMR) Calculator",
-    "url": "/calculators/health-fitness/basal-metabolic-rate-bmr-calculator/",
-    "category": "Health & Fitness",
-    "aliases": [
-      "basal metabolic rate (bmr) calculator",
-      "basal metabolic rate (bmr)",
-      "basal-metabolic-rate-bmr-calculator",
-      "basalmetabolicratebmrcalculator",
-      "bmr calculator",
-      "bmr",
-      "basal metabolic rate calculator",
-      "basal metabolic rate",
-      "bmr calc",
-      "bmr calculation"
-    ]
-  },
-  {
-    "title": "Percentage Change Calculator",
-    "url": "/calculators/math-general-calculators/percentage-change-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "percentage change calculator",
-      "percentage change",
-      "percentage-change-calculator",
-      "percentagechangecalculator",
-      "percent change",
-      "pct change",
-      "% change",
-      "percentage increase decrease",
-      "percentage change calc",
-      "percent change calculator"
-    ]
-  },
-  {
-    "title": "Ratio Calculator",
-    "url": "/calculators/math-and-general-calculators/ratio-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "ratio calculator",
-      "ratio",
-      "ratio-calculator",
-      "ratiocalculator",
-      "a b ratio calculator",
-      "a:b ratio calculator",
-      "simplify ratio calculator",
-      "ratio simplifier",
-      "scale ratio calculator",
-      "ratio scale"
-    ]
-  },
-  {
-    "title": "Proportion Calculator",
-    "url": "/calculators/math-general-calculators/proportion-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "proportion calculator",
-      "proportion",
-      "proportion-calculator",
-      "proportioncalculator",
-      "proportion calc",
-      "proportioncal",
-      "proportion solve",
-      "proportion solver",
-      "a/b=c/d",
-      "a b c d proportion"
-    ]
-  },
-  {
-    "title": "Fraction to Decimal Calculator",
-    "url": "/calculators/math-general-calculators/fraction-to-decimal-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "fraction to decimal calculator",
-      "fraction to decimal",
-      "fraction-to-decimal-calculator",
-      "fractiontodecimalcalculator",
-      "fraction to decimal calc",
-      "frac to decimal",
-      "fraction decimal",
-      "fraction to decimal converter",
-      "fraction to decimal conversion",
-      "fraction-to-decimal"
-    ]
-  },
-  {
-    "title": "Decimal to Fraction Calculator",
-    "url": "/calculators/math-general-calculators/decimal-to-fraction-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "decimal to fraction calculator",
-      "decimal to fraction",
-      "decimal-to-fraction-calculator",
-      "decimaltorfractioncalculator",
-      "decimal to fraction calc",
-      "decimal fraction calculator",
-      "decimal to fraction converter",
-      "decimal to fraction tool",
-      "decimal to fraction conversion",
-      "decimal-to-fraction"
-    ]
-  },
-  {
-    "title": "Fraction Simplifier",
-    "url": "/calculators/math-general-calculators/fraction-simplifier/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "fraction simplifier",
-      "fraction simplifier calculator",
-      "fraction-simplifier",
-      "fractionsimplifier",
-      "simplify fraction",
-      "simplify fractions",
-      "simplifying fractions",
-      "simplify a fraction",
-      "reduce fraction",
-      "reduce fractions"
-    ]
-  },
-  {
-    "title": "Greatest Common Divisor Calculator",
-    "url": "/calculators/math-general-calculators/greatest-common-divisor-calculator/",
-    "category": "Math & General Calculators",
-    "aliases": [
-      "greatest common divisor calculator",
-      "greatest common divisor",
-      "greatest-common-divisor-calculator",
-      "greatestcommondivisorcalculator",
-      "gcd calculator",
-      "gcd",
-      "gcd calc",
-      "gcf calculator",
-      "greatest common factor calculator",
-      "greatest-common-divisor"
-    ]
-  },
-  {
-    "title": "Timesheet Calculator",
-    "url": "/calculators/time-date-scheduling/timesheet-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "timesheet calculator",
-      "timesheet",
-      "timesheet-calculator",
-      "timesheetcalculator",
-      "timesheet calc",
-      "timesheetcalc",
-      "time sheet calculator",
-      "time sheet",
-      "timesheet hours",
-      "work hours timesheet"
-    ]
-  },
-  {
-    "title": "Overtime Hours Calculator",
-    "url": "/calculators/time-date-scheduling/overtime-hours-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "overtime hours calculator",
-      "overtime hours",
-      "overtime-hours-calculator",
-      "overtimehourscalculator",
-      "overtime calculator",
-      "ot hours calculator",
-      "overtime pay calculator",
-      "calculate overtime hours",
-      "overtime hours calc",
-      "overtimehours"
-    ]
-  },
-  {
-    "title": "Weekly Work Hours Calculator",
-    "url": "/calculators/time-date-scheduling/weekly-work-hours-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "weekly work hours calculator",
-      "weekly work hours",
-      "weekly-work-hours-calculator",
-      "weeklyworkhourscalculator",
-      "work hours calculator",
-      "weekly hours calculator",
-      "weekly hours",
-      "work hours",
-      "weekly work hours",
-      "weekly hours worked"
-    ]
-  },
-  {
-    "title": "Daily Schedule Planner",
-    "url": "/calculators/time-date-scheduling/daily-schedule-planner/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "daily schedule planner",
-      "daily schedule planner",
-      "daily-schedule-planner",
-      "dailyscheduleplanner",
-      "daily planner",
-      "day planner",
-      "schedule planner",
-      "daily schedule",
-      "schedule plan",
-      "dsp"
-    ]
-  },
-  {
-    "title": "Weekly Schedule Planner",
-    "url": "/calculators/time-date-scheduling/weekly-schedule-planner/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "weekly schedule planner",
-      "weekly schedule planner calculator",
-      "weekly-schedule-planner",
-      "weeklyscheduleplanner",
-      "weekly planner",
-      "week planner",
-      "weekly schedule",
-      "schedule planner",
-      "weekly time planner",
-      "weekly time blocks"
-    ]
-  },
-  {
-    "title": "Monthly Schedule Planner",
-    "url": "/calculators/time-date-scheduling/monthly-schedule-planner/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "monthly schedule planner",
-      "monthly schedule planner",
-      "monthly-schedule-planner",
-      "monthlyscheduleplanner",
-      "monthly planner",
-      "month planner",
-      "monthly schedule",
-      "month schedule",
-      "monthly calendar planner",
-      "monthly planning"
-    ]
-  },
-  {
-    "title": "Meeting Time Zone Converter",
-    "url": "/calculators/time-date-scheduling/meeting-time-zone-converter/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "meeting time zone converter",
-      "meeting time zone",
-      "meeting-time-zone-converter",
-      "meetingtimezoneconverter",
-      "time zone meeting converter",
-      "meeting timezone converter",
-      "timezone converter meeting",
-      "meeting tz converter",
-      "meeting time converter",
-      "timezone meeting"
-    ]
-  },
-  {
-    "title": "Resistor Color Code Calculator",
-    "url": "/calculators/engineering-technical/resistor-color-code-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "resistor color code calculator",
-      "resistor color code",
-      "resistor-color-code-calculator",
-      "resistorcolorcodecalculator",
-      "resistor color code calc",
-      "resistor code calculator",
-      "resistor bands calculator",
-      "color code resistor calculator",
-      "resistor band decoder",
-      "resistor color code decoder"
-    ]
-  },
-  {
-    "title": "Series & Parallel Resistor Calculator",
-    "url": "/calculators/engineering-technical/series-and-parallel-resistor-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "series & parallel resistor calculator",
-      "series & parallel resistor",
-      "series-and-parallel-resistor-calculator",
-      "series&parallelresistorcalculator",
-      "series parallel resistor calculator",
-      "series parallel resistor",
-      "series resistor calculator",
-      "parallel resistor calculator",
-      "series parallel resistors",
-      "resistor calculator series parallel"
-    ]
-  },
-  {
-    "title": "Series & Parallel Capacitor Calculator",
-    "url": "/calculators/engineering-technical/series-and-parallel-capacitor-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "series & parallel capacitor calculator",
-      "series & parallel capacitor",
-      "series-and-parallel-capacitor-calculator",
-      "series&parallelcapacitorcalculator",
-      "series capacitor calculator",
-      "parallel capacitor calculator",
-      "capacitor series parallel calculator",
-      "series parallel capacitor",
-      "series-parallel-capacitor",
-      "capacitance series parallel calculator"
-    ]
-  },
-  {
-    "title": "Inductor Reactance Calculator",
-    "url": "/calculators/engineering-technical/inductor-reactance-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "inductor reactance calculator",
-      "inductor reactance",
-      "inductor-reactance-calculator",
-      "inductorreactancecalculator",
-      "reactance calculator",
-      "xl calculator",
-      "inductive reactance calculator",
-      "inductive reactance",
-      "inductive-reactance-calculator",
-      "inductivereactancecalculator"
-    ]
-  },
-  {
-    "title": "Capacitive Reactance Calculator",
-    "url": "/calculators/engineering-technical/capacitive-reactance-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "capacitive reactance calculator",
-      "capacitive reactance",
-      "capacitive-reactance-calculator",
-      "capacitiverreactancecalculator",
-      "xc calculator",
-      "reactance calculator",
-      "capacitive xc calculator",
-      "capacitive reactance calc",
-      "xc calc",
-      "capacitive-reactance"
-    ]
-  },
-  {
-    "title": "Impedance Calculator (Basic)",
-    "url": "/calculators/engineering-technical/impedance-calculator-basic/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "impedance calculator (basic)",
-      "impedance (basic)",
-      "impedance-calculator-basic",
-      "impedancecalculatorbasic",
-      "impedance calc basic",
-      "impedance calc",
-      "impedance basic",
-      "impedance",
-      "basic impedance calculator",
-      "basic impedance"
-    ]
-  },
-  {
-    "title": "Power Factor Calculator",
-    "url": "/calculators/engineering-technical/power-factor-calculator/",
-    "category": "Engineering & Technical",
-    "aliases": [
-      "power factor calculator",
-      "power factor",
-      "power-factor-calculator",
-      "powerfactorcalculator",
-      "pf calculator",
-      "pf calc",
-      "power factor calc",
-      "power-factor",
-      "pf",
-      "powerfactor"
-    ]
-  },
-  {
-    "title": "Mortar Mix Calculator",
-    "url": "/calculators/construction-and-materials/mortar-mix-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "mortar mix calculator",
-      "mortar mix",
-      "mortar-mix-calculator",
-      "mortarmixcalculator",
-      "mortar calculator",
-      "mortar mix calc",
-      "mortar mix qty",
-      "mortar mix quantities",
-      "mortar mix estimate",
-      "mortar-mix"
-    ]
-  },
-  {
-    "title": "Brick Quantity Calculator",
-    "url": "/calculators/construction-materials/brick-quantity-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "brick quantity calculator",
-      "brick quantity",
-      "brick-quantity-calculator",
-      "brickquantitycalculator",
-      "brick qty calculator",
-      "brick qty",
-      "brick count calculator",
-      "brick count",
-      "bricks needed calculator",
-      "bricks needed"
-    ]
-  },
-  {
-    "title": "Block Quantity Calculator",
-    "url": "/calculators/construction-materials/block-quantity-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "block quantity calculator",
-      "block quantity",
-      "block-quantity-calculator",
-      "blockquantitycalculator",
-      "block qty calculator",
-      "block qty",
-      "blocks calculator",
-      "block calculator",
-      "block count calculator",
-      "block quantity calc"
-    ]
-  },
-  {
-    "title": "Rebar Length Calculator",
-    "url": "/calculators/construction-materials/rebar-length-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "rebar length calculator",
-      "rebar length",
-      "rebar-length-calculator",
-      "rebarlengthcalculator",
-      "rebar calculator",
-      "rebar length calc",
-      "rebar length tool",
-      "rebar bar length calculator",
-      "total rebar length calculator",
-      "rebar length estimator"
-    ]
-  },
-  {
-    "title": "Rebar Weight Calculator",
-    "url": "/calculators/construction-materials/rebar-weight-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "rebar weight calculator",
-      "rebar weight",
-      "rebar-weight-calculator",
-      "rebarweightcalculator",
-      "rebar wt calculator",
-      "rebar wt",
-      "rebar weight calc",
-      "rebarweightcalc",
-      "rebar weight estimator",
-      "rebar weight tool"
-    ]
-  },
-  {
-    "title": "Rebar Spacing Calculator",
-    "url": "/calculators/construction-materials/rebar-spacing-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "rebar spacing calculator",
-      "rebar spacing",
-      "rebar-spacing-calculator",
-      "rebarspacingcalculator",
-      "rebar spacing calc",
-      "rebar spacing tool",
-      "rebar spacing formula",
-      "bar spacing calculator",
-      "rebar bar spacing",
-      "rebar spacing guide"
-    ]
-  },
-  {
-    "title": "Formwork Area Calculator",
-    "url": "/calculators/construction-materials/formwork-area-calculator/",
-    "category": "Construction & Materials",
-    "aliases": [
-      "formwork area calculator",
-      "formwork area",
-      "formwork-area-calculator",
-      "formworkareacalculator",
-      "formwork area calc",
-      "formwork calc",
-      "formwork area tool",
-      "formwork area estimator",
-      "formwork-area",
-      "formworkarea"
-    ]
-  },
-  {
-    "title": "Area Converter",
-    "url": "/calculators/conversions-units-currencies/area-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "area converter",
-      "area converter",
-      "area-converter",
-      "areaconverter",
-      "area conv",
-      "area convert",
-      "area conversion",
-      "convert area",
-      "area unit converter",
-      "area conversion tool"
-    ]
-  },
-  {
-    "title": "Temperature Converter",
-    "url": "/calculators/conversions-units-currencies/temperature-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "temperature converter",
-      "temperature converter",
-      "temperature-converter",
-      "temperatureconverter",
-      "temp converter",
-      "temp conversion",
-      "temperature convert",
-      "convert temperature",
-      "temperature-converter calculator",
-      "temperature converter tool"
-    ]
-  },
-  {
-    "title": "Speed Converter",
-    "url": "/calculators/conversions-units-currencies/speed-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "speed converter",
-      "speed",
-      "speed-converter",
-      "speedconverter",
-      "speed conversion",
-      "convert speed",
-      "speed unit converter",
-      "speed units",
-      "convert kmh to mph",
-      "kmh to mph"
-    ]
-  },
-  {
-    "title": "Time Converter",
-    "url": "/calculators/conversions-units-currencies/time-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "time converter",
-      "time convert",
-      "time-converter",
-      "timeconverter",
-      "time conv",
-      "time convertor",
-      "convert time",
-      "time conversion",
-      "convert time units",
-      "time units converter"
-    ]
-  },
-  {
-    "title": "Pressure Converter",
-    "url": "/calculators/conversions-units-currencies/pressure-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "pressure converter",
-      "pressure",
-      "pressure-converter",
-      "pressureconverter",
-      "pressure conv",
-      "press conv",
-      "pressure convert",
-      "pressureconversion",
-      "pressure convertor",
-      "pressure-convert"
-    ]
-  },
-  {
-    "title": "Energy Converter",
-    "url": "/calculators/conversions-units-currencies/energy-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "energy converter",
-      "energy",
-      "energy-converter",
-      "energyconverter",
-      "energy conversion",
-      "convert energy",
-      "energy unit converter",
-      "energy units converter",
-      "energy conversion tool",
-      "energy converter calculator"
-    ]
-  },
-  {
-    "title": "Power Converter",
-    "url": "/calculators/conversions-units-currencies/power-converter/",
-    "category": "Conversions (Units, Currencies, etc.)",
-    "aliases": [
-      "power converter",
-      "power",
-      "power-converter",
-      "powerconverter",
-      "power conv",
-      "power convert",
-      "powerconversion",
-      "power-conversion",
-      "power unit converter",
-      "power-unit-converter"
-    ]
-  },
-  {
-    "title": "Cumulative GPA Calculator",
-    "url": "/calculators/education-exams/cumulative-gpa-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "cumulative gpa calculator",
-      "cumulative gpa",
-      "cumulative-gpa-calculator",
-      "cumulativegpacalculator",
-      "cumulative gpa calc",
-      "gpa calculator",
-      "gpa calc",
-      "overall gpa calculator",
-      "cumulative grade point average",
-      "cumulative gpa tool"
-    ]
-  },
-  {
-    "title": "Semester GPA Calculator",
-    "url": "/calculators/education-and-exams/semester-gpa-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "semester gpa calculator",
-      "semester gpa",
-      "semester-gpa-calculator",
-      "semestergpacalculator",
-      "semester gpa calc",
-      "sem gpa calculator",
-      "sem gpa",
-      "gpa calculator semester",
-      "semester gpa tool",
-      "semester gpa compute"
-    ]
-  },
-  {
-    "title": "GPA Conversion Calculator",
-    "url": "/calculators/education-exams/gpa-conversion-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "gpa conversion calculator",
-      "gpa conversion",
-      "gpa-conversion-calculator",
-      "gpaconversioncalculator",
-      "gpa converter",
-      "gpa conversion tool",
-      "convert gpa",
-      "gpa scale converter",
-      "gpa scale conversion",
-      "gpa conversion calc"
-    ]
-  },
-  {
-    "title": "Grade Curve Adjuster (Simple)",
-    "url": "/calculators/education-exams/grade-curve-adjuster-simple/",
-    "category": "Education & Exams",
-    "aliases": [
-      "grade curve adjuster (simple)",
-      "grade curve adjuster simple",
-      "grade-curve-adjuster-simple",
-      "gradecurveadjustersimple",
-      "grade curve adjuster",
-      "grade curve",
-      "curve adjuster",
-      "grade curve simple",
-      "grade curve tool",
-      "grade curve adjuster calculator"
-    ]
-  },
-  {
-    "title": "Pass/Fail Threshold Calculator",
-    "url": "/calculators/education-exams/pass-fail-threshold-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "pass/fail threshold calculator",
-      "pass/fail threshold",
-      "pass-fail-threshold-calculator",
-      "passfailthresholdcalculator",
-      "pass fail threshold calculator",
-      "pass fail threshold",
-      "pass fail threshold calc",
-      "pass fail calculator",
-      "pass threshold calculator",
-      "fail threshold calculator"
-    ]
-  },
-  {
-    "title": "Assignment Weighting Calculator",
-    "url": "/calculators/education-exams/assignment-weighting-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "assignment weighting calculator",
-      "assignment weighting",
-      "assignment-weighting-calculator",
-      "assignmentweightingcalculator",
-      "assignment weights",
-      "weighted assignment grade",
-      "assignment weight calc",
-      "weighted grade calculator",
-      "assignment grade weighting",
-      "assignment weighting tool"
-    ]
-  },
-  {
-    "title": "Quiz Average Calculator",
-    "url": "/calculators/education-exams/quiz-average-calculator/",
-    "category": "Education & Exams",
-    "aliases": [
-      "quiz average calculator",
-      "quiz average",
-      "quiz-average-calculator",
-      "quizaveragecalculator",
-      "quiz avg",
-      "quiz average calc",
-      "quiz average tool",
-      "quiz average percent",
-      "quiz score average",
-      "average quiz score"
-    ]
-  },
-  {
-    "title": "Trip Time Estimator",
-    "url": "/calculators/travel-and-transport/trip-time-estimator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "trip time estimator",
-      "trip time estimator",
-      "trip-time-estimator",
-      "triptimeestimator",
-      "trip time",
-      "trip estimator",
-      "time estimator",
-      "trip time estimate",
-      "trip duration estimator",
-      "travel time estimator"
-    ]
-  },
-  {
-    "title": "Route Distance Calculator",
-    "url": "/calculators/travel-transport/route-distance-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "route distance calculator",
-      "route distance",
-      "route-distance-calculator",
-      "routedistancecalculator",
-      "route distance calc",
-      "route distance tool",
-      "distance calculator route",
-      "route distance estimator",
-      "route distance km",
-      "route distance mi"
-    ]
-  },
-  {
-    "title": "Commute Cost Calculator",
-    "url": "/calculators/travel-transport/commute-cost-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "commute cost calculator",
-      "commute cost",
-      "commute-cost-calculator",
-      "commutecostcalculator",
-      "commute cost calc",
-      "commute calculator",
-      "commute cost estimate",
-      "commuting cost calculator",
-      "commuting cost",
-      "commute costs"
-    ]
-  },
-  {
-    "title": "Commute Time Calculator",
-    "url": "/calculators/travel-transport/commute-time-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "commute time calculator",
-      "commute time",
-      "commute-time-calculator",
-      "commutetimecalculator",
-      "commute calculator",
-      "commute time calc",
-      "commute time estimator",
-      "commute time tool",
-      "commute duration calculator",
-      "commute duration"
-    ]
-  },
-  {
-    "title": "Toll Cost Estimator",
-    "url": "/calculators/travel-transport/toll-cost-estimator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "toll cost estimator",
-      "toll cost estimator",
-      "toll-cost-estimator",
-      "tollcostestimator",
-      "toll estimator",
-      "toll cost",
-      "toll fees estimator",
-      "toll fee estimate",
-      "toll cost estimate",
-      "toll costs"
-    ]
-  },
-  {
-    "title": "Parking Cost Estimator",
-    "url": "/calculators/travel-transport/parking-cost-estimator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "parking cost estimator",
-      "parking cost estimator",
-      "parking-cost-estimator",
-      "parkingcostestimator",
-      "parking estimator",
-      "parking cost",
-      "parking fee estimator",
-      "parking fees",
-      "parking cost estimate",
-      "parkingcost"
-    ]
-  },
-  {
-    "title": "Vehicle Ownership Cost Calculator",
-    "url": "/calculators/travel-transport/vehicle-ownership-cost-calculator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "vehicle ownership cost calculator",
-      "vehicle ownership cost",
-      "vehicle-ownership-cost-calculator",
-      "vehicleownershipcostcalculator",
-      "ownership cost calculator",
-      "vehicle cost calculator",
-      "car ownership cost calculator",
-      "ownership cost",
-      "vehicle ownership cost",
-      "car ownership cost"
-    ]
-  },
-  {
-    "title": "Sales Price Calculator",
-    "url": "/calculators/everyday-life-tools/sales-price-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "sales price calculator",
-      "sales price",
-      "sales-price-calculator",
-      "salespricecalculator",
-      "sale price calculator",
-      "sale price",
-      "sale-price-calculator",
-      "final price calculator",
-      "discounted price calculator",
-      "price after discount"
-    ]
-  },
-  {
-    "title": "VAT/Sales Tax Calculator (Everyday Use Version)",
-    "url": "/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "vat/sales tax calculator (everyday use version)",
-      "vat/sales tax (everyday use version)",
-      "vat-sales-tax-calculator-everyday-use-version",
-      "vatsalestaxcalculatoreverydayuseversion",
-      "vat sales tax calculator",
-      "vat calculator everyday use",
-      "sales tax calculator everyday use",
-      "vat sales tax everyday use",
-      "vat sales tax",
-      "sales tax"
-    ]
-  },
-  {
-    "title": "Meal Cost Per Person Calculator",
-    "url": "/calculators/everyday-life-tools/meal-cost-per-person-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "meal cost per person calculator",
-      "meal cost per person",
-      "meal-cost-per-person-calculator",
-      "mealcostperpersoncalculator",
-      "cost per person",
-      "per person cost",
-      "meal split",
-      "split meal cost",
-      "bill per person",
-      "meal cost per person calc"
-    ]
-  },
-  {
-    "title": "Grocery Budget Calculator",
-    "url": "/calculators/everyday-life-tools/grocery-budget-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "grocery budget calculator",
-      "grocery budget",
-      "grocery-budget-calculator",
-      "grocerybudgetcalculator",
-      "grocery budget",
-      "grocery budget calc",
-      "grocery calculator",
-      "grocery budget planner",
-      "grocery budgeting",
-      "grocery budget tool"
-    ]
-  },
-  {
-    "title": "Fuel Cost per Trip Calculator",
-    "url": "/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "fuel cost per trip calculator",
-      "fuel cost per trip",
-      "fuel-cost-per-trip-calculator",
-      "fuelcostpertripcalculator",
-      "fuel cost trip",
-      "trip fuel cost",
-      "fuel trip cost",
-      "fuel cost per trip calc",
-      "fuel-cost-per-trip",
-      "fuelcostpertrip"
-    ]
-  },
-  {
-    "title": "Fuel Efficiency Calculator (km/l or l/100km)",
-    "url": "/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "fuel efficiency calculator (km/l or l/100km)",
-      "fuel efficiency (km/l or l/100km)",
-      "fuel-efficiency-calculator-km-l-or-l-100km",
-      "fuelefficiencycalculatorkmllor l100km",
-      "fuel efficiency",
-      "fuel efficiency km/l",
-      "fuel efficiency l/100km",
-      "km per liter calculator",
-      "l per 100km calculator",
-      "fuel efficiency km l l 100km"
-    ]
-  },
-  {
-    "title": "Annual Fuel Cost Calculator",
-    "url": "/calculators/everyday-life-tools/annual-fuel-cost-calculator/",
-    "category": "Everyday Life Tools",
-    "aliases": [
-      "annual fuel cost calculator",
-      "annual fuel cost",
-      "annual-fuel-cost-calculator",
-      "annualfuelcostcalculator",
-      "yearly fuel cost calculator",
-      "yearly fuel cost",
-      "fuel cost per year",
-      "annual gas cost calculator",
-      "annual petrol cost calculator",
-      "annual fuel cost calc"
-    ]
-  },
-  {
-    "title": "Cash Envelope Allocation Calculator",
-    "url": "/calculators/personal-finance/cash-envelope-allocation-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "cash envelope allocation calculator",
-      "cash envelope allocation",
-      "cash-envelope-allocation-calculator",
-      "cashenvelopeallocationcalculator",
-      "cash envelope calculator",
-      "envelope allocation calculator",
-      "envelope budget calculator",
-      "cash envelope budget",
-      "envelope budgeting calculator",
-      "cash envelope allocation tool"
-    ]
-  },
-  {
-    "title": "Irregular Income Budget Planner",
-    "url": "/calculators/personal-finance/irregular-income-budget-planner/",
-    "category": "Personal Finance",
-    "aliases": [
-      "irregular income budget planner",
-      "irregular income budget planner",
-      "irregular-income-budget-planner",
-      "irregularincomebudgetplanner",
-      "irregular income budget",
-      "irregular budget planner",
-      "income budget planner",
-      "variable income budget planner",
-      "irregular income planner",
-      "irregular income budget"
-    ]
-  },
-  {
-    "title": "Side Income Break-Even Calculator",
-    "url": "/calculators/personal-finance/side-income-break-even-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "side income break-even calculator",
-      "side income break-even",
-      "side-income-break-even-calculator",
-      "sideincomebreakevencalculator",
-      "side income breakeven",
-      "side hustle break-even",
-      "side hustle breakeven",
-      "break even side income",
-      "side income payback period",
-      "side income break even"
-    ]
-  },
-  {
-    "title": "Annual Bills Monthly Equivalent Calculator",
-    "url": "/calculators/personal-finance/annual-bills-monthly-equivalent-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "annual bills monthly equivalent calculator",
-      "annual bills monthly equivalent",
-      "annual-bills-monthly-equivalent-calculator",
-      "annualbillsmonthlyequivalentcalculator",
-      "annual bills monthly",
-      "monthly equivalent annual bills",
-      "annual bills monthly equivalent",
-      "annual bills monthly cost",
-      "annual bills per month",
-      "annual bills monthly calc"
-    ]
-  },
-  {
-    "title": "Cost-of-Living Comparison Calculator",
-    "url": "/calculators/personal-finance/cost-of-living-comparison-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "cost-of-living comparison calculator",
-      "cost-of-living comparison",
-      "cost-of-living-comparison-calculator",
-      "cost-of-livingcomparisoncalculator",
-      "cost of living comparison",
-      "cost of living compare",
-      "col comparison",
-      "cost of living calculator",
-      "compare cost of living",
-      "living cost comparison"
-    ]
-  },
-  {
-    "title": "Rent Affordability Calculator",
-    "url": "/calculators/personal-finance/rent-affordability-calculator/",
-    "category": "Personal Finance",
-    "aliases": [
-      "rent affordability calculator",
-      "rent affordability",
-      "rent-affordability-calculator",
-      "rentaffordabilitycalculator",
-      "rent affordability calc",
-      "rent affordability tool",
-      "rent affordability check",
-      "rent affordability estimator",
-      "rent affordability test",
-      "rent affordability"
-    ]
-  },
-  {
-    "title": "Mortgage Affordability (Personal Finance Version)",
-    "url": "/calculators/personal-finance/mortgage-affordability-personal-finance-version/",
-    "category": "Personal Finance",
-    "aliases": [
-      "mortgage affordability (personal finance version)",
-      "mortgage affordability personal finance version",
-      "mortgage-affordability-personal-finance-version",
-      "mortgageaffordabilitypersonalfinanceversion",
-      "mortgage affordability",
-      "mortgage affordability version",
-      "mortgage affordability pf version",
-      "mortgage affordability personal finance",
-      "mortgage affordability pf",
-      "mortgage affordability personal finance version calculator"
-    ]
-  },
-  {
-    "title": "Cash Conversion Cycle Calculator",
+    "title": "Cash Conversion Cycle Calculator | SnapCalc",
     "url": "/calculators/business-accounting/cash-conversion-cycle-calculator/",
     "category": "Business & Accounting",
     "aliases": [
+      "cash conversion cycle calculator | snapcalc",
+      "cash conversion cycle calculator snapcalc",
       "cash conversion cycle calculator",
-      "cash conversion cycle",
-      "cash-conversion-cycle-calculator",
-      "cashconversioncyclecalculator",
-      "ccc calculator",
-      "ccc",
-      "cash cycle calculator",
-      "cash conversion cycle calc",
-      "cash conversion cycle tool",
-      "cash conversion cycle days"
+      "business & accounting cash conversion cycle calculator snapcalc",
+      "business & accounting cash conversion cycle calculator",
+      "cash conversion cycle snapcalc",
+      "ccccs"
     ]
   },
   {
-    "title": "Operating Profit Calculator",
-    "url": "/calculators/business-accounting/operating-profit-calculator/",
+    "title": "Contribution Margin Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/contribution-margin-calculator/",
     "category": "Business & Accounting",
     "aliases": [
-      "operating profit calculator",
-      "operating profit",
-      "operating-profit-calculator",
-      "operatingprofitcalculator",
-      "operating profit calc",
-      "operating profit tool",
-      "op profit calculator",
-      "operating profit margin calculator",
-      "operating margin calculator",
-      "operating-profit"
+      "contribution margin calculator | snapcalc",
+      "contribution margin calculator snapcalc",
+      "contribution margin calculator",
+      "business & accounting contribution margin calculator snapcalc",
+      "business & accounting contribution margin calculator",
+      "contribution margin snapcalc",
+      "cmcs"
     ]
   },
   {
-    "title": "EBITDA Calculator",
-    "url": "/calculators/business-accounting/ebitda-calculator/",
+    "title": "Cost of Goods Sold (COGS) Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/cost-of-goods-sold-cogs-calculator/",
     "category": "Business & Accounting",
     "aliases": [
-      "ebitda calculator",
-      "ebitda",
-      "ebitda-calculator",
-      "ebitdacalculator",
-      "calculate ebitda",
-      "ebitda margin",
-      "ebitda calc",
-      "ebitda tool",
-      "ebitda formula",
-      "ebitda-calculator"
+      "cost of goods sold (cogs) calculator | snapcalc",
+      "cost of goods sold cogs calculator snapcalc",
+      "cost of goods sold cogs calculator",
+      "business & accounting cost of goods sold cogs calculator snapcalc",
+      "business & accounting cost of goods sold cogs calculator",
+      "cost of goods sold cogs snapcalc",
+      "cgsccs"
     ]
   },
   {
-    "title": "Operating Leverage Calculator",
-    "url": "/calculators/business-accounting/operating-leverage-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "operating leverage calculator",
-      "operating leverage",
-      "operating-leverage-calculator",
-      "operatingleveragecalculator",
-      "dol calculator",
-      "degree of operating leverage calculator",
-      "degree of operating leverage",
-      "operating leverage dol",
-      "operating leverage calc",
-      "dol"
-    ]
-  },
-  {
-    "title": "Fixed vs Variable Cost Allocator",
-    "url": "/calculators/business-and-accounting/fixed-vs-variable-cost-allocator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "fixed vs variable cost allocator",
-      "fixed vs variable cost",
-      "fixed-vs-variable-cost-allocator",
-      "fixedvsvariablecostallocator",
-      "fixed variable cost allocator",
-      "fixed variable costs allocator",
-      "fixed vs variable allocator",
-      "fixed variable cost split",
-      "fixed vs variable cost split",
-      "fixed variable cost allocation"
-    ]
-  },
-  {
-    "title": "Unit Economics Calculator",
-    "url": "/calculators/business-accounting/unit-economics-calculator/",
-    "category": "Business & Accounting",
-    "aliases": [
-      "unit economics calculator",
-      "unit economics",
-      "unit-economics-calculator",
-      "uniteconomicscalculator",
-      "unit economics calc",
-      "unit econ calculator",
-      "unit econ calc",
-      "unit economics tool",
-      "unit economics margin",
-      "unit economics break even"
-    ]
-  },
-  {
-    "title": "Customer Acquisition Cost (CAC) Calculator",
+    "title": "Customer Acquisition Cost (CAC) Calculator | SnapCalc",
     "url": "/calculators/business-accounting/customer-acquisition-cost-cac-calculator/",
     "category": "Business & Accounting",
     "aliases": [
-      "customer acquisition cost (cac) calculator",
-      "customer acquisition cost (cac)",
-      "customer-acquisition-cost-cac-calculator",
-      "customeracquisitioncostcaccalculator",
-      "cac calculator",
-      "customer acquisition cost calculator",
-      "cac",
-      "customer acquisition cost",
-      "customer acquisition cost cac",
-      "customeracquisitioncost"
+      "customer acquisition cost (cac) calculator | snapcalc",
+      "customer acquisition cost cac calculator snapcalc",
+      "customer acquisition cost cac calculator",
+      "business & accounting customer acquisition cost cac calculator snapcalc",
+      "business & accounting customer acquisition cost cac calculator",
+      "customer acquisition cost cac snapcalc",
+      "cacccs"
     ]
-  }  
+  },
+  {
+    "title": "Days Inventory Outstanding Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/days-inventory-outstanding-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "days inventory outstanding calculator | snapcalc",
+      "days inventory outstanding calculator snapcalc",
+      "days inventory outstanding calculator",
+      "business & accounting days inventory outstanding calculator snapcalc",
+      "business & accounting days inventory outstanding calculator",
+      "days inventory outstanding snapcalc",
+      "diocs"
+    ]
+  },
+  {
+    "title": "EBITDA Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/ebitda-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "ebitda calculator | snapcalc",
+      "ebitda calculator snapcalc",
+      "ebitda calculator",
+      "business & accounting ebitda calculator snapcalc",
+      "business & accounting ebitda calculator",
+      "ebitda snapcalc",
+      "ecs"
+    ]
+  },
+  {
+    "title": "Fixed vs Variable Cost Allocator | SnapCalc",
+    "url": "/calculators/business-accounting/fixed-vs-variable-cost-allocator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "fixed vs variable cost allocator | snapcalc",
+      "fixed vs variable cost allocator snapcalc",
+      "fixed vs variable cost allocator",
+      "business & accounting fixed vs variable cost allocator snapcalc",
+      "business & accounting fixed vs variable cost allocator",
+      "fvvcas"
+    ]
+  },
+  {
+    "title": "Gross Margin Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/gross-margin-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "gross margin calculator | snapcalc",
+      "gross margin calculator snapcalc",
+      "gross margin calculator",
+      "business & accounting gross margin calculator snapcalc",
+      "business & accounting gross margin calculator",
+      "gross margin snapcalc",
+      "gmcs"
+    ]
+  },
+  {
+    "title": "Inventory Turnover Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/inventory-turnover-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "inventory turnover calculator | snapcalc",
+      "inventory turnover calculator snapcalc",
+      "inventory turnover calculator",
+      "business & accounting inventory turnover calculator snapcalc",
+      "business & accounting inventory turnover calculator",
+      "inventory turnover snapcalc",
+      "itcs"
+    ]
+  },
+  {
+    "title": "Markup Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/markup-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "markup calculator | snapcalc",
+      "markup calculator snapcalc",
+      "markup calculator",
+      "business & accounting markup calculator snapcalc",
+      "business & accounting markup calculator",
+      "markup snapcalc",
+      "mcs"
+    ]
+  },
+  {
+    "title": "Net Margin Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/net-margin-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "net margin calculator | snapcalc",
+      "net margin calculator snapcalc",
+      "net margin calculator",
+      "business & accounting net margin calculator snapcalc",
+      "business & accounting net margin calculator",
+      "net margin snapcalc",
+      "nmcs"
+    ]
+  },
+  {
+    "title": "Operating Leverage Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/operating-leverage-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "operating leverage calculator | snapcalc",
+      "operating leverage calculator snapcalc",
+      "operating leverage calculator",
+      "business & accounting operating leverage calculator snapcalc",
+      "business & accounting operating leverage calculator",
+      "operating leverage snapcalc",
+      "olcs"
+    ]
+  },
+  {
+    "title": "Operating Profit Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/operating-profit-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "operating profit calculator | snapcalc",
+      "operating profit calculator snapcalc",
+      "operating profit calculator",
+      "business & accounting operating profit calculator snapcalc",
+      "business & accounting operating profit calculator",
+      "operating profit snapcalc",
+      "opcs"
+    ]
+  },
+  {
+    "title": "Unit Economics Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/unit-economics-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "unit economics calculator | snapcalc",
+      "unit economics calculator snapcalc",
+      "unit economics calculator",
+      "business & accounting unit economics calculator snapcalc",
+      "business & accounting unit economics calculator",
+      "unit economics snapcalc",
+      "uecs"
+    ]
+  },
+  {
+    "title": "Block Quantity Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/block-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "block quantity calculator | snapcalc",
+      "block quantity calculator snapcalc",
+      "block quantity calculator",
+      "construction & materials block quantity calculator snapcalc",
+      "construction & materials block quantity calculator",
+      "block quantity snapcalc",
+      "bqcs"
+    ]
+  },
+  {
+    "title": "Brick Quantity Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/brick-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "brick quantity calculator | snapcalc",
+      "brick quantity calculator snapcalc",
+      "brick quantity calculator",
+      "construction & materials brick quantity calculator snapcalc",
+      "construction & materials brick quantity calculator",
+      "brick quantity snapcalc",
+      "bqcs"
+    ]
+  },
+  {
+    "title": "Cement/Sand/Stone Mix Ratio Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "cement/sand/stone mix ratio calculator | snapcalc",
+      "cement sand stone mix ratio calculator snapcalc",
+      "cement sand stone mix ratio calculator",
+      "construction & materials cement sand stone mix ratio calculator snapcalc",
+      "construction & materials cement sand stone mix ratio calculator",
+      "cement sand stone mix ratio snapcalc",
+      "cssmrc"
+    ]
+  },
+  {
+    "title": "Concrete Bag Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/concrete-bag-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "concrete bag calculator | snapcalc",
+      "concrete bag calculator snapcalc",
+      "concrete bag calculator",
+      "construction & materials concrete bag calculator snapcalc",
+      "construction & materials concrete bag calculator",
+      "concrete bag snapcalc",
+      "cbcs"
+    ]
+  },
+  {
+    "title": "Concrete Volume Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/concrete-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "concrete volume calculator | snapcalc",
+      "concrete volume calculator snapcalc",
+      "concrete volume calculator",
+      "construction & materials concrete volume calculator snapcalc",
+      "construction & materials concrete volume calculator",
+      "concrete volume snapcalc",
+      "cvcs"
+    ]
+  },
+  {
+    "title": "Formwork Area Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/formwork-area-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "formwork area calculator | snapcalc",
+      "formwork area calculator snapcalc",
+      "formwork area calculator",
+      "construction & materials formwork area calculator snapcalc",
+      "construction & materials formwork area calculator",
+      "formwork area snapcalc",
+      "facs"
+    ]
+  },
+  {
+    "title": "Mortar Mix Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/mortar-mix-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "mortar mix calculator | snapcalc",
+      "mortar mix calculator snapcalc",
+      "mortar mix calculator",
+      "construction & materials mortar mix calculator snapcalc",
+      "construction & materials mortar mix calculator",
+      "mortar mix snapcalc",
+      "mmcs"
+    ]
+  },
+  {
+    "title": "Rebar Length Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/rebar-length-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar length calculator | snapcalc",
+      "rebar length calculator snapcalc",
+      "rebar length calculator",
+      "construction & materials rebar length calculator snapcalc",
+      "construction & materials rebar length calculator",
+      "rebar length snapcalc",
+      "rlcs"
+    ]
+  },
+  {
+    "title": "Rebar Spacing Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/rebar-spacing-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar spacing calculator | snapcalc",
+      "rebar spacing calculator snapcalc",
+      "rebar spacing calculator",
+      "construction & materials rebar spacing calculator snapcalc",
+      "construction & materials rebar spacing calculator",
+      "rebar spacing snapcalc",
+      "rscs"
+    ]
+  },
+  {
+    "title": "Rebar Weight Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/rebar-weight-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "rebar weight calculator | snapcalc",
+      "rebar weight calculator snapcalc",
+      "rebar weight calculator",
+      "construction & materials rebar weight calculator snapcalc",
+      "construction & materials rebar weight calculator",
+      "rebar weight snapcalc",
+      "rwcs"
+    ]
+  },
+  {
+    "title": "Area Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/area-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "area converter | snapcalc",
+      "area converter snapcalc",
+      "area converter",
+      "conversions (units, currencies, etc.) area converter snapcalc",
+      "conversions (units, currencies, etc.) area converter",
+      "acs"
+    ]
+  },
+  {
+    "title": "Energy Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/energy-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "energy converter | snapcalc",
+      "energy converter snapcalc",
+      "energy converter",
+      "conversions (units, currencies, etc.) energy converter snapcalc",
+      "conversions (units, currencies, etc.) energy converter",
+      "ecs"
+    ]
+  },
+  {
+    "title": "Length Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/length-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "length converter | snapcalc",
+      "length converter snapcalc",
+      "length converter",
+      "conversions (units, currencies, etc.) length converter snapcalc",
+      "conversions (units, currencies, etc.) length converter",
+      "lcs"
+    ]
+  },
+  {
+    "title": "Power Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/power-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "power converter | snapcalc",
+      "power converter snapcalc",
+      "power converter",
+      "conversions (units, currencies, etc.) power converter snapcalc",
+      "conversions (units, currencies, etc.) power converter",
+      "pcs"
+    ]
+  },
+  {
+    "title": "Pressure Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/pressure-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "pressure converter | snapcalc",
+      "pressure converter snapcalc",
+      "pressure converter",
+      "conversions (units, currencies, etc.) pressure converter snapcalc",
+      "conversions (units, currencies, etc.) pressure converter",
+      "pcs"
+    ]
+  },
+  {
+    "title": "Speed Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/speed-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "speed converter | snapcalc",
+      "speed converter snapcalc",
+      "speed converter",
+      "conversions (units, currencies, etc.) speed converter snapcalc",
+      "conversions (units, currencies, etc.) speed converter",
+      "scs"
+    ]
+  },
+  {
+    "title": "Temperature Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/temperature-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "temperature converter | snapcalc",
+      "temperature converter snapcalc",
+      "temperature converter",
+      "conversions (units, currencies, etc.) temperature converter snapcalc",
+      "conversions (units, currencies, etc.) temperature converter",
+      "tcs"
+    ]
+  },
+  {
+    "title": "Time Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/time-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "time converter | snapcalc",
+      "time converter snapcalc",
+      "time converter",
+      "conversions (units, currencies, etc.) time converter snapcalc",
+      "conversions (units, currencies, etc.) time converter",
+      "tcs"
+    ]
+  },
+  {
+    "title": "Volume Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/volume-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "volume converter | snapcalc",
+      "volume converter snapcalc",
+      "volume converter",
+      "conversions (units, currencies, etc.) volume converter snapcalc",
+      "conversions (units, currencies, etc.) volume converter",
+      "vcs"
+    ]
+  },
+  {
+    "title": "Weight/Mass Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/weightmass-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "weight/mass converter | snapcalc",
+      "weight mass converter snapcalc",
+      "weightmass converter",
+      "conversions (units, currencies, etc.) weight mass converter snapcalc",
+      "conversions (units, currencies, etc.) weightmass converter",
+      "wmcs"
+    ]
+  },
+  {
+    "title": "Assignment Weighting Calculator | SnapCalc",
+    "url": "/calculators/education-exams/assignment-weighting-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "assignment weighting calculator | snapcalc",
+      "assignment weighting calculator snapcalc",
+      "assignment weighting calculator",
+      "education & exams assignment weighting calculator snapcalc",
+      "education & exams assignment weighting calculator",
+      "assignment weighting snapcalc",
+      "awcs"
+    ]
+  },
+  {
+    "title": "Cumulative GPA Calculator | SnapCalc",
+    "url": "/calculators/education-exams/cumulative-gpa-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "cumulative gpa calculator | snapcalc",
+      "cumulative gpa calculator snapcalc",
+      "cumulative gpa calculator",
+      "education & exams cumulative gpa calculator snapcalc",
+      "education & exams cumulative gpa calculator",
+      "cumulative gpa snapcalc",
+      "cgcs"
+    ]
+  },
+  {
+    "title": "Final Exam Score Needed Calculator | SnapCalc",
+    "url": "/calculators/education-exams/final-exam-score-needed-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "final exam score needed calculator | snapcalc",
+      "final exam score needed calculator snapcalc",
+      "final exam score needed calculator",
+      "education & exams final exam score needed calculator snapcalc",
+      "education & exams final exam score needed calculator",
+      "final exam score needed snapcalc",
+      "fesncs"
+    ]
+  },
+  {
+    "title": "GPA Conversion Calculator | SnapCalc",
+    "url": "/calculators/education-exams/gpa-conversion-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "gpa conversion calculator | snapcalc",
+      "gpa conversion calculator snapcalc",
+      "gpa conversion calculator",
+      "education & exams gpa conversion calculator snapcalc",
+      "education & exams gpa conversion calculator",
+      "gpa conversion snapcalc",
+      "gccs"
+    ]
+  },
+  {
+    "title": "Grade Curve Adjuster (Simple) | SnapCalc",
+    "url": "/calculators/education-exams/grade-curve-adjuster-simple/",
+    "category": "Education & Exams",
+    "aliases": [
+      "grade curve adjuster (simple) | snapcalc",
+      "grade curve adjuster simple snapcalc",
+      "grade curve adjuster simple",
+      "education & exams grade curve adjuster simple snapcalc",
+      "education & exams grade curve adjuster simple",
+      "gcass"
+    ]
+  },
+  {
+    "title": "Grade Percentage Calculator | SnapCalc",
+    "url": "/calculators/education-exams/grade-percentage-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "grade percentage calculator | snapcalc",
+      "grade percentage calculator snapcalc",
+      "grade percentage calculator",
+      "education & exams grade percentage calculator snapcalc",
+      "education & exams grade percentage calculator",
+      "grade percentage snapcalc",
+      "gpcs"
+    ]
+  },
+  {
+    "title": "Pass/Fail Threshold Calculator | SnapCalc",
+    "url": "/calculators/education-exams/pass-fail-threshold-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "pass/fail threshold calculator | snapcalc",
+      "pass fail threshold calculator snapcalc",
+      "pass fail threshold calculator",
+      "education & exams pass fail threshold calculator snapcalc",
+      "education & exams pass fail threshold calculator",
+      "pass fail threshold snapcalc",
+      "pftcs"
+    ]
+  },
+  {
+    "title": "Quiz Average Calculator | SnapCalc",
+    "url": "/calculators/education-exams/quiz-average-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "quiz average calculator | snapcalc",
+      "quiz average calculator snapcalc",
+      "quiz average calculator",
+      "education & exams quiz average calculator snapcalc",
+      "education & exams quiz average calculator",
+      "quiz average snapcalc",
+      "qacs"
+    ]
+  },
+  {
+    "title": "Semester GPA Calculator | SnapCalc",
+    "url": "/calculators/education-exams/semester-gpa-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "semester gpa calculator | snapcalc",
+      "semester gpa calculator snapcalc",
+      "semester gpa calculator",
+      "education & exams semester gpa calculator snapcalc",
+      "education & exams semester gpa calculator",
+      "semester gpa snapcalc",
+      "sgcs"
+    ]
+  },
+  {
+    "title": "Weighted Grade Calculator | SnapCalc",
+    "url": "/calculators/education-exams/weighted-grade-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "weighted grade calculator | snapcalc",
+      "weighted grade calculator snapcalc",
+      "weighted grade calculator",
+      "education & exams weighted grade calculator snapcalc",
+      "education & exams weighted grade calculator",
+      "weighted grade snapcalc",
+      "wgcs"
+    ]
+  },
+  {
+    "title": "Capacitive Reactance Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/capacitive-reactance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "capacitive reactance calculator | snapcalc",
+      "capacitive reactance calculator snapcalc",
+      "capacitive reactance calculator",
+      "engineering & technical capacitive reactance calculator snapcalc",
+      "engineering & technical capacitive reactance calculator",
+      "capacitive reactance snapcalc",
+      "crcs"
+    ]
+  },
+  {
+    "title": "Impedance Calculator (Basic) | SnapCalc",
+    "url": "/calculators/engineering-technical/impedance-calculator-basic/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "impedance calculator (basic) | snapcalc",
+      "impedance calculator basic snapcalc",
+      "impedance calculator basic",
+      "engineering & technical impedance calculator basic snapcalc",
+      "engineering & technical impedance calculator basic",
+      "impedance basic snapcalc",
+      "icbs"
+    ]
+  },
+  {
+    "title": "Inductor Reactance Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/inductor-reactance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "inductor reactance calculator | snapcalc",
+      "inductor reactance calculator snapcalc",
+      "inductor reactance calculator",
+      "engineering & technical inductor reactance calculator snapcalc",
+      "engineering & technical inductor reactance calculator",
+      "inductor reactance snapcalc",
+      "ircs"
+    ]
+  },
+  {
+    "title": "Ohm’s Law Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/ohms-law-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "ohm’s law calculator | snapcalc",
+      "ohm s law calculator snapcalc",
+      "ohms law calculator",
+      "engineering & technical ohm s law calculator snapcalc",
+      "engineering & technical ohms law calculator",
+      "ohm s law snapcalc",
+      "oslcs"
+    ]
+  },
+  {
+    "title": "Power Factor Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/power-factor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "power factor calculator | snapcalc",
+      "power factor calculator snapcalc",
+      "power factor calculator",
+      "engineering & technical power factor calculator snapcalc",
+      "engineering & technical power factor calculator",
+      "power factor snapcalc",
+      "pfcs"
+    ]
+  },
+  {
+    "title": "Resistor Color Code Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/resistor-color-code-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "resistor color code calculator | snapcalc",
+      "resistor color code calculator snapcalc",
+      "resistor color code calculator",
+      "engineering & technical resistor color code calculator snapcalc",
+      "engineering & technical resistor color code calculator",
+      "resistor color code snapcalc",
+      "rcccs"
+    ]
+  },
+  {
+    "title": "Series & Parallel Capacitor Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/series-and-parallel-capacitor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "series & parallel capacitor calculator | snapcalc",
+      "series parallel capacitor calculator snapcalc",
+      "series and parallel capacitor calculator",
+      "engineering & technical series parallel capacitor calculator snapcalc",
+      "engineering & technical series and parallel capacitor calculator",
+      "series parallel capacitor snapcalc",
+      "spccs"
+    ]
+  },
+  {
+    "title": "Series & Parallel Resistor Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/series-and-parallel-resistor-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "series & parallel resistor calculator | snapcalc",
+      "series parallel resistor calculator snapcalc",
+      "series and parallel resistor calculator",
+      "engineering & technical series parallel resistor calculator snapcalc",
+      "engineering & technical series and parallel resistor calculator",
+      "series parallel resistor snapcalc",
+      "sprcs"
+    ]
+  },
+  {
+    "title": "Voltage Drop Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/voltage-drop-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "voltage drop calculator | snapcalc",
+      "voltage drop calculator snapcalc",
+      "voltage drop calculator",
+      "engineering & technical voltage drop calculator snapcalc",
+      "engineering & technical voltage drop calculator",
+      "voltage drop snapcalc",
+      "vdcs"
+    ]
+  },
+  {
+    "title": "Wattage Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/wattage-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "wattage calculator | snapcalc",
+      "wattage calculator snapcalc",
+      "wattage calculator",
+      "engineering & technical wattage calculator snapcalc",
+      "engineering & technical wattage calculator",
+      "wattage snapcalc",
+      "wcs"
+    ]
+  },
+  {
+    "title": "Annual Fuel Cost Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/annual-fuel-cost-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "annual fuel cost calculator | snapcalc",
+      "annual fuel cost calculator snapcalc",
+      "annual fuel cost calculator",
+      "everyday life tools annual fuel cost calculator snapcalc",
+      "everyday life tools annual fuel cost calculator",
+      "annual fuel cost snapcalc",
+      "afccs"
+    ]
+  },
+  {
+    "title": "Discount Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/discount-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "discount calculator | snapcalc",
+      "discount calculator snapcalc",
+      "discount calculator",
+      "everyday life tools discount calculator snapcalc",
+      "everyday life tools discount calculator",
+      "discount snapcalc",
+      "dcs"
+    ]
+  },
+  {
+    "title": "Fuel Cost per Trip Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "fuel cost per trip calculator | snapcalc",
+      "fuel cost per trip calculator snapcalc",
+      "fuel cost per trip calculator",
+      "everyday life tools fuel cost per trip calculator snapcalc",
+      "everyday life tools fuel cost per trip calculator",
+      "fuel cost per trip snapcalc",
+      "fcptcs"
+    ]
+  },
+  {
+    "title": "Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc",
+    "url": "/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "fuel efficiency calculator (km/l or l/100km) | snapcalc",
+      "fuel efficiency calculator km l or l 100km snapcalc",
+      "fuel efficiency calculator km l or l 100km",
+      "everyday life tools fuel efficiency calculator km l or l 100km snapcalc",
+      "everyday life tools fuel efficiency calculator km l or l 100km",
+      "fuel efficiency km l or l 100km snapcalc",
+      "feckll"
+    ]
+  },
+  {
+    "title": "Grocery Budget Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/grocery-budget-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "grocery budget calculator | snapcalc",
+      "grocery budget calculator snapcalc",
+      "grocery budget calculator",
+      "everyday life tools grocery budget calculator snapcalc",
+      "everyday life tools grocery budget calculator",
+      "grocery budget snapcalc",
+      "gbcs"
+    ]
+  },
+  {
+    "title": "Meal Cost Per Person Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/meal-cost-per-person-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "meal cost per person calculator | snapcalc",
+      "meal cost per person calculator snapcalc",
+      "meal cost per person calculator",
+      "everyday life tools meal cost per person calculator snapcalc",
+      "everyday life tools meal cost per person calculator",
+      "meal cost per person snapcalc",
+      "mcppcs"
+    ]
+  },
+  {
+    "title": "Sales Price Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/sales-price-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "sales price calculator | snapcalc",
+      "sales price calculator snapcalc",
+      "sales price calculator",
+      "everyday life tools sales price calculator snapcalc",
+      "everyday life tools sales price calculator",
+      "sales price snapcalc",
+      "spcs"
+    ]
+  },
+  {
+    "title": "Split Bill Calculator | SnapCalc",
+    "url": "/calculators/everyday-life-tools/split-bill-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "split bill calculator | snapcalc",
+      "split bill calculator snapcalc",
+      "split bill calculator",
+      "everyday life tools split bill calculator snapcalc",
+      "everyday life tools split bill calculator",
+      "split bill snapcalc",
+      "sbcs"
+    ]
+  },
+  {
+    "title": "Tip Calculator | Calculator Site",
+    "url": "/calculators/everyday-life-tools/tip-calculator/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "tip calculator | calculator site",
+      "tip calculator calculator site",
+      "tip calculator",
+      "everyday life tools tip calculator calculator site",
+      "everyday life tools tip calculator",
+      "tip site",
+      "tccs"
+    ]
+  },
+  {
+    "title": "VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc",
+    "url": "/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/",
+    "category": "Everyday Life Tools",
+    "aliases": [
+      "vat/sales tax calculator (everyday use version) | snapcalc",
+      "vat sales tax calculator everyday use version snapcalc",
+      "vat sales tax calculator everyday use version",
+      "everyday life tools vat sales tax calculator everyday use version snapcalc",
+      "everyday life tools vat sales tax calculator everyday use version",
+      "vat sales tax everyday use version snapcalc",
+      "vstceu"
+    ]
+  },
+  {
+    "title": "Basal Metabolic Rate (BMR) Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/basal-metabolic-rate-bmr-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "basal metabolic rate (bmr) calculator | snapcalc",
+      "basal metabolic rate bmr calculator snapcalc",
+      "basal metabolic rate bmr calculator",
+      "health & fitness basal metabolic rate bmr calculator snapcalc",
+      "health & fitness basal metabolic rate bmr calculator",
+      "basal metabolic rate bmr snapcalc",
+      "bmrbcs"
+    ]
+  },
+  {
+    "title": "BMI Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/bmi-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "bmi calculator | snapcalc",
+      "bmi calculator snapcalc",
+      "bmi calculator",
+      "health & fitness bmi calculator snapcalc",
+      "health & fitness bmi calculator",
+      "bmi snapcalc",
+      "bcs"
+    ]
+  },
+  {
+    "title": "Body Fat Percentage Calculator (Basic) | SnapCalc",
+    "url": "/calculators/health-fitness/body-fat-percentage-calculator-basic/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "body fat percentage calculator (basic) | snapcalc",
+      "body fat percentage calculator basic snapcalc",
+      "body fat percentage calculator basic",
+      "health & fitness body fat percentage calculator basic snapcalc",
+      "health & fitness body fat percentage calculator basic",
+      "body fat percentage basic snapcalc",
+      "bfpcbs"
+    ]
+  },
+  {
+    "title": "Calorie Deficit Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/calorie-deficit-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie deficit calculator | snapcalc",
+      "calorie deficit calculator snapcalc",
+      "calorie deficit calculator",
+      "health & fitness calorie deficit calculator snapcalc",
+      "health & fitness calorie deficit calculator",
+      "calorie deficit snapcalc",
+      "cdcs"
+    ]
+  },
+  {
+    "title": "Calorie Maintenance Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/calorie-maintenance-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie maintenance calculator | snapcalc",
+      "calorie maintenance calculator snapcalc",
+      "calorie maintenance calculator",
+      "health & fitness calorie maintenance calculator snapcalc",
+      "health & fitness calorie maintenance calculator",
+      "calorie maintenance snapcalc",
+      "cmcs"
+    ]
+  },
+  {
+    "title": "Calorie Surplus Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/calorie-surplus-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "calorie surplus calculator | snapcalc",
+      "calorie surplus calculator snapcalc",
+      "calorie surplus calculator",
+      "health & fitness calorie surplus calculator snapcalc",
+      "health & fitness calorie surplus calculator",
+      "calorie surplus snapcalc",
+      "cscs"
+    ]
+  },
+  {
+    "title": "Daily Water Intake Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/daily-water-intake-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "daily water intake calculator | snapcalc",
+      "daily water intake calculator snapcalc",
+      "daily water intake calculator",
+      "health & fitness daily water intake calculator snapcalc",
+      "health & fitness daily water intake calculator",
+      "daily water intake snapcalc",
+      "dwics"
+    ]
+  },
+  {
+    "title": "Ideal Body Weight Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/ideal-body-weight-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "ideal body weight calculator | snapcalc",
+      "ideal body weight calculator snapcalc",
+      "ideal body weight calculator",
+      "health & fitness ideal body weight calculator snapcalc",
+      "health & fitness ideal body weight calculator",
+      "ideal body weight snapcalc",
+      "ibwcs"
+    ]
+  },
+  {
+    "title": "Macro Split Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/macro-split-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "macro split calculator | snapcalc",
+      "macro split calculator snapcalc",
+      "macro split calculator",
+      "health & fitness macro split calculator snapcalc",
+      "health & fitness macro split calculator",
+      "macro split snapcalc",
+      "mscs"
+    ]
+  },
+  {
+    "title": "Protein Intake Calculator | SnapCalc",
+    "url": "/calculators/health-fitness/protein-intake-calculator/",
+    "category": "Health & Fitness",
+    "aliases": [
+      "protein intake calculator | snapcalc",
+      "protein intake calculator snapcalc",
+      "protein intake calculator",
+      "health & fitness protein intake calculator snapcalc",
+      "health & fitness protein intake calculator",
+      "protein intake snapcalc",
+      "pics"
+    ]
+  },
+  {
+    "title": "Amortization Schedule Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/amortization-schedule-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "amortization schedule calculator | snapcalc",
+      "amortization schedule calculator snapcalc",
+      "amortization schedule calculator",
+      "loans & credit amortization schedule calculator snapcalc",
+      "loans & credit amortization schedule calculator",
+      "amortization schedule snapcalc",
+      "ascs"
+    ]
+  },
+  {
+    "title": "Balloon Payment Loan Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/balloon-payment-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "balloon payment loan calculator | snapcalc",
+      "balloon payment loan calculator snapcalc",
+      "balloon payment loan calculator",
+      "loans & credit balloon payment loan calculator snapcalc",
+      "loans & credit balloon payment loan calculator",
+      "balloon payment loan snapcalc",
+      "bplcs"
+    ]
+  },
+  {
+    "title": "Compound Interest Loan Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/compound-interest-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "compound interest loan calculator | snapcalc",
+      "compound interest loan calculator snapcalc",
+      "compound interest loan calculator",
+      "loans & credit compound interest loan calculator snapcalc",
+      "loans & credit compound interest loan calculator",
+      "compound interest loan snapcalc",
+      "cilcs"
+    ]
+  },
+  {
+    "title": "Extra Payment Impact Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/extra-payment-impact-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "extra payment impact calculator | snapcalc",
+      "extra payment impact calculator snapcalc",
+      "extra payment impact calculator",
+      "loans & credit extra payment impact calculator snapcalc",
+      "loans & credit extra payment impact calculator",
+      "extra payment impact snapcalc",
+      "epics"
+    ]
+  },
+  {
+    "title": "Interest-Only Loan Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/interest-only-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "interest-only loan calculator | snapcalc",
+      "interest only loan calculator snapcalc",
+      "interest only loan calculator",
+      "loans & credit interest only loan calculator snapcalc",
+      "loans & credit interest only loan calculator",
+      "interest only loan snapcalc",
+      "iolcs"
+    ]
+  },
+  {
+    "title": "Loan Affordability Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/loan-affordability-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan affordability calculator | snapcalc",
+      "loan affordability calculator snapcalc",
+      "loan affordability calculator",
+      "loans & credit loan affordability calculator snapcalc",
+      "loans & credit loan affordability calculator",
+      "loan affordability snapcalc",
+      "lacs"
+    ]
+  },
+  {
+    "title": "Loan Comparison Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/loan-comparison-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan comparison calculator | snapcalc",
+      "loan comparison calculator snapcalc",
+      "loan comparison calculator",
+      "loans & credit loan comparison calculator snapcalc",
+      "loans & credit loan comparison calculator",
+      "loan comparison snapcalc",
+      "lccs"
+    ]
+  },
+  {
+    "title": "Loan Payment Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/loan-payment-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "loan payment calculator | snapcalc",
+      "loan payment calculator snapcalc",
+      "loan payment calculator",
+      "loans & credit loan payment calculator snapcalc",
+      "loans & credit loan payment calculator",
+      "loan payment snapcalc",
+      "lpcs"
+    ]
+  },
+  {
+    "title": "Personal Loan EMI Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/personal-loan-emi-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "personal loan emi calculator | snapcalc",
+      "personal loan emi calculator snapcalc",
+      "personal loan emi calculator",
+      "loans & credit personal loan emi calculator snapcalc",
+      "loans & credit personal loan emi calculator",
+      "personal loan emi snapcalc",
+      "plecs"
+    ]
+  },
+  {
+    "title": "Simple Interest Loan Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/simple-interest-loan-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "simple interest loan calculator | snapcalc",
+      "simple interest loan calculator snapcalc",
+      "simple interest loan calculator",
+      "loans & credit simple interest loan calculator snapcalc",
+      "loans & credit simple interest loan calculator",
+      "simple interest loan snapcalc",
+      "silcs"
+    ]
+  },
+  {
+    "title": "Decimal to Fraction Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/decimal-to-fraction-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "decimal to fraction calculator | snapcalc",
+      "decimal to fraction calculator snapcalc",
+      "decimal to fraction calculator",
+      "math & general calculators decimal to fraction calculator snapcalc",
+      "math & general calculators decimal to fraction calculator",
+      "decimal to fraction snapcalc",
+      "dfcs"
+    ]
+  },
+  {
+    "title": "Fraction Simplifier | SnapCalc",
+    "url": "/calculators/math-general-calculators/fraction-simplifier/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "fraction simplifier | snapcalc",
+      "fraction simplifier snapcalc",
+      "fraction simplifier",
+      "math & general calculators fraction simplifier snapcalc",
+      "math & general calculators fraction simplifier",
+      "fss"
+    ]
+  },
+  {
+    "title": "Fraction to Decimal Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/fraction-to-decimal-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "fraction to decimal calculator | snapcalc",
+      "fraction to decimal calculator snapcalc",
+      "fraction to decimal calculator",
+      "math & general calculators fraction to decimal calculator snapcalc",
+      "math & general calculators fraction to decimal calculator",
+      "fraction to decimal snapcalc",
+      "fdcs"
+    ]
+  },
+  {
+    "title": "Greatest Common Divisor Calculator | SnapCalc",
+    "url": "/calculators/math-and-general-calculators/greatest-common-divisor-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "greatest common divisor calculator | snapcalc",
+      "greatest common divisor calculator snapcalc",
+      "greatest common divisor calculator",
+      "math & general calculators greatest common divisor calculator snapcalc",
+      "math & general calculators greatest common divisor calculator",
+      "greatest common divisor snapcalc",
+      "gcdcs"
+    ]
+  },
+  {
+    "title": "Percentage Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/percentage-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage calculator | snapcalc",
+      "percentage calculator snapcalc",
+      "percentage calculator",
+      "math & general calculators percentage calculator snapcalc",
+      "math & general calculators percentage calculator",
+      "percentage snapcalc",
+      "pcs"
+    ]
+  },
+  {
+    "title": "Percentage Change Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/percentage-change-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage change calculator | snapcalc",
+      "percentage change calculator snapcalc",
+      "percentage change calculator",
+      "math & general calculators percentage change calculator snapcalc",
+      "math & general calculators percentage change calculator",
+      "percentage change snapcalc",
+      "pccs"
+    ]
+  },
+  {
+    "title": "Percentage Decrease Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/percentage-decrease-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage decrease calculator | snapcalc",
+      "percentage decrease calculator snapcalc",
+      "percentage decrease calculator",
+      "math & general calculators percentage decrease calculator snapcalc",
+      "math & general calculators percentage decrease calculator",
+      "percentage decrease snapcalc",
+      "pdcs"
+    ]
+  },
+  {
+    "title": "Percentage Increase Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/percentage-increase-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "percentage increase calculator | snapcalc",
+      "percentage increase calculator snapcalc",
+      "percentage increase calculator",
+      "math & general calculators percentage increase calculator snapcalc",
+      "math & general calculators percentage increase calculator",
+      "percentage increase snapcalc",
+      "pics"
+    ]
+  },
+  {
+    "title": "Proportion Calculator | SnapCalc",
+    "url": "/calculators/math-and-general-calculators/proportion-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "proportion calculator | snapcalc",
+      "proportion calculator snapcalc",
+      "proportion calculator",
+      "math & general calculators proportion calculator snapcalc",
+      "math & general calculators proportion calculator",
+      "proportion snapcalc",
+      "pcs"
+    ]
+  },
+  {
+    "title": "Ratio Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/ratio-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "ratio calculator | snapcalc",
+      "ratio calculator snapcalc",
+      "ratio calculator",
+      "math & general calculators ratio calculator snapcalc",
+      "math & general calculators ratio calculator",
+      "ratio snapcalc",
+      "rcs"
+    ]
+  },
+  {
+    "title": "50/30/20 Budget Rule Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/50-30-20-budget-rule-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "50/30/20 budget rule calculator | snapcalc",
+      "50 30 20 budget rule calculator snapcalc",
+      "50 30 20 budget rule calculator",
+      "personal finance 50 30 20 budget rule calculator snapcalc",
+      "personal finance 50 30 20 budget rule calculator",
+      "50 30 20 budget rule snapcalc",
+      "532brc"
+    ]
+  },
+  {
+    "title": "Annual Bills Monthly Equivalent Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/annual-bills-monthly-equivalent-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "annual bills monthly equivalent calculator | snapcalc",
+      "annual bills monthly equivalent calculator snapcalc",
+      "annual bills monthly equivalent calculator",
+      "personal finance annual bills monthly equivalent calculator snapcalc",
+      "personal finance annual bills monthly equivalent calculator",
+      "annual bills monthly equivalent snapcalc",
+      "abmecs"
+    ]
+  },
+  {
+    "title": "Cash Envelope Allocation Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/cash-envelope-allocation-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "cash envelope allocation calculator | snapcalc",
+      "cash envelope allocation calculator snapcalc",
+      "cash envelope allocation calculator",
+      "personal finance cash envelope allocation calculator snapcalc",
+      "personal finance cash envelope allocation calculator",
+      "cash envelope allocation snapcalc",
+      "ceacs"
+    ]
+  },
+  {
+    "title": "Cost-of-Living Comparison Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/cost-of-living-comparison-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "cost-of-living comparison calculator | snapcalc",
+      "cost of living comparison calculator snapcalc",
+      "cost of living comparison calculator",
+      "personal finance cost of living comparison calculator snapcalc",
+      "personal finance cost of living comparison calculator",
+      "cost of living comparison snapcalc",
+      "clccs"
+    ]
+  },
+  {
+    "title": "Detailed Budget Category Allocator | SnapCalc",
+    "url": "/calculators/personal-finance/detailed-budget-category-allocator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "detailed budget category allocator | snapcalc",
+      "detailed budget category allocator snapcalc",
+      "detailed budget category allocator",
+      "personal finance detailed budget category allocator snapcalc",
+      "personal finance detailed budget category allocator",
+      "dbcas"
+    ]
+  },
+  {
+    "title": "Hourly Wage to Salary Converter | SnapCalc",
+    "url": "/calculators/personal-finance/hourly-wage-to-salary-converter/",
+    "category": "Personal Finance",
+    "aliases": [
+      "hourly wage to salary converter | snapcalc",
+      "hourly wage to salary converter snapcalc",
+      "hourly wage to salary converter",
+      "personal finance hourly wage to salary converter snapcalc",
+      "personal finance hourly wage to salary converter",
+      "hwscs"
+    ]
+  },
+  {
+    "title": "Income Tax Estimator | SnapCalc",
+    "url": "/calculators/personal-finance/income-tax-estimator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "income tax estimator | snapcalc",
+      "income tax estimator snapcalc",
+      "income tax estimator",
+      "personal finance income tax estimator snapcalc",
+      "personal finance income tax estimator",
+      "ites"
+    ]
+  },
+  {
+    "title": "Irregular Income Budget Planner | SnapCalc",
+    "url": "/calculators/personal-finance/irregular-income-budget-planner/",
+    "category": "Personal Finance",
+    "aliases": [
+      "irregular income budget planner | snapcalc",
+      "irregular income budget planner snapcalc",
+      "irregular income budget planner",
+      "personal finance irregular income budget planner snapcalc",
+      "personal finance irregular income budget planner",
+      "iibps"
+    ]
+  },
+  {
+    "title": "Monthly Budget Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/monthly-budget-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "monthly budget calculator | snapcalc",
+      "monthly budget calculator snapcalc",
+      "monthly budget calculator",
+      "personal finance monthly budget calculator snapcalc",
+      "personal finance monthly budget calculator",
+      "monthly budget snapcalc",
+      "mbcs"
+    ]
+  },
+  {
+    "title": "Mortgage Affordability (Personal Finance Version) | SnapCalc",
+    "url": "/calculators/personal-finance/mortgage-affordability-personal-finance-version/",
+    "category": "Personal Finance",
+    "aliases": [
+      "mortgage affordability (personal finance version) | snapcalc",
+      "mortgage affordability personal finance version snapcalc",
+      "mortgage affordability personal finance version",
+      "personal finance mortgage affordability personal finance version snapcalc",
+      "personal finance mortgage affordability personal finance version",
+      "mapfvs"
+    ]
+  },
+  {
+    "title": "Paycheck Breakdown Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/paycheck-breakdown-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "paycheck breakdown calculator | snapcalc",
+      "paycheck breakdown calculator snapcalc",
+      "paycheck breakdown calculator",
+      "personal finance paycheck breakdown calculator snapcalc",
+      "personal finance paycheck breakdown calculator",
+      "paycheck breakdown snapcalc",
+      "pbcs"
+    ]
+  },
+  {
+    "title": "Paycheck-to-Paycheck Survival Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/paycheck-to-paycheck-survival-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "paycheck-to-paycheck survival calculator | snapcalc",
+      "paycheck to paycheck survival calculator snapcalc",
+      "paycheck to paycheck survival calculator",
+      "personal finance paycheck to paycheck survival calculator snapcalc",
+      "personal finance paycheck to paycheck survival calculator",
+      "paycheck to paycheck survival snapcalc",
+      "ppscs"
+    ]
+  },
+  {
+    "title": "Real Hourly Wage Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/real-hourly-wage-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "real hourly wage calculator | snapcalc",
+      "real hourly wage calculator snapcalc",
+      "real hourly wage calculator",
+      "personal finance real hourly wage calculator snapcalc",
+      "personal finance real hourly wage calculator",
+      "real hourly wage snapcalc",
+      "rhwcs"
+    ]
+  },
+  {
+    "title": "Rent Affordability Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/rent-affordability-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "rent affordability calculator | snapcalc",
+      "rent affordability calculator snapcalc",
+      "rent affordability calculator",
+      "personal finance rent affordability calculator snapcalc",
+      "personal finance rent affordability calculator",
+      "rent affordability snapcalc",
+      "racs"
+    ]
+  },
+  {
+    "title": "Side Income Break-Even Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/side-income-break-even-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "side income break-even calculator | snapcalc",
+      "side income break even calculator snapcalc",
+      "side income break even calculator",
+      "personal finance side income break even calculator snapcalc",
+      "personal finance side income break even calculator",
+      "side income break even snapcalc",
+      "sibecs"
+    ]
+  },
+  {
+    "title": "Take-Home Pay Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/take-home-pay-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "take-home pay calculator | snapcalc",
+      "take home pay calculator snapcalc",
+      "take home pay calculator",
+      "personal finance take home pay calculator snapcalc",
+      "personal finance take home pay calculator",
+      "take home pay snapcalc",
+      "thpcs"
+    ]
+  },
+  {
+    "title": "Zero-Based Budget Calculator | SnapCalc",
+    "url": "/calculators/personal-finance/zero-based-budget-calculator/",
+    "category": "Personal Finance",
+    "aliases": [
+      "zero-based budget calculator | snapcalc",
+      "zero based budget calculator snapcalc",
+      "zero based budget calculator",
+      "personal finance zero based budget calculator snapcalc",
+      "personal finance zero based budget calculator",
+      "zero based budget snapcalc",
+      "zbbcs"
+    ]
+  },
+  {
+    "title": "Adjustable-Rate Mortgage (ARM) Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "adjustable-rate mortgage (arm) calculator | snapcalc",
+      "adjustable rate mortgage arm calculator snapcalc",
+      "adjustable rate mortgage arm calculator",
+      "real estate & property adjustable rate mortgage arm calculator snapcalc",
+      "real estate & property adjustable rate mortgage arm calculator",
+      "adjustable rate mortgage arm snapcalc",
+      "armacs"
+    ]
+  },
+  {
+    "title": "Amortization Schedule Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/amortization-schedule-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "amortization schedule calculator | snapcalc",
+      "amortization schedule calculator snapcalc",
+      "amortization schedule calculator",
+      "real estate & property amortization schedule calculator snapcalc",
+      "real estate & property amortization schedule calculator",
+      "amortization schedule snapcalc",
+      "ascs"
+    ]
+  },
+  {
+    "title": "Balloon Mortgage Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/balloon-mortgage-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "balloon mortgage calculator | snapcalc",
+      "balloon mortgage calculator snapcalc",
+      "balloon mortgage calculator",
+      "real estate & property balloon mortgage calculator snapcalc",
+      "real estate & property balloon mortgage calculator",
+      "balloon mortgage snapcalc",
+      "bmcs"
+    ]
+  },
+  {
+    "title": "Home Loan Comparison Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/home-loan-comparison-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "home loan comparison calculator | snapcalc",
+      "home loan comparison calculator snapcalc",
+      "home loan comparison calculator",
+      "real estate & property home loan comparison calculator snapcalc",
+      "real estate & property home loan comparison calculator",
+      "home loan comparison snapcalc",
+      "hlccs"
+    ]
+  },
+  {
+    "title": "Interest-Only Mortgage Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/interest-only-mortgage-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "interest-only mortgage calculator | snapcalc",
+      "interest only mortgage calculator snapcalc",
+      "interest only mortgage calculator",
+      "real estate & property interest only mortgage calculator snapcalc",
+      "real estate & property interest only mortgage calculator",
+      "interest only mortgage snapcalc",
+      "iomcs"
+    ]
+  },
+  {
+    "title": "Mortgage Affordability Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/mortgage-affordability-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "mortgage affordability calculator | snapcalc",
+      "mortgage affordability calculator snapcalc",
+      "mortgage affordability calculator",
+      "real estate & property mortgage affordability calculator snapcalc",
+      "real estate & property mortgage affordability calculator",
+      "mortgage affordability snapcalc",
+      "macs"
+    ]
+  },
+  {
+    "title": "Mortgage Repayment Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/mortgage-repayment-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "mortgage repayment calculator | snapcalc",
+      "mortgage repayment calculator snapcalc",
+      "mortgage repayment calculator",
+      "real estate & property mortgage repayment calculator snapcalc",
+      "real estate & property mortgage repayment calculator",
+      "mortgage repayment snapcalc",
+      "mrcs"
+    ]
+  },
+  {
+    "title": "Refinance Break-Even Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/refinance-break-even-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "refinance break-even calculator | snapcalc",
+      "refinance break even calculator snapcalc",
+      "refinance break even calculator",
+      "real estate & property refinance break even calculator snapcalc",
+      "real estate & property refinance break even calculator",
+      "refinance break even snapcalc",
+      "rbecs"
+    ]
+  },
+  {
+    "title": "Refinance Savings Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/refinance-savings-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "refinance savings calculator | snapcalc",
+      "refinance savings calculator snapcalc",
+      "refinance savings calculator",
+      "real estate & property refinance savings calculator snapcalc",
+      "real estate & property refinance savings calculator",
+      "refinance savings snapcalc",
+      "rscs"
+    ]
+  },
+  {
+    "title": "Rent vs Buy Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/rent-vs-buy-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "rent vs buy calculator | snapcalc",
+      "rent vs buy calculator snapcalc",
+      "rent vs buy calculator",
+      "real estate & property rent vs buy calculator snapcalc",
+      "real estate & property rent vs buy calculator",
+      "rent vs buy snapcalc",
+      "rvbcs"
+    ]
+  },
+  {
+    "title": "Compound Interest Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/compound-interest-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "compound interest calculator | snapcalc",
+      "compound interest calculator snapcalc",
+      "compound interest calculator",
+      "savings & investments compound interest calculator snapcalc",
+      "savings & investments compound interest calculator",
+      "compound interest snapcalc",
+      "cics"
+    ]
+  },
+  {
+    "title": "Future Value Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/future-value-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "future value calculator | snapcalc",
+      "future value calculator snapcalc",
+      "future value calculator",
+      "savings & investments future value calculator snapcalc",
+      "savings & investments future value calculator",
+      "future value snapcalc",
+      "fvcs"
+    ]
+  },
+  {
+    "title": "Investment Growth Over Time Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/investment-growth-over-time-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "investment growth over time calculator | snapcalc",
+      "investment growth over time calculator snapcalc",
+      "investment growth over time calculator",
+      "savings & investments investment growth over time calculator snapcalc",
+      "savings & investments investment growth over time calculator",
+      "investment growth over time snapcalc",
+      "igotcs"
+    ]
+  },
+  {
+    "title": "Investment Return Required Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/investment-return-required-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "investment return required calculator | snapcalc",
+      "investment return required calculator snapcalc",
+      "investment return required calculator",
+      "savings & investments investment return required calculator snapcalc",
+      "savings & investments investment return required calculator",
+      "investment return required snapcalc",
+      "irrcs"
+    ]
+  },
+  {
+    "title": "Lump Sum vs Monthly Investment Comparison | SnapCalc",
+    "url": "/calculators/savings-investments/lump-sum-vs-monthly-investment-comparison/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "lump sum vs monthly investment comparison | snapcalc",
+      "lump sum vs monthly investment comparison snapcalc",
+      "lump sum vs monthly investment comparison",
+      "savings & investments lump sum vs monthly investment comparison snapcalc",
+      "savings & investments lump sum vs monthly investment comparison",
+      "lsvmic"
+    ]
+  },
+  {
+    "title": "Monthly Investment Contribution Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/monthly-investment-contribution-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "monthly investment contribution calculator | snapcalc",
+      "monthly investment contribution calculator snapcalc",
+      "monthly investment contribution calculator",
+      "savings & investments monthly investment contribution calculator snapcalc",
+      "savings & investments monthly investment contribution calculator",
+      "monthly investment contribution snapcalc",
+      "miccs"
+    ]
+  },
+  {
+    "title": "Present Value Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/present-value-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "present value calculator | snapcalc",
+      "present value calculator snapcalc",
+      "present value calculator",
+      "savings & investments present value calculator snapcalc",
+      "savings & investments present value calculator",
+      "present value snapcalc",
+      "pvcs"
+    ]
+  },
+  {
+    "title": "Retirement Contribution Impact Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/retirement-contribution-impact-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "retirement contribution impact calculator | snapcalc",
+      "retirement contribution impact calculator snapcalc",
+      "retirement contribution impact calculator",
+      "savings & investments retirement contribution impact calculator snapcalc",
+      "savings & investments retirement contribution impact calculator",
+      "retirement contribution impact snapcalc",
+      "rcics"
+    ]
+  },
+  {
+    "title": "Retirement Savings Growth Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/retirement-savings-growth-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "retirement savings growth calculator | snapcalc",
+      "retirement savings growth calculator snapcalc",
+      "retirement savings growth calculator",
+      "savings & investments retirement savings growth calculator snapcalc",
+      "savings & investments retirement savings growth calculator",
+      "retirement savings growth snapcalc",
+      "rsgcs"
+    ]
+  },
+  {
+    "title": "Simple Interest Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/simple-interest-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "simple interest calculator | snapcalc",
+      "simple interest calculator snapcalc",
+      "simple interest calculator",
+      "savings & investments simple interest calculator snapcalc",
+      "savings & investments simple interest calculator",
+      "simple interest snapcalc",
+      "sics"
+    ]
+  },
+  {
+    "title": "Daily Schedule Planner | SnapCalc",
+    "url": "/calculators/time-date-scheduling/daily-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "daily schedule planner | snapcalc",
+      "daily schedule planner snapcalc",
+      "daily schedule planner",
+      "time, date & scheduling daily schedule planner snapcalc",
+      "time, date & scheduling daily schedule planner",
+      "dsps"
+    ]
+  },
+  {
+    "title": "Hours Worked Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/hours-worked-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "hours worked calculator | snapcalc",
+      "hours worked calculator snapcalc",
+      "hours worked calculator",
+      "time, date & scheduling hours worked calculator snapcalc",
+      "time, date & scheduling hours worked calculator",
+      "hours worked snapcalc",
+      "hwcs"
+    ]
+  },
+  {
+    "title": "Meeting Time Zone Converter | SnapCalc",
+    "url": "/calculators/time-date-scheduling/meeting-time-zone-converter/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "meeting time zone converter | snapcalc",
+      "meeting time zone converter snapcalc",
+      "meeting time zone converter",
+      "time, date & scheduling meeting time zone converter snapcalc",
+      "time, date & scheduling meeting time zone converter",
+      "mtzcs"
+    ]
+  },
+  {
+    "title": "Monthly Schedule Planner | SnapCalc",
+    "url": "/calculators/time-date-scheduling/monthly-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "monthly schedule planner | snapcalc",
+      "monthly schedule planner snapcalc",
+      "monthly schedule planner",
+      "time, date & scheduling monthly schedule planner snapcalc",
+      "time, date & scheduling monthly schedule planner",
+      "msps"
+    ]
+  },
+  {
+    "title": "Time Addition & Subtraction Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/time-addition-and-subtraction-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "time addition & subtraction calculator | snapcalc",
+      "time addition subtraction calculator snapcalc",
+      "time addition and subtraction calculator",
+      "time, date & scheduling time addition subtraction calculator snapcalc",
+      "time, date & scheduling time addition and subtraction calculator",
+      "time addition subtraction snapcalc",
+      "tascs"
+    ]
+  },
+  {
+    "title": "Time Duration Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/time-duration-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "time duration calculator | snapcalc",
+      "time duration calculator snapcalc",
+      "time duration calculator",
+      "time, date & scheduling time duration calculator snapcalc",
+      "time, date & scheduling time duration calculator",
+      "time duration snapcalc",
+      "tdcs"
+    ]
+  },
+  {
+    "title": "Timesheet Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/timesheet-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "timesheet calculator | snapcalc",
+      "timesheet calculator snapcalc",
+      "timesheet calculator",
+      "time, date & scheduling timesheet calculator snapcalc",
+      "time, date & scheduling timesheet calculator",
+      "timesheet snapcalc",
+      "tcs"
+    ]
+  },
+  {
+    "title": "Timesheet Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/timesheet-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "timesheet calculator | snapcalc",
+      "timesheet calculator snapcalc",
+      "weekly work hours calculator",
+      "time, date & scheduling timesheet calculator snapcalc",
+      "time, date & scheduling weekly work hours calculator",
+      "timesheet snapcalc",
+      "tcs"
+    ]
+  },
+  {
+    "title": "Weekly Schedule Planner | SnapCalc",
+    "url": "/calculators/time-date-scheduling/weekly-schedule-planner/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "weekly schedule planner | snapcalc",
+      "weekly schedule planner snapcalc",
+      "weekly schedule planner",
+      "time, date & scheduling weekly schedule planner snapcalc",
+      "time, date & scheduling weekly schedule planner",
+      "wsps"
+    ]
+  },
+  {
+    "title": "Weekly Work Hours Calculator | SnapCalc",
+    "url": "/calculators/time-date-scheduling/weekly-work-hours-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "weekly work hours calculator | snapcalc",
+      "weekly work hours calculator snapcalc",
+      "overtime hours calculator",
+      "time, date & scheduling weekly work hours calculator snapcalc",
+      "time, date & scheduling overtime hours calculator",
+      "weekly work hours snapcalc",
+      "wwhcs"
+    ]
+  },
+  {
+    "title": "Annual Fuel Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/annual-fuel-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "annual fuel cost calculator | snapcalc",
+      "annual fuel cost calculator snapcalc",
+      "annual fuel cost calculator",
+      "travel & transport annual fuel cost calculator snapcalc",
+      "travel & transport annual fuel cost calculator",
+      "annual fuel cost snapcalc",
+      "afccs"
+    ]
+  },
+  {
+    "title": "Commute Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/commute-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "commute cost calculator | snapcalc",
+      "commute cost calculator snapcalc",
+      "commute cost calculator",
+      "travel & transport commute cost calculator snapcalc",
+      "travel & transport commute cost calculator",
+      "commute cost snapcalc",
+      "cccs"
+    ]
+  },
+  {
+    "title": "Commute Time Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/commute-time-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "commute time calculator | snapcalc",
+      "commute time calculator snapcalc",
+      "commute time calculator",
+      "travel & transport commute time calculator snapcalc",
+      "travel & transport commute time calculator",
+      "commute time snapcalc",
+      "ctcs"
+    ]
+  },
+  {
+    "title": "Fuel Consumption Calculator (km/L, L/100km, MPG) | SnapCalc",
+    "url": "/calculators/travel-transport/fuel-consumption-calculator-kml-l100km-mpg/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "fuel consumption calculator (km/l, l/100km, mpg) | snapcalc",
+      "fuel consumption calculator km l l 100km mpg snapcalc",
+      "fuel consumption calculator kml l100km mpg",
+      "travel & transport fuel consumption calculator km l l 100km mpg snapcalc",
+      "travel & transport fuel consumption calculator kml l100km mpg",
+      "fuel consumption km l l 100km mpg snapcalc",
+      "fcckll"
+    ]
+  },
+  {
+    "title": "Fuel Cost per Trip Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/fuel-cost-per-trip-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "fuel cost per trip calculator | snapcalc",
+      "fuel cost per trip calculator snapcalc",
+      "fuel cost per trip calculator",
+      "travel & transport fuel cost per trip calculator snapcalc",
+      "travel & transport fuel cost per trip calculator",
+      "fuel cost per trip snapcalc",
+      "fcptcs"
+    ]
+  },
+  {
+    "title": "Parking Cost Estimator | SnapCalc",
+    "url": "/calculators/travel-transport/parking-cost-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "parking cost estimator | snapcalc",
+      "parking cost estimator snapcalc",
+      "parking cost estimator",
+      "travel & transport parking cost estimator snapcalc",
+      "travel & transport parking cost estimator",
+      "pces"
+    ]
+  },
+  {
+    "title": "Route Distance Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/route-distance-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "route distance calculator | snapcalc",
+      "route distance calculator snapcalc",
+      "route distance calculator",
+      "travel & transport route distance calculator snapcalc",
+      "travel & transport route distance calculator",
+      "route distance snapcalc",
+      "rdcs"
+    ]
+  },
+  {
+    "title": "Toll Cost Estimator | SnapCalc",
+    "url": "/calculators/travel-transport/toll-cost-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "toll cost estimator | snapcalc",
+      "toll cost estimator snapcalc",
+      "toll cost estimator",
+      "travel & transport toll cost estimator snapcalc",
+      "travel & transport toll cost estimator",
+      "tces"
+    ]
+  },
+  {
+    "title": "Trip Time Estimator | SnapCalc",
+    "url": "/calculators/travel-transport/trip-time-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "trip time estimator | snapcalc",
+      "trip time estimator snapcalc",
+      "trip time estimator",
+      "travel & transport trip time estimator snapcalc",
+      "travel & transport trip time estimator",
+      "ttes"
+    ]
+  },
+  {
+    "title": "Vehicle Ownership Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/vehicle-ownership-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "vehicle ownership cost calculator | snapcalc",
+      "vehicle ownership cost calculator snapcalc",
+      "vehicle ownership cost calculator",
+      "travel & transport vehicle ownership cost calculator snapcalc",
+      "travel & transport vehicle ownership cost calculator",
+      "vehicle ownership cost snapcalc",
+      "voccs"
+    ]
+  }
 ]
