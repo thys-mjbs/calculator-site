@@ -451,3 +451,27 @@ h1 {
   box-sizing: border-box;
   text-align: center;       /* center heading + body text */
 }
+
+/* HARD ENFORCEMENT: text affiliate blocks (legacy-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px !important;
+
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
+}
+
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
