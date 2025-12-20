@@ -57,7 +57,7 @@
   },
   {
     "title": "Churn Rate Calculator | SnapCalc",
-    "url": "/calculators/business-and-accounting/churn-rate-calculator/",
+    "url": "/calculators/business-accounting/churn-rate-calculator/",
     "category": "Business & Accounting",
     "aliases": [
       "churn rate calculator | snapcalc",
@@ -1150,6 +1150,20 @@
     ]
   },
   {
+    "title": "Credit Card Interest Accrued Daily Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/credit-card-interest-accrued-daily-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "credit card interest accrued daily calculator | snapcalc",
+      "credit card interest accrued daily calculator snapcalc",
+      "credit card interest accrued daily calculator",
+      "loans & credit credit card interest accrued daily calculator snapcalc",
+      "loans & credit credit card interest accrued daily calculator",
+      "credit card interest accrued daily snapcalc",
+      "cciadc"
+    ]
+  },
+  {
     "title": "Credit Card Payoff Calculator | SnapCalc",
     "url": "/calculators/loans-credit/credit-card-payoff-calculator/",
     "category": "Loans & Credit",
@@ -1276,6 +1290,20 @@
     ]
   },
   {
+    "title": "Line of Credit Cost Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/line-of-credit-cost-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "line of credit cost calculator | snapcalc",
+      "line of credit cost calculator snapcalc",
+      "line of credit cost calculator",
+      "loans & credit line of credit cost calculator snapcalc",
+      "loans & credit line of credit cost calculator",
+      "line of credit cost snapcalc",
+      "lcccs"
+    ]
+  },
+  {
     "title": "Loan Affordability Calculator | SnapCalc",
     "url": "/calculators/loans-credit/loan-affordability-calculator/",
     "category": "Loans & Credit",
@@ -1315,6 +1343,20 @@
       "loans & credit loan payment calculator",
       "loan payment snapcalc",
       "lpcs"
+    ]
+  },
+  {
+    "title": "Minimum Payment Trap Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/minimum-payment-trap-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "minimum payment trap calculator | snapcalc",
+      "minimum payment trap calculator snapcalc",
+      "minimum payment trap calculator",
+      "loans & credit minimum payment trap calculator snapcalc",
+      "loans & credit minimum payment trap calculator",
+      "minimum payment trap snapcalc",
+      "mptcs"
     ]
   },
   {

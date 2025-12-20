@@ -1,11 +1,10 @@
 from __future__ import annotations
 
-import os
 import random
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, Tuple, List, Dict
+from typing import Optional, Dict, List, Tuple
 
 
 CALCULATORS_DIR = Path(r"C:\Users\MBenson\Documents\GitHub\calculator-site\calculators")
@@ -33,6 +32,7 @@ SLOT_DESC_RE = re.compile(r"^Slot\s+(\d+)\s+Description:\s*(.+?)\s*$", re.IGNORE
 SLOT_CTA_RE = re.compile(r"^Slot\s+(\d+)\s+Link\s+Text:\s*(.+?)\s*$", re.IGNORECASE)
 SLOT_IMG_RE = re.compile(r"^Slot\s+(\d+)\s+Image\s+Src:\s*(.+?)\s*$", re.IGNORECASE)
 SLOT_PROD_RE = re.compile(r"^Slot\s+(\d+)\s+Product\s+Name:\s*(.+?)\s*$", re.IGNORECASE)
+
 
 def parse_variant_file(path: Path) -> Dict[int, Slot]:
     slots: Dict[int, Slot] = {1: Slot("blank"), 2: Slot("blank"), 3: Slot("blank"), 4: Slot("blank")}
@@ -94,7 +94,7 @@ def parse_variant_file(path: Path) -> Dict[int, Slot]:
             )
             continue
 
-        # Text slot if type==text and all fields exist
+        # Text slot if type==text and url exists
         if data.get("type", "").strip() == "text" and url:
             slots[i] = Slot(
                 kind="text",
@@ -122,7 +122,6 @@ def render_inner_html(slot: Slot) -> str:
         )
 
     if slot.kind == "image":
-        # enforce root-relative
         img = slot.img_src.strip()
         if not img.startswith("/"):
             img = "/" + img.lstrip("/")
@@ -145,15 +144,9 @@ def render_inner_html(slot: Slot) -> str:
 # ----------------------------
 
 OPEN_ADBLOCK_RE = re.compile(r'<div\s+class="ad-block"[^>]*>', re.IGNORECASE)
-DIV_OPEN_RE = re.compile(r"<div\b", re.IGNORECASE)
-DIV_CLOSE_RE = re.compile(r"</div>", re.IGNORECASE)
+
 
 def find_matching_div_end(html: str, start_open_idx: int) -> Optional[int]:
-    """
-    Given index at the start of an opening <div ...>, return index of the end of the matching </div>.
-    Returns the index immediately after the matching </div>.
-    """
-    # Find end of the opening tag
     open_tag_end = html.find(">", start_open_idx)
     if open_tag_end == -1:
         return None
@@ -173,7 +166,6 @@ def find_matching_div_end(html: str, start_open_idx: int) -> Optional[int]:
             idx = next_open + 4
             continue
 
-        # closing div
         depth -= 1
         idx = next_close + len("</div>")
         if depth == 0:
@@ -182,31 +174,25 @@ def find_matching_div_end(html: str, start_open_idx: int) -> Optional[int]:
     return None
 
 
-def replace_adblock_inner(html: str, open_tag_start: int, open_tag_end: int, close_tag_start: int, new_inner: str) -> str:
+def replace_adblock_inner(html: str, open_tag_end: int, close_tag_start: int, new_inner: str) -> str:
     return html[: open_tag_end + 1] + "\n" + new_inner + html[close_tag_start:]
 
 
 def extract_category_slug_from_path(index_path: Path) -> str:
-    # calculators/<category>/<calculator>/index.html
     rel = index_path.relative_to(CALCULATORS_DIR)
     return rel.parts[0]
 
 
-def pick_variant_file(category_slug: str) -> Optional[Path]:
+def list_variant_files(category_slug: str) -> List[Path]:
     folder = COMBOS_ROOT / category_slug
     if not folder.exists():
-        return None
-
-    candidates = []
+        return []
+    out: List[Path] = []
     for i in range(1, 7):
         p = folder / f"Variant {i:02d}.txt"
         if p.exists():
-            candidates.append(p)
-
-    if not candidates:
-        return None
-
-    return random.choice(candidates)
+            out.append(p)
+    return out
 
 
 def iter_calc_index_files(root: Path):
@@ -217,6 +203,84 @@ def iter_calc_index_files(root: Path):
             continue
         if len(rel.parts) >= 3:
             yield p
+
+
+def slot_signature(s: Slot) -> Tuple[str, str, str]:
+    """
+    Signature used to enforce uniqueness WITHIN a page.
+    - text: kind + url
+    - image: kind + url + img_src
+    - blank: always unique-ish but we avoid choosing blank if possible
+    """
+    if s.kind == "text":
+        return ("text", s.url.strip(), "")
+    if s.kind == "image":
+        img = s.img_src.strip()
+        return ("image", s.url.strip(), img)
+    return ("blank", "", "")
+
+
+def choose_unique_slots_for_page(variant_paths: List[Path]) -> Dict[int, Slot]:
+    """
+    Build Slot 1..4 for ONE page, ensuring no duplicates within the page.
+    We pull Slot N from a randomly chosen variant, retrying if it duplicates.
+    """
+    # Parse all variants once
+    parsed: List[Dict[int, Slot]] = []
+    for vp in variant_paths:
+        try:
+            parsed.append(parse_variant_file(vp))
+        except Exception:
+            continue
+
+    # If nothing parses, fallback to blanks
+    if not parsed:
+        return {1: Slot("blank"), 2: Slot("blank"), 3: Slot("blank"), 4: Slot("blank")}
+
+    chosen: Dict[int, Slot] = {}
+    used_sigs = set()
+
+    for slot_num in (1, 2, 3, 4):
+        # Try multiple random picks to find a unique, non-blank slot
+        pick: Slot = Slot("blank")
+        best_blank: Slot = Slot("blank")
+
+        attempts = 0
+        max_attempts = 40
+
+        while attempts < max_attempts:
+            attempts += 1
+            variant = random.choice(parsed)
+            candidate = variant.get(slot_num, Slot("blank"))
+
+            sig = slot_signature(candidate)
+
+            # prefer non-blank
+            if candidate.kind == "blank":
+                best_blank = candidate
+                continue
+
+            if sig not in used_sigs:
+                pick = candidate
+                break
+
+        # If we failed to find a unique non-blank, allow a non-blank even if duplicate;
+        # if even that isn't available, keep blank.
+        if pick.kind == "blank":
+            # attempt to at least get a non-blank (even if duplicate)
+            for _ in range(20):
+                variant = random.choice(parsed)
+                candidate = variant.get(slot_num, Slot("blank"))
+                if candidate.kind != "blank":
+                    pick = candidate
+                    break
+            if pick.kind == "blank":
+                pick = best_blank
+
+        chosen[slot_num] = pick
+        used_sigs.add(slot_signature(pick))
+
+    return chosen
 
 
 def main() -> int:
@@ -232,8 +296,8 @@ def main() -> int:
         pages_scanned += 1
         category_slug = extract_category_slug_from_path(index_path)
 
-        variant_path = pick_variant_file(category_slug)
-        if variant_path is None:
+        variant_paths = list_variant_files(category_slug)
+        if not variant_paths:
             missing_combo += 1
             continue
 
@@ -243,105 +307,51 @@ def main() -> int:
             errors += 1
             continue
 
-        # Find ad-blocks and fill blanks
-        matches = list(OPEN_ADBLOCK_RE.finditer(html))
-        if not matches:
-            continue
+        # Build unique slot content for THIS page
+        page_slots = choose_unique_slots_for_page(variant_paths)
+        slot_inners = [render_inner_html(page_slots[i]) for i in (1, 2, 3, 4)]
 
-        slots = parse_variant_file(variant_path)
-        slot_inners = [render_inner_html(slots[i]) for i in (1, 2, 3, 4)]
-
-        updated = False
-        filled_this_page = 0
+        html2 = html
+        cursor = 0
         slot_ptr = 0
+        filled_this_page = 0
+        updated = False
 
-        # Work from left to right, but because we edit strings, rebuild using offsets
-        # We will progressively update html and re-scan to keep indices correct.
         while slot_ptr < 4:
-            m = OPEN_ADBLOCK_RE.search(html)
+            m = OPEN_ADBLOCK_RE.search(html2, cursor)
             if not m:
                 break
 
             start = m.start()
-            open_end = html.find(">", start)
+            open_end = html2.find(">", start)
             if open_end == -1:
                 break
 
-            block_end = find_matching_div_end(html, start)
+            block_end = find_matching_div_end(html2, start)
             if block_end is None:
                 break
 
-            block = html[start:block_end]
-            # Blank means it contains placeholder image class
+            block = html2[start:block_end]
+
             if "ad-placeholder-img" in block:
-                # Find close tag start for outer div
-                close_start = block.rfind("</div>")
-                if close_start == -1:
+                close_start_local = block.rfind("</div>")
+                if close_start_local == -1:
                     break
-                close_start = start + close_start
+                close_start = start + close_start_local
 
                 new_inner = slot_inners[slot_ptr]
-                html = replace_adblock_inner(html, start, open_end, close_start, new_inner)
+                html2 = replace_adblock_inner(html2, open_end, close_start, new_inner)
 
                 updated = True
                 filled_this_page += 1
                 slot_ptr += 1
+                cursor = block_end
+            else:
+                cursor = block_end
 
-                # Continue scanning AFTER this block
-                continue
-
-            # Not blank, skip this ad-block by removing it temporarily from scan head
-            # We advance the scan window by slicing and keeping a marker.
-            # Simplest: replace the first occurrence with a sentinel and restore later is messy.
-            # Instead: move a cursor and search from there.
-            # So we implement cursor-based search below.
-
-            break  # cursor-based implementation below replaces this loop
-
-        if True:
-            # Cursor-based fill that skips non-blank ad-blocks correctly
-            html2 = html
-            cursor = 0
-            slot_ptr = 0
-            filled_this_page = 0
-            updated = False
-
-            while slot_ptr < 4:
-                m = OPEN_ADBLOCK_RE.search(html2, cursor)
-                if not m:
-                    break
-
-                start = m.start()
-                open_end = html2.find(">", start)
-                if open_end == -1:
-                    break
-
-                block_end = find_matching_div_end(html2, start)
-                if block_end is None:
-                    break
-
-                block = html2[start:block_end]
-
-                if "ad-placeholder-img" in block:
-                    close_start_local = block.rfind("</div>")
-                    if close_start_local == -1:
-                        break
-                    close_start = start + close_start_local
-
-                    new_inner = slot_inners[slot_ptr]
-                    html2 = replace_adblock_inner(html2, start, open_end, close_start, new_inner)
-
-                    updated = True
-                    filled_this_page += 1
-                    slot_ptr += 1
-                    cursor = block_end  # continue after block
-                else:
-                    cursor = block_end  # skip filled block
-
-            html = html2
-
+        if updated:
             try:
-                index_path.write_text(html, encoding="utf-8")
+                index_path.write_text(html2, encoding="utf-8")
                 pages_updated += 1
                 slots_filled += filled_this_page
             except Exception:
