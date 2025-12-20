@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Savings Rate Calculator (Investing Version) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your savings rate for investing, including how much of your income goes to investments, cash surplus, or a shortfall.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/savings-investments/savings-rate-calculator-investing-version/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Savings Rate Calculator (Investing Version) | SnapCalc">
+    <meta property="og:description" content="Calculate your savings rate for investing, including how much of your income goes to investments, cash surplus, or a shortfall.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/savings-investments/savings-rate-calculator-investing-version/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Savings Rate Calculator (Investing Version) | SnapCalc">
+    <meta name="twitter:description" content="Calculate your savings rate for investing, including how much of your income goes to investments, cash surplus, or a shortfall.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Savings Rate Calculator (Investing Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/savings-rate-calculator-investing-version/",
+      "description": "Calculate your savings rate for investing using monthly income, monthly non-investment spending, and optional monthly investment contributions. See your total savings rate, investing rate, and cash surplus or shortfall."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings &amp; Investments</a> ›
+        <span>Savings Rate Calculator (Investing Version)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Savings Rate Calculator (Investing Version)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate your investing-focused savings rate</h2>
+
+              <p class="calculator-intro">
+                Enter your monthly income and spending to see your total savings rate, your investing rate, and whether you have a cash surplus or shortfall after investing.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="incomeAmount">Monthly income amount</label>
+                <input type="text" id="incomeAmount" inputmode="decimal" placeholder="e.g., 45,000">
+              </div>
+
+              <div class="form-group">
+                <label for="incomeType">Income type</label>
+                <select id="incomeType">
+                  <option value="gross">Gross (before tax)</option>
+                  <option value="net">Net (after tax)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="nonInvestmentSpending">Monthly spending (excluding investments)</label>
+                <input type="text" id="nonInvestmentSpending" inputmode="decimal" placeholder="e.g., 28,500">
+              </div>
+
+              <div class="form-group">
+                <label for="monthlyInvesting">Monthly investing contributions (optional)</label>
+                <input type="text" id="monthlyInvesting" inputmode="decimal" placeholder="e.g., 5,000">
+              </div>
+
+              <div class="form-group">
+                <label for="includeEmployerMatch">Include employer match in “investing”</label>
+                <select id="includeEmployerMatch">
+                  <option value="no" selected>No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="employerMatch">Employer match per month (optional)</label>
+                <input type="text" id="employerMatch" inputmode="decimal" placeholder="e.g., 1,500">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate savings rate</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Compare savings strategies, investment growth, and goal timelines using practical calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, plan, and stress-test your money decisions with everyday finance tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Work through cash flow, margins, and financial ratios with clear business-focused calculators.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Savings rate calculator for investing, retirement contributions, and surplus cash</h2>
+
+              <p>
+                “Savings rate” sounds simple, but people often mean different things. Some mean the percentage of income that is left over after spending. Others mean the percentage that is invested into retirement or a brokerage account. This investing version is designed to show both: your overall savings rate and how much of that is specifically going into investments.
+              </p>
+              <p>
+                This calculator uses a monthly view because most people get paid and pay bills monthly, and it makes the output easy to act on. You enter your monthly income, your monthly spending (excluding investments), and optionally what you invest each month. The result shows your total savings rate, your investing rate, and whether you have extra cash left over after investing or a shortfall that would require dipping into savings or debt.
+              </p>
+              <p>
+                If you want a fast answer, you only need two numbers: income and monthly spending excluding investments. If you want a more accurate investing view, add your monthly investing contributions and, if relevant, employer match. Employer match can matter because it increases what gets invested without reducing your take-home pay, but it can also distort comparisons if you are benchmarking yourself against others. That is why it is optional and you can decide whether to include it.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li><strong>Spending excludes investments:</strong> “Monthly spending” should include living costs, bills, debt payments, and lifestyle spending, but not your investment contributions.</li>
+                <li><strong>Monthly inputs are treated as stable:</strong> The calculator assumes the month you enter is representative. If your income or spending varies, use an average of the last 3 to 6 months.</li>
+                <li><strong>Investing is treated as savings:</strong> Investment contributions are treated as part of savings, not spending. This is the core difference from a basic budget calculator.</li>
+                <li><strong>Employer match is optional:</strong> If you include employer match, the investing rate increases even though your cash flow may not change. Use this for retirement planning, not for comparing lifestyle discipline.</li>
+                <li><strong>No tax modeling:</strong> Choosing gross vs net is a framing choice only. The calculator does not estimate taxes, deductions, or changing brackets.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between total savings rate and investing rate?</h3>
+              <p>
+                Total savings rate is the percentage of your income not spent on non-investment spending. Investing rate is the percentage of your income that you deliberately direct into investments (retirement, brokerage, ETFs, unit trusts, and similar). If you invest and still have cash left over, your total savings rate will be higher than your investing rate. If you invest more than your free cash flow, you will show a shortfall.
+              </p>
+
+              <h3>Should I use gross income or net income?</h3>
+              <p>
+                Use net (after tax) if you are trying to manage your monthly reality, because spending and investing come from take-home pay. Use gross (before tax) if you are comparing against common benchmarks that are reported on a pre-tax basis. The “best” choice is the one you will use consistently. Comparing a net-based savings rate to a gross-based benchmark is a mistake.
+              </p>
+
+              <h3>Where do debt payments belong: spending or investing?</h3>
+              <p>
+                In this calculator, debt payments belong in spending because they are cash leaving your pocket today. Paying down high-interest debt can be the best “investment” you can make, but it is not an investable asset contribution. If you want a clean savings rate, treat debt payments as spending and treat investing contributions as investing.
+              </p>
+
+              <h3>What if I do not know my exact monthly spending?</h3>
+              <p>
+                Use an estimate, but make it defensible. A simple approach is to take your last three months of bank statements and calculate the average of all non-investment outflows. If you truly cannot do that, start with a conservative estimate (higher spending), then update next month. The goal is directionally correct decisions, not perfect precision.
+              </p>
+
+              <h3>Why does the calculator show a cash surplus or shortfall?</h3>
+              <p>
+                Many people invest automatically and only later discover that their spending plus investing exceeds their income. The surplus or shortfall shows whether your plan is cash-flow sustainable. A shortfall means you are funding the gap from savings, credit, or delayed bills. A surplus means you have additional cash capacity that could be invested, used to build an emergency fund, or used to reduce debt.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-20</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1899,6 +1899,20 @@
     ]
   },
   {
+    "title": "Portfolio Allocation Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/portfolio-allocation-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "portfolio allocation calculator | snapcalc",
+      "portfolio allocation calculator snapcalc",
+      "portfolio allocation calculator",
+      "savings & investments portfolio allocation calculator snapcalc",
+      "savings & investments portfolio allocation calculator",
+      "portfolio allocation snapcalc",
+      "pacs"
+    ]
+  },
+  {
     "title": "Present Value Calculator | SnapCalc",
     "url": "/calculators/savings-investments/present-value-calculator/",
     "category": "Savings & Investments",
@@ -1910,6 +1924,20 @@
       "savings & investments present value calculator",
       "present value snapcalc",
       "pvcs"
+    ]
+  },
+  {
+    "title": "Rebalancing Impact Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/rebalancing-impact-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "rebalancing impact calculator | snapcalc",
+      "rebalancing impact calculator snapcalc",
+      "rebalancing impact calculator",
+      "savings & investments rebalancing impact calculator snapcalc",
+      "savings & investments rebalancing impact calculator",
+      "rebalancing impact snapcalc",
+      "rics"
     ]
   },
   {
@@ -1941,6 +1969,48 @@
     ]
   },
   {
+    "title": "Retirement Shortfall Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/retirement-shortfall-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "retirement shortfall calculator | snapcalc",
+      "retirement shortfall calculator snapcalc",
+      "retirement shortfall calculator",
+      "savings & investments retirement shortfall calculator snapcalc",
+      "savings & investments retirement shortfall calculator",
+      "retirement shortfall snapcalc",
+      "rscs"
+    ]
+  },
+  {
+    "title": "Savings Goal Timeline Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/savings-goal-timeline-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "savings goal timeline calculator | snapcalc",
+      "savings goal timeline calculator snapcalc",
+      "savings goal timeline calculator",
+      "savings & investments savings goal timeline calculator snapcalc",
+      "savings & investments savings goal timeline calculator",
+      "savings goal timeline snapcalc",
+      "sgtcs"
+    ]
+  },
+  {
+    "title": "Savings Rate Calculator (Investing Version) | SnapCalc",
+    "url": "/calculators/savings-investments/savings-rate-calculator-investing-version/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "savings rate calculator (investing version) | snapcalc",
+      "savings rate calculator investing version snapcalc",
+      "savings rate calculator investing version",
+      "savings & investments savings rate calculator investing version snapcalc",
+      "savings & investments savings rate calculator investing version",
+      "savings rate investing version snapcalc",
+      "srcivs"
+    ]
+  },
+  {
     "title": "Simple Interest Calculator | SnapCalc",
     "url": "/calculators/savings-investments/simple-interest-calculator/",
     "category": "Savings & Investments",
@@ -1952,6 +2022,34 @@
       "savings & investments simple interest calculator",
       "simple interest snapcalc",
       "sics"
+    ]
+  },
+  {
+    "title": "Time-to-Million Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/time-to-million-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "time-to-million calculator | snapcalc",
+      "time to million calculator snapcalc",
+      "time to million calculator",
+      "savings & investments time to million calculator snapcalc",
+      "savings & investments time to million calculator",
+      "time to million snapcalc",
+      "tmcs"
+    ]
+  },
+  {
+    "title": "Wealth Projection Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/wealth-projection-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "wealth projection calculator | snapcalc",
+      "wealth projection calculator snapcalc",
+      "wealth projection calculator",
+      "savings & investments wealth projection calculator snapcalc",
+      "savings & investments wealth projection calculator",
+      "wealth projection snapcalc",
+      "wpcs"
     ]
   },
   {
