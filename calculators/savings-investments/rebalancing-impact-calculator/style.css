@@ -303,10 +303,28 @@
   margin: 6px 0;
 }
 
+.result-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid #e2e2e2;
+  background: #fbfbfb;
+}
+
+/* NEW: keep the table inside the 360px calculator container */
+.result-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
 .result-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
-  margin-top: 10px;
 }
 
 .result-table th,
@@ -315,20 +333,12 @@
   padding: 8px;
   font-size: 13px;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 .result-table th {
   font-weight: 700;
   background: #fafafa;
-}
-
-.result-pill {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  border: 1px solid #e2e2e2;
-  background: #fbfbfb;
 }
 
 /* Basic mobile tweak */

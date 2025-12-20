@@ -93,11 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return s.length ? s : fallback;
   }
 
-  function roundTwo(n) {
-    if (!Number.isFinite(n)) return 0;
-    return Math.round(n * 100) / 100;
-  }
-
   function toPercentDecimal(pctValue) {
     if (!Number.isFinite(pctValue)) return 0;
     return pctValue / 100;
@@ -133,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      // Parse inputs using toNumber() (from /scripts/main.js)
       const pv = toNumber(portfolioValue ? portfolioValue.value : "");
 
       const txCostPct = toNumber(transactionCostPct ? transactionCostPct.value : "");
@@ -141,13 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const assets = buildAssets();
 
-      // Basic existence guard
       if (!portfolioValue || !asset1Current || !asset1Target || !asset2Current || !asset2Target) return;
 
-      // Validation
       if (!validatePositive(pv, "portfolio value")) return;
 
-      // Percent validation: allow blanks to be treated as 0, but do not allow negatives
       for (let i = 0; i < assets.length; i++) {
         const c = assets[i].currentPct;
         const t = assets[i].targetPct;
@@ -180,11 +171,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Calculation logic
       const rows = [];
       let totalBuys = 0;
       let totalSells = 0;
-      let totalAbsTrades = 0;
 
       for (let i = 0; i < assets.length; i++) {
         const currentShare = currentNorm.normalized[i];
@@ -199,7 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         totalBuys += buy;
         totalSells += sell;
-        totalAbsTrades += Math.abs(trade);
 
         const driftPctPoints = (targetShare - currentShare) * 100;
 
@@ -214,7 +202,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      // In a closed system buys and sells should match, but rounding and normalization can cause tiny differences
       const imbalance = totalBuys - totalSells;
       const turnover = pv > 0 ? (totalBuys + totalSells) / pv : 0;
 
@@ -225,7 +212,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const estSellTax = totalSells * taxRate;
       const estTotalFriction = estTransactionCost + estSellTax;
 
-      // Build output HTML
       const didNormalizeCurrent = Math.abs(currentNorm.sum - 100) > 0.01;
       const didNormalizeTarget = Math.abs(targetNorm.sum - 100) > 0.01;
 
@@ -267,25 +253,26 @@ document.addEventListener("DOMContentLoaded", function () {
           <p><strong>Buy/Sell imbalance (rounding effect):</strong> ${formatNumberTwoDecimals(imbalance)}</p>
         </div>
 
-        <table class="result-table" aria-label="Rebalancing trade plan">
-          <thead>
-            <tr>
-              <th>Asset</th>
-              <th>Current</th>
-              <th>Target</th>
-              <th>Drift</th>
-              <th>Current value</th>
-              <th>Target value</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${tableRowsHtml}
-          </tbody>
-        </table>
+        <div class="result-table-wrap" aria-label="Scrollable table container">
+          <table class="result-table" aria-label="Rebalancing trade plan">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Current</th>
+                <th>Target</th>
+                <th>Drift</th>
+                <th>Current value</th>
+                <th>Target value</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tableRowsHtml}
+            </tbody>
+          </table>
+        </div>
       `;
 
-      // Output
       setResultSuccess(resultHtml);
     });
   }
