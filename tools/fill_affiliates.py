@@ -340,15 +340,6 @@ def main() -> int:
 
             html = html2
 
-        if updated:
-            # backup
-            bak = index_path.with_suffix(".html.bak")
-            try:
-                if not bak.exists():
-                    bak.write_text(index_path.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
-            except Exception:
-                pass
-
             try:
                 index_path.write_text(html, encoding="utf-8")
                 pages_updated += 1
