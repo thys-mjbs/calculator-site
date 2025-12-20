@@ -1,0 +1,330 @@
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Optional intro text below calculator title */
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Generic input groups (both .form-group and .input-group) */
+.form-group,
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label,
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="text"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+#calculateButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Related category tiles */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.related-title {
+  font-weight: bold;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+/* SEO section */
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.seo-section h3 {
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholders – shared look */
+.ad-block {
+  border-radius: 8px;
+  border: 1px dashed #d0d0d0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 6px,
+    #e9e9e9 6px,
+    #e9e9e9 12px
+  );
+}
+
+/* Text-based affiliate tile (canonical: 300px tall, centered, override-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none;
+  color: inherit;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px !important;
+  padding: 18px !important;
+  gap: 16px !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.ad-block a.affiliate-link .affiliate-label {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  color: #111111;
+}
+
+.ad-block a.affiliate-link .affiliate-copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666666;
+  max-width: 320px;
+}
+
+.ad-block a.affiliate-link .affiliate-cta {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.ad-block a.affiliate-link:hover {
+  filter: brightness(0.98);
+}
+
+/* Fallback: ONLY when text affiliate HTML regresses to sibling elements (no .affiliate-link wrapper) */
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) {
+  width: 300px !important;
+  height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label,
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy,
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #111111 !important;
+}
+
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #666666 !important;
+  max-width: 320px;
+}
+
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  margin-top: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  color: #222222;
+}
+
+/* Uniform book-cover rendering (max 300×300 visual footprint) */
+.ad-block img {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* Breadcrumbs – force same look everywhere */
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Basic mobile tweak */
+@media (max-width: 768px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
+
+/* Calculator-specific additions (scoped) */
+.hidden {
+  display: none;
+}
+
+.mode-block {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0 12px;
+  background: #ffffff;
+}
+
+.mode-block legend {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 6px;
+}
+
+.select-control {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  background: #ffffff;
+}

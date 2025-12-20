@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Property Investment ROI Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate property investment ROI using rent, vacancy, expenses, appreciation, and optional mortgage financing to see cash flow, cash-on-cash return, cap rate, and total profit over your holding period.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/property-investment-roi-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Property Investment ROI Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate property investment ROI using rent, vacancy, expenses, appreciation, and optional mortgage financing to see cash flow, cash-on-cash return, cap rate, and total profit over your holding period.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/property-investment-roi-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Property Investment ROI Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate property investment ROI using rent, vacancy, expenses, appreciation, and optional mortgage financing to see cash flow, cash-on-cash return, cap rate, and total profit over your holding period.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Property Investment ROI Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/property-investment-roi-calculator/",
+      "description": "Estimate property investment ROI using rent, vacancy, expenses, appreciation, and optional mortgage financing to see cash flow, cash-on-cash return, cap rate, and total profit over your holding period."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Property Investment ROI Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Property Investment ROI Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate ROI from rent, costs, and resale value</h2>
+
+              <p class="calculator-intro">
+                Enter your purchase price, rent, vacancy, and expenses to estimate cash flow, cap rate, cash-on-cash return, and total ROI over a holding period. Add a mortgage if you want a leveraged scenario.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="modeSelect">Purchase method</label>
+                <select id="modeSelect" class="select-control" aria-label="Select purchase method">
+                  <option value="cash" selected>Cash purchase (no mortgage)</option>
+                  <option value="mortgage">Mortgage financing</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="purchasePrice">Purchase price</label>
+                <input id="purchasePrice" type="text" inputmode="decimal" placeholder="e.g., 1,500,000">
+              </div>
+
+              <div class="input-group">
+                <label for="upfrontCosts">Upfront costs (closing, fees, repairs)</label>
+                <input id="upfrontCosts" type="text" inputmode="decimal" placeholder="e.g., 50,000">
+              </div>
+
+              <div class="input-group">
+                <label for="monthlyRent">Monthly rent</label>
+                <input id="monthlyRent" type="text" inputmode="decimal" placeholder="e.g., 15,000">
+              </div>
+
+              <div class="input-group">
+                <label for="vacancyRate">Vacancy rate (%)</label>
+                <input id="vacancyRate" type="text" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="input-group">
+                <label for="monthlyExpenses">Monthly operating expenses (excluding mortgage)</label>
+                <input id="monthlyExpenses" type="text" inputmode="decimal" placeholder="e.g., 3,500">
+              </div>
+
+              <div class="input-group">
+                <label for="rentGrowthRate">Annual rent growth (%)</label>
+                <input id="rentGrowthRate" type="text" inputmode="decimal" placeholder="e.g., 2">
+              </div>
+
+              <div class="input-group">
+                <label for="expenseGrowthRate">Annual expense growth (%)</label>
+                <input id="expenseGrowthRate" type="text" inputmode="decimal" placeholder="e.g., 2">
+              </div>
+
+              <div class="input-group">
+                <label for="appreciationRate">Annual property appreciation (%)</label>
+                <input id="appreciationRate" type="text" inputmode="decimal" placeholder="e.g., 3">
+              </div>
+
+              <div class="input-group">
+                <label for="holdingYears">Holding period (years)</label>
+                <input id="holdingYears" type="text" inputmode="decimal" placeholder="e.g., 10">
+              </div>
+
+              <div class="input-group">
+                <label for="saleCostRate">Sale costs (% of sale price)</label>
+                <input id="saleCostRate" type="text" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <fieldset id="modeBlockMortgage" class="mode-block hidden">
+                <legend>Mortgage inputs (optional)</legend>
+
+                <div class="input-group">
+                  <label for="downPaymentRate">Down payment (%)</label>
+                  <input id="downPaymentRate" type="text" inputmode="decimal" placeholder="e.g., 20">
+                </div>
+
+                <div class="input-group">
+                  <label for="interestRate">Interest rate (%)</label>
+                  <input id="interestRate" type="text" inputmode="decimal" placeholder="e.g., 11.5">
+                </div>
+
+                <div class="input-group">
+                  <label for="loanTermYears">Loan term (years)</label>
+                  <input id="loanTermYears" type="text" inputmode="decimal" placeholder="e.g., 20">
+                </div>
+              </fieldset>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate ROI</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/44qHU1c" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Property Expenses</div>
+    <p class="affiliate-copy">Plan and manage ongoing expenses for property ownership.</p>
+    <div class="affiliate-cta">View property expense books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Compare buying, renting, investing, and ownership costs with property-focused calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, affordability, and cash flow so your property decisions fit your wider finances.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Model growth, returns, and contributions to compare property returns with other investments.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/44XFcQY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Property Analysis</div>
+    <p class="affiliate-copy">Analyze property deals using cash flow, yield, and valuation methods.</p>
+    <div class="affiliate-cta">View property analysis books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Property investment ROI calculator for rental property returns and total profit</h2>
+
+              <p>
+                A property investment ROI calculator helps you estimate how much money you might make (or lose) from a rental property over time. Unlike a simple “rent minus bond” approach, real ROI includes vacancy, operating costs, financing (if you use a mortgage), and the resale value of the property when you sell. This calculator combines those pieces to produce a practical view of returns.
+              </p>
+              <p>
+                To use it quickly, enter the purchase price, monthly rent, and a realistic monthly expense estimate. If you do not know vacancy, use a small default such as 5%. Then set a holding period and an appreciation rate for the sale price. You will get a first-year snapshot (cap rate and cash flow) plus a longer-term estimate (total profit and ROI over the holding period).
+              </p>
+              <p>
+                If you want a more accurate scenario, add rent growth, expense growth, and mortgage details. The calculator will estimate your monthly mortgage payment and subtract it from rental cash flow. It will also estimate the remaining loan balance at the time of sale, because that balance reduces your net sale proceeds. This matters a lot: two properties with the same rent can have very different ROI depending on interest rate, down payment, and costs.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator treats vacancy as a percentage reduction of gross rent across the year (it does not model exact vacant months).</li>
+                <li>Operating expenses entered here exclude mortgage payments; mortgage costs are handled separately in the financing mode.</li>
+                <li>Rent growth and expense growth are applied annually as simple compounding; if you leave them blank, the calculator assumes 0% growth.</li>
+                <li>Property appreciation is applied annually as compound growth to estimate the sale price; real markets vary and may be negative in some periods.</li>
+                <li>Sale costs are estimated as a percentage of the sale price to cover agent fees and typical selling costs; taxes and legal fees vary by region and are not fully modeled.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between ROI, cap rate, and cash-on-cash return?</h3>
+              <p>
+                Cap rate is a property performance measure before financing: it is net operating income (rent after vacancy and operating costs) divided by purchase price. Cash-on-cash return focuses on your actual cash invested and includes mortgage payments, so it is usually the better “did I earn enough on my money?” view. ROI in this calculator is a holding-period return that includes both cash flow over time and net proceeds from selling the property.
+              </p>
+
+              <h3>Do I have to fill in every input to get a result?</h3>
+              <p>
+                No. The minimum useful set is purchase price and monthly rent, plus some estimate of expenses. Everything else improves accuracy. If you do not know rent growth, expense growth, vacancy, or sale costs, leave them blank and the calculator will assume 0% growth and 0% costs where relevant, which you should treat as optimistic.
+              </p>
+
+              <h3>How should I estimate monthly operating expenses?</h3>
+              <p>
+                Include recurring costs that come out of the rent: maintenance allowance, insurance, rates, levies/HOA, letting or management fees, and any expected utilities you pay. If you are unsure, it is safer to round up. Underestimating expenses is one of the fastest ways to overestimate ROI.
+              </p>
+
+              <h3>Why can mortgage financing make ROI look higher or lower?</h3>
+              <p>
+                Financing changes both your cash invested and your ongoing cash flow. A smaller down payment can raise ROI on cash invested if the property performs well, but higher interest rates can destroy cash flow and reduce total profit. This calculator shows both the mortgage payment impact and the loan balance you still owe when you sell.
+              </p>
+
+              <h3>When does this calculator not apply?</h3>
+              <p>
+                If the property has irregular cash flows (major renovations, staged developments, multiple units with different rents), or if your return depends heavily on tax treatment, this simplified model will not capture all outcomes. It is still useful for a first-pass comparison, but you should do a detailed cash flow model for high-stakes decisions.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-20</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/44tSWmq" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Due Diligence</div>
+    <p class="affiliate-copy">Learn how to evaluate properties thoroughly before purchase.</p>
+    <div class="affiliate-cta">Browse real estate due diligence books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1844,6 +1844,60 @@
     ]
   },
   {
+    "title": "Closing Costs Estimator | SnapCalc",
+    "url": "/calculators/real-estate-property/closing-costs-estimator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "closing costs estimator | snapcalc",
+      "closing costs estimator snapcalc",
+      "closing costs estimator",
+      "real estate & property closing costs estimator snapcalc",
+      "real estate & property closing costs estimator",
+      "cces"
+    ]
+  },
+  {
+    "title": "Debt-to-Income (DTI) for Home Buying | SnapCalc",
+    "url": "/calculators/real-estate-property/debt-to-income-dti-for-home-buying/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "debt-to-income (dti) for home buying | snapcalc",
+      "debt to income dti for home buying snapcalc",
+      "debt to income dti for home buying",
+      "real estate & property debt to income dti for home buying snapcalc",
+      "real estate & property debt to income dti for home buying",
+      "didfhb"
+    ]
+  },
+  {
+    "title": "Early Payoff Date Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/early-payoff-date-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "early payoff date calculator | snapcalc",
+      "early payoff date calculator snapcalc",
+      "early payoff date calculator",
+      "real estate & property early payoff date calculator snapcalc",
+      "real estate & property early payoff date calculator",
+      "early payoff date snapcalc",
+      "epdcs"
+    ]
+  },
+  {
+    "title": "Extra Mortgage Payment Impact Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/extra-mortgage-payment-impact-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "extra mortgage payment impact calculator | snapcalc",
+      "extra mortgage payment impact calculator snapcalc",
+      "extra mortgage payment impact calculator",
+      "real estate & property extra mortgage payment impact calculator snapcalc",
+      "real estate & property extra mortgage payment impact calculator",
+      "extra mortgage payment impact snapcalc",
+      "empics"
+    ]
+  },
+  {
     "title": "Home Loan Comparison Calculator | SnapCalc",
     "url": "/calculators/real-estate-property/home-loan-comparison-calculator/",
     "category": "Real Estate & Property",
@@ -1855,6 +1909,20 @@
       "real estate & property home loan comparison calculator",
       "home loan comparison snapcalc",
       "hlccs"
+    ]
+  },
+  {
+    "title": "Homeowners Insurance Cost Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/homeowners-insurance-cost-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "homeowners insurance cost calculator | snapcalc",
+      "homeowners insurance cost calculator snapcalc",
+      "homeowners insurance cost calculator",
+      "real estate & property homeowners insurance cost calculator snapcalc",
+      "real estate & property homeowners insurance cost calculator",
+      "homeowners insurance cost snapcalc",
+      "hiccs"
     ]
   },
   {
@@ -1872,6 +1940,20 @@
     ]
   },
   {
+    "title": "Loan-to-Value (LTV) Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/loan-to-value-ltv-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "loan-to-value (ltv) calculator | snapcalc",
+      "loan to value ltv calculator snapcalc",
+      "loan to value ltv calculator",
+      "real estate & property loan to value ltv calculator snapcalc",
+      "real estate & property loan to value ltv calculator",
+      "loan to value ltv snapcalc",
+      "lvlcs"
+    ]
+  },
+  {
     "title": "Mortgage Affordability Calculator | SnapCalc",
     "url": "/calculators/real-estate-property/mortgage-affordability-calculator/",
     "category": "Real Estate & Property",
@@ -1886,6 +1968,20 @@
     ]
   },
   {
+    "title": "Mortgage Insurance (PMI) Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/mortgage-insurance-pmi-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "mortgage insurance (pmi) calculator | snapcalc",
+      "mortgage insurance pmi calculator snapcalc",
+      "mortgage insurance pmi calculator",
+      "real estate & property mortgage insurance pmi calculator snapcalc",
+      "real estate & property mortgage insurance pmi calculator",
+      "mortgage insurance pmi snapcalc",
+      "mipcs"
+    ]
+  },
+  {
     "title": "Mortgage Repayment Calculator | SnapCalc",
     "url": "/calculators/real-estate-property/mortgage-repayment-calculator/",
     "category": "Real Estate & Property",
@@ -1897,6 +1993,48 @@
       "real estate & property mortgage repayment calculator",
       "mortgage repayment snapcalc",
       "mrcs"
+    ]
+  },
+  {
+    "title": "Property Investment ROI Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/property-investment-roi-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "property investment roi calculator | snapcalc",
+      "property investment roi calculator snapcalc",
+      "property investment roi calculator",
+      "real estate & property property investment roi calculator snapcalc",
+      "real estate & property property investment roi calculator",
+      "property investment roi snapcalc",
+      "pircs"
+    ]
+  },
+  {
+    "title": "Property Tax Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/property-tax-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "property tax calculator | snapcalc",
+      "property tax calculator snapcalc",
+      "property tax calculator",
+      "real estate & property property tax calculator snapcalc",
+      "real estate & property property tax calculator",
+      "property tax snapcalc",
+      "ptcs"
+    ]
+  },
+  {
+    "title": "Property Transfer Cost Calculator | SnapCalc",
+    "url": "/calculators/real-estate-property/property-transfer-cost-calculator/",
+    "category": "Real Estate & Property",
+    "aliases": [
+      "property transfer cost calculator | snapcalc",
+      "property transfer cost calculator snapcalc",
+      "property transfer cost calculator",
+      "real estate & property property transfer cost calculator snapcalc",
+      "real estate & property property transfer cost calculator",
+      "property transfer cost snapcalc",
+      "ptccs"
     ]
   },
   {
