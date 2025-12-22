@@ -5,267 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: title and description -->
-    <title>Ratio Calculator | SnapCalc</title>
+    <title>Standard Deviation (Simple) Calculator | SnapCalc</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Simplify ratios, convert a:b into percentages, and scale ratios when you know one side or the total amount.">
+    <meta name="description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
 
     <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/ratio-calculator/">
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/">
 
     <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Ratio Calculator | SnapCalc">
-    <meta property="og:description" content="Simplify ratios, convert a:b into percentages, and scale ratios when you know one side or the total amount.">
+    <meta property="og:title" content="Standard Deviation (Simple) Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/ratio-calculator/">
-    <meta property="og:image" content="httA<!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- SEO: title and description -->
-        <title>Standard Deviation (Simple) Calculator | SnapCalc</title>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <meta name="description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
-    
-        <!-- Canonical URL (always trailing slash) -->
-        <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/">
-    
-        <!-- Open Graph (for sharing, previews) -->
-        <meta property="og:title" content="Standard Deviation (Simple) Calculator | SnapCalc">
-        <meta property="og:description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/">
-        <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-    
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Standard Deviation (Simple) Calculator | SnapCalc">
-        <meta name="twitter:description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
-        <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-    
-        <!-- JSON-LD structured data for the calculator page -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "Standard Deviation (Simple) Calculator",
-          "applicationCategory": "Calculator",
-          "operatingSystem": "All",
-          "url": "https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/",
-          "description": "Calculate standard deviation from a list of numbers (sample or population), plus mean and variance, for a quick view of how spread out your dataset is."
-        }
-        </script>
-    
-        <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="/scripts/main.js" defer></script>
-        <script src="/scripts/search.js" defer></script>
-        <script src="script.js" defer></script>
-      </head>
-    
-      <body>
-        <header class="site-header">
-          <div class="site-header-inner">
-            <a href="/" class="site-logo">SnapCalc</a>
-    
-            <div class="site-search">
-              <input
-                type="search"
-                id="siteSearchInput"
-                placeholder="Search calculators…"
-                autocomplete="off"
-                aria-label="Search calculators"
-              />
-              <div
-                id="siteSearchResults"
-                class="site-search-results"
-                aria-hidden="true"
-              ></div>
-            </div>        
-    
-            <nav class="site-nav">
-              <a href="/">Home</a>
-              <a href="/#categories">Categories</a>
-              <a href="/contact.html">Contact</a>
-            </nav>
-          </div>
-        </header>
-    
-        <main class="site-main">
-          <!-- Breadcrumbs: required on every calculator -->
-          <nav class="breadcrumbs">
-            <a href="/">Home</a> ›
-            <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
-            <span>Standard Deviation (Simple) Calculator</span>
-          </nav>
-    
-          <div class="page-layout">
-            <h1>Standard Deviation (Simple) Calculator</h1>
-    
-            <div class="page-grid">
-              <!-- Row 1: ad + main calculator + ad -->
-              <div class="grid-slot">
-                <div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4aKussY" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Measurement Math</div>
-    <p class="affiliate-copy">Learn to calculate length, area, volume, and basic measurements accurately.</p>
-    <div class="affiliate-cta">Explore measurement math books on Amazon</div>
-  </a>
-</div>
-              </div>
-    
-              <div class="grid-slot">
-                <div class="calculator-container">
-                  <h2>Standard deviation from a list of numbers</h2>
-    
-                  <p class="calculator-intro">Paste your numbers and get standard deviation, variance, and a quick spread summary. Choose sample (n−1) or population (n).</p>
-    
-                  <!-- CALCULATOR UI START -->
-                  <div class="form-group">
-                    <label for="valuesInput">Values (separate by commas, spaces, or new lines)</label>
-                    <textarea id="valuesInput" rows="6" placeholder="Example: 12, 15, 15, 18, 22"></textarea>
-                    <p class="field-hint">Tip: You can paste a column from a spreadsheet. Any extra spaces or blank lines are ignored.</p>
-                  </div>
-    
-                  <div class="form-group">
-                    <label for="sdType">Standard deviation type</label>
-                    <select id="sdType">
-                      <option value="sample" selected>Sample standard deviation (n − 1)</option>
-                      <option value="population">Population standard deviation (n)</option>
-                    </select>
-                    <p class="field-hint">Use sample when your list is a subset of a bigger group. Use population when your list is the whole group.</p>
-                  </div>
-                  <!-- CALCULATOR UI END -->
-    
-                  <button id="calculateButton" type="button">Calculate standard deviation</button>
-    
-                  <div id="result" aria-live="polite"></div>
-    
-                  <div class="share-buttons">
-                    <button id="shareWhatsAppButton" type="button">
-                      Share this calculator on WhatsApp
-                    </button>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="grid-slot">
-                <div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4iXXNCq" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Percentage Calculations</div>
-    <p class="affiliate-copy">Learn how to calculate percentages for discounts, increases, and comparisons.</p>
-    <div class="affiliate-cta">Explore percentage calculation books on Amazon</div>
-  </a>
-</div>
-              </div>
-    
-              <!-- Row 2: related CATEGORIES (three thin tiles) -->
-              <div class="grid-slot">
-                <a class="related-card" href="/categories/math-general-calculators/">
-                  <h3 class="related-title">Math & General Calculators</h3>
-                  <p class="related-desc">Work with numbers fast: averages, ranges, ratios, rounding, and other everyday math tools.</p>
-                </a>
-              </div>
-    
-              <div class="grid-slot">
-                <a class="related-card" href="/categories/education-exams/">
-                  <h3 class="related-title">Education & Exams</h3>
-                  <p class="related-desc">Study and grading helpers like GPA tools, grade calculators, and exam planning utilities.</p>
-                </a>
-              </div>
-    
-              <div class="grid-slot">
-                <a class="related-card" href="/categories/savings-investments/">
-                  <h3 class="related-title">Savings & Investments</h3>
-                  <p class="related-desc">Estimate growth, compare scenarios, and understand return-related calculations for planning.</p>
-                </a>
-              </div>
-    
-              <!-- Row 3: affiliate + SEO + affiliate -->
-              <div class="grid-slot">
-                <div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3XUsE9k" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Math Reference</div>
-    <p class="affiliate-copy">Use concise math references for quick formula and concept lookups.</p>
-    <div class="affiliate-cta">Browse math reference guides on Amazon</div>
-  </a>
-</div>
-              </div>
-    
-              <div class="grid-slot">
-                <section class="seo-section">
-                  <h2>Standard deviation calculator for a list of numbers (simple, practical spread)</h2>
-    
-                  <p>Standard deviation tells you how spread out your numbers are around the average. If your values cluster close to the mean, standard deviation is small. If they jump around widely, standard deviation is larger. This “simple” calculator is designed for the most common real-world task: you have a short list of measurements or scores and you want one reliable number that summarizes variability.</p>
-    
-                  <p>To use the calculator, paste your values into the box. You can separate values with commas, spaces, or new lines, and you can paste a column from a spreadsheet. Then choose the standard deviation type. If your list is a sample taken from a larger group (for example, 20 test scores out of a full grade, or a few measurements from a production run), pick sample standard deviation (n − 1). If your list represents the entire group you care about (for example, every score in the class or every recorded measurement), pick population standard deviation (n). Click calculate to see standard deviation plus supporting figures like mean and variance.</p>
-    
-                  <p>The output is meant to be decision-friendly. Standard deviation is the main result. Variance is shown because it is part of the same calculation and is useful in some formulas, but standard deviation is easier to interpret because it uses the same units as your original values. You also get a quick dataset summary (count, min, max, range) because standard deviation makes more sense when you can see the scale and the extremes. If your mean is not zero, the calculator also shows the coefficient of variation (CV%), which expresses spread as a percentage of the mean, making it easier to compare variability across datasets with different scales.</p>
-    
-                  <h3>Assumptions and how to use this calculator</h3>
-                  <ul>
-                    <li>Your list represents one set of comparable numbers measured in the same unit (for example, all in seconds, all in marks, or all in kilograms).</li>
-                    <li>Blank entries and extra separators are ignored, but non-numeric items are not treated as values.</li>
-                    <li>Sample standard deviation uses n − 1 in the denominator; population standard deviation uses n.</li>
-                    <li>At least two valid numbers are required, because “spread” is not meaningful with only one value.</li>
-                    <li>This tool assumes a straightforward list of raw values and does not support grouped frequency tables or weighted values.</li>
-                  </ul>
-    
-                  <h3>Common questions</h3>
-    
-                  <h3>What is the difference between sample and population standard deviation?</h3>
-                  <p>Population standard deviation treats your list as the full set you care about and divides by n. Sample standard deviation assumes your list is only a subset and divides by n − 1 to correct for the fact that samples tend to underestimate spread. If you are unsure, sample is usually the safer default for real-world data you collected from a bigger group.</p>
-    
-                  <h3>Why do I need at least two numbers?</h3>
-                  <p>With one value, there is no variation to measure. Standard deviation is built from differences between values and the mean, so you need at least two data points to produce a meaningful spread estimate.</p>
-    
-                  <h3>My standard deviation seems “too high” or “too low.” How do I sanity-check it?</h3>
-                  <p>Start by checking your range (max minus min). Standard deviation cannot be bigger than the range and will usually be much smaller unless your data is extremely polarized. Also check if you accidentally mixed units (for example, seconds and milliseconds) or included a stray extra digit (like 500 instead of 50). Outliers can push standard deviation up fast, so scan for obvious abnormal values.</p>
-    
-                  <h3>What does variance mean, and why is it shown?</h3>
-                  <p>Variance is the average squared distance from the mean. It is the core quantity used to calculate standard deviation (standard deviation is the square root of variance). Variance is shown mainly for completeness and for cases where you need it for another calculation, but standard deviation is usually easier to interpret because it is in the same unit as your data.</p>
-    
-                  <h3>When should I use coefficient of variation (CV%)?</h3>
-                  <p>CV% is useful when you want to compare spread across datasets with different averages. For example, a standard deviation of 5 might be small if the mean is 200, but large if the mean is 20. CV% expresses spread relative to the mean. If the mean is near zero, CV% becomes unstable and is not a good comparison metric.</p>
-    
-                  <div class="last-updated">Last updated: 2025-12-22</div>
-                </section>
-              </div>
-    
-              <div class="grid-slot">
-                <div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3N0A34o" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Problem Solving</div>
-    <p class="affiliate-copy">Develop logical approaches to solving everyday math problems.</p>
-    <div class="affiliate-cta">Browse math problem solving books on Amazon</div>
-  </a>
-</div>
-              </div>
-            </div>
-          </div>
-        </main>
-    
-        <footer class="site-footer">
-          <div class="site-footer-inner">
-            <span>© 2025 SnapCalc</span>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/disclaimer.html">Disclaimer</a>
-          </div>
-        </footer>
-    
-        <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-        </script>
-      </body>
-    </html>
-    s://snapcalc.site/assets/share-default.png">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ratio Calculator | SnapCalc">
-    <meta name="twitter:description" content="Simplify ratios, convert a:b into percentages, and scale ratios when you know one side or the total amount.">
+    <meta name="twitter:title" content="Standard Deviation (Simple) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset.">
     <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
 
     <!-- JSON-LD structured data for the calculator page -->
@@ -273,11 +30,11 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Ratio Calculator",
+      "name": "Standard Deviation (Simple) Calculator",
       "applicationCategory": "Calculator",
       "operatingSystem": "All",
-      "url": "https://snapcalc.site/calculators/math-general-calculators/ratio-calculator/",
-      "description": "Simplify ratios, convert a:b into percentages, and scale ratios when you know one side or the total amount."
+      "url": "https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/",
+      "description": "Calculate standard deviation from a list of numbers (sample or population), plus mean and variance, for a quick view of how spread out your dataset is."
     }
     </script>
 
@@ -320,69 +77,49 @@
       <!-- Breadcrumbs: required on every calculator -->
       <nav class="breadcrumbs">
         <a href="/">Home</a> ›
-        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
-        <span>Ratio Calculator</span>
+        <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
+        <span>Standard Deviation (Simple) Calculator</span>
       </nav>
 
       <div class="page-layout">
-        <h1>Ratio Calculator</h1>
+        <h1>Standard Deviation (Simple) Calculator</h1>
 
         <div class="page-grid">
           <!-- Row 1: ad + main calculator + ad -->
           <div class="grid-slot">
             <div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/3MZP9qT" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Fractions</div>
-                <p class="affiliate-copy">Understand fraction operations including addition, subtraction, and simplification.</p>
-                <div class="affiliate-cta">Explore fraction calculation books on Amazon</div>
-              </a>
-            </div>
+  <a class="affiliate-link" href="https://amzn.to/3MZP9qT" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Fractions</div>
+    <p class="affiliate-copy">Understand fraction operations including addition, subtraction, and simplification.</p>
+    <div class="affiliate-cta">Explore fraction calculation books on Amazon</div>
+  </a>
+</div>
           </div>
 
           <div class="grid-slot">
             <div class="calculator-container">
-              <h2>Calculate, simplify, and scale a ratio</h2>
+              <h2>Standard deviation from a list of numbers</h2>
 
-              <p class="calculator-intro">Enter a ratio (A:B). Optionally add a known value for A, B, or the total to scale the ratio into real numbers.</p>
+              <p class="calculator-intro">Paste your numbers and get standard deviation, variance, and a quick spread summary. Choose sample (n−1) or population (n).</p>
 
               <!-- CALCULATOR UI START -->
               <div class="form-group">
-                <label for="partA">Ratio part A</label>
-                <input type="text" id="partA" inputmode="decimal" placeholder="e.g., 3">
+                <label for="valuesInput">Values (separate by commas, spaces, or new lines)</label>
+                <textarea id="valuesInput" rows="6" placeholder="Example: 12, 15, 15, 18, 22"></textarea>
+                <p class="field-hint">Tip: You can paste a column from a spreadsheet. Any extra spaces or blank lines are ignored.</p>
               </div>
 
               <div class="form-group">
-                <label for="partB">Ratio part B</label>
-                <input type="text" id="partB" inputmode="decimal" placeholder="e.g., 2">
-              </div>
-
-              <div class="form-group">
-                <label for="modeSelect">What do you want to calculate?</label>
-                <select id="modeSelect">
-                  <option value="simplify">Just simplify and split (no scaling)</option>
-                  <option value="knownA">I know the real value of A</option>
-                  <option value="knownB">I know the real value of B</option>
-                  <option value="knownTotal">I know the total (A + B)</option>
+                <label for="sdType">Standard deviation type</label>
+                <select id="sdType">
+                  <option value="sample" selected>Sample standard deviation (n − 1)</option>
+                  <option value="population">Population standard deviation (n)</option>
                 </select>
-              </div>
-
-              <div id="modeBlockKnownA" class="form-group hidden">
-                <label for="knownA">Known value for A</label>
-                <input type="text" id="knownA" inputmode="decimal" placeholder="e.g., 150">
-              </div>
-
-              <div id="modeBlockKnownB" class="form-group hidden">
-                <label for="knownB">Known value for B</label>
-                <input type="text" id="knownB" inputmode="decimal" placeholder="e.g., 80">
-              </div>
-
-              <div id="modeBlockKnownTotal" class="form-group hidden">
-                <label for="knownTotal">Known total (A + B)</label>
-                <input type="text" id="knownTotal" inputmode="decimal" placeholder="e.g., 1000">
+                <p class="field-hint">Use sample when your list is a subset of a bigger group. Use population when your list is the whole group.</p>
               </div>
               <!-- CALCULATOR UI END -->
 
-              <button id="calculateButton" type="button">Calculate ratio</button>
+              <button id="calculateButton" type="button">Calculate standard deviation</button>
 
               <div id="result" aria-live="polite"></div>
 
@@ -396,93 +133,95 @@
 
           <div class="grid-slot">
             <div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4iU3gu1" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Decimals</div>
-                <p class="affiliate-copy">Learn decimal operations and conversions used in everyday math.</p>
-                <div class="affiliate-cta">View decimal math books on Amazon</div>
-              </a>
-            </div>
+  <a class="affiliate-link" href="https://amzn.to/4rSfnff" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Estimation</div>
+    <p class="affiliate-copy">Improve estimation skills for quick calculations and decision making.</p>
+    <div class="affiliate-cta">View estimation technique books on Amazon</div>
+  </a>
+</div>
           </div>
 
           <!-- Row 2: related CATEGORIES (three thin tiles) -->
           <div class="grid-slot">
             <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math &amp; General Calculators</h3>
-              <p class="related-desc">Run everyday math quickly, from percentages and fractions to ratios and rounding.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/conversions-units-currencies/">
-              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">Convert units, measurements, and common number formats without manual steps.</p>
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Work with numbers fast: averages, ranges, ratios, rounding, and other everyday math tools.</p>
             </a>
           </div>
 
           <div class="grid-slot">
             <a class="related-card" href="/categories/education-exams/">
-              <h3 class="related-title">Education &amp; Exams</h3>
-              <p class="related-desc">Practice core skills and check answers for school, tests, and study sessions.</p>
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study and grading helpers like GPA tools, grade calculators, and exam planning utilities.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Estimate growth, compare scenarios, and understand return-related calculations for planning.</p>
             </a>
           </div>
 
           <!-- Row 3: affiliate + SEO + affiliate -->
           <div class="grid-slot">
-            <div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/3XUsE9k" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Math Reference</div>
-                <p class="affiliate-copy">Use concise math references for quick formula and concept lookups.</p>
-                <div class="affiliate-cta">Browse math reference guides on Amazon</div>
-              </a>
-            </div>
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4alNqWR" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Ratios and Proportions</div>
+    <p class="affiliate-copy">Understand ratios and proportions used in scaling and comparisons.</p>
+    <div class="affiliate-cta">View ratio and proportion books on Amazon</div>
+  </a>
+</div>
           </div>
 
           <div class="grid-slot">
             <section class="seo-section">
-              <h2>Ratio calculator to simplify ratios and scale A:B into real numbers</h2>
+              <h2>Standard deviation calculator for a list of numbers (simple, practical spread)</h2>
 
-              <p>A ratio compares two quantities by showing how much of one thing there is relative to another. You see ratios everywhere: mixing concentrate with water, splitting a bill, blending ingredients, scaling a recipe, allocating a budget across departments, or converting “parts” into actual measurements. This ratio calculator helps you do three practical jobs quickly: simplify a ratio (reduce it to the smallest clean form), convert a ratio into percentages, and scale a ratio into real values when you know one side or the total.</p>
+              <p>Standard deviation tells you how spread out your numbers are around the average. If your values cluster close to the mean, standard deviation is small. If they jump around widely, standard deviation is larger. This “simple” calculator is designed for the most common real-world task: you have a short list of measurements or scores and you want one reliable number that summarizes variability.</p>
 
-              <p>Start by entering the two ratio parts, A and B. For example, if a mix is 3 parts water to 2 parts syrup, you would enter A = 3 and B = 2. The calculator will show the split as a percentage (A as a share of the total, and B as the remainder). It will also show a normalized version of the ratio, where the smaller side becomes 1. This is useful when the ratio is not a neat pair of integers or when you are comparing ratios that use different numbers but represent the same relationship.</p>
+              <p>To use the calculator, paste your values into the box. You can separate values with commas, spaces, or new lines, and you can paste a column from a spreadsheet. Then choose the standard deviation type. If your list is a sample taken from a larger group (for example, 20 test scores out of a full grade, or a few measurements from a production run), pick sample standard deviation (n − 1). If your list represents the entire group you care about (for example, every score in the class or every recorded measurement), pick population standard deviation (n). Click calculate to see standard deviation plus supporting figures like mean and variance.</p>
 
-              <p>If you want actual numbers rather than “parts,” pick what you know: the real value of A, the real value of B, or the total (A + B). For example, if the ratio is 3:2 and you know A is 150, then the calculator scales B to match the same relationship. If you know the total is 1,000, it will split that total into A and B according to the ratio. This makes ratios directly usable for planning, purchasing, and portioning.</p>
+              <p>The output is meant to be decision-friendly. Standard deviation is the main result. Variance is shown because it is part of the same calculation and is useful in some formulas, but standard deviation is easier to interpret because it uses the same units as your original values. You also get a quick dataset summary (count, min, max, range) because standard deviation makes more sense when you can see the scale and the extremes. If your mean is not zero, the calculator also shows the coefficient of variation (CV%), which expresses spread as a percentage of the mean, making it easier to compare variability across datasets with different scales.</p>
 
               <h3>Assumptions and how to use this calculator</h3>
               <ul>
-                <li>Both ratio parts must be greater than 0. A ratio like 0:5 is not meaningful for proportional scaling.</li>
-                <li>Ratio parts can be decimals, but “simple” reduced ratios only apply cleanly when both parts are whole numbers.</li>
-                <li>If you enter a known value for A, B, or total, it is treated as a positive real-world quantity in the same unit (money, grams, liters, minutes, etc.).</li>
-                <li>Percentages are based on A + B as the total. The calculator assumes A and B are the only two parts being compared.</li>
-                <li>Results are rounded to 2 decimals for readability. Small rounding differences can occur, especially when totals must split into repeating decimals.</li>
+                <li>Your list represents one set of comparable numbers measured in the same unit (for example, all in seconds, all in marks, or all in kilograms).</li>
+                <li>Blank entries and extra separators are ignored, but non-numeric items are not treated as values.</li>
+                <li>Sample standard deviation uses n − 1 in the denominator; population standard deviation uses n.</li>
+                <li>At least two valid numbers are required, because “spread” is not meaningful with only one value.</li>
+                <li>This tool assumes a straightforward list of raw values and does not support grouped frequency tables or weighted values.</li>
               </ul>
 
               <h3>Common questions</h3>
 
-              <h3>What does it mean to “simplify” a ratio?</h3>
-              <p>Simplifying a ratio means reducing both sides by the same factor so the relationship stays the same but the numbers get smaller. For example, 10:15 simplifies to 2:3. This is easiest when both numbers are whole numbers. If you enter decimals, the calculator will still show a normalized ratio (smallest side becomes 1), which is often the more practical way to compare relationships.</p>
+              <h3>What is the difference between sample and population standard deviation?</h3>
+              <p>Population standard deviation treats your list as the full set you care about and divides by n. Sample standard deviation assumes your list is only a subset and divides by n − 1 to correct for the fact that samples tend to underestimate spread. If you are unsure, sample is usually the safer default for real-world data you collected from a bigger group.</p>
 
-              <h3>How do I scale a ratio if I only know the total amount?</h3>
-              <p>Choose “I know the total (A + B)” and enter the total. The calculator splits the total into two parts based on each side’s share of A + B. For example, with 3:2 and a total of 1,000, A is 3/5 of the total and B is 2/5 of the total. This is the quickest way to allocate a total budget or mixture amount across two components.</p>
+              <h3>Why do I need at least two numbers?</h3>
+              <p>With one value, there is no variation to measure. Standard deviation is built from differences between values and the mean, so you need at least two data points to produce a meaningful spread estimate.</p>
 
-              <h3>Can I use this for recipe scaling and mixing liquids?</h3>
-              <p>Yes. Ratios are unit-agnostic. If your ratio is 1:4 and you know you want 250 ml of the first ingredient, choose “I know the real value of A” and enter 250. The output for B will be the matching amount in the same unit. The same logic works for grams, liters, cups, or any consistent unit.</p>
+              <h3>My standard deviation seems “too high” or “too low.” How do I sanity-check it?</h3>
+              <p>Start by checking your range (max minus min). Standard deviation cannot be bigger than the range and will usually be much smaller unless your data is extremely polarized. Also check if you accidentally mixed units (for example, seconds and milliseconds) or included a stray extra digit (like 500 instead of 50). Outliers can push standard deviation up fast, so scan for obvious abnormal values.</p>
 
-              <h3>What if my ratio parts are not whole numbers?</h3>
-              <p>That can still be valid, especially for measured systems or converted data. In those cases, the “reduced ratio” may not be a neat pair of integers, but the normalized ratio and the percentage split remain accurate. If you want a cleaner ratio, consider multiplying both sides by a common factor to eliminate decimals before using the calculator.</p>
+              <h3>What does variance mean, and why is it shown?</h3>
+              <p>Variance is the average squared distance from the mean. It is the core quantity used to calculate standard deviation (standard deviation is the square root of variance). Variance is shown mainly for completeness and for cases where you need it for another calculation, but standard deviation is usually easier to interpret because it is in the same unit as your data.</p>
 
-              <h3>Why do the results sometimes not add up perfectly to the total?</h3>
-              <p>When totals split into repeating decimals, rounding to 2 decimals can cause a small difference (for example, 333.33 + 666.67 equals 1,000.00, but other splits might produce 999.99 or 1,000.01 after rounding). If you need exact accounting, use the unrounded values conceptually and apply rounding rules consistently in your own context.</p>
+              <h3>When should I use coefficient of variation (CV%)?</h3>
+              <p>CV% is useful when you want to compare spread across datasets with different averages. For example, a standard deviation of 5 might be small if the mean is 200, but large if the mean is 20. CV% expresses spread relative to the mean. If the mean is near zero, CV% becomes unstable and is not a good comparison metric.</p>
 
-              <div class="last-updated">Last updated: 2025-12-17</div>
+              <div class="last-updated">Last updated: 2025-12-22</div>
             </section>
           </div>
 
           <div class="grid-slot">
-            <div class="ad-block" aria-label="Advertisement area">
-              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-              </a>
-            </div>
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3N0A34o" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Problem Solving</div>
+    <p class="affiliate-copy">Develop logical approaches to solving everyday math problems.</p>
+    <div class="affiliate-cta">Browse math problem solving books on Amazon</div>
+  </a>
+</div>
           </div>
         </div>
       </div>
