@@ -7,19 +7,31 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067385801783501"
      crossorigin="anonymous"></script>
 
-     <meta name='impact-site-verification' value='d4039235-92bd-4a7d-a275-d770b8f4a83d'>
+     <meta name="impact-site-verification" value="d4039235-92bd-4a7d-a275-d770b8f4a83d">
 
     <title>SnapCalc</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/main.css">
     <script src="/scripts/main.js" defer></script>
     <script src="/scripts/search.js" defer></script>
+
     <style>
       .home-card, .home-card-empty {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+      }
+
+      /* Minimal, self-contained section heading styling (homepage only) */
+      .home-section-title {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 22px 0 12px 0;
+      }
+
+      .home-section {
+        margin-top: 8px;
       }
     </style>
   </head>
@@ -42,7 +54,7 @@
             class="site-search-results"
             aria-hidden="true"
           ></div>
-        </div>        
+        </div>
 
         <nav class="site-nav">
           <a href="/">Home</a>
@@ -56,136 +68,176 @@
       <div class="home-layout" id="categories">
         <div class="home-header">
           <h1>SnapCalc</h1>
-          <p>Select a category to view calculators.</p>
         </div>
 
-        <div class="home-grid">
+        <!-- SECTION 1: Calculators -->
+        <section class="home-section" aria-label="Calculators">
+          <div class="home-section-title">Calculators</div>
 
-          <a class="home-card" href="/categories/personal-finance/">
-            <div class="home-card-title">Personal Finance</div>
-            <div class="home-card-desc">
-              Budgeting, income, expenses, everyday money decisions.
-            </div>
-          </a>
+          <div class="home-grid">
+            <a class="home-card" href="/categories/personal-finance/">
+              <div class="home-card-title">Personal Finance</div>
+              <div class="home-card-desc">
+                Budgeting, income, expenses, everyday money decisions.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/business-accounting/">
-            <div class="home-card-title">Business &amp; Accounting</div>
-            <div class="home-card-desc">
-              Cash flow, margins, pricing, tax and simple reporting tools.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/business-accounting/">
+              <div class="home-card-title">Business &amp; Accounting</div>
+              <div class="home-card-desc">
+                Cash flow, margins, pricing, tax and simple reporting tools.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/loans-credit/">
-            <div class="home-card-title">Loans &amp; Credit</div>
-            <div class="home-card-desc">
-              Repayments, interest, payoff timelines and debt comparisons.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/loans-credit/">
+              <div class="home-card-title">Loans &amp; Credit</div>
+              <div class="home-card-desc">
+                Repayments, interest, payoff timelines and debt comparisons.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/savings-investments/">
-            <div class="home-card-title">Savings &amp; Investments</div>
-            <div class="home-card-desc">
-              Compound growth, regular deposits and long-term planning.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/savings-investments/">
+              <div class="home-card-title">Savings &amp; Investments</div>
+              <div class="home-card-desc">
+                Compound growth, regular deposits and long-term planning.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/real-estate-property/">
-            <div class="home-card-title">Real Estate &amp; Property</div>
-            <div class="home-card-desc">
-              Mortgages, rent vs buy, affordability and property metrics.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/real-estate-property/">
+              <div class="home-card-title">Real Estate &amp; Property</div>
+              <div class="home-card-desc">
+                Mortgages, rent vs buy, affordability and property metrics.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/health-fitness/">
-            <div class="home-card-title">Health &amp; Fitness</div>
-            <div class="home-card-desc">
-              Everyday health, activity and basic fitness calculations.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/health-fitness/">
+              <div class="home-card-title">Health &amp; Fitness</div>
+              <div class="home-card-desc">
+                Everyday health, activity and basic fitness calculations.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/math-general-calculators/">
-            <div class="home-card-title">Math &amp; General Calculators</div>
-            <div class="home-card-desc">
-              Percentages, ratios, simple math helpers and general tools.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/math-general-calculators/">
+              <div class="home-card-title">Math &amp; General Calculators</div>
+              <div class="home-card-desc">
+                Percentages, ratios, simple math helpers and general tools.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/time-date-scheduling/">
-            <div class="home-card-title">Time, Date &amp; Scheduling</div>
-            <div class="home-card-desc">
-              Durations, deadlines, workdays and schedule planning.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/time-date-scheduling/">
+              <div class="home-card-title">Time, Date &amp; Scheduling</div>
+              <div class="home-card-desc">
+                Durations, deadlines, workdays and schedule planning.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/engineering-technical/">
-            <div class="home-card-title">Engineering &amp; Technical</div>
-            <div class="home-card-desc">
-              Simple engineering, physics and technical calculations.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/engineering-technical/">
+              <div class="home-card-title">Engineering &amp; Technical</div>
+              <div class="home-card-desc">
+                Simple engineering, physics and technical calculations.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/construction-materials/">
-            <div class="home-card-title">Construction &amp; Materials</div>
-            <div class="home-card-desc">
-              Basic quantities, volumes and material estimates.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/construction-materials/">
+              <div class="home-card-title">Construction &amp; Materials</div>
+              <div class="home-card-desc">
+                Basic quantities, volumes and material estimates.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/conversions-units-currencies/">
-            <div class="home-card-title">
-              Conversions (Units, Currencies, etc.)
-            </div>
-            <div class="home-card-desc">
-              Unit, currency and other everyday conversion tools.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/conversions-units-currencies/">
+              <div class="home-card-title">
+                Conversions (Units, Currencies, etc.)
+              </div>
+              <div class="home-card-desc">
+                Unit, currency and other everyday conversion tools.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/education-exams/">
-            <div class="home-card-title">Education &amp; Exams</div>
-            <div class="home-card-desc">
-              Marks, weightings and basic academic planning.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/education-exams/">
+              <div class="home-card-title">Education &amp; Exams</div>
+              <div class="home-card-desc">
+                Marks, weightings and basic academic planning.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/travel-transport/">
-            <div class="home-card-title">Travel &amp; Transport</div>
-            <div class="home-card-desc">
-              Trip costs, fuel, time estimates and routing helpers.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/travel-transport/">
+              <div class="home-card-title">Travel &amp; Transport</div>
+              <div class="home-card-desc">
+                Trip costs, fuel, time estimates and routing helpers.
+              </div>
+            </a>
 
-          <a class="home-card" href="/categories/everyday-life-tools/">
-            <div class="home-card-title">Everyday Life Tools</div>
-            <div class="home-card-desc">
-              Day-to-day calculators for household and personal tasks.
-            </div>
-          </a>
+            <a class="home-card" href="/categories/everyday-life-tools/">
+              <div class="home-card-title">Everyday Life Tools</div>
+              <div class="home-card-desc">
+                Day-to-day calculators for household and personal tasks.
+              </div>
+            </a>
+            
+            <a class="home-card" href="/categories/everyday-life-tools/">
+              <div class="home-card-title">Editor’s Picks</div>
+              <div class="home-card-desc">
+                Personal favourites I built for myself.
+              </div>
+            </a>
 
-        </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: Scorecards (placeholder) -->
+        <section class="home-section" aria-label="Scorecards">
+          <div class="home-section-title">Scorecards</div>
+
+          <div class="home-grid">
+            <a class="home-card" href="/scorecards/example-scorecard/">
+              <div class="home-card-title">Coming Soon</div>
+              <div class="home-card-desc">
+                Structured scorecards for evaluating decisions, trade-offs, and performance.
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: Generators (placeholder) -->
+        <section class="home-section" aria-label="Generators">
+          <div class="home-section-title">Generators</div>
+
+          <div class="home-grid">
+            <a class="home-card" href="/generators/example-generator/">
+              <div class="home-card-title">Coming Soon</div>
+              <div class="home-card-desc">
+                Simple generators for producing structured outputs, scenarios, and planning inputs.
+              </div>
+            </a>
+
+          </div>
+        </section>
 
         <section class="seo-section" aria-label="About SnapCalc">
           <h2>About SnapCalc</h2>
-        
+
           <p>SnapCalc is a practical calculator library designed to answer real-world questions quickly, clearly, and without unnecessary friction. Each calculator on this site is built to solve a specific problem that people actually search for, whether that’s understanding personal finances, running a business, planning a loan, converting units, or working through everyday calculations that don’t justify a spreadsheet or specialist software.</p>
-        
+
           <p>The goal of SnapCalc is simple: provide calculators that are easy to use, transparent in how they work, and useful even when the user does not have perfect information. Most calculators on the internet either oversimplify to the point of being misleading, or overcomplicate things with inputs that most people cannot realistically provide. SnapCalc is designed to sit between those extremes.</p>
-        
+
           <p>Every calculator starts with the minimum inputs required to produce a meaningful result. Where additional inputs can improve accuracy, they are included as optional fields with sensible defaults. This means you can get a quick answer when you need one, but also refine the calculation if you want a more precise outcome. No calculator should fail or block a result simply because optional information is missing.</p>
-        
+
           <p>The calculators on this site are organised into clearly defined categories to make discovery straightforward. Categories span personal finance, business and accounting, loans and credit, savings and investments, real estate, health and fitness, construction and materials, engineering and technical calculations, education and exams, time and scheduling, travel and transport, conversions, and everyday life tools. Each category groups calculators that share a common context, but each calculator is designed to stand alone and answer a specific question.</p>
-        
+
           <p>Transparency is a core design principle. Wherever assumptions are made, they are documented. Each calculator includes an explanation of how the calculation works in plain language, along with common questions and edge cases. This is intentional. Calculators are most useful when users understand not just the output, but what that output represents and when it may or may not apply.</p>
-        
+
           <p>SnapCalc does not attempt to replace professional advice, specialist software, or bespoke analysis. Instead, it focuses on clarity, speed, and practical decision support. The calculators are intended to help you sanity-check numbers, compare scenarios, and build intuition around everyday calculations that come up at work, at home, or while planning.</p>
-        
+
           <p>From a technical perspective, SnapCalc is built as a fast, static site with no unnecessary dependencies. Pages load quickly, calculators run entirely in the browser, and there is no requirement to create accounts or submit personal data to use the tools. This keeps the site lightweight, reliable, and accessible across devices.</p>
-        
+
           <p>As the library grows, new calculators are added with consistency in mind. Each calculator follows the same structural pattern: clear inputs, validated logic, practical output, and supporting context. This consistency allows users to move between calculators without re-learning how to use the site, while still benefiting from tools that are tailored to their specific problem.</p>
-        
+
           <p>Search intent is taken seriously. Calculators are not created simply to fill space or cover obscure formulas. Each one is designed around a real query, a common confusion, or a recurring calculation that people actually need help with. Thin or trivial calculators are intentionally avoided. If a calculation does not warrant explanation, guardrails, and real-world context, it does not belong here.</p>
-        
+
           <p>SnapCalc is an evolving project. Calculators are reviewed and updated as assumptions change, edge cases are identified, or better defaults become available. The intent is not to chase novelty, but to steadily build a dependable reference library of tools that remain useful over time.</p>
-        
+
           <p>Whether you are budgeting, checking business numbers, comparing loan scenarios, converting units, or working through a one-off calculation, SnapCalc aims to give you a clear answer and enough context to understand what to do next. No noise. No unnecessary steps. Just practical calculators that work.</p>
         </section>
 
@@ -201,9 +253,9 @@
       </div>
     </footer>
 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-  </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
 
   </body>
 </html>
