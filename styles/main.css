@@ -504,3 +504,9 @@ h1 {
   text-decoration: underline !important;
   color: #222222 !important;
 }
+
+.home-section-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 2.5rem 0 1.5rem;
+}
