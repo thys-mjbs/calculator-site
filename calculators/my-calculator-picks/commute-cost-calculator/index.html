@@ -1,0 +1,371 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Mobile Budget Tracker | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Track a monthly budget on mobile with fixed expenses, daily spending, and a rolling daily allowance. Data is stored locally on your device only.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/mobile-budget-tracker/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Mobile Budget Tracker | SnapCalc">
+    <meta property="og:description" content="Track a monthly budget on mobile with fixed expenses, daily spending, and a rolling daily allowance. Data is stored locally on your device only.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/mobile-budget-tracker/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mobile Budget Tracker | SnapCalc">
+    <meta name="twitter:description" content="Track a monthly budget on mobile with fixed expenses, daily spending, and a rolling daily allowance. Data is stored locally on your device only.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mobile Budget Tracker",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/mobile-budget-tracker/",
+      "description": "A mobile-first personal budget tracker that stores data locally on your device and calculates a rolling daily allowance across a 31-day pay-cycle."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Mobile Budget Tracker</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Mobile Budget Tracker</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Track your pay-cycle budget in one place</h2>
+
+              <p class="calculator-intro">
+                Add your income lines, subtract fixed monthly expenses, then tap a day to record spending.
+                Your daily allowance rolls forward based on under-spend and over-spend.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="privacy-note" role="note">
+                Your data is saved locally on your device and never uploaded.
+              </div>
+
+              <div class="budget-top">
+                <div class="budget-top-row">
+                  <div class="input-group">
+                    <label for="paydaySelect">Payday day-of-month</label>
+                    <select id="paydaySelect" aria-label="Payday day-of-month"></select>
+                    <div class="help-text">
+                      Budget cycles always run for 31 days starting on this day, even if you get paid early.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-title">Income lines</div>
+
+                <div class="row-two">
+                  <div class="input-group">
+                    <label for="incomeLabel">Label</label>
+                    <input id="incomeLabel" type="text" placeholder="e.g. Salary" />
+                  </div>
+                  <div class="input-group">
+                    <label for="incomeAmount">Amount</label>
+                    <input id="incomeAmount" type="text" inputmode="numeric" placeholder="e.g. 25000" />
+                  </div>
+                </div>
+
+                <button id="addIncomeBtn" type="button">Add income</button>
+
+                <div id="incomeList" class="list"></div>
+
+                <div class="section-title">Fixed monthly expenses</div>
+
+                <div class="row-two">
+                  <div class="input-group">
+                    <label for="fixedLabel">Label</label>
+                    <input id="fixedLabel" type="text" placeholder="e.g. Rent" />
+                  </div>
+                  <div class="input-group">
+                    <label for="fixedAmount">Amount</label>
+                    <input id="fixedAmount" type="text" inputmode="numeric" placeholder="e.g. 9850" />
+                  </div>
+                </div>
+
+                <button id="addFixedBtn" type="button">Add fixed expense</button>
+
+                <div id="fixedList" class="list"></div>
+              </div>
+
+              <div class="summary-grid" aria-label="Budget summary">
+                <div class="metric">
+                  <div class="metric-k">Fixed monthly expenses</div>
+                  <div class="metric-v" id="fixedTotal">0</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-k">Available for variable spending</div>
+                  <div class="metric-v" id="varPool">0</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-k">Base daily allowance</div>
+                  <div class="metric-v" id="baseDaily">0</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-k">Today’s rolling allowance</div>
+                  <div class="metric-v" id="todayAllowance">0</div>
+                </div>
+              </div>
+
+              <div class="calendar-wrap">
+                <div class="calendar-header">
+                  <div class="calendar-title" id="calendarTitle">Calendar</div>
+                  <div class="calendar-controls">
+                    <button id="prevMonthBtn" type="button" class="tiny-btn">Prev</button>
+                    <button id="goTodayBtn" type="button" class="tiny-btn">Today</button>
+                    <button id="nextMonthBtn" type="button" class="tiny-btn">Next</button>
+                  </div>
+                </div>
+
+                <div class="dow">
+                  <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+
+                <div id="calendar" class="calendar" aria-label="Budget cycle calendar"></div>
+
+                <div class="calendar-footer">
+                  <button id="clearCycleBtn" type="button" class="danger-btn">Clear this 31-day cycle daily entries</button>
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Recalculate totals</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+
+              <!-- Bottom sheet modal -->
+              <div id="overlay" class="overlay" aria-hidden="true">
+                <div class="sheet" role="dialog" aria-modal="true" aria-label="Add daily expense">
+                  <div class="grab"></div>
+
+                  <div class="sheet-head">
+                    <div>
+                      <div class="sheet-title" id="sheetTitle">Add expense</div>
+                      <div class="sheet-meta" id="sheetMeta"></div>
+                    </div>
+                    <button id="closeSheetBtn" type="button" class="tiny-btn">Close</button>
+                  </div>
+
+                  <div class="row-two">
+                    <div class="input-group">
+                      <label for="expenseCategory">Category</label>
+                      <select id="expenseCategory"></select>
+                    </div>
+                    <div class="input-group">
+                      <label for="expenseAmount">Amount</label>
+                      <input id="expenseAmount" type="text" inputmode="numeric" placeholder="e.g. 250" />
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="expenseNote">Note (optional)</label>
+                    <input id="expenseNote" type="text" placeholder="e.g. groceries" />
+                  </div>
+
+                  <div class="sheet-actions">
+                    <button id="saveExpenseBtn" type="button">Save</button>
+                    <button id="addCategoryBtn" type="button" class="tiny-btn">Add new category</button>
+                    <button id="deleteDayBtn" type="button" class="danger-btn">Delete all day entries</button>
+                  </div>
+
+                  <div class="sheet-section-title">Day entries</div>
+                  <div id="dayItems" class="day-items"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-and-credit/">
+              <h3 class="related-title">Loans and Credit</h3>
+              <p class="related-desc">Estimate repayments, interest costs, and payoff scenarios.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-and-investments/">
+              <h3 class="related-title">Savings and Investments</h3>
+              <p class="related-desc">Plan growth, contributions, and long-term targets.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/cost-of-living-tools/">
+              <h3 class="related-title">Cost of Living Tools</h3>
+              <p class="related-desc">Compare expenses, budgets, and everyday affordability.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>How this mobile budget tracker works</h2>
+
+              <p>
+                This tool is designed for simple, fast personal budgeting on mobile. You define your payday
+                day-of-month, add income lines, subtract fixed monthly expenses, and then record daily spending.
+                The tool calculates a rolling daily allowance that increases when you spend under budget and decreases when you spend over budget.
+              </p>
+
+              <p>
+                The pay-cycle is treated as a fixed 31-day cycle starting on your payday day-of-month. This is deliberate.
+                Even if you get paid early due to weekends or holidays, the tool encourages you to budget as if payday is always the same day.
+              </p>
+
+              <p>
+                Your data is stored locally in your browser on your device. Nothing is uploaded.
+                If you clear site data, clear browser storage, or use private browsing, your saved data can be removed.
+                This tool is intended for single-device use and quick daily entry, not cross-device syncing.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>All budgeting cycles are treated as 31 days for consistency and simplicity.</li>
+                <li>Fixed expenses are monthly-only. Non-monthly bills should be handled as manual daily adjustments.</li>
+                <li>Daily allowance rolls forward based on cumulative under-spend and over-spend.</li>
+                <li>Amounts are rounded up to whole currency units to keep entry and tracking simple.</li>
+                <li>Data is stored locally on your device. Clearing browser storage can remove saved data.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the cycle always use 31 days?</h3>
+              <p>
+                Using 31 days creates a stable rule and often adds a small buffer in shorter months. The goal is consistency, not perfect calendar alignment.
+              </p>
+
+              <h3>Can I use this across devices?</h3>
+              <p>
+                No. This tool stores data locally in your browser on your current device. There is no sync.
+              </p>
+
+              <h3>What happens if I clear my browser data?</h3>
+              <p>
+                If you clear site data or browser storage, your saved budget, fixed expenses, and daily entries can be deleted. Use normal browsing and avoid clearing storage if you want persistence.
+              </p>
+
+              <h3>Can I edit entries?</h3>
+              <p>
+                Yes. You can edit income lines, fixed expenses, and individual daily expense items.
+              </p>
+
+              <h3>Should I put annual or quarterly bills into fixed expenses?</h3>
+              <p>
+                No. Fixed expenses here are monthly-only by design. Handle non-monthly items by adding them manually as daily entries when they occur.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

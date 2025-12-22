@@ -1,0 +1,553 @@
+/* style.css */
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Optional intro text below calculator title */
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Generic input groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.input-group input[type="text"],
+.input-group select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.input-group input[type="text"]:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+.help-text {
+  font-size: 12px;
+  color: #777777;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 10px 0 8px;
+}
+
+.privacy-note {
+  font-size: 12px;
+  color: #333333;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 420px) {
+  .row-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+button#calculateButton,
+button#addIncomeBtn,
+button#addFixedBtn,
+button#saveExpenseBtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* List cards (income and fixed) */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.list-item {
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.list-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.list-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+.list-meta {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 4px;
+}
+
+.list-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.small-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.small-btn.danger {
+  border-color: #d9a3aa;
+  background: #ffe9ec;
+}
+
+.small-btn.primary {
+  border-color: #aac7e8;
+  background: #eaf3ff;
+}
+
+/* Summary metrics */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.metric {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.metric-k {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 6px;
+}
+
+.metric-v {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.metric-v.good {
+  color: #0b4f2a;
+}
+
+.metric-v.bad {
+  color: #b00020;
+}
+
+/* Calendar */
+.calendar-wrap {
+  margin-top: 10px;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 12px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.calendar-title {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.tiny-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.dow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  font-size: 11px;
+  color: #666666;
+  margin-bottom: 6px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 8px;
+  min-height: 74px;
+  cursor: pointer;
+}
+
+.day.disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.day.today {
+  outline: 2px solid rgba(0, 166, 81, 0.35);
+}
+
+.day.good {
+  border-color: rgba(0, 166, 81, 0.35);
+}
+
+.day.bad {
+  border-color: rgba(176, 0, 32, 0.35);
+}
+
+.day-num {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: center;
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.badge {
+  font-size: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 999px;
+  padding: 2px 6px;
+  color: #666666;
+}
+
+.day-mini {
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.25;
+}
+
+.day-mini strong {
+  color: #111111;
+}
+
+.calendar-footer {
+  margin-top: 10px;
+}
+
+.danger-btn {
+  width: 100%;
+  padding: 9px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #d9a3aa;
+  background: #ffe9ec;
+  cursor: pointer;
+}
+
+/* Bottom sheet modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px;
+  z-index: 60;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.grab {
+  width: 48px;
+  height: 5px;
+  border-radius: 999px;
+  background: #e3e3e3;
+  margin: 4px auto 10px;
+}
+
+.sheet-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.sheet-title {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.sheet-meta {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 2px;
+}
+
+.sheet-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.sheet-actions button {
+  flex: 1 1 140px;
+  padding: 9px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.sheet-actions button#saveExpenseBtn {
+  border: none;
+}
+
+.sheet-section-title {
+  font-weight: 700;
+  font-size: 13px;
+  margin: 8px 0 6px;
+}
+
+.day-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.day-item-row {
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.day-item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.day-item-name {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.day-item-meta {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 4px;
+}
+
+/* Related category tiles */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.related-title {
+  font-weight: bold;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+/* SEO section */
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.seo-section h3 {
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholders – shared look */
+.ad-block {
+  border-radius: 8px;
+  border: 1px dashed #d0d0d0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 6px,
+    #e9e9e9 6px,
+    #e9e9e9 12px
+  );
+}
+
+/* Breadcrumbs – force same look everywhere */
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Basic mobile tweak */
+@media (max-width: 768px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
