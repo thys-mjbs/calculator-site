@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>Paving Brick Quantity Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Estimate how many paving bricks you need for a patio, walkway, or driveway based on area, brick size, joint gap, and a waste allowance."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/construction-materials/paving-brick-quantity-calculator/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta
+      property="og:title"
+      content="Paving Brick Quantity Calculator | SnapCalc"
+    />
+    <meta
+      property="og:description"
+      content="Estimate how many paving bricks you need for a patio, walkway, or driveway based on area, brick size, joint gap, and a waste allowance."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/construction-materials/paving-brick-quantity-calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Paving Brick Quantity Calculator | SnapCalc"
+    />
+    <meta
+      name="twitter:description"
+      content="Estimate how many paving bricks you need for a patio, walkway, or driveway based on area, brick size, joint gap, and a waste allowance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Paving Brick Quantity Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/construction-materials/paving-brick-quantity-calculator/",
+        "description": "Estimate the number of paving bricks required for a rectangular paving area using either total area or length and width, factoring in brick size, joint gap, and an optional waste allowance."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a>
+        ›
+        <span>Paving Brick Quantity Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Paving Brick Quantity Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oPfhlD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Mechanical Tools</div>
+    <p class="affiliate-copy">Tools for mechanical calculations, forces, torque, and motion analysis.</p>
+    <div class="affiliate-cta">Explore mechanical engineering tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate paving bricks needed</h2>
+
+              <p class="calculator-intro">
+                Enter either the total area, or the length and width. Then confirm
+                your brick size, joint gap, and waste allowance.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="areaM2">Total area (m²) (optional)</label>
+                <input
+                  type="text"
+                  id="areaM2"
+                  inputmode="decimal"
+                  placeholder="e.g. 25"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="lengthM">Length (m) (optional)</label>
+                <input
+                  type="text"
+                  id="lengthM"
+                  inputmode="decimal"
+                  placeholder="e.g. 5"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="widthM">Width (m) (optional)</label>
+                <input
+                  type="text"
+                  id="widthM"
+                  inputmode="decimal"
+                  placeholder="e.g. 4"
+                />
+              </div>
+
+              <details class="advanced-details">
+                <summary>Advanced (brick size, joints, waste, packs)</summary>
+
+                <div class="form-group">
+                  <label for="brickLengthMm">Brick length (mm)</label>
+                  <input
+                    type="text"
+                    id="brickLengthMm"
+                    inputmode="decimal"
+                    placeholder="e.g. 200"
+                    value="200"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="brickWidthMm">Brick width (mm)</label>
+                  <input
+                    type="text"
+                    id="brickWidthMm"
+                    inputmode="decimal"
+                    placeholder="e.g. 100"
+                    value="100"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="jointGapMm">Average joint gap (mm)</label>
+                  <input
+                    type="text"
+                    id="jointGapMm"
+                    inputmode="decimal"
+                    placeholder="e.g. 3"
+                    value="3"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="wastePercent">Waste allowance (%)</label>
+                  <input
+                    type="text"
+                    id="wastePercent"
+                    inputmode="decimal"
+                    placeholder="e.g. 10"
+                    value="10"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="bricksPerPack">Bricks per pack/pallet (optional)</label>
+                  <input
+                    type="text"
+                    id="bricksPerPack"
+                    inputmode="numeric"
+                    placeholder="e.g. 500"
+                  />
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate bricks</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4s1sv1C" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Load & Stress</div>
+    <p class="affiliate-copy">Calculate loads, stresses, and safety factors in structures.</p>
+    <div class="affiliate-cta">View load and stress tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">
+                Plan material quantities and common building measurements for projects.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">
+                Estimate property-related costs and sizing for improvements and planning.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">
+                Convert measurements and units quickly when plans use different formats.
+              </p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48Ybrkn" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Documentation</div>
+    <p class="affiliate-copy">Create and manage technical documentation efficiently.</p>
+    <div class="affiliate-cta">Browse technical documentation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>How many paving bricks do I need for my patio or driveway?</h2>
+
+              <p>
+                If you are laying paving bricks for a patio, walkway, courtyard, or driveway,
+                the first practical question is quantity. Buying too few stalls the job and
+                can force you into a second delivery with different shade batches. Buying too
+                many wastes money and leaves you storing heavy leftovers. This paving brick
+                quantity calculator is built for one decision: estimating how many bricks to
+                order for a rectangular paving area, including a sensible allowance for cuts,
+                breakage, and pattern waste.
+              </p>
+
+              <p>
+                The default workflow is fast. If you already know the total area in square
+                metres, enter it and calculate. If you do not know the area, enter length and
+                width and the calculator will compute the area for you. Then, in Advanced
+                settings, confirm your brick dimensions and joint gap. The calculator treats a
+                brick plus its surrounding joint as a repeating module. Dividing your paving
+                area by the module area gives an estimated brick count. Finally, a waste
+                percentage increases the order quantity so you are not short when you start
+                cutting at edges, around drains, or near curves.
+              </p>
+
+              <p>
+                The results are designed to be usable, not just a single number. You get the
+                base brick count without waste, the recommended order quantity with waste,
+                the effective coverage per brick, and the calculated total area used. If you
+                also enter a pack or pallet size, the calculator will estimate how many packs
+                you should order by rounding up, since you cannot buy a fraction of a pack in
+                most real-world situations.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
+                  The paved surface is treated as a rectangle. If your shape is irregular,
+                  break it into rectangles, calculate each, and add the areas.
+                </li>
+                <li>
+                  Brick coverage is based on a brick module: (brick length + joint gap) ×
+                  (brick width + joint gap). This is a practical average for typical paving.
+                </li>
+                <li>
+                  Brick dimensions are entered in millimetres and converted internally to metres.
+                  Use the nominal size you are buying, not a marketing name.
+                </li>
+                <li>
+                  Waste allowance defaults to 10% as a common planning baseline. Increase it
+                  for complex edges, curves, or more cutting, and reduce it for simple rectangles.
+                </li>
+                <li>
+                  The calculator estimates quantity only. It does not calculate bedding sand,
+                  base material, edge restraints, drainage layers, or compaction requirements.
+                </li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Should I enter total area, or length and width?</h3>
+              <p>
+                Either works. If you know the total area from a plan, enter area only. If you
+                measured the space on site, enter length and width and leave area blank. If you
+                enter both, the calculator uses the area value you provided, because it is the
+                most direct input. This avoids accidental double calculation when your length
+                and width are rough estimates.
+              </p>
+
+              <h3>Why does joint gap affect brick quantity?</h3>
+              <p>
+                Joints consume space. Even a small gap adds up across many rows. A 3 mm joint
+                effectively increases the spacing between bricks, meaning you need slightly fewer
+                bricks per square metre than if bricks were touching. This calculator uses the
+                module size (brick plus joint) because it matches how paving actually lays out.
+              </p>
+
+              <h3>What waste allowance should I use?</h3>
+              <p>
+                Ten percent is a practical default for many jobs. Use 5% for very simple rectangles
+                with minimal cutting and if you have experienced installers. Use 10% to 15% for
+                typical patios with edges and some detail work. Use 15% to 20% for complex layouts,
+                curves, tight fits around obstacles, or if you expect more breakage. Waste is
+                also higher with patterns that require more cuts at boundaries.
+              </p>
+
+              <h3>What if my bricks are not rectangular or have special shapes?</h3>
+              <p>
+                This calculator assumes a rectangular brick footprint because that is the dominant
+                real-world search intent for brick quantity planning. If you are using irregular
+                shapes, interlocking pavers with complex geometry, or mixed sizes, the module-area
+                approach becomes unreliable. In that case, use the manufacturer’s coverage rate
+                (bricks per m²) from the product spec sheet and convert your area using that rate.
+              </p>
+
+              <h3>How do I use the pack or pallet estimate?</h3>
+              <p>
+                Enter the number of bricks per pack or pallet if you know it. The calculator will
+                round up the number of packs so you can order in real units. If you do not know
+                the pack size, leave it blank. Pack sizing varies by supplier, brick thickness,
+                and packaging method, so guessing can be worse than leaving it out.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4q0U2OS" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Safety Factors</div>
+    <p class="affiliate-copy">Apply safety factors correctly in engineering calculations.</p>
+    <div class="affiliate-cta">Browse safety factor tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

@@ -279,6 +279,48 @@
     ]
   },
   {
+    "title": "Aggregate Weight Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/aggregate-weight-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "aggregate weight calculator | snapcalc",
+      "aggregate weight calculator snapcalc",
+      "aggregate weight calculator",
+      "construction & materials aggregate weight calculator snapcalc",
+      "construction & materials aggregate weight calculator",
+      "aggregate weight snapcalc",
+      "awcs"
+    ]
+  },
+  {
+    "title": "Asphalt Cost Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/asphalt-cost-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "asphalt cost calculator | snapcalc",
+      "asphalt cost calculator snapcalc",
+      "asphalt cost calculator",
+      "construction & materials asphalt cost calculator snapcalc",
+      "construction & materials asphalt cost calculator",
+      "asphalt cost snapcalc",
+      "accs"
+    ]
+  },
+  {
+    "title": "Asphalt Volume Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/asphalt-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "asphalt volume calculator | snapcalc",
+      "asphalt volume calculator snapcalc",
+      "asphalt volume calculator",
+      "construction & materials asphalt volume calculator snapcalc",
+      "construction & materials asphalt volume calculator",
+      "asphalt volume snapcalc",
+      "avcs"
+    ]
+  },
+  {
     "title": "Block Quantity Calculator | SnapCalc",
     "url": "/calculators/construction-materials/block-quantity-calculator/",
     "category": "Construction & Materials",
@@ -349,6 +391,20 @@
     ]
   },
   {
+    "title": "Fill Dirt Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/fill-dirt-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "fill dirt calculator | snapcalc",
+      "fill dirt calculator snapcalc",
+      "fill dirt calculator",
+      "construction & materials fill dirt calculator snapcalc",
+      "construction & materials fill dirt calculator",
+      "fill dirt snapcalc",
+      "fdcs"
+    ]
+  },
+  {
     "title": "Formwork Area Calculator | SnapCalc",
     "url": "/calculators/construction-materials/formwork-area-calculator/",
     "category": "Construction & Materials",
@@ -363,6 +419,20 @@
     ]
   },
   {
+    "title": "Gravel Volume Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/gravel-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "gravel volume calculator | snapcalc",
+      "gravel volume calculator snapcalc",
+      "gravel volume calculator",
+      "construction & materials gravel volume calculator snapcalc",
+      "construction & materials gravel volume calculator",
+      "gravel volume snapcalc",
+      "gvcs"
+    ]
+  },
+  {
     "title": "Mortar Mix Calculator | SnapCalc",
     "url": "/calculators/construction-materials/mortar-mix-calculator/",
     "category": "Construction & Materials",
@@ -374,6 +444,20 @@
       "construction & materials mortar mix calculator",
       "mortar mix snapcalc",
       "mmcs"
+    ]
+  },
+  {
+    "title": "Paving Brick Quantity Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/paving-brick-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "paving brick quantity calculator | snapcalc",
+      "paving brick quantity calculator snapcalc",
+      "paving brick quantity calculator",
+      "construction & materials paving brick quantity calculator snapcalc",
+      "construction & materials paving brick quantity calculator",
+      "paving brick quantity snapcalc",
+      "pbqcs"
     ]
   },
   {
@@ -416,6 +500,62 @@
       "construction & materials rebar weight calculator",
       "rebar weight snapcalc",
       "rwcs"
+    ]
+  },
+  {
+    "title": "Sand Volume Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/sand-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "sand volume calculator | snapcalc",
+      "sand volume calculator snapcalc",
+      "sand volume calculator",
+      "construction & materials sand volume calculator snapcalc",
+      "construction & materials sand volume calculator",
+      "sand volume snapcalc",
+      "svcs"
+    ]
+  },
+  {
+    "title": "Soil Volume Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/soil-volume-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "soil volume calculator | snapcalc",
+      "soil volume calculator snapcalc",
+      "soil volume calculator",
+      "construction & materials soil volume calculator snapcalc",
+      "construction & materials soil volume calculator",
+      "soil volume snapcalc",
+      "svcs"
+    ]
+  },
+  {
+    "title": "Tile Quantity Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/tile-quantity-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "tile quantity calculator | snapcalc",
+      "tile quantity calculator snapcalc",
+      "tile quantity calculator",
+      "construction & materials tile quantity calculator snapcalc",
+      "construction & materials tile quantity calculator",
+      "tile quantity snapcalc",
+      "tqcs"
+    ]
+  },
+  {
+    "title": "Topsoil Coverage Calculator | SnapCalc",
+    "url": "/calculators/construction-materials/topsoil-coverage-calculator/",
+    "category": "Construction & Materials",
+    "aliases": [
+      "topsoil coverage calculator | snapcalc",
+      "topsoil coverage calculator snapcalc",
+      "topsoil coverage calculator",
+      "construction & materials topsoil coverage calculator snapcalc",
+      "construction & materials topsoil coverage calculator",
+      "topsoil coverage snapcalc",
+      "tccs"
     ]
   },
   {
