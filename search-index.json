@@ -688,6 +688,62 @@
     ]
   },
   {
+    "title": "AC to DC Conversion Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/ac-to-dc-conversion-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "ac to dc conversion calculator | snapcalc",
+      "ac to dc conversion calculator snapcalc",
+      "ac to dc conversion calculator",
+      "engineering & technical ac to dc conversion calculator snapcalc",
+      "engineering & technical ac to dc conversion calculator",
+      "ac to dc conversion snapcalc",
+      "adccs"
+    ]
+  },
+  {
+    "title": "Battery Capacity Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/battery-capacity-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "battery capacity calculator | snapcalc",
+      "battery capacity calculator snapcalc",
+      "battery capacity calculator",
+      "engineering & technical battery capacity calculator snapcalc",
+      "engineering & technical battery capacity calculator",
+      "battery capacity snapcalc",
+      "bccs"
+    ]
+  },
+  {
+    "title": "Battery Life Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/battery-life-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "battery life calculator | snapcalc",
+      "battery life calculator snapcalc",
+      "battery life calculator",
+      "engineering & technical battery life calculator snapcalc",
+      "engineering & technical battery life calculator",
+      "battery life snapcalc",
+      "blcs"
+    ]
+  },
+  {
+    "title": "Cable Length Resistance Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/cable-length-resistance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "cable length resistance calculator | snapcalc",
+      "cable length resistance calculator snapcalc",
+      "cable length resistance calculator",
+      "engineering & technical cable length resistance calculator snapcalc",
+      "engineering & technical cable length resistance calculator",
+      "cable length resistance snapcalc",
+      "clrcs"
+    ]
+  },
+  {
     "title": "Capacitive Reactance Calculator | SnapCalc",
     "url": "/calculators/engineering-technical/capacitive-reactance-calculator/",
     "category": "Engineering & Technical",
@@ -699,6 +755,48 @@
       "engineering & technical capacitive reactance calculator",
       "capacitive reactance snapcalc",
       "crcs"
+    ]
+  },
+  {
+    "title": "Cooling Load Calculator (Simple Version) | SnapCalc",
+    "url": "/calculators/engineering-technical/cooling-load-calculator-simple-version/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "cooling load calculator (simple version) | snapcalc",
+      "cooling load calculator simple version snapcalc",
+      "cooling load calculator simple version",
+      "engineering & technical cooling load calculator simple version snapcalc",
+      "engineering & technical cooling load calculator simple version",
+      "cooling load simple version snapcalc",
+      "clcsvs"
+    ]
+  },
+  {
+    "title": "DC to AC Inverter Load Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/dc-to-ac-inverter-load-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "dc to ac inverter load calculator | snapcalc",
+      "dc to ac inverter load calculator snapcalc",
+      "dc to ac inverter load calculator",
+      "engineering & technical dc to ac inverter load calculator snapcalc",
+      "engineering & technical dc to ac inverter load calculator",
+      "dc to ac inverter load snapcalc",
+      "dailcs"
+    ]
+  },
+  {
+    "title": "Heat Dissipation Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/heat-dissipation-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "heat dissipation calculator | snapcalc",
+      "heat dissipation calculator snapcalc",
+      "heat dissipation calculator",
+      "engineering & technical heat dissipation calculator snapcalc",
+      "engineering & technical heat dissipation calculator",
+      "heat dissipation snapcalc",
+      "hdcs"
     ]
   },
   {
@@ -758,6 +856,20 @@
     ]
   },
   {
+    "title": "Recharge Time Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/recharge-time-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "recharge time calculator | snapcalc",
+      "recharge time calculator snapcalc",
+      "recharge time calculator",
+      "engineering & technical recharge time calculator snapcalc",
+      "engineering & technical recharge time calculator",
+      "recharge time snapcalc",
+      "rtcs"
+    ]
+  },
+  {
     "title": "Resistor Color Code Calculator | SnapCalc",
     "url": "/calculators/engineering-technical/resistor-color-code-calculator/",
     "category": "Engineering & Technical",
@@ -800,6 +912,20 @@
     ]
   },
   {
+    "title": "Thermal Resistance Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/thermal-resistance-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "thermal resistance calculator | snapcalc",
+      "thermal resistance calculator snapcalc",
+      "thermal resistance calculator",
+      "engineering & technical thermal resistance calculator snapcalc",
+      "engineering & technical thermal resistance calculator",
+      "thermal resistance snapcalc",
+      "trcs"
+    ]
+  },
+  {
     "title": "Voltage Drop Calculator | SnapCalc",
     "url": "/calculators/engineering-technical/voltage-drop-calculator/",
     "category": "Engineering & Technical",
@@ -825,6 +951,20 @@
       "engineering & technical wattage calculator",
       "wattage snapcalc",
       "wcs"
+    ]
+  },
+  {
+    "title": "Wire Gauge (AWG) Current Capacity Calculator | SnapCalc",
+    "url": "/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/",
+    "category": "Engineering & Technical",
+    "aliases": [
+      "wire gauge (awg) current capacity calculator | snapcalc",
+      "wire gauge awg current capacity calculator snapcalc",
+      "wire gauge awg current capacity calculator",
+      "engineering & technical wire gauge awg current capacity calculator snapcalc",
+      "engineering & technical wire gauge awg current capacity calculator",
+      "wire gauge awg current capacity snapcalc",
+      "wgaccc"
     ]
   },
   {
@@ -2650,20 +2790,6 @@
     ]
   },
   {
-    "title": "Business Days Between Dates Calculator | SnapCalc",
-    "url": "/calculators/time-date-and-scheduling/business-days-between-dates-calculator/",
-    "category": "Time, Date & Scheduling",
-    "aliases": [
-      "business days between dates calculator | snapcalc",
-      "business days between dates calculator snapcalc",
-      "business days between dates calculator",
-      "time, date & scheduling business days between dates calculator snapcalc",
-      "time, date & scheduling business days between dates calculator",
-      "business days between dates snapcalc",
-      "bdbdcs"
-    ]
-  },
-  {
     "title": "Age Calculator | SnapCalc",
     "url": "/calculators/time-date-scheduling/age-calculator/",
     "category": "Time, Date & Scheduling",
@@ -2689,6 +2815,20 @@
       "time, date & scheduling birthday calculator",
       "birthday snapcalc",
       "bcs"
+    ]
+  },
+  {
+    "title": "Business Days Between Dates Calculator | SnapCalc",
+    "url": "/calculators/time-date-and-scheduling/business-days-between-dates-calculator/",
+    "category": "Time, Date & Scheduling",
+    "aliases": [
+      "business days between dates calculator | snapcalc",
+      "business days between dates calculator snapcalc",
+      "business days between dates calculator",
+      "time, date & scheduling business days between dates calculator snapcalc",
+      "time, date & scheduling business days between dates calculator",
+      "business days between dates snapcalc",
+      "bdbdcs"
     ]
   },
   {
