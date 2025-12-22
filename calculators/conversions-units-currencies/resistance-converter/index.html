@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Resistance Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert electrical resistance between mΩ, Ω, kΩ, MΩ, and GΩ. Enter a value, pick the unit, and get an immediate conversion with a quick reference table.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/resistance-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Resistance Converter | SnapCalc">
+    <meta property="og:description" content="Convert electrical resistance between mΩ, Ω, kΩ, MΩ, and GΩ. Enter a value, pick the unit, and get an immediate conversion with a quick reference table.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/resistance-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resistance Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert electrical resistance between mΩ, Ω, kΩ, MΩ, and GΩ. Enter a value, pick the unit, and get an immediate conversion with a quick reference table.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Resistance Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/resistance-converter/",
+      "description": "Convert electrical resistance between milliohms, ohms, kiloohms, megaohms, and gigaohms with a quick reference table."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Resistance Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Resistance Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/44q9GuN" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Concrete Mix</div>
+    <p class="affiliate-copy">Calculate cement, sand, and aggregate ratios for concrete mixes.</p>
+    <div class="affiliate-cta">Explore concrete mix calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert resistance units instantly</h2>
+
+              <p class="calculator-intro">Enter a resistance value, choose the unit you have, and convert to a target unit or view all common units at once.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="resistanceValue">Resistance value</label>
+                <input type="text" id="resistanceValue" inputmode="decimal" placeholder="e.g. 4,700">
+              </div>
+
+              <div class="form-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit" aria-label="From unit">
+                  <option value="ohm" selected>Ohms (Ω)</option>
+                  <option value="milliohm">Milliohms (mΩ)</option>
+                  <option value="kilohm">Kiloohms (kΩ)</option>
+                  <option value="megaohm">Megaohms (MΩ)</option>
+                  <option value="gigaohm">Gigaohms (GΩ)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="toUnit">Convert to</label>
+                <select id="toUnit" aria-label="Convert to unit">
+                  <option value="all" selected>Show all common units</option>
+                  <option value="milliohm">Milliohms (mΩ)</option>
+                  <option value="ohm">Ohms (Ω)</option>
+                  <option value="kilohm">Kiloohms (kΩ)</option>
+                  <option value="megaohm">Megaohms (MΩ)</option>
+                  <option value="gigaohm">Gigaohms (GΩ)</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pvZr0o" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Cost Estimation</div>
+    <p class="affiliate-copy">Estimate construction costs accurately for projects and renovations.</p>
+    <div class="affiliate-cta">View building cost estimation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units quickly and consistently across everyday and technical use cases.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Use practical engineering calculators for circuits, materials, mechanics, and real-world sizing.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle quick math, ratios, percentages, rounding, and everyday number conversions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oU9OKn" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Structural Materials</div>
+    <p class="affiliate-copy">Reference material properties for concrete, steel, and timber.</p>
+    <div class="affiliate-cta">Browse structural material references on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Resistance unit converter for ohms, kiloohms, megaohms, and more</h2>
+
+              <p>If you are reading a resistor value, checking a multimeter reading, or copying specs from a datasheet, the unit is often the part that causes mistakes. A value like 4.7 can mean 4.7 Ω, 4.7 kΩ, or 4.7 MΩ, and those are separated by factors of one thousand. This resistance converter is built for the most common real-world decision: you have a resistance value in one unit and you need the same value in another unit without doing mental scaling or risking a unit slip. It converts between milliohms (mΩ), ohms (Ω), kiloohms (kΩ), megaohms (MΩ), and gigaohms (GΩ).</p>
+
+              <p>To use it, enter the resistance value as you have it (decimals are fine), select the unit you currently have, then either choose a target unit or leave the converter on “Show all common units.” The “Show all” option is the default because it matches how people actually work: you might not know which unit the other tool or document expects, so seeing the full table lets you pick the right one immediately. The results are all derived from the same base conversion: everything is converted to ohms internally, then scaled to the output units. This keeps the conversions consistent and avoids rounding drift from converting unit to unit multiple times.</p>
+
+              <p>The output is designed to be scannable and decision-focused. You get a primary line that states what your input equals, followed by a short table that lists the same resistance across the common units. This is useful when you are comparing components (for example, confirming that a “4700 Ω” resistor is the same as “4.7 kΩ”), when validating measurement ranges (for example, whether your reading is closer to mΩ or Ω for low-resistance conductors), or when translating manufacturer specs that mix unit conventions. If you need higher precision than two decimals, treat the output as a quick converter and keep your source value at full precision in your own notes or measurement record.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This converter treats resistance as a pure unit conversion problem (it does not model temperature, tolerance, or frequency effects).</li>
+                <li>Values are converted using standard SI scaling: 1 kΩ = 1,000 Ω, 1 MΩ = 1,000,000 Ω, 1 GΩ = 1,000,000,000 Ω, and 1 mΩ = 0.001 Ω.</li>
+                <li>Inputs must be greater than 0. If you truly need to represent 0 Ω (a short), this tool is not meant for circuit fault modelling.</li>
+                <li>Results are displayed to two decimals for readability. Keep your original value if you require more significant figures.</li>
+                <li>Unit selection is limited to the most common resistance units used in electronics and measurement; it intentionally excludes less common variants.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between Ω, kΩ, and MΩ?</h3>
+              <p>They are the same measurement in different scales. Ω is the base unit. kΩ means thousands of ohms, and MΩ means millions of ohms. Converting between them is a scaling move, not a different type of resistance.</p>
+
+              <h3>Why does my resistor say “4K7” or “R47” instead of a normal number?</h3>
+              <p>Those are common resistor markings where the letter replaces the decimal point. For example, 4K7 means 4.7 kΩ and R47 means 0.47 Ω. This converter expects a normal number and a unit, so you would enter 4.7 and choose kΩ, or enter 0.47 and choose Ω.</p>
+
+              <h3>When would I use milliohms (mΩ)?</h3>
+              <p>Milliohms are common for very low resistance measurements, such as battery internal resistance, bus bars, shunts, or heavy-gauge conductors. If your value is under about 1 Ω, mΩ can make the number easier to read without leading zeros.</p>
+
+              <h3>My multimeter shows “0.00” or changes around. Is the converter wrong?</h3>
+              <p>No. This tool only converts the number you enter. If the reading itself is unstable, the issue is typically measurement resolution, probe contact resistance, lead resistance, or a changing load. Enter your best stable reading and convert that.</p>
+
+              <h3>Does this converter tell me resistor wattage, tolerance, or which resistor to buy?</h3>
+              <p>No. It is unit conversion only. Wattage and tolerance depend on the circuit, voltage/current, and component ratings. Use this tool to translate resistance values cleanly, then choose parts based on your design requirements.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4iT3rFK" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Measurements</div>
+    <p class="affiliate-copy">Tools for accurate construction measurements and layout planning.</p>
+    <div class="affiliate-cta">Browse construction measurement tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

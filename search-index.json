@@ -559,6 +559,19 @@
     ]
   },
   {
+    "title": "Angle Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/angle-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "angle converter | snapcalc",
+      "angle converter snapcalc",
+      "angle converter",
+      "conversions (units, currencies, etc.) angle converter snapcalc",
+      "conversions (units, currencies, etc.) angle converter",
+      "acs"
+    ]
+  },
+  {
     "title": "Area Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/area-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -572,6 +585,58 @@
     ]
   },
   {
+    "title": "Capacitance Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/capacitance-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "capacitance converter | snapcalc",
+      "capacitance converter snapcalc",
+      "capacitance converter",
+      "conversions (units, currencies, etc.) capacitance converter snapcalc",
+      "conversions (units, currencies, etc.) capacitance converter",
+      "ccs"
+    ]
+  },
+  {
+    "title": "Density Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/density-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "density converter | snapcalc",
+      "density converter snapcalc",
+      "density converter",
+      "conversions (units, currencies, etc.) density converter snapcalc",
+      "conversions (units, currencies, etc.) density converter",
+      "dcs"
+    ]
+  },
+  {
+    "title": "Electric Charge Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/electric-charge-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "electric charge converter | snapcalc",
+      "electric charge converter snapcalc",
+      "electric charge converter",
+      "conversions (units, currencies, etc.) electric charge converter snapcalc",
+      "conversions (units, currencies, etc.) electric charge converter",
+      "eccs"
+    ]
+  },
+  {
+    "title": "Electric Current Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/electric-current-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "electric current converter | snapcalc",
+      "electric current converter snapcalc",
+      "electric current converter",
+      "conversions (units, currencies, etc.) electric current converter snapcalc",
+      "conversions (units, currencies, etc.) electric current converter",
+      "eccs"
+    ]
+  },
+  {
     "title": "Energy Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/energy-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -582,6 +647,32 @@
       "conversions (units, currencies, etc.) energy converter snapcalc",
       "conversions (units, currencies, etc.) energy converter",
       "ecs"
+    ]
+  },
+  {
+    "title": "Force Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/force-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "force converter | snapcalc",
+      "force converter snapcalc",
+      "force converter",
+      "conversions (units, currencies, etc.) force converter snapcalc",
+      "conversions (units, currencies, etc.) force converter",
+      "fcs"
+    ]
+  },
+  {
+    "title": "Frequency Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/frequency-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "frequency converter | snapcalc",
+      "frequency converter snapcalc",
+      "frequency converter",
+      "conversions (units, currencies, etc.) frequency converter snapcalc",
+      "conversions (units, currencies, etc.) frequency converter",
+      "fcs"
     ]
   },
   {
@@ -624,6 +715,19 @@
     ]
   },
   {
+    "title": "Resistance Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/resistance-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "resistance converter | snapcalc",
+      "resistance converter snapcalc",
+      "resistance converter",
+      "conversions (units, currencies, etc.) resistance converter snapcalc",
+      "conversions (units, currencies, etc.) resistance converter",
+      "rcs"
+    ]
+  },
+  {
     "title": "Speed Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/speed-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -660,6 +764,32 @@
       "conversions (units, currencies, etc.) time converter snapcalc",
       "conversions (units, currencies, etc.) time converter",
       "tcs"
+    ]
+  },
+  {
+    "title": "Torque Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/torque-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "torque converter | snapcalc",
+      "torque converter snapcalc",
+      "torque converter",
+      "conversions (units, currencies, etc.) torque converter snapcalc",
+      "conversions (units, currencies, etc.) torque converter",
+      "tcs"
+    ]
+  },
+  {
+    "title": "Voltage Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/voltage-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "voltage converter | snapcalc",
+      "voltage converter snapcalc",
+      "voltage converter",
+      "conversions (units, currencies, etc.) voltage converter snapcalc",
+      "conversions (units, currencies, etc.) voltage converter",
+      "vcs"
     ]
   },
   {

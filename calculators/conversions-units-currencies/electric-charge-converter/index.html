@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Electric Charge Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert electric charge between coulombs (C), mC, μC, nC, pC, ampere-hours (Ah), milliampere-hours (mAh), and faradays (F).">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/electric-charge-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Electric Charge Converter | SnapCalc">
+    <meta property="og:description" content="Convert electric charge between coulombs (C), mC, μC, nC, pC, ampere-hours (Ah), milliampere-hours (mAh), and faradays (F).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/electric-charge-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electric Charge Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert electric charge between coulombs (C), mC, μC, nC, pC, ampere-hours (Ah), milliampere-hours (mAh), and faradays (F).">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Electric Charge Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/electric-charge-converter/",
+      "description": "Convert electric charge between common units including coulombs, submultiples (mC, μC, nC, pC), ampere-hours, milliampere-hours, and faradays."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Electric Charge Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Electric Charge Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4abAR07" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Material Calculations</div>
+    <p class="affiliate-copy">Tools for calculating quantities of concrete, timber, steel, and building materials.</p>
+    <div class="affiliate-cta">Explore construction material calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert electric charge between common units</h2>
+
+              <p class="calculator-intro">
+                Enter a charge value, choose the unit you have, and the unit you want. This is built for quick conversions between C, mC, μC, nC, pC, Ah, mAh, and faradays.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="chargeValue">Charge value</label>
+                <input type="text" id="chargeValue" inputmode="decimal" placeholder="e.g., 2500">
+              </div>
+
+              <div class="input-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit" class="select-field" aria-label="From unit">
+                  <option value="C">Coulomb (C)</option>
+                  <option value="mC">Millicoulomb (mC)</option>
+                  <option value="uC">Microcoulomb (μC)</option>
+                  <option value="nC">Nanocoulomb (nC)</option>
+                  <option value="pC">Picocoulomb (pC)</option>
+                  <option value="Ah">Ampere-hour (Ah)</option>
+                  <option value="mAh">Milliampere-hour (mAh)</option>
+                  <option value="F">Faraday (F)</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="toUnit">To unit</label>
+                <select id="toUnit" class="select-field" aria-label="To unit">
+                  <option value="C">Coulomb (C)</option>
+                  <option value="mC">Millicoulomb (mC)</option>
+                  <option value="uC">Microcoulomb (μC)</option>
+                  <option value="nC">Nanocoulomb (nC)</option>
+                  <option value="pC">Picocoulomb (pC)</option>
+                  <option value="Ah">Ampere-hour (Ah)</option>
+                  <option value="mAh">Milliampere-hour (mAh)</option>
+                  <option value="F">Faraday (F)</option>
+                </select>
+              </div>
+
+              <div class="input-group checkbox-row">
+                <label class="checkbox-label" for="showAll">
+                  <input type="checkbox" id="showAll" checked>
+                  Show quick equivalents in other units
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4ayKExB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Insulation</div>
+    <p class="affiliate-copy">Estimate insulation requirements for walls, roofs, and floors.</p>
+    <div class="affiliate-cta">View insulation calculation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert everyday and technical units across common measurement systems.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering & Technical</h3>
+              <p class="related-desc">Electrical, mechanical, and technical calculators for practical problem-solving.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study support tools for science, math, and exam preparation.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/44qEtrt" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Site Planning</div>
+    <p class="affiliate-copy">Plan site layout, access, and logistics for construction projects.</p>
+    <div class="affiliate-cta">Browse site planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Electric charge conversion for coulombs, microcoulombs, and ampere-hours</h2>
+
+              <p>
+                This Electric Charge Converter helps you convert a known amount of electric charge from one unit to another without doing manual scale-factor math. The most common unit in physics is the coulomb (C), but many real-world contexts use smaller metric subunits such as millicoulombs (mC) and microcoulombs (μC). In electronics and batteries, charge is often expressed as ampere-hours (Ah) or milliampere-hours (mAh). In electrochemistry, charge sometimes appears in faradays (F), which is tied to the amount of charge per mole of electrons.
+              </p>
+              <p>
+                The dominant use case is straightforward unit conversion. You already have a charge value (for example, a capacitor discharge in microcoulombs, a sensor output in nanocoulombs, or a battery capacity in mAh) and you need that same quantity expressed in a different unit. This page is intentionally not a current-time calculator. It will not infer charge from current and time, and it will not estimate battery runtime. It only converts between charge units.
+              </p>
+              <p>
+                To use it, enter the charge value you have, select the unit it is currently in, then select the unit you want. The main output shows the converted value. If you keep “Show quick equivalents” enabled, you also get a compact set of reference conversions for the same charge expressed in several other units. This is useful when you are checking work, comparing magnitudes, or translating between contexts such as lab measurements (μC) and battery specifications (mAh).
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This tool converts units of charge only. It does not calculate charge from current and time, and it does not model discharge curves or efficiency.</li>
+                <li>Metric subunits are treated as exact decimal scales: 1 mC = 10⁻³ C, 1 μC = 10⁻⁶ C, 1 nC = 10⁻⁹ C, and 1 pC = 10⁻¹² C.</li>
+                <li>Ampere-hour conversions assume the standard definition: 1 Ah = 3600 C and 1 mAh = 3.6 C.</li>
+                <li>Faraday conversions use a single conventional constant (charge per mole of electrons). Small differences in published values will cause tiny rounding differences.</li>
+                <li>Very large or very small results may be shown in scientific notation to keep the output readable and avoid misleading rounding.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is ampere-hour (Ah) really a unit of charge?</h3>
+              <p>
+                Yes. Current is charge per second, so multiplying current by time gives charge. An ampere-hour is the charge transferred by a steady current of 1 amp for 1 hour. Numerically, that equals 3600 coulombs. Battery labels use Ah and mAh because they are convenient at consumer scales.
+              </p>
+
+              <h3>Why do I see microcoulombs (μC) and nanocoulombs (nC) so often in electronics?</h3>
+              <p>
+                Many electronic components and signals involve tiny amounts of charge, especially in capacitors, sensors, and measurement circuits. Using μC or nC avoids long strings of zeros and makes values easier to compare. The conversion itself is purely a decimal shift relative to coulombs.
+              </p>
+
+              <h3>What is a faraday (F) in this converter?</h3>
+              <p>
+                In electrochemistry, a faraday is the magnitude of electric charge carried by one mole of electrons. It is commonly used when relating charge to chemical change (for example, plating, electrolysis, or reaction stoichiometry). This converter treats the faraday as a fixed charge constant so you can translate between coulombs and faradays quickly.
+              </p>
+
+              <h3>My result looks “too small” or “too big.” How can I sanity-check it?</h3>
+              <p>
+                Use quick anchors: 1 mAh equals 3.6 C, and 1 Ah equals 3600 C. Also remember each metric step is a factor of 1000: 1 C = 1000 mC = 1,000,000 μC. If your converted value is off by roughly 1000×, you probably selected the wrong metric prefix.
+              </p>
+
+              <h3>Does this help me estimate battery runtime or charging time?</h3>
+              <p>
+                No. Runtime depends on current draw over time, voltage, battery chemistry, temperature, and discharge behavior. This tool only converts the charge quantity you already have between units. If you want runtime, you need a different calculator that uses current (or power) and time explicitly.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oW58ns" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Construction Planning</div>
+    <p class="affiliate-copy">Plan construction timelines, tasks, and resource allocation effectively.</p>
+    <div class="affiliate-cta">Browse construction planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

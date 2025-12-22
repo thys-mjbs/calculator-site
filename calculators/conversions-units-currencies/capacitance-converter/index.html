@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Capacitance Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert capacitance values between farads (F), millifarads (mF), microfarads (µF), nanofarads (nF), and picofarads (pF).">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/capacitance-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Capacitance Converter | SnapCalc">
+    <meta property="og:description" content="Convert capacitance values between farads (F), millifarads (mF), microfarads (µF), nanofarads (nF), and picofarads (pF).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/capacitance-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capacitance Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert capacitance values between farads (F), millifarads (mF), microfarads (µF), nanofarads (nF), and picofarads (pF).">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Capacitance Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/capacitance-converter/",
+      "description": "Convert capacitance values between farads (F), millifarads (mF), microfarads (µF), nanofarads (nF), and picofarads (pF)."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Capacitance Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Capacitance Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oWzbLH" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Material Takeoff</div>
+    <p class="affiliate-copy">Perform material takeoffs efficiently for construction estimates.</p>
+    <div class="affiliate-cta">Explore material takeoff tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert capacitor values between common units</h2>
+
+              <p class="calculator-intro">Enter a capacitance value, choose the unit you have, and choose the unit you want. You will also get a quick breakdown in all common units.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="capValue">Capacitance value</label>
+                <input type="text" id="capValue" inputmode="decimal" placeholder="e.g. 0.1 or 1000">
+              </div>
+
+              <div class="form-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit">
+                  <option value="F">Farads (F)</option>
+                  <option value="mF">Millifarads (mF)</option>
+                  <option value="uF" selected>Microfarads (µF)</option>
+                  <option value="nF">Nanofarads (nF)</option>
+                  <option value="pF">Picofarads (pF)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="toUnit">To unit</label>
+                <select id="toUnit">
+                  <option value="F">Farads (F)</option>
+                  <option value="mF">Millifarads (mF)</option>
+                  <option value="uF">Microfarads (µF)</option>
+                  <option value="nF" selected>Nanofarads (nF)</option>
+                  <option value="pF">Picofarads (pF)</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert capacitance</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4ayKExB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Insulation</div>
+    <p class="affiliate-copy">Estimate insulation requirements for walls, roofs, and floors.</p>
+    <div class="affiliate-cta">View insulation calculation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert between practical units for everyday and technical use, including measurements and rates.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Use electrical and engineering calculators for quick checks, sizing, and sanity testing.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">Study and revise faster with clear calculators that support homework, tests, and fundamentals.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Capacitance unit conversion for capacitor values (F, mF, µF, nF, pF)</h2>
+
+              <p>A capacitance converter helps you translate a capacitor value from one unit to another without guessing or doing powers of ten in your head. This is useful when you are reading a datasheet, looking at a capacitor label, comparing two parts, or checking whether a substitution is actually equivalent. Capacitance values commonly appear as microfarads (µF), nanofarads (nF), or picofarads (pF), but the underlying value is the same quantity expressed with different prefixes.</p>
+
+              <p>This calculator is designed for one job: converting a known capacitance value between common SI units. You enter the number you have, select the unit it is currently expressed in, and select the unit you want to see. The result shows the converted value for your chosen target unit and a compact breakdown showing the same capacitance expressed in all five common units. That breakdown is often the most practical output because it makes it easy to sanity check what you are seeing and spot mistakes quickly.</p>
+
+              <p>How it works is straightforward. Each unit is just a scaling factor of a farad. For example, 1 µF is one millionth of a farad, and 1 pF is one trillionth of a farad. The calculator converts your input to farads internally and then converts from farads to the target unit. If your number is very small or very large, the result may be shown in scientific notation so you still get a meaningful value instead of a rounded zero. This tool intentionally does not estimate circuit behavior. It does not calculate reactance, cutoff frequency, time constants, ripple, or anything else. It is a unit converter only.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The input is a capacitance value for a single capacitor, not a network of capacitors in series or parallel.</li>
+                <li>Only common SI prefixes are supported here: F, mF, µF, nF, and pF.</li>
+                <li>Values must be greater than 0. If you do not know the exact value, use your best estimate and treat the output as approximate.</li>
+                <li>This conversion ignores tolerance and temperature effects. A 10% capacitor still converts the same way in units, but the real component can vary around the stated value.</li>
+                <li>This tool does not interpret capacitor marking codes or convert between marking schemes. It only converts numeric values between units.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why do capacitor values switch between µF, nF, and pF?</h3>
+              <p>Because the same physical capacitance can be written in many equivalent ways, and different contexts prefer different scales. Small capacitors are commonly expressed in pF, mid-range values often show as nF, and larger values typically appear as µF. Converting lets you compare like with like.</p>
+
+              <h3>What is the difference between mF and µF?</h3>
+              <p>They are very different. A millifarad (mF) is 1,000 times larger than a microfarad (µF). Confusing these is one of the most common mistakes because the symbols look similar at a glance. Use the dropdown to confirm you selected the correct prefix.</p>
+
+              <h3>My result looks like 0.00. Is the calculator broken?</h3>
+              <p>No. Very small values can round to 0.00 when shown with two decimal places in a large unit like farads. In those cases the calculator also shows scientific notation and the breakdown in smaller units, where the same value will display clearly.</p>
+
+              <h3>Can I use this to replace a capacitor with a “close” value?</h3>
+              <p>This tool can confirm whether two labels represent the same value, but it cannot tell you whether a near value is safe in your circuit. Substitution depends on circuit sensitivity, tolerance, voltage rating, ESR, type, and operating conditions. Use this converter only to eliminate unit confusion first.</p>
+
+              <h3>Does this apply to electrolytic, ceramic, film, and other capacitor types?</h3>
+              <p>Yes for unit conversion. Capacitance units are the same for all capacitor types. What changes between types is behavior and real-world performance, not the mathematical relationship between prefixes.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oW58ns" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Construction Planning</div>
+    <p class="affiliate-copy">Plan construction timelines, tasks, and resource allocation effectively.</p>
+    <div class="affiliate-cta">Browse construction planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
