@@ -1528,6 +1528,20 @@
     ]
   },
   {
+    "title": "Average Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/average-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "average calculator | snapcalc",
+      "average calculator snapcalc",
+      "average calculator",
+      "math & general calculators average calculator snapcalc",
+      "math & general calculators average calculator",
+      "average snapcalc",
+      "acs"
+    ]
+  },
+  {
     "title": "Decimal to Fraction Calculator | SnapCalc",
     "url": "/calculators/math-general-calculators/decimal-to-fraction-calculator/",
     "category": "Math & General Calculators",
@@ -1580,6 +1594,75 @@
       "math & general calculators greatest common divisor calculator",
       "greatest common divisor snapcalc",
       "gcdcs"
+    ]
+  },
+  {
+    "title": "Least Common Multiple Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/least-common-multiple-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "least common multiple calculator | snapcalc",
+      "least common multiple calculator snapcalc",
+      "least common multiple calculator",
+      "math & general calculators least common multiple calculator snapcalc",
+      "math & general calculators least common multiple calculator",
+      "least common multiple snapcalc",
+      "lcmcs"
+    ]
+  },
+  {
+    "title": "Mean Absolute Deviation Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/mean-absolute-deviation-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "mean absolute deviation calculator | snapcalc",
+      "mean absolute deviation calculator snapcalc",
+      "mean absolute deviation calculator",
+      "math & general calculators mean absolute deviation calculator snapcalc",
+      "math & general calculators mean absolute deviation calculator",
+      "mean absolute deviation snapcalc",
+      "madcs"
+    ]
+  },
+  {
+    "title": "Median Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/median-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "median calculator | snapcalc",
+      "median calculator snapcalc",
+      "median calculator",
+      "math & general calculators median calculator snapcalc",
+      "math & general calculators median calculator",
+      "median snapcalc",
+      "mcs"
+    ]
+  },
+  {
+    "title": "Mode Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/mode-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "mode calculator | snapcalc",
+      "mode calculator snapcalc",
+      "mode calculator",
+      "math & general calculators mode calculator snapcalc",
+      "math & general calculators mode calculator",
+      "mode snapcalc",
+      "mcs"
+    ]
+  },
+  {
+    "title": "Number Sequence Generator | SnapCalc",
+    "url": "/calculators/math-general-calculators/number-sequence-generator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "number sequence generator | snapcalc",
+      "number sequence generator snapcalc",
+      "number sequence generator",
+      "math & general calculators number sequence generator snapcalc",
+      "math & general calculators number sequence generator",
+      "nsgs"
     ]
   },
   {
@@ -1653,6 +1736,33 @@
     ]
   },
   {
+    "title": "Random Number Generator | SnapCalc",
+    "url": "/calculators/math-general-calculators/random-number-generator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "random number generator | snapcalc",
+      "random number generator snapcalc",
+      "random number generator",
+      "math & general calculators random number generator snapcalc",
+      "math & general calculators random number generator",
+      "rngs"
+    ]
+  },
+  {
+    "title": "Range Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/range-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "range calculator | snapcalc",
+      "range calculator snapcalc",
+      "range calculator",
+      "math & general calculators range calculator snapcalc",
+      "math & general calculators range calculator",
+      "range snapcalc",
+      "rcs"
+    ]
+  },
+  {
     "title": "Ratio Calculator | SnapCalc",
     "url": "/calculators/math-general-calculators/ratio-calculator/",
     "category": "Math & General Calculators",
@@ -1664,6 +1774,34 @@
       "math & general calculators ratio calculator",
       "ratio snapcalc",
       "rcs"
+    ]
+  },
+  {
+    "title": "Ratio Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/ratio-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "ratio calculator | snapcalc",
+      "ratio calculator snapcalc",
+      "standard deviation simple calculator",
+      "math & general calculators ratio calculator snapcalc",
+      "math & general calculators standard deviation simple calculator",
+      "ratio snapcalc",
+      "rcs"
+    ]
+  },
+  {
+    "title": "Unit Price Calculator | SnapCalc",
+    "url": "/calculators/math-general-calculators/unit-price-calculator/",
+    "category": "Math & General Calculators",
+    "aliases": [
+      "unit price calculator | snapcalc",
+      "unit price calculator snapcalc",
+      "unit price calculator",
+      "math & general calculators unit price calculator snapcalc",
+      "math & general calculators unit price calculator",
+      "unit price snapcalc",
+      "upcs"
     ]
   },
   {

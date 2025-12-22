@@ -1,0 +1,2381 @@
+## index.html
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Number Sequence Generator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Generate an arithmetic number sequence from a start value using a step size. Choose a count or optional end value, then copy the list for spreadsheets, labels, and simple counting ranges.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/number-sequence-generator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Number Sequence Generator | SnapCalc">
+    <meta property="og:description" content="Generate an arithmetic number sequence from a start value using a step size. Choose a count or optional end value, then copy the list for spreadsheets, labels, and simple counting ranges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/number-sequence-generator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Number Sequence Generator | SnapCalc">
+    <meta name="twitter:description" content="Generate an arithmetic number sequence from a start value using a step size. Choose a count or optional end value, then copy the list for spreadsheets, labels, and simple counting ranges.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Number Sequence Generator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/number-sequence-generator/",
+      "description": "Generate an arithmetic number sequence from a start value using a step size. Choose a count or optional end value, then copy the list for spreadsheets, labels, and simple counting ranges."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
+        <span>Number Sequence Generator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Number Sequence Generator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Generate a step-by-step number list</h2>
+
+              <p class="calculator-intro">
+                Create an arithmetic sequence using a start value and step size. Optionally stop at an end value, or just generate a fixed number of terms.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="startValue">Start value</label>
+                <input type="text" id="startValue" inputmode="decimal" placeholder="e.g., 1" aria-label="Start value">
+              </div>
+
+              <div class="form-group">
+                <label for="stepValue">Step size</label>
+                <input type="text" id="stepValue" inputmode="decimal" placeholder="e.g., 1" aria-label="Step size">
+              </div>
+
+              <div class="form-group">
+                <label for="countValue">How many numbers (optional)</label>
+                <input type="text" id="countValue" inputmode="numeric" placeholder="e.g., 10" aria-label="How many numbers">
+              </div>
+
+              <div class="form-group">
+                <label for="endValue">End value (optional)</label>
+                <input type="text" id="endValue" inputmode="decimal" placeholder="e.g., 100" aria-label="End value">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Generate sequence</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Work with percentages, ratios, averages, and other everyday math problems.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and measurements quickly for school, work, and daily tasks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study support tools for grading, scoring, and exam-focused calculations.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Number sequence generator for step lists, ranges, and copy-paste series</h2>
+
+              <p>
+                This Number Sequence Generator creates an arithmetic sequence, which is a list of numbers that increases or decreases by the same amount each step. It is built for a simple, common task: you need a clean list like 1, 2, 3, 4, 5 or 0, 5, 10, 15, 20 and you want to copy it into a spreadsheet, a label template, a checklist, or a quick calculation workflow.
+              </p>
+              <p>
+                The calculator is intentionally focused on one job: generating evenly spaced numbers from a start value with a fixed step size. It does not try to generate special sequences like Fibonacci, prime numbers, or random values. If your goal is a predictable list you can reuse, this is the right tool.
+              </p>
+              <p>
+                To use it, enter a start value and a step size. Then choose how the generator should stop. If you enter an end value, the generator will keep stepping until it reaches the end (or the last value before passing it). If you do not enter an end value, it will generate a fixed number of terms (the count). You can also enter both, but the end value acts as the stop rule, and the count becomes a safety limit to prevent extremely large outputs.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Start value and step size are required. Step size cannot be 0 because a sequence would never progress.</li>
+                <li>Count is optional. If you do not provide an end value, the calculator uses the count to decide how many numbers to generate.</li>
+                <li>End value is optional. If provided, the generator stops when the next step would pass the end (based on step direction).</li>
+                <li>Negative step sizes are allowed. A negative step generates a descending sequence (for example, 10, 8, 6, 4, 2).</li>
+                <li>Very large sequences are limited to keep the page responsive. If your settings would generate too many numbers, reduce the count or tighten the end range.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What kind of sequence does this generate?</h3>
+              <p>
+                It generates an arithmetic sequence only. That means every number is the previous number plus the same step size. This is the standard sequence used for ranges, intervals, counting lists, and evenly spaced series.
+              </p>
+
+              <h3>Do I need to enter both an end value and a count?</h3>
+              <p>
+                No. Enter a count if you want “N numbers starting from here.” Enter an end value if you want “go until you reach this target.” If you enter neither, the tool cannot know when to stop, so it will ask you to supply at least one stopping rule.
+              </p>
+
+              <h3>Why does my end value not appear in the list?</h3>
+              <p>
+                The end value only appears if it lands exactly on a step. For example, start 0, step 6, end 20 will produce 0, 6, 12, 18 because the next value (24) would pass 20. If you need the end value included, adjust the step size so the end is reachable.
+              </p>
+
+              <h3>Can I generate a descending sequence?</h3>
+              <p>
+                Yes. Use a negative step size, and make sure your end value (if used) is lower than the start value. For example, start 100, step -5, end 75 produces 100, 95, 90, 85, 80, 75.
+              </p>
+
+              <h3>How can I make the result more usable in Excel or Google Sheets?</h3>
+              <p>
+                Use the comma-separated list for pasting into a single row, or use the line-separated list for pasting into a single column. If you are building IDs, labels, or templates, the line-separated format is usually the cleanest.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
+```
+
+## style.css
+
+```css
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Optional intro text below calculator title */
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Generic input groups (both .form-group and .input-group) */
+.form-group,
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label,
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="text"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+#calculateButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Related category tiles */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.related-title {
+  font-weight: bold;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+/* SEO section */
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.seo-section h3 {
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholders – shared look */
+.ad-block {
+  border-radius: 8px;
+  border: 1px dashed #d0d0d0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 6px,
+    #e9e9e9 6px,
+    #e9e9e9 12px
+  );
+}
+
+/* Text-based affiliate tile (canonical: 300px tall, centered, override-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none;
+  color: inherit;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px !important;
+  padding: 18px !important;
+  gap: 16px !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.ad-block a.affiliate-link .affiliate-label {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  color: #111111;
+}
+
+.ad-block a.affiliate-link .affiliate-copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666666;
+  max-width: 320px;
+}
+
+.ad-block a.affiliate-link .affiliate-cta {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.ad-block a.affiliate-link:hover {
+  filter: brightness(0.98);
+}
+
+/* Fallback: ONLY when text affiliate HTML regresses to sibling elements (no .affiliate-link wrapper) */
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) {
+  width: 300px !important;
+  height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label,
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy,
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #111111 !important;
+}
+
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #666666 !important;
+  max-width: 320px;
+}
+
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  margin-top: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  color: #222222 !important;
+}
+
+/* Uniform book-cover rendering (max 300×300 visual footprint) */
+.ad-block img {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* Breadcrumbs – force same look everywhere */
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Basic mobile tweak */
+@media (max-width: 768px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
+
+/* Calculator-specific additions */
+.sequence-output {
+  margin-top: 10px;
+}
+
+.sequence-output textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.sequence-meta {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+  font-size: 13px;
+  color: #222222;
+}
+
+.sequence-meta p {
+  margin: 6px 0;
+}
+```
+
+## script.js
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+  // ------------------------------------------------------------
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
+  // ------------------------------------------------------------
+
+  // Required base elements (consistent across all calculators)
+  const calculateButton = document.getElementById("calculateButton");
+  const resultDiv = document.getElementById("result");
+  const shareButton = document.getElementById("shareWhatsAppButton");
+
+  // Calculator-specific input elements
+  const startValueInput = document.getElementById("startValue");
+  const stepValueInput = document.getElementById("stepValue");
+  const countValueInput = document.getElementById("countValue");
+  const endValueInput = document.getElementById("endValue");
+
+  // ------------------------------------------------------------
+  // 2) LIVE FORMATTING (OPTIONAL)
+  // ------------------------------------------------------------
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
+  }
+
+  attachLiveFormatting(startValueInput);
+  attachLiveFormatting(stepValueInput);
+  attachLiveFormatting(countValueInput);
+  attachLiveFormatting(endValueInput);
+
+  // ------------------------------------------------------------
+  // 3) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
+  function setResultError(message) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("success");
+    resultDiv.classList.add("error");
+    resultDiv.textContent = message;
+  }
+
+  function setResultSuccess(html) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error");
+    resultDiv.classList.add("success");
+    resultDiv.innerHTML = html;
+  }
+
+  function clearResult() {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error", "success");
+    resultDiv.textContent = "";
+  }
+
+  // ------------------------------------------------------------
+  // 4) VALIDATION HELPERS (OPTIONAL)
+  // ------------------------------------------------------------
+  function validateFinite(value, fieldLabel) {
+    if (!Number.isFinite(value)) {
+      setResultError("Enter a valid " + fieldLabel + ".");
+      return false;
+    }
+    return true;
+  }
+
+  function validateNonZero(value, fieldLabel) {
+    if (!Number.isFinite(value) || value === 0) {
+      setResultError("Enter a valid " + fieldLabel + " that is not 0.");
+      return false;
+    }
+    return true;
+  }
+
+  function validatePositiveInteger(value, fieldLabel) {
+    if (!Number.isFinite(value) || value <= 0 || Math.floor(value) !== value) {
+      setResultError("Enter a valid " + fieldLabel + " as a whole number greater than 0.");
+      return false;
+    }
+    return true;
+  }
+
+  // ------------------------------------------------------------
+  // 5) FORMATTER FOR DISPLAY TERMS (LOCAL)
+  // ------------------------------------------------------------
+  function formatTerm(n) {
+    if (!Number.isFinite(n)) return "";
+    const abs = Math.abs(n);
+    const fractionDigits = abs !== 0 && abs < 1 ? 10 : 6;
+    return new Intl.NumberFormat(undefined, {
+      maximumFractionDigits: fractionDigits
+    }).format(n);
+  }
+
+  // ------------------------------------------------------------
+  // 6) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
+  // ------------------------------------------------------------
+  if (calculateButton) {
+    calculateButton.addEventListener("click", function () {
+      clearResult();
+
+      if (!startValueInput || !stepValueInput || !countValueInput || !endValueInput) return;
+
+      const start = toNumber(startValueInput.value);
+      const step = toNumber(stepValueInput.value);
+
+      const rawCount = toNumber(countValueInput.value);
+      const rawEnd = toNumber(endValueInput.value);
+
+      const hasCount = Number.isFinite(rawCount) && String(countValueInput.value || "").trim() !== "";
+      const hasEnd = Number.isFinite(rawEnd) && String(endValueInput.value || "").trim() !== "";
+
+      if (!validateFinite(start, "start value")) return;
+      if (!validateNonZero(step, "step size")) return;
+
+      if (!hasCount && !hasEnd) {
+        setResultError("Enter either an end value or how many numbers to generate.");
+        return;
+      }
+
+      let count = null;
+      if (hasCount) {
+        count = Math.round(rawCount);
+        if (!validatePositiveInteger(count, "how many numbers")) return;
+      }
+
+      const MAX_TERMS = 5000;
+      const terms = [];
+      let current = start;
+
+      // If end is provided, use it as the stopping rule.
+      // Count becomes a safety cap if also provided.
+      if (hasEnd) {
+        const end = rawEnd;
+        if (!validateFinite(end, "end value")) return;
+
+        // Direction sanity check: prevent impossible progress
+        if (step > 0 && end < start) {
+          setResultError("With a positive step, the end value should be greater than or equal to the start value.");
+          return;
+        }
+        if (step < 0 && end > start) {
+          setResultError("With a negative step, the end value should be less than or equal to the start value.");
+          return;
+        }
+
+        let safety = 0;
+        while (true) {
+          // Include current if it is within bounds (inclusive)
+          if (step > 0) {
+            if (current > end) break;
+          } else {
+            if (current < end) break;
+          }
+
+          terms.push(current);
+          safety += 1;
+
+          if (safety >= MAX_TERMS) break;
+          if (count !== null && safety >= count) break;
+
+          current = current + step;
+        }
+      } else {
+        // No end value, generate by count
+        if (count === null) {
+          setResultError("Enter how many numbers to generate.");
+          return;
+        }
+        if (count > MAX_TERMS) {
+          setResultError("That is too many numbers to generate at once. Use a smaller count (max " + MAX_TERMS + ").");
+          return;
+        }
+
+        for (let i = 0; i < count; i++) {
+          terms.push(current);
+          current = current + step;
+        }
+      }
+
+      if (terms.length === 0) {
+        setResultError("No numbers were generated. Check your start, step, and end settings.");
+        return;
+      }
+
+      if (terms.length >= MAX_TERMS) {
+        // Not an error, but warn via content
+      }
+
+      const first = terms[0];
+      const last = terms[terms.length - 1];
+      const total = terms.length;
+
+      let sum = 0;
+      for (let i = 0; i < terms.length; i++) sum += terms[i];
+
+      const avg = sum / total;
+
+      const commaList = terms.map(formatTerm).join(", ");
+      const lineList = terms.map(formatTerm).join("\n");
+
+      const resultHtml = `
+        <p><strong>Sequence generated:</strong> ${total} number${total === 1 ? "" : "s"}</p>
+
+        <div class="sequence-output">
+          <p><strong>Comma-separated (row paste):</strong></p>
+          <textarea readonly aria-label="Comma-separated number sequence">${commaList}</textarea>
+
+          <p style="margin-top:10px;"><strong>Line-separated (column paste):</strong></p>
+          <textarea readonly aria-label="Line-separated number sequence">${lineList}</textarea>
+        </div>
+
+        <div class="sequence-meta">
+          <p><strong>First:</strong> ${formatTerm(first)}</p>
+          <p><strong>Last:</strong> ${formatTerm(last)}</p>
+          <p><strong>Step:</strong> ${formatTerm(step)}</p>
+          <p><strong>Sum:</strong> ${formatNumberTwoDecimals(sum)}</p>
+          <p><strong>Average:</strong> ${formatNumberTwoDecimals(avg)}</p>
+          ${total >= 5000 ? `<p><strong>Note:</strong> Output capped at ${MAX_TERMS} terms for performance.</p>` : ""}
+        </div>
+      `;
+
+      setResultSuccess(resultHtml);
+    });
+  }
+
+  // ------------------------------------------------------------
+  // 7) WHATSAPP SHARE (CONSISTENT)
+  // ------------------------------------------------------------
+  if (shareButton) {
+    shareButton.addEventListener("click", function () {
+      const pageUrl = window.location.href;
+      const message = "Number Sequence Generator - check this calculator: " + pageUrl;
+      const encoded = encodeURIComponent(message);
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
+    });
+  }
+});
+```
+
+## calculator-slug
+
+```html
+number-sequence-generator
+```
+
+### index.html
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Random Number Generator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Generate one or many random whole numbers between a minimum and maximum range, with optional unique results and sorting.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/random-number-generator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Random Number Generator | SnapCalc">
+    <meta property="og:description" content="Generate one or many random whole numbers between a minimum and maximum range, with optional unique results and sorting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/random-number-generator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Random Number Generator | SnapCalc">
+    <meta name="twitter:description" content="Generate one or many random whole numbers between a minimum and maximum range, with optional unique results and sorting.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Random Number Generator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/random-number-generator/",
+      "description": "Generate random whole numbers between a minimum and maximum range, optionally producing multiple unique results and sorting them."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
+        <span>Random Number Generator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Random Number Generator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Generate random numbers in a range</h2>
+
+              <p class="calculator-intro">Pick a minimum and maximum, then generate one number or a list. Use the Advanced options to make results unique or sorted.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="minValue">Minimum (whole number)</label>
+                <input type="text" id="minValue" inputmode="numeric" autocomplete="off" placeholder="e.g., 1">
+              </div>
+
+              <div class="form-group">
+                <label for="maxValue">Maximum (whole number)</label>
+                <input type="text" id="maxValue" inputmode="numeric" autocomplete="off" placeholder="e.g., 100">
+              </div>
+
+              <details class="advanced-section">
+                <summary class="advanced-summary">Advanced (optional)</summary>
+
+                <div class="form-group advanced-field">
+                  <label for="quantity">How many numbers?</label>
+                  <input type="text" id="quantity" inputmode="numeric" autocomplete="off" placeholder="Default: 1">
+                </div>
+
+                <div class="checkbox-row">
+                  <input type="checkbox" id="uniqueOnly">
+                  <label for="uniqueOnly">Unique results (no repeats)</label>
+                </div>
+
+                <div class="checkbox-row">
+                  <input type="checkbox" id="sortResults">
+                  <label for="sortResults">Sort results (ascending)</label>
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Generate</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Work with everyday numbers: percentages, averages, ranges, factors, and quick math tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Fast utilities for daily decisions, planning, and simple practical calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study and exam helpers like grade calculators, scoring tools, and practice utilities.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Random number generator for picking a number between two values</h2>
+
+              <p>A random number generator helps you pick a fair, unpredictable number inside a range you choose. The most common real world use is simple selection: you need one number (or a short list of numbers) for a game, a classroom activity, a giveaway, a drawing, or a quick decision where you want to avoid bias. Instead of debating or re rolling dice, you set a minimum and maximum and let the generator do the selection instantly.</p>
+
+              <p>This calculator is intentionally locked to whole numbers because that is what most people mean when they search for a random number generator. If you need decimals, weighted probabilities, cryptographic randomness, or shuffling a full list of names, this is the wrong tool. Here you get quick, practical output that matches typical “pick a number from X to Y” intent.</p>
+
+              <p>To use it, enter your minimum and maximum whole number. If you only need one result, leave the Advanced section alone and click Generate. If you need more than one number, open Advanced and set how many numbers you want. You can also choose Unique results to prevent repeats (useful for assigning different numbers to different people), and Sort results if you want the output in ascending order for easier reading or copying.</p>
+
+              <p>The result area shows your generated number or list first, then a short summary of what you asked for. That summary matters when you copy results into a message or a spreadsheet because it keeps your selection method transparent: the range used, how many outputs were produced, and whether repeats were allowed. If you choose Unique results, the calculator also checks that your range is big enough to support your requested quantity without forcing repeats.</p>
+
+              <p>Random selection is only “fair” if the range matches the decision you are making. If you are picking a winner number for a list of participants, your range should map cleanly to your list, for example 1 to 25 for 25 entries. If you accidentally use 1 to 26, someone could get an impossible number or a nonexistent slot. The calculator will not know what your list means, so you need to choose your range carefully.</p>
+
+              <p>For quick sanity checking, think about the number of possible outcomes. If your range is 1 to 10, there are 10 possible results. If you request 10 unique numbers from 1 to 10, you will get every number exactly once (in random order). If you request 11 unique numbers from 1 to 10, that is impossible, and the calculator will tell you to either expand the range or allow repeats.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This tool generates whole numbers only. If you enter decimals, you should change them to whole numbers before generating results.</li>
+                <li>The minimum and maximum are inclusive, meaning both endpoints can appear in the results.</li>
+                <li>When “Unique results” is enabled, the calculator will block requests where the quantity is larger than the number of possible values in the range.</li>
+                <li>When “Unique results” is disabled, repeats are allowed, and the same number may appear more than once in a multi number list.</li>
+                <li>Sorting is applied after generation. Sorting does not change the randomness of what was generated; it only changes how the list is displayed.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is the minimum and maximum included in the results?</h3>
+              <p>Yes. If your range is 5 to 12, both 5 and 12 are possible outputs. This matches how most people interpret “between two numbers” for random selection tasks.</p>
+
+              <h3>Why can’t I generate more unique numbers than my range allows?</h3>
+              <p>Unique results means no repeats. If your range contains 20 possible values, the maximum number of unique outputs you can get in one run is 20. If you request more than that, the calculator cannot complete the request without breaking the “unique” rule, so it asks you to expand the range or allow repeats.</p>
+
+              <h3>What should I use for a giveaway or drawing?</h3>
+              <p>Use a range that matches the number of valid entries, then generate one number. For example, if you have 73 entries, use 1 to 73 and generate 1 number. If you need multiple winners with no duplicates, set the quantity to the number of winners and enable Unique results.</p>
+
+              <h3>Does sorting affect the randomness?</h3>
+              <p>No. Sorting only rearranges the display order after the numbers are generated. If you want to preserve the original random order, leave sorting off.</p>
+
+              <h3>Why does the calculator reject decimals or strange formatting?</h3>
+              <p>This page is designed for whole number selection. Decimals introduce a different intent and different expectations. If you need decimal ranges, you should use a dedicated random decimal generator so the input rules and outputs match that use case.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
+```
+
+### style.css
+
+```css
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Optional intro text below calculator title */
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Generic input groups (both .form-group and .input-group) */
+.form-group,
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label,
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="text"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+#calculateButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Related category tiles */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.related-title {
+  font-weight: bold;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+/* SEO section */
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.seo-section h3 {
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholders – shared look */
+.ad-block {
+  border-radius: 8px;
+  border: 1px dashed #d0d0d0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 6px,
+    #e9e9e9 6px,
+    #e9e9e9 12px
+  );
+}
+
+/* Text-based affiliate tile (canonical: 300px tall, centered, override-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none;
+  color: inherit;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px !important;
+  padding: 18px !important;
+  gap: 16px !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.ad-block a.affiliate-link .affiliate-label {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  color: #111111;
+}
+
+.ad-block a.affiliate-link .affiliate-copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666666;
+  max-width: 320px;
+}
+
+.ad-block a.affiliate-link .affiliate-cta {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.ad-block a.affiliate-link:hover {
+  filter: brightness(0.98);
+}
+
+/* Fallback: ONLY when text affiliate HTML regresses to sibling elements (no .affiliate-link wrapper) */
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) {
+  width: 300px !important;
+  height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label,
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy,
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #111111 !important;
+}
+
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #666666 !important;
+  max-width: 320px;
+}
+
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  margin-top: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  color: #222222 !important;
+}
+
+/* Uniform book-cover rendering (max 300×300 visual footprint) */
+.ad-block img {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* Breadcrumbs – force same look everywhere */
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Basic mobile tweak */
+@media (max-width: 768px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
+
+/* Calculator-specific additions (scoped, minimal) */
+.advanced-section {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.advanced-summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.advanced-field {
+  margin-top: 10px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+```
+
+### script.js
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+  // ------------------------------------------------------------
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
+  // ------------------------------------------------------------
+
+  // Required base elements (consistent across all calculators)
+  const calculateButton = document.getElementById("calculateButton");
+  const resultDiv = document.getElementById("result");
+  const shareButton = document.getElementById("shareWhatsAppButton");
+
+  // Calculator-specific input elements
+  const minValueInput = document.getElementById("minValue");
+  const maxValueInput = document.getElementById("maxValue");
+  const quantityInput = document.getElementById("quantity");
+  const uniqueOnlyCheckbox = document.getElementById("uniqueOnly");
+  const sortResultsCheckbox = document.getElementById("sortResults");
+
+  // ------------------------------------------------------------
+  // 2) LIVE FORMATTING (OPTIONAL)
+  // ------------------------------------------------------------
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
+  }
+
+  attachLiveFormatting(minValueInput);
+  attachLiveFormatting(maxValueInput);
+  attachLiveFormatting(quantityInput);
+
+  // ------------------------------------------------------------
+  // 3) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
+  function setResultError(message) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("success");
+    resultDiv.classList.add("error");
+    resultDiv.textContent = message;
+  }
+
+  function setResultSuccess(html) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error");
+    resultDiv.classList.add("success");
+    resultDiv.innerHTML = html;
+  }
+
+  function clearResult() {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error", "success");
+    resultDiv.textContent = "";
+  }
+
+  // ------------------------------------------------------------
+  // 4) VALIDATION HELPERS (OPTIONAL)
+  // ------------------------------------------------------------
+  function validatePositiveInteger(value, fieldLabel) {
+    if (!Number.isFinite(value) || value <= 0 || !Number.isInteger(value)) {
+      setResultError("Enter a valid " + fieldLabel + " as a whole number greater than 0.");
+      return false;
+    }
+    return true;
+  }
+
+  function validateInteger(value, fieldLabel) {
+    if (!Number.isFinite(value) || !Number.isInteger(value)) {
+      setResultError("Enter a valid " + fieldLabel + " as a whole number.");
+      return false;
+    }
+    return true;
+  }
+
+  function randomIntInclusive(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // ------------------------------------------------------------
+  // 5) MAIN GENERATE HANDLER (CALCULATOR-SPECIFIC)
+  // ------------------------------------------------------------
+  if (calculateButton) {
+    calculateButton.addEventListener("click", function () {
+      clearResult();
+
+      if (!minValueInput || !maxValueInput) return;
+
+      const minVal = toNumber(minValueInput.value);
+      const maxVal = toNumber(maxValueInput.value);
+
+      if (!validateInteger(minVal, "minimum")) return;
+      if (!validateInteger(maxVal, "maximum")) return;
+
+      if (minVal > maxVal) {
+        setResultError("Minimum must be less than or equal to maximum.");
+        return;
+      }
+
+      let qtyRaw = 1;
+      if (quantityInput && String(quantityInput.value || "").trim() !== "") {
+        qtyRaw = toNumber(quantityInput.value);
+      }
+
+      const quantity = Number.isFinite(qtyRaw) ? Math.trunc(qtyRaw) : NaN;
+
+      if (!validatePositiveInteger(quantity, "quantity")) return;
+
+      const uniqueOnly = !!(uniqueOnlyCheckbox && uniqueOnlyCheckbox.checked);
+      const sortResults = !!(sortResultsCheckbox && sortResultsCheckbox.checked);
+
+      const rangeSize = maxVal - minVal + 1;
+
+      if (uniqueOnly && quantity > rangeSize) {
+        setResultError(
+          "You asked for " +
+            quantity +
+            " unique numbers, but your range only has " +
+            rangeSize +
+            " possible values. Increase the range or allow repeats."
+        );
+        return;
+      }
+
+      const results = [];
+
+      if (quantity === 1) {
+        results.push(randomIntInclusive(minVal, maxVal));
+      } else {
+        if (!uniqueOnly) {
+          for (let i = 0; i < quantity; i++) {
+            results.push(randomIntInclusive(minVal, maxVal));
+          }
+        } else {
+          const used = new Set();
+          while (results.length < quantity) {
+            const n = randomIntInclusive(minVal, maxVal);
+            if (!used.has(n)) {
+              used.add(n);
+              results.push(n);
+            }
+          }
+        }
+      }
+
+      if (sortResults && results.length > 1) {
+        results.sort(function (a, b) {
+          return a - b;
+        });
+      }
+
+      const formattedMin = formatInputWithCommas(String(minVal));
+      const formattedMax = formatInputWithCommas(String(maxVal));
+      const formattedRangeSize = formatInputWithCommas(String(rangeSize));
+
+      let mainOutputHtml = "";
+
+      if (results.length === 1) {
+        mainOutputHtml = `<p><strong>Random number:</strong> ${formatInputWithCommas(String(results[0]))}</p>`;
+      } else {
+        const items = results
+          .map(function (n) {
+            return `<li>${formatInputWithCommas(String(n))}</li>`;
+          })
+          .join("");
+        mainOutputHtml = `
+          <p><strong>Random numbers:</strong></p>
+          <ul class="result-list">${items}</ul>
+        `;
+      }
+
+      const modeText = uniqueOnly ? "Unique (no repeats)" : "Repeats allowed";
+      const sortText = sortResults ? "Sorted ascending" : "Original random order";
+
+      const expectedMidpoint = (minVal + maxVal) / 2;
+
+      const resultHtml = `
+        ${mainOutputHtml}
+        <p><strong>Range:</strong> ${formattedMin} to ${formattedMax} (inclusive)</p>
+        <p><strong>Possible values in range:</strong> ${formattedRangeSize}</p>
+        <p><strong>Quantity:</strong> ${formatInputWithCommas(String(quantity))}</p>
+        <p><strong>Selection rules:</strong> ${modeText}; ${sortText}</p>
+        <p><strong>Quick check:</strong> The midpoint of your range is ${formatNumberTwoDecimals(expectedMidpoint)}. Over many runs, results tend to cluster around the middle.</p>
+      `;
+
+      setResultSuccess(resultHtml);
+    });
+  }
+
+  // ------------------------------------------------------------
+  // 6) WHATSAPP SHARE (CONSISTENT)
+  // ------------------------------------------------------------
+  if (shareButton) {
+    shareButton.addEventListener("click", function () {
+      const pageUrl = window.location.href;
+      const message = "Random Number Generator - check this calculator: " + pageUrl;
+      const encoded = encodeURIComponent(message);
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
+    });
+  }
+});
+```
+
+```html
+random-number-generator
+```
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Unit Price Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate unit price (cost per gram, ml, kg, litre, item, etc.) from total price and quantity. Useful for comparing pack sizes and finding the cheapest option.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/unit-price-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Unit Price Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate unit price (cost per gram, ml, kg, litre, item, etc.) from total price and quantity. Useful for comparing pack sizes and finding the cheapest option.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/unit-price-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unit Price Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate unit price (cost per gram, ml, kg, litre, item, etc.) from total price and quantity. Useful for comparing pack sizes and finding the cheapest option.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Unit Price Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/unit-price-calculator/",
+      "description": "Calculate unit price (cost per gram, ml, kg, litre, item, etc.) from total price and quantity so you can compare pack sizes and choose the cheapest option."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Unit Price Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Unit Price Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate cost per unit</h2>
+
+              <p class="calculator-intro">Enter the total price and quantity to get a clear unit price for quick comparisons.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="totalPrice">Total price (for the whole pack)</label>
+                <input type="text" id="totalPrice" inputmode="decimal" placeholder="e.g. 49.99">
+              </div>
+
+              <div class="form-group">
+                <label for="quantity">Quantity per item (number of units)</label>
+                <input type="text" id="quantity" inputmode="decimal" placeholder="e.g. 500">
+              </div>
+
+              <div class="form-group">
+                <label for="unitLabel">Unit label (for display)</label>
+                <input type="text" id="unitLabel" placeholder="e.g. g, ml, kg, L, items" value="g">
+              </div>
+
+              <details class="advanced-block">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group advanced-inner">
+                  <label for="packCount">Number of items in the pack</label>
+                  <input type="text" id="packCount" inputmode="numeric" placeholder="e.g. 1" value="1">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate unit price</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Quick everyday math tools for comparisons, percentages, and common calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Practical utilities for shopping, household decisions, and daily planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting and money tools to understand costs, trade-offs, and spending choices.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Unit price calculator for comparing pack sizes and finding the cheapest option</h2>
+
+              <p>A unit price is the cost for one unit of something, like cost per gram, cost per millilitre, cost per litre, cost per kilogram, or cost per item. When you are deciding between two products that look similar but have different sizes or pack counts, the sticker price can be misleading. Unit price removes the confusion by putting everything on the same basis.</p>
+
+              <p>This Unit Price Calculator is built for one job: take the total price you will pay and the quantity you will receive, then calculate the cost per unit. That single figure is what you use to compare items fairly. If you want to compare Product A and Product B, run the calculator twice and compare the unit prices. The lower unit price is the better value for the same unit definition.</p>
+
+              <p>The calculator also shows a practical secondary view: the price per 100 units. For many everyday items (food, cleaning products, toiletries), cost per 100g or cost per 100ml is often easier to scan than cost per 1g or 1ml. You still get the true unit price first, but the extra view helps you make faster comparisons without doing mental scaling.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The total price is the full amount paid for the pack, including any discounts already applied.</li>
+                <li>The quantity is the amount per item, expressed in the unit you want (g, ml, kg, L, items, etc.).</li>
+                <li>If you enter a pack count, the calculator assumes every item in the pack has the same quantity.</li>
+                <li>The calculator does not convert between units (for example g to kg). Use one consistent unit for meaningful comparisons.</li>
+                <li>Results are rounded to two decimals for readability. For very small unit prices, use the per 100 units figure for clarity.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What should I type as the unit label?</h3>
+              <p>Type the unit you want the result expressed in, like g, ml, kg, L, or items. The calculator uses this label only for display. The math depends on the number you entered as quantity, so keep your unit consistent across comparisons.</p>
+
+              <h3>How do I use this to compare two products?</h3>
+              <p>Calculate the unit price for the first product, then calculate the unit price for the second product using the same unit label and the same unit scale. Compare the unit prices. Lower cost per unit is better value, assuming quality and contents are comparable.</p>
+
+              <h3>What if the pack has multiple items (like a 6-pack)?</h3>
+              <p>Use the Advanced option and enter the number of items in the pack. Enter the quantity per item, not the total. The calculator multiplies quantity per item by the pack count to get total quantity, then computes cost per unit correctly.</p>
+
+              <h3>Why does the calculator show price per 100 units?</h3>
+              <p>Cost per 1g or 1ml can look tiny and hard to compare, even though it is accurate. Cost per 100 units is the same information scaled to a more readable number. It is especially useful for groceries, toiletries, and household liquids.</p>
+
+              <h3>When does unit price not tell the full story?</h3>
+              <p>Unit price is a value metric, not a quality metric. If products differ in quality, concentration, durability, or waste, the cheapest unit price may not be the best choice. Unit price is most reliable when the products are genuinely comparable and used in similar ways.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
+```
+
+## style.css
+
+```css
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Optional intro text below calculator title */
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Generic input groups (both .form-group and .input-group) */
+.form-group,
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label,
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="text"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+#calculateButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Related category tiles */
+.related-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.related-title {
+  font-weight: bold;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.related-desc {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
+/* SEO section */
+.seo-section {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.seo-section h3 {
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.seo-section p {
+  margin-bottom: 8px;
+}
+
+.seo-section ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777777;
+}
+
+/* Ad and affiliate placeholders – shared look */
+.ad-block {
+  border-radius: 8px;
+  border: 1px dashed #d0d0d0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ad-placeholder-img {
+  width: 100%;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 6px,
+    #e9e9e9 6px,
+    #e9e9e9 12px
+  );
+}
+
+/* Text-based affiliate tile (canonical: 300px tall, centered, override-safe) */
+.ad-block a.affiliate-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none;
+  color: inherit;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px !important;
+  padding: 18px !important;
+  gap: 16px !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.ad-block a.affiliate-link > * {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.ad-block a.affiliate-link .affiliate-label {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  color: #111111;
+}
+
+.ad-block a.affiliate-link .affiliate-copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666666;
+  max-width: 320px;
+}
+
+.ad-block a.affiliate-link .affiliate-cta {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #222222;
+}
+
+.ad-block a.affiliate-link:hover {
+  filter: brightness(0.98);
+}
+
+/* Fallback: ONLY when text affiliate HTML regresses to sibling elements (no .affiliate-link wrapper) */
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)),
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) {
+  width: 300px !important;
+  height: 300px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+  gap: 16px !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label,
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy,
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+.ad-block:has(.affiliate-label):not(:has(a.affiliate-link)) .affiliate-label {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #111111 !important;
+}
+
+.ad-block:has(.affiliate-copy):not(:has(a.affiliate-link)) .affiliate-copy {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: #666666 !important;
+  max-width: 320px;
+}
+
+.ad-block:has(.affiliate-cta):not(:has(a.affiliate-link)) .affiliate-cta {
+  margin-top: 12px !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  color: #222222 !important;
+}
+
+/* Uniform book-cover rendering (max 300×300 visual footprint) */
+.ad-block img {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* Breadcrumbs – force same look everywhere */
+.breadcrumbs {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+/* Basic mobile tweak */
+@media (max-width: 768px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
+
+/* Calculator-specific (scoped) */
+.advanced-block {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.advanced-block summary {
+  cursor: pointer;
+  font-size: 14px;
+  color: #333333;
+}
+
+.advanced-inner {
+  margin-top: 10px;
+}
+```
+
+## script.js
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+  // ------------------------------------------------------------
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
+  // ------------------------------------------------------------
+
+  // Required base elements (consistent across all calculators)
+  const calculateButton = document.getElementById("calculateButton");
+  const resultDiv = document.getElementById("result");
+  const shareButton = document.getElementById("shareWhatsAppButton");
+
+  // Calculator-specific input elements
+  const totalPriceInput = document.getElementById("totalPrice");
+  const quantityInput = document.getElementById("quantity");
+  const unitLabelInput = document.getElementById("unitLabel");
+  const packCountInput = document.getElementById("packCount");
+
+  // Optional: mode selector + grouped input blocks (only if calculator needs modes)
+  // (Not used in this calculator)
+
+  // ------------------------------------------------------------
+  // 2) LIVE FORMATTING (OPTIONAL)
+  // ------------------------------------------------------------
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
+  }
+
+  // Format numeric inputs with commas
+  attachLiveFormatting(totalPriceInput);
+  attachLiveFormatting(quantityInput);
+  attachLiveFormatting(packCountInput);
+
+  // ------------------------------------------------------------
+  // 3) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
+  function setResultError(message) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("success");
+    resultDiv.classList.add("error");
+    resultDiv.textContent = message;
+  }
+
+  function setResultSuccess(html) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error");
+    resultDiv.classList.add("success");
+    resultDiv.innerHTML = html;
+  }
+
+  function clearResult() {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error", "success");
+    resultDiv.textContent = "";
+  }
+
+  // ------------------------------------------------------------
+  // 4) OPTIONAL MODE HANDLING (ONLY IF USED)
+  // ------------------------------------------------------------
+  function showMode(mode) {
+    clearResult();
+  }
+
+  // ------------------------------------------------------------
+  // 5) VALIDATION HELPERS (OPTIONAL)
+  // ------------------------------------------------------------
+  function validatePositive(value, fieldLabel) {
+    if (!Number.isFinite(value) || value <= 0) {
+      setResultError("Enter a valid " + fieldLabel + " greater than 0.");
+      return false;
+    }
+    return true;
+  }
+
+  function validateNonNegative(value, fieldLabel) {
+    if (!Number.isFinite(value) || value < 0) {
+      setResultError("Enter a valid " + fieldLabel + " (0 or higher).");
+      return false;
+    }
+    return true;
+  }
+
+  function validateIntegerMin(value, fieldLabel, minValue) {
+    if (!Number.isFinite(value) || value < minValue || Math.floor(value) !== value) {
+      setResultError("Enter a valid " + fieldLabel + " as a whole number of " + minValue + " or more.");
+      return false;
+    }
+    return true;
+  }
+
+  // ------------------------------------------------------------
+  // 6) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
+  // ------------------------------------------------------------
+  if (calculateButton) {
+    calculateButton.addEventListener("click", function () {
+      clearResult();
+
+      if (!totalPriceInput || !quantityInput || !unitLabelInput || !packCountInput) return;
+
+      const totalPrice = toNumber(totalPriceInput.value);
+      const quantityPerItem = toNumber(quantityInput.value);
+
+      const rawUnitLabel = (unitLabelInput.value || "").trim();
+      const unitLabel = rawUnitLabel.length > 0 ? rawUnitLabel : "unit";
+
+      const packCountRaw = toNumber(packCountInput.value);
+      const packCount = Number.isFinite(packCountRaw) && packCountRaw > 0 ? Math.floor(packCountRaw) : 1;
+
+      if (!validatePositive(totalPrice, "total price")) return;
+      if (!validatePositive(quantityPerItem, "quantity per item")) return;
+      if (!validateIntegerMin(packCount, "number of items in the pack", 1)) return;
+
+      const totalQuantity = quantityPerItem * packCount;
+
+      if (!Number.isFinite(totalQuantity) || totalQuantity <= 0) {
+        setResultError("Enter a quantity and pack count that produce a valid total quantity.");
+        return;
+      }
+
+      const unitPrice = totalPrice / totalQuantity;
+      const pricePer100 = unitPrice * 100;
+      const pricePer1000 = unitPrice * 1000;
+
+      const totalPriceFormatted = formatNumberTwoDecimals(totalPrice);
+      const unitPriceFormatted = formatNumberTwoDecimals(unitPrice);
+      const pricePer100Formatted = formatNumberTwoDecimals(pricePer100);
+      const pricePer1000Formatted = formatNumberTwoDecimals(pricePer1000);
+      const totalQuantityFormatted = formatNumberTwoDecimals(totalQuantity);
+
+      let perItemLine = "";
+      if (packCount > 1) {
+        const perItem = totalPrice / packCount;
+        const perItemFormatted = formatNumberTwoDecimals(perItem);
+        perItemLine = `<p><strong>Price per item:</strong> ${perItemFormatted}</p>`;
+      }
+
+      const resultHtml = `
+        <p><strong>Unit price:</strong> ${unitPriceFormatted} per ${unitLabel}</p>
+        <p><strong>Total quantity:</strong> ${totalQuantityFormatted} ${unitLabel}</p>
+        ${perItemLine}
+        <p><strong>Price per 100 ${unitLabel}:</strong> ${pricePer100Formatted}</p>
+        <p><strong>Price per 1,000 ${unitLabel}:</strong> ${pricePer1000Formatted}</p>
+        <p><em>Tip:</em> Compare products using the same unit (for example, always use g or always use ml).</p>
+      `;
+
+      setResultSuccess(resultHtml);
+    });
+  }
+
+  // ------------------------------------------------------------
+  // 7) WHATSAPP SHARE (CONSISTENT)
+  // ------------------------------------------------------------
+  if (shareButton) {
+    shareButton.addEventListener("click", function () {
+      const pageUrl = window.location.href;
+      const message = "Unit Price Calculator - check this calculator: " + pageUrl;
+      const encoded = encodeURIComponent(message);
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
+    });
+  }
+});
+```
+
+```html
+unit-price-calculator
+```
