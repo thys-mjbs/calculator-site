@@ -361,6 +361,33 @@ h1 {
   color: #555555;
 }
 
+/* Category content blocks (top + bottom explanatory text) */
+.category-content-block {
+  max-width: 700px;        /* match .category-grid width */
+  margin: 0 auto 16px;     /* center horizontally */
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.category-content-block h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.category-content-block p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.category-content-block p:last-child {
+  margin-bottom: 0;
+}
+
 /* =========================
    SITE-WIDE HEADER SEARCH
    ========================= */
