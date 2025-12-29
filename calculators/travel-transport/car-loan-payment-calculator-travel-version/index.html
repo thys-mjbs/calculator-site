@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Car Loan Payment Calculator (Travel Version) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your monthly car loan payment when buying a vehicle abroad or in another currency, with optional fees, tax, and a home-currency conversion.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/car-loan-payment-calculator-travel-version/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Car Loan Payment Calculator (Travel Version) | SnapCalc">
+    <meta property="og:description" content="Estimate your monthly car loan payment when buying a vehicle abroad or in another currency, with optional fees, tax, and a home-currency conversion.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/car-loan-payment-calculator-travel-version/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Car Loan Payment Calculator (Travel Version) | SnapCalc">
+    <meta name="twitter:description" content="Estimate your monthly car loan payment when buying a vehicle abroad or in another currency, with optional fees, tax, and a home-currency conversion.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Car Loan Payment Calculator (Travel Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/car-loan-payment-calculator-travel-version/",
+      "description": "Calculate a monthly car loan payment for a vehicle purchase in another country or currency, with optional taxes, fees, and home-currency conversion."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Car Loan Payment Calculator (Travel Version)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Car Loan Payment Calculator (Travel Version)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KKSVUA" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Vehicle Maintenance</div>
+    <p class="affiliate-copy">Track vehicle servicing, maintenance intervals, and running costs.</p>
+    <div class="affiliate-cta">Explore vehicle maintenance trackers on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Monthly car loan payment for a purchase in another currency</h2>
+
+              <p class="calculator-intro">
+                Use this if you are buying a car abroad (or pricing the loan in a different currency) and want a quick monthly payment estimate, plus an optional conversion into your home currency.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="vehiclePriceInput">Vehicle price (purchase currency)</label>
+                <input type="text" id="vehiclePriceInput" inputmode="decimal" placeholder="e.g., 350,000">
+              </div>
+
+              <div class="form-group">
+                <label for="downPaymentInput">Down payment (optional)</label>
+                <input type="text" id="downPaymentInput" inputmode="decimal" placeholder="e.g., 50,000">
+              </div>
+
+              <div class="form-group">
+                <label for="aprInput">Interest rate (APR %)</label>
+                <input type="text" id="aprInput" inputmode="decimal" placeholder="e.g., 12.5">
+              </div>
+
+              <div class="form-group">
+                <label for="termYearsInput">Loan term (years)</label>
+                <input type="text" id="termYearsInput" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="advanced-toggle">
+                <button id="toggleAdvancedButton" type="button" aria-expanded="false">
+                  Show advanced options
+                </button>
+              </div>
+
+              <div id="advancedSection" class="advanced-section hidden">
+                <div class="form-group">
+                  <label for="taxRateInput">Purchase tax or VAT (optional %)</label>
+                  <input type="text" id="taxRateInput" inputmode="decimal" placeholder="e.g., 15">
+                </div>
+
+                <div class="form-group">
+                  <label for="feesInput">One-time fees (optional, purchase currency)</label>
+                  <input type="text" id="feesInput" inputmode="decimal" placeholder="e.g., 7,500">
+                </div>
+
+                <div class="form-group">
+                  <label for="exchangeRateInput">Exchange rate to home currency (optional)</label>
+                  <input type="text" id="exchangeRateInput" inputmode="decimal" placeholder="e.g., 0.92">
+                  <p class="field-hint">Enter: 1 purchase-currency unit = this many home-currency units.</p>
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate monthly payment</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pz475D" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Distance Measurement</div>
+    <p class="affiliate-copy">Measure distances between locations for planning and logistics.</p>
+    <div class="affiliate-cta">View distance measurement tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Estimate travel costs, vehicle expenses, and transport-related budgets.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Work out repayments, interest, and loan terms for common borrowing decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan affordability, cash flow, and everyday money decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48XsOBX" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Parking Costs</div>
+    <p class="affiliate-copy">Estimate parking costs across cities and travel destinations.</p>
+    <div class="affiliate-cta">Browse parking cost calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Car loan payment calculator for buying a vehicle abroad or in another currency</h2>
+
+              <p>
+                This calculator is built for one specific situation: you are considering a car purchase in another country, or the car price and loan are quoted in a currency that is not your day-to-day currency. The main decision is simple: can you afford the monthly payment, and what does that payment look like in your home currency if exchange rates move?
+              </p>
+              <p>
+                Start with the basics you usually know. Enter the vehicle price in the purchase currency, your expected down payment, the annual interest rate (APR), and the loan term in years. The calculator estimates the monthly payment using the standard loan amortization formula, which assumes a fixed rate and equal monthly repayments over the full term. It also shows the total amount repaid and the total interest cost so you can sanity-check how expensive the financing is, not just the monthly figure.
+              </p>
+              <p>
+                The “Travel Version” part is the optional currency step. If you enter an exchange rate, the calculator converts the monthly payment and key totals into your home currency. This is useful if your income is in one currency but the loan is in another, or if you are budgeting for a relocation where expenses are split across currencies. If you do not know the exact exchange rate, you can still use this tool by leaving it blank and focusing on the purchase-currency numbers. The result remains valid for the loan itself, and the conversion simply becomes an assumption you can refine later.
+              </p>
+
+              <p>
+                Advanced options are intentionally limited. They exist only to improve realism without adding friction. If your purchase price is quoted before taxes, you can add a tax or VAT percentage. If you expect one-time dealer, registration, documentation, or import-related fees, you can add a single fees amount. The calculator folds those into the financed amount (after down payment) because that is how many real loans work when fees are rolled into the deal. If you plan to pay fees separately in cash, keep the fees field at zero and handle that in your own budget.
+              </p>
+              <p>
+                This page does not try to be a general vehicle cost tool. It is not a lease calculator. It does not estimate insurance, fuel, maintenance, tolls, depreciation, or total cost of ownership. It also does not model variable interest rates, balloon payments, residuals, or changing repayment schedules. Those are adjacent use cases and would turn this into a different calculator. The output here is focused on one thing: a clean monthly payment estimate and the total financing cost, with a simple optional currency conversion for travel and relocation decisions.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Payments are monthly, equal, and fixed over the term (standard amortizing loan).</li>
+                <li>APR is treated as a nominal annual rate converted to a monthly rate (APR ÷ 12).</li>
+                <li>Down payment reduces the financed amount; the financed amount will never go below zero.</li>
+                <li>If tax and fees are provided, they are added to the purchase price before subtracting the down payment.</li>
+                <li>Currency conversion uses a single exchange rate you enter and does not model exchange-rate changes over time.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What if my interest rate is 0%?</h3>
+              <p>
+                If APR is 0, the payment is simply the financed amount divided by the number of months in the term. This calculator handles that case and still shows totals correctly.
+              </p>
+
+              <h3>Should I include taxes and fees in the loan?</h3>
+              <p>
+                Only include them if you expect to finance them as part of the deal. If you will pay them separately in cash, leave the tax and fees fields blank or at zero and treat those costs as separate from the loan payment.
+              </p>
+
+              <h3>How do I enter the exchange rate correctly?</h3>
+              <p>
+                Enter the conversion in this direction: 1 unit of the purchase currency equals X units of your home currency. For example, if 1 EUR equals 20 ZAR, enter 20. The converted results will then show what the payment means in your home-currency terms.
+              </p>
+
+              <h3>My bank quotes a “flat rate” instead of APR. Can I use that?</h3>
+              <p>
+                No. Flat rates and APR are not the same, and using a flat rate as APR will usually understate the true cost. This calculator expects APR. If you only have a flat rate, get the equivalent APR from the lender before relying on the result.
+              </p>
+
+              <h3>Why is the total interest so high compared to the loan amount?</h3>
+              <p>
+                Interest accumulates over time. Longer terms and higher APRs increase total interest significantly, even if the monthly payment looks manageable. Use the “total repaid” and “total interest” figures to judge the real cost, not just the monthly payment.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3MDplAQ" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Travel Time</div>
+    <p class="affiliate-copy">Estimate travel times accurately across different transport methods.</p>
+    <div class="affiliate-cta">Browse travel time calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

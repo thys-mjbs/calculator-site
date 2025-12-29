@@ -3486,6 +3486,20 @@
     ]
   },
   {
+    "title": "Car Loan Payment Calculator (Travel Version) | SnapCalc",
+    "url": "/calculators/travel-transport/car-loan-payment-calculator-travel-version/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "car loan payment calculator (travel version) | snapcalc",
+      "car loan payment calculator travel version snapcalc",
+      "car loan payment calculator travel version",
+      "travel & transport car loan payment calculator travel version snapcalc",
+      "travel & transport car loan payment calculator travel version",
+      "car loan payment travel version snapcalc",
+      "clpctv"
+    ]
+  },
+  {
     "title": "Commute Cost Calculator | SnapCalc",
     "url": "/calculators/travel-transport/commute-cost-calculator/",
     "category": "Travel & Transport",
@@ -3542,6 +3556,20 @@
     ]
   },
   {
+    "title": "Fuel Split Calculator (Group Travel) | SnapCalc",
+    "url": "/calculators/travel-transport/fuel-split-calculator-group-travel/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "fuel split calculator (group travel) | snapcalc",
+      "fuel split calculator group travel snapcalc",
+      "fuel split calculator group travel",
+      "travel & transport fuel split calculator group travel snapcalc",
+      "travel & transport fuel split calculator group travel",
+      "fuel split group travel snapcalc",
+      "fscgts"
+    ]
+  },
+  {
     "title": "Parking Cost Estimator | SnapCalc",
     "url": "/calculators/travel-transport/parking-cost-estimator/",
     "category": "Travel & Transport",
@@ -3552,6 +3580,62 @@
       "travel & transport parking cost estimator snapcalc",
       "travel & transport parking cost estimator",
       "pces"
+    ]
+  },
+  {
+    "title": "Public Transport Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/public-transport-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "public transport cost calculator | snapcalc",
+      "public transport cost calculator snapcalc",
+      "public transport cost calculator",
+      "travel & transport public transport cost calculator snapcalc",
+      "travel & transport public transport cost calculator",
+      "public transport cost snapcalc",
+      "ptccs"
+    ]
+  },
+  {
+    "title": "Ride-Share Cost Split Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/ride-share-cost-split-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "ride-share cost split calculator | snapcalc",
+      "ride share cost split calculator snapcalc",
+      "ride share cost split calculator",
+      "travel & transport ride share cost split calculator snapcalc",
+      "travel & transport ride share cost split calculator",
+      "ride share cost split snapcalc",
+      "rscscs"
+    ]
+  },
+  {
+    "title": "Road Trip Budget Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/road-trip-budget-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "road trip budget calculator | snapcalc",
+      "road trip budget calculator snapcalc",
+      "road trip budget calculator",
+      "travel & transport road trip budget calculator snapcalc",
+      "travel & transport road trip budget calculator",
+      "road trip budget snapcalc",
+      "rtbcs"
+    ]
+  },
+  {
+    "title": "Road Trip Daily Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/road-trip-daily-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "road trip daily cost calculator | snapcalc",
+      "road trip daily cost calculator snapcalc",
+      "road trip daily cost calculator",
+      "travel & transport road trip daily cost calculator snapcalc",
+      "travel & transport road trip daily cost calculator",
+      "road trip daily cost snapcalc",
+      "rtdccs"
     ]
   },
   {
@@ -3569,6 +3653,19 @@
     ]
   },
   {
+    "title": "Taxi Fare Estimator | SnapCalc",
+    "url": "/calculators/travel-transport/taxi-fare-estimator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "taxi fare estimator | snapcalc",
+      "taxi fare estimator snapcalc",
+      "taxi fare estimator",
+      "travel & transport taxi fare estimator snapcalc",
+      "travel & transport taxi fare estimator",
+      "tfes"
+    ]
+  },
+  {
     "title": "Toll Cost Estimator | SnapCalc",
     "url": "/calculators/travel-transport/toll-cost-estimator/",
     "category": "Travel & Transport",
@@ -3582,6 +3679,20 @@
     ]
   },
   {
+    "title": "Travel Speed Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/travel-speed-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "travel speed calculator | snapcalc",
+      "travel speed calculator snapcalc",
+      "travel speed calculator",
+      "travel & transport travel speed calculator snapcalc",
+      "travel & transport travel speed calculator",
+      "travel speed snapcalc",
+      "tscs"
+    ]
+  },
+  {
     "title": "Trip Time Estimator | SnapCalc",
     "url": "/calculators/travel-transport/trip-time-estimator/",
     "category": "Travel & Transport",
@@ -3592,6 +3703,34 @@
       "travel & transport trip time estimator snapcalc",
       "travel & transport trip time estimator",
       "ttes"
+    ]
+  },
+  {
+    "title": "Uber/Taxi Tip Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/uber-taxi-tip-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "uber/taxi tip calculator | snapcalc",
+      "uber taxi tip calculator snapcalc",
+      "uber taxi tip calculator",
+      "travel & transport uber taxi tip calculator snapcalc",
+      "travel & transport uber taxi tip calculator",
+      "uber taxi tip snapcalc",
+      "uttcs"
+    ]
+  },
+  {
+    "title": "Vehicle Depreciation Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/vehicle-depreciation-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "vehicle depreciation calculator | snapcalc",
+      "vehicle depreciation calculator snapcalc",
+      "vehicle depreciation calculator",
+      "travel & transport vehicle depreciation calculator snapcalc",
+      "travel & transport vehicle depreciation calculator",
+      "vehicle depreciation snapcalc",
+      "vdcs"
     ]
   },
   {
