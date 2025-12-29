@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Annual Recurring Revenue (ARR) Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate Annual Recurring Revenue (ARR) from your Monthly Recurring Revenue (MRR). Get ARR plus simple run-rate insights like quarterly and daily recurring revenue, and optional revenue per customer.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/annual-recurring-revenue-arr-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Annual Recurring Revenue (ARR) Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate Annual Recurring Revenue (ARR) from your Monthly Recurring Revenue (MRR). Get ARR plus simple run-rate insights like quarterly and daily recurring revenue, and optional revenue per customer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/annual-recurring-revenue-arr-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Annual Recurring Revenue (ARR) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate Annual Recurring Revenue (ARR) from your Monthly Recurring Revenue (MRR). Get ARR plus simple run-rate insights like quarterly and daily recurring revenue, and optional revenue per customer.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Annual Recurring Revenue (ARR) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/annual-recurring-revenue-arr-calculator/",
+      "description": "Calculate Annual Recurring Revenue (ARR) from Monthly Recurring Revenue (MRR), with simple run-rate insights such as quarterly and daily recurring revenue and optional revenue per customer."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>Annual Recurring Revenue (ARR) Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Annual Recurring Revenue (ARR) Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3L1xUVF" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Small Business Bookkeeping</div>
+    <p class="affiliate-copy">Learn hands-on bookkeeping techniques for small and growing businesses.</p>
+    <div class="affiliate-cta">Explore small business bookkeeping books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert MRR into ARR (annual run-rate)</h2>
+
+              <p class="calculator-intro">Enter your Monthly Recurring Revenue (MRR) to calculate ARR. Optionally add active customers to see revenue per customer.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="mrr">Monthly Recurring Revenue (MRR)</label>
+                <input type="text" id="mrr" inputmode="decimal" placeholder="e.g., 125,000">
+              </div>
+
+              <div class="form-group">
+                <label for="customers">Active customers (optional)</label>
+                <input type="text" id="customers" inputmode="numeric" placeholder="e.g., 250">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate ARR</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4s1FT5Y" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Business Finance</div>
+    <p class="affiliate-copy">Understand how financing, cash flow, and profitability interact in businesses.</p>
+    <div class="affiliate-cta">Browse small business finance books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Track revenue, margins, cash flow, and core business performance metrics.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Model growth, returns, and long-term outcomes using simple financial calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, income, expenses, and everyday money decisions with quick tools.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KYBOi4" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Cost Accounting</div>
+    <p class="affiliate-copy">Understand cost structures, allocation methods, and expense control techniques.</p>
+    <div class="affiliate-cta">Browse cost accounting books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Annual Recurring Revenue (ARR) calculator for SaaS and subscription businesses</h2>
+
+              <p>This Annual Recurring Revenue (ARR) calculator is built for one specific job: converting Monthly Recurring Revenue (MRR) into ARR so you can report a clean annual run-rate. If you are a founder, finance lead, or operator in a subscription or contract business, you usually need a single number that answers, “If nothing changes, what recurring revenue does this business generate in a year?” That is ARR.</p>
+              <p>Using this calculator is intentionally simple. Enter your current MRR and click calculate. The primary output is ARR, which is the annualized version of your recurring monthly revenue. Under that, you also get a few run-rate views that help with planning and communication: quarterly recurring revenue (a common reporting cadence) and daily run-rate (useful for sanity-checking pace and discussing momentum). These are not forecasts. They are just different ways to express the same run-rate based on your current MRR.</p>
+              <p>If you also know how many active customers are contributing to that MRR, add it as an optional input. The calculator will then show revenue per customer, both monthly (MRR per customer) and annual (ARR per customer). This is useful when you want to compare customer segments, sanity-check pricing, or quickly estimate what revenue impact you might expect from gaining or losing a certain number of customers. If you do not know your exact customer count, leave it blank. You still get ARR and the run-rate breakdown.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator assumes ARR is the annualized run-rate of recurring revenue, computed as ARR = MRR × 12.</li>
+                <li>MRR should reflect recurring revenue only (subscriptions, recurring retainers, recurring licenses), not one-time setup fees or non-recurring services.</li>
+                <li>The result is not a forecast. It ignores future churn, upgrades, downgrades, discounts, expansion revenue, and new sales.</li>
+                <li>If you enter active customers, the calculator assumes MRR is spread across that customer count to estimate average revenue per customer (an average, not a segment view).</li>
+                <li>Daily run-rate is calculated using 365 days in a year for a stable estimate (it will not match calendar-month billing exactly).</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is ARR the same as revenue on my income statement?</h3>
+              <p>No. ARR is a run-rate metric, not a GAAP or IFRS revenue figure. It answers, “What recurring revenue level am I at right now if things stay the same?” Your accounting revenue depends on recognition rules, billing terms, timing, and what is actually delivered during the period.</p>
+
+              <h3>What MRR number should I enter?</h3>
+              <p>Use your current recurring monthly revenue. If you track “gross MRR” and “net MRR,” choose the one you report externally. For most internal planning, net recurring revenue is more honest because it reflects discounts and recurring credits. Do not include one-off invoices or project work.</p>
+
+              <h3>Should ARR include annual contracts billed upfront?</h3>
+              <p>This calculator is locked to the most common practical use: annualizing MRR. If you bill annual contracts upfront, you can still use it by converting that business to an MRR equivalent first (for example, divide an annual contract value by 12 to estimate its monthly run-rate) and then treat the combined run-rate as MRR.</p>
+
+              <h3>Why does the calculator show quarterly and daily figures?</h3>
+              <p>They are simple translations of the same run-rate. Quarterly recurring revenue helps when reporting by quarter or when comparing to quarterly targets. Daily run-rate helps you sanity-check pace and communicate momentum without implying a forecast.</p>
+
+              <h3>What does “ARR per customer” mean and when is it useful?</h3>
+              <p>ARR per customer is the average annual recurring revenue per active customer based on your MRR and customer count. It is useful for quick comparisons over time, for estimating the impact of adding or losing customers, and for spotting pricing or mix changes. It is not a replacement for cohort or plan-level analysis.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4j69s1Z" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Business Financial Planning</div>
+    <p class="affiliate-copy">Align budgets, forecasts, and strategy into a structured financial plan.</p>
+    <div class="affiliate-cta">View business financial planning books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

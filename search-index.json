@@ -28,6 +28,20 @@
     ]
   },
   {
+    "title": "Annual Recurring Revenue (ARR) Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/annual-recurring-revenue-arr-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "annual recurring revenue (arr) calculator | snapcalc",
+      "annual recurring revenue arr calculator snapcalc",
+      "annual recurring revenue arr calculator",
+      "business & accounting annual recurring revenue arr calculator snapcalc",
+      "business & accounting annual recurring revenue arr calculator",
+      "annual recurring revenue arr snapcalc",
+      "arracs"
+    ]
+  },
+  {
     "title": "Break-Even Point Calculator | SnapCalc",
     "url": "/calculators/business-accounting/break-even-point-calculator/",
     "category": "Business & Accounting",
@@ -39,6 +53,20 @@
       "business & accounting break even point calculator",
       "break even point snapcalc",
       "bepcs"
+    ]
+  },
+  {
+    "title": "Burn Rate Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/burn-rate-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "burn rate calculator | snapcalc",
+      "burn rate calculator snapcalc",
+      "burn rate calculator",
+      "business & accounting burn rate calculator snapcalc",
+      "business & accounting burn rate calculator",
+      "burn rate snapcalc",
+      "brcs"
     ]
   },
   {
@@ -67,6 +95,20 @@
       "business & accounting churn rate calculator",
       "churn rate snapcalc",
       "crcs"
+    ]
+  },
+  {
+    "title": "Compound Annual Growth Rate (CAGR) Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/compound-annual-growth-rate-cagr-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "compound annual growth rate (cagr) calculator | snapcalc",
+      "compound annual growth rate cagr calculator snapcalc",
+      "compound annual growth rate cagr calculator",
+      "business & accounting compound annual growth rate cagr calculator snapcalc",
+      "business & accounting compound annual growth rate cagr calculator",
+      "compound annual growth rate cagr snapcalc",
+      "cagrcc"
     ]
   },
   {
@@ -154,6 +196,20 @@
     ]
   },
   {
+    "title": "Expansion Revenue Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/expansion-revenue-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "expansion revenue calculator | snapcalc",
+      "expansion revenue calculator snapcalc",
+      "expansion revenue calculator",
+      "business & accounting expansion revenue calculator snapcalc",
+      "business & accounting expansion revenue calculator",
+      "expansion revenue snapcalc",
+      "ercs"
+    ]
+  },
+  {
     "title": "Fixed vs Variable Cost Allocator | SnapCalc",
     "url": "/calculators/business-accounting/fixed-vs-variable-cost-allocator/",
     "category": "Business & Accounting",
@@ -164,6 +220,20 @@
       "business & accounting fixed vs variable cost allocator snapcalc",
       "business & accounting fixed vs variable cost allocator",
       "fvvcas"
+    ]
+  },
+  {
+    "title": "Forecasted Revenue Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/forecasted-revenue-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "forecasted revenue calculator | snapcalc",
+      "forecasted revenue calculator snapcalc",
+      "forecasted revenue calculator",
+      "business & accounting forecasted revenue calculator snapcalc",
+      "business & accounting forecasted revenue calculator",
+      "forecasted revenue snapcalc",
+      "frcs"
     ]
   },
   {
@@ -223,6 +293,48 @@
     ]
   },
   {
+    "title": "Monthly Recurring Revenue (MRR) Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/monthly-recurring-revenue-mrr-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "monthly recurring revenue (mrr) calculator | snapcalc",
+      "monthly recurring revenue mrr calculator snapcalc",
+      "monthly recurring revenue mrr calculator",
+      "business & accounting monthly recurring revenue mrr calculator snapcalc",
+      "business & accounting monthly recurring revenue mrr calculator",
+      "monthly recurring revenue mrr snapcalc",
+      "mrrmcs"
+    ]
+  },
+  {
+    "title": "MRR Churn Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/mrr-churn-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "mrr churn calculator | snapcalc",
+      "mrr churn calculator snapcalc",
+      "mrr churn calculator",
+      "business & accounting mrr churn calculator snapcalc",
+      "business & accounting mrr churn calculator",
+      "mrr churn snapcalc",
+      "mccs"
+    ]
+  },
+  {
+    "title": "MRR Growth Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/mrr-growth-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "mrr growth calculator | snapcalc",
+      "mrr growth calculator snapcalc",
+      "mrr growth calculator",
+      "business & accounting mrr growth calculator snapcalc",
+      "business & accounting mrr growth calculator",
+      "mrr growth snapcalc",
+      "mgcs"
+    ]
+  },
+  {
     "title": "Net Margin Calculator | SnapCalc",
     "url": "/calculators/business-accounting/net-margin-calculator/",
     "category": "Business & Accounting",
@@ -262,6 +374,34 @@
       "business & accounting operating profit calculator",
       "operating profit snapcalc",
       "opcs"
+    ]
+  },
+  {
+    "title": "Revenue Growth Rate Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/revenue-growth-rate-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "revenue growth rate calculator | snapcalc",
+      "revenue growth rate calculator snapcalc",
+      "revenue growth rate calculator",
+      "business & accounting revenue growth rate calculator snapcalc",
+      "business & accounting revenue growth rate calculator",
+      "revenue growth rate snapcalc",
+      "rgrcs"
+    ]
+  },
+  {
+    "title": "Runway Calculator | SnapCalc",
+    "url": "/calculators/business-accounting/runway-calculator/",
+    "category": "Business & Accounting",
+    "aliases": [
+      "runway calculator | snapcalc",
+      "runway calculator snapcalc",
+      "runway calculator",
+      "business & accounting runway calculator snapcalc",
+      "business & accounting runway calculator",
+      "runway snapcalc",
+      "rcs"
     ]
   },
   {
@@ -1948,6 +2088,48 @@
     ]
   },
   {
+    "title": "Auto Loan Affordability Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/auto-loan-affordability-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "auto loan affordability calculator | snapcalc",
+      "auto loan affordability calculator snapcalc",
+      "auto loan affordability calculator",
+      "loans & credit auto loan affordability calculator snapcalc",
+      "loans & credit auto loan affordability calculator",
+      "auto loan affordability snapcalc",
+      "alacs"
+    ]
+  },
+  {
+    "title": "Auto Loan Payment Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/auto-loan-payment-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "auto loan payment calculator | snapcalc",
+      "auto loan payment calculator snapcalc",
+      "auto loan payment calculator",
+      "loans & credit auto loan payment calculator snapcalc",
+      "loans & credit auto loan payment calculator",
+      "auto loan payment snapcalc",
+      "alpcs"
+    ]
+  },
+  {
+    "title": "Auto Loan vs Cash Purchase Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/auto-loan-vs-cash-purchase-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "auto loan vs cash purchase calculator | snapcalc",
+      "auto loan vs cash purchase calculator snapcalc",
+      "auto loan vs cash purchase calculator",
+      "loans & credit auto loan vs cash purchase calculator snapcalc",
+      "loans & credit auto loan vs cash purchase calculator",
+      "auto loan vs cash purchase snapcalc",
+      "alvcpc"
+    ]
+  },
+  {
     "title": "Balloon Payment Loan Calculator | SnapCalc",
     "url": "/calculators/loans-credit/balloon-payment-loan-calculator/",
     "category": "Loans & Credit",
@@ -2102,6 +2284,34 @@
     ]
   },
   {
+    "title": "HELOC Draw vs Repayment Cost Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/heloc-draw-vs-repayment-cost-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "heloc draw vs repayment cost calculator | snapcalc",
+      "heloc draw vs repayment cost calculator snapcalc",
+      "heloc draw vs repayment cost calculator",
+      "loans & credit heloc draw vs repayment cost calculator snapcalc",
+      "loans & credit heloc draw vs repayment cost calculator",
+      "heloc draw vs repayment cost snapcalc",
+      "hdvrcc"
+    ]
+  },
+  {
+    "title": "HELOC Payment Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/heloc-payment-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "heloc payment calculator | snapcalc",
+      "heloc payment calculator snapcalc",
+      "heloc payment calculator",
+      "loans & credit heloc payment calculator snapcalc",
+      "loans & credit heloc payment calculator",
+      "heloc payment snapcalc",
+      "hpcs"
+    ]
+  },
+  {
     "title": "Interest-Only Loan Calculator | SnapCalc",
     "url": "/calculators/loans-credit/interest-only-loan-calculator/",
     "category": "Loans & Credit",
@@ -2186,6 +2396,32 @@
     ]
   },
   {
+    "title": "Mortgage Affordability (Loans Category Version) | SnapCalc",
+    "url": "/calculators/loans-credit/mortgage-affordability-loans-category-version/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "mortgage affordability (loans category version) | snapcalc",
+      "mortgage affordability loans category version snapcalc",
+      "mortgage affordability loans category version",
+      "loans & credit mortgage affordability loans category version snapcalc",
+      "loans & credit mortgage affordability loans category version",
+      "malcvs"
+    ]
+  },
+  {
+    "title": "Mortgage Payment (Loans Category Version) | SnapCalc",
+    "url": "/calculators/loans-credit/mortgage-payment-loans-category-version/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "mortgage payment (loans category version) | snapcalc",
+      "mortgage payment loans category version snapcalc",
+      "mortgage payment loans category version",
+      "loans & credit mortgage payment loans category version snapcalc",
+      "loans & credit mortgage payment loans category version",
+      "mplcvs"
+    ]
+  },
+  {
     "title": "Personal Loan EMI Calculator | SnapCalc",
     "url": "/calculators/loans-credit/personal-loan-emi-calculator/",
     "category": "Loans & Credit",
@@ -2211,6 +2447,48 @@
       "loans & credit simple interest loan calculator",
       "simple interest loan snapcalc",
       "silcs"
+    ]
+  },
+  {
+    "title": "Student Loan Payment Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/student-loan-payment-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "student loan payment calculator | snapcalc",
+      "student loan payment calculator snapcalc",
+      "student loan payment calculator",
+      "loans & credit student loan payment calculator snapcalc",
+      "loans & credit student loan payment calculator",
+      "student loan payment snapcalc",
+      "slpcs"
+    ]
+  },
+  {
+    "title": "Student Loan Refinance Savings Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/student-loan-refinance-savings-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "student loan refinance savings calculator | snapcalc",
+      "student loan refinance savings calculator snapcalc",
+      "student loan refinance savings calculator",
+      "loans & credit student loan refinance savings calculator snapcalc",
+      "loans & credit student loan refinance savings calculator",
+      "student loan refinance savings snapcalc",
+      "slrscs"
+    ]
+  },
+  {
+    "title": "Student Loan Repayment Strategy Calculator | SnapCalc",
+    "url": "/calculators/loans-credit/student-loan-repayment-strategy-calculator/",
+    "category": "Loans & Credit",
+    "aliases": [
+      "student loan repayment strategy calculator | snapcalc",
+      "student loan repayment strategy calculator snapcalc",
+      "student loan repayment strategy calculator",
+      "loans & credit student loan repayment strategy calculator snapcalc",
+      "loans & credit student loan repayment strategy calculator",
+      "student loan repayment strategy snapcalc",
+      "slrscs"
     ]
   },
   {
