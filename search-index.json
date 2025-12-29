@@ -3472,6 +3472,33 @@
     ]
   },
   {
+    "title": "Advisor Fee Impact Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/advisor-fee-impact-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "advisor fee impact calculator | snapcalc",
+      "advisor fee impact calculator snapcalc",
+      "advisor fee impact calculator",
+      "savings & investments advisor fee impact calculator snapcalc",
+      "savings & investments advisor fee impact calculator",
+      "advisor fee impact snapcalc",
+      "afics"
+    ]
+  },
+  {
+    "title": "Capital Gains Tax Estimator | SnapCalc",
+    "url": "/calculators/savings-investments/capital-gains-tax-estimator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "capital gains tax estimator | snapcalc",
+      "capital gains tax estimator snapcalc",
+      "capital gains tax estimator",
+      "savings & investments capital gains tax estimator snapcalc",
+      "savings & investments capital gains tax estimator",
+      "cgtes"
+    ]
+  },
+  {
     "title": "Compound Interest Calculator | SnapCalc",
     "url": "/calculators/savings-investments/compound-interest-calculator/",
     "category": "Savings & Investments",
@@ -3483,6 +3510,34 @@
       "savings & investments compound interest calculator",
       "compound interest snapcalc",
       "cics"
+    ]
+  },
+  {
+    "title": "Dividend Reinvestment Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/dividend-reinvestment-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "dividend reinvestment calculator | snapcalc",
+      "dividend reinvestment calculator snapcalc",
+      "dividend reinvestment calculator",
+      "savings & investments dividend reinvestment calculator snapcalc",
+      "savings & investments dividend reinvestment calculator",
+      "dividend reinvestment snapcalc",
+      "drcs"
+    ]
+  },
+  {
+    "title": "Dividend Yield Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/dividend-yield-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "dividend yield calculator | snapcalc",
+      "dividend yield calculator snapcalc",
+      "dividend yield calculator",
+      "savings & investments dividend yield calculator snapcalc",
+      "savings & investments dividend yield calculator",
+      "dividend yield snapcalc",
+      "dycs"
     ]
   },
   {
@@ -3500,6 +3555,34 @@
     ]
   },
   {
+    "title": "ETF Cost Comparison Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/etf-cost-comparison-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "etf cost comparison calculator | snapcalc",
+      "etf cost comparison calculator snapcalc",
+      "etf cost comparison calculator",
+      "savings & investments etf cost comparison calculator snapcalc",
+      "savings & investments etf cost comparison calculator",
+      "etf cost comparison snapcalc",
+      "ecccs"
+    ]
+  },
+  {
+    "title": "Fund Expense Ratio Impact Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/fund-expense-ratio-impact-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "fund expense ratio impact calculator | snapcalc",
+      "fund expense ratio impact calculator snapcalc",
+      "fund expense ratio impact calculator",
+      "savings & investments fund expense ratio impact calculator snapcalc",
+      "savings & investments fund expense ratio impact calculator",
+      "fund expense ratio impact snapcalc",
+      "ferics"
+    ]
+  },
+  {
     "title": "Future Value Calculator | SnapCalc",
     "url": "/calculators/savings-investments/future-value-calculator/",
     "category": "Savings & Investments",
@@ -3511,6 +3594,34 @@
       "savings & investments future value calculator",
       "future value snapcalc",
       "fvcs"
+    ]
+  },
+  {
+    "title": "Inflation Impact on Savings Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/inflation-impact-on-savings-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "inflation impact on savings calculator | snapcalc",
+      "inflation impact on savings calculator snapcalc",
+      "inflation impact on savings calculator",
+      "savings & investments inflation impact on savings calculator snapcalc",
+      "savings & investments inflation impact on savings calculator",
+      "inflation impact on savings snapcalc",
+      "iioscs"
+    ]
+  },
+  {
+    "title": "Investment Fee Drag Calculator | SnapCalc",
+    "url": "/calculators/savings-investments/investment-fee-drag-calculator/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "investment fee drag calculator | snapcalc",
+      "investment fee drag calculator snapcalc",
+      "investment fee drag calculator",
+      "savings & investments investment fee drag calculator snapcalc",
+      "savings & investments investment fee drag calculator",
+      "investment fee drag snapcalc",
+      "ifdcs"
     ]
   },
   {
@@ -3608,6 +3719,20 @@
       "savings & investments present value calculator",
       "present value snapcalc",
       "pvcs"
+    ]
+  },
+  {
+    "title": "Real Rate of Return Calculator (Inflation-Adjusted) | SnapCalc",
+    "url": "/calculators/savings-investments/real-rate-of-return-calculator-inflation-adjusted/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "real rate of return calculator (inflation-adjusted) | snapcalc",
+      "real rate of return calculator inflation adjusted snapcalc",
+      "real rate of return calculator inflation adjusted",
+      "savings & investments real rate of return calculator inflation adjusted snapcalc",
+      "savings & investments real rate of return calculator inflation adjusted",
+      "real rate of return inflation adjusted snapcalc",
+      "rrrcia"
     ]
   },
   {
@@ -3720,6 +3845,19 @@
       "savings & investments simple interest calculator",
       "simple interest snapcalc",
       "sics"
+    ]
+  },
+  {
+    "title": "Tax-Deferred vs Taxable Investment Comparison | SnapCalc",
+    "url": "/calculators/savings-investments/tax-deferred-vs-taxable-investment-comparison/",
+    "category": "Savings & Investments",
+    "aliases": [
+      "tax-deferred vs taxable investment comparison | snapcalc",
+      "tax deferred vs taxable investment comparison snapcalc",
+      "tax deferred vs taxable investment comparison",
+      "savings & investments tax deferred vs taxable investment comparison snapcalc",
+      "savings & investments tax deferred vs taxable investment comparison",
+      "tdvtic"
     ]
   },
   {
