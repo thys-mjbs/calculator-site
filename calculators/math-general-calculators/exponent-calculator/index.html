@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Exponent Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate a number raised to a power (base to the exponent). Works with negative and decimal exponents, and explains the result in plain language.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/exponent-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Exponent Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate a number raised to a power (base to the exponent). Works with negative and decimal exponents, and explains the result in plain language.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/exponent-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exponent Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate a number raised to a power (base to the exponent). Works with negative and decimal exponents, and explains the result in plain language.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Exponent Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/exponent-calculator/",
+      "description": "Calculate a number raised to a power (base to the exponent), including negative and decimal exponents, with practical explanations."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
+        <span>Exponent Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Exponent Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rTwGMG" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Basic Math Practice</div>
+    <p class="affiliate-copy">Practice essential arithmetic skills including addition, subtraction, multiplication, and division.</p>
+    <div class="affiliate-cta">Explore basic math practice books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate base to the power of exponent</h2>
+
+              <p class="calculator-intro">
+                Enter a base and an exponent to calculate a power. Works for negative and decimal exponents, with clear notes when a result is undefined in real numbers.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="baseInput">Base (a)</label>
+                <input type="text" id="baseInput" inputmode="decimal" placeholder="e.g. 2 or 1.5 or -3">
+              </div>
+
+              <div class="form-group">
+                <label for="exponentInput">Exponent (b)</label>
+                <input type="text" id="exponentInput" inputmode="decimal" placeholder="e.g. 8 or -2 or 0.5">
+              </div>
+
+              <div class="form-group">
+                <label for="decimalsInput">Decimal places (optional, 0 to 12)</label>
+                <input type="text" id="decimalsInput" inputmode="numeric" placeholder="Leave blank for auto">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate exponent</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iU3gu1" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Decimals</div>
+    <p class="affiliate-copy">Learn decimal operations and conversions used in everyday math.</p>
+    <div class="affiliate-cta">View decimal math books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Handle everyday math like percentages, ratios, powers, rounding, and quick checks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Plan study targets, grade averages, and exam prep numbers with simple tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering & Technical</h3>
+              <p class="related-desc">Work with practical formulas and technical calculations used in engineering contexts.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3XUsE9k" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Math Reference</div>
+    <p class="affiliate-copy">Use concise math references for quick formula and concept lookups.</p>
+    <div class="affiliate-cta">Browse math reference guides on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Exponent calculator for powers, negative exponents, and decimal exponents</h2>
+
+              <p>
+                This exponent calculator helps you compute a number raised to a power. You enter a base (a) and an exponent (b), and the calculator returns the value of a to the power of b, written as a^b. This is the calculation people usually want when they search for “exponent calculator”, “power calculator”, or “a to the power of b”.
+              </p>
+              <p>
+                The main purpose is quick, reliable evaluation of exponents without manual multiplication. For example, 2^8 is 256, 10^3 is 1,000, and 5^0 is 1. The same idea extends to negative exponents (like 2^-3) and decimal exponents (like 9^0.5). Those cases are common in real tasks such as scaling factors, scientific calculations, growth and decay models, and general math checking.
+              </p>
+              <p>
+                To use the calculator, type the base and exponent, then click Calculate. If you want to control rounding, enter decimal places (0 to 12). Leave it blank if you want the calculator to choose a reasonable display format. The result area shows the computed value first, then a short interpretation so you can sanity-check whether the output matches what you expected.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator evaluates a^b using standard real-number rules where possible. Some inputs do not produce a real-number result.</li>
+                <li>If the base is negative and the exponent is not an integer, the result is not a real number in general. The calculator will flag this instead of forcing a misleading value.</li>
+                <li>0 raised to a negative exponent is undefined (division by zero). The calculator will show an error for this case.</li>
+                <li>0^0 is treated as undefined for general-purpose math. Some fields define it differently, but this calculator does not.</li>
+                <li>Decimal places only affect how the result is displayed. The internal calculation still uses normal JavaScript floating-point math, so very large or very precise values may be approximations.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does “a to the power of b” mean?</h3>
+              <p>
+                For a positive integer exponent b, it means multiply the base a by itself b times. For example, 3^4 means 3 × 3 × 3 × 3, which equals 81. Exponents generalize this idea beyond whole numbers, but the calculator’s main output is always the same: a^b.
+              </p>
+
+              <h3>Why is any number to the power of 0 equal to 1?</h3>
+              <p>
+                For any nonzero base a, the rule a^0 = 1 keeps exponent laws consistent. For example, a^3 divided by a^3 should equal a^(3-3) = a^0, and any nonzero number divided by itself is 1. This rule does not resolve the special case 0^0, which is why the calculator flags it as undefined.
+              </p>
+
+              <h3>How do negative exponents work?</h3>
+              <p>
+                A negative exponent means “take the reciprocal”. For nonzero a, a^-b = 1 / a^b. For example, 2^-3 equals 1 / 2^3 = 1/8 = 0.125. If your base is 0 and the exponent is negative, the calculation would require dividing by zero, so it is undefined.
+              </p>
+
+              <h3>Why does a negative base with a decimal exponent cause an error?</h3>
+              <p>
+                Many decimal exponents imply roots. For example, a^0.5 is the square root of a. The square root of a negative number is not a real number. Some decimal exponents can still produce real answers in specific cases (like (-8)^(1/3) = -2), but representing that reliably requires complex-number handling and exact rational detection. This calculator stays in real-number mode and flags negative-base, non-integer exponents to avoid giving a wrong answer.
+              </p>
+
+              <h3>How can I make the result easier to read?</h3>
+              <p>
+                Use the decimal places field to round the display. If you are working with large numbers, the calculator may show scientific notation to keep the result readable. If you need exact values for fractions or radicals, this calculator is not an algebra system; it is designed for practical numeric evaluation and checking.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3MBI5Rl" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Logical Reasoning</div>
+    <p class="affiliate-copy">Improve logical thinking and reasoning skills through math-based exercises.</p>
+    <div class="affiliate-cta">Browse logic and reasoning books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
