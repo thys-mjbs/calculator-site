@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodology | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="page-layout">
+        <h1>Methodology</h1>
+
+        <div class="page-grid">
+          <div class="grid-slot"></div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <p>
+                This page explains how SnapCalc calculators are designed and what the site optimises
+                for: practical decision support with clear assumptions.
+              </p>
+
+              <h2>1) Scope is intent-first</h2>
+              <p>
+                Each calculator is built to answer one specific question. This keeps inputs, outputs,
+                and assumptions aligned to a single use case instead of trying to cover every scenario.
+              </p>
+
+              <h2>2) Minimal inputs, optional refinement</h2>
+              <p>
+                Most calculators start with the smallest set of inputs needed for a meaningful result.
+                Where extra inputs improve realism or precision, they are offered as optional fields,
+                not requirements.
+              </p>
+
+              <h2>3) Assumptions are explicit</h2>
+              <p>
+                When a calculator uses defaults, rounding, conversion factors, or simplified rules,
+                the page should state that in plain language. The goal is that you can see what the
+                output represents and when it might not apply.
+              </p>
+
+              <h2>4) Guardrails for invalid inputs</h2>
+              <p>
+                Calculators should handle common input problems (missing values, invalid date ranges,
+                negative numbers where they do not make sense, mixed units) and guide the user back to
+                valid entries.
+              </p>
+
+              <h2>5) Outputs focus on decision support</h2>
+              <p>
+                Outputs are designed to be usable: the result, key intermediate values where helpful,
+                and short context. The aim is quick clarity, not academic completeness.
+              </p>
+
+              <h2>6) Static and browser-based by design</h2>
+              <p>
+                SnapCalc is a static site. Calculations run locally in your browser. This keeps pages fast
+                and reduces the need for user data collection.
+              </p>
+
+              <h2>Reporting issues</h2>
+              <p>
+                If you think a calculator is incorrect, the only useful report includes:
+              </p>
+              <ul>
+                <li>The page URL</li>
+                <li>The exact inputs used</li>
+                <li>The expected result (and why)</li>
+                <li>The actual result shown</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="grid-slot"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>
