@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Walking Calories Burned Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate calories burned from walking using your weight, time, and walking speed. Optional incline improves accuracy for hills and treadmill walks." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/health-fitness/walking-calories-burned-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Walking Calories Burned Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate calories burned from walking using your weight, time, and walking speed. Optional incline improves accuracy for hills and treadmill walks." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/health-fitness/walking-calories-burned-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Walking Calories Burned Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate calories burned from walking using your weight, time, and walking speed. Optional incline improves accuracy for hills and treadmill walks." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Walking Calories Burned Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/walking-calories-burned-calculator/",
+      "description": "Estimate calories burned during walking using weight, duration, and walking speed, with an optional incline input for hill or treadmill walking."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health &amp; Fitness</a> ›
+        <span>Walking Calories Burned Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Walking Calories Burned Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate calories burned from a walk</h2>
+<p class="calculator-intro">Enter your weight, how long you walked, and your walking speed. Add an incline percentage for hills or treadmill walks if you know it.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="weightKg">Your weight (kg)</label>
+<input id="weightKg" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+</div>
+<div class="form-group">
+<label for="durationMin">Walking time (minutes)</label>
+<input id="durationMin" inputmode="numeric" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="speedKmh">Walking speed (km/h)</label>
+<input id="speedKmh" inputmode="decimal" placeholder="e.g., 5.0" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced (optional)</summary>
+<div class="form-group" style="margin-top:12px;">
+<label for="inclinePercent">Incline / grade (%)</label>
+<input id="inclinePercent" inputmode="decimal" placeholder="e.g., 0 (flat), 5 (uphill), -3 (downhill)" type="text"/>
+</div>
+<p class="calculator-intro" style="margin-bottom:0;">
+                  If you do not know incline, leave it blank. Flat walking uses 0%.
+                </p>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate calories burned</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Calories, macros, training metrics, and simple health calculators for everyday planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan routines, break down time blocks, and estimate schedules for consistent habits.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units like distance, weight, and speed so your inputs match what you know.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Walking calories burned estimator for real-world walks</h2>
+<p>This walking calories burned calculator estimates how many calories you used during a walking session based on three things you can usually guess with reasonable accuracy: your body weight, how long you walked, and how fast you walked. If you are walking on hills or using a treadmill with an incline setting, you can optionally add the incline percentage to improve accuracy.</p>
+<p>The goal is a practical estimate you can use for simple decisions: did your walk meaningfully contribute to your daily activity, roughly how big was the energy burn, and how does changing time or pace affect the result. This is not designed for running, hiking with a heavy pack, or high-intensity interval training. It is focused on normal walking.</p>
+<p>To use it fast, enter your weight, enter the minutes you walked, and enter your walking speed in km/h. If you are not sure about speed, use a defensible guess: casual walking is often around 3.5 to 4.5 km/h, a purposeful walk is often around 5.0 to 6.0 km/h, and a very brisk walk can be 6.5 km/h or higher for some people. Then press calculate. The output shows the estimated total calories burned, plus a few supporting numbers that help you sanity-check and compare sessions.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator estimates energy cost for walking only. It is not intended for running, trail hiking, stair climbing, or cycling.</li>
+<li>Weight is assumed to be your current body weight. If you carried a heavy bag, the true calories burned will be higher than shown here.</li>
+<li>Speed should be your average walking speed for the whole session. If your pace varied a lot, the estimate is a rough midpoint.</li>
+<li>Incline (grade) is optional. If you leave it blank, the calculation assumes flat ground at 0% grade.</li>
+<li>Results are estimates, not measurements. Day-to-day differences in walking form, terrain, wind, and fatigue can shift real burn by roughly 10% or more.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is this “total calories” or “active calories”?</h3>
+<p>The number shown is the estimated calories burned during the walking activity itself (the energy cost of the session). Some fitness apps separate “active” from “resting” calories. Real physiology is continuous, but for practical use you can treat this calculator’s number as the walking-session burn estimate that you can compare across walks.</p>
+<h3>What if I do not know my walking speed?</h3>
+<p>Pick a realistic average speed rather than guessing optimistically. If you walked and could still talk easily, you were probably not at the top end of brisk walking. If you want to improve accuracy, track one walk with your phone’s distance and time, then convert to km/h and reuse that speed for future estimates.</p>
+<h3>Why does incline matter so much?</h3>
+<p>Walking uphill increases the work your muscles must do to raise your body against gravity. Even small grades can push energy cost up noticeably. If you are on a treadmill and the incline is displayed, using that number is one of the easiest ways to make your result more realistic.</p>
+<h3>Can I use negative incline for downhill walking?</h3>
+<p>Yes. Downhill walking can reduce energy cost compared to flat walking, but it still costs energy and can increase muscle soreness because of braking forces. The calculator accepts negative grade values, but extreme downhill values or very rough terrain can make real results drift from the estimate.</p>
+<h3>How can I use this for weight loss planning?</h3>
+<p>Use it as a consistency tool, not a precision promise. If you log a similar walk most days, the difference between 180 and 210 calories is not the point. The point is that a repeatable walking routine adds meaningful weekly energy expenditure. If you want tighter tracking, keep your walking time and speed consistent and avoid changing variables you cannot measure well.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

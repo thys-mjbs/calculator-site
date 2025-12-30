@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Fill Dirt Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how much fill dirt you need for a rectangular area based on length, width, and depth. Get cubic yards to order, optional tons estimate, and optional cost." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/fill-dirt-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Fill Dirt Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how much fill dirt you need for a rectangular area based on length, width, and depth. Get cubic yards to order, optional tons estimate, and optional cost." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/fill-dirt-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fill Dirt Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how much fill dirt you need for a rectangular area based on length, width, and depth. Get cubic yards to order, optional tons estimate, and optional cost." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fill Dirt Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/fill-dirt-calculator/",
+      "description": "Estimate fill dirt needed for a rectangular area using length, width, and depth. Outputs cubic yards to order, optional tons estimate, and optional cost with clear assumptions."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Fill Dirt Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Fill Dirt Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate fill dirt to order (cubic yards)</h2>
+<p class="calculator-intro">Enter the area size and average fill depth to estimate how many cubic yards of fill dirt to order. Use Advanced options for compaction allowance, tons, and cost.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="lengthFeet">Length (feet)</label>
+<input id="lengthFeet" inputmode="decimal" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="input-group">
+<label for="widthFeet">Width (feet)</label>
+<input id="widthFeet" inputmode="decimal" placeholder="e.g., 20" type="text"/>
+</div>
+<div class="input-group">
+<label for="depthInches">Average depth (inches)</label>
+<input id="depthInches" inputmode="decimal" placeholder="e.g., 4" type="text"/>
+</div>
+<details>
+<summary>Advanced options (optional)</summary>
+<div class="input-group" style="margin-top:10px;">
+<label for="compactionPercent">Extra allowance for compaction and leveling (%)</label>
+<input id="compactionPercent" inputmode="decimal" type="text" value="10"/>
+</div>
+<div class="input-group">
+<label for="densityTonsPerYd">Estimated density (tons per cubic yard)</label>
+<input id="densityTonsPerYd" inputmode="decimal" type="text" value="1.2"/>
+</div>
+<div class="input-group">
+<label for="pricePerYard">Price per cubic yard (optional)</label>
+<input id="pricePerYard" inputmode="decimal" placeholder="e.g., 35" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate fill dirt</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities for concrete, gravel, sand, fill, and other common building materials.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Run practical property calculations for projects, ownership costs, and improvement planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert between common units like feet, inches, yards, meters, and more for quick planning.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Fill dirt calculator for estimating cubic yards to order for a leveling or backfill job</h2>
+<p>This fill dirt calculator is for one specific decision: how much fill dirt to order when you are filling a rectangular area to an average depth. Typical uses include leveling a section of yard, raising a low spot, backfilling alongside a foundation, or filling a trench or hole after work is finished. The output is designed around how suppliers sell material, so the primary result is cubic yards to order, with optional weight and cost estimates to help you plan delivery and budget.</p>
+<p>To use it, measure the length and width of the area in feet, then estimate the average depth of fill in inches. “Average” matters because most real sites are not perfectly flat. If the depth varies, take a few measurements and use a simple average. The calculator first computes the compacted volume (the space you want to fill), then adds an allowance percentage to estimate the loose volume you should order. This allowance helps cover compaction, minor grading, and inevitable unevenness.</p>
+<p>The results include multiple units so you can sanity-check your plan. Cubic yards are the ordering unit for most bulk fill dirt suppliers. Cubic feet can help you verify the math against your measurements. Cubic meters are included for users working in metric. If you add an estimated density, you also get tons, which is useful when a supplier prices by weight or when you need to confirm truck capacity. If you add a price per cubic yard, you get a simple cost estimate based on the order quantity.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator assumes a rectangular area with reasonably straight sides (length × width) and a single average depth.</li>
+<li>Depth is entered in inches and converted to feet internally; small depth changes can have a big impact on volume.</li>
+<li>The “extra allowance” percentage estimates additional loose material needed for compaction, settling, and light grading.</li>
+<li>The tons estimate depends on density, which varies by moisture and soil type; the default is a general planning value, not a lab measurement.</li>
+<li>This tool is for fill dirt only and does not attempt to model topsoil, mulch, gravel, sand, or engineered base layers.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator add an extra allowance percentage?</h3>
+<p>Fill dirt is delivered “loose” and usually ends up more compact once you spread, water, tamp, or drive equipment over it. Even without heavy compaction, material settles into low spots and gets redistributed during grading. The allowance is a practical buffer so you do not come up short. If you are doing a very light fill with minimal compaction, a smaller allowance can be reasonable. If you are filling deeper areas or expect serious compaction, a larger allowance is safer.</p>
+<h3>What if my depth is not the same everywhere?</h3>
+<p>Use an average depth. Take a few depth readings across the area, add them up, and divide by how many readings you took. If the variation is extreme (for example, one side is near zero and the other side is very deep), splitting the job into two rectangles and calculating each separately is more accurate than using one average for the whole area.</p>
+<h3>How accurate is the tons estimate?</h3>
+<p>It is a planning estimate only. Soil weight changes with moisture, compaction, and composition. Dry, sandy soil can be lighter, while wet clay can be significantly heavier. If your supplier sells by weight or your access route limits truck size, ask the supplier what density they assume for the material they deliver and use that value in the Advanced section.</p>
+<h3>Do I need to round up the cubic yards I order?</h3>
+<p>Usually yes. Suppliers often deliver in half-yard or quarter-yard increments, and you cannot easily “un-order” a fraction that you come up short on. The calculator provides a rounded-up order quantity to the nearest quarter yard to reflect typical ordering behavior. If your supplier has different minimums, use the exact cubic yards as a base and round according to their rules.</p>
+<h3>When should I not use fill dirt for the top layer?</h3>
+<p>Fill dirt is typically used as a base or bulk volume, not as the final surface layer for planting. For lawns, gardens, and landscaping, a top layer of quality topsoil is usually needed for better drainage and plant health. This calculator intentionally does not estimate topsoil needs because it is a different material choice with different thickness and quality considerations.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>
