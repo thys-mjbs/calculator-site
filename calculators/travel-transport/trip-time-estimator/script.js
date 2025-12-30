@@ -9,14 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const shareButton = document.getElementById("shareWhatsAppButton");
 
   // Calculator-specific input elements
-  const distanceValue = document.getElementById("distanceValue");
-  const distanceUnit = document.getElementById("distanceUnit");
-  const speedValue = document.getElementById("speedValue");
-  const speedUnit = document.getElementById("speedUnit");
-  const stopsCount = document.getElementById("stopsCount");
-  const stopMinutes = document.getElementById("stopMinutes");
-  const trafficDelayPercent = document.getElementById("trafficDelayPercent");
-  const departureTime = document.getElementById("departureTime");
+  const fromOffsetInput = document.getElementById("fromOffset");
+  const toOffsetInput = document.getElementById("toOffset");
+  const localDateInput = document.getElementById("localDate");
+  const localTimeInput = document.getElementById("localTime");
+  const swapButton = document.getElementById("swapButton");
 
   // ------------------------------------------------------------
   // 2) LIVE FORMATTING (OPTIONAL)
@@ -28,11 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  attachLiveFormatting(distanceValue);
-  attachLiveFormatting(speedValue);
-  attachLiveFormatting(stopsCount);
-  attachLiveFormatting(stopMinutes);
-  attachLiveFormatting(trafficDelayPercent);
+  // No comma formatting needed for this calculator.
 
   // ------------------------------------------------------------
   // 3) RESULT HELPERS (CONSISTENT)
@@ -58,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ------------------------------------------------------------
+  // 4) OPTIONAL MODE HANDLING (ONLY IF USED)
+  // ------------------------------------------------------------
+  function showMode(mode) {
+    clearResult();
+  }
+
+  // ------------------------------------------------------------
   // 5) VALIDATION HELPERS (OPTIONAL)
   // ------------------------------------------------------------
   function validatePositive(value, fieldLabel) {
@@ -76,53 +76,115 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
-  function minutesToReadable(totalMinutes) {
-    const mins = Math.max(0, Math.round(totalMinutes));
-    const h = Math.floor(mins / 60);
-    const m = mins % 60;
+  function parseUtcOffsetHours(raw, label) {
+    const cleaned = String(raw || "").trim().replace(",", ".");
+    if (!cleaned) return { ok: false, minutes: 0, message: "Enter a " + label + " (for example +2, -5, or +5.5)." };
 
-    const hLabel = h === 1 ? "hour" : "hours";
-    const mLabel = m === 1 ? "min" : "min";
+    const val = Number(cleaned);
+    if (!Number.isFinite(val)) {
+      return { ok: false, minutes: 0, message: "Enter a valid " + label + " (for example +2, -5, or +5.5)." };
+    }
 
-    if (h <= 0) return m + " " + mLabel;
-    return h + " " + hLabel + " " + m + " " + mLabel;
+    // Practical bounds for UTC offsets
+    if (val < -12 || val > 14) {
+      return { ok: false, minutes: 0, message: label + " looks unrealistic. Use a value between -12 and +14." };
+    }
+
+    // Convert hours to minutes (support decimals like 5.5 => 330)
+    const minutes = Math.round(val * 60);
+    return { ok: true, minutes: minutes, hours: val };
   }
 
-  function clampNumber(value, min, max) {
-    if (!Number.isFinite(value)) return value;
-    return Math.min(max, Math.max(min, value));
+  function parseDateYMD(raw) {
+    const s = String(raw || "").trim();
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+    if (!m) return { ok: false, y: 0, mo: 0, d: 0 };
+
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    const d = Number(m[3]);
+
+    if (!Number.isFinite(y) || !Number.isFinite(mo) || !Number.isFinite(d)) return { ok: false, y: 0, mo: 0, d: 0 };
+    if (mo < 1 || mo > 12) return { ok: false, y: 0, mo: 0, d: 0 };
+    if (d < 1 || d > 31) return { ok: false, y: 0, mo: 0, d: 0 };
+
+    // Basic validity check using UTC date rollover
+    const test = new Date(Date.UTC(y, mo - 1, d));
+    if (test.getUTCFullYear() !== y || test.getUTCMonth() !== mo - 1 || test.getUTCDate() !== d) {
+      return { ok: false, y: 0, mo: 0, d: 0 };
+    }
+
+    return { ok: true, y, mo, d };
   }
 
-  function parseDepartureTimeToMinutes(t) {
-    if (!t || typeof t !== "string") return null;
-    const parts = t.split(":");
-    if (parts.length !== 2) return null;
-    const hh = Number(parts[0]);
-    const mm = Number(parts[1]);
-    if (!Number.isFinite(hh) || !Number.isFinite(mm)) return null;
-    if (hh < 0 || hh > 23 || mm < 0 || mm > 59) return null;
-    return hh * 60 + mm;
+  function parseTimeHM(raw) {
+    const s = String(raw || "").trim();
+    const m = /^(\d{1,2}):(\d{2})$/.exec(s);
+    if (!m) return { ok: false, hh: 0, mm: 0 };
+
+    const hh = Number(m[1]);
+    const mm = Number(m[2]);
+
+    if (!Number.isFinite(hh) || !Number.isFinite(mm)) return { ok: false, hh: 0, mm: 0 };
+    if (hh < 0 || hh > 23) return { ok: false, hh: 0, mm: 0 };
+    if (mm < 0 || mm > 59) return { ok: false, hh: 0, mm: 0 };
+
+    return { ok: true, hh, mm };
   }
 
-  function minutesToHHMM(mins) {
-    const m = ((mins % 1440) + 1440) % 1440;
-    const hh = Math.floor(m / 60);
-    const mm = m % 60;
-    const hhStr = String(hh).padStart(2, "0");
-    const mmStr = String(mm).padStart(2, "0");
-    return hhStr + ":" + mmStr;
+  function pad2(n) {
+    return String(n).padStart(2, "0");
   }
 
-  function convertDistanceToKm(value, unit) {
-    if (!Number.isFinite(value)) return value;
-    if (unit === "mi") return value * 1.609344;
-    return value;
+  function formatUtcDateTime(dateObjUtcLike) {
+    // dateObjUtcLike is a Date, but we always read UTC fields for consistency.
+    const y = dateObjUtcLike.getUTCFullYear();
+    const mo = pad2(dateObjUtcLike.getUTCMonth() + 1);
+    const d = pad2(dateObjUtcLike.getUTCDate());
+    const hh = pad2(dateObjUtcLike.getUTCHours());
+    const mm = pad2(dateObjUtcLike.getUTCMinutes());
+    return y + "-" + mo + "-" + d + " " + hh + ":" + mm;
   }
 
-  function convertSpeedToKmh(value, unit) {
-    if (!Number.isFinite(value)) return value;
-    if (unit === "mph") return value * 1.609344;
-    return value;
+  function describeDayShift(fromY, fromMo, fromD, toDateObjUtcLike) {
+    const fromMidnightUtc = Date.UTC(fromY, fromMo - 1, fromD, 0, 0, 0, 0);
+    const toMidnightUtc = Date.UTC(
+      toDateObjUtcLike.getUTCFullYear(),
+      toDateObjUtcLike.getUTCMonth(),
+      toDateObjUtcLike.getUTCDate(),
+      0,
+      0,
+      0,
+      0
+    );
+
+    const diffDays = Math.round((toMidnightUtc - fromMidnightUtc) / (24 * 60 * 60 * 1000));
+    if (diffDays === 0) return "Same day";
+    if (diffDays === 1) return "Next day";
+    if (diffDays === -1) return "Previous day";
+    if (diffDays > 1) return diffDays + " days later";
+    return Math.abs(diffDays) + " days earlier";
+  }
+
+  function formatOffsetLabel(minutes) {
+    const sign = minutes >= 0 ? "+" : "-";
+    const abs = Math.abs(minutes);
+    const hh = Math.floor(abs / 60);
+    const mm = abs % 60;
+    return "UTC" + sign + hh + (mm ? ":" + pad2(mm) : "");
+  }
+
+  // ------------------------------------------------------------
+  // Swap button
+  // ------------------------------------------------------------
+  if (swapButton) {
+    swapButton.addEventListener("click", function () {
+      if (!fromOffsetInput || !toOffsetInput) return;
+      const a = fromOffsetInput.value;
+      fromOffsetInput.value = toOffsetInput.value;
+      toOffsetInput.value = a;
+      clearResult();
+    });
   }
 
   // ------------------------------------------------------------
@@ -130,96 +192,80 @@ document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      clearResult();
-
-      const distanceRaw = toNumber(distanceValue ? distanceValue.value : "");
-      const speedRaw = toNumber(speedValue ? speedValue.value : "");
-      const stopsRaw = toNumber(stopsCount ? stopsCount.value : "");
-      const stopMinsRaw = toNumber(stopMinutes ? stopMinutes.value : "");
-      const trafficRaw = toNumber(trafficDelayPercent ? trafficDelayPercent.value : "");
-
-      const dUnit = distanceUnit ? distanceUnit.value : "km";
-      const sUnit = speedUnit ? speedUnit.value : "kmh";
-
-      if (!validatePositive(distanceRaw, "distance")) return;
-      if (!validatePositive(speedRaw, "average speed")) return;
-
-      const distanceKm = convertDistanceToKm(distanceRaw, dUnit);
-      const speedKmh = convertSpeedToKmh(speedRaw, sUnit);
-
-      if (!validatePositive(distanceKm, "distance")) return;
-      if (!validatePositive(speedKmh, "average speed")) return;
-
-      let stops = Number.isFinite(stopsRaw) ? stopsRaw : 0;
-      let perStopMinutes = Number.isFinite(stopMinsRaw) ? stopMinsRaw : 0;
-      let trafficPct = Number.isFinite(trafficRaw) ? trafficRaw : 0;
-
-      stops = clampNumber(stops, 0, 50);
-      perStopMinutes = clampNumber(perStopMinutes, 0, 600);
-      trafficPct = clampNumber(trafficPct, 0, 300);
-
-      if (!validateNonNegative(stops, "stops")) return;
-      if (!validateNonNegative(perStopMinutes, "minutes per stop")) return;
-      if (!validateNonNegative(trafficPct, "traffic delay percent")) return;
-
-      const baseHours = distanceKm / speedKmh;
-      const baseMinutes = baseHours * 60;
-
-      const trafficExtraMinutes = baseMinutes * (trafficPct / 100);
-      const stopsMinutes = stops * perStopMinutes;
-
-      const totalMinutes = baseMinutes + trafficExtraMinutes + stopsMinutes;
-
-      const baseReadable = minutesToReadable(baseMinutes);
-      const trafficReadable = minutesToReadable(trafficExtraMinutes);
-      const stopsReadable = minutesToReadable(stopsMinutes);
-      const totalReadable = minutesToReadable(totalMinutes);
-
-      const paceMinutesPerKm = baseMinutes / distanceKm;
-      const paceSecondsPerKm = paceMinutesPerKm * 60;
-
-      let paceLabel = "Pace per km";
-      let paceText = "";
-      if (Number.isFinite(paceSecondsPerKm) && paceSecondsPerKm > 0) {
-        const pMin = Math.floor(paceSecondsPerKm / 60);
-        const pSec = Math.round(paceSecondsPerKm % 60);
-        paceText = pMin + ":" + String(pSec).padStart(2, "0") + " per km";
+      // Parse offsets
+      const fromOffsetParsed = parseUtcOffsetHours(fromOffsetInput ? fromOffsetInput.value : "", "From UTC offset");
+      if (!fromOffsetParsed.ok) {
+        setResultError(fromOffsetParsed.message);
+        return;
       }
 
-      if (dUnit === "mi") {
-        const distanceMi = distanceRaw;
-        const baseMinutesPerMi = baseMinutes / distanceMi;
-        const baseSecondsPerMi = baseMinutesPerMi * 60;
-        paceLabel = "Pace per mile";
-        if (Number.isFinite(baseSecondsPerMi) && baseSecondsPerMi > 0) {
-          const pMin = Math.floor(baseSecondsPerMi / 60);
-          const pSec = Math.round(baseSecondsPerMi % 60);
-          paceText = pMin + ":" + String(pSec).padStart(2, "0") + " per mile";
-        }
+      const toOffsetParsed = parseUtcOffsetHours(toOffsetInput ? toOffsetInput.value : "", "To UTC offset");
+      if (!toOffsetParsed.ok) {
+        setResultError(toOffsetParsed.message);
+        return;
       }
 
-      let arrivalHtml = "";
-      const depStr = departureTime ? departureTime.value : "";
-      const depMinutes = parseDepartureTimeToMinutes(depStr);
-      if (depMinutes !== null) {
-        const arrivalMinutes = depMinutes + totalMinutes;
-        arrivalHtml = `<p><strong>Estimated arrival time:</strong> ${minutesToHHMM(arrivalMinutes)}</p>`;
+      // Parse date/time
+      const dateParsed = parseDateYMD(localDateInput ? localDateInput.value : "");
+      if (!dateParsed.ok) {
+        setResultError("Enter a valid local date in YYYY-MM-DD format (for example 2025-12-30).");
+        return;
       }
 
-      const totalHoursDecimal = totalMinutes / 60;
-      const totalHoursDecimalText = formatNumberTwoDecimals(totalHoursDecimal);
+      const timeParsed = parseTimeHM(localTimeInput ? localTimeInput.value : "");
+      if (!timeParsed.ok) {
+        setResultError("Enter a valid local time in 24-hour HH:MM format (for example 18:45).");
+        return;
+      }
 
-      const resultHtml = `
-        <p><strong>Total trip time:</strong> ${totalReadable}</p>
-        <ul>
-          <li><strong>Base driving time:</strong> ${baseReadable}</li>
-          <li><strong>Traffic add-on:</strong> ${trafficReadable}</li>
-          <li><strong>Stops add-on:</strong> ${stopsReadable}</li>
-        </ul>
-        <p><strong>Total time (hours):</strong> ${totalHoursDecimalText}</p>
-        ${arrivalHtml}
-        ${paceText ? `<p><strong>${paceLabel}:</strong> ${paceText}</p>` : ""}
-      `;
+      // Convert: treat input date/time as local time in From offset, convert to UTC epoch.
+      const fromLocalAsUtcMillis = Date.UTC(
+        dateParsed.y,
+        dateParsed.mo - 1,
+        dateParsed.d,
+        timeParsed.hh,
+        timeParsed.mm,
+        0,
+        0
+      );
+
+      const utcMillis = fromLocalAsUtcMillis - (fromOffsetParsed.minutes * 60 * 1000);
+      const toLocalMillis = utcMillis + (toOffsetParsed.minutes * 60 * 1000);
+
+      const toLocal = new Date(toLocalMillis);
+
+      const converted = formatUtcDateTime(toLocal);
+      const dayShift = describeDayShift(dateParsed.y, dateParsed.mo, dateParsed.d, toLocal);
+
+      const diffMinutes = toOffsetParsed.minutes - fromOffsetParsed.minutes;
+      const diffHours = diffMinutes / 60;
+      const diffSign = diffMinutes >= 0 ? "+" : "-";
+      const diffAbs = Math.abs(diffMinutes);
+      const diffH = Math.floor(diffAbs / 60);
+      const diffM = diffAbs % 60;
+      const diffLabel = diffSign + diffH + (diffM ? ":" + pad2(diffM) : "") + " hours";
+
+      const fromOffsetLabel = formatOffsetLabel(fromOffsetParsed.minutes);
+      const toOffsetLabel = formatOffsetLabel(toOffsetParsed.minutes);
+
+      const fromInputDisplay =
+        String(dateParsed.y) +
+        "-" +
+        pad2(dateParsed.mo) +
+        "-" +
+        pad2(dateParsed.d) +
+        " " +
+        pad2(timeParsed.hh) +
+        ":" +
+        pad2(timeParsed.mm);
+
+      const resultHtml =
+        `<p><strong>Converted time:</strong> ${converted}</p>` +
+        `<p><strong>Day change:</strong> ${dayShift}</p>` +
+        `<p><strong>Time difference (To minus From):</strong> ${diffLabel}</p>` +
+        `<hr>` +
+        `<p><strong>From:</strong> ${fromInputDisplay} (${fromOffsetLabel})</p>` +
+        `<p><strong>To:</strong> ${converted} (${toOffsetLabel})</p>`;
 
       setResultSuccess(resultHtml);
     });
@@ -231,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (shareButton) {
     shareButton.addEventListener("click", function () {
       const pageUrl = window.location.href;
-      const message = "Trip Time Estimator - check this calculator: " + pageUrl;
+      const message = "Time Zone Converter (Travel Version) - check this calculator: " + pageUrl;
       const encoded = encodeURIComponent(message);
       const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
       window.open(waUrl, "_blank");

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Vehicle Ownership Cost Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate the total cost of owning a vehicle, including depreciation, fuel, insurance, maintenance, taxes, and optional financing, with monthly and per-kilometre costs.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/vehicle-ownership-cost-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Vehicle Ownership Cost Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate the total cost of owning a vehicle, including depreciation, fuel, insurance, maintenance, taxes, and optional financing, with monthly and per-kilometre costs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/vehicle-ownership-cost-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vehicle Ownership Cost Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate the total cost of owning a vehicle, including depreciation, fuel, insurance, maintenance, taxes, and optional financing, with monthly and per-kilometre costs.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Vehicle Ownership Cost Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/vehicle-ownership-cost-calculator/",
+      "description": "Estimate the total cost of owning a vehicle, including depreciation, fuel, insurance, maintenance, taxes, and optional financing, with monthly and per-kilometre costs."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel & Transport</a> ›
+        <span>Vehicle Ownership Cost Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Vehicle Ownership Cost Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rXIcXp" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Commute Planning</div>
+                <p class="affiliate-copy">Optimise daily commutes for time, cost, and convenience.</p>
+                <div class="affiliate-cta">Explore commute planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your total cost to own and run a vehicle</h2>
+
+              <p class="calculator-intro">Calculate total ownership cost with depreciation, running costs, and optional financing. Get totals, monthly cost, and cost per km.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="purchasePrice">Purchase price</label>
+                <input type="text" id="purchasePrice" inputmode="decimal" placeholder="e.g. 250000">
+              </div>
+
+              <div class="form-group">
+                <label for="ownershipYears">Ownership period (years)</label>
+                <input type="text" id="ownershipYears" inputmode="decimal" placeholder="e.g. 5">
+              </div>
+
+              <div class="form-group">
+                <label for="annualKm">Distance driven per year (km)</label>
+                <input type="text" id="annualKm" inputmode="decimal" placeholder="e.g. 18000">
+              </div>
+
+              <div class="form-group">
+                <label for="fuelLitresPer100">Fuel consumption (litres per 100 km)</label>
+                <input type="text" id="fuelLitresPer100" inputmode="decimal" placeholder="e.g. 7.5">
+              </div>
+
+              <div class="form-group">
+                <label for="fuelPricePerLitre">Fuel price (per litre)</label>
+                <input type="text" id="fuelPricePerLitre" inputmode="decimal" placeholder="e.g. 24.50">
+              </div>
+
+              <div class="form-group">
+                <label for="insurancePerMonth">Insurance (per month, optional)</label>
+                <input type="text" id="insurancePerMonth" inputmode="decimal" placeholder="e.g. 1200">
+              </div>
+
+              <div class="form-group">
+                <label for="maintenancePerYear">Maintenance & servicing (per year, optional)</label>
+                <input type="text" id="maintenancePerYear" inputmode="decimal" placeholder="e.g. 8000">
+              </div>
+
+              <div class="form-group">
+                <label for="taxesPerYear">Registration, licence, taxes (per year, optional)</label>
+                <input type="text" id="taxesPerYear" inputmode="decimal" placeholder="e.g. 1500">
+              </div>
+
+              <div class="form-group">
+                <label for="resaleValue">Expected resale value at end (optional)</label>
+                <input type="text" id="resaleValue" inputmode="decimal" placeholder="e.g. 120000">
+              </div>
+
+              <div class="form-group">
+                <label for="downPayment">Down payment (optional, financing)</label>
+                <input type="text" id="downPayment" inputmode="decimal" placeholder="e.g. 50000">
+              </div>
+
+              <div class="form-group">
+                <label for="aprPercent">Loan APR % (optional, financing)</label>
+                <input type="text" id="aprPercent" inputmode="decimal" placeholder="e.g. 12.5">
+              </div>
+
+              <div class="form-group">
+                <label for="loanTermMonths">Loan term (months, optional, financing)</label>
+                <input type="text" id="loanTermMonths" inputmode="decimal" placeholder="e.g. 72">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate ownership cost</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel & Transport</h3>
+              <p class="related-desc">Plan trips, estimate travel time and costs, and compare transport options.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget better, track expenses, and understand how big purchases affect your finances.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Estimate operating costs, compare scenarios, and support pricing or reimbursement decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4agAzVQ" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Costs Tracking</div>
+                <p class="affiliate-copy">Track transport expenses across personal and business travel.</p>
+                <div class="affiliate-cta">View transport cost tracking tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Vehicle ownership cost calculator for total cost per month and per kilometre</h2>
+
+              <p>Owning a vehicle costs more than the purchase price. The true cost includes the value the vehicle loses over time (depreciation) and the ongoing costs of driving and keeping it roadworthy. This Vehicle Ownership Cost Calculator estimates the total cost of ownership across your planned ownership period, then breaks it down into a monthly figure and a cost per kilometre so you can compare vehicles and make better decisions.</p>
+
+              <p>This calculator is designed for both quick estimates and more accurate planning. If you only know a few numbers, you can still get a useful result by entering the purchase price, how long you expect to keep the vehicle, how much you drive, and your fuel consumption and fuel price. If you want a tighter estimate, you can add insurance, maintenance, licence and taxes, an expected resale value, and optional financing details. When optional inputs are left blank, the calculator assumes a value of zero for those line items and will clearly show what was included in the total.</p>
+
+              <p>The results include two different perspectives: an “economic cost” view and a “cash flow” view. The economic cost focuses on depreciation plus operating costs and interest paid (if financing is included). The cash flow view estimates how much money you will be out of pocket over the ownership period, factoring in financing payments and what you can recover when selling the vehicle. These are not identical, especially if you finance the purchase, so seeing both helps avoid misleading comparisons.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Fuel consumption is entered as litres per 100 km. Fuel cost is calculated from annual kilometres driven, consumption, and fuel price per litre.</li>
+                <li>If insurance, maintenance, or taxes are left blank, they are treated as 0. Add them if you want a more realistic total.</li>
+                <li>If you enter a resale value, depreciation is calculated as purchase price minus resale value. Resale value should not exceed purchase price.</li>
+                <li>If financing details are entered (APR and loan term), the calculator estimates monthly payment, interest paid, and remaining balance after the ownership period if the loan term is longer than your ownership period.</li>
+                <li>This calculator does not include parking, tolls, traffic fines, major accidents, or unusual repairs. Add those separately if they apply to your situation.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does depreciation matter so much in the total cost?</h3>
+              <p>Depreciation is often the biggest single cost of owning a vehicle, especially in the first few years. Even if you pay cash, the vehicle typically loses value as it ages and accumulates mileage. The calculator treats the difference between what you pay and what you can sell it for as a real cost of ownership, because it is value you give up during the time you own the vehicle.</p>
+
+              <h3>What if I do not know the resale value?</h3>
+              <p>If you are unsure, you can leave the resale value blank to get a running-cost focused estimate, or you can enter a conservative resale value to avoid underestimating total cost. A quick method is to look up similar vehicles (same model year and mileage) to estimate a realistic sale price. The more accurate your resale estimate, the more meaningful your total cost result will be.</p>
+
+              <h3>How does financing change the result?</h3>
+              <p>If you enter APR and loan term, the calculator estimates your loan payment and interest paid. Interest is a true cost, while principal repayments largely convert cash into vehicle equity. The cash flow view shows how much you pay out over time and how selling the vehicle interacts with any remaining loan balance. If you plan to sell before the loan is fully paid off, the remaining balance matters because it reduces what you actually keep from the sale.</p>
+
+              <h3>Is cost per kilometre better than cost per month?</h3>
+              <p>They answer different questions. Cost per month is useful for budgeting and affordability. Cost per kilometre is useful for comparing vehicles with different running costs or for deciding whether a trip, commute, or reimbursement rate makes sense. If you drive very little, fixed costs like insurance and depreciation can push your cost per kilometre up sharply.</p>
+
+              <h3>How can I make the estimate more realistic?</h3>
+              <p>Use a realistic annual kilometre figure, and do not underestimate maintenance. If your vehicle is older or out of warranty, annual maintenance can vary a lot year to year, so it can be helpful to use an average based on past spending. Also include licence and taxes, and make sure fuel consumption matches your real driving conditions rather than the best-case manufacturer claim.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aQfYI3" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Travel Logistics</div>
+                <p class="affiliate-copy">Manage travel logistics including timing, routes, and connections.</p>
+                <div class="affiliate-cta">Browse travel logistics tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

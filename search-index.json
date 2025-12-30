@@ -3597,19 +3597,6 @@
     ]
   },
   {
-    "title": "Mobile Budget Tracker | SnapCalc",
-    "url": "/calculators/my-calculator-picks/mobile-budget-tracker/",
-    "category": "Personal Finance",
-    "aliases": [
-      "mobile budget tracker | snapcalc",
-      "mobile budget tracker snapcalc",
-      "mobile budget tracker",
-      "personal finance mobile budget tracker snapcalc",
-      "personal finance mobile budget tracker",
-      "mbts"
-    ]
-  },
-  {
     "title": "50/30/20 Budget Rule Calculator | SnapCalc",
     "url": "/calculators/personal-finance/50-30-20-budget-rule-calculator/",
     "category": "Personal Finance",
@@ -5270,6 +5257,20 @@
     ]
   },
   {
+    "title": "Airport Transfer Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/airport-transfer-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "airport transfer cost calculator | snapcalc",
+      "airport transfer cost calculator snapcalc",
+      "airport transfer cost calculator",
+      "travel & transport airport transfer cost calculator snapcalc",
+      "travel & transport airport transfer cost calculator",
+      "airport transfer cost snapcalc",
+      "atccs"
+    ]
+  },
+  {
     "title": "Annual Fuel Cost Calculator | SnapCalc",
     "url": "/calculators/travel-transport/annual-fuel-cost-calculator/",
     "category": "Travel & Transport",
@@ -5281,6 +5282,34 @@
       "travel & transport annual fuel cost calculator",
       "annual fuel cost snapcalc",
       "afccs"
+    ]
+  },
+  {
+    "title": "Average Speed Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/average-speed-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "average speed calculator | snapcalc",
+      "average speed calculator snapcalc",
+      "average speed calculator",
+      "travel & transport average speed calculator snapcalc",
+      "travel & transport average speed calculator",
+      "average speed snapcalc",
+      "ascs"
+    ]
+  },
+  {
+    "title": "Baggage Weight Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/baggage-weight-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "baggage weight calculator | snapcalc",
+      "baggage weight calculator snapcalc",
+      "baggage weight calculator",
+      "travel & transport baggage weight calculator snapcalc",
+      "travel & transport baggage weight calculator",
+      "baggage weight snapcalc",
+      "bwcs"
     ]
   },
   {
@@ -5326,6 +5355,48 @@
     ]
   },
   {
+    "title": "ETA (Estimated Time of Arrival) Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/eta-estimated-time-of-arrival-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "eta (estimated time of arrival) calculator | snapcalc",
+      "eta estimated time of arrival calculator snapcalc",
+      "eta estimated time of arrival calculator",
+      "travel & transport eta estimated time of arrival calculator snapcalc",
+      "travel & transport eta estimated time of arrival calculator",
+      "eta estimated time of arrival snapcalc",
+      "eetacs"
+    ]
+  },
+  {
+    "title": "Flight Duration Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/flight-duration-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "flight duration calculator | snapcalc",
+      "flight duration calculator snapcalc",
+      "flight duration calculator",
+      "travel & transport flight duration calculator snapcalc",
+      "travel & transport flight duration calculator",
+      "flight duration snapcalc",
+      "fdcs"
+    ]
+  },
+  {
+    "title": "Flight Layover Impact Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/flight-layover-impact-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "flight layover impact calculator | snapcalc",
+      "flight layover impact calculator snapcalc",
+      "flight layover impact calculator",
+      "travel & transport flight layover impact calculator snapcalc",
+      "travel & transport flight layover impact calculator",
+      "flight layover impact snapcalc",
+      "flics"
+    ]
+  },
+  {
     "title": "Fuel Consumption Calculator (km/L, L/100km, MPG) | SnapCalc",
     "url": "/calculators/travel-transport/fuel-consumption-calculator-kml-l100km-mpg/",
     "category": "Travel & Transport",
@@ -5365,6 +5436,33 @@
       "travel & transport fuel split calculator group travel",
       "fuel split group travel snapcalc",
       "fscgts"
+    ]
+  },
+  {
+    "title": "Layover Time Planner | SnapCalc",
+    "url": "/calculators/travel-transport/layover-time-planner/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "layover time planner | snapcalc",
+      "layover time planner snapcalc",
+      "layover time planner",
+      "travel & transport layover time planner snapcalc",
+      "travel & transport layover time planner",
+      "ltps"
+    ]
+  },
+  {
+    "title": "Luggage Volume Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/luggage-volume-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "luggage volume calculator | snapcalc",
+      "luggage volume calculator snapcalc",
+      "luggage volume calculator",
+      "travel & transport luggage volume calculator snapcalc",
+      "travel & transport luggage volume calculator",
+      "luggage volume snapcalc",
+      "lvcs"
     ]
   },
   {
@@ -5464,6 +5562,19 @@
     ]
   },
   {
+    "title": "Time Zone Converter (Travel Version) | SnapCalc",
+    "url": "/calculators/travel-transport/time-zone-converter-travel-version/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "time zone converter (travel version) | snapcalc",
+      "time zone converter travel version snapcalc",
+      "trip time estimator",
+      "travel & transport time zone converter travel version snapcalc",
+      "travel & transport trip time estimator",
+      "tzctvs"
+    ]
+  },
+  {
     "title": "Toll Cost Estimator | SnapCalc",
     "url": "/calculators/travel-transport/toll-cost-estimator/",
     "category": "Travel & Transport",
@@ -5474,6 +5585,20 @@
       "travel & transport toll cost estimator snapcalc",
       "travel & transport toll cost estimator",
       "tces"
+    ]
+  },
+  {
+    "title": "Travel Days Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/travel-days-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "travel days calculator | snapcalc",
+      "travel days calculator snapcalc",
+      "travel days calculator",
+      "travel & transport travel days calculator snapcalc",
+      "travel & transport travel days calculator",
+      "travel days snapcalc",
+      "tdcs"
     ]
   },
   {
@@ -5488,19 +5613,6 @@
       "travel & transport travel speed calculator",
       "travel speed snapcalc",
       "tscs"
-    ]
-  },
-  {
-    "title": "Trip Time Estimator | SnapCalc",
-    "url": "/calculators/travel-transport/trip-time-estimator/",
-    "category": "Travel & Transport",
-    "aliases": [
-      "trip time estimator | snapcalc",
-      "trip time estimator snapcalc",
-      "trip time estimator",
-      "travel & transport trip time estimator snapcalc",
-      "travel & transport trip time estimator",
-      "ttes"
     ]
   },
   {
@@ -5529,6 +5641,20 @@
       "travel & transport vehicle depreciation calculator",
       "vehicle depreciation snapcalc",
       "vdcs"
+    ]
+  },
+  {
+    "title": "Vehicle Ownership Cost Calculator | SnapCalc",
+    "url": "/calculators/travel-transport/vehicle-ownership-cost-calculator/",
+    "category": "Travel & Transport",
+    "aliases": [
+      "vehicle ownership cost calculator | snapcalc",
+      "vehicle ownership cost calculator snapcalc",
+      "time zone converter travel version",
+      "travel & transport vehicle ownership cost calculator snapcalc",
+      "travel & transport time zone converter travel version",
+      "vehicle ownership cost snapcalc",
+      "voccs"
     ]
   },
   {

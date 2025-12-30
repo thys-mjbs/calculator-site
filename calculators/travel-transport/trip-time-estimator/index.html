@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: title and description -->
-    <title>Trip Time Estimator | SnapCalc</title>
+    <title>Time Zone Converter (Travel Version) | SnapCalc</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+    <meta name="description" content="Convert a local travel time between two UTC offsets. Enter your departure or arrival time, pick from and to offsets, and get the converted date and time with the time difference.">
 
     <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/trip-time-estimator/">
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/time-zone-converter-travel-version/">
 
     <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Trip Time Estimator | SnapCalc">
-    <meta property="og:description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+    <meta property="og:title" content="Time Zone Converter (Travel Version) | SnapCalc">
+    <meta property="og:description" content="Convert a local travel time between two UTC offsets. Enter your departure or arrival time, pick from and to offsets, and get the converted date and time with the time difference.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/trip-time-estimator/">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/time-zone-converter-travel-version/">
     <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Trip Time Estimator | SnapCalc">
-    <meta name="twitter:description" content="Estimate trip time based on distance, average speed, stops, and traffic delay. Get a clear total duration and optional arrival time.">
+    <meta name="twitter:title" content="Time Zone Converter (Travel Version) | SnapCalc">
+    <meta name="twitter:description" content="Convert a local travel time between two UTC offsets. Enter your departure or arrival time, pick from and to offsets, and get the converted date and time with the time difference.">
     <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
 
     <!-- JSON-LD structured data for the calculator page -->
@@ -30,11 +30,11 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Trip Time Estimator",
+      "name": "Time Zone Converter (Travel Version)",
       "applicationCategory": "Calculator",
       "operatingSystem": "All",
-      "url": "https://snapcalc.site/calculators/travel-transport/trip-time-estimator/",
-      "description": "Estimate trip time using distance and average speed, with optional stops, stop duration, traffic delay percent, and departure time to estimate arrival time."
+      "url": "https://snapcalc.site/calculators/travel-transport/time-zone-converter-travel-version/",
+      "description": "Convert a local travel time between two UTC offsets and see the converted date/time and time difference."
     }
     </script>
 
@@ -78,79 +78,56 @@
       <nav class="breadcrumbs">
         <a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
-        <span>Trip Time Estimator</span>
+        <span>Time Zone Converter (Travel Version)</span>
       </nav>
 
       <div class="page-layout">
-        <h1>Trip Time Estimator</h1>
+        <h1>Time Zone Converter (Travel Version)</h1>
 
         <div class="page-grid">
           <!-- Row 1: ad + main calculator + ad -->
           <div class="grid-slot">
             <div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4rXIcXp" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Commute Planning</div>
-                <p class="affiliate-copy">Optimise daily commutes for time, cost, and convenience.</p>
-                <div class="affiliate-cta">Explore commute planning tools on Amazon</div>
-              </a>
-            </div>
+  <a class="affiliate-link" href="https://amzn.to/3KKSVUA" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Vehicle Maintenance</div>
+    <p class="affiliate-copy">Track vehicle servicing, maintenance intervals, and running costs.</p>
+    <div class="affiliate-cta">Explore vehicle maintenance trackers on Amazon</div>
+  </a>
+</div>
           </div>
 
           <div class="grid-slot">
             <div class="calculator-container">
-              <h2>Estimate your trip duration and arrival time</h2>
+              <h2>Convert a travel time between two UTC offsets</h2>
 
-              <p class="calculator-intro">Enter distance and average speed for a quick estimate. Add stops, traffic delay, and a departure time for a more realistic total.</p>
+              <p class="calculator-intro">Enter the local date and time in your “From” location, then convert it to your “To” location. This is best for travel planning when you know the UTC offsets (including half-hours).</p>
 
               <!-- CALCULATOR UI START -->
               <div class="form-group">
-                <label for="distanceValue">Distance</label>
-                <input id="distanceValue" type="text" inputmode="decimal" placeholder="e.g., 120">
+                <label for="fromOffset">From UTC offset (hours)</label>
+                <input type="text" id="fromOffset" inputmode="decimal" placeholder="e.g. +2 or -5 or +5.5">
+                <div class="hint">Use the offset for the specific date you’re traveling (DST can change it).</div>
               </div>
 
               <div class="form-group">
-                <label for="distanceUnit">Distance unit</label>
-                <select id="distanceUnit">
-                  <option value="km" selected>Kilometres (km)</option>
-                  <option value="mi">Miles (mi)</option>
-                </select>
+                <label for="toOffset">To UTC offset (hours)</label>
+                <input type="text" id="toOffset" inputmode="decimal" placeholder="e.g. +1 or -8 or +9.5">
+              </div>
+
+              <button id="swapButton" type="button">Swap from/to</button>
+
+              <div class="form-group">
+                <label for="localDate">Local date (From location)</label>
+                <input type="text" id="localDate" inputmode="numeric" placeholder="YYYY-MM-DD">
               </div>
 
               <div class="form-group">
-                <label for="speedValue">Average speed</label>
-                <input id="speedValue" type="text" inputmode="decimal" placeholder="e.g., 90">
-              </div>
-
-              <div class="form-group">
-                <label for="speedUnit">Speed unit</label>
-                <select id="speedUnit">
-                  <option value="kmh" selected>km/h</option>
-                  <option value="mph">mph</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="stopsCount">Stops (optional)</label>
-                <input id="stopsCount" type="text" inputmode="numeric" placeholder="e.g., 1">
-              </div>
-
-              <div class="form-group">
-                <label for="stopMinutes">Minutes per stop (optional)</label>
-                <input id="stopMinutes" type="text" inputmode="numeric" placeholder="e.g., 10">
-              </div>
-
-              <div class="form-group">
-                <label for="trafficDelayPercent">Traffic delay percent (optional)</label>
-                <input id="trafficDelayPercent" type="text" inputmode="decimal" placeholder="e.g., 15">
-              </div>
-
-              <div class="form-group">
-                <label for="departureTime">Departure time (optional)</label>
-                <input id="departureTime" type="time">
+                <label for="localTime">Local time (From location)</label>
+                <input type="text" id="localTime" inputmode="numeric" placeholder="HH:MM (24-hour)">
               </div>
               <!-- CALCULATOR UI END -->
 
-              <button id="calculateButton" type="button">Estimate trip time</button>
+              <button id="calculateButton" type="button">Convert time</button>
 
               <div id="result" aria-live="polite"></div>
 
@@ -164,93 +141,93 @@
 
           <div class="grid-slot">
             <div class="ad-block" aria-label="Advertisement area">
-              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-              </a>
-            </div>
+  <a class="affiliate-link" href="https://amzn.to/4pz475D" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Distance Measurement</div>
+    <p class="affiliate-copy">Measure distances between locations for planning and logistics.</p>
+    <div class="affiliate-cta">View distance measurement tools on Amazon</div>
+  </a>
+</div>
           </div>
 
           <!-- Row 2: related CATEGORIES (three thin tiles) -->
           <div class="grid-slot">
             <a class="related-card" href="/categories/travel-transport/">
               <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Plan routes, estimate travel time, and compare transport options for everyday trips and long journeys.</p>
+              <p class="related-desc">Plan trips with timing, distance, and travel-related calculators.</p>
             </a>
           </div>
 
           <div class="grid-slot">
             <a class="related-card" href="/categories/time-date-scheduling/">
               <h3 class="related-title">Time, Date &amp; Scheduling</h3>
-              <p class="related-desc">Convert time units, plan schedules, and estimate timelines for meetings, projects, and daily routines.</p>
+              <p class="related-desc">Convert dates, calculate durations, and plan schedules across time.</p>
             </a>
           </div>
 
           <div class="grid-slot">
             <a class="related-card" href="/categories/conversions-units-currencies/">
               <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">Convert common units and measurements to keep calculations consistent across systems and regions.</p>
+              <p class="related-desc">Convert common units and formats quickly with practical tools.</p>
             </a>
           </div>
 
           <!-- Row 3: affiliate + SEO + affiliate -->
           <div class="grid-slot">
             <div class="ad-block" aria-label="Affiliate link area">
-              <a class="affiliate-link" href="https://amzn.to/4agAzVQ" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Costs Tracking</div>
-                <p class="affiliate-copy">Track transport expenses across personal and business travel.</p>
-                <div class="affiliate-cta">View transport cost tracking tools on Amazon</div>
-              </a>
-            </div>
+  <a class="affiliate-link" href="https://amzn.to/48XsOBX" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Parking Costs</div>
+    <p class="affiliate-copy">Estimate parking costs across cities and travel destinations.</p>
+    <div class="affiliate-cta">Browse parking cost calculators on Amazon</div>
+  </a>
+</div>
           </div>
 
           <div class="grid-slot">
             <section class="seo-section">
-              <h2>Trip time estimator for driving time, total travel duration, and arrival time</h2>
+              <h2>Time zone converter for travel times (UTC offset based)</h2>
 
-              <p>This trip time estimator helps you estimate how long a journey will take based on distance and average speed. If you only want a quick answer, you can enter those two numbers and get an immediate driving-time estimate. If you want something closer to real life, you can also include stops and a traffic delay percentage, and you can optionally add a departure time to estimate your arrival time.</p>
+              <p>This travel time zone converter is built for a single practical job: take a local date and time from one place and convert it into the local date and time in another place, using UTC offsets. This is the situation travelers face constantly. You see a flight departure time, hotel check-in window, tour start time, train departure, or local meeting time printed in one location’s local time, but you need to understand what that moment means in the time zone you care about right now. The primary decision is simple: “What date and time will this be there?”</p>
 
-              <p>The core calculation is simple: time equals distance divided by speed. That produces a base driving duration. Real trips rarely match the base number because traffic slows you down and breaks add fixed time. This calculator combines both by applying a traffic delay percentage to the driving portion, then adding stop time as a separate block. This keeps the results understandable and adjustable without forcing you to guess every detail.</p>
+              <p>The tool intentionally uses UTC offsets instead of city names. That is not a downgrade. For travel, you often already have the offset from a boarding pass, itinerary, airport listing, or a quick lookup. Offsets also avoid hidden surprises from ambiguous time zone names, and they allow half-hour and quarter-hour zones. You enter the “From” offset (where the time is expressed), the “To” offset (where you want the converted time), then the local date and local time in the “From” location. The calculator returns the converted local date and time in the “To” location, plus the time difference so you can sanity-check the result.</p>
 
-              <p>The output is designed to be useful at a glance. You get the base driving time, an estimate of extra time from traffic, an estimate of extra time from stops, and the total trip duration. If you enter a departure time, you also get an estimated arrival time. This is helpful for commute planning, setting realistic ETAs, deciding when to leave, and comparing two route options using different distances or speeds.</p>
+              <p>The output is designed to be usable immediately. The main converted time is shown first and clearly. Under that, you see the time difference between the two locations and whether the conversion crosses midnight (previous day or next day). That last detail matters for travel because it’s how people miss hotel check-ins, call someone at 03:00, or misread an arrival as “same day” when it is not. If you want to double-check yourself, you can also swap the offsets and convert in the opposite direction.</p>
 
               <h3>Assumptions and how to use this calculator</h3>
               <ul>
-                <li>Average speed should reflect the whole route, not your peak speed. Use a lower number if you expect towns, hills, or congestion.</li>
-                <li>Traffic delay percent applies to driving time only. Stops are added separately so you can model breaks more realistically.</li>
-                <li>If you do not know stops or stop duration, leave them blank and the calculator assumes zero stop time.</li>
-                <li>Arrival time is estimated using your local device time settings and does not account for time zones or overnight rest stops.</li>
-                <li>Results are estimates. Weather, roadworks, refuelling, border crossings, and parking time can materially change the real outcome.</li>
+                <li>You must enter the correct UTC offsets for the specific travel date. Many places change offsets during daylight saving time, and this tool does not auto-detect DST.</li>
+                <li>Offsets are entered in hours and can include decimals, such as +5.5 or +9.75. The calculator treats these as fixed offsets for the conversion.</li>
+                <li>The date and time you enter are assumed to be local to the “From” location, not your device’s time zone.</li>
+                <li>Input time is expected in 24-hour format (HH:MM). If you are using a 12-hour clock, convert it before entering.</li>
+                <li>This calculator converts one moment in time between two offsets. It is not for scheduling across multiple participants, and it does not choose time zones based on city names.</li>
               </ul>
 
               <h3>Common questions</h3>
 
-              <h3>What average speed should I use if I do not know it?</h3>
-              <p>Use a conservative estimate based on the type of driving. Highways often average lower than the posted limit once you include slower sections and merges. Urban driving averages can be much lower. If unsure, start with a cautious number, then rerun the calculator with a higher and lower speed to see a realistic range.</p>
+              <h3>Why does this tool ask for UTC offsets instead of cities?</h3>
+              <p>Because travel planning usually needs a fast, unambiguous conversion. City-based time zones require a database and DST rules, which can be right or wrong depending on date, location, and political changes. If you already know the offsets for your travel date, offset conversion is direct and predictable. If you do not know the offsets, look them up once for the specific date, then convert reliably.</p>
 
-              <h3>How does the traffic delay percent work?</h3>
-              <p>The traffic delay percent increases the driving portion of the trip by that percentage. For example, a 2 hour base drive with a 20% traffic delay becomes 2 hours and 24 minutes for the driving portion. Stops are then added on top of that.</p>
+              <h3>How do I enter half-hour or quarter-hour time zones?</h3>
+              <p>Use decimals. For example, UTC+5:30 becomes +5.5, and UTC+9:45 becomes +9.75. The calculator converts offsets into minutes internally, so these values work as expected. If you enter +5:30 with a colon, it will not parse correctly. Use +5.5 instead.</p>
 
-              <h3>Do I have to enter stops and minutes per stop?</h3>
-              <p>No. Stops are optional. If you leave them blank, the calculator assumes zero stop time and still returns a valid result. If you only know that you will take one break but are unsure how long, enter a rough estimate like 10 or 15 minutes and adjust later.</p>
+              <h3>What does “crosses midnight” mean in the result?</h3>
+              <p>It means the converted local time in the destination falls on a different calendar day than the time you entered. For example, a late-night departure might convert to “next day” in the destination. That is normal. This matters when your booking, check-in, or event is tied to a date rather than just a clock time.</p>
 
-              <h3>Why does my real trip still take longer than the estimate?</h3>
-              <p>The biggest causes are an average speed that was too optimistic, unplanned stops, and delays that are not “traffic” in the simple sense, such as roadworks, accidents, parking, waiting for passengers, or detours. If your real trips consistently run long, lower your average speed or increase the traffic delay percent until the estimate matches your typical experience.</p>
+              <h3>What if the offsets change because of daylight saving time?</h3>
+              <p>Then the conversion depends on the date. Many regions shift by one hour during parts of the year. This calculator assumes the offsets you entered are correct for the date you entered. If you are unsure, verify both offsets for the specific date (not “current time”) and then run the conversion.</p>
 
-              <h3>Can I use this for walking, cycling, or public transport?</h3>
-              <p>Yes, if you enter an appropriate average speed. For walking and cycling it can be reasonably accurate on flat routes. For public transport it is more variable because waiting time and transfers dominate, so model those as stops with minutes per stop, and treat the speed as an average over the moving portions only.</p>
+              <h3>Can I use this to plan a call with someone in another country?</h3>
+              <p>You can, but only if you already know both UTC offsets for the call date and time. This page is locked to travel conversion between two offsets, not general meeting scheduling across multiple people or automatic city-based time zones. If you need city selection and DST automation, use a city-based planner tool instead.</p>
 
-              <div class="last-updated">Last updated: 2025-12-18</div>
+              <div class="last-updated">Last updated: 2025-12-30</div>
             </section>
           </div>
 
           <div class="grid-slot">
             <div class="ad-block" aria-label="Affiliate link area">
-              <a class="affiliate-link" href="https://amzn.to/4aQfYI3" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Travel Logistics</div>
-                <p class="affiliate-copy">Manage travel logistics including timing, routes, and connections.</p>
-                <div class="affiliate-cta">Browse travel logistics tools on Amazon</div>
-              </a>
-            </div>
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
           </div>
         </div>
       </div>
