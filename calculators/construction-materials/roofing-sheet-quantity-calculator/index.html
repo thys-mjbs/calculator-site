@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Roofing Sheet Quantity Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate how many metal roofing sheets you need based on roof dimensions, effective sheet cover width, number of roof planes, and a waste allowance.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/roofing-sheet-quantity-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Roofing Sheet Quantity Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate how many metal roofing sheets you need based on roof dimensions, effective sheet cover width, number of roof planes, and a waste allowance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/roofing-sheet-quantity-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roofing Sheet Quantity Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate how many metal roofing sheets you need based on roof dimensions, effective sheet cover width, number of roof planes, and a waste allowance.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Roofing Sheet Quantity Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/roofing-sheet-quantity-calculator/",
+      "description": "Estimate the number of metal roofing sheets needed from roof dimensions, effective sheet cover width, number of roof planes, and a waste allowance."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Roofing Sheet Quantity Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Roofing Sheet Quantity Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pcRNax" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Structural Engineering</div>
+    <p class="affiliate-copy">Tools for structural calculations, beam sizing, and load analysis.</p>
+    <div class="affiliate-cta">Explore structural engineering tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate metal roofing sheets needed</h2>
+
+              <p class="calculator-intro">Built for ordering metal roofing sheets (like corrugated or IBR) using your roof size and the sheet’s effective cover width.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="roofRunM">Roof run length along the eave (meters)</label>
+                <input type="text" id="roofRunM" inputmode="decimal" placeholder="e.g., 12">
+              </div>
+
+              <div class="form-group">
+                <label for="slopeLengthM">Roof slope length (ridge to eave) per plane (meters)</label>
+                <input type="text" id="slopeLengthM" inputmode="decimal" placeholder="e.g., 4.5">
+              </div>
+
+              <div class="form-group">
+                <label for="effectiveCoverWidthMm">Sheet effective cover width (mm)</label>
+                <input type="text" id="effectiveCoverWidthMm" inputmode="decimal" placeholder="e.g., 762">
+              </div>
+
+              <div class="form-group">
+                <label for="roofPlanes">Number of roof planes</label>
+                <input type="text" id="roofPlanes" inputmode="numeric" placeholder="e.g., 2">
+              </div>
+
+              <div class="form-group">
+                <label for="wastePercent">Waste allowance (percent)</label>
+                <input type="text" id="wastePercent" inputmode="decimal" placeholder="e.g., 10">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate sheets</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4aOjsL6" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Engineering Workflows</div>
+    <p class="affiliate-copy">Improve engineering workflows with planning and calculation aids.</p>
+    <div class="affiliate-cta">View engineering workflow tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Plan quantities for building materials and estimate coverage for common construction tasks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Run technical calculations for sizing, performance checks, and practical engineering estimates.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Estimate costs and quantities for property projects, renovations, and home planning decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3XQUR0L" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Technical References</div>
+    <p class="affiliate-copy">Quick-reference guides for engineering standards and specifications.</p>
+    <div class="affiliate-cta">Browse technical reference guides on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Roofing sheet quantity calculator for metal roof panels</h2>
+
+              <p>Ordering the right number of roofing sheets is mostly about getting one thing right: the sheet’s effective cover width. Most metal roofing sheets overlap at the sides, so the width you can actually cover per sheet is smaller than the physical sheet width. If you order using the full width, you end up short and you pay twice, once in delivery and again in downtime.</p>
+
+              <p>This roofing sheet quantity calculator is designed for a practical, common job: estimating how many metal roofing sheets you need to cover a roof when sheets run from eave to ridge (or eave to apex). You enter the roof run length along the eave, the slope length from ridge to eave for one plane, the sheet effective cover width, and how many roof planes you are covering. The result gives you a sheet count plus a few supporting numbers that help you sanity-check the order.</p>
+
+              <p>Use it when you are buying corrugated sheets, IBR, clip-lock, or similar profiles and you already know the effective cover width from the supplier’s spec sheet. If you do not have a spec sheet, the safest path is to ask the supplier for the effective cover width for the exact profile and side-lap they recommend, then enter that number here. This calculator does not attempt to guess profiles or lap patterns because that creates false confidence and incorrect orders.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator assumes sheets run vertically from eave to ridge for each roof plane, so one sheet covers the full slope length (cut to length or ordered to length).</li>
+                <li>The “effective cover width” already accounts for side overlap. Use the manufacturer or supplier’s effective cover width, not the physical sheet width.</li>
+                <li>Roof run length is measured along the eave for one plane, not the perimeter of the whole building.</li>
+                <li>Waste allowance covers trimming, minor errors, damaged sheets, and awkward edges. A common planning range is 5 to 15 percent depending on complexity.</li>
+                <li>This calculator estimates sheet count only. It does not estimate fasteners, ridge caps, flashing, underlayment, insulation, gutters, or battens.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is “effective cover width” and why does it matter?</h3>
+              <p>Effective cover width is how much roof width one sheet covers after it overlaps with the next sheet. For many profiles, the overlap is required for waterproofing and strength. If you use the physical width instead, the calculation underestimates the number of sheets and you will run short. Always use the effective cover width from the supplier’s spec for your profile and overlap.</p>
+
+              <h3>What should I enter for “number of roof planes”?</h3>
+              <p>Enter how many separate sloped surfaces you are covering that have the same run length and slope length. A simple gable roof usually has 2 planes. A mono-pitch roof often has 1 plane. If different planes have different sizes, run the calculator separately for each size and add the totals.</p>
+
+              <h3>Does this work if my roof is not a perfect rectangle?</h3>
+              <p>Partly. If the roof has hips, valleys, dormers, or many cut-outs, a simple rectangle estimate is still useful as a starting point, but your waste allowance should be higher. In complex roofs, consider measuring each plane separately and using a larger waste percent to cover offcuts and awkward shapes.</p>
+
+              <h3>What waste percent should I use?</h3>
+              <p>There is no single correct number. For straightforward roofs with clean edges and consistent geometry, 5 to 10 percent is common. For roofs with many cuts, penetrations, or multiple plane sizes, 10 to 15 percent is safer. If you are unsure, choose a conservative value because sheet shortages are usually more expensive than small overages.</p>
+
+              <h3>Do I need to account for end laps or sheet length overlaps?</h3>
+              <p>This calculator assumes one sheet covers the full slope length without an end lap. If your supplier cannot supply the full length or your design requires an end lap, your effective coverage per sheet along the slope decreases. In that case, the job becomes a different problem: you need sheets per row and number of rows along the slope. This calculator is not intended for that scenario.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/49c4xcs" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Design Tools</div>
+    <p class="affiliate-copy">Support engineering design with calculation and planning tools.</p>
+    <div class="affiliate-cta">Browse engineering design tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

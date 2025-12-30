@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>Hydraulic Force Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Calculate hydraulic cylinder force from system pressure and cylinder bore. Includes optional rod diameter and efficiency to estimate push and pull force."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/engineering-technical/hydraulic-force-calculator/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Hydraulic Force Calculator | SnapCalc" />
+    <meta
+      property="og:description"
+      content="Calculate hydraulic cylinder force from system pressure and cylinder bore. Includes optional rod diameter and efficiency to estimate push and pull force."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/engineering-technical/hydraulic-force-calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hydraulic Force Calculator | SnapCalc" />
+    <meta
+      name="twitter:description"
+      content="Calculate hydraulic cylinder force from system pressure and cylinder bore. Includes optional rod diameter and efficiency to estimate push and pull force."
+    />
+    <meta
+      name="twitter:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Hydraulic Force Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/engineering-technical/hydraulic-force-calculator/",
+        "description": "Calculate hydraulic cylinder push and pull force from pressure and cylinder bore, with optional rod diameter and efficiency."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Hydraulic Force Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Hydraulic Force Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iXUY4i" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Fluid Mechanics</div>
+    <p class="affiliate-copy">Tools for flow rate, pressure, and fluid behaviour calculations.</p>
+    <div class="affiliate-cta">Explore fluid mechanics tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Hydraulic cylinder force from pressure</h2>
+
+              <p class="calculator-intro">
+                Enter your system pressure and cylinder bore to estimate extension force. Add rod diameter and efficiency to estimate retraction force more realistically.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="pressureValue">System pressure</label>
+                <input
+                  type="text"
+                  id="pressureValue"
+                  inputmode="decimal"
+                  placeholder="e.g., 180"
+                  aria-label="System pressure value"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="pressureUnit">Pressure unit</label>
+                <select id="pressureUnit" aria-label="Pressure unit">
+                  <option value="bar" selected>bar</option>
+                  <option value="psi">psi</option>
+                  <option value="mpa">MPa</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="boreValue">Cylinder bore diameter</label>
+                <input
+                  type="text"
+                  id="boreValue"
+                  inputmode="decimal"
+                  placeholder="e.g., 80"
+                  aria-label="Cylinder bore diameter value"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="diameterUnit">Diameter unit</label>
+                <select id="diameterUnit" aria-label="Diameter unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+
+              <details>
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group" style="margin-top: 10px;">
+                  <label for="rodValue">Rod diameter (for pull force)</label>
+                  <input
+                    type="text"
+                    id="rodValue"
+                    inputmode="decimal"
+                    placeholder="e.g., 45 (leave blank if unknown)"
+                    aria-label="Rod diameter value"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="efficiencyPercent">Overall efficiency (%)</label>
+                  <input
+                    type="text"
+                    id="efficiencyPercent"
+                    inputmode="decimal"
+                    placeholder="e.g., 90"
+                    aria-label="Overall efficiency percent"
+                  />
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate force</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3MBETVR" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Technical Formulas</div>
+    <p class="affiliate-copy">Access commonly used engineering and technical formulas in one place.</p>
+    <div class="affiliate-cta">View technical formula references on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Solve practical engineering problems with focused calculators for mechanics, electronics, and systems.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units quickly, including pressure, length, power, and temperature.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate quantities, sizes, and material needs for real projects with clear inputs and outputs.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3XQUR0L" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Technical References</div>
+    <p class="affiliate-copy">Quick-reference guides for engineering standards and specifications.</p>
+    <div class="affiliate-cta">Browse technical reference guides on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Hydraulic force calculator for cylinder push and pull force</h2>
+
+              <p>
+                This hydraulic force calculator estimates how much linear force a hydraulic cylinder can produce from a given pressure and cylinder bore. The dominant real world intent is sizing and sanity checking a cylinder for a specific pushing task, like lifting a load, clamping, pressing, or moving a mechanism. If you know your system pressure and the cylinder bore, you can quickly estimate extension force, which is the force available when the piston is pushing out.
+              </p>
+              <p>
+                In practice, many people also need a realistic estimate of pull force (retraction force). Retraction force is usually lower because the piston’s effective area is reduced by the rod. That is why this page includes an optional rod diameter input. If you do not know the rod diameter, you can still get a useful extension estimate and a clear explanation of what is missing to refine the pull estimate.
+              </p>
+              <p>
+                To use the calculator, enter your system pressure and choose the correct unit (bar, psi, or MPa). Then enter the cylinder bore diameter and select mm or inches. Click Calculate force to see extension force in newtons (N), kilonewtons (kN), and metric ton force (tf). If you enter a rod diameter, the calculator also shows the estimated retraction force and the effective annulus area. You can also enter an overall efficiency percentage to account for losses from seals, friction, pressure drop, and real world operating conditions.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator uses the standard relationship: Force = Pressure × Area, applied to piston area for extension and annulus area for retraction.</li>
+                <li>Pressure is treated as the effective pressure at the cylinder. If your gauge is far from the cylinder or you have high flow losses, actual force can be lower.</li>
+                <li>If efficiency is left blank, a default of 90% is used to avoid unrealistic “perfect” force estimates in typical systems.</li>
+                <li>Rod diameter is optional. If omitted, only extension force is calculated, because retraction force depends on the rod size.</li>
+                <li>Results are static force estimates and do not include dynamic effects, shock loads, side loads, acceleration, or mechanical advantage from linkages.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why is my calculated force higher than what the machine can actually move?</h3>
+              <p>
+                The formula gives theoretical cylinder force at the stated pressure, but real machines have losses and extra resistance. Seal friction, pressure drop through valves and hoses, side loading on the rod, and the geometry of linkages can all reduce usable force at the point where work is done. Use the efficiency input to bring estimates closer to reality, and remember that the cylinder force is not the same as the force at the load if there is leverage involved.
+              </p>
+
+              <h3>What pressure should I enter: pump rating, relief setting, or gauge reading?</h3>
+              <p>
+                Use the pressure that the cylinder actually sees during the task. The pump’s maximum rating is not a working value. Relief setting is an upper limit and may not be reached. A gauge reading taken during the movement or pressing operation is usually the best choice. If you only know the relief setting, treat the result as a best case upper bound.
+              </p>
+
+              <h3>Do I need rod diameter to calculate force?</h3>
+              <p>
+                You only need rod diameter to estimate pull force (retraction). Extension force uses full piston area, which depends only on bore. If your decision is about pushing, clamping, or lifting on extension, bore and pressure are enough for a useful first estimate. If you care about pulling or retraction speed under load, add rod diameter when you can.
+              </p>
+
+              <h3>What does “ton force (tf)” mean, and how should I use it?</h3>
+              <p>
+                Ton force is a force unit based on the weight of a 1,000 kg mass under standard gravity. It can be useful for quick intuition in lifting and pressing contexts, but it is not mass. A 5 tf result means the cylinder can theoretically exert about five metric tons of force, not lift five tons safely in every configuration. Always apply safety factors and consider the full system design.
+              </p>
+
+              <h3>How can I improve accuracy without overcomplicating the inputs?</h3>
+              <p>
+                Use the most realistic pressure value for the actual task, and enter a reasonable efficiency. If you do not have test data, 85% to 90% is a sensible starting range for many practical systems. If retraction matters, measure or look up the rod diameter. If your machine uses linkages, calculate the mechanical advantage separately, because cylinder force is only one part of the force at the load.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/49c4xcs" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Design Tools</div>
+    <p class="affiliate-copy">Support engineering design with calculation and planning tools.</p>
+    <div class="affiliate-cta">Browse engineering design tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>
