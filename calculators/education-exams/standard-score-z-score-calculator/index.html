@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Standard Score (Z-Score) Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate a z-score from a test score, mean, and standard deviation, then estimate percentile rank and interpret how far above or below average the score is.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/standard-score-z-score-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Standard Score (Z-Score) Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate a z-score from a test score, mean, and standard deviation, then estimate percentile rank and interpret how far above or below average the score is.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/standard-score-z-score-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Standard Score (Z-Score) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate a z-score from a test score, mean, and standard deviation, then estimate percentile rank and interpret how far above or below average the score is.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Standard Score (Z-Score) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/standard-score-z-score-calculator/",
+      "description": "Calculates a standard score (z-score) from a test score, mean, and standard deviation, and estimates percentile rank with a plain-language interpretation."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-and-exams/">Education &amp; Exams</a> ›
+        <span>Standard Score (Z-Score) Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Standard Score (Z-Score) Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rW5wop" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Stress</div>
+    <p class="affiliate-copy">Manage exam stress and anxiety with structured support tools.</p>
+    <div class="affiliate-cta">Explore exam stress tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Z-score and percentile from a test score</h2>
+
+              <p class="calculator-intro">Use this when you have a score, the group average (mean), and standard deviation, and you want to understand how far above or below average the score is.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="rawScore">Your score</label>
+                <input type="text" id="rawScore" inputmode="decimal" placeholder="Example: 78">
+              </div>
+
+              <div class="form-group">
+                <label for="meanScore">Mean (average) score</label>
+                <input type="text" id="meanScore" inputmode="decimal" placeholder="Example: 65">
+              </div>
+
+              <div class="form-group">
+                <label for="stdDev">Standard deviation (SD)</label>
+                <input type="text" id="stdDev" inputmode="decimal" placeholder="Example: 10">
+              </div>
+
+              <details class="advanced-section">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group">
+                  <label for="groupSize">Group size (class or cohort size)</label>
+                  <input type="text" id="groupSize" inputmode="numeric" placeholder="Example: 120">
+                </div>
+
+                <p class="advanced-note">If you enter a group size, the calculator estimates how many people are likely to score below and above you, based on the percentile estimate.</p>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate z-score</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-and-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">Convert marks, estimate grade outcomes, and compare performance across tests and scoring systems.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle everyday math like percentages, ratios, averages, and common statistical calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Plan deadlines, study schedules, and time-based conversions for exams and projects.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4pySdst" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Checklists</div>
+    <p class="affiliate-copy">Use checklists to ensure exam readiness and preparation completeness.</p>
+    <div class="affiliate-cta">View exam checklist tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Standard score (z-score) calculator for test results and percentile rank</h2>
+
+              <p>A z-score (also called a standard score) tells you how far a result is from the average, measured in standard deviations. If you are looking at exam results, entrance tests, class tests, or any scored assessment, a z-score is a fast way to compare performance even when different tests use different scoring scales. Instead of asking “is 78 good,” you ask “how far above the group average is 78, given how spread out the scores were.”</p>
+
+              <p>This calculator is locked to one practical intent: interpreting a score relative to a group using the group’s mean and standard deviation. It is not a hypothesis test tool and it does not calculate p-values, confidence intervals, or statistical significance. If you need those, you should use a statistics-specific tool. Here, the goal is simple: translate a raw score into a standardized distance from average, then turn that into a percentile estimate you can understand.</p>
+
+              <p>To use it, enter your score, the mean (average) score for the group, and the standard deviation (SD). The calculator returns your z-score, an estimated percentile rank (based on the normal distribution), and an interpretation in plain language. If you also enter an optional group size, it estimates how many people are likely to score below and above you in a group of that size, based on the percentile estimate. This extra line is useful when you are thinking in terms of “where do I rank in the class” instead of “what is my z-score.”</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The z-score uses the standard formula: z = (score − mean) ÷ SD.</li>
+                <li>SD must be greater than 0. If SD is 0, there is no spread and a z-score cannot be computed.</li>
+                <li>The percentile is an estimate assuming scores are approximately normally distributed (bell-shaped). Real exam distributions can be skewed.</li>
+                <li>If your score is far from the mean, the percentile estimate becomes more sensitive to the normality assumption.</li>
+                <li>The optional group size estimate assumes the percentile applies to the whole group and rounds to whole people for readability.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does a z-score of 0 mean?</h3>
+              <p>A z-score of 0 means your score equals the group mean. It does not mean “average performance is bad or good,” it only means you landed exactly on the average for that group. If the SD is large, scores are spread out, so being at the mean can still represent a wide range of raw scores around you.</p>
+
+              <h3>What is a “good” z-score for an exam?</h3>
+              <p>There is no universal good z-score because it depends on what you need to achieve. In many exam contexts, a z-score of +1 means you are about one SD above average, which often corresponds to roughly the 84th percentile under a normal curve. A z-score of +2 is much rarer (around the 98th percentile). If you are aiming for a cutoff or admission threshold, focus on whether your percentile is above the likely cutoff level for that program or selection process.</p>
+
+              <h3>Why is the percentile only an estimate?</h3>
+              <p>The percentile is calculated by mapping the z-score to the normal distribution (a standard bell curve). Many real-world tests are close enough for a useful estimate, but some are not. If the test was very easy or very hard, or if results were capped by a maximum score, the distribution can become skewed or compressed. In those cases, the percentile from a normal curve can be directionally helpful but not exact.</p>
+
+              <h3>What if I do not know the standard deviation?</h3>
+              <p>You cannot compute a valid z-score without SD, because SD is what turns a raw difference from the mean into a standardized distance. If you only know the mean, you can still compare raw differences (score minus mean), but you cannot compare across groups or tests reliably. If you can get the SD from the teacher, examiner, report, or summary statistics, do that. If SD is unknown and you guess it, treat the z-score and percentile as a rough estimate and state that assumption clearly.</p>
+
+              <h3>Does group size change the z-score?</h3>
+              <p>No. Group size does not affect the z-score formula. Group size only matters for how stable the mean and SD are, and for interpreting what a percentile means as an expected count of people above or below you. In a small group, percentile estimates can feel jumpy because each person represents a large chunk of the distribution. The optional group size field is purely for interpretation, not for the z-score calculation itself.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4rX33dy" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Learning Productivity</div>
+    <p class="affiliate-copy">Improve study efficiency with structured productivity systems.</p>
+    <div class="affiliate-cta">Browse learning productivity tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

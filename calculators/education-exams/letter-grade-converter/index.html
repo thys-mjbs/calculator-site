@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Letter Grade Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert a test or exam score into a letter grade (A+, A, A-, …, F) using a standard A–F scale with plus/minus. Enter a percentage or points earned out of total points.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/letter-grade-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Letter Grade Converter | SnapCalc">
+    <meta property="og:description" content="Convert a test or exam score into a letter grade (A+, A, A-, …, F) using a standard A–F scale with plus/minus. Enter a percentage or points earned out of total points.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/letter-grade-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Letter Grade Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert a test or exam score into a letter grade (A+, A, A-, …, F) using a standard A–F scale with plus/minus. Enter a percentage or points earned out of total points.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Letter Grade Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/letter-grade-converter/",
+      "description": "Convert a test or exam score into a letter grade (A+, A, A-, …, F) using a standard A–F plus/minus grading scale. Enter a percentage or points earned out of total points."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Letter Grade Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Letter Grade Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rW5wop" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Stress</div>
+    <p class="affiliate-copy">Manage exam stress and anxiety with structured support tools.</p>
+    <div class="affiliate-cta">Explore exam stress tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert a score to a letter grade</h2>
+
+              <p class="calculator-intro">
+                Enter either a percentage score or points earned out of total points. This tool converts it to a letter grade using a standard A–F scale with plus/minus.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="modeSelect">Input type</label>
+                <select id="modeSelect">
+                  <option value="percent" selected>Percentage (0 to 100)</option>
+                  <option value="points">Points (earned out of total)</option>
+                </select>
+              </div>
+
+              <div id="modePercentBlock">
+                <div class="form-group">
+                  <label for="percentInput">Percentage score (%)</label>
+                  <input type="text" id="percentInput" inputmode="decimal" placeholder="e.g., 87.5">
+                </div>
+              </div>
+
+              <div id="modePointsBlock" class="hidden">
+                <div class="form-group">
+                  <label for="pointsEarnedInput">Points earned</label>
+                  <input type="text" id="pointsEarnedInput" inputmode="decimal" placeholder="e.g., 45">
+                </div>
+
+                <div class="form-group">
+                  <label for="pointsPossibleInput">Total points possible</label>
+                  <input type="text" id="pointsPossibleInput" inputmode="decimal" placeholder="e.g., 50">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert to Letter Grade</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4qd6QBY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Revision Scheduling</div>
+    <p class="affiliate-copy">Schedule revision sessions effectively ahead of exams.</p>
+    <div class="affiliate-cta">View revision scheduling tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">Study tools for converting grades, planning revision, and checking exam readiness.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Quick math helpers for percentages, averages, ratios, and everyday calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Simple utilities for common tasks, quick checks, and practical day to day decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4pySdst" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Checklists</div>
+    <p class="affiliate-copy">Use checklists to ensure exam readiness and preparation completeness.</p>
+    <div class="affiliate-cta">View exam checklist tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Letter grade converter for exam and test scores (A+ to F)</h2>
+
+              <p>If you have a score and you want the letter grade quickly, this letter grade converter is built for that single job: turn a percentage or points score into a standard A–F letter grade with plus and minus. This is useful when a teacher shares raw points, when you only know your percent score, or when you want a clear label for how you performed without doing extra math.</p>
+
+              <p>The calculator supports two common inputs. If your result is already a percentage, choose Percentage and enter a value from 0 to 100. If you have points, choose Points and enter points earned and total points possible. The calculator will compute the percentage and then convert it into a letter grade. Results are shown in plain language so you can interpret them immediately.</p>
+
+              <p>Along with the letter grade, you also get a small extra insight that helps decision making: how far you are from the next grade boundary. In percentage mode, that means the number of percentage points needed to reach the next grade up. In points mode, the calculator shows the minimum additional points you would have needed (based on the same total points) to reach the next boundary. This keeps the tool practical without turning it into a full grade planning system.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The converter uses a common U.S. style A–F scale with plus and minus (A+, A, A-, …, D-, F).</li>
+                <li>Scores are treated as percentage of total, with no weighting, curves, or extra credit included.</li>
+                <li>Percent values must be between 0 and 100. Points earned must be 0 or higher and cannot exceed total points.</li>
+                <li>Grade boundaries are applied to the calculated percentage, and values at a boundary count toward the higher grade (for example, 90.00% is an A-).</li>
+                <li>This calculator is for converting a single score, not for combining multiple assignments or computing a final course grade.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What grading scale does this letter grade converter use?</h3>
+              <p>It uses a standard plus/minus A–F scale: A+ (97–100), A (93–96.99), A- (90–92.99), B+ (87–89.99), B (83–86.99), B- (80–82.99), C+ (77–79.99), C (73–76.99), C- (70–72.99), D+ (67–69.99), D (63–66.99), D- (60–62.99), and F (below 60).</p>
+
+              <h3>My school uses a different scale. Will this still match?</h3>
+              <p>Not always. Many schools use variations such as no A+ grade, different cutoffs, or different pass thresholds. This tool is meant for the common A–F plus/minus scale. If your institution publishes its own table, that table is the authority and may produce different letters.</p>
+
+              <h3>Can I enter points like 17.5 out of 20?</h3>
+              <p>Yes. Points can be whole numbers or decimals. The calculator converts points earned divided by total points into a percentage, then maps that percentage to the letter grade.</p>
+
+              <h3>Why does it show “points needed to reach the next grade” in points mode?</h3>
+              <p>It answers a practical question: how close you were to the next grade boundary. The calculator finds the next higher cutoff percentage and converts that cutoff back into points using your total points. If you already have the top grade, it will tell you there is no higher grade above it.</p>
+
+              <h3>Does this include grade curves, weighting, or extra credit?</h3>
+              <p>No. Curves and weights vary widely by teacher and institution. This tool converts the raw score you enter into a letter grade on the stated scale. If your final grade includes curves, category weights, or extra credit, you should apply those rules first and then convert the final percentage.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KGJ0zj" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Revision Tracking</div>
+    <p class="affiliate-copy">Track revision progress and identify weak areas before exams.</p>
+    <div class="affiliate-cta">Browse revision tracking tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

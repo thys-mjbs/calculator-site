@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Percentile Rank Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your percentile rank from class rank and total students. See what percent of students you are ahead of and whether you are in the top X% of the class.">
+
+    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/percentile-rank-calculator/">
+
+    <meta property="og:title" content="Percentile Rank Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate your percentile rank from class rank and total students. See what percent of students you are ahead of and whether you are in the top X% of the class.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/percentile-rank-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Percentile Rank Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate your percentile rank from class rank and total students. See what percent of students you are ahead of and whether you are in the top X% of the class.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Percentile Rank Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/percentile-rank-calculator/",
+      "description": "Calculate your percentile rank from class rank and total students. See what percent of students you are ahead of and whether you are in the top X% of the class."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education & Exams</a> ›
+        <span>Percentile Rank Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Percentile Rank Calculator</h1>
+
+        <div class="page-grid">
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rW5wop" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Stress</div>
+    <p class="affiliate-copy">Manage exam stress and anxiety with structured support tools.</p>
+    <div class="affiliate-cta">Explore exam stress tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Find your percentile from class rank</h2>
+
+              <p class="calculator-intro">Enter your class rank and the total number of students to see what percent of students you are ahead of, plus whether you are in the top X% of the class.</p>
+
+              <div class="form-group">
+                <label for="rankInput">Your rank (1 = best)</label>
+                <input type="text" id="rankInput" inputmode="numeric" placeholder="e.g., 12">
+              </div>
+
+              <div class="form-group">
+                <label for="totalInput">Total students in the group</label>
+                <input type="text" id="totalInput" inputmode="numeric" placeholder="e.g., 250">
+              </div>
+
+              <details class="advanced-block">
+                <summary>Advanced (ties)</summary>
+
+                <div class="form-group" style="margin-top: 10px;">
+                  <label for="tiesInput">Students tied at your rank (optional)</label>
+                  <input type="text" id="tiesInput" inputmode="numeric" value="1" placeholder="1">
+                </div>
+              </details>
+
+              <button id="calculateButton" type="button">Calculate percentile rank</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48DlSuP" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Study Planning</div>
+    <p class="affiliate-copy">Organise study schedules, topics, and revision timelines efficiently.</p>
+    <div class="affiliate-cta">View study planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Estimate grades, rankings, and exam outcomes using common academic rules.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Handle percentages, ratios, averages, and everyday math conversions quickly.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan timelines, compare dates, and calculate durations for schedules and deadlines.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3MCkFv5" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Study Focus</div>
+    <p class="affiliate-copy">Improve focus and concentration during study sessions.</p>
+    <div class="affiliate-cta">Browse study focus tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Percentile rank calculator for class rank and top percentage</h2>
+
+              <p>This percentile rank calculator is built for one common situation: you know your class rank (for example, rank 12 out of 250) and you want a clear interpretation of what that means. Most people are not asking for statistics theory. They want a practical answer to one decision: how strong is my position relative to the group?</p>
+
+              <p>In this calculator, rank uses the standard school convention where 1 is the best position (highest score). The main output is the percent of students you are ahead of, which is the simplest way to describe your standing. If you are rank 12 out of 250, you are ahead of most of the class, and the tool expresses that as a clean percentage. It also translates your rank into a “top X%” label, which is how many applications, scholarships, and admissions pages describe competitiveness.</p>
+
+              <p>To use it, enter your rank and the total number of students in the class or group. If there are ties in the ranking system, open the Advanced section and enter how many students share your rank. The calculator will then show a realistic range for “top X%” so you can describe your standing without pretending the tie does not exist. The results also show how many students are above you and below you, because that is often more intuitive than a single percentage when you are explaining your position to someone else.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Rank is 1-based and 1 means best (higher score or stronger position).</li>
+                <li>Total students is the full size of the group being ranked, not only those who showed up on a specific day.</li>
+                <li>If you do not enter ties, the calculator assumes no tie at your position (ties = 1).</li>
+                <li>Ties are treated as a shared rank block: if 3 students are tied at rank 12, the occupied ranks are 12 through 14.</li>
+                <li>The “percent ahead” result is a practical interpretation, not a statistical percentile from a normal distribution or a test-score scaling model.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is this the same as a statistical percentile from test scores?</h3>
+              <p>No. This tool is for rank-based interpretation. Statistical percentiles usually come from raw scores and a distribution model (for example, percentiles on standardized tests). If you only have rank and class size, the most honest answer is rank-based position, which is what this calculator provides.</p>
+
+              <h3>What does “percent of students you are ahead of” mean?</h3>
+              <p>It means the share of the group that is ranked below your position. If your rank is high (close to 1), you are ahead of a large portion of the group. If your rank is near the bottom, you are ahead of a smaller portion of the group. This is often the clearest way to communicate standing without ambiguous labels.</p>
+
+              <h3>How is “top X%” calculated?</h3>
+              <p>Top percentage is derived from your rank divided by the total students, expressed as a percentage. If there are ties, the calculator shows a range: best-case uses the first tied rank, and worst-case uses the last occupied rank for the tie group. That avoids overstating your position when the ranking system contains ties.</p>
+
+              <h3>What should I enter if I do not know whether there are ties?</h3>
+              <p>Leave ties at 1. That is the normal assumption and it gives a clean, usable answer. If you later learn there are ties at your rank, re-run the calculator with the tie count to get a more conservative “top X%” range.</p>
+
+              <h3>When should I not use this calculator?</h3>
+              <p>Do not use it when you need an official percentile reported by an exam board or standardized testing organization. In those systems, the percentile is defined by their scoring method and population data. Use this tool when you have rank and group size and you need a practical, explainable interpretation.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

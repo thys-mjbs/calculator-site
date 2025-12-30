@@ -1231,6 +1231,20 @@
     ]
   },
   {
+    "title": "Absence Impact Calculator | SnapCalc",
+    "url": "/calculators/education-exams/absence-impact-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "absence impact calculator | snapcalc",
+      "absence impact calculator snapcalc",
+      "absence impact calculator",
+      "education & exams absence impact calculator snapcalc",
+      "education & exams absence impact calculator",
+      "absence impact snapcalc",
+      "aics"
+    ]
+  },
+  {
     "title": "Assignment Weighting Calculator | SnapCalc",
     "url": "/calculators/education-exams/assignment-weighting-calculator/",
     "category": "Education & Exams",
@@ -1242,6 +1256,20 @@
       "education & exams assignment weighting calculator",
       "assignment weighting snapcalc",
       "awcs"
+    ]
+  },
+  {
+    "title": "Bell Curve Position Calculator | SnapCalc",
+    "url": "/calculators/education-exams/bell-curve-position-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "bell curve position calculator | snapcalc",
+      "bell curve position calculator snapcalc",
+      "bell curve position calculator",
+      "education & exams bell curve position calculator snapcalc",
+      "education & exams bell curve position calculator",
+      "bell curve position snapcalc",
+      "bcpcs"
     ]
   },
   {
@@ -1300,6 +1328,20 @@
     ]
   },
   {
+    "title": "Extra Credit Impact Calculator | SnapCalc",
+    "url": "/calculators/education-exams/extra-credit-impact-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "extra credit impact calculator | snapcalc",
+      "extra credit impact calculator snapcalc",
+      "extra credit impact calculator",
+      "education & exams extra credit impact calculator snapcalc",
+      "education & exams extra credit impact calculator",
+      "extra credit impact snapcalc",
+      "ecics"
+    ]
+  },
+  {
     "title": "Final Exam Score Needed Calculator | SnapCalc",
     "url": "/calculators/education-exams/final-exam-score-needed-calculator/",
     "category": "Education & Exams",
@@ -1355,6 +1397,60 @@
     ]
   },
   {
+    "title": "Late Assignment Penalty Calculator | SnapCalc",
+    "url": "/calculators/education-exams/late-assignment-penalty-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "late assignment penalty calculator | snapcalc",
+      "late assignment penalty calculator snapcalc",
+      "late assignment penalty calculator",
+      "education & exams late assignment penalty calculator snapcalc",
+      "education & exams late assignment penalty calculator",
+      "late assignment penalty snapcalc",
+      "lapcs"
+    ]
+  },
+  {
+    "title": "Letter Grade Converter | SnapCalc",
+    "url": "/calculators/education-exams/letter-grade-converter/",
+    "category": "Education & Exams",
+    "aliases": [
+      "letter grade converter | snapcalc",
+      "letter grade converter snapcalc",
+      "letter grade converter",
+      "education & exams letter grade converter snapcalc",
+      "education & exams letter grade converter",
+      "lgcs"
+    ]
+  },
+  {
+    "title": "Marks to Percentage Converter | SnapCalc",
+    "url": "/calculators/education-exams/marks-to-percentage-converter/",
+    "category": "Education & Exams",
+    "aliases": [
+      "marks to percentage converter | snapcalc",
+      "marks to percentage converter snapcalc",
+      "marks to percentage converter",
+      "education & exams marks to percentage converter snapcalc",
+      "education & exams marks to percentage converter",
+      "mpcs"
+    ]
+  },
+  {
+    "title": "Normal Distribution Estimate Calculator | SnapCalc",
+    "url": "/calculators/education-exams/normal-distribution-estimate-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "normal distribution estimate calculator | snapcalc",
+      "normal distribution estimate calculator snapcalc",
+      "normal distribution estimate calculator",
+      "education & exams normal distribution estimate calculator snapcalc",
+      "education & exams normal distribution estimate calculator",
+      "normal distribution estimate snapcalc",
+      "ndecs"
+    ]
+  },
+  {
     "title": "Pass/Fail Threshold Calculator | SnapCalc",
     "url": "/calculators/education-exams/pass-fail-threshold-calculator/",
     "category": "Education & Exams",
@@ -1366,6 +1462,33 @@
       "education & exams pass fail threshold calculator",
       "pass fail threshold snapcalc",
       "pftcs"
+    ]
+  },
+  {
+    "title": "Percentage to Marks Converter | SnapCalc",
+    "url": "/calculators/education-exams/percentage-to-marks-converter/",
+    "category": "Education & Exams",
+    "aliases": [
+      "percentage to marks converter | snapcalc",
+      "percentage to marks converter snapcalc",
+      "percentage to marks converter",
+      "education & exams percentage to marks converter snapcalc",
+      "education & exams percentage to marks converter",
+      "pmcs"
+    ]
+  },
+  {
+    "title": "Percentile Rank Calculator | SnapCalc",
+    "url": "/calculators/education-exams/percentile-rank-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "percentile rank calculator | snapcalc",
+      "percentile rank calculator snapcalc",
+      "percentile rank calculator",
+      "education & exams percentile rank calculator snapcalc",
+      "education & exams percentile rank calculator",
+      "percentile rank snapcalc",
+      "prcs"
     ]
   },
   {
@@ -1421,6 +1544,20 @@
       "education & exams semester gpa calculator",
       "semester gpa snapcalc",
       "sgcs"
+    ]
+  },
+  {
+    "title": "Standard Score (Z-Score) Calculator | SnapCalc",
+    "url": "/calculators/education-exams/standard-score-z-score-calculator/",
+    "category": "Education & Exams",
+    "aliases": [
+      "standard score (z-score) calculator | snapcalc",
+      "standard score z score calculator snapcalc",
+      "standard score z score calculator",
+      "education & exams standard score z score calculator snapcalc",
+      "education & exams standard score z score calculator",
+      "standard score z score snapcalc",
+      "sszscs"
     ]
   },
   {
