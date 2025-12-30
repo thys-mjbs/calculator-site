@@ -865,6 +865,20 @@
     ]
   },
   {
+    "title": "Baking Conversion Calculator | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/baking-conversion-calculator/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "baking conversion calculator | snapcalc",
+      "baking conversion calculator snapcalc",
+      "baking conversion calculator",
+      "conversions (units, currencies, etc.) baking conversion calculator snapcalc",
+      "conversions (units, currencies, etc.) baking conversion calculator",
+      "baking conversion snapcalc",
+      "bccs"
+    ]
+  },
+  {
     "title": "Capacitance Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/capacitance-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -875,6 +889,46 @@
       "conversions (units, currencies, etc.) capacitance converter snapcalc",
       "conversions (units, currencies, etc.) capacitance converter",
       "ccs"
+    ]
+  },
+  {
+    "title": "Cooking Measurement Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/cooking-measurement-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "cooking measurement converter | snapcalc",
+      "cooking measurement converter snapcalc",
+      "cooking measurement converter",
+      "conversions (units, currencies, etc.) cooking measurement converter snapcalc",
+      "conversions (units, currencies, etc.) cooking measurement converter",
+      "cmcs"
+    ]
+  },
+  {
+    "title": "Currency Converter (Static Rate Version) | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/currency-converter-static-rate-version/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "currency converter (static rate version) | snapcalc",
+      "currency converter static rate version snapcalc",
+      "currency converter static rate version",
+      "conversions (units, currencies, etc.) currency converter static rate version snapcalc",
+      "conversions (units, currencies, etc.) currency converter static rate version",
+      "ccsrvs"
+    ]
+  },
+  {
+    "title": "Currency Rate Difference Calculator | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/currency-rate-difference-calculator/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "currency rate difference calculator | snapcalc",
+      "currency rate difference calculator snapcalc",
+      "currency rate difference calculator",
+      "conversions (units, currencies, etc.) currency rate difference calculator snapcalc",
+      "conversions (units, currencies, etc.) currency rate difference calculator",
+      "currency rate difference snapcalc",
+      "crdcs"
     ]
   },
   {
@@ -930,6 +984,19 @@
     ]
   },
   {
+    "title": "Fluid Ounce / Milliliter Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/fluid-ounce-milliliter-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "fluid ounce / milliliter converter | snapcalc",
+      "fluid ounce milliliter converter snapcalc",
+      "fluid ounce milliliter converter",
+      "conversions (units, currencies, etc.) fluid ounce milliliter converter snapcalc",
+      "conversions (units, currencies, etc.) fluid ounce milliliter converter",
+      "fomcs"
+    ]
+  },
+  {
     "title": "Force Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/force-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -956,6 +1023,32 @@
     ]
   },
   {
+    "title": "Fuel Consumption Converter (L/100km, km/L, MPG) | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/fuel-consumption-converter-l-100km-km-l-mpg/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "fuel consumption converter (l/100km, km/l, mpg) | snapcalc",
+      "fuel consumption converter l 100km km l mpg snapcalc",
+      "fuel consumption converter l 100km km l mpg",
+      "conversions (units, currencies, etc.) fuel consumption converter l 100km km l mpg snapcalc",
+      "conversions (units, currencies, etc.) fuel consumption converter l 100km km l mpg",
+      "fccl1k"
+    ]
+  },
+  {
+    "title": "Inductance Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/inductance-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "inductance converter | snapcalc",
+      "inductance converter snapcalc",
+      "inductance converter",
+      "conversions (units, currencies, etc.) inductance converter snapcalc",
+      "conversions (units, currencies, etc.) inductance converter",
+      "ics"
+    ]
+  },
+  {
     "title": "Length Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/length-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -966,6 +1059,19 @@
       "conversions (units, currencies, etc.) length converter snapcalc",
       "conversions (units, currencies, etc.) length converter",
       "lcs"
+    ]
+  },
+  {
+    "title": "Luminous Intensity Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/luminous-intensity-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "luminous intensity converter | snapcalc",
+      "luminous intensity converter snapcalc",
+      "luminous intensity converter",
+      "conversions (units, currencies, etc.) luminous intensity converter snapcalc",
+      "conversions (units, currencies, etc.) luminous intensity converter",
+      "lics"
     ]
   },
   {
@@ -1021,6 +1127,19 @@
     ]
   },
   {
+    "title": "Teaspoon/Tablespoon/Cup Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/teaspoon-tablespoon-cup-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "teaspoon/tablespoon/cup converter | snapcalc",
+      "teaspoon tablespoon cup converter snapcalc",
+      "teaspoon tablespoon cup converter",
+      "conversions (units, currencies, etc.) teaspoon tablespoon cup converter snapcalc",
+      "conversions (units, currencies, etc.) teaspoon tablespoon cup converter",
+      "ttccs"
+    ]
+  },
+  {
     "title": "Temperature Converter | SnapCalc",
     "url": "/calculators/conversions-units-currencies/temperature-converter/",
     "category": "Conversions (Units, Currencies, etc.)",
@@ -1057,6 +1176,19 @@
       "conversions (units, currencies, etc.) torque converter snapcalc",
       "conversions (units, currencies, etc.) torque converter",
       "tcs"
+    ]
+  },
+  {
+    "title": "Unit Price Converter | SnapCalc",
+    "url": "/calculators/conversions-units-currencies/unit-price-converter/",
+    "category": "Conversions (Units, Currencies, etc.)",
+    "aliases": [
+      "unit price converter | snapcalc",
+      "unit price converter snapcalc",
+      "unit price converter",
+      "conversions (units, currencies, etc.) unit price converter snapcalc",
+      "conversions (units, currencies, etc.) unit price converter",
+      "upcs"
     ]
   },
   {
