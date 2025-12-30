@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Sleep Debt Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your sleep debt from recent sleep, understand what it means, and get a simple catch-up plan based on realistic recovery limits.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/sleep-debt-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Sleep Debt Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your sleep debt from recent sleep, understand what it means, and get a simple catch-up plan based on realistic recovery limits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/sleep-debt-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sleep Debt Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your sleep debt from recent sleep, understand what it means, and get a simple catch-up plan based on realistic recovery limits.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sleep Debt Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/sleep-debt-calculator/",
+      "description": "Estimate your sleep debt from recent sleep and generate a practical catch-up plan using realistic recovery limits."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Sleep Debt Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Sleep Debt Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your sleep debt and a catch-up plan</h2>
+
+              <p class="calculator-intro">Use a quick average estimate or enter your last few nights for a more accurate total. You will get a total sleep debt plus a simple recovery timeline.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="modeSelect">Calculation method</label>
+                <select id="modeSelect" aria-label="Choose calculation method">
+                  <option value="quick" selected>Quick estimate (average)</option>
+                  <option value="daily">Daily entries (more accurate)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="targetHours">Target sleep per night (hours)</label>
+                <input id="targetHours" type="text" inputmode="decimal" placeholder="e.g. 8" aria-label="Target sleep hours per night">
+              </div>
+
+              <div id="modeQuick">
+                <div class="form-group">
+                  <label for="daysCount">Number of days in the estimate</label>
+                  <input id="daysCount" type="text" inputmode="numeric" placeholder="e.g. 7" aria-label="Number of days">
+                </div>
+
+                <div class="form-group">
+                  <label for="avgHours">Average sleep per night (hours)</label>
+                  <input id="avgHours" type="text" inputmode="decimal" placeholder="e.g. 6.5" aria-label="Average sleep hours per night">
+                </div>
+              </div>
+
+              <div id="modeDaily" class="hidden">
+                <p class="small-note">Enter as many nights as you want (blank nights are ignored). Use hours like 7.5 for 7 hours 30 minutes.</p>
+
+                <div class="form-group">
+                  <label for="day1">Night 1 (hours)</label>
+                  <input id="day1" type="text" inputmode="decimal" placeholder="e.g. 6" aria-label="Night 1 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day2">Night 2 (hours)</label>
+                  <input id="day2" type="text" inputmode="decimal" placeholder="e.g. 7.5" aria-label="Night 2 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day3">Night 3 (hours)</label>
+                  <input id="day3" type="text" inputmode="decimal" placeholder="e.g. 5.5" aria-label="Night 3 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day4">Night 4 (hours)</label>
+                  <input id="day4" type="text" inputmode="decimal" placeholder="e.g. 8" aria-label="Night 4 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day5">Night 5 (hours)</label>
+                  <input id="day5" type="text" inputmode="decimal" placeholder="e.g. 6.5" aria-label="Night 5 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day6">Night 6 (hours)</label>
+                  <input id="day6" type="text" inputmode="decimal" placeholder="e.g. 7" aria-label="Night 6 sleep hours">
+                </div>
+                <div class="form-group">
+                  <label for="day7">Night 7 (hours)</label>
+                  <input id="day7" type="text" inputmode="decimal" placeholder="e.g. 6" aria-label="Night 7 sleep hours">
+                </div>
+              </div>
+
+              <details class="advanced-details">
+                <summary>Advanced (optional recovery settings)</summary>
+
+                <div class="form-group">
+                  <label for="recoveryExtra">Extra sleep you can add per night (hours)</label>
+                  <input id="recoveryExtra" type="text" inputmode="decimal" placeholder="Default: 1" aria-label="Extra sleep per night">
+                </div>
+
+                <div class="form-group">
+                  <label for="maxSleep">Maximum sleep you can realistically get per night (hours)</label>
+                  <input id="maxSleep" type="text" inputmode="decimal" placeholder="Default: 9" aria-label="Maximum sleep per night cap">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate sleep debt</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Plan daily routines, compare options, and make quick life decisions with practical tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Track health-related numbers like calories, habits, and progress in clear, usable terms.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Convert time, plan schedules, and calculate dates without guesswork or manual counting.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Sleep Debt Calculator for estimating how far behind you are on sleep</h2>
+
+              <p>Sleep debt is a simple way to quantify how much sleep you missed compared to what you were aiming for. People usually search for a sleep debt calculator when they feel run down, have had a rough week, or want a reality check before they try to “catch up” on the weekend. This calculator is locked to one decision: how many hours of sleep you are behind based on your recent nights, plus how long it could take to catch up if you add a realistic amount of extra sleep. It is not a medical tool and it is not trying to diagnose fatigue, burnout, insomnia, or sleep disorders. It is a practical estimator that turns “I have not slept enough lately” into a number you can plan around.</p>
+
+              <p>To use it, pick a target sleep per night and either enter an average (quick estimate) or your actual nightly hours (daily entries). The output starts with your total sleep debt in hours and minutes. Then it adds a small set of decision helpers: what that debt means in terms of “nights of sleep” at your target, and a recovery timeline based on how much extra sleep you can realistically add per night. The recovery estimate is intentionally conservative because most people cannot add four or five extra hours every night without breaking their schedule or just lying awake in bed. If you do not know your perfect target, use a sensible value you can maintain most nights and treat the result as a planning number, not a score.</p>
+
+              <p>What the calculator is actually doing is straightforward. It compares each night’s sleep to your target and counts only the shortfall. If you sleep more than your target on a given night, this tool does not give you “credit” that reduces prior debt, because most people use sleep debt as a way to measure accumulated shortage rather than as a strict accounting system. The recovery plan then assumes you can repay that shortage by adding a consistent amount of extra sleep per night, while also respecting a maximum sleep cap you set. That cap matters because in real life your recovery is limited by work, commuting, family commitments, and the fact that you may not be able to fall asleep on command. The point is to give you a realistic timeline you can act on, not a fantasy plan you will abandon after two days.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Sleep debt counts only nights where you slept less than your target; oversleep does not “erase” debt in this calculator.</li>
+                <li>Your target sleep is treated as constant across the period, even though real needs vary by age, stress, and training load.</li>
+                <li>Quick estimate assumes your average is representative of the full period, which can be wrong if you had one extreme night.</li>
+                <li>Recovery assumes you can add a consistent amount of extra sleep each night; inconsistent schedules will stretch the timeline.</li>
+                <li>“Maximum sleep per night” is a practical cap to keep plans realistic; it is not claiming you should always sleep that long.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is sleep debt a real scientific measurement?</h3>
+              <p>It is a practical concept, not a lab-grade metric. It helps you quantify missed sleep in a simple way. If you need a medical interpretation of fatigue or insomnia, this tool is not the right solution.</p>
+
+              <h3>Why does this calculator ignore nights where I slept more than my target?</h3>
+              <p>Because many people use sleep debt to track shortage, not to run a perfect accounting ledger. Oversleep might help you feel better, but treating it as a direct “repayment” can produce misleading results if you then continue to undersleep on weekdays.</p>
+
+              <h3>What if I do not know my target sleep?</h3>
+              <p>Pick a target you can reasonably maintain most nights. If you are unsure, start with 8 hours as a baseline and adjust after a week based on how you function during the day.</p>
+
+              <h3>Can I enter only a few nights in Daily entries?</h3>
+              <p>Yes. Blank nights are ignored. The calculator will compute sleep debt only for the nights you provided, which is useful if you only tracked part of the week.</p>
+
+              <h3>How can I make the recovery plan more accurate?</h3>
+              <p>Use Daily entries instead of an average, and set a realistic “extra sleep per night” value that matches your schedule. If you know you cannot reliably add an hour, use 0.5 hours and accept a longer timeline.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

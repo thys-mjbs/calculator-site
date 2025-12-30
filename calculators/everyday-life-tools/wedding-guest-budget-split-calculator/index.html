@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Wedding Guest Budget Split Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Split shared wedding guest costs across your group and estimate a per-person budget including gift, personal extras, and a buffer.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/wedding-guest-budget-split-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Wedding Guest Budget Split Calculator | SnapCalc">
+    <meta property="og:description" content="Split shared wedding guest costs across your group and estimate a per-person budget including gift, personal extras, and a buffer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/wedding-guest-budget-split-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wedding Guest Budget Split Calculator | SnapCalc">
+    <meta name="twitter:description" content="Split shared wedding guest costs across your group and estimate a per-person budget including gift, personal extras, and a buffer.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Wedding Guest Budget Split Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/wedding-guest-budget-split-calculator/",
+      "description": "Calculate how to split shared wedding guest costs across a group and estimate a realistic per-person budget including gift, personal extras, and a buffer."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Wedding Guest Budget Split Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Wedding Guest Budget Split Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Split wedding guest costs across your group</h2>
+
+              <p class="calculator-intro">Use this to split shared costs (travel, accommodation, tickets) and estimate a realistic per-person budget, including a gift, personal extras, and a buffer.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="groupSize">Number of people in your group</label>
+                <input type="text" id="groupSize" inputmode="numeric" placeholder="e.g., 4">
+              </div>
+
+              <div class="form-group">
+                <label for="sharedCostsTotal">Shared costs total (for the whole group)</label>
+                <input type="text" id="sharedCostsTotal" inputmode="decimal" placeholder="e.g., 6,500">
+              </div>
+
+              <div class="form-group">
+                <label for="giftTotal">Gift total (optional, for the whole group)</label>
+                <input type="text" id="giftTotal" inputmode="decimal" placeholder="e.g., 1,000">
+              </div>
+
+              <div class="form-group">
+                <label for="personalExtrasPerPerson">Personal extras per person (optional)</label>
+                <input type="text" id="personalExtrasPerPerson" inputmode="decimal" placeholder="e.g., 800">
+              </div>
+
+              <div class="advanced-section" aria-label="Advanced options">
+                <h3 class="advanced-title">Advanced (optional)</h3>
+
+                <div class="form-group">
+                  <label for="bufferPercent">Buffer percentage (for unexpected costs)</label>
+                  <input type="text" id="bufferPercent" inputmode="decimal" placeholder="e.g., 10">
+                  <div class="helper-text">Default is 10% if left blank.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="alreadyPaidPerPerson">Already paid per person (optional)</label>
+                  <input type="text" id="alreadyPaidPerPerson" inputmode="decimal" placeholder="e.g., 500">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate split</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Advertisement area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future advertisement"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Plan, split, and estimate everyday costs with practical calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget smarter, forecast spending, and compare everyday money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Estimate trip costs, timing, and travel trade-offs for better planning.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Wedding guest budget split: estimate what each person should pay</h2>
+
+              <p>Attending a wedding often comes with shared expenses. If you are going with a partner or a group of friends, you usually end up splitting travel, accommodation, tickets, and sometimes a shared gift. This calculator is built for one decision: how much each person in your group should budget and pay when you are splitting costs evenly.</p>
+
+              <p>It works in a simple, practical way. You enter the number of people in your group and your shared costs total, which is the combined amount for things you are paying for together. Then you can optionally add a group gift amount, personal extras per person, and a buffer percentage for the stuff that always shows up late like extra fuel, parking, tips, small venue costs, or last-minute changes.</p>
+
+              <p>The results give you a clean per-person split for shared costs, a realistic per-person budget including extras and buffer, and an optional “remaining” amount if you already paid something. This is useful if one person booked the accommodation or paid a deposit and you want everyone to settle up fairly without arguing about small differences.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator assumes an equal split across all people in your group (no weighting by room type, nights, or income).</li>
+                <li>“Shared costs” should include only group expenses like accommodation, transport, tickets, or shared meals, not individual purchases.</li>
+                <li>The gift amount is treated as a group total and is split evenly across the group if you enter it.</li>
+                <li>The buffer is applied to each person’s total budget (shared split plus personal extras) to cover unexpected costs.</li>
+                <li>If you enter “already paid per person,” the calculator estimates what that person still owes (or how much they have overpaid) relative to the recommended budget.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What should I put in “shared costs total”?</h3>
+              <p>Put the combined amount for costs you are paying as a group. Typical examples are accommodation, car rental, fuel split, ride shares, parking, tickets, shared meals, or a shared Airbnb deposit. If a cost is personal (like your outfit or personal drinks), do not include it here.</p>
+
+              <h3>Do I have to include a gift in the split?</h3>
+              <p>No. If the gift is individual, leave “Gift total” blank and handle it separately. If your group is contributing one shared gift, enter the total gift amount and the calculator will split it evenly.</p>
+
+              <h3>What if we are not splitting evenly?</h3>
+              <p>This calculator is intentionally locked to equal splitting because that is the most common and fastest way most groups settle up. If you need weighted splitting (by nights, rooms, or different participation), this tool is not designed for that and the numbers will be misleading.</p>
+
+              <h3>How much buffer should I use?</h3>
+              <p>10% is a reasonable default for most wedding trips. Use a higher buffer (15% to 25%) if you expect long-distance travel, uncertain fuel prices, late booking changes, or if your plan includes multiple events (welcome dinner, day-after brunch) where small costs add up.</p>
+
+              <h3>Why does “already paid per person” change the result?</h3>
+              <p>It does not change the split itself. It only estimates what someone still owes after their current contribution. If the remaining amount is negative, it means that person has already covered more than the recommended budget and is effectively owed money back, or the group should settle the difference.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Affiliate link area">
+              <div class="ad-placeholder-img" aria-label="Reserved space for future affiliate promotion"></div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
