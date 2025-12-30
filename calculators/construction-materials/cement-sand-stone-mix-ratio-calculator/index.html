@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Cement/Sand/Stone Mix Ratio Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Cement/Sand/Stone Mix Ratio Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cement/Sand/Stone Mix Ratio Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cement/Sand/Stone Mix Ratio Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cement/Sand/Stone Mix Ratio Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/cement-sand-stone-mix-ratio-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cement/Sand/Stone Mix Ratio Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Get volumes and an estimated number of cement bags." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,241 +33,189 @@
       "description": "Calculate cement, sand, and stone quantities from a mix ratio (for example 1:2:3) and a target volume. Outputs component volumes and an estimated number of cement bags."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
         <span>Cement/Sand/Stone Mix Ratio Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Cement/Sand/Stone Mix Ratio Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Cement/Sand/Stone Mix Ratio Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4pEsVJI" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Recommended reading</div>
--->
-                <p class="affiliate-copy">Learn the fundamentals of personal finance, money management, and smart decision-making.</p>
-                <div class="affiliate-cta">Browse personal finance books on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Split a target mix into cement, sand, and stone</h2>
 
-              <p class="calculator-intro">Enter a total mix volume and a ratio like 1:2:3 to estimate how much cement, sand, and stone you need. Includes an optional waste allowance and a cement bag estimate.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="totalVolume">Total mix volume</label>
-                <input type="text" id="totalVolume" inputmode="decimal" placeholder="e.g. 0.5">
-              </div>
+--&gt;
+                
 
-              <div class="form-group">
-                <label for="volumeUnit">Volume unit</label>
-                <select id="volumeUnit">
-                  <option value="m3">Cubic meters (m³)</option>
-                  <option value="l">Liters (L)</option>
-                </select>
-              </div>
 
-              <div class="form-group">
-                <label for="ratioCement">Cement parts</label>
-                <input type="text" id="ratioCement" inputmode="numeric" placeholder="e.g. 1">
-              </div>
-
-              <div class="form-group">
-                <label for="ratioSand">Sand parts</label>
-                <input type="text" id="ratioSand" inputmode="numeric" placeholder="e.g. 2">
-              </div>
-
-              <div class="form-group">
-                <label for="ratioStone">Stone parts</label>
-                <input type="text" id="ratioStone" inputmode="numeric" placeholder="e.g. 3">
-              </div>
-
-              <div class="form-group">
-                <label for="wastePercent">Waste / spillage allowance (optional %)</label>
-                <input type="text" id="wastePercent" inputmode="decimal" placeholder="e.g. 5">
-              </div>
-
-              <div class="form-group">
-                <label for="bagSize">Cement bag size (estimate)</label>
-                <select id="bagSize">
-                  <option value="50">50 kg bag</option>
-                  <option value="25">25 kg bag</option>
-                </select>
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate mix quantities</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Split a target mix into cement, sand, and stone</h2>
+<p class="calculator-intro">Enter a total mix volume and a ratio like 1:2:3 to estimate how much cement, sand, and stone you need. Includes an optional waste allowance and a cement bag estimate.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="totalVolume">Total mix volume</label>
+<input id="totalVolume" inputmode="decimal" placeholder="e.g. 0.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="volumeUnit">Volume unit</label>
+<select id="volumeUnit">
+<option value="m3">Cubic meters (m³)</option>
+<option value="l">Liters (L)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="ratioCement">Cement parts</label>
+<input id="ratioCement" inputmode="numeric" placeholder="e.g. 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="ratioSand">Sand parts</label>
+<input id="ratioSand" inputmode="numeric" placeholder="e.g. 2" type="text"/>
+</div>
+<div class="form-group">
+<label for="ratioStone">Stone parts</label>
+<input id="ratioStone" inputmode="numeric" placeholder="e.g. 3" type="text"/>
+</div>
+<div class="form-group">
+<label for="wastePercent">Waste / spillage allowance (optional %)</label>
+<input id="wastePercent" inputmode="decimal" placeholder="e.g. 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="bagSize">Cement bag size (estimate)</label>
+<select id="bagSize">
+<option value="50">50 kg bag</option>
+<option value="25">25 kg bag</option>
+</select>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate mix quantities</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate concrete, mortar, fill, and material quantities for common building jobs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Work with technical inputs, tolerances, and practical jobsite calculations.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units quickly so your inputs and quantities stay consistent.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Cement, sand, and stone quantities from a mix ratio</h2>
+<p>This cement, sand, and stone mix ratio calculator helps you split a target mix volume into its component parts. If you are working from a ratio like 1:2:3, you already know the proportions, but you still need real quantities to order materials, plan deliveries, and avoid running short mid job. This tool converts the ratio into volumes for cement, sand, and stone based on the total volume you want to make.</p>
+<p>You start by entering your total mix volume in either cubic meters (m³) or liters (L). Then enter the ratio as “parts” for cement, sand, and stone. The calculator adds the parts together and allocates the total volume in the same proportions. For example, a 1:2:3 mix has 6 total parts, so cement is 1/6 of the volume, sand is 2/6, and stone is 3/6. The result is the simplest way to estimate quantities when you are measuring by volume on site.</p>
+<p>The calculator also includes an optional waste or spillage allowance. On real jobs, you rarely place exactly what you planned. You lose a bit to handling, cleanup, uneven formwork, or over ordering to stay safe. Adding a small percentage can prevent the common situation where you are a wheelbarrow short at the end, which usually costs more time and money than the extra material would have.</p>
+<p>Finally, you can choose a cement bag size to get an estimated number of bags. This estimate is there to help you plan purchasing and transport, not to replace supplier guidance. Cement is sold by mass (kg), while this calculator is allocating by volume. To bridge that gap, the bag estimate uses a typical bulk density assumption for bagged cement to approximate a bag’s volume. It is useful for rough planning, especially for smaller pours and repairs where you are buying bagged cement rather than ordering ready mix.</p>
+<p>What you get back is a clear split of cement, sand, and stone volumes in both liters and cubic meters. That makes it easy to cross check against the units you actually buy in. Many suppliers quote sand and stone by cubic meters, while site mixing is often measured in buckets or wheelbarrows. Seeing both units reduces mistakes and makes your plan easier to communicate.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The ratio is treated as a volume ratio (parts by volume), which is the most common approach for quick site batching.</li>
+<li>The total mix volume is assumed to be the combined wet mix volume you want to produce. Real yields can vary because aggregate grading and moisture affect packing.</li>
+<li>The cement bag estimate uses a rough conversion based on a typical cement bulk density (about 1,440 kg/m³). This implies about 34.7 L per 50 kg bag and about 17.4 L per 25 kg bag.</li>
+<li>Moisture in sand and aggregate can change the effective volume and water demand. This calculator does not adjust for moisture content.</li>
+<li>If you need high accuracy (structural concrete, engineered mixes, or compliance work), follow the mix design or supplier specification and use measured batching and testing.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is a 1:2:3 mix always correct for concrete?</h3>
+<p>No. 1:2:3 is a common general purpose site mix, but the “right” mix depends on strength requirements, aggregate size, workability, exposure conditions, and the cement type. Use this calculator to split a ratio you have already chosen, then confirm the ratio is appropriate for the job and local standards.</p>
+<h3>Why does the calculator use parts instead of kilograms?</h3>
+<p>Most ratio based mixes on site are measured as parts by volume because it is faster and does not require scales. Cement is usually bought by mass, so the calculator provides a bag estimate as a convenience. For engineered work, mass batching and proper mix design are more reliable.</p>
+<h3>Should I include water in the ratio?</h3>
+<p>This calculator focuses on cement, sand, and stone. Water is usually controlled separately because it depends on moisture in aggregates, desired slump, and the water to cement ratio needed for strength and durability. Adding too much water is one of the fastest ways to weaken concrete, so treat water as a controlled variable.</p>
+<h3>What waste percentage should I use?</h3>
+<p>For small mixes and careful work, 2% to 5% is often enough. For messy handling, uneven formwork, or when you are not sure about volume measurements, 5% to 10% can be more realistic. If you are budgeting tightly, start lower and increase only when your job conditions justify it.</p>
+<h3>Why might my actual yield be different from the calculated volumes?</h3>
+<p>Aggregates pack together in ways that change void space, and moisture can change effective volume and workability. Mixing method, vibration, and compaction also affect final placed volume. Treat these results as a planning estimate and adjust based on your material behavior and past experience.</p>
+<div class="last-updated">Last updated: 2025-12-14</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
 
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4oVvi9P" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Recommended reading</div>
--->
-                <p class="affiliate-copy">Practical guides for budgeting, expense tracking, and cash flow control.</p>
-                <div class="affiliate-cta">View budgeting books on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/construction-materials/">
-              <h3 class="related-title">Construction &amp; Materials</h3>
-              <p class="related-desc">Estimate concrete, mortar, fill, and material quantities for common building jobs.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/engineering-technical/">
-              <h3 class="related-title">Engineering &amp; Technical</h3>
-              <p class="related-desc">Work with technical inputs, tolerances, and practical jobsite calculations.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/conversions-units-currencies/">
-              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">Convert units quickly so your inputs and quantities stay consistent.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-              </a>
-            </div>
--->
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Cement, sand, and stone quantities from a mix ratio</h2>
-
-              <p>This cement, sand, and stone mix ratio calculator helps you split a target mix volume into its component parts. If you are working from a ratio like 1:2:3, you already know the proportions, but you still need real quantities to order materials, plan deliveries, and avoid running short mid job. This tool converts the ratio into volumes for cement, sand, and stone based on the total volume you want to make.</p>
-
-              <p>You start by entering your total mix volume in either cubic meters (m³) or liters (L). Then enter the ratio as “parts” for cement, sand, and stone. The calculator adds the parts together and allocates the total volume in the same proportions. For example, a 1:2:3 mix has 6 total parts, so cement is 1/6 of the volume, sand is 2/6, and stone is 3/6. The result is the simplest way to estimate quantities when you are measuring by volume on site.</p>
-
-              <p>The calculator also includes an optional waste or spillage allowance. On real jobs, you rarely place exactly what you planned. You lose a bit to handling, cleanup, uneven formwork, or over ordering to stay safe. Adding a small percentage can prevent the common situation where you are a wheelbarrow short at the end, which usually costs more time and money than the extra material would have.</p>
-
-              <p>Finally, you can choose a cement bag size to get an estimated number of bags. This estimate is there to help you plan purchasing and transport, not to replace supplier guidance. Cement is sold by mass (kg), while this calculator is allocating by volume. To bridge that gap, the bag estimate uses a typical bulk density assumption for bagged cement to approximate a bag’s volume. It is useful for rough planning, especially for smaller pours and repairs where you are buying bagged cement rather than ordering ready mix.</p>
-
-              <p>What you get back is a clear split of cement, sand, and stone volumes in both liters and cubic meters. That makes it easy to cross check against the units you actually buy in. Many suppliers quote sand and stone by cubic meters, while site mixing is often measured in buckets or wheelbarrows. Seeing both units reduces mistakes and makes your plan easier to communicate.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>The ratio is treated as a volume ratio (parts by volume), which is the most common approach for quick site batching.</li>
-                <li>The total mix volume is assumed to be the combined wet mix volume you want to produce. Real yields can vary because aggregate grading and moisture affect packing.</li>
-                <li>The cement bag estimate uses a rough conversion based on a typical cement bulk density (about 1,440 kg/m³). This implies about 34.7 L per 50 kg bag and about 17.4 L per 25 kg bag.</li>
-                <li>Moisture in sand and aggregate can change the effective volume and water demand. This calculator does not adjust for moisture content.</li>
-                <li>If you need high accuracy (structural concrete, engineered mixes, or compliance work), follow the mix design or supplier specification and use measured batching and testing.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Is a 1:2:3 mix always correct for concrete?</h3>
-              <p>No. 1:2:3 is a common general purpose site mix, but the “right” mix depends on strength requirements, aggregate size, workability, exposure conditions, and the cement type. Use this calculator to split a ratio you have already chosen, then confirm the ratio is appropriate for the job and local standards.</p>
-
-              <h3>Why does the calculator use parts instead of kilograms?</h3>
-              <p>Most ratio based mixes on site are measured as parts by volume because it is faster and does not require scales. Cement is usually bought by mass, so the calculator provides a bag estimate as a convenience. For engineered work, mass batching and proper mix design are more reliable.</p>
-
-              <h3>Should I include water in the ratio?</h3>
-              <p>This calculator focuses on cement, sand, and stone. Water is usually controlled separately because it depends on moisture in aggregates, desired slump, and the water to cement ratio needed for strength and durability. Adding too much water is one of the fastest ways to weaken concrete, so treat water as a controlled variable.</p>
-
-              <h3>What waste percentage should I use?</h3>
-              <p>For small mixes and careful work, 2% to 5% is often enough. For messy handling, uneven formwork, or when you are not sure about volume measurements, 5% to 10% can be more realistic. If you are budgeting tightly, start lower and increase only when your job conditions justify it.</p>
-
-              <h3>Why might my actual yield be different from the calculated volumes?</h3>
-              <p>Aggregates pack together in ways that change void space, and moisture can change effective volume and workability. Mixing method, vibration, and compaction also affect final placed volume. Treat these results as a planning estimate and adjust based on your material behavior and past experience.</p>
-
-              <div class="last-updated">Last updated: 2025-12-14</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-              </a>
-            </div>
--->
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

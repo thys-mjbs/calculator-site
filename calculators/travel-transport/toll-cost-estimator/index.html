@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Toll Cost Estimator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/toll-cost-estimator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Toll Cost Estimator | SnapCalc">
-    <meta property="og:description" content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/toll-cost-estimator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Toll Cost Estimator | SnapCalc">
-    <meta name="twitter:description" content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Toll Cost Estimator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/travel-transport/toll-cost-estimator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Toll Cost Estimator | SnapCalc" property="og:title"/>
+<meta content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/travel-transport/toll-cost-estimator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Toll Cost Estimator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,228 +33,181 @@
       "description": "Estimate toll costs for a trip using the number of toll plazas, an average toll amount, vehicle multiplier, and optional return trip and discount inputs."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
         <span>Toll Cost Estimator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Toll Cost Estimator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Toll Cost Estimator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/3KXdPQi" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Travel Planning</div>
--->
-                <p class="affiliate-copy">Tools for organising trips, itineraries, bookings, and travel schedules efficiently.</p>
-                <div class="affiliate-cta">Explore travel planning tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Estimate toll costs for your trip</h2>
 
-              <p class="calculator-intro">Use toll plaza count for a quick estimate, then refine with vehicle, return trip, discount, and optional distance.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="tollPlazas">Number of toll plazas (required)</label>
-                <input type="text" id="tollPlazas" inputmode="numeric" placeholder="e.g., 4">
-              </div>
+--&gt;
+                
 
-              <div class="form-group">
-                <label for="avgToll">Average toll per plaza (optional, default 2.50)</label>
-                <input type="text" id="avgToll" inputmode="decimal" placeholder="e.g., 3.25">
-              </div>
 
-              <div class="form-group">
-                <label for="vehicleMultiplier">Vehicle multiplier (optional, default 1.00)</label>
-                <input type="text" id="vehicleMultiplier" inputmode="decimal" placeholder="e.g., 1.00 (light), 0.70 (motorcycle), 2.50 (heavy)">
-              </div>
-
-              <div class="form-group">
-                <label for="tripFactor">Trip factor (optional, 1 = one-way, 2 = return, default 1)</label>
-                <input type="text" id="tripFactor" inputmode="numeric" placeholder="e.g., 1">
-              </div>
-
-              <div class="form-group">
-                <label for="discountPercent">Discount or pass savings (optional %, 0 to 100, default 0)</label>
-                <input type="text" id="discountPercent" inputmode="decimal" placeholder="e.g., 10">
-              </div>
-
-              <div class="form-group">
-                <label for="distanceKm">Trip distance (optional, km)</label>
-                <input type="text" id="distanceKm" inputmode="decimal" placeholder="e.g., 520">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Estimate Toll Cost</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate toll costs for your trip</h2>
+<p class="calculator-intro">Use toll plaza count for a quick estimate, then refine with vehicle, return trip, discount, and optional distance.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="tollPlazas">Number of toll plazas (required)</label>
+<input id="tollPlazas" inputmode="numeric" placeholder="e.g., 4" type="text"/>
+</div>
+<div class="form-group">
+<label for="avgToll">Average toll per plaza (optional, default 2.50)</label>
+<input id="avgToll" inputmode="decimal" placeholder="e.g., 3.25" type="text"/>
+</div>
+<div class="form-group">
+<label for="vehicleMultiplier">Vehicle multiplier (optional, default 1.00)</label>
+<input id="vehicleMultiplier" inputmode="decimal" placeholder="e.g., 1.00 (light), 0.70 (motorcycle), 2.50 (heavy)" type="text"/>
+</div>
+<div class="form-group">
+<label for="tripFactor">Trip factor (optional, 1 = one-way, 2 = return, default 1)</label>
+<input id="tripFactor" inputmode="numeric" placeholder="e.g., 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="discountPercent">Discount or pass savings (optional %, 0 to 100, default 0)</label>
+<input id="discountPercent" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="distanceKm">Trip distance (optional, km)</label>
+<input id="distanceKm" inputmode="decimal" placeholder="e.g., 520" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Estimate Toll Cost</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Plan trips, estimate travel costs, and compare options for driving, flights, and public transport.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Work out travel time, time zones, schedules, and date calculations for planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget day-to-day spending, plan for upcoming costs, and make smarter money decisions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Estimate toll fees for a route with multiple toll plazas</h2>
+<p>A toll cost estimate is useful when you are comparing routes, deciding whether a return trip is worth it, or building a realistic travel budget. The problem is that most people do not know the exact toll table for every plaza, and even when they do, charges can vary by vehicle class, discount programs, and how many toll points you pass through.</p>
+<p>This Toll Cost Estimator is designed for real-world planning. It gives you a quick estimate if you only know the number of toll plazas on your route. If you want a more accurate result, you can refine the estimate by adding an average toll per plaza, a vehicle multiplier (to represent heavier vehicles), a trip factor (one-way vs return), and a discount percentage (for passes or negotiated savings). Distance is optional and is only used to add a helpful per-distance cost view.</p>
+<p>The calculator works by estimating a base toll amount per plaza, then scaling it using your vehicle multiplier and trip factor. Finally, it applies any discount as a simple percentage reduction. The output is not just one number. You also get a small breakdown that helps you sanity-check your inputs, plus a practical range so you can budget with a buffer.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>If you leave “Average toll per plaza” blank, the calculator assumes 2.50 as a generic default. Replace it with your best estimate if you know the route or have a recent receipt.</li>
+<li>The “Vehicle multiplier” is a simplified way to represent different vehicle classes. Use 1.00 for a typical passenger car, less than 1.00 for lighter classes, and greater than 1.00 for heavier vehicles.</li>
+<li>The “Trip factor” is a simple multiplier. Use 1 for a one-way trip and 2 for a return trip. If you expect a different number of trips, you can enter any number greater than 0.</li>
+<li>The discount input assumes a single percentage discount applied to the full estimated total. It does not model tiered discounts, caps, or time-of-day pricing.</li>
+<li>Distance is optional. If provided, the calculator uses it only to show cost per 100 km and cost per km style insights. It does not change the toll total.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What if I do not know the toll amount per plaza?</h3>
+<p>That is normal. Start with the default average, then adjust it based on what you see on similar routes. If your result feels too low or too high, change the average toll per plaza first. That one input typically has the biggest impact on the estimate.</p>
+<h3>How do I pick a reasonable vehicle multiplier?</h3>
+<p>If you do not know the official class for your route, use 1.00 for a normal car. For motorcycles, a value like 0.70 can be a reasonable starting point. For larger commercial vehicles, values above 1.50 are common. The goal is to represent relative pricing, not to recreate an exact toll table.</p>
+<h3>Why does the calculator show a range?</h3>
+<p>An estimate is only as good as the inputs. Real tolls can vary because of local pricing tables, changes in fees, or differences between plazas. A simple buffer range helps you plan without being surprised. If you need a tighter range, improve your estimate of the average toll per plaza and use a realistic vehicle multiplier.</p>
+<h3>What happens if I have zero toll plazas?</h3>
+<p>If you enter 0 plazas, the estimated toll total should be 0. This is useful if you want to confirm that a route is toll-free, or compare it against a toll route by changing only the number of plazas.</p>
+<h3>How can I make this estimate more accurate?</h3>
+<p>Use a recent toll receipt or a route planner that lists individual toll points, then calculate a more accurate average toll per plaza. If you know the exact number of plazas, the average toll per plaza, and whether the return trip uses the same toll points, you can get a practical estimate that is usually close enough for budgeting and route comparisons.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4oYfbbA" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Route Planning</div>
--->
-                <p class="affiliate-copy">Plan optimal travel routes for driving, public transport, and multi-stop journeys.</p>
-                <div class="affiliate-cta">View route planning tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/travel-transport/">
-              <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Plan trips, estimate travel costs, and compare options for driving, flights, and public transport.</p>
-            </a>
-          </div>
 
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
-              <p class="related-desc">Work out travel time, time zones, schedules, and date calculations for planning.</p>
-            </a>
-          </div>
 
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Budget day-to-day spending, plan for upcoming costs, and make smarter money decisions.</p>
-            </a>
-          </div>
 
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-              </a>
-            </div>
--->
-          </div>
+--&gt;
+                
 
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Estimate toll fees for a route with multiple toll plazas</h2>
 
-              <p>A toll cost estimate is useful when you are comparing routes, deciding whether a return trip is worth it, or building a realistic travel budget. The problem is that most people do not know the exact toll table for every plaza, and even when they do, charges can vary by vehicle class, discount programs, and how many toll points you pass through.</p>
+</div>
 
-              <p>This Toll Cost Estimator is designed for real-world planning. It gives you a quick estimate if you only know the number of toll plazas on your route. If you want a more accurate result, you can refine the estimate by adding an average toll per plaza, a vehicle multiplier (to represent heavier vehicles), a trip factor (one-way vs return), and a discount percentage (for passes or negotiated savings). Distance is optional and is only used to add a helpful per-distance cost view.</p>
 
-              <p>The calculator works by estimating a base toll amount per plaza, then scaling it using your vehicle multiplier and trip factor. Finally, it applies any discount as a simple percentage reduction. The output is not just one number. You also get a small breakdown that helps you sanity-check your inputs, plus a practical range so you can budget with a buffer.</p>
 
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>If you leave “Average toll per plaza” blank, the calculator assumes 2.50 as a generic default. Replace it with your best estimate if you know the route or have a recent receipt.</li>
-                <li>The “Vehicle multiplier” is a simplified way to represent different vehicle classes. Use 1.00 for a typical passenger car, less than 1.00 for lighter classes, and greater than 1.00 for heavier vehicles.</li>
-                <li>The “Trip factor” is a simple multiplier. Use 1 for a one-way trip and 2 for a return trip. If you expect a different number of trips, you can enter any number greater than 0.</li>
-                <li>The discount input assumes a single percentage discount applied to the full estimated total. It does not model tiered discounts, caps, or time-of-day pricing.</li>
-                <li>Distance is optional. If provided, the calculator uses it only to show cost per 100 km and cost per km style insights. It does not change the toll total.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What if I do not know the toll amount per plaza?</h3>
-              <p>That is normal. Start with the default average, then adjust it based on what you see on similar routes. If your result feels too low or too high, change the average toll per plaza first. That one input typically has the biggest impact on the estimate.</p>
-
-              <h3>How do I pick a reasonable vehicle multiplier?</h3>
-              <p>If you do not know the official class for your route, use 1.00 for a normal car. For motorcycles, a value like 0.70 can be a reasonable starting point. For larger commercial vehicles, values above 1.50 are common. The goal is to represent relative pricing, not to recreate an exact toll table.</p>
-
-              <h3>Why does the calculator show a range?</h3>
-              <p>An estimate is only as good as the inputs. Real tolls can vary because of local pricing tables, changes in fees, or differences between plazas. A simple buffer range helps you plan without being surprised. If you need a tighter range, improve your estimate of the average toll per plaza and use a realistic vehicle multiplier.</p>
-
-              <h3>What happens if I have zero toll plazas?</h3>
-              <p>If you enter 0 plazas, the estimated toll total should be 0. This is useful if you want to confirm that a route is toll-free, or compare it against a toll route by changing only the number of plazas.</p>
-
-              <h3>How can I make this estimate more accurate?</h3>
-              <p>Use a recent toll receipt or a route planner that lists individual toll points, then calculate a more accurate average toll per plaza. If you know the exact number of plazas, the average toll per plaza, and whether the return trip uses the same toll points, you can get a practical estimate that is usually close enough for budgeting and route comparisons.</p>
-
-              <div class="last-updated">Last updated: 2025-12-18</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a class="affiliate-link" href="https://amzn.to/3MDplAQ" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Travel Time</div>
--->
-                <p class="affiliate-copy">Estimate travel times accurately across different transport methods.</p>
-                <div class="affiliate-cta">Browse travel time calculators on Amazon</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

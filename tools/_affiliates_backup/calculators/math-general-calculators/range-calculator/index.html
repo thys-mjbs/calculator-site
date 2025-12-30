@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Range Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Find the range of a set of numbers instantly. Paste your values to calculate the minimum, maximum, range, and a few helpful summary stats.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/range-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Range Calculator | SnapCalc">
+    <meta property="og:description" content="Find the range of a set of numbers instantly. Paste your values to calculate the minimum, maximum, range, and a few helpful summary stats.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/range-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Range Calculator | SnapCalc">
+    <meta name="twitter:description" content="Find the range of a set of numbers instantly. Paste your values to calculate the minimum, maximum, range, and a few helpful summary stats.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Range Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/range-calculator/",
+      "description": "Calculate the range (max minus min) of a list of numbers, along with the minimum, maximum, count, and midrange."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Range Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Range Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3MZP9qT" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Fractions</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand fraction operations including addition, subtraction, and simplification.</p>
+    <div class="affiliate-cta">Explore fraction calculation books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate the range of a set of numbers</h2>
+
+              <p class="calculator-intro">Paste or type your values, then calculate the range (max minus min) plus a few quick summary stats.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="numbersInput">Numbers (separate by spaces, new lines, or commas)</label>
+                <textarea id="numbersInput" rows="6" placeholder="Example: 12 15 9 22 18"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="ignoreNonNumeric">Non-numeric entries</label>
+                <select id="ignoreNonNumeric">
+                  <option value="ignore" selected>Ignore non-numeric items (recommended)</option>
+                  <option value="error">Stop with an error if any item is invalid</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate Range</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iU3gu1" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Decimals</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn decimal operations and conversions used in everyday math.</p>
+    <div class="affiliate-cta">View decimal math books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Work with numbers, percentages, averages, and other everyday math calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">Calculate grades, averages, curves, and study-related metrics for school and exams.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Run quick business calculations and basic financial checks for decisions and reporting.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Range calculator for a list of numbers (max minus min)</h2>
+
+              <p>This range calculator helps you measure how spread out a set of values is by calculating the range. The range is the difference between the largest number and the smallest number in your list. People typically search for a range calculator when they have a set of results and want a fast way to see the overall spread without doing manual sorting or subtraction.</p>
+
+              <p>To use the calculator, paste your values into the input box. You can separate numbers using spaces, new lines, or commas. When you click Calculate, you will see the minimum value, maximum value, and the range. You will also see the number of valid values found and the midrange, which is the midpoint between the minimum and maximum. These extra outputs are useful because the range alone can hide what the actual endpoints were.</p>
+
+              <p>The range is best used as a simple, quick summary. It is easy to compute and easy to understand. That said, it is also sensitive to extreme values. One unusually large or small number can make the range look big even if most values are close together. That is why this calculator also shows the minimum and maximum clearly, so you can immediately see whether an outlier is dominating the result.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>You need at least two valid numbers to compute a meaningful range.</li>
+                <li>Range is calculated as maximum minus minimum, using the same units as your inputs.</li>
+                <li>If your list contains invalid items, you can choose to ignore them or stop with an error.</li>
+                <li>Range reflects only the endpoints, not how values are distributed in between.</li>
+                <li>Midrange is shown as (min + max) ÷ 2, which is not the same as the average of all values.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the range in math and statistics?</h3>
+              <p>The range is a measure of spread. It is defined as the highest value minus the lowest value in a set. If your values are 9, 12, 15, and 22, the range is 22 minus 9, which equals 13.</p>
+
+              <h3>Do I need to sort the numbers first?</h3>
+              <p>No. The calculator finds the minimum and maximum automatically, so sorting is not required. Sorting is only needed if you want to inspect the full order of values yourself.</p>
+
+              <h3>What if my data includes text or blanks?</h3>
+              <p>You can choose how the calculator handles non-numeric items. The default behavior ignores invalid entries, which is helpful when you paste data that includes headings, blank cells, or notes. If you need strict validation, switch the setting to stop with an error so you can clean the data.</p>
+
+              <h3>Why does the range look unusually large?</h3>
+              <p>Range is strongly influenced by outliers because it uses only the smallest and largest values. If one value is far from the rest, the range will expand to include it. Check the minimum and maximum shown in the result to confirm whether an extreme value is responsible.</p>
+
+              <h3>When should I avoid using the range?</h3>
+              <p>If you need a robust measure that reflects the typical spread of most values, range may be too simplistic. For example, when data has outliers or long tails, measures like interquartile range or standard deviation can be more informative. This page is intentionally focused on the basic range calculation for quick, practical use.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

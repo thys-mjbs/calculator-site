@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Loan-to-Value (LTV) Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/loan-to-value-ltv-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Loan-to-Value (LTV) Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/loan-to-value-ltv-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Loan-to-Value (LTV) Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Loan-to-Value (LTV) Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/real-estate-property/loan-to-value-ltv-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Loan-to-Value (LTV) Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/real-estate-property/loan-to-value-ltv-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Loan-to-Value (LTV) Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,218 +33,173 @@
       "description": "Calculate your loan-to-value (LTV) ratio using property value and loan amount, with optional purchase price and down payment to estimate the loan."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
         <span>Loan-to-Value (LTV) Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Loan-to-Value (LTV) Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Loan-to-Value (LTV) Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
-</div>
--->
+
+
+
+--&gt;
           </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Calculate your LTV ratio</h2>
-
-              <p class="calculator-intro">Enter your property value and either a loan amount, or a purchase price plus down payment. You will get the LTV percentage and a practical breakdown.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="propertyValue">Property value (appraised value or purchase price)</label>
-                <input type="text" id="propertyValue" inputmode="decimal" placeholder="e.g., 2,500,000">
-              </div>
-
-              <div class="form-group">
-                <label for="loanAmount">Loan amount (optional if you use price + down payment)</label>
-                <input type="text" id="loanAmount" inputmode="decimal" placeholder="e.g., 2,000,000">
-              </div>
-
-              <div class="form-group">
-                <label for="purchasePrice">Purchase price (optional)</label>
-                <input type="text" id="purchasePrice" inputmode="decimal" placeholder="e.g., 2,500,000">
-              </div>
-
-              <div class="form-group">
-                <label for="downPayment">Down payment (optional)</label>
-                <input type="text" id="downPayment" inputmode="decimal" placeholder="e.g., 500,000">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate LTV</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate your LTV ratio</h2>
+<p class="calculator-intro">Enter your property value and either a loan amount, or a purchase price plus down payment. You will get the LTV percentage and a practical breakdown.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="propertyValue">Property value (appraised value or purchase price)</label>
+<input id="propertyValue" inputmode="decimal" placeholder="e.g., 2,500,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanAmount">Loan amount (optional if you use price + down payment)</label>
+<input id="loanAmount" inputmode="decimal" placeholder="e.g., 2,000,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="purchasePrice">Purchase price (optional)</label>
+<input id="purchasePrice" inputmode="decimal" placeholder="e.g., 2,500,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="downPayment">Down payment (optional)</label>
+<input id="downPayment" inputmode="decimal" placeholder="e.g., 500,000" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate LTV</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/44qHU1c" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Property Expenses</div>
--->
-    <p class="affiliate-copy">Plan and manage ongoing expenses for property ownership.</p>
-    <div class="affiliate-cta">View property expense books on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/real-estate-property/">
-              <h3 class="related-title">Real Estate &amp; Property</h3>
-              <p class="related-desc">Estimate property costs, compare financing options, and run common real estate calculations.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/loans-credit/">
-              <h3 class="related-title">Loans &amp; Credit</h3>
-              <p class="related-desc">Understand interest, repayments, payoff timelines, and the true cost of borrowing.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Plan your budget, track affordability, and make clearer money decisions with simple tools.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/44XFcQY" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Property Analysis</div>
--->
-    <p class="affiliate-copy">Analyze property deals using cash flow, yield, and valuation methods.</p>
-    <div class="affiliate-cta">View property analysis books on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Loan-to-value (LTV) calculator for mortgages and property loans</h2>
-
-              <p>Loan-to-value (LTV) is one of the simplest ratios in property finance, but it drives real decisions. It compares the size of your loan to the value of the property you are buying or refinancing. Lenders use it to judge risk, because a higher LTV usually means less equity buffer if prices fall or if you need to sell quickly. Borrowers use it to understand how much of the property they truly own versus how much is financed.</p>
-
-              <p>This calculator gives you an LTV percentage and a practical breakdown. If you already know your loan amount and the property value, enter those and you are done. If you do not know the loan amount yet, you can still calculate LTV by entering a purchase price and down payment, and the calculator will estimate the loan amount as purchase price minus down payment. This matches how many home loans are structured in the real world and avoids forcing you to guess numbers you do not have.</p>
-
-              <p>Your result is not just a number. You also get your estimated equity amount, and quick reference points such as what the maximum loan would be at common target LTV levels. This helps with decisions like adjusting your down payment, deciding whether to refinance, or checking whether you are likely to fall into a higher risk bracket. These outputs are informational, not a lender quote, but they are the core math used in most first-pass mortgage conversations.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>LTV is calculated as (loan amount ÷ property value) × 100 using the values you provide.</li>
-                <li>If you leave loan amount blank, the calculator estimates it as purchase price minus down payment (both must be provided).</li>
-                <li>Property value should reflect the value used for lending decisions, typically the appraised value or purchase price, depending on the lender.</li>
-                <li>This tool ignores closing costs, taxes, insurance, and fees unless they are included in your loan amount (some loans finance certain costs).</li>
-                <li>Risk bands shown are generic informational thresholds and may differ by lender, country, loan type, and borrower profile.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What is a “good” LTV for a mortgage?</h3>
-              <p>Lower is generally better because it means more equity and less borrowing. Many lenders treat 80% as a common benchmark, with higher rates or extra requirements sometimes kicking in above that. However, acceptable LTV depends on your credit profile, income stability, the property type, and the lender’s product rules.</p>
-
-              <h3>Should I use purchase price or appraised value?</h3>
-              <p>Use the value that the lender will use. In many cases, lenders use the lower of purchase price and appraised value. If you are refinancing, the appraised value is usually the key number. If you are buying, start with purchase price, then rerun the calculation if an appraisal comes in different.</p>
-
-              <h3>What if I do not know my loan amount yet?</h3>
-              <p>Leave the loan amount blank and enter purchase price and down payment. The calculator will estimate the loan amount as the difference. This is useful when you are still shopping and want to understand how changes to your down payment affect your LTV.</p>
-
-              <h3>Can LTV be over 100%?</h3>
-              <p>Yes, if the loan amount is higher than the property value. That can happen with certain refinancing structures, rolled-in debt, or if property values fall after the loan is taken. Some lenders do not allow it, and if it exists, it usually carries higher risk and tighter underwriting.</p>
-
-              <h3>How can I lower my LTV?</h3>
-              <p>You can lower LTV by increasing your down payment, paying down the loan principal, or increasing the property value used in the calculation (for example, through a higher appraisal). In practice, the most controllable levers are down payment size and principal reduction.</p>
-
-              <div class="last-updated">Last updated: 2025-12-20</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/44tSWmq" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Due Diligence</div>
--->
-    <p class="affiliate-copy">Learn how to evaluate properties thoroughly before purchase.</p>
-    <div class="affiliate-cta">Browse real estate due diligence books on Amazon</div>
-  </a>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Estimate property costs, compare financing options, and run common real estate calculations.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Understand interest, repayments, payoff timelines, and the true cost of borrowing.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan your budget, track affordability, and make clearer money decisions with simple tools.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Loan-to-value (LTV) calculator for mortgages and property loans</h2>
+<p>Loan-to-value (LTV) is one of the simplest ratios in property finance, but it drives real decisions. It compares the size of your loan to the value of the property you are buying or refinancing. Lenders use it to judge risk, because a higher LTV usually means less equity buffer if prices fall or if you need to sell quickly. Borrowers use it to understand how much of the property they truly own versus how much is financed.</p>
+<p>This calculator gives you an LTV percentage and a practical breakdown. If you already know your loan amount and the property value, enter those and you are done. If you do not know the loan amount yet, you can still calculate LTV by entering a purchase price and down payment, and the calculator will estimate the loan amount as purchase price minus down payment. This matches how many home loans are structured in the real world and avoids forcing you to guess numbers you do not have.</p>
+<p>Your result is not just a number. You also get your estimated equity amount, and quick reference points such as what the maximum loan would be at common target LTV levels. This helps with decisions like adjusting your down payment, deciding whether to refinance, or checking whether you are likely to fall into a higher risk bracket. These outputs are informational, not a lender quote, but they are the core math used in most first-pass mortgage conversations.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>LTV is calculated as (loan amount ÷ property value) × 100 using the values you provide.</li>
+<li>If you leave loan amount blank, the calculator estimates it as purchase price minus down payment (both must be provided).</li>
+<li>Property value should reflect the value used for lending decisions, typically the appraised value or purchase price, depending on the lender.</li>
+<li>This tool ignores closing costs, taxes, insurance, and fees unless they are included in your loan amount (some loans finance certain costs).</li>
+<li>Risk bands shown are generic informational thresholds and may differ by lender, country, loan type, and borrower profile.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is a “good” LTV for a mortgage?</h3>
+<p>Lower is generally better because it means more equity and less borrowing. Many lenders treat 80% as a common benchmark, with higher rates or extra requirements sometimes kicking in above that. However, acceptable LTV depends on your credit profile, income stability, the property type, and the lender’s product rules.</p>
+<h3>Should I use purchase price or appraised value?</h3>
+<p>Use the value that the lender will use. In many cases, lenders use the lower of purchase price and appraised value. If you are refinancing, the appraised value is usually the key number. If you are buying, start with purchase price, then rerun the calculation if an appraisal comes in different.</p>
+<h3>What if I do not know my loan amount yet?</h3>
+<p>Leave the loan amount blank and enter purchase price and down payment. The calculator will estimate the loan amount as the difference. This is useful when you are still shopping and want to understand how changes to your down payment affect your LTV.</p>
+<h3>Can LTV be over 100%?</h3>
+<p>Yes, if the loan amount is higher than the property value. That can happen with certain refinancing structures, rolled-in debt, or if property values fall after the loan is taken. Some lenders do not allow it, and if it exists, it usually carries higher risk and tighter underwriting.</p>
+<h3>How can I lower my LTV?</h3>
+<p>You can lower LTV by increasing your down payment, paying down the loan principal, or increasing the property value used in the calculation (for example, through a higher appraisal). In practice, the most controllable levers are down payment size and principal reduction.</p>
+<div class="last-updated">Last updated: 2025-12-20</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

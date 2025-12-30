@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Fuel Split Calculator (Group Travel) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Split a group trip’s fuel cost fairly. Enter total fuel spend and number of people, plus optional distance, fuel economy, and fuel price for a sanity-check breakdown.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/fuel-split-calculator-group-travel/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Fuel Split Calculator (Group Travel) | SnapCalc">
+    <meta property="og:description" content="Split a group trip’s fuel cost fairly. Enter total fuel spend and number of people, plus optional distance, fuel economy, and fuel price for a sanity-check breakdown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/fuel-split-calculator-group-travel/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fuel Split Calculator (Group Travel) | SnapCalc">
+    <meta name="twitter:description" content="Split a group trip’s fuel cost fairly. Enter total fuel spend and number of people, plus optional distance, fuel economy, and fuel price for a sanity-check breakdown.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fuel Split Calculator (Group Travel)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/fuel-split-calculator-group-travel/",
+      "description": "Split a group trip’s fuel cost fairly by dividing total fuel spend by the number of people, with optional inputs to estimate liters used and cost per kilometer."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Fuel Split Calculator (Group Travel)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Fuel Split Calculator (Group Travel)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rXIcXp" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Commute Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Optimise daily commutes for time, cost, and convenience.</p>
+    <div class="affiliate-cta">Explore commute planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Split fuel costs for a shared trip</h2>
+
+              <p class="calculator-intro">Use the quick split for a clean per-person amount, then optionally add trip details to sanity-check the fuel spend.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="totalFuelCost">Total fuel spend (currency)</label>
+                <input type="text" id="totalFuelCost" inputmode="decimal" placeholder="e.g., 1,850.00">
+              </div>
+
+              <div class="form-group">
+                <label for="peopleCount">Number of people splitting the fuel</label>
+                <input type="text" id="peopleCount" inputmode="numeric" placeholder="e.g., 4">
+              </div>
+
+              <div class="advanced-section" aria-label="Optional advanced inputs">
+                <h3 class="advanced-title">Advanced (optional sanity-check)</h3>
+
+                <div class="form-group">
+                  <label for="distanceKm">Trip distance (km)</label>
+                  <input type="text" id="distanceKm" inputmode="decimal" placeholder="e.g., 620">
+                </div>
+
+                <div class="form-group">
+                  <label for="fuelEconomy">Vehicle fuel economy (L/100 km)</label>
+                  <input type="text" id="fuelEconomy" inputmode="decimal" placeholder="e.g., 7.8">
+                </div>
+
+                <div class="form-group">
+                  <label for="fuelPricePerL">Fuel price per liter</label>
+                  <input type="text" id="fuelPricePerL" inputmode="decimal" placeholder="e.g., 24.50">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate split</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan trip costs, compare routes, and estimate travel time and expenses.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, split expenses, and understand everyday money decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick utilities for common tasks like sharing costs, checking totals, and planning basics.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/45a8JHd" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Travel Productivity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Stay productive while travelling with planning and organisation tools.</p>
+    <div class="affiliate-cta">Browse travel productivity tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Fuel Split Calculator for group road trips and shared travel costs</h2>
+
+              <p>If you travelled as a group and one person paid for fuel (or you collected fuel receipts), the most common question is simple: what does each person owe? This calculator is locked to that exact use case. It splits the total fuel spend across the number of people who agreed to share fuel costs. The primary output is a per-person amount that is easy to settle immediately. This is the practical, normal scenario: friends share a lift, a family takes a road trip, or coworkers carpool to an event and want a clean, defensible split without arguments. The tool is not trying to handle accommodation, tolls, meals, car maintenance, depreciation, or “who drove more.” It is fuel only.</p>
+
+              <p>Use the quick split first. Enter the total fuel spend for the trip and the number of people splitting it. The calculator returns a per-person share and the implied split percentage. If you want extra confidence that the total fuel spend makes sense, you can optionally add trip distance (in km), the vehicle’s fuel economy (in liters per 100 km), and the fuel price per liter. When those optional inputs are provided, the calculator estimates liters used and an estimated fuel cost based on the standard relationship between distance, consumption rate, and price. Then it compares your recorded spend to the estimate so you can spot obvious issues like missing receipts, mixed-in non-fuel items, a typo, or a partial fill that was not included. This is a sanity check, not a forensic audit.</p>
+
+              <p>The key point is that the split is based on what was actually paid (your receipts or total spend). The optional estimate is there to help you validate the number and to communicate it. For example, you can say “Total fuel was 1,850, split four ways, so 462.50 each. Based on 620 km at 7.8 L/100 km and 24.50 per liter, the estimate is close, so the receipts look complete.” That makes settlement easier because people are not debating opinions. If your estimate and actual spend differ, it does not automatically mean anyone is wrong. Driving conditions, idling, detours, speed, wind, tire pressure, and loads can move fuel use. The estimate is just a fast reasonableness check, and the split still stays anchored to the recorded spend, which is typically the fairest and simplest approach for a group agreement.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The calculator splits fuel only. It excludes tolls, parking, food, accommodation, maintenance, and other trip costs.</li>
+                <li>The “Total fuel spend” should be the sum of fuel receipts (or a clear total paid for fuel). Do not include non-fuel items from a service station.</li>
+                <li>The default split is equal across the number of people entered. It does not weight by distance per passenger or time in the car.</li>
+                <li>Advanced inputs are optional and used only to estimate liters and a rough expected cost for a sanity check.</li>
+                <li>Fuel economy is assumed to be in L/100 km and distance in km. If you use different units, your estimate will be wrong.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Should the driver pay less because they drove?</h3>
+              <p>That is a separate agreement, not a math problem. This calculator assumes a shared-fuel agreement where everyone splits fuel equally. If your group decides the driver’s time is worth compensation, handle it outside the fuel split and keep the fuel number clean.</p>
+
+              <h3>What if one person joined late or left early?</h3>
+              <p>This calculator is not built for partial participation. If your group needs weighted splitting, the clean way is to split fuel receipts by trip segments and run separate splits per segment. For a single total and equal split, enter only the people who agreed to share the full fuel spend.</p>
+
+              <h3>Why does the estimate not match the total fuel spend?</h3>
+              <p>Estimates are sensitive to real driving conditions and to what you entered. Double-check that fuel economy is L/100 km, distance is in km, and fuel price is per liter. Then consider normal factors like detours, stop-start traffic, heavy loads, high speeds, idling, and incomplete receipts.</p>
+
+              <h3>Do I need the advanced fields to get a result?</h3>
+              <p>No. The dominant intent is splitting what was actually paid. The advanced section is optional and exists only to add context: liters used, cost per km, and a reasonableness comparison.</p>
+
+              <h3>What is the most defensible number to use when settling?</h3>
+              <p>Use the recorded spend (receipts or the total fuel amount paid). The estimate is useful to catch obvious errors, but for fairness and simplicity, the split should usually be based on what was actually spent on fuel.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4ayXjk7" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Travel Schedules</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Organise departure times, connections, and arrival schedules clearly.</p>
+    <div class="affiliate-cta">Browse travel schedule planners on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

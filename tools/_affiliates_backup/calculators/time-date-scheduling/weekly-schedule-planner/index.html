@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Weekly Schedule Planner | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Plan your week with time blocks, calculate total scheduled hours, estimate free time, and detect overlapping commitments with a simple weekly schedule planner.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/weekly-schedule-planner/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Weekly Schedule Planner | SnapCalc">
+    <meta property="og:description" content="Plan your week with time blocks, calculate total scheduled hours, estimate free time, and detect overlapping commitments with a simple weekly schedule planner.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/weekly-schedule-planner/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weekly Schedule Planner | SnapCalc">
+    <meta name="twitter:description" content="Plan your week with time blocks, calculate total scheduled hours, estimate free time, and detect overlapping commitments with a simple weekly schedule planner.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Weekly Schedule Planner",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/weekly-schedule-planner/",
+      "description": "Plan your week with time blocks, calculate total scheduled hours, estimate free time, and detect overlapping commitments with a simple weekly schedule planner."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Weekly Schedule Planner</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Weekly Schedule Planner</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3YxY3hP" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Time Management</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Tools and resources for planning time, prioritising tasks, and reducing scheduling conflicts.</p>
+                <div class="affiliate-cta">Explore time management tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Plan your week with time blocks</h2>
+
+              <p class="calculator-intro">Add up to 10 weekly time blocks, then calculate total scheduled hours, estimated free time (based on your wake and sleep times), and conflicts where blocks overlap.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="wakeTime">Default wake time (optional)</label>
+                <input id="wakeTime" type="text" placeholder="07:00">
+              </div>
+
+              <div class="form-group">
+                <label for="sleepTime">Default sleep time (optional)</label>
+                <input id="sleepTime" type="text" placeholder="23:00">
+              </div>
+
+              <div class="planner-blocks">
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day1">Day</label>
+                    <select id="day1" class="planner-select" aria-label="Day for block 1">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start1">Start</label>
+                    <input id="start1" type="text" placeholder="09:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end1">End</label>
+                    <input id="end1" type="text" placeholder="10:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label1">Label (optional)</label>
+                    <input id="label1" type="text" placeholder="Work, gym, study">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day2">Day</label>
+                    <select id="day2" class="planner-select" aria-label="Day for block 2">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start2">Start</label>
+                    <input id="start2" type="text" placeholder="18:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end2">End</label>
+                    <input id="end2" type="text" placeholder="19:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label2">Label (optional)</label>
+                    <input id="label2" type="text" placeholder="Dinner, class">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day3">Day</label>
+                    <select id="day3" class="planner-select" aria-label="Day for block 3">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start3">Start</label>
+                    <input id="start3" type="text" placeholder="20:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end3">End</label>
+                    <input id="end3" type="text" placeholder="21:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label3">Label (optional)</label>
+                    <input id="label3" type="text" placeholder="Side project">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day4">Day</label>
+                    <select id="day4" class="planner-select" aria-label="Day for block 4">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start4">Start</label>
+                    <input id="start4" type="text" placeholder="07:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end4">End</label>
+                    <input id="end4" type="text" placeholder="08:15">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label4">Label (optional)</label>
+                    <input id="label4" type="text" placeholder="Commute">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day5">Day</label>
+                    <select id="day5" class="planner-select" aria-label="Day for block 5">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start5">Start</label>
+                    <input id="start5" type="text" placeholder="12:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end5">End</label>
+                    <input id="end5" type="text" placeholder="12:45">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label5">Label (optional)</label>
+                    <input id="label5" type="text" placeholder="Lunch">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day6">Day</label>
+                    <select id="day6" class="planner-select" aria-label="Day for block 6">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start6">Start</label>
+                    <input id="start6" type="text" placeholder="15:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end6">End</label>
+                    <input id="end6" type="text" placeholder="16:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label6">Label (optional)</label>
+                    <input id="label6" type="text" placeholder="Meeting">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day7">Day</label>
+                    <select id="day7" class="planner-select" aria-label="Day for block 7">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start7">Start</label>
+                    <input id="start7" type="text" placeholder="17:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end7">End</label>
+                    <input id="end7" type="text" placeholder="18:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label7">Label (optional)</label>
+                    <input id="label7" type="text" placeholder="Pickup, errands">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day8">Day</label>
+                    <select id="day8" class="planner-select" aria-label="Day for block 8">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start8">Start</label>
+                    <input id="start8" type="text" placeholder="19:30">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end8">End</label>
+                    <input id="end8" type="text" placeholder="20:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label8">Label (optional)</label>
+                    <input id="label8" type="text" placeholder="Walk">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day9">Day</label>
+                    <select id="day9" class="planner-select" aria-label="Day for block 9">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start9">Start</label>
+                    <input id="start9" type="text" placeholder="08:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end9">End</label>
+                    <input id="end9" type="text" placeholder="09:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label9">Label (optional)</label>
+                    <input id="label9" type="text" placeholder="Study block">
+                  </div>
+                </div>
+
+                <div class="planner-row">
+                  <div class="form-group">
+                    <label for="day10">Day</label>
+                    <select id="day10" class="planner-select" aria-label="Day for block 10">
+                      <option value="">Select</option>
+                      <option value="Mon">Mon</option>
+                      <option value="Tue">Tue</option>
+                      <option value="Wed">Wed</option>
+                      <option value="Thu">Thu</option>
+                      <option value="Fri">Fri</option>
+                      <option value="Sat">Sat</option>
+                      <option value="Sun">Sun</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="start10">Start</label>
+                    <input id="start10" type="text" placeholder="10:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="end10">End</label>
+                    <input id="end10" type="text" placeholder="11:00">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="label10">Label (optional)</label>
+                    <input id="label10" type="text" placeholder="Admin">
+                  </div>
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Build weekly summary</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3L1BrTQ" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Calendar Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Digital and physical tools for organising schedules, events, and deadlines.</p>
+                <div class="affiliate-cta">View calendar planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Plan schedules, calculate hours, and handle date and time calculations for work and life.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for daily decisions like tips, time savings, and simple planning tasks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Estimate costs, budgets, and operational numbers that connect directly to your weekly plan.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Weekly schedule planner to time block your week and avoid conflicts</h2>
+
+              <p>A weekly schedule planner is a practical way to turn intentions into a real plan. Instead of holding everything in your head, you can place the most important commitments into time blocks, then check whether the week is realistic. This calculator is built for that exact job: you enter your weekly blocks, it totals your scheduled hours per day and for the full week, and it flags overlaps so you can fix problems before they cause stress.</p>
+
+              <p>The core idea is simple. Each time block has a day, a start time, an end time, and an optional label. When you click Build weekly summary, the planner converts each block into minutes, adds them up by day, and produces a weekly total. If you also enter a typical wake time and sleep time, it estimates how much free time you have per day within your waking window. That free time is the space you can use for breaks, meals, admin tasks, travel time, and everything that still matters but often gets ignored in planning.</p>
+
+              <p>The most common planning failure is not underestimating one task. It is stacking too many tasks too tightly. A schedule that looks clean on paper can be impossible in reality because it leaves no buffer. This tool helps by showing the load per day, highlighting the busiest day, and listing conflicts where blocks overlap. It also treats an end time earlier than the start time as an overnight block, which makes it usable for shift work or late nights without forcing you into complicated settings.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Time format: enter times as HH:MM in 24-hour format, like 09:30 or 18:05. Single-digit hours like 7:15 also work.</li>
+                <li>Optional wake and sleep times: if left blank, the planner assumes 07:00 to 23:00 for free-time estimates.</li>
+                <li>Overnight blocks: if the end time is earlier than the start time, the planner assumes the block crosses midnight and adds 24 hours.</li>
+                <li>Free time is an estimate: it uses your waking window only and does not automatically include commuting, transition time, or prep time unless you add them as blocks.</li>
+                <li>Blocks without a day, start time, or end time are ignored so you can fill only the rows you need.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does my free time look higher or lower than expected?</h3>
+              <p>Free time is calculated as waking minutes minus scheduled minutes for that day. If you do not enter wake and sleep times, the planner uses a default waking window of 16 hours (07:00 to 23:00). If your real waking window is longer or shorter, enter your times to make the estimate match your life. Also remember that free time does not automatically include travel, prep, or buffer time unless you add those as blocks.</p>
+
+              <h3>What counts as a scheduling conflict?</h3>
+              <p>A conflict happens when two blocks on the same day overlap in time. For example, a block from 10:00 to 11:00 conflicts with a block from 10:30 to 12:00. Conflicts do not automatically mean you are wrong, but they are a strong signal that the plan cannot be followed as written. The fix is usually to move one block, shorten a block, or add a missing constraint you forgot.</p>
+
+              <h3>Can I use this for shift work or overnight commitments?</h3>
+              <p>Yes. If you enter an end time earlier than the start time, the planner treats it as crossing midnight and counts the duration correctly. For example, 22:00 to 06:00 is treated as an 8-hour block. Conflicts are checked within each day using the same rule, so overnight work may show most of the time on the starting day. If you want more detail, split one overnight block into two blocks (for example 22:00 to 24:00 and 00:00 to 06:00) to reflect both days.</p>
+
+              <h3>How many blocks should I add for a useful plan?</h3>
+              <p>Start with the non-negotiables: work, classes, school runs, training sessions, and fixed appointments. Then add a few blocks that protect outcomes you care about, like focused work, study time, or exercise. Finally, add realistic buffers like commuting or admin if they consistently consume time. The goal is not to schedule every minute, it is to stop over-committing and to make trade-offs visible.</p>
+
+              <h3>What should I do if my scheduled hours exceed my waking hours?</h3>
+              <p>That is a warning that the day is overloaded. In practice, it means you are planning to do more than is possible, even before meals, transitions, or rest. The best response is to cut, move, or combine blocks, and to add buffers explicitly so the schedule matches reality. If this happens on multiple days, it usually indicates that the weekly workload needs a bigger change, not just small edits.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3Kzt4Po" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Daily Scheduling</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Plan daily activities with structured schedules and clear time blocks.</p>
+                <div class="affiliate-cta">Browse daily schedule planners on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Primer Coverage Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate how much primer you need for a room or project based on area, coats, coverage rate, and waste. Get litres required and how many cans to buy.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/primer-coverage-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Primer Coverage Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate how much primer you need for a room or project based on area, coats, coverage rate, and waste. Get litres required and how many cans to buy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/primer-coverage-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Primer Coverage Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate how much primer you need for a room or project based on area, coats, coverage rate, and waste. Get litres required and how many cans to buy.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Primer Coverage Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/primer-coverage-calculator/",
+      "description": "Estimate how much primer you need based on area, number of coats, coverage rate, and waste. Outputs litres required and how many cans to buy."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Primer Coverage Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Primer Coverage Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oPfhlD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Mechanical Tools</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for mechanical calculations, forces, torque, and motion analysis.</p>
+    <div class="affiliate-cta">Explore mechanical engineering tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate primer litres and cans</h2>
+
+              <p class="calculator-intro">Use this for walls, ceilings, doors, or any paintable surface where you want a quick, defensible estimate for how much primer to buy.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="areaSqm">Total surface area (m²)</label>
+                <input type="text" id="areaSqm" inputmode="decimal" placeholder="e.g. 42">
+              </div>
+
+              <div class="form-group">
+                <label for="coats">Number of coats</label>
+                <input type="text" id="coats" inputmode="numeric" placeholder="e.g. 1">
+              </div>
+
+              <div class="form-group">
+                <label for="coverageRate">Coverage rate (m² per litre)</label>
+                <input type="text" id="coverageRate" inputmode="decimal" placeholder="e.g. 10">
+              </div>
+
+              <div class="form-group">
+                <label for="wastePercent">Waste and touch-ups (%)</label>
+                <input type="text" id="wastePercent" inputmode="decimal" placeholder="e.g. 10">
+              </div>
+
+              <div class="form-group">
+                <label for="containerSizeLitres">Can size (litres)</label>
+                <input type="text" id="containerSizeLitres" inputmode="decimal" placeholder="e.g. 5">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate primer needed</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4ac9bIx" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Voltage & Current</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Calculate voltage, current, and resistance for electrical systems.</p>
+    <div class="affiliate-cta">View voltage and current calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate quantities for building and renovation jobs, from mixes and coverage to spacing and material takeoffs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Plan property costs and decisions with simple calculators for rentals, buying, owning, and renovating.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick practical calculators for day-to-day decisions, estimates, and small planning tasks.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Primer coverage calculator for walls, ceilings, and renovation prep</h2>
+
+              <p>A primer coverage calculator helps you estimate how many litres of primer you need before you start painting. The practical decision is simple: how much primer should you buy so you finish the job without running out, while also avoiding buying far more than you will use. This page is designed for typical home and small renovation projects where you already have an approximate total surface area and want a realistic shopping number.</p>
+
+              <p>Primer is not the same as paint. Its job is to improve adhesion, even out porosity, and create a more consistent surface so your top coats perform properly. That is why coverage varies a lot between surfaces. New plaster, repaired patches, raw drywall, unsealed wood, or chalky paint can absorb primer faster than smooth, sealed surfaces. This calculator accounts for that variability in a practical way by letting you set a coverage rate and a waste percentage, and by giving sensible defaults if you do not know the exact product specs.</p>
+
+              <p>To use the calculator, enter your total surface area in square metres, then choose the number of coats. One coat is common for previously painted interior walls in decent condition. Two coats is common when the surface is very porous, heavily stained, or freshly repaired. If you do not know your product’s exact coverage, use a conservative estimate such as 10 m² per litre. Add a waste percentage to cover roller loading, spillage, cutting-in, and touch-ups. Finally, enter your preferred can size so the result tells you how many cans to buy and what leftover you might expect.</p>
+
+              <p>The main output is the total primer required in litres, including waste. That number is the core buying decision. The calculator also converts that requirement into whole cans, rounding up so you do not end up short. It then shows your approximate leftover primer after buying whole cans. Leftover is not always bad. It is often useful for spot priming repairs or future touch-ups, but if leftover is large you can switch to a smaller can size or reduce waste assumptions if you are confident in your technique and surface condition.</p>
+
+              <p>This calculator is intentionally locked to primer quantity planning. It does not estimate paint quantity, it does not attempt to price products, and it does not try to choose a primer type for you. Those are adjacent tasks with different inputs and different user intent. Here the goal is one thing: determine a defensible litres-and-cans estimate for primer based on area and coverage.</p>
+
+              <p>If you want a better estimate, improve your two biggest inputs: surface area and coverage rate. Surface area is usually the biggest driver, and small errors there can produce big overbuy or underbuy. For coverage rate, check the can label for square metres per litre, then reduce it slightly if the surface is porous or if you are applying primer heavily to seal the surface. A small reduction is usually more realistic than expecting best-case label coverage on a real jobsite.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If you leave coverage rate blank, a default of 10 m² per litre is used as a practical mid-range estimate for many primers.</li>
+                <li>If you leave waste blank, a default of 10% is applied to cover roller loading, cut-ins, touch-ups, and minor spillage.</li>
+                <li>If you leave can size blank, a default of 5 litres is used because it is a common purchase size for many primer products.</li>
+                <li>The calculator assumes the same coverage rate across the whole area, even though mixed surfaces can vary (patched areas often absorb more).</li>
+                <li>Results are estimates and should be cross-checked against your specific product label and surface condition when accuracy matters.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>How do I estimate surface area in m² if I only know room dimensions?</h3>
+              <p>For walls, multiply each wall’s length by its height and add them together, then subtract large openings like doors and big windows if you want more accuracy. For ceilings, multiply the room length by width. If you are unsure, it is safer to slightly overestimate area than underestimate, because running out mid-job is usually more costly than a small leftover.</p>
+
+              <h3>What coverage rate should I use if I cannot find it on the can?</h3>
+              <p>Use 10 m² per litre as a conservative general estimate. If the surface is new plaster, raw drywall, unsealed wood, or very chalky, use a lower rate like 7 to 9 m² per litre. If the surface is smooth and previously sealed, you may get higher coverage, but using the conservative number reduces the risk of underbuying.</p>
+
+              <h3>Do I really need a waste percentage?</h3>
+              <p>Yes, unless you are measuring and applying with near-lab control, which most people are not. Waste is not only spills. It includes primer that stays in the roller, tray, brush, and cut-in work that applies thicker film at edges and corners. Ten percent is a sensible default for most DIY and small contractor jobs.</p>
+
+              <h3>Why does the calculator round the number of cans up?</h3>
+              <p>Because you cannot buy a fraction of a can in most cases, and a shortage stops the job. Rounding up ensures you have enough product to finish. The leftover estimate helps you decide whether to switch to a different can size or adjust assumptions before buying.</p>
+
+              <h3>Should I do one coat or two coats of primer?</h3>
+              <p>One coat is typical when the surface is already painted and stable. Two coats is common when the surface is very porous, heavily repaired, stained, or when you are sealing a difficult substrate. If you are unsure, start with one coat and reassess once dry, but for a buy-ahead estimate you can plan for two coats on high-risk surfaces to avoid running short.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4q0U2OS" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Safety Factors</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Apply safety factors correctly in engineering calculations.</p>
+    <div class="affiliate-cta">Browse safety factor tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

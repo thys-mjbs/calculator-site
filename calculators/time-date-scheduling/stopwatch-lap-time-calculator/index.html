@@ -1,47 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO: title and description -->
-    <title>Stopwatch Lap Time Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency."
-    />
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link
-      rel="canonical"
-      href="https://snapcalc.site/calculators/time-date-scheduling/stopwatch-lap-time-calculator/"
-    />
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Stopwatch Lap Time Calculator | SnapCalc" />
-    <meta
-      property="og:description"
-      content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://snapcalc.site/calculators/time-date-scheduling/stopwatch-lap-time-calculator/"
-    />
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stopwatch Lap Time Calculator | SnapCalc" />
-    <meta
-      name="twitter:description"
-      content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency."
-    />
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png" />
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Stopwatch Lap Time Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/time-date-scheduling/stopwatch-lap-time-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Stopwatch Lap Time Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/time-date-scheduling/stopwatch-lap-time-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Stopwatch Lap Time Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -52,282 +33,234 @@
         "description": "Calculate average lap time from a stopwatch total time and lap count. Optionally paste lap splits to get fastest, slowest, and consistency."
       }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div id="siteSearchResults" class="site-search-results" aria-hidden="true"></div>
-        </div>
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
         <span>Stopwatch Lap Time Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Stopwatch Lap Time Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Stopwatch Lap Time Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4ahDIVq" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Productivity Scheduling</div>
--->
-    <p class="affiliate-copy">Combine scheduling and productivity systems into one streamlined workflow.</p>
-    <div class="affiliate-cta">Explore productivity scheduling tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Average lap time from a stopwatch</h2>
-
-              <p class="calculator-intro">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Average lap time from a stopwatch</h2>
+<p class="calculator-intro">
                 Enter your total elapsed time and number of laps to get an average lap time. If you have lap splits, paste
                 them to get fastest, slowest, and consistency.
               </p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="totalTime">Total elapsed time (hh:mm:ss, mm:ss, or seconds)</label>
-                <input type="text" id="totalTime" inputmode="text" placeholder="e.g., 12:34 or 1:02:15 or 754.2" />
-              </div>
-
-              <div class="form-group">
-                <label for="lapCount">Number of laps</label>
-                <input type="text" id="lapCount" inputmode="numeric" placeholder="e.g., 8" />
-              </div>
-
-              <div class="advanced-box">
-                <div class="advanced-title">Advanced (optional)</div>
-
-                <div class="form-group">
-                  <label for="targetLaps">Target laps to project total time</label>
-                  <input type="text" id="targetLaps" inputmode="numeric" placeholder="e.g., 20" />
-                  <p class="field-hint">Uses your computed average lap time.</p>
-                </div>
-
-                <div class="form-group">
-                  <label for="lapTimes">Lap splits (comma-separated, overrides total/laps if provided)</label>
-                  <input
-                    type="text"
-                    id="lapTimes"
-                    inputmode="text"
-                    placeholder="e.g., 1:32, 1:28, 1:31, 1:29"
-                  />
-                  <p class="field-hint">Paste as mm:ss, hh:mm:ss, or seconds. Spaces are fine.</p>
-                </div>
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate lap times</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/3L1BrTQ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Calendar Planning</div>
--->
-    <p class="affiliate-copy">Digital and physical tools for organising schedules, events, and deadlines.</p>
-    <div class="affiliate-cta">View calendar planning tools on Amazon</div>
-  </a>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="totalTime">Total elapsed time (hh:mm:ss, mm:ss, or seconds)</label>
+<input id="totalTime" inputmode="text" placeholder="e.g., 12:34 or 1:02:15 or 754.2" type="text"/>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
-              <p class="related-desc">Convert times, plan schedules, and estimate durations for everyday planning.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/health-fitness/">
-              <h3 class="related-title">Health &amp; Fitness</h3>
-              <p class="related-desc">Work out pacing, training targets, and performance metrics for exercise and sport.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/travel-transport/">
-              <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Estimate travel times, compare options, and plan journeys with practical time tools.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/49bjkEb" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Event Planning</div>
--->
-    <p class="affiliate-copy">Plan events with clear timelines, milestones, and coordination tools.</p>
-    <div class="affiliate-cta">Browse event planning calendars on Amazon</div>
-  </a>
+<div class="form-group">
+<label for="lapCount">Number of laps</label>
+<input id="lapCount" inputmode="numeric" placeholder="e.g., 8" type="text"/>
 </div>
-          </div>
+<div class="advanced-box">
+<div class="advanced-title">Advanced (optional)</div>
+<div class="form-group">
+<label for="targetLaps">Target laps to project total time</label>
+<input id="targetLaps" inputmode="numeric" placeholder="e.g., 20" type="text"/>
+<p class="field-hint">Uses your computed average lap time.</p>
+</div>
+<div class="form-group">
+<label for="lapTimes">Lap splits (comma-separated, overrides total/laps if provided)</label>
+<input id="lapTimes" inputmode="text" placeholder="e.g., 1:32, 1:28, 1:31, 1:29" type="text"/>
+<p class="field-hint">Paste as mm:ss, hh:mm:ss, or seconds. Spaces are fine.</p>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate lap times</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Calculate lap time from stopwatch totals and splits</h2>
 
-              <p>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Convert times, plan schedules, and estimate durations for everyday planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Work out pacing, training targets, and performance metrics for exercise and sport.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Estimate travel times, compare options, and plan journeys with practical time tools.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate lap time from stopwatch totals and splits</h2>
+<p>
                 This Stopwatch Lap Time Calculator is built for one common situation: you used a stopwatch during a run,
                 swim, track session, or any repetitive task, and you want a clear average lap time that you can actually
                 use. Most people do not want a spreadsheet. They want a reliable split time that tells them what each lap
                 took, plus a few quick signals about whether the effort was consistent.
               </p>
-
-              <p>
+<p>
                 The default workflow is simple. Enter your total elapsed time and the number of laps you completed. The
                 calculator returns your average lap time and a couple of supporting figures that help you make a decision,
                 like what a set number of laps would take at the same pace. This is useful for planning interval sessions,
                 checking whether you hit a target pace, or translating a messy stopwatch total into a clean per-lap number.
               </p>
-
-              <p>
+<p>
                 If you have lap splits from your stopwatch, you can paste them instead. When you provide splits, the
                 calculator ignores the total and lap count and uses the splits as the source of truth. That unlocks extra
                 outputs: fastest lap, slowest lap, the spread between them, and a simple consistency score. These are the
                 numbers people usually care about when they are comparing efforts or trying to tighten pacing.
               </p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
                   Time formats accepted are hh:mm:ss, mm:ss, or plain seconds. If you enter a colon format, minutes and
                   seconds are treated as clock-style values.
                 </li>
-                <li>
+<li>
                   When you enter lap splits, they override the total elapsed time and lap count. This prevents double
                   counting or conflicts between two sources.
                 </li>
-                <li>
+<li>
                   Average lap time is calculated as total time divided by number of laps. This assumes laps are equal
                   distance or equal units of work.
                 </li>
-                <li>
+<li>
                   The consistency score is based on variation between lap splits. It is meant as a quick indicator, not a
                   clinical metric.
                 </li>
-                <li>
+<li>
                   The target-laps projection assumes you can maintain the same average lap time. Real performance usually
                   changes with fatigue, terrain, and pacing strategy.
                 </li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What should I enter if my stopwatch shows minutes and seconds?</h3>
-              <p>
+</ul>
+<h3>Common questions</h3>
+<h3>What should I enter if my stopwatch shows minutes and seconds?</h3>
+<p>
                 Use mm:ss, for example 12:34. If your stopwatch shows hours as well, use hh:mm:ss, for example 1:02:15.
                 If you only know seconds, enter a plain number like 754.2. The calculator interprets the format you type.
               </p>
-
-              <h3>Why does the result change when I paste lap splits?</h3>
-              <p>
+<h3>Why does the result change when I paste lap splits?</h3>
+<p>
                 Because splits are more specific than a total. If your stopwatch total includes pauses, reaction time, or
                 a warm-up segment, the average from total time and lap count may be misleading. Using splits typically
                 gives a cleaner picture of what each lap took, especially if you recorded laps intentionally during the
                 effort.
               </p>
-
-              <h3>Can I use this for anything besides sport laps?</h3>
-              <p>
+<h3>Can I use this for anything besides sport laps?</h3>
+<p>
                 Yes, as long as you are timing repeated units. Examples include warehouse pick cycles, repeated machine
                 runs, or practice drills. The only requirement is that each lap represents the same unit of work. If your
                 laps are different distances or different tasks, the “average lap time” is still a valid average, but it
                 stops being a fair pacing comparison.
               </p>
-
-              <h3>My lap splits are inconsistent. What does the consistency score mean?</h3>
-              <p>
+<h3>My lap splits are inconsistent. What does the consistency score mean?</h3>
+<p>
                 The score summarizes how tightly your lap times cluster around your average. A low variation means you
                 paced evenly. A higher variation means your laps changed a lot, often from starting too fast, fatigue, or
                 external factors like traffic or turns. Use it as a diagnostic signal, not a pass or fail label.
               </p>
-
-              <h3>How do I get a more accurate projection for a longer target?</h3>
-              <p>
+<h3>How do I get a more accurate projection for a longer target?</h3>
+<p>
                 The simple projection assumes your average stays the same. If you want a more realistic forecast, record
                 splits for the full session, or at least for the final third when fatigue shows up. Then use the splits
                 mode to inspect whether you slow down over time. If your later splits drift, your long-target projection
                 should be based on those later splits, not your early pace.
               </p>
-
-              <div class="last-updated">Last updated: 2025-12-29</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3Kzt4Po" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Daily Scheduling</div>
--->
-    <p class="affiliate-copy">Plan daily activities with structured schedules and clear time blocks.</p>
-    <div class="affiliate-cta">Browse daily schedule planners on Amazon</div>
-  </a>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
-    ></script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
 </html>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Ride-Share Cost Split Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/ride-share-cost-split-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Ride-Share Cost Split Calculator | SnapCalc">
-    <meta property="og:description" content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/ride-share-cost-split-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ride-Share Cost Split Calculator | SnapCalc">
-    <meta name="twitter:description" content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Ride-Share Cost Split Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/travel-transport/ride-share-cost-split-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Ride-Share Cost Split Calculator | SnapCalc" property="og:title"/>
+<meta content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/travel-transport/ride-share-cost-split-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ride-Share Cost Split Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Split an Uber, Bolt, or taxi fare between riders. Add tip, tolls, extra fees, and discounts, then see what each person should pay with optional rounding." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,252 +33,204 @@
       "description": "Split a ride-share fare between riders, with optional tip, extra fees, discount, and rounding. Shows total and per-person amount."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
         <span>Ride-Share Cost Split Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Ride-Share Cost Split Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Ride-Share Cost Split Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/3KKSVUA" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Vehicle Maintenance</div>
--->
-    <p class="affiliate-copy">Track vehicle servicing, maintenance intervals, and running costs.</p>
-    <div class="affiliate-cta">Explore vehicle maintenance trackers on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Split a ride fare fairly (with tip, fees, discounts, and rounding)</h2>
-
-              <p class="calculator-intro">Built for splitting one ride’s total cost between people in the car. It does not handle multi-stop cost attribution or distance-based splits.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="baseFare">Base fare (shown in the app)</label>
-                <input type="text" id="baseFare" inputmode="decimal" placeholder="e.g., 185.50">
-              </div>
-
-              <div class="form-group">
-                <label for="riderCount">Number of people splitting</label>
-                <input type="text" id="riderCount" inputmode="numeric" placeholder="e.g., 3">
-              </div>
-
-              <details class="advanced-section">
-                <summary>Advanced options (optional)</summary>
-
-                <div class="form-group">
-                  <label for="extraFees">Extra fees (tolls, booking, parking)</label>
-                  <input type="text" id="extraFees" inputmode="decimal" placeholder="e.g., 25.00">
-                </div>
-
-                <div class="form-group">
-                  <label for="discount">Discount / promo amount</label>
-                  <input type="text" id="discount" inputmode="decimal" placeholder="e.g., 15.00">
-                </div>
-
-                <div class="form-group">
-                  <label for="tipPercent">Tip percentage (optional)</label>
-                  <input type="text" id="tipPercent" inputmode="decimal" placeholder="e.g., 10">
-                </div>
-
-                <div class="form-group">
-                  <label for="tipAmount">Or tip amount (overrides tip percentage)</label>
-                  <input type="text" id="tipAmount" inputmode="decimal" placeholder="e.g., 20.00">
-                </div>
-
-                <div class="form-group">
-                  <label for="roundTo">Rounding (per person)</label>
-                  <select id="roundTo">
-                    <option value="none">No rounding</option>
-                    <option value="1">Round to nearest 1</option>
-                    <option value="5">Round to nearest 5</option>
-                    <option value="10">Round to nearest 10</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="roundMode">Rounding method</label>
-                  <select id="roundMode">
-                    <option value="nearest">Nearest</option>
-                    <option value="up">Always round up</option>
-                  </select>
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate split</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Split a ride fare fairly (with tip, fees, discounts, and rounding)</h2>
+<p class="calculator-intro">Built for splitting one ride’s total cost between people in the car. It does not handle multi-stop cost attribution or distance-based splits.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="baseFare">Base fare (shown in the app)</label>
+<input id="baseFare" inputmode="decimal" placeholder="e.g., 185.50" type="text"/>
+</div>
+<div class="form-group">
+<label for="riderCount">Number of people splitting</label>
+<input id="riderCount" inputmode="numeric" placeholder="e.g., 3" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced options (optional)</summary>
+<div class="form-group">
+<label for="extraFees">Extra fees (tolls, booking, parking)</label>
+<input id="extraFees" inputmode="decimal" placeholder="e.g., 25.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="discount">Discount / promo amount</label>
+<input id="discount" inputmode="decimal" placeholder="e.g., 15.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="tipPercent">Tip percentage (optional)</label>
+<input id="tipPercent" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="tipAmount">Or tip amount (overrides tip percentage)</label>
+<input id="tipAmount" inputmode="decimal" placeholder="e.g., 20.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="roundTo">Rounding (per person)</label>
+<select id="roundTo">
+<option value="none">No rounding</option>
+<option value="1">Round to nearest 1</option>
+<option value="5">Round to nearest 5</option>
+<option value="10">Round to nearest 10</option>
+</select>
+</div>
+<div class="form-group">
+<label for="roundMode">Rounding method</label>
+<select id="roundMode">
+<option value="nearest">Nearest</option>
+<option value="up">Always round up</option>
+</select>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate split</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4916GGS" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Road Trips</div>
--->
-    <p class="affiliate-copy">Plan road trips with stops, distances, and driving times.</p>
-    <div class="affiliate-cta">View road trip planning tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/travel-transport/">
-              <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Plan trips, estimate travel costs, and compare transport options with quick calculators.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Budget smarter, split everyday costs, and sanity-check spending decisions.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Fast utilities for common real-world tasks like sharing bills and running quick checks.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4agAzVQ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Costs Tracking</div>
--->
-    <p class="affiliate-copy">Track transport expenses across personal and business travel.</p>
-    <div class="affiliate-cta">View transport cost tracking tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Ride-share cost split calculator for Uber, Bolt, taxis, and shared lifts</h2>
-
-              <p>This ride-share cost split calculator helps you divide the total cost of a single ride between the people in the car. The main use case is simple: one person paid in the app, and everyone else needs to reimburse them fairly. You enter the base fare shown by the ride-share app, choose how many people are splitting, and you get a clear per-person amount.</p>
-
-              <p>Real rides often have more than just the fare. There may be tolls, a booking fee, parking charges, or other extras that get added to the trip total. Sometimes there is a promo code or discount. And in many groups, someone adds a tip. This calculator supports those real-world adjustments without turning the tool into a complicated budgeting app.</p>
-
-              <p>The output is designed for one decision: “What should each person pay for this ride?” You will see the final trip total used for the split, the per-person share, and (if you enable it) a rounded per-person amount to make it easier to pay using cash or quick transfers. If rounding changes the total collected, the calculator also shows the small difference so you can avoid shortfalls or awkward back-and-forth.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>This calculator is for splitting one ride’s total cost equally between people. It does not allocate costs by distance, time in the car, or separate pickup/drop-off legs.</li>
-                <li>“Base fare” should match what the app shows as the trip price before you manually add extras. If your app total already includes fees, you can leave “Extra fees” as zero.</li>
-                <li>Discounts are treated as a currency amount and reduce the total before splitting. If you only know a percentage discount, convert it to an amount first using the final app total.</li>
-                <li>If you enter a tip amount, it overrides the tip percentage. Use one or the other to avoid double counting.</li>
-                <li>Rounding is applied per person, not to the total. If you choose “Always round up,” the group will collect slightly more than the exact total, which is useful when you want to ensure the payer is not short.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What number should I use as the base fare?</h3>
-              <p>Use the price shown for the trip in the ride-share app (or on the receipt) before you add your own manual adjustments. If the receipt already includes tolls or booking fees in the total, you can still use that as the base fare and leave “Extra fees” as zero. The goal is to represent the ride total once, not twice.</p>
-
-              <h3>Should I split the tip as well?</h3>
-              <p>Only if your group agrees the tip is shared. Many groups split the whole total including tip because everyone benefited from the ride. If the tip was a personal choice by the payer, set tip to zero and split only the ride and fees. The calculator supports both approaches, but it will not decide for you.</p>
-
-              <h3>What if someone is not paying or joined late?</h3>
-              <p>This calculator assumes equal split between the number of people you enter. If one person is not paying, reduce the “Number of people splitting” to count only payers. If someone joined late or left early, this tool is not the right fit because it does not allocate by time or distance. Use a negotiated split instead of pretending it is “equal.”</p>
-
-              <h3>Why does rounding change the total collected?</h3>
-              <p>Rounding is applied to each person’s share. When you round each share, the sum of the rounded amounts can be slightly higher or lower than the exact total. This is normal. If you choose “Always round up,” the result will usually be higher, which avoids the payer being short. If you choose “Nearest,” the difference could be small in either direction.</p>
-
-              <h3>How can I make the result more accurate?</h3>
-              <p>Use the final receipt amount and include any extras that were charged outside the base fare (tolls, parking, or manual add-ons). If there is a discount, enter it as a currency amount. For tips, prefer the actual tip amount if you know it. Accuracy is mostly about using the right total, not adding more fields.</p>
-
-              <div class="last-updated">Last updated: 2025-12-29</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4aQfYI3" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Travel Logistics</div>
--->
-    <p class="affiliate-copy">Manage travel logistics including timing, routes, and connections.</p>
-    <div class="affiliate-cta">Browse travel logistics tools on Amazon</div>
-  </a>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Plan trips, estimate travel costs, and compare transport options with quick calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget smarter, split everyday costs, and sanity-check spending decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Fast utilities for common real-world tasks like sharing bills and running quick checks.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Ride-share cost split calculator for Uber, Bolt, taxis, and shared lifts</h2>
+<p>This ride-share cost split calculator helps you divide the total cost of a single ride between the people in the car. The main use case is simple: one person paid in the app, and everyone else needs to reimburse them fairly. You enter the base fare shown by the ride-share app, choose how many people are splitting, and you get a clear per-person amount.</p>
+<p>Real rides often have more than just the fare. There may be tolls, a booking fee, parking charges, or other extras that get added to the trip total. Sometimes there is a promo code or discount. And in many groups, someone adds a tip. This calculator supports those real-world adjustments without turning the tool into a complicated budgeting app.</p>
+<p>The output is designed for one decision: “What should each person pay for this ride?” You will see the final trip total used for the split, the per-person share, and (if you enable it) a rounded per-person amount to make it easier to pay using cash or quick transfers. If rounding changes the total collected, the calculator also shows the small difference so you can avoid shortfalls or awkward back-and-forth.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator is for splitting one ride’s total cost equally between people. It does not allocate costs by distance, time in the car, or separate pickup/drop-off legs.</li>
+<li>“Base fare” should match what the app shows as the trip price before you manually add extras. If your app total already includes fees, you can leave “Extra fees” as zero.</li>
+<li>Discounts are treated as a currency amount and reduce the total before splitting. If you only know a percentage discount, convert it to an amount first using the final app total.</li>
+<li>If you enter a tip amount, it overrides the tip percentage. Use one or the other to avoid double counting.</li>
+<li>Rounding is applied per person, not to the total. If you choose “Always round up,” the group will collect slightly more than the exact total, which is useful when you want to ensure the payer is not short.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What number should I use as the base fare?</h3>
+<p>Use the price shown for the trip in the ride-share app (or on the receipt) before you add your own manual adjustments. If the receipt already includes tolls or booking fees in the total, you can still use that as the base fare and leave “Extra fees” as zero. The goal is to represent the ride total once, not twice.</p>
+<h3>Should I split the tip as well?</h3>
+<p>Only if your group agrees the tip is shared. Many groups split the whole total including tip because everyone benefited from the ride. If the tip was a personal choice by the payer, set tip to zero and split only the ride and fees. The calculator supports both approaches, but it will not decide for you.</p>
+<h3>What if someone is not paying or joined late?</h3>
+<p>This calculator assumes equal split between the number of people you enter. If one person is not paying, reduce the “Number of people splitting” to count only payers. If someone joined late or left early, this tool is not the right fit because it does not allocate by time or distance. Use a negotiated split instead of pretending it is “equal.”</p>
+<h3>Why does rounding change the total collected?</h3>
+<p>Rounding is applied to each person’s share. When you round each share, the sum of the rounded amounts can be slightly higher or lower than the exact total. This is normal. If you choose “Always round up,” the result will usually be higher, which avoids the payer being short. If you choose “Nearest,” the difference could be small in either direction.</p>
+<h3>How can I make the result more accurate?</h3>
+<p>Use the final receipt amount and include any extras that were charged outside the base fare (tolls, parking, or manual add-ons). If there is a discount, enter it as a currency amount. For tips, prefer the actual tip amount if you know it. Accuracy is mostly about using the right total, not adding more fields.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

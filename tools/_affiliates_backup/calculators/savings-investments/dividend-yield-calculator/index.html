@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Dividend Yield Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate dividend yield from an annual dividend per share and current share price. Estimate your yearly and monthly dividend income based on shares owned.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/savings-investments/dividend-yield-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Dividend Yield Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate dividend yield from an annual dividend per share and current share price. Estimate your yearly and monthly dividend income based on shares owned.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/savings-investments/dividend-yield-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dividend Yield Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate dividend yield from an annual dividend per share and current share price. Estimate your yearly and monthly dividend income based on shares owned.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dividend Yield Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/dividend-yield-calculator/",
+      "description": "Calculate dividend yield from an annual dividend per share and current share price, with optional income estimates based on shares owned."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings &amp; Investments</a> ›
+        <span>Dividend Yield Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Dividend Yield Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48A6rDy" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Investing Basics</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn foundational investing concepts, risks, and long-term wealth-building principles.</p>
+    <div class="affiliate-cta">Explore investing books for beginners on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate dividend yield and income</h2>
+
+              <p class="calculator-intro">Use current price and annual dividend per share to estimate yield. Optionally add shares owned to estimate your dividend income.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="pricePerShare">Current share price</label>
+                <input id="pricePerShare" type="text" inputmode="decimal" placeholder="e.g., 125.50">
+              </div>
+
+              <div class="input-group">
+                <label for="annualDividendPerShare">Annual dividend per share</label>
+                <input id="annualDividendPerShare" type="text" inputmode="decimal" placeholder="e.g., 6.20">
+              </div>
+
+              <div class="advanced-block" aria-label="Optional inputs">
+                <div class="advanced-title">Optional</div>
+
+                <div class="input-group">
+                  <label for="sharesOwned">Shares owned</label>
+                  <input id="sharesOwned" type="text" inputmode="numeric" placeholder="e.g., 100">
+                </div>
+
+                <div class="input-group">
+                  <label for="targetYield">Target yield (percent)</label>
+                  <input id="targetYield" type="text" inputmode="decimal" placeholder="e.g., 5">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate dividend yield</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Compare returns, growth, and income across savings accounts, ETFs, and investment strategies.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, track expenses, and understand everyday money decisions with quick calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Work through revenue, margins, and cash flow metrics to support practical financial decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4rXvRm0" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Savings Optimization</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Improve savings rates through structured planning and habit changes.</p>
+    <div class="affiliate-cta">View savings optimization books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Dividend yield calculator for stocks and ETFs</h2>
+
+              <p>Dividend yield is one of the simplest ways to sanity-check income potential from a dividend-paying stock or ETF. When you see a quoted yield like “4.2%,” what it usually means is that the expected cash dividend over a full year is 4.2% of today’s share price. This calculator is built for the most common real-world question: “At today’s price, what yield am I actually getting based on the dividend amount I expect?”</p>
+
+              <p>The core calculation is straightforward: dividend yield equals annual dividend per share divided by current share price. The tricky part for normal users is consistency. Dividends are sometimes quoted per quarter, per month, or as a trailing twelve-month total, while prices move daily. A small change in price can move yield meaningfully, even if the dividend amount stays the same. This tool keeps the inputs minimal so you can get a quick answer without hunting for extra details.</p>
+
+              <p>Once you have the yield, the next practical step is translating it into money. Yield alone does not tell you how much cash you will receive unless you also know how many shares you own. If you add “shares owned,” the calculator will estimate your annual dividend income and a simple monthly equivalent. The monthly figure is not a payment schedule and it is not a guarantee. It is just a way to make the annual income easier to compare against a monthly budget or other income sources.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The “annual dividend per share” is the total expected dividend over one year per share (not per quarter or per month).</li>
+                <li>The dividend amount is treated as stable for the year, even though real dividends can be raised, cut, or suspended.</li>
+                <li>The share price used is the current price you enter; yield will change as price changes.</li>
+                <li>Taxes, withholding, brokerage fees, and currency conversion costs are excluded from income estimates.</li>
+                <li>The “monthly income” is a simple annual divided by 12 for readability, not an actual payout schedule.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is dividend yield the same as dividend return?</h3>
+              <p>No. Dividend yield is an annualized percentage based on the dividend amount and the current price. Your real return can differ because prices change, dividends change, and you may reinvest dividends. Yield is a snapshot, not a full performance measure.</p>
+
+              <h3>Should I use trailing or forward dividend?</h3>
+              <p>Use whichever best matches your decision. Trailing twelve-month dividend uses what was actually paid recently. Forward dividend uses an expected future annual dividend (often based on the most recent declared dividend). This calculator accepts a single annual dividend figure, so the choice is yours and should match how you want to think about risk.</p>
+
+              <h3>What if the company pays dividends quarterly or monthly?</h3>
+              <p>Convert it to an annual amount first. If it pays quarterly, multiply the most recent quarterly dividend per share by 4 (only if you reasonably expect it to continue). If it pays monthly, multiply by 12. If the payments vary, use the last 12 months total if you can.</p>
+
+              <h3>Why did my yield change even though the dividend did not?</h3>
+              <p>Because yield is dividend divided by price. If the share price rises, yield falls. If the share price drops, yield rises. That does not automatically mean the investment is better or worse. It just means the same dividend is being compared to a different price.</p>
+
+              <h3>How do I make the income estimate more accurate?</h3>
+              <p>Use the most realistic annual dividend figure you can justify and keep it consistent with the price date you are using. If you expect dividend changes, base your annual dividend on declared payments rather than guesses. If you are comparing investments, also consider taxes, payout timing, and whether dividends are reinvested.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48OEpmv" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Portfolio Allocation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to balance assets to match risk tolerance and goals.</p>
+    <div class="affiliate-cta">Browse portfolio allocation books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

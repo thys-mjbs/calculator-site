@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Rent Increase Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your new monthly rent after a percentage increase and see the monthly and annual impact in plain numbers.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/rent-increase-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Rent Increase Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate your new monthly rent after a percentage increase and see the monthly and annual impact in plain numbers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/rent-increase-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rent Increase Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate your new monthly rent after a percentage increase and see the monthly and annual impact in plain numbers.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rent Increase Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/rent-increase-calculator/",
+      "description": "Calculate a new monthly rent after a percentage increase and see the monthly and annual impact."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Rent Increase Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Rent Increase Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate your new rent after a percentage increase</h2>
+
+              <p class="calculator-intro">Use this to turn a rent increase percentage into a clear new monthly rent, plus the monthly and yearly difference.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="currentRent">Current monthly rent</label>
+                <input type="text" id="currentRent" inputmode="decimal" placeholder="e.g., 12,500" />
+              </div>
+
+              <div class="form-group">
+                <label for="increasePercent">Rent increase (%)</label>
+                <input type="text" id="increasePercent" inputmode="decimal" placeholder="e.g., 7.5" />
+              </div>
+
+              <details class="advanced-section">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group" style="margin-top: 10px;">
+                  <label for="monthsToProject">Months to project the impact</label>
+                  <input type="text" id="monthsToProject" inputmode="numeric" placeholder="12" />
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate rent increase</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rXdZI8" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Property Expenses</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Plan and manage ongoing expenses for property ownership.</p>
+    <div class="affiliate-cta">View property expense books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Estimate property costs, rent changes, yields, and common landlord and tenant numbers.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, affordability, and monthly expenses so you can make decisions with real numbers.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Work out costs, margins, and cash flow impacts for practical business planning.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/44XFcQY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Property Analysis</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Analyze property deals using cash flow, yield, and valuation methods.</p>
+    <div class="affiliate-cta">View property analysis books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Rent increase calculator for new monthly rent and annual impact</h2>
+
+              <p>This rent increase calculator is for one simple job: you have a current monthly rent and a percentage increase, and you want to know the new rent you will pay (or charge). It also shows what that increase means in money terms, not just a percentage. That matters because a small percent on a large rent is still a big monthly change, and it compounds into a meaningful yearly difference.</p>
+
+              <p>The dominant use case is a lease renewal where the increase is stated as a percentage, such as “rent increases by 8%” or “increase is CPI plus 2% (total 7%).” This page does not try to model CPI forecasts, tiered increases, or stepped escalations across multiple years. It focuses on the immediate decision normal people make: accept the renewal, negotiate, or budget for the new amount.</p>
+
+              <p>To use it, enter your current monthly rent and the rent increase percentage. Click calculate. The primary output is the new monthly rent. Under that, you will see the increase amount per month and the annual impact. If you want a quick budget view, the calculator also shows what the new rent works out to per week. If you use the optional “months to project” field, you will also see the total extra cost over that period, which helps when you are comparing moving costs versus staying.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The increase is applied once to the current monthly rent as a simple percentage uplift (new rent = current rent × (1 + increase%)).</li>
+                <li>Percent input is treated as a percent, not a decimal (enter 7.5 for 7.5%, not 0.075).</li>
+                <li>All results are shown as amounts with two decimals for readability. Your actual lease may require rounding to the nearest whole currency unit.</li>
+                <li>The projection uses a flat number of months and assumes the new rent stays constant across that period. It does not model future increases.</li>
+                <li>This calculator ignores one-off fees and pass-through costs (utilities, rates, levies, parking, admin charges). It is only about base rent.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is a 0% increase allowed?</h3>
+              <p>Yes. If your increase is 0, the new rent equals the current rent and the monthly and annual differences are zero. If you enter a negative percent, the calculator will reject it because this page is for increases. If you want a reduction, treat it as a separate scenario and use the same math with a negative value manually.</p>
+
+              <h3>What if the rent increase is a fixed amount, not a percentage?</h3>
+              <p>This calculator is intentionally locked to percentage-based increases because that is the most common lease renewal wording and search intent. If you were given a fixed amount increase, convert it into a percentage by dividing the increase amount by the current rent and multiplying by 100, then run the calculation.</p>
+
+              <h3>Why does the yearly impact matter if I pay monthly?</h3>
+              <p>Because it shows the true budget impact over time and makes comparisons easier. For example, a R800 monthly increase is easy to underestimate. Over 12 months it is R9,600. That is the number you compare against moving costs, deposit differences, or alternative rentals.</p>
+
+              <h3>What should I enter for “months to project”?</h3>
+              <p>Use 12 for a typical yearly view, or use the number of months you expect to remain in the property under the new rent. If you are deciding whether to move in 3 months, enter 3 to see the short-term difference, then compare it to your expected moving costs.</p>
+
+              <h3>How can I sanity-check the result?</h3>
+              <p>A quick estimate is to take the current rent and multiply by the percentage. For example, 10% is roughly one tenth. If your rent is 15,000, a 10% increase is about 1,500, so the new rent should be about 16,500. If your calculator output is far from your estimate, re-check whether you entered the percent correctly.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4pNP8EY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Market Cycles</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how property markets move through cycles over time.</p>
+    <div class="affiliate-cta">Browse real estate cycle books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

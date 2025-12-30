@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Class Attendance Percentage Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Calculate your class attendance percentage and check if you meet a required minimum. See how many classes you can miss or must attend to reach your target."
+    />
+
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/education-exams/class-attendance-percentage-calculator/"
+    />
+
+    <meta
+      property="og:title"
+      content="Class Attendance Percentage Calculator | SnapCalc"
+    />
+    <meta
+      property="og:description"
+      content="Calculate your class attendance percentage and check if you meet a required minimum. See how many classes you can miss or must attend to reach your target."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/education-exams/class-attendance-percentage-calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Class Attendance Percentage Calculator | SnapCalc"
+    />
+    <meta
+      name="twitter:description"
+      content="Calculate your class attendance percentage and check if you meet a required minimum. See how many classes you can miss or must attend to reach your target."
+    />
+    <meta
+      name="twitter:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Class Attendance Percentage Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/education-exams/class-attendance-percentage-calculator/",
+        "description": "Calculate your class attendance percentage and check if you meet a required minimum. Optionally estimate how many future classes you can miss or must attend to reach a target by the end of term."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Class Attendance Percentage Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Class Attendance Percentage Calculator</h1>
+
+        <div class="page-grid">
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4aao8uB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Academic Goals</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Set and track academic goals across courses and study periods.</p>
+    <div class="affiliate-cta">Explore academic goal setting tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Check your attendance and required minimum</h2>
+
+              <p class="calculator-intro">
+                Enter classes attended and classes held so far. Optionally set a
+                required attendance percentage and total classes in the term to
+                see how many you can still miss.
+              </p>
+
+              <div class="form-group">
+                <label for="classesAttended">Classes attended (so far)</label>
+                <input
+                  type="text"
+                  id="classesAttended"
+                  inputmode="numeric"
+                  placeholder="e.g., 18"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="classesHeld">Classes held (so far)</label>
+                <input
+                  type="text"
+                  id="classesHeld"
+                  inputmode="numeric"
+                  placeholder="e.g., 24"
+                />
+              </div>
+
+              <details class="advanced-details">
+                <summary>Advanced options</summary>
+
+                <div class="form-group">
+                  <label for="excusedAbsences"
+                    >Excused absences (optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="excusedAbsences"
+                    inputmode="numeric"
+                    placeholder="e.g., 2"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="requiredPercent"
+                    >Required attendance % (optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="requiredPercent"
+                    inputmode="decimal"
+                    placeholder="e.g., 75"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="totalTermClasses"
+                    >Total classes in term (optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="totalTermClasses"
+                    inputmode="numeric"
+                    placeholder="e.g., 40"
+                  />
+                </div>
+              </details>
+
+              <button id="calculateButton" type="button">
+                Calculate attendance
+              </button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education &amp; Exams</h3>
+              <p class="related-desc">
+                Track grades, study time, and academic targets with practical
+                student calculators.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">
+                Plan schedules, estimate time needs, and convert time and date
+                information fast.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">
+                Simple utilities for daily decisions, quick planning, and common
+                real world calculations.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4pySdst" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exam Checklists</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Use checklists to ensure exam readiness and preparation completeness.</p>
+    <div class="affiliate-cta">View exam checklist tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>
+                Class attendance percentage calculator for meeting minimum
+                attendance rules
+              </h2>
+
+              <p>
+                Many schools, colleges, and training programs require a minimum
+                attendance percentage before you can sit for exams, submit final
+                assessments, or receive course credit. The problem is that
+                attendance is easy to misjudge when you are counting weeks,
+                holidays, cancellations, and partial attendance. This calculator
+                is built for one decision: checking whether you meet a required
+                attendance threshold and what you need to do next to stay above
+                it.
+              </p>
+
+              <p>
+                In the default view, you only enter two numbers: how many
+                classes you have attended and how many classes have been held so
+                far. The calculator then shows your current attendance
+                percentage, the gap to a typical minimum requirement, and a
+                clear status message. If you want a more realistic estimate for
+                your institution, you can add a required minimum percentage and
+                the total number of classes in the term, and the calculator will
+                estimate how many future classes you can miss or must attend to
+                finish the term above your target.
+              </p>
+
+              <p>
+                The advanced options exist for common edge cases. Some
+                institutions treat excused absences differently, so you can
+                optionally enter excused absences to view an adjusted
+                attendance figure that removes excused sessions from the
+                denominator. This does not replace your institution’s official
+                policy, but it helps you sanity check both ways of calculating
+                attendance when you are unsure how they record medical leave,
+                approved events, or official exemptions.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
+                  “Classes held so far” means sessions that actually took place.
+                  Do not include cancelled classes that were never run.
+                </li>
+                <li>
+                  “Classes attended so far” means you were present for the
+                  session. If your institution records partial attendance, you
+                  should convert it to your best whole number estimate.
+                </li>
+                <li>
+                  If you enter excused absences, the calculator shows an
+                  additional “adjusted” percentage using held minus excused as
+                  the denominator. If your institution does not exclude excused
+                  absences, ignore the adjusted line.
+                </li>
+                <li>
+                  If you enter a required attendance percent, the calculator
+                  compares your current percentage to that target and tells you
+                  whether you currently meet it.
+                </li>
+                <li>
+                  If you enter total classes in term, the calculator assumes
+                  future classes will be counted normally and estimates how many
+                  you can still miss or must attend from today to finish above
+                  the requirement.
+                </li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the attendance percentage formula?</h3>
+              <p>
+                The basic formula is attendance percentage equals classes
+                attended divided by classes held, multiplied by one hundred. For
+                example, 18 attended out of 24 held is 75%. If you use excused
+                absences, the adjusted version divides attended by held minus
+                excused, then multiplies by one hundred.
+              </p>
+
+              <h3>What if I do not know the total classes in the term?</h3>
+              <p>
+                You can still get a useful answer. Leave total term classes
+                blank and use the calculator to check your current percentage.
+                The “how many can I miss” planning output depends on knowing how
+                many classes remain, so it is only shown when you provide a
+                total term number.
+              </p>
+
+              <h3>Why does the calculator warn if attended is higher than held?</h3>
+              <p>
+                Attendance cannot exceed classes held. If you see that warning,
+                one of your numbers is wrong. The most common mistake is
+                entering scheduled classes instead of classes that actually took
+                place, or counting excused sessions as attended.
+              </p>
+
+              <h3>Do excused absences count against attendance?</h3>
+              <p>
+                Policies vary. Some institutions count excused absences as
+                absences, some exclude them from the calculation, and some use a
+                separate “condoned” category with limits. This calculator shows
+                an optional adjusted percentage so you can understand the impact
+                if excused sessions are excluded. For official decisions, match
+                your institution’s policy.
+              </p>
+
+              <h3>How accurate is the “classes I can miss” result?</h3>
+              <p>
+                It is accurate for the assumptions used: future classes are
+                counted normally, and the requirement is a simple percentage of
+                total counted classes. If your institution uses weighted
+                attendance, different rules for labs versus lectures, or caps on
+                condoned absences, the planning result can be directionally
+                useful but not official. The safest use is as a planning guide,
+                then confirm with your course administrator if you are close to
+                the cutoff.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-23</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KGJ0zj" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Revision Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track revision progress and identify weak areas before exams.</p>
+    <div class="affiliate-cta">Browse revision tracking tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

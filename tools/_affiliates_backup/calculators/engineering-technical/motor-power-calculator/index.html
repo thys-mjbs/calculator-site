@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Motor Power Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate an electric motor’s input power and estimated shaft power from voltage, current, power factor, efficiency, and phase (single or three-phase).">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/motor-power-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Motor Power Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate an electric motor’s input power and estimated shaft power from voltage, current, power factor, efficiency, and phase (single or three-phase).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/motor-power-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Motor Power Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate an electric motor’s input power and estimated shaft power from voltage, current, power factor, efficiency, and phase (single or three-phase).">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Motor Power Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/motor-power-calculator/",
+      "description": "Calculate an electric motor’s input power and estimated shaft power from voltage, current, power factor, efficiency, and phase (single or three-phase)."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Motor Power Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Motor Power Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iXUY4i" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Fluid Mechanics</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for flow rate, pressure, and fluid behaviour calculations.</p>
+    <div class="affiliate-cta">Explore fluid mechanics tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate motor power from electrical inputs</h2>
+
+              <p class="calculator-intro">Use voltage and current to estimate input power, then apply power factor and efficiency to estimate shaft power.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="phaseType">Supply type</label>
+                <select id="phaseType" aria-label="Supply type">
+                  <option value="three" selected>Three-phase AC</option>
+                  <option value="single">Single-phase AC</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="voltage">Voltage (V)</label>
+                <input type="text" id="voltage" inputmode="decimal" placeholder="e.g., 400" aria-label="Voltage in volts">
+              </div>
+
+              <div class="form-group">
+                <label for="current">Current (A)</label>
+                <input type="text" id="current" inputmode="decimal" placeholder="e.g., 12.5" aria-label="Current in amps">
+              </div>
+
+              <div class="form-group">
+                <label for="powerFactor">Power factor (0 to 1, optional)</label>
+                <input type="text" id="powerFactor" inputmode="decimal" placeholder="Default: 0.85" aria-label="Power factor">
+              </div>
+
+              <div class="form-group">
+                <label for="efficiency">Motor efficiency (% , optional)</label>
+                <input type="text" id="efficiency" inputmode="decimal" placeholder="Default: 90" aria-label="Motor efficiency percent">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate motor power</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4s1sv1C" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Load & Stress</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Calculate loads, stresses, and safety factors in structures.</p>
+    <div class="affiliate-cta">View load and stress tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Run practical engineering calculations for electrical, mechanical, and technical work.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units quickly, including power, energy, temperature, and common measurement conversions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate materials, quantities, and job inputs used in planning and on-site decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Motor power calculator for kW and horsepower from voltage and current</h2>
+
+              <p>This motor power calculator is built for a single job: estimating the electrical input power and the usable shaft power of an AC motor from the numbers most people actually have on hand. In the real world, you often have a nameplate voltage, a measured current (or the rated full-load current), and then a need to sanity-check whether the motor is the right size for a load, a breaker, a cable, or a generator. The calculator converts those inputs into power in kilowatts (kW) and also shows an estimated horsepower value for quick comparisons.</p>
+
+              <p>The key idea is that electrical power drawn by an AC motor depends on phase type and power factor. For three-phase systems, input power is proportional to √3 × voltage × current × power factor. For single-phase systems, it is proportional to voltage × current × power factor. That gives you an estimated electrical input power. Motors do not convert all input power into useful mechanical output, so the calculator also applies an efficiency value to estimate shaft power. That estimated shaft power is the figure that matters when you are thinking about the mechanical work the motor can deliver to a pump, fan, compressor, conveyor, or other driven load.</p>
+
+              <p>To use the calculator quickly, pick the supply type, enter voltage and current, and hit calculate. If you do not know the power factor or efficiency, leave them blank and the calculator will use reasonable defaults. You will still get a usable estimate, and the result will explicitly state the assumptions used so you know what was guessed. If you do know your motor’s power factor and efficiency (from a datasheet or a test report), enter them for a tighter estimate. This calculator is intentionally not a full motor selection tool. It does not try to model starting current, torque curves, harmonics, variable-speed drive effects, or specific motor classes. It is for steady-state power estimation from basic electrical inputs.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If power factor is not provided, the calculator assumes 0.85, which is a common practical value for many induction motors under load.</li>
+                <li>If efficiency is not provided, the calculator assumes 90%, which is a reasonable mid-range estimate for many general-purpose motors but may be higher for premium-efficiency motors and lower for small motors.</li>
+                <li>Voltage is treated as line-to-line voltage for three-phase systems and as supply voltage for single-phase systems, which matches how these values are usually stated on nameplates.</li>
+                <li>The result is a steady-state estimate and is not valid for starting conditions, locked-rotor current, or short-duration overload scenarios.</li>
+                <li>If your motor is powered by a variable-speed drive, the true power factor and waveform effects can differ from the simple assumptions here, so treat the output as a rough estimate unless you have measured values.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Is the result motor size (rated power) or actual power right now?</h3>
+              <p>It is an estimate of actual power based on the voltage and current you enter. If you enter rated current at rated voltage, the number may resemble the motor’s rated operating power, but real power changes with load. If you enter a measured current while the motor is running, the result reflects that operating condition.</p>
+
+              <h3>What if I do not know power factor or efficiency?</h3>
+              <p>Leave them blank. The calculator will apply defaults and show them in the result so you can judge whether the assumptions are acceptable. If accuracy matters, use datasheet values or measure power factor with a suitable meter.</p>
+
+              <h3>Why does three-phase use a different formula?</h3>
+              <p>Three-phase power depends on the relationship between line voltage and phase voltages, which introduces the √3 factor in the common line-to-line voltage formula. Single-phase does not use that factor. The calculator applies the correct standard form based on your supply type selection.</p>
+
+              <h3>Can I use this for DC motors?</h3>
+              <p>No. This calculator is designed for AC motor estimation using power factor and phase type. DC power is calculated differently and does not use AC power factor. Use a dedicated DC power calculator for DC systems.</p>
+
+              <h3>How can I make the estimate more accurate?</h3>
+              <p>Use measured values: actual voltage at the motor terminals, actual running current, and a measured power factor. If you can, use the motor’s efficiency at the operating load point from a datasheet. Also note whether a variable-speed drive is involved, since it can change the relationship between current and real power.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

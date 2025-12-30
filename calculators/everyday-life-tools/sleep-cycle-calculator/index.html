@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Sleep Cycle Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/sleep-cycle-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Sleep Cycle Calculator | SnapCalc">
-    <meta property="og:description" content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/sleep-cycle-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sleep Cycle Calculator | SnapCalc">
-    <meta name="twitter:description" content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Sleep Cycle Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/sleep-cycle-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Sleep Cycle Calculator | SnapCalc" property="og:title"/>
+<meta content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/sleep-cycle-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Sleep Cycle Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Find ideal bedtimes or wake-up times based on sleep cycles, fall-asleep time, and a realistic number of cycles, so you wake up feeling less groggy." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,245 +33,194 @@
       "description": "Calculate recommended bedtimes or wake-up times using sleep cycles, an estimated time to fall asleep, and a practical range of cycles, to reduce waking groggy."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
         <span>Sleep Cycle Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Sleep Cycle Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Sleep Cycle Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4iVrZhn" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Decision Making</div>
--->
-    <p class="affiliate-copy">Make everyday decisions easier using structured decision tools.</p>
-    <div class="affiliate-cta">Explore decision making tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Plan a bedtime or wake-up time that avoids waking mid-cycle</h2>
-
-              <p class="calculator-intro">Enter a time in 24-hour format (HH:MM). You will get a short list of realistic options based on sleep cycles and an estimated time to fall asleep.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="input-group">
-                <label for="modeSelect">What do you want to calculate?</label>
-                <select id="modeSelect">
-                  <option value="bedtime" selected>I need to wake up at (show best bedtimes)</option>
-                  <option value="wakeTime">I am going to bed at (show best wake-up times)</option>
-                </select>
-              </div>
-
-              <div id="modeBedtimeBlock">
-                <div class="input-group">
-                  <label for="wakeUpTime">Wake-up time (HH:MM)</label>
-                  <input id="wakeUpTime" type="text" inputmode="numeric" placeholder="07:00">
-                </div>
-              </div>
-
-              <div id="modeWakeTimeBlock" class="hidden">
-                <div class="input-group">
-                  <label for="bedTime">Bedtime (HH:MM)</label>
-                  <input id="bedTime" type="text" inputmode="numeric" placeholder="23:00">
-                </div>
-              </div>
-
-              <details class="advanced">
-                <summary>Advanced (optional)</summary>
-
-                <div class="input-group">
-                  <label for="fallAsleepMinutes">Time to fall asleep (minutes)</label>
-                  <input id="fallAsleepMinutes" type="text" inputmode="numeric" placeholder="15" value="15">
-                  <p class="field-hint">Most people take about 10–20 minutes. If you are unsure, leave it at 15.</p>
-                </div>
-
-                <div class="input-group">
-                  <label for="cycleLengthMinutes">Sleep cycle length (minutes)</label>
-                  <input id="cycleLengthMinutes" type="text" inputmode="numeric" placeholder="90" value="90">
-                  <p class="field-hint">90 minutes is a common practical estimate. Individual cycles vary.</p>
-                </div>
-
-                <div class="input-group">
-                  <label for="minCycles">Minimum cycles to show</label>
-                  <input id="minCycles" type="text" inputmode="numeric" placeholder="3" value="3">
-                </div>
-
-                <div class="input-group">
-                  <label for="maxCycles">Maximum cycles to show</label>
-                  <input id="maxCycles" type="text" inputmode="numeric" placeholder="6" value="6">
-                  <p class="field-hint">A typical range is 3–6 cycles. More cycles means more total sleep time.</p>
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Plan a bedtime or wake-up time that avoids waking mid-cycle</h2>
+<p class="calculator-intro">Enter a time in 24-hour format (HH:MM). You will get a short list of realistic options based on sleep cycles and an estimated time to fall asleep.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="modeSelect">What do you want to calculate?</label>
+<select id="modeSelect">
+<option selected="" value="bedtime">I need to wake up at (show best bedtimes)</option>
+<option value="wakeTime">I am going to bed at (show best wake-up times)</option>
+</select>
+</div>
+<div id="modeBedtimeBlock">
+<div class="input-group">
+<label for="wakeUpTime">Wake-up time (HH:MM)</label>
+<input id="wakeUpTime" inputmode="numeric" placeholder="07:00" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeWakeTimeBlock">
+<div class="input-group">
+<label for="bedTime">Bedtime (HH:MM)</label>
+<input id="bedTime" inputmode="numeric" placeholder="23:00" type="text"/>
+</div>
+</div>
+<details class="advanced">
+<summary>Advanced (optional)</summary>
+<div class="input-group">
+<label for="fallAsleepMinutes">Time to fall asleep (minutes)</label>
+<input id="fallAsleepMinutes" inputmode="numeric" placeholder="15" type="text" value="15"/>
+<p class="field-hint">Most people take about 10–20 minutes. If you are unsure, leave it at 15.</p>
+</div>
+<div class="input-group">
+<label for="cycleLengthMinutes">Sleep cycle length (minutes)</label>
+<input id="cycleLengthMinutes" inputmode="numeric" placeholder="90" type="text" value="90"/>
+<p class="field-hint">90 minutes is a common practical estimate. Individual cycles vary.</p>
+</div>
+<div class="input-group">
+<label for="minCycles">Minimum cycles to show</label>
+<input id="minCycles" inputmode="numeric" placeholder="3" type="text" value="3"/>
+</div>
+<div class="input-group">
+<label for="maxCycles">Maximum cycles to show</label>
+<input id="maxCycles" inputmode="numeric" placeholder="6" type="text" value="6"/>
+<p class="field-hint">A typical range is 3–6 cycles. More cycles means more total sleep time.</p>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/3MIUoLw" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Shopping Lists</div>
--->
-    <p class="affiliate-copy">Create and manage shopping lists to save time and reduce waste.</p>
-    <div class="affiliate-cta">View shopping list tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Quick practical calculators for daily decisions, planning, and small life admin.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/health-fitness/">
-              <h3 class="related-title">Health & Fitness</h3>
-              <p class="related-desc">Plan routines and targets for sleep, nutrition, training, and general wellbeing.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date & Scheduling</h3>
-              <p class="related-desc">Convert times, estimate durations, and schedule around real-world constraints.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Sleep cycle calculator for best bedtime and wake-up time</h2>
-
-              <p>This sleep cycle calculator helps you pick a bedtime (or wake-up time) that lines up with natural sleep cycles. The practical goal is simple: reduce the odds of waking up in the middle of a deep stage of sleep, which often feels like heavy grogginess. Instead of guessing, you enter the time you must wake up (or the time you plan to go to bed) and the tool gives a short list of realistic options based on a cycle model.</p>
-
-              <p>Most people do not fall asleep instantly, and real sleep is not perfectly clean. That is why the calculator includes an optional “time to fall asleep” input. If you do not know it, leave the default. The output times are not a medical promise. They are planning targets that can help you set an alarm, choose when to stop scrolling, or decide whether a short sleep is worth it when you have limited time.</p>
-
-              <p>The results are shown as a small list (for example, 3 to 6 cycles). Each option includes the predicted time and the total sleep time the option aims for. You can treat the list as a menu. If you want maximum sleep, choose the option with the most cycles that still fits your schedule. If your evening is tight, choose fewer cycles rather than aiming for an awkward “in between” duration that increases the chance of waking mid-cycle.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Sleep cycles are treated as a constant length (default 90 minutes), even though real cycles vary by person and across the night.</li>
-                <li>Time to fall asleep is an estimate (default 15 minutes) and can be adjusted if you typically fall asleep faster or slower.</li>
-                <li>The calculator targets a practical range of cycles (default 3–6). Fewer than 3 cycles is usually too little for most adults.</li>
-                <li>The results assume uninterrupted sleep. Frequent waking, noise, alcohol, caffeine, stress, or illness can shift sleep depth and timing.</li>
-                <li>This tool is for planning bedtime and alarms, not for diagnosing sleep problems or replacing professional advice.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why does waking up at the “wrong” time feel worse even if I slept enough hours?</h3>
-              <p>Sleep is not one steady state. You cycle through lighter and deeper stages across the night. If your alarm goes off during a deeper stage, your brain is forced awake before it is ready, which can feel like a heavy fog. This calculator aims to place your wake-up closer to the end of a cycle, where sleep tends to be lighter. It does not guarantee a perfect wake-up, but it reduces the odds of an especially rough one compared with choosing a random duration.</p>
-
-              <h3>Is 90 minutes always correct for a sleep cycle?</h3>
-              <p>No. It is a common, practical average used for planning. Some people have shorter or longer cycles, and cycle length can shift across the night. The point of the calculator is not to claim precision. It is to give a better target than “eight hours” when you are trying to avoid waking mid-cycle. If you track sleep with a wearable and consistently see different cycle timing, you can adjust the cycle length input to better match your own pattern.</p>
-
-              <h3>What should I set for “time to fall asleep” if I do not know it?</h3>
-              <p>Leave it at 15 minutes unless you have a strong reason to change it. Many people underestimate how long it takes them to fall asleep because they lose track of time while drifting off. If you usually lie awake for a long time, increase the number (for example 25–40). If you fall asleep almost immediately, reduce it (for example 5–10). The impact is simple: a larger fall-asleep time pushes the recommended bedtime earlier and pushes the predicted wake-up later.</p>
-
-              <h3>Should I choose more cycles or fewer cycles if my schedule is tight?</h3>
-              <p>If you cannot get a full night, it is usually better to pick a whole number of cycles rather than aiming for a random duration. For example, 4.5 cycles is not a stable planning target because it increases the chance your alarm hits mid-cycle. Choose the option with fewer cycles that still fits your constraints, and treat the remainder as intentional sleep restriction. If you need to function at a high level, you should prioritise more cycles whenever possible.</p>
-
-              <h3>When does this calculator not apply well?</h3>
-              <p>The cycle model is less helpful when your sleep is highly fragmented or when you are severely sleep deprived. It is also less reliable if you frequently wake up for caregiving, shift work interruptions, or untreated sleep disorders. In those situations, the timing of cycles can be disrupted, and “best” times can move around. You can still use the tool for rough planning, but you should focus more on consistent total sleep time, stable wake-up timing, and reducing disruptions rather than expecting cycle alignment alone to fix fatigue.</p>
-
-              <div class="last-updated">Last updated: 2025-12-30</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
 </div>
--->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick practical calculators for daily decisions, planning, and small life admin.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Plan routines and targets for sleep, nutrition, training, and general wellbeing.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Convert times, estimate durations, and schedule around real-world constraints.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Sleep cycle calculator for best bedtime and wake-up time</h2>
+<p>This sleep cycle calculator helps you pick a bedtime (or wake-up time) that lines up with natural sleep cycles. The practical goal is simple: reduce the odds of waking up in the middle of a deep stage of sleep, which often feels like heavy grogginess. Instead of guessing, you enter the time you must wake up (or the time you plan to go to bed) and the tool gives a short list of realistic options based on a cycle model.</p>
+<p>Most people do not fall asleep instantly, and real sleep is not perfectly clean. That is why the calculator includes an optional “time to fall asleep” input. If you do not know it, leave the default. The output times are not a medical promise. They are planning targets that can help you set an alarm, choose when to stop scrolling, or decide whether a short sleep is worth it when you have limited time.</p>
+<p>The results are shown as a small list (for example, 3 to 6 cycles). Each option includes the predicted time and the total sleep time the option aims for. You can treat the list as a menu. If you want maximum sleep, choose the option with the most cycles that still fits your schedule. If your evening is tight, choose fewer cycles rather than aiming for an awkward “in between” duration that increases the chance of waking mid-cycle.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Sleep cycles are treated as a constant length (default 90 minutes), even though real cycles vary by person and across the night.</li>
+<li>Time to fall asleep is an estimate (default 15 minutes) and can be adjusted if you typically fall asleep faster or slower.</li>
+<li>The calculator targets a practical range of cycles (default 3–6). Fewer than 3 cycles is usually too little for most adults.</li>
+<li>The results assume uninterrupted sleep. Frequent waking, noise, alcohol, caffeine, stress, or illness can shift sleep depth and timing.</li>
+<li>This tool is for planning bedtime and alarms, not for diagnosing sleep problems or replacing professional advice.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does waking up at the “wrong” time feel worse even if I slept enough hours?</h3>
+<p>Sleep is not one steady state. You cycle through lighter and deeper stages across the night. If your alarm goes off during a deeper stage, your brain is forced awake before it is ready, which can feel like a heavy fog. This calculator aims to place your wake-up closer to the end of a cycle, where sleep tends to be lighter. It does not guarantee a perfect wake-up, but it reduces the odds of an especially rough one compared with choosing a random duration.</p>
+<h3>Is 90 minutes always correct for a sleep cycle?</h3>
+<p>No. It is a common, practical average used for planning. Some people have shorter or longer cycles, and cycle length can shift across the night. The point of the calculator is not to claim precision. It is to give a better target than “eight hours” when you are trying to avoid waking mid-cycle. If you track sleep with a wearable and consistently see different cycle timing, you can adjust the cycle length input to better match your own pattern.</p>
+<h3>What should I set for “time to fall asleep” if I do not know it?</h3>
+<p>Leave it at 15 minutes unless you have a strong reason to change it. Many people underestimate how long it takes them to fall asleep because they lose track of time while drifting off. If you usually lie awake for a long time, increase the number (for example 25–40). If you fall asleep almost immediately, reduce it (for example 5–10). The impact is simple: a larger fall-asleep time pushes the recommended bedtime earlier and pushes the predicted wake-up later.</p>
+<h3>Should I choose more cycles or fewer cycles if my schedule is tight?</h3>
+<p>If you cannot get a full night, it is usually better to pick a whole number of cycles rather than aiming for a random duration. For example, 4.5 cycles is not a stable planning target because it increases the chance your alarm hits mid-cycle. Choose the option with fewer cycles that still fits your constraints, and treat the remainder as intentional sleep restriction. If you need to function at a high level, you should prioritise more cycles whenever possible.</p>
+<h3>When does this calculator not apply well?</h3>
+<p>The cycle model is less helpful when your sleep is highly fragmented or when you are severely sleep deprived. It is also less reliable if you frequently wake up for caregiving, shift work interruptions, or untreated sleep disorders. In those situations, the timing of cycles can be disrupted, and “best” times can move around. You can still use the tool for rough planning, but you should focus more on consistent total sleep time, stable wake-up timing, and reducing disruptions rather than expecting cycle alignment alone to fix fatigue.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

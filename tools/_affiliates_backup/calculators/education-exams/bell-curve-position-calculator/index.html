@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Bell Curve Position Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your bell curve position from your score, class average, and standard deviation. Get your z-score, percentile rank, and estimated rank in the group.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/bell-curve-position-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Bell Curve Position Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate your bell curve position from your score, class average, and standard deviation. Get your z-score, percentile rank, and estimated rank in the group.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/bell-curve-position-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bell Curve Position Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate your bell curve position from your score, class average, and standard deviation. Get your z-score, percentile rank, and estimated rank in the group.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bell Curve Position Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/bell-curve-position-calculator/",
+      "description": "Calculate your bell curve position using your score, the class mean, and the standard deviation to get a z-score, percentile rank, and an estimated rank in the group."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education & Exams</a> ›
+        <span>Bell Curve Position Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Bell Curve Position Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4aao8uB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Academic Goals</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Set and track academic goals across courses and study periods.</p>
+    <div class="affiliate-cta">Explore academic goal setting tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Find your bell curve position</h2>
+
+              <p class="calculator-intro">Enter your score, the class average, and the standard deviation to estimate your percentile and where you likely rank in the group.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="scoreInput">Your score</label>
+                <input type="text" id="scoreInput" inputmode="decimal" placeholder="e.g., 78">
+              </div>
+
+              <div class="form-group">
+                <label for="meanInput">Class average (mean)</label>
+                <input type="text" id="meanInput" inputmode="decimal" placeholder="e.g., 65">
+              </div>
+
+              <div class="form-group">
+                <label for="sdInput">Standard deviation</label>
+                <input type="text" id="sdInput" inputmode="decimal" placeholder="e.g., 12">
+              </div>
+
+              <details>
+                <summary>Advanced options (optional)</summary>
+
+                <div class="form-group" style="margin-top:10px;">
+                  <label for="classSizeInput">Class size (for estimated rank)</label>
+                  <input type="text" id="classSizeInput" inputmode="numeric" placeholder="e.g., 120">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate position</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3L1zMOb" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Learning Progress</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Monitor learning progress across subjects and study sessions.</p>
+    <div class="affiliate-cta">View learning progress trackers on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Calculate grades, curves, study metrics, and exam outcomes with clear, practical tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Work with percentages, ratios, statistics, and everyday math without manual errors.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan study time, deadlines, and schedules with fast date and time utilities.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oPd61p" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Learning Analytics</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Analyse study patterns and performance to optimise learning.</p>
+    <div class="affiliate-cta">Browse learning analytics tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Bell curve position calculator for percentile rank and z-score</h2>
+
+              <p>A “bell curve position” question usually means one thing: you want to know where your score sits compared to everyone else, assuming scores are roughly normally distributed. The most useful way to express that is a percentile rank (what percentage of people you scored higher than) plus a z-score (how many standard deviations above or below the class average you are). This calculator is built for that exact intent. It uses your score, the class mean, and the standard deviation to estimate your percentile on a normal distribution curve and then translates that into a plain-language position like “above average” or “well above average.” If you also know the class size, it can estimate how many students likely scored above you and below you, and provide an approximate rank position.</p>
+
+              <p>To use it, enter your score as reported (for example, a test mark out of 100, or points out of any total), the class average (mean), and the standard deviation. The standard deviation is the critical piece: it describes how spread out the class scores are. If the standard deviation is small, a few points above the mean can place you far into the top percentiles. If it is large, the same point difference may not move your percentile much. Once you calculate, the main result shows your z-score and estimated percentile. The z-score is computed as (your score − mean) ÷ standard deviation. A z-score of 0 means you are exactly at the class average. A positive z-score means you are above the average; negative means below. The percentile converts that z-score into an estimated position on the bell curve, which is the simplest way to interpret “how did I do compared to others.”</p>
+
+              <p>The optional class size input is only used to turn the percentile into an estimated rank and a quick “how many people are likely above you” insight. If you leave it blank, the calculator still produces the z-score and percentile, and it will assume a default group size for the rank estimate. Keep in mind that rank from a percentile is always an approximation unless you have the full list of scores. Real classes can deviate from a perfect bell curve (especially in small groups, very easy exams, very hard exams, or when marks are capped or curved by policy). This tool is designed for fast, defensible estimation when you have the common summary stats available, not for replicating an institution’s specific grading policy or adjusting marks on a curve.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Scores are treated as approximately normally distributed (a bell curve), which is often reasonable in larger groups but not guaranteed.</li>
+                <li>The mean and standard deviation you enter should be from the same assessment and the same group as your score.</li>
+                <li>Standard deviation must be greater than 0; if it is very small, tiny score differences can swing percentiles sharply.</li>
+                <li>Percentile and rank are estimates, especially for small class sizes or when scores are clumped due to rounding, caps, or very easy or hard exams.</li>
+                <li>This calculator estimates position only; it does not “curve” your score, apply grading cutoffs, or convert percentiles into letter grades.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does the z-score mean in plain language?</h3>
+              <p>The z-score is how far your score is from the class average, measured in standard deviations. Roughly: 0 is average, +1 is clearly above average, +2 is near the top, and −1 is clearly below average. The exact percentile depends on the bell curve conversion, but the sign and size of the z-score are the quickest interpretation.</p>
+
+              <h3>Why do I need the standard deviation?</h3>
+              <p>Without standard deviation, you cannot convert a score difference into a meaningful position. A 10-point difference could be huge in a tight-scoring class (small standard deviation) or minor in a wide-scoring class (large standard deviation). Standard deviation is what makes the bell curve “scale” work.</p>
+
+              <h3>My class is not a perfect bell curve. Is the percentile still useful?</h3>
+              <p>It is useful as an estimate if the distribution is not extremely skewed and the class is not tiny. If the exam was very easy or very hard, or if marks were capped or bunched (for example, many people scoring the same), the bell curve assumption can be off. In those cases, treat the percentile as directional, not exact.</p>
+
+              <h3>I do not know the class size. Can I still use this?</h3>
+              <p>Yes. Class size is only needed for the estimated rank and “how many are above/below” counts. The core outputs (z-score and percentile) do not require class size. If you leave class size blank, the calculator uses a default group size for the rank estimate and clearly labels it as an estimate.</p>
+
+              <h3>Does this calculator change my grade or apply a grading curve?</h3>
+              <p>No. This calculator estimates your position on a bell curve from summary statistics. It does not apply institutional grading rules, cutoffs, or score adjustments. If you are looking for grade curving or adjusted marks, you need the specific policy and method used by your school or lecturer.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

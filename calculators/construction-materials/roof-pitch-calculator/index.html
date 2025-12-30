@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Roof Pitch Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/roof-pitch-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Roof Pitch Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/roof-pitch-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Roof Pitch Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Roof Pitch Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/roof-pitch-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Roof Pitch Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/roof-pitch-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Roof Pitch Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate roof pitch from rise and run (or from angle). Get pitch per 12, roof angle in degrees, slope percent, and rafter length using optional run length." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,237 +33,192 @@
       "description": "Calculate roof pitch from rise and run (or from angle). Shows pitch per 12, degrees, slope percent, and optional rafter length."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
         <span>Roof Pitch Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Roof Pitch Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Roof Pitch Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4oPfhlD" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Mechanical Tools</div>
--->
-    <p class="affiliate-copy">Tools for mechanical calculations, forces, torque, and motion analysis.</p>
-    <div class="affiliate-cta">Explore mechanical engineering tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Find your roof pitch from measurements</h2>
-
-              <p class="calculator-intro">Use rise and run (most common) or enter a roof angle. You will get pitch per 12, degrees, slope percent, and an optional rafter length.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="input-group">
-                <label for="modeSelect">Method</label>
-                <select id="modeSelect">
-                  <option value="riseRun" selected>Rise and run</option>
-                  <option value="angleRun">Angle and run</option>
-                </select>
-              </div>
-
-              <div id="modeRiseRun">
-                <div class="input-group">
-                  <label for="riseInput">Rise (vertical)</label>
-                  <input type="text" id="riseInput" inputmode="decimal" placeholder="e.g., 6">
-                </div>
-
-                <div class="input-group">
-                  <label for="runInput">Run (horizontal)</label>
-                  <input type="text" id="runInput" inputmode="decimal" placeholder="e.g., 12">
-                </div>
-              </div>
-
-              <div id="modeAngleRun" class="hidden">
-                <div class="input-group">
-                  <label for="angleInput">Roof angle (degrees)</label>
-                  <input type="text" id="angleInput" inputmode="decimal" placeholder="e.g., 26.6">
-                </div>
-
-                <div class="input-group">
-                  <label for="runAngleInput">Reference run (horizontal)</label>
-                  <input type="text" id="runAngleInput" inputmode="decimal" placeholder="e.g., 12">
-                </div>
-              </div>
-
-              <div class="input-group">
-                <label for="runLengthInput">Optional: horizontal run length for one rafter (same units)</label>
-                <input type="text" id="runLengthInput" inputmode="decimal" placeholder="e.g., 240">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate roof pitch</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Find your roof pitch from measurements</h2>
+<p class="calculator-intro">Use rise and run (most common) or enter a roof angle. You will get pitch per 12, degrees, slope percent, and an optional rafter length.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="modeSelect">Method</label>
+<select id="modeSelect">
+<option selected="" value="riseRun">Rise and run</option>
+<option value="angleRun">Angle and run</option>
+</select>
+</div>
+<div id="modeRiseRun">
+<div class="input-group">
+<label for="riseInput">Rise (vertical)</label>
+<input id="riseInput" inputmode="decimal" placeholder="e.g., 6" type="text"/>
+</div>
+<div class="input-group">
+<label for="runInput">Run (horizontal)</label>
+<input id="runInput" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeAngleRun">
+<div class="input-group">
+<label for="angleInput">Roof angle (degrees)</label>
+<input id="angleInput" inputmode="decimal" placeholder="e.g., 26.6" type="text"/>
+</div>
+<div class="input-group">
+<label for="runAngleInput">Reference run (horizontal)</label>
+<input id="runAngleInput" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+</div>
+<div class="input-group">
+<label for="runLengthInput">Optional: horizontal run length for one rafter (same units)</label>
+<input id="runLengthInput" inputmode="decimal" placeholder="e.g., 240" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate roof pitch</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/496ZJoJ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Thermal Calculations</div>
--->
-    <p class="affiliate-copy">Calculate heat transfer, temperature change, and energy flow.</p>
-    <div class="affiliate-cta">View thermal engineering tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/construction-materials/">
-              <h3 class="related-title">Construction &amp; Materials</h3>
-              <p class="related-desc">Estimate quantities, dimensions, and coverage for common building and renovation tasks.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/engineering-technical/">
-              <h3 class="related-title">Engineering &amp; Technical</h3>
-              <p class="related-desc">Solve practical engineering math including forces, power, angles, and mechanical relationships.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math &amp; General Calculators</h3>
-              <p class="related-desc">Handle everyday math like percentages, ratios, rounding, and quick reference conversions.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4agcTko" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Unit Conversions</div>
--->
-    <p class="affiliate-copy">Convert engineering units quickly and accurately.</p>
-    <div class="affiliate-cta">Browse engineering unit conversion tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Roof pitch calculator for rise/run, degrees, and rafter length</h2>
-
-              <p>This roof pitch calculator is built for one clear job: turning a simple measurement into a usable roof pitch. Most people measure a roof by checking how much it rises over a known horizontal distance (the run). Once you have that, you can express the pitch as “X in 12” (or X/12), convert it to an angle in degrees, and see the slope as a percentage. Those formats show up everywhere: material specs, planning notes, rough estimates, and basic cut planning.</p>
-
-              <p>The default method is rise and run, because it matches how roofs are typically checked in the field. Measure the vertical rise and the horizontal run using the same units. If you only know the roof angle, switch to the angle method and enter degrees plus a reference run. The calculator will convert the angle back into rise/run and pitch-per-12 outputs so you can communicate the pitch in the format most people expect.</p>
-
-              <p>You also get an optional rafter-length estimate if you provide a horizontal run length for one rafter. This is useful when you want a quick sense of the diagonal length along the rafter for that run distance. It is not a full framing design tool. It does not add overhangs, ridge thickness, birdsmouth depth, heel height, or any local code requirements. It is a clean geometric result based on the pitch you entered.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Rise and run must be measured in the same units (inches and inches, millimetres and millimetres, and so on).</li>
-                <li>Pitch per 12 is computed as (rise ÷ run) × 12. If your run is already 12, your rise value is your pitch-per-12.</li>
-                <li>Angle in degrees is computed from the slope using arctangent (atan(rise ÷ run)).</li>
-                <li>Slope percent is computed as (rise ÷ run) × 100. This is common in drainage and grading contexts.</li>
-                <li>Optional rafter length assumes a straight right triangle: rafter = √(run² + rise²) for the provided run length, with rise scaled by the same pitch.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What does “6/12 pitch” mean in plain terms?</h3>
-              <p>A 6/12 pitch means the roof rises 6 units for every 12 units of horizontal run. If you measure 12 inches across and the roof rises 6 inches over that distance, the pitch is 6/12. The units do not matter as long as they match for rise and run.</p>
-
-              <h3>Why does the calculator show both pitch-per-12 and degrees?</h3>
-              <p>Pitch-per-12 is common on job sites and in roofing discussions. Degrees are common in drawings, some tools, and some engineering references. They describe the same slope in different formats. Converting between them helps you communicate with whoever you are dealing with.</p>
-
-              <h3>I do not know the run. Can I still use this?</h3>
-              <p>You need some run distance to turn a rise measurement into a slope. If you can measure any horizontal distance, even a smaller one, you can use it. For example, if you measure a 300 mm run and a 150 mm rise, that is still valid because the ratio is what matters.</p>
-
-              <h3>What is the optional rafter length actually measuring?</h3>
-              <p>It is the diagonal length along the slope for the horizontal run length you entered. If you enter a 2400 mm horizontal run for one side, the calculator estimates the straight-line rafter length for that run at the calculated pitch. It does not include overhangs or extra allowances.</p>
-
-              <h3>When might this calculator not apply?</h3>
-              <p>If your roof is curved, stepped, or changes pitch, a single rise/run measurement will not describe it. Also, if you are doing structural design, you need more than geometry. Loads, spans, spacing, materials, connectors, and code rules matter. Use this calculator for pitch identification and simple geometry only.</p>
-
-              <div class="last-updated">Last updated: 2025-12-30</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4q0U2OS" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Safety Factors</div>
--->
-    <p class="affiliate-copy">Apply safety factors correctly in engineering calculations.</p>
-    <div class="affiliate-cta">Browse safety factor tools on Amazon</div>
-  </a>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, dimensions, and coverage for common building and renovation tasks.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve practical engineering math including forces, power, angles, and mechanical relationships.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle everyday math like percentages, ratios, rounding, and quick reference conversions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Roof pitch calculator for rise/run, degrees, and rafter length</h2>
+<p>This roof pitch calculator is built for one clear job: turning a simple measurement into a usable roof pitch. Most people measure a roof by checking how much it rises over a known horizontal distance (the run). Once you have that, you can express the pitch as “X in 12” (or X/12), convert it to an angle in degrees, and see the slope as a percentage. Those formats show up everywhere: material specs, planning notes, rough estimates, and basic cut planning.</p>
+<p>The default method is rise and run, because it matches how roofs are typically checked in the field. Measure the vertical rise and the horizontal run using the same units. If you only know the roof angle, switch to the angle method and enter degrees plus a reference run. The calculator will convert the angle back into rise/run and pitch-per-12 outputs so you can communicate the pitch in the format most people expect.</p>
+<p>You also get an optional rafter-length estimate if you provide a horizontal run length for one rafter. This is useful when you want a quick sense of the diagonal length along the rafter for that run distance. It is not a full framing design tool. It does not add overhangs, ridge thickness, birdsmouth depth, heel height, or any local code requirements. It is a clean geometric result based on the pitch you entered.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Rise and run must be measured in the same units (inches and inches, millimetres and millimetres, and so on).</li>
+<li>Pitch per 12 is computed as (rise ÷ run) × 12. If your run is already 12, your rise value is your pitch-per-12.</li>
+<li>Angle in degrees is computed from the slope using arctangent (atan(rise ÷ run)).</li>
+<li>Slope percent is computed as (rise ÷ run) × 100. This is common in drainage and grading contexts.</li>
+<li>Optional rafter length assumes a straight right triangle: rafter = √(run² + rise²) for the provided run length, with rise scaled by the same pitch.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What does “6/12 pitch” mean in plain terms?</h3>
+<p>A 6/12 pitch means the roof rises 6 units for every 12 units of horizontal run. If you measure 12 inches across and the roof rises 6 inches over that distance, the pitch is 6/12. The units do not matter as long as they match for rise and run.</p>
+<h3>Why does the calculator show both pitch-per-12 and degrees?</h3>
+<p>Pitch-per-12 is common on job sites and in roofing discussions. Degrees are common in drawings, some tools, and some engineering references. They describe the same slope in different formats. Converting between them helps you communicate with whoever you are dealing with.</p>
+<h3>I do not know the run. Can I still use this?</h3>
+<p>You need some run distance to turn a rise measurement into a slope. If you can measure any horizontal distance, even a smaller one, you can use it. For example, if you measure a 300 mm run and a 150 mm rise, that is still valid because the ratio is what matters.</p>
+<h3>What is the optional rafter length actually measuring?</h3>
+<p>It is the diagonal length along the slope for the horizontal run length you entered. If you enter a 2400 mm horizontal run for one side, the calculator estimates the straight-line rafter length for that run at the calculated pitch. It does not include overhangs or extra allowances.</p>
+<h3>When might this calculator not apply?</h3>
+<p>If your roof is curved, stepped, or changes pitch, a single rise/run measurement will not describe it. Also, if you are doing structural design, you need more than geometry. Loads, spans, spacing, materials, connectors, and code rules matter. Use this calculator for pitch identification and simple geometry only.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

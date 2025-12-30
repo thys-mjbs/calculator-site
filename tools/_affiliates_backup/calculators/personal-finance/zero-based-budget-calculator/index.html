@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Zero-Based Budget Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Build a zero-based monthly budget by allocating every rand of income across core spending categories until you reach R0 remaining.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/zero-based-budget-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Zero-Based Budget Calculator | SnapCalc">
+    <meta property="og:description" content="Build a zero-based monthly budget by allocating every rand of income across core spending categories until you reach R0 remaining.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/zero-based-budget-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zero-Based Budget Calculator | SnapCalc">
+    <meta name="twitter:description" content="Build a zero-based monthly budget by allocating every rand of income across core spending categories until you reach R0 remaining.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Zero-Based Budget Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/zero-based-budget-calculator/",
+      "description": "Build a zero-based monthly budget by allocating every rand of income across core spending categories until you reach R0 remaining."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Zero-Based Budget Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Zero-Based Budget Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48UhYMW" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Finance Psychology</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how psychology and behavior influence everyday money decisions.</p>
+    <div class="affiliate-cta">Explore finance psychology books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Allocate your monthly income to R0 remaining</h2>
+
+              <p class="calculator-intro">Enter your monthly take-home income, then allocate amounts to the common budget categories. A true zero-based budget ends with exactly R0 remaining (not “nothing left”, but “every rand has a job”).</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="monthlyIncome">Monthly take-home income (R)</label>
+                <input id="monthlyIncome" type="text" inputmode="decimal" placeholder="e.g. 35,000">
+              </div>
+
+              <div class="form-group">
+                <label for="housing">Housing (rent/bond, rates, levies) (R)</label>
+                <input id="housing" type="text" inputmode="decimal" placeholder="e.g. 12,000">
+              </div>
+
+              <div class="form-group">
+                <label for="utilities">Utilities (electricity, water, internet, phone) (R)</label>
+                <input id="utilities" type="text" inputmode="decimal" placeholder="e.g. 1,800">
+              </div>
+
+              <div class="form-group">
+                <label for="transport">Transport (fuel, public transport, maintenance) (R)</label>
+                <input id="transport" type="text" inputmode="decimal" placeholder="e.g. 3,500">
+              </div>
+
+              <div class="form-group">
+                <label for="food">Food & groceries (R)</label>
+                <input id="food" type="text" inputmode="decimal" placeholder="e.g. 4,500">
+              </div>
+
+              <div class="form-group">
+                <label for="debtPayments">Debt repayments (credit cards, loans) (R)</label>
+                <input id="debtPayments" type="text" inputmode="decimal" placeholder="e.g. 2,200">
+              </div>
+
+              <div class="form-group">
+                <label for="savingsInvesting">Savings & investing (R)</label>
+                <input id="savingsInvesting" type="text" inputmode="decimal" placeholder="e.g. 3,000">
+              </div>
+
+              <div class="form-group">
+                <label for="insurance">Insurance (short-term, medical aid, life) (R)</label>
+                <input id="insurance" type="text" inputmode="decimal" placeholder="e.g. 2,700">
+              </div>
+
+              <div class="form-group">
+                <label for="other">Other (kids, subscriptions, entertainment, misc) (R)</label>
+                <input id="other" type="text" inputmode="decimal" placeholder="e.g. 2,000">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Build my zero-based budget</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, track costs, and make smarter day-to-day money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Estimate growth, compare saving options, and set targets you can stick to.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Understand repayments, affordability, and how borrowing affects cash flow.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Zero-based budgeting calculator for a monthly plan that actually balances</h2>
+
+              <p>Zero-based budgeting is a simple idea that most people never execute properly: your monthly income minus your monthly allocations should equal zero. That does not mean you spend everything. It means you assign every rand to a category on purpose, including savings, extra debt payments, and a realistic “other” buffer. This calculator helps you build that plan fast by adding up your allocations and showing whether you are under-allocated, over-allocated, or genuinely at zero.</p>
+
+              <p>The most common budgeting failure is leaving “unassigned money” and hoping it will behave. It usually does not. Unallocated cash gets consumed by small purchases, subscription creep, and random once-off costs that repeat every month. A zero-based budget forces you to decide where the money is supposed to go before the month starts. When something changes, you do not abandon the plan. You reassign amounts from one category to another and keep the total aligned to your income.</p>
+
+              <p>Use this calculator at the start of the month (or right after payday) with your best estimate of take-home pay and fixed bills. Then allocate realistic values to the major categories. The result shows your total allocated amount and your remaining balance. If you have money left over, you have not finished the job. Decide where that remaining amount belongs. If you are over-allocated, you need to reduce one or more categories or increase income. The calculator also shows a quick breakdown so you can spot which categories are consuming most of your cash flow.</p>
+
+              <p>Zero-based budgeting works best when your categories match your actual life. That is why this version uses broad categories that cover most households: housing, utilities, transport, food, debt, savings, insurance, and other. These categories are not moral judgments. They are containers that make cash flow visible. If you prefer more detail, you can treat “other” as your flexible bucket and keep a separate list elsewhere. The goal here is the controlling number: your remaining balance should be R0.</p>
+
+              <p>If you want this to become a habit, keep two rules. First, do not lie to yourself about variable spending. If groceries fluctuate, budget the higher end and let the “extra” roll into savings or debt once you see the real month. Second, add a buffer. Many people set “other” to zero, then get frustrated when life happens. A realistic buffer (even 2% to 5% of income) prevents a single surprise from breaking the whole budget.</p>
+
+              <p>Finally, treat savings and extra debt payments as non-negotiable categories, not leftover outcomes. In a zero-based system, savings is a planned allocation. The same is true for debt: if you are trying to escape revolving credit, you need a deliberate allocation that is higher than the minimum. This calculator does not tell you what to value. It makes the arithmetic unavoidable so you can decide with clarity.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>All amounts are monthly and based on take-home income (after tax and payroll deductions).</li>
+                <li>Enter category amounts as totals (you do not need to list every bill here).</li>
+                <li>A “true zero-based budget” is treated as remaining between -R0.01 and +R0.01 due to rounding.</li>
+                <li>If you are under-allocated, assign the remaining amount to savings, debt, or a buffer category, not “nothing”.</li>
+                <li>If you are over-allocated, reduce categories starting with flexible spending before cutting essentials.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Does zero-based budgeting mean I spend everything?</h3>
+              <p>No. It means every rand is assigned a job. Savings, investing, sinking funds, and extra debt payments are all valid jobs. The goal is not to empty your account. The goal is to remove ambiguity so money does what you intended.</p>
+
+              <h3>What should I do if I have money left over after allocating categories?</h3>
+              <p>You are not done yet. Decide where that remaining amount belongs. Common options are building an emergency fund, increasing retirement contributions, paying down high-interest debt faster, or increasing a buffer category to prevent overspending later.</p>
+
+              <h3>What if my allocations are higher than my income?</h3>
+              <p>That means your plan is not feasible with the current income. Start by cutting flexible categories (subscriptions, entertainment, dining out, discretionary shopping). If you still cannot get to R0, you need a structural change like reducing housing/transport costs or increasing income.</p>
+
+              <h3>How do I handle irregular expenses like car repairs or annual fees?</h3>
+              <p>Create a monthly allocation for them. Even if the expense happens once a year, you can divide the expected annual cost by 12 and budget that monthly amount. Many people treat this as part of “other” or a dedicated sinking-fund category.</p>
+
+              <h3>Is it better to prioritize debt repayment or savings?</h3>
+              <p>For most people, you need both. Keep a small buffer and emergency fund so one surprise does not force new debt, then target high-interest debt aggressively. Your exact split depends on interest rates, job stability, and how quickly you can rebuild cash reserves.</p>
+
+              <div class="last-updated">Last updated: 2025-12-13</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48UhYMW" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Finance Psychology</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how psychology and behavior influence everyday money decisions.</p>
+    <div class="affiliate-cta">Explore finance psychology books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
+</html>

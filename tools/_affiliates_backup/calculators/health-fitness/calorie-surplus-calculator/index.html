@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Calorie Surplus Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your daily calorie surplus target and estimated weight gain over time using maintenance calories and a surplus amount or default.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/health-fitness/calorie-surplus-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Calorie Surplus Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate your daily calorie surplus target and estimated weight gain over time using maintenance calories and a surplus amount or default.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/health-fitness/calorie-surplus-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calorie Surplus Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate your daily calorie surplus target and estimated weight gain over time using maintenance calories and a surplus amount or default.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calorie Surplus Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/calorie-surplus-calculator/",
+      "description": "Calculate your daily calorie surplus target and estimated weight gain over time using maintenance calories and a surplus amount or default."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health & Fitness</a> ›
+        <span>Calorie Surplus Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Calorie Surplus Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calorie surplus target and expected weight gain</h2>
+
+              <p class="calculator-intro">Enter your estimated maintenance calories and choose a surplus. You will get a daily intake target, weekly surplus, and an estimated weight gain range over your chosen timeframe.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="maintenanceCalories">Maintenance calories per day (kcal)</label>
+                <input type="text" id="maintenanceCalories" inputmode="numeric" placeholder="e.g., 2,300">
+              </div>
+
+              <div class="form-group">
+                <label for="surplusCalories">Daily surplus (kcal) (optional)</label>
+                <input type="text" id="surplusCalories" inputmode="numeric" placeholder="Default: 250">
+              </div>
+
+              <div class="form-group">
+                <label for="daysPerWeek">Surplus days per week (1–7) (optional)</label>
+                <input type="text" id="daysPerWeek" inputmode="numeric" placeholder="Default: 7">
+              </div>
+
+              <div class="form-group">
+                <label for="timeframeWeeks">Timeframe (weeks) (optional)</label>
+                <input type="text" id="timeframeWeeks" inputmode="numeric" placeholder="Default: 4">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate calorie surplus</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4q2Km6o" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Recovery</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn recovery techniques to support training performance and health.</p>
+                <div class="affiliate-cta">Explore fitness recovery books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health & Fitness</h3>
+              <p class="related-desc">Track body metrics, training targets, and nutrition-related numbers for practical day-to-day decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Convert, compare, and sanity-check everyday numbers like percentages, averages, and rates.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan timeframes, countdowns, and schedules so your targets map to real dates and weeks.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/45a7Mi6" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Heart Rate Training</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Use heart rate data to guide cardiovascular and endurance training.</p>
+                <div class="affiliate-cta">View heart rate training books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Calorie surplus calculator for weight gain planning</h2>
+
+              <p>A calorie surplus means you are eating more energy than your body uses each day. Over time, that extra energy can contribute to weight gain. This calculator helps you set a realistic daily intake target by starting with your estimated maintenance calories and adding a surplus. It also estimates how much body weight you might gain over a chosen timeframe based on the total surplus you create.</p>
+
+              <p>Most people use a surplus when they want to gain weight, build muscle, or recover from a period of under-eating. The problem is that “eat more” is vague and often leads to inconsistent results. A planned surplus makes it easier to be consistent. You can choose a small surplus for slower, easier-to-manage gain, or a bigger surplus if your goal is faster weight gain. This calculator keeps it simple while still giving you outputs that matter, like weekly surplus and estimated gain over several weeks.</p>
+
+              <p>To use it, enter your maintenance calories per day. Maintenance is the amount that keeps your body weight stable on average. If you are not sure, use an estimate from a recent tracking period or a maintenance calculator. Then enter a daily surplus in calories. If you leave the surplus blank, the calculator uses a conservative default of 250 kcal per day. You can also choose how many days per week you plan to be in surplus. That matters because many people eat in surplus on training days but closer to maintenance on rest days. Finally, set a timeframe in weeks to see the estimated weight change over that period.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Maintenance calories are an estimate. Your true maintenance changes with body weight, activity, and routine, so re-check periodically.</li>
+                <li>If you leave optional fields blank, defaults are used: surplus 250 kcal per day, 7 surplus days per week, and a 4-week timeframe.</li>
+                <li>Weight change is estimated using a rough energy-to-weight conversion (about 7,700 kcal per kilogram). Real results vary by body composition and water balance.</li>
+                <li>This tool estimates scale weight change, not muscle gain specifically. Training quality and protein intake strongly affect how much gain is lean mass versus fat.</li>
+                <li>Very large surpluses can reduce accuracy and usefulness. If you choose an aggressive surplus, expect more variability and diminishing returns.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is a good calorie surplus for lean bulking?</h3>
+              <p>A smaller surplus is usually easier to control. Many people start around 200 to 300 kcal per day and adjust based on weekly weight trends. If your weight is not moving after two to three weeks, increase slightly. If you are gaining too fast, reduce the surplus. The best choice is the one you can sustain while keeping performance and appetite stable.</p>
+
+              <h3>Why does the calculator estimate weight gain using 7,700 kcal per kg?</h3>
+              <p>It is a simple way to convert total surplus calories into an approximate change in body weight. It is not perfect because weight gain includes water, glycogen, fat mass, and potentially some lean tissue, each with different energy implications. Treat the estimate as a planning baseline, then use your real weekly trend to refine your surplus.</p>
+
+              <h3>What if I do not know my maintenance calories?</h3>
+              <p>If you track food intake and body weight for 10 to 14 days, you can estimate maintenance by finding the intake level that keeps your average weight roughly stable. If you cannot track, use a reasonable estimate from a maintenance calculator and treat the first two weeks as a test. Update the number once you see how your weight responds.</p>
+
+              <h3>Should I be in a surplus every day?</h3>
+              <p>Not necessarily. Some people prefer a weekly approach where they are in surplus on most days and closer to maintenance on a couple of days. What matters is the total weekly surplus. If you train hard on specific days, concentrating surplus on those days can be easier to manage without changing the overall weekly target.</p>
+
+              <h3>Why am I gaining faster or slower than the estimate?</h3>
+              <p>Short-term scale changes are noisy because of water, sodium, carbohydrate intake, stress, and sleep. Also, your maintenance calories can rise as you gain weight and move more. Use a weekly average weight (same conditions each morning) and look at the trend over two to four weeks. Adjust your surplus based on trend, not a single weigh-in.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4q3xX1X" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Exercise Intensity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn how to manage exercise intensity for optimal results.</p>
+                <div class="affiliate-cta">Browse exercise intensity books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

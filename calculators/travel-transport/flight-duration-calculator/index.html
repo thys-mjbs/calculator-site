@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Flight Duration Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/flight-duration-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Flight Duration Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/flight-duration-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Flight Duration Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Flight Duration Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/travel-transport/flight-duration-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Flight Duration Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/travel-transport/flight-duration-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Flight Duration Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate scheduled flight duration from departure and arrival local times, including time zone offsets. Get total hours and minutes plus helpful time zone conversions." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,254 +33,203 @@
       "description": "Calculate scheduled flight duration from departure and arrival local times with time zone offsets, plus time zone conversions for planning."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
         <span>Flight Duration Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Flight Duration Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Flight Duration Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4qbCsYt" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Fuel Costs</div>
--->
-    <p class="affiliate-copy">Calculate fuel consumption and travel costs for road trips.</p>
-    <div class="affiliate-cta">Explore fuel cost calculation tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Calculate flight duration from local times and time zones</h2>
-
-              <p class="calculator-intro">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate flight duration from local times and time zones</h2>
+<p class="calculator-intro">
                 Enter the scheduled departure and arrival local date and time, plus each airport’s UTC offset.
                 This calculates the planned gate-to-gate duration and shows useful time zone conversions.
               </p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="input-group">
-                <label for="departureDate">Departure date (YYYY-MM-DD)</label>
-                <input id="departureDate" type="text" inputmode="numeric" placeholder="2026-01-15">
-              </div>
-
-              <div class="input-group">
-                <label for="departureTime">Departure time (HH:MM, 24-hour)</label>
-                <input id="departureTime" type="text" inputmode="numeric" placeholder="19:45">
-              </div>
-
-              <div class="input-group">
-                <label for="departureOffset">Departure UTC offset (for example +02:00)</label>
-                <input id="departureOffset" type="text" inputmode="text" placeholder="+02:00">
-              </div>
-
-              <div class="input-group">
-                <label for="arrivalDate">Arrival date (YYYY-MM-DD)</label>
-                <input id="arrivalDate" type="text" inputmode="numeric" placeholder="2026-01-16">
-              </div>
-
-              <div class="input-group">
-                <label for="arrivalTime">Arrival time (HH:MM, 24-hour)</label>
-                <input id="arrivalTime" type="text" inputmode="numeric" placeholder="06:10">
-              </div>
-
-              <div class="input-group">
-                <label for="arrivalOffset">Arrival UTC offset (for example -05:00)</label>
-                <input id="arrivalOffset" type="text" inputmode="text" placeholder="-05:00">
-              </div>
-
-              <details class="advanced-section">
-                <summary>Advanced (optional)</summary>
-
-                <div class="input-group">
-                  <label for="extraMinutes">Add extra minutes (taxi time, buffers, delays)</label>
-                  <input id="extraMinutes" type="text" inputmode="numeric" placeholder="0">
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate flight duration</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="departureDate">Departure date (YYYY-MM-DD)</label>
+<input id="departureDate" inputmode="numeric" placeholder="2026-01-15" type="text"/>
+</div>
+<div class="input-group">
+<label for="departureTime">Departure time (HH:MM, 24-hour)</label>
+<input id="departureTime" inputmode="numeric" placeholder="19:45" type="text"/>
+</div>
+<div class="input-group">
+<label for="departureOffset">Departure UTC offset (for example +02:00)</label>
+<input id="departureOffset" inputmode="text" placeholder="+02:00" type="text"/>
+</div>
+<div class="input-group">
+<label for="arrivalDate">Arrival date (YYYY-MM-DD)</label>
+<input id="arrivalDate" inputmode="numeric" placeholder="2026-01-16" type="text"/>
+</div>
+<div class="input-group">
+<label for="arrivalTime">Arrival time (HH:MM, 24-hour)</label>
+<input id="arrivalTime" inputmode="numeric" placeholder="06:10" type="text"/>
+</div>
+<div class="input-group">
+<label for="arrivalOffset">Arrival UTC offset (for example -05:00)</label>
+<input id="arrivalOffset" inputmode="text" placeholder="-05:00" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<div class="input-group">
+<label for="extraMinutes">Add extra minutes (taxi time, buffers, delays)</label>
+<input id="extraMinutes" inputmode="numeric" placeholder="0" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate flight duration</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4oYfbbA" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Route Planning</div>
--->
-    <p class="affiliate-copy">Plan optimal travel routes for driving, public transport, and multi-stop journeys.</p>
-    <div class="affiliate-cta">View route planning tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/travel-transport/">
-              <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Plan trips with tools for flights, driving, public transport timing, and travel logistics.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
-              <p class="related-desc">Convert times, compare dates, and calculate durations for meetings, deadlines, and travel plans.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/conversions-units-currencies/">
-              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">Convert common units and values quickly, including distance, speed, temperature, and currency-style formats.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Plan trips with tools for flights, driving, public transport timing, and travel logistics.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Convert times, compare dates, and calculate durations for meetings, deadlines, and travel plans.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert common units and values quickly, including distance, speed, temperature, and currency-style formats.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Flight duration calculator for scheduled departure and arrival times</h2>
-
-              <p>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Flight duration calculator for scheduled departure and arrival times</h2>
+<p>
                 This flight duration calculator is built for one specific job: calculating the scheduled gate-to-gate duration of a flight when you have the departure and arrival times shown on your itinerary, plus the time zone (UTC offset) for each airport. That is the most common real-world situation when you are planning a connection, deciding when to leave for the airport, or estimating when you will be awake and functional after landing. It is not an aircraft performance tool and it does not attempt to estimate airborne time using distance, winds, routing, or cruise speed. If your goal is travel planning, the schedule-based duration is the number you actually need.
               </p>
-
-              <p>
+<p>
                 Flight times are usually displayed in local time at each airport. That creates confusion because a flight can look “shorter” or “longer” on paper depending on time zone changes and date changes. Overnight flights, flights that cross midnight, and flights that cross the International Date Line are the classic cases where people misread the itinerary. This calculator resolves that by converting both the departure and arrival timestamps into a single reference frame (UTC) using your provided UTC offsets. Once both times are in the same reference frame, the duration is just the difference between them. You then get the duration in hours and minutes, plus optional conversions that show what the arrival time looks like in the departure time zone (useful for sleep planning) and what the departure time looks like in the arrival time zone (useful for explaining it to someone on the other end).
               </p>
-
-              <p>
+<p>
                 To use it, enter the departure date, departure time, and the departure UTC offset. Then enter the arrival date, arrival time, and the arrival UTC offset. If you want to add a simple buffer for real life, use the optional “extra minutes” field to add taxi time, connection padding, or expected delay. The calculator will show the scheduled duration first, then the adjusted duration including your extra minutes. It also reports the time zone difference between the two airports so you can quickly see whether you are traveling east (arrival time zone ahead) or west (arrival time zone behind). If the result comes out negative, your inputs are inconsistent, usually because the arrival date is wrong or the UTC offset is wrong for the season.
               </p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>This calculates scheduled gate-to-gate duration using local times and UTC offsets, not airborne time or distance-based estimates.</li>
-                <li>UTC offsets must be entered explicitly (for example +02:00 or -05:00) and should match the date of travel, including daylight saving time when applicable.</li>
-                <li>Dates are required because many flights cross midnight; if you omit or guess the date, you can easily flip the sign of the duration.</li>
-                <li>The optional extra minutes are added on top of the scheduled duration as a simple planning buffer, not a probabilistic delay model.</li>
-                <li>If your itinerary uses a named time zone (like “EST”) rather than a numeric offset, convert it to the correct UTC offset for your travel date before using this calculator.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Is this the same as “air time”?</h3>
-              <p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculates scheduled gate-to-gate duration using local times and UTC offsets, not airborne time or distance-based estimates.</li>
+<li>UTC offsets must be entered explicitly (for example +02:00 or -05:00) and should match the date of travel, including daylight saving time when applicable.</li>
+<li>Dates are required because many flights cross midnight; if you omit or guess the date, you can easily flip the sign of the duration.</li>
+<li>The optional extra minutes are added on top of the scheduled duration as a simple planning buffer, not a probabilistic delay model.</li>
+<li>If your itinerary uses a named time zone (like “EST”) rather than a numeric offset, convert it to the correct UTC offset for your travel date before using this calculator.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is this the same as “air time”?</h3>
+<p>
                 No. This is itinerary duration based on scheduled departure and arrival times. Air time is the time the aircraft spends in the air, which is typically shorter than gate-to-gate time because it excludes boarding, pushback, taxi, and sometimes holding patterns. For trip planning, the schedule duration is usually the right number because it matches when you actually leave and when you can actually get off the plane.
               </p>
-
-              <h3>What if my flight crosses midnight or arrives the next day?</h3>
-              <p>
+<h3>What if my flight crosses midnight or arrives the next day?</h3>
+<p>
                 That is exactly why the calculator asks for dates. Enter the dates shown on your itinerary. If the flight departs on one day and arrives on the next, the duration will still calculate correctly once both timestamps are converted to UTC. If you enter the arrival date incorrectly, you will usually get a negative duration or an unrealistically large one.
               </p>
-
-              <h3>Do I need the airport’s exact time zone name?</h3>
-              <p>
+<h3>Do I need the airport’s exact time zone name?</h3>
+<p>
                 No. You only need the UTC offset for each airport on the travel date. Many places change offsets seasonally due to daylight saving time, so do not reuse an offset from a different month unless you are sure it is correct. If your itinerary shows only local times, the airline’s booking page or your phone’s world clock can help you confirm the offset.
               </p>
-
-              <h3>Why does the duration look “wrong” compared to what I expected?</h3>
-              <p>
+<h3>Why does the duration look “wrong” compared to what I expected?</h3>
+<p>
                 Most mistakes are input mistakes: a swapped sign on the offset, a missing leading zero in a time, or an arrival date that should be the next day. Another common issue is daylight saving time: the offset can change by one hour depending on the date. Fix the offsets first, then verify the dates, then re-check the times.
               </p>
-
-              <h3>How should I use the “extra minutes” field?</h3>
-              <p>
+<h3>How should I use the “extra minutes” field?</h3>
+<p>
                 Use it as a planning buffer for connection stress and real-world variability. Add a small number if you are trying to estimate when you will be at baggage claim, in a rideshare, or ready for a meeting. It is intentionally simple. If you need a full connection planner across multiple legs, that is a different tool and a different problem.
               </p>
-
-              <div class="last-updated">Last updated: 2025-12-30</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
 </div>
--->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

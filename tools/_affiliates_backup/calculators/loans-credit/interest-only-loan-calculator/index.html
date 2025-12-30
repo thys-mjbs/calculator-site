@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Interest-Only Loan Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate interest-only loan payments, total interest cost, and the balloon balance due at the end of the term.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/loans-credit/interest-only-loan-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Interest-Only Loan Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate interest-only loan payments, total interest cost, and the balloon balance due at the end of the term.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/loans-credit/interest-only-loan-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interest-Only Loan Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate interest-only loan payments, total interest cost, and the balloon balance due at the end of the term.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Interest-Only Loan Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/loans-credit/interest-only-loan-calculator/",
+      "description": "Calculate interest-only loan payments, total interest cost, and the balloon balance due at the end of the term."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+        <span>Interest-Only Loan Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Interest-Only Loan Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4abLwYE" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Debt Payoff Strategies</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn systematic approaches to eliminating debt efficiently.</p>
+                <div class="affiliate-cta">Explore debt payoff books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your interest-only payment and total cost</h2>
+
+              <p class="calculator-intro">Enter your loan amount, interest rate, and term to calculate the interest-only payment per period, the total interest paid over the term, and the balloon balance due at the end.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="principal">Loan amount</label>
+                <input type="text" id="principal" inputmode="decimal" placeholder="e.g., 250,000">
+              </div>
+
+              <div class="form-group">
+                <label for="annualRate">Annual interest rate (%)</label>
+                <input type="text" id="annualRate" inputmode="decimal" placeholder="e.g., 9.5">
+              </div>
+
+              <div class="form-group">
+                <label for="termYears">Loan term (years)</label>
+                <input type="text" id="termYears" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="frequency">Payment frequency</label>
+                <select id="frequency">
+                  <option value="monthly" selected>Monthly (12 payments per year)</option>
+                  <option value="biweekly">Biweekly (26 payments per year)</option>
+                  <option value="weekly">Weekly (52 payments per year)</option>
+                  <option value="annual">Annual (1 payment per year)</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate interest-only payment</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48Fmm3q" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Credit Rebuilding</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn how to rebuild credit after missed payments or defaults.</p>
+                <div class="affiliate-cta">View credit rebuilding books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Estimate repayments, compare borrowing costs, and understand loan structures before you commit.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan your budget, track spending, and understand how debt and savings affect your cash flow.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Model growth, compare returns, and see how different financial choices change long-term outcomes.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3YpQgTc" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Loan Comparison</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Compare loan types, terms, and costs before borrowing.</p>
+                <div class="affiliate-cta">Browse loan comparison books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Interest-only loan payment calculator for monthly, weekly, and biweekly payments</h2>
+
+              <p>An interest-only loan works differently from a normal amortizing loan. With a standard loan, each payment includes interest plus some repayment of the principal (the amount you borrowed). With an interest-only loan, your regular payments cover only the interest, and the principal usually stays the same throughout the term.</p>
+
+              <p>This calculator helps you estimate what those interest-only payments look like and what the loan costs over time. It shows your payment per period (for example monthly), the total interest you would pay over the term, and the balloon balance that remains at the end. That balloon balance is typically the full original loan amount, unless you make a separate principal payment or refinance.</p>
+
+              <p>Use this when you are comparing loan options, checking affordability, or sanity-checking a lender quote. Interest-only loans can reduce payments in the short term, but they often cost more in total interest than a loan that pays down principal, and they can create risk at the end of the term if you are not prepared to repay or refinance the balloon.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The interest rate is an annual nominal rate and stays constant for the full term.</li>
+                <li>Payments are interest-only for the entire loan term. No principal is repaid during regular payments.</li>
+                <li>The payment frequency sets how many payments occur per year (monthly 12, biweekly 26, weekly 52, annual 1).</li>
+                <li>Interest is calculated on the full outstanding balance each period (the balance is assumed not to decline).</li>
+                <li>Fees, insurance, taxes, and lender-specific compounding rules are not included. This is a clean interest-only estimate.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the loan balance not go down in the results?</h3>
+              <p>Because an interest-only payment does not include principal repayment. Your payment covers only the interest charge for that period. Unless you make extra payments toward principal, the outstanding balance typically stays the same until the end, when the principal becomes due as a balloon payment.</p>
+
+              <h3>Is an interest-only loan cheaper than a normal loan?</h3>
+              <p>Usually no, not over the full term. Interest-only loans can be cheaper month to month because you are not paying principal. But since the balance stays high, you tend to pay more total interest for the same loan amount and interest rate compared with a loan that steadily reduces the balance.</p>
+
+              <h3>What happens at the end of an interest-only loan term?</h3>
+              <p>In most cases you still owe the principal. You may need to repay it in full, refinance into a new loan, or sell the asset (for example a property) to settle the balance. This calculator shows the balloon balance so you can plan for that outcome early.</p>
+
+              <h3>What if my lender compounds interest differently?</h3>
+              <p>Lenders may use daily interest calculations, different day-count conventions, or add fees into the balance. This calculator assumes a straightforward periodic interest estimate based on your chosen payment frequency. If your lender quote differs, check whether compounding, fees, or insurance products are included.</p>
+
+              <h3>How can I make the result more accurate?</h3>
+              <p>Use the exact loan amount, the exact rate as quoted (fixed or the current variable rate), and the correct payment frequency. If you know fees or mandatory add-ons, treat the calculator as an estimate and compare it to the lender’s repayment schedule. For serious decisions, ask for an official amortization schedule from the lender and confirm the balloon amount and refinance requirements.</p>
+
+              <div class="last-updated">Last updated: 2025-12-15</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>Mortgage Affordability (Loans Category Version) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Estimate the maximum home price and mortgage payment you can afford based on your income, monthly debts, down payment, interest rate, and loan term."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/loans-credit/mortgage-affordability-loans-category-version/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta
+      property="og:title"
+      content="Mortgage Affordability (Loans Category Version) | SnapCalc"
+    />
+    <meta
+      property="og:description"
+      content="Estimate the maximum home price and mortgage payment you can afford based on your income, monthly debts, down payment, interest rate, and loan term."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/loans-credit/mortgage-affordability-loans-category-version/"
+    />
+    <meta
+      property="og:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mortgage Affordability (Loans Category Version) | SnapCalc"
+    />
+    <meta
+      name="twitter:description"
+      content="Estimate the maximum home price and mortgage payment you can afford based on your income, monthly debts, down payment, interest rate, and loan term."
+    />
+    <meta
+      name="twitter:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Mortgage Affordability (Loans Category Version)",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/loans-credit/mortgage-affordability-loans-category-version/",
+        "description": "Estimate the maximum home price and mortgage payment you can afford based on your income, monthly debts, down payment, interest rate, and loan term."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+        <span>Mortgage Affordability (Loans Category Version)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Mgage Affordability (Loans Category Version)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pz0mNB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Personal Loans</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how personal loans work and how to plan repayments effectively.</p>
+    <div class="affiliate-cta">Explore personal loan books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your maximum affordable home price</h2>
+
+              <p class="calculator-intro">
+                Enter your monthly income, debts, and loan details. You will get a
+                maximum total housing payment and the home price that payment can
+                support.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="grossMonthlyIncome">Gross monthly income</label>
+                <input
+                  type="text"
+                  id="grossMonthlyIncome"
+                  inputmode="decimal"
+                  placeholder="e.g., 80,000"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="monthlyDebtPayments">Monthly debt payments</label>
+                <input
+                  type="text"
+                  id="monthlyDebtPayments"
+                  inputmode="decimal"
+                  placeholder="e.g., 6,500"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="downPayment">Down payment (cash)</label>
+                <input
+                  type="text"
+                  id="downPayment"
+                  inputmode="decimal"
+                  placeholder="e.g., 200,000"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="interestRate">Interest rate (APR %)</label>
+                <input
+                  type="text"
+                  id="interestRate"
+                  inputmode="decimal"
+                  placeholder="e.g., 7"
+                  value="7"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="loanTermYears">Loan term (years)</label>
+                <input
+                  type="text"
+                  id="loanTermYears"
+                  inputmode="numeric"
+                  placeholder="e.g., 30"
+                  value="30"
+                />
+              </div>
+
+              <div class="calculator-advanced">
+                <h3 class="advanced-title">Advanced (optional)</h3>
+
+                <div class="form-group">
+                  <label for="propertyTaxAnnual">Property tax (per year)</label>
+                  <input
+                    type="text"
+                    id="propertyTaxAnnual"
+                    inputmode="decimal"
+                    placeholder="e.g., 24,000"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="homeInsuranceAnnual"
+                    >Homeowners insurance (per year)</label
+                  >
+                  <input
+                    type="text"
+                    id="homeInsuranceAnnual"
+                    inputmode="decimal"
+                    placeholder="e.g., 12,000"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="hoaMonthly">HOA / levies (per month)</label>
+                  <input
+                    type="text"
+                    id="hoaMonthly"
+                    inputmode="decimal"
+                    placeholder="e.g., 1,500"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="housingLimit"
+                    >Housing ratio limit (front-end %)</label
+                  >
+                  <input
+                    type="text"
+                    id="housingLimit"
+                    inputmode="decimal"
+                    placeholder="e.g., 28"
+                    value="28"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="dtiLimit">DTI limit (back-end %)</label>
+                  <input
+                    type="text"
+                    id="dtiLimit"
+                    inputmode="decimal"
+                    placeholder="e.g., 36"
+                    value="36"
+                  />
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">
+                Calculate affordability
+              </button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48IGX5y" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Credit Reports</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to read and understand credit reports accurately.</p>
+    <div class="affiliate-cta">View credit report books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">
+                Compare borrowing options and estimate payments before you apply.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">
+                Plan property costs like mortgages, deposits, and ownership
+                expenses.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">
+                Budget, manage cash flow, and stress-test big monthly commitments.
+              </p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3YpQgTc" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Loan Comparison</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Compare loan types, terms, and costs before borrowing.</p>
+    <div class="affiliate-cta">Browse loan comparison books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>
+                Mortgage affordability calculator for “how much house can I afford?”
+              </h2>
+
+              <p>
+                This calculator estimates the maximum home price you can afford
+                using a practical lending-style approach. It converts your monthly
+                income and debt obligations into a maximum housing budget, then
+                translates that budget into an estimated loan amount and home
+                purchase price based on your interest rate and term.
+              </p>
+
+              <p>
+                The dominant use case is simple: you want a realistic upper limit
+                before you browse listings, speak to an agent, or apply for a
+                mortgage. The output is not a quote from a bank and it is not
+                tailored underwriting. It is a fast, defensible estimate you can
+                use to set a search range and avoid wasting time on homes that are
+                obviously out of reach.
+              </p>
+
+              <p>
+                To use it, enter your gross monthly income and your required monthly
+                debt payments (car loans, credit cards, personal loans, student
+                loans, and any other fixed commitments). Then enter your down
+                payment, interest rate, and loan term. If you know them, add
+                property tax, insurance, and any HOA or levies. Those optional costs
+                matter because lenders and your own budget must cover the total
+                monthly housing payment, not only the mortgage principal and
+                interest.
+              </p>
+
+              <p>
+                The calculator first estimates a maximum total housing payment using
+                two common constraints: a housing ratio limit (front-end) and a total
+                debt-to-income limit (back-end DTI). The housing ratio caps the
+                housing payment as a percentage of gross income. The DTI cap limits
+                total debt payments (housing plus other debts). The tighter of the
+                two becomes your maximum total housing payment. From there, the
+                calculator subtracts monthly taxes, insurance, and HOA costs to find
+                the maximum principal-and-interest payment. Finally, it solves the
+                standard mortgage payment formula in reverse to estimate the maximum
+                loan amount and home price.
+              </p>
+
+              <p>
+                The primary results are the maximum affordable home price and the
+                maximum loan amount. Supporting figures show the maximum allowed
+                total housing payment, the portion reserved for taxes, insurance, and
+                HOA, and the maximum principal-and-interest payment the mortgage
+                itself can use. If the optional costs are high, your maximum loan
+                amount can drop sharply even if your income is strong.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
+                  Gross monthly income is used because many lending guidelines are
+                  expressed on a gross basis, even though your real budget is net of
+                  taxes and payroll deductions.
+                </li>
+                <li>
+                  The default housing ratio limit is 28% and the default back-end DTI
+                  limit is 36%. These are common rule-of-thumb limits, not a promise
+                  that every lender will use them.
+                </li>
+                <li>
+                  Property tax and homeowners insurance are treated as monthly costs
+                  (annual values divided by 12). If you leave them blank, they are
+                  assumed to be 0, which will overstate affordability.
+                </li>
+                <li>
+                  The result assumes a fixed-rate, fully amortizing mortgage over the
+                  full term. It does not model adjustable rates, interest-only
+                  periods, balloon loans, or changing payments.
+                </li>
+                <li>
+                  The home price estimate assumes your down payment is available as
+                  cash and does not include closing costs, prepaid escrow items, or
+                  lender fees, which can reduce what you can actually buy.
+                </li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does adding property tax or insurance reduce the home price so much?</h3>
+              <p>
+                Because lenders and your budget care about the total monthly housing
+                payment. If taxes and insurance take a larger slice of the allowed
+                housing payment, there is less room for the mortgage principal and
+                interest. The loan amount is driven by that principal-and-interest
+                payment, so the maximum loan can fall quickly.
+              </p>
+
+              <h3>Should I use gross income or take-home pay?</h3>
+              <p>
+                This calculator uses gross income to match common lending ratios.
+                That is useful for “can I qualify” estimates. For “can I live with
+                this payment,” you should also sanity-check using your take-home pay
+                and a real monthly budget. If your deductions are high, the gross
+                ratio limits can still produce an uncomfortable payment.
+              </p>
+
+              <h3>What counts as monthly debt payments?</h3>
+              <p>
+                Use the minimum required payments you must make each month: loan
+                instalments, required credit card minimums, maintenance obligations,
+                or any fixed commitments that reduce your borrowing capacity. Do not
+                include discretionary spending like groceries or fuel; those belong
+                in your personal budget, not the lender-style DTI calculation.
+              </p>
+
+              <h3>What interest rate should I enter if I am not pre-approved?</h3>
+              <p>
+                Use a realistic rate you expect to qualify for today, and run a
+                second calculation with a higher rate as a stress test. Even a small
+                rate increase can materially reduce the maximum loan amount, because
+                the same monthly payment supports less principal when interest costs
+                are higher.
+              </p>
+
+              <h3>Does this calculator tell me the “right” home price to buy?</h3>
+              <p>
+                No. It estimates an upper limit based on income and debt ratios. The
+                “right” price depends on your lifestyle, savings rate, emergency
+                fund, job stability, and tolerance for payment risk. If the maximum
+                output feels tight, treat it as a ceiling and aim below it.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48AwcDM" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Credit Utilization</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how credit usage affects scores and borrowing capacity.</p>
+    <div class="affiliate-cta">Browse credit utilization books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc">
-    <meta property="og:description" content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc">
-    <meta name="twitter:description" content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc" property="og:title"/>
+<meta content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/fuel-efficiency-calculator-km-l-or-l-100km/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fuel Efficiency Calculator (km/l or l/100km) | SnapCalc" name="twitter:title"/>
+<meta content="Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,218 +33,173 @@
       "description": "Calculate fuel efficiency in km/l and l/100km from distance and fuel used. Optionally estimate cost per km and range from tank size."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
         <span>Fuel Efficiency Calculator (km/l or l/100km)</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Fuel Efficiency Calculator (km/l or l/100km)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Fuel Efficiency Calculator (km/l or l/100km)</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/44mLY2E" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Personal Planning</div>
--->
-                <p class="affiliate-copy">Plan personal goals, tasks, and schedules with simple tools.</p>
-                <div class="affiliate-cta">Explore personal planning tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Calculate fuel efficiency from distance and fuel</h2>
 
-              <p class="calculator-intro">Enter your trip distance and fuel used to get both km/l and l/100km. Add optional fuel price and tank size for cost and range estimates.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="distanceKm">Distance traveled (km)</label>
-                <input id="distanceKm" type="text" inputmode="decimal" placeholder="e.g., 450">
-              </div>
+--&gt;
+                
 
-              <div class="form-group">
-                <label for="fuelLiters">Fuel used (liters)</label>
-                <input id="fuelLiters" type="text" inputmode="decimal" placeholder="e.g., 32.5">
-              </div>
 
-              <div class="form-group">
-                <label for="fuelPricePerLiter">Fuel price per liter (optional)</label>
-                <input id="fuelPricePerLiter" type="text" inputmode="decimal" placeholder="e.g., 25.49">
-              </div>
-
-              <div class="form-group">
-                <label for="tankSizeLiters">Tank size in liters (optional, for range)</label>
-                <input id="tankSizeLiters" type="text" inputmode="decimal" placeholder="e.g., 55">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate efficiency</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate fuel efficiency from distance and fuel</h2>
+<p class="calculator-intro">Enter your trip distance and fuel used to get both km/l and l/100km. Add optional fuel price and tank size for cost and range estimates.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="distanceKm">Distance traveled (km)</label>
+<input id="distanceKm" inputmode="decimal" placeholder="e.g., 450" type="text"/>
+</div>
+<div class="form-group">
+<label for="fuelLiters">Fuel used (liters)</label>
+<input id="fuelLiters" inputmode="decimal" placeholder="e.g., 32.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="fuelPricePerLiter">Fuel price per liter (optional)</label>
+<input id="fuelPricePerLiter" inputmode="decimal" placeholder="e.g., 25.49" type="text"/>
+</div>
+<div class="form-group">
+<label for="tankSizeLiters">Tank size in liters (optional, for range)</label>
+<input id="tankSizeLiters" inputmode="decimal" placeholder="e.g., 55" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate efficiency</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Run quick practical calculations for daily tasks, errands, and planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Estimate travel time, costs, distances, and transport-related planning numbers.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, compare costs, and understand how everyday spending adds up.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Fuel efficiency calculator for km/l and l/100km</h2>
+<p>This fuel efficiency calculator helps you turn two numbers you can usually find (distance traveled and fuel used) into the two most common efficiency measures: kilometers per liter (km/l) and liters per 100 kilometers (l/100km). These two figures describe the same thing from opposite angles. Km/l tells you how far you go on one liter. L/100km tells you how many liters it takes to cover a standard distance of 100 km.</p>
+<p>If you are tracking fuel usage over time, comparing two cars, or checking whether a recent change in driving conditions has increased consumption, these metrics are more useful than guessing based on the fuel gauge. You can also add a fuel price to convert efficiency into cost per km and cost per 100 km, and optionally add tank size to estimate range. These extra outputs are optional, so you can still get a useful answer quickly without perfect data.</p>
+<p>To use the calculator, enter your distance traveled in kilometers and fuel used in liters. The calculator outputs both km/l and l/100km, plus a short interpretation. If you also enter a fuel price per liter, you will see fuel cost per km and per 100 km. If you enter tank size, you will see an estimated range based on the calculated efficiency. Range is an estimate, not a guarantee, because real-world driving rarely stays consistent for an entire tank.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Distance is entered in kilometers and fuel is entered in liters (this calculator does not convert from miles or gallons).</li>
+<li>The efficiency result assumes the distance and fuel used refer to the same period or trip (reset trip meter at refuel for best accuracy).</li>
+<li>Fuel price is optional; if provided, it is assumed to be the average price paid for the fuel used.</li>
+<li>Tank range uses the entered tank size and the calculated km/l, assuming similar driving conditions continue.</li>
+<li>Results are best for normal driving comparisons; unusual conditions (towing, heavy traffic, wind, steep climbs) can shift consumption significantly.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Which number is “better”: higher km/l or lower l/100km?</h3>
+<p>They are the same idea expressed differently. Higher km/l is better because you go further per liter. Lower l/100km is better because you use fewer liters to cover the same 100 km. If you are comparing two vehicles, make sure you compare the same metric, or use this calculator to get both.</p>
+<h3>Why does my l/100km seem “high” even though the car feels efficient?</h3>
+<p>L/100km grows quickly when efficiency gets worse. For example, going from 6 to 8 l/100km is a big change in consumption. Also check your inputs: distance must be the distance driven on the fuel you measured, and fuel used should be the actual liters added (or tracked) for that distance.</p>
+<h3>What if I do not know the exact fuel used?</h3>
+<p>You can still estimate, but accuracy drops. The easiest way to improve accuracy is to use a “full-to-full” method: fill the tank, drive normally, then fill again and use the liters you added as “fuel used,” paired with the distance from your trip meter.</p>
+<h3>Why does my efficiency change between city and highway driving?</h3>
+<p>Stop-start driving, idling, and frequent acceleration usually increase fuel use, lowering km/l and raising l/100km. Highway driving at steady speeds often improves efficiency until speed gets high enough that wind resistance dominates. Load, tire pressure, and driving style also matter.</p>
+<h3>How should I use cost per km and cost per 100 km?</h3>
+<p>These outputs are useful for budgeting and comparisons. Cost per 100 km is a quick way to compare vehicles or routes. Cost per km helps estimate monthly fuel spend: multiply cost per km by your typical monthly kilometers. If your fuel price varies, use an average price over the period you measured.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
 
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4pCvAn3" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Home Organisation</div>
--->
-                <p class="affiliate-copy">Organise home spaces and systems for everyday efficiency.</p>
-                <div class="affiliate-cta">View home organisation tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Run quick practical calculations for daily tasks, errands, and planning.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/travel-transport/">
-              <h3 class="related-title">Travel &amp; Transport</h3>
-              <p class="related-desc">Estimate travel time, costs, distances, and transport-related planning numbers.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Budget, compare costs, and understand how everyday spending adds up.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4iSX5pM" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Daily Productivity</div>
--->
-                <p class="affiliate-copy">Improve daily productivity with focused organisation tools.</p>
-                <div class="affiliate-cta">Browse daily productivity tools on Amazon</div>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Fuel efficiency calculator for km/l and l/100km</h2>
-
-              <p>This fuel efficiency calculator helps you turn two numbers you can usually find (distance traveled and fuel used) into the two most common efficiency measures: kilometers per liter (km/l) and liters per 100 kilometers (l/100km). These two figures describe the same thing from opposite angles. Km/l tells you how far you go on one liter. L/100km tells you how many liters it takes to cover a standard distance of 100 km.</p>
-
-              <p>If you are tracking fuel usage over time, comparing two cars, or checking whether a recent change in driving conditions has increased consumption, these metrics are more useful than guessing based on the fuel gauge. You can also add a fuel price to convert efficiency into cost per km and cost per 100 km, and optionally add tank size to estimate range. These extra outputs are optional, so you can still get a useful answer quickly without perfect data.</p>
-
-              <p>To use the calculator, enter your distance traveled in kilometers and fuel used in liters. The calculator outputs both km/l and l/100km, plus a short interpretation. If you also enter a fuel price per liter, you will see fuel cost per km and per 100 km. If you enter tank size, you will see an estimated range based on the calculated efficiency. Range is an estimate, not a guarantee, because real-world driving rarely stays consistent for an entire tank.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Distance is entered in kilometers and fuel is entered in liters (this calculator does not convert from miles or gallons).</li>
-                <li>The efficiency result assumes the distance and fuel used refer to the same period or trip (reset trip meter at refuel for best accuracy).</li>
-                <li>Fuel price is optional; if provided, it is assumed to be the average price paid for the fuel used.</li>
-                <li>Tank range uses the entered tank size and the calculated km/l, assuming similar driving conditions continue.</li>
-                <li>Results are best for normal driving comparisons; unusual conditions (towing, heavy traffic, wind, steep climbs) can shift consumption significantly.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Which number is “better”: higher km/l or lower l/100km?</h3>
-              <p>They are the same idea expressed differently. Higher km/l is better because you go further per liter. Lower l/100km is better because you use fewer liters to cover the same 100 km. If you are comparing two vehicles, make sure you compare the same metric, or use this calculator to get both.</p>
-
-              <h3>Why does my l/100km seem “high” even though the car feels efficient?</h3>
-              <p>L/100km grows quickly when efficiency gets worse. For example, going from 6 to 8 l/100km is a big change in consumption. Also check your inputs: distance must be the distance driven on the fuel you measured, and fuel used should be the actual liters added (or tracked) for that distance.</p>
-
-              <h3>What if I do not know the exact fuel used?</h3>
-              <p>You can still estimate, but accuracy drops. The easiest way to improve accuracy is to use a “full-to-full” method: fill the tank, drive normally, then fill again and use the liters you added as “fuel used,” paired with the distance from your trip meter.</p>
-
-              <h3>Why does my efficiency change between city and highway driving?</h3>
-              <p>Stop-start driving, idling, and frequent acceleration usually increase fuel use, lowering km/l and raising l/100km. Highway driving at steady speeds often improves efficiency until speed gets high enough that wind resistance dominates. Load, tire pressure, and driving style also matter.</p>
-
-              <h3>How should I use cost per km and cost per 100 km?</h3>
-              <p>These outputs are useful for budgeting and comparisons. Cost per 100 km is a quick way to compare vehicles or routes. Cost per km helps estimate monthly fuel spend: multiply cost per km by your typical monthly kilometers. If your fuel price varies, use an average price over the period you measured.</p>
-
-              <div class="last-updated">Last updated: 2025-12-18</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-              </a>
-            </div>
--->
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

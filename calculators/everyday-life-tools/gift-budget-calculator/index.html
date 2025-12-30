@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Gift Budget Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/gift-budget-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Gift Budget Calculator | SnapCalc">
-    <meta property="og:description" content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/gift-budget-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gift Budget Calculator | SnapCalc">
-    <meta name="twitter:description" content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Gift Budget Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/gift-budget-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Gift Budget Calculator | SnapCalc" property="og:title"/>
+<meta content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/gift-budget-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Gift Budget Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Plan a realistic gift budget by calculating a per-person spending limit after buffer, extras, and any amount already spent." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,228 +33,181 @@
       "description": "Calculate a practical per-person gift spending limit from a total budget, including a buffer, extras per gift, and any amount already spent."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
         <span>Gift Budget Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Gift Budget Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Gift Budget Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4iVrZhn" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Decision Making</div>
--->
-    <p class="affiliate-copy">Make everyday decisions easier using structured decision tools.</p>
-    <div class="affiliate-cta">Explore decision making tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Gift budget per person</h2>
-
-              <p class="calculator-intro">Set a total budget, then calculate a practical per-person cap after buffer, extras, and any amount already spent.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="totalBudget">Total gift budget (your limit)</label>
-                <input type="text" id="totalBudget" inputmode="decimal" placeholder="e.g., 2,500">
-              </div>
-
-              <div class="form-group">
-                <label for="recipientCount">Number of recipients</label>
-                <input type="text" id="recipientCount" inputmode="numeric" placeholder="e.g., 8">
-              </div>
-
-              <div class="form-group">
-                <label for="bufferPercent">Buffer / contingency (%)</label>
-                <input type="text" id="bufferPercent" inputmode="decimal" placeholder="e.g., 10">
-              </div>
-
-              <div class="form-group">
-                <label for="extrasPerGift">Extras per gift (optional: wrapping, delivery, card)</label>
-                <input type="text" id="extrasPerGift" inputmode="decimal" placeholder="e.g., 40">
-              </div>
-
-              <div class="form-group">
-                <label for="alreadySpent">Already spent (optional)</label>
-                <input type="text" id="alreadySpent" inputmode="decimal" placeholder="e.g., 300">
-              </div>
-
-              <div class="form-group">
-                <label for="plannedPerPerson">Planned spend per person (optional check)</label>
-                <input type="text" id="plannedPerPerson" inputmode="decimal" placeholder="e.g., 250">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate gift budget</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Gift budget per person</h2>
+<p class="calculator-intro">Set a total budget, then calculate a practical per-person cap after buffer, extras, and any amount already spent.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="totalBudget">Total gift budget (your limit)</label>
+<input id="totalBudget" inputmode="decimal" placeholder="e.g., 2,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="recipientCount">Number of recipients</label>
+<input id="recipientCount" inputmode="numeric" placeholder="e.g., 8" type="text"/>
+</div>
+<div class="form-group">
+<label for="bufferPercent">Buffer / contingency (%)</label>
+<input id="bufferPercent" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="extrasPerGift">Extras per gift (optional: wrapping, delivery, card)</label>
+<input id="extrasPerGift" inputmode="decimal" placeholder="e.g., 40" type="text"/>
+</div>
+<div class="form-group">
+<label for="alreadySpent">Already spent (optional)</label>
+<input id="alreadySpent" inputmode="decimal" placeholder="e.g., 300" type="text"/>
+</div>
+<div class="form-group">
+<label for="plannedPerPerson">Planned spend per person (optional check)</label>
+<input id="plannedPerPerson" inputmode="decimal" placeholder="e.g., 250" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate gift budget</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4pCvAn3" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Home Organisation</div>
--->
-    <p class="affiliate-copy">Organise home spaces and systems for everyday efficiency.</p>
-    <div class="affiliate-cta">View home organisation tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Plan everyday decisions with quick, practical calculators for common life scenarios.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Budget, plan spending, and understand your money with simple financial calculators.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/savings-investments/">
-              <h3 class="related-title">Savings & Investments</h3>
-              <p class="related-desc">Explore savings growth and long-term planning tools for clearer financial targets.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3KwwP8h" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Life Organisation</div>
--->
-    <p class="affiliate-copy">Organise personal life tasks, commitments, and responsibilities clearly.</p>
-    <div class="affiliate-cta">Browse life organisation tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Calculate a per-person gift budget that stays within your total spending limit</h2>
-
-              <p>Most people do not overspend on gifts because they are careless. They overspend because they start buying without a clear per-person limit, then “small extras” pile up. Wrapping, delivery, last-minute add-ons, and extra items for one or two people can quietly push the total past what you intended. This Gift Budget Calculator fixes that by turning your total limit into a practical cap per person.</p>
-
-              <p>The primary decision this page supports is simple: how much can you spend per recipient, on average, without blowing your overall budget. It is built for situations like holiday shopping, birthdays, teacher gifts, family events, and any time you want to be generous without losing control of total spending. It does not try to price individual products or recommend gifts. It only helps you set a spending ceiling you can actually follow.</p>
-
-              <p>Start with your total budget and the number of recipients. Then choose a buffer percentage (a small contingency that protects you from surprises). If you expect extra costs per gift, add an estimate for wrapping, cards, delivery, or small add-ons. If you have already bought a few gifts, enter your “already spent” amount. The calculator will show your recommended maximum spend per person and a clear breakdown of how the budget is being allocated. If you enter a “planned spend per person,” it will also tell you whether that plan fits or exceeds your total.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Your budget is a total cap for the whole event (not per person). The calculator works backwards from that cap.</li>
-                <li>The per-person result is an average target. Some people can be above it if others are below it, as long as the total stays within budget.</li>
-                <li>The buffer percentage is reserved money you plan not to spend unless needed (commonly 5% to 15%).</li>
-                <li>“Extras per gift” is a simple estimate per recipient for things like wrapping, cards, delivery, or small add-ons that are easy to forget.</li>
-                <li>If any optional fields are left blank, the calculator treats them as zero (except buffer, which defaults to a sensible percentage).</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why does the calculator reduce my budget with a buffer first?</h3>
-              <p>A buffer stops your plan from being fragile. If your budget is exactly allocated with no margin, one unexpected cost forces you to overspend or remove a gift later. A small buffer builds resilience. You can always spend the buffer at the end if everything stayed on track.</p>
-
-              <h3>What should I put for “extras per gift” if I am not sure?</h3>
-              <p>Use a simple estimate based on your habits. If you typically wrap gifts and buy cards, choose a small number that feels realistic for you. If you usually ship gifts or order online with delivery fees, use a higher estimate. If you leave it blank, the calculator assumes zero extras, but your plan may be too optimistic.</p>
-
-              <h3>What if some recipients are adults and others are children?</h3>
-              <p>This calculator is intentionally focused on one decision: an overall per-person cap. If you plan different levels of spending, use the per-person cap as an average and allocate above and below it. For example, you can spend more on fewer people and less on others, as long as the total still fits the budget.</p>
-
-              <h3>If I already bought gifts, how should I enter that?</h3>
-              <p>Enter the total you have already spent on gifts for this event. The calculator subtracts it from the budget available for remaining gifts. This helps you avoid pretending you still have the full amount left and accidentally doubling your spending.</p>
-
-              <h3>Does this calculator include tax or currency conversion?</h3>
-              <p>No. It treats your inputs as the final amounts you expect to spend in your local currency. If taxes, exchange rates, or shipping vary a lot, handle that by increasing your buffer percentage or your extras per gift estimate so the plan remains realistic.</p>
-
-              <div class="last-updated">Last updated: 2025-12-30</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
 </div>
--->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Plan everyday decisions with quick, practical calculators for common life scenarios.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, plan spending, and understand your money with simple financial calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Explore savings growth and long-term planning tools for clearer financial targets.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate a per-person gift budget that stays within your total spending limit</h2>
+<p>Most people do not overspend on gifts because they are careless. They overspend because they start buying without a clear per-person limit, then “small extras” pile up. Wrapping, delivery, last-minute add-ons, and extra items for one or two people can quietly push the total past what you intended. This Gift Budget Calculator fixes that by turning your total limit into a practical cap per person.</p>
+<p>The primary decision this page supports is simple: how much can you spend per recipient, on average, without blowing your overall budget. It is built for situations like holiday shopping, birthdays, teacher gifts, family events, and any time you want to be generous without losing control of total spending. It does not try to price individual products or recommend gifts. It only helps you set a spending ceiling you can actually follow.</p>
+<p>Start with your total budget and the number of recipients. Then choose a buffer percentage (a small contingency that protects you from surprises). If you expect extra costs per gift, add an estimate for wrapping, cards, delivery, or small add-ons. If you have already bought a few gifts, enter your “already spent” amount. The calculator will show your recommended maximum spend per person and a clear breakdown of how the budget is being allocated. If you enter a “planned spend per person,” it will also tell you whether that plan fits or exceeds your total.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Your budget is a total cap for the whole event (not per person). The calculator works backwards from that cap.</li>
+<li>The per-person result is an average target. Some people can be above it if others are below it, as long as the total stays within budget.</li>
+<li>The buffer percentage is reserved money you plan not to spend unless needed (commonly 5% to 15%).</li>
+<li>“Extras per gift” is a simple estimate per recipient for things like wrapping, cards, delivery, or small add-ons that are easy to forget.</li>
+<li>If any optional fields are left blank, the calculator treats them as zero (except buffer, which defaults to a sensible percentage).</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator reduce my budget with a buffer first?</h3>
+<p>A buffer stops your plan from being fragile. If your budget is exactly allocated with no margin, one unexpected cost forces you to overspend or remove a gift later. A small buffer builds resilience. You can always spend the buffer at the end if everything stayed on track.</p>
+<h3>What should I put for “extras per gift” if I am not sure?</h3>
+<p>Use a simple estimate based on your habits. If you typically wrap gifts and buy cards, choose a small number that feels realistic for you. If you usually ship gifts or order online with delivery fees, use a higher estimate. If you leave it blank, the calculator assumes zero extras, but your plan may be too optimistic.</p>
+<h3>What if some recipients are adults and others are children?</h3>
+<p>This calculator is intentionally focused on one decision: an overall per-person cap. If you plan different levels of spending, use the per-person cap as an average and allocate above and below it. For example, you can spend more on fewer people and less on others, as long as the total still fits the budget.</p>
+<h3>If I already bought gifts, how should I enter that?</h3>
+<p>Enter the total you have already spent on gifts for this event. The calculator subtracts it from the budget available for remaining gifts. This helps you avoid pretending you still have the full amount left and accidentally doubling your spending.</p>
+<h3>Does this calculator include tax or currency conversion?</h3>
+<p>No. It treats your inputs as the final amounts you expect to spend in your local currency. If taxes, exchange rates, or shipping vary a lot, handle that by increasing your buffer percentage or your extras per gift estimate so the plan remains realistic.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

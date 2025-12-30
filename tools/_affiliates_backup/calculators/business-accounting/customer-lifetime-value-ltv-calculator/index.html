@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Customer Lifetime Value (LTV) Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate customer lifetime value (LTV) using monthly revenue, gross margin, churn, and optional discount rate. Get both simple and discounted LTV plus LTV:CAC if you add acquisition cost.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/customer-lifetime-value-ltv-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Customer Lifetime Value (LTV) Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate customer lifetime value (LTV) using monthly revenue, gross margin, churn, and optional discount rate. Get both simple and discounted LTV plus LTV:CAC if you add acquisition cost.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/customer-lifetime-value-ltv-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Customer Lifetime Value (LTV) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate customer lifetime value (LTV) using monthly revenue, gross margin, churn, and optional discount rate. Get both simple and discounted LTV plus LTV:CAC if you add acquisition cost.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Customer Lifetime Value (LTV) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/customer-lifetime-value-ltv-calculator/",
+      "description": "Estimate customer lifetime value (LTV) using monthly revenue, gross margin, churn, and optional discount rate. Outputs simple and discounted LTV and optionally LTV:CAC."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business & Accounting</a> ›
+        <span>Customer Lifetime Value (LTV) Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Customer Lifetime Value (LTV) Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4qsGvQv" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Management Accounting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Use accounting information to support decision making and operational control.</p>
+    <div class="affiliate-cta">Explore management accounting books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate customer LTV from revenue, margin, churn, and CAC</h2>
+
+              <p class="calculator-intro">
+                Enter your average monthly revenue per customer, gross margin, and churn. Add a discount rate for a more conservative present value LTV, and add CAC to see your LTV:CAC ratio.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="monthlyRevenue">Average monthly revenue per customer</label>
+                <input id="monthlyRevenue" type="text" inputmode="decimal" placeholder="e.g., 1,250">
+              </div>
+
+              <div class="form-group">
+                <label for="grossMarginPercent">Gross margin percent (optional)</label>
+                <input id="grossMarginPercent" type="text" inputmode="decimal" placeholder="e.g., 60">
+              </div>
+
+              <div class="form-group">
+                <label for="monthlyChurnPercent">Monthly churn percent (optional)</label>
+                <input id="monthlyChurnPercent" type="text" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="lifespanMonths">Customer lifespan in months (optional fallback)</label>
+                <input id="lifespanMonths" type="text" inputmode="decimal" placeholder="e.g., 24">
+              </div>
+
+              <div class="form-group">
+                <label for="annualDiscountPercent">Annual discount rate percent (optional)</label>
+                <input id="annualDiscountPercent" type="text" inputmode="decimal" placeholder="e.g., 0 or 10">
+              </div>
+
+              <div class="form-group">
+                <label for="cac">Customer acquisition cost, CAC (optional)</label>
+                <input id="cac" type="text" inputmode="decimal" placeholder="e.g., 3,000">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate customer LTV</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4qsGvQv" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Management Accounting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Use accounting information to support decision making and operational control.</p>
+    <div class="affiliate-cta">Explore management accounting books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Model unit economics, profitability, cash flow, and operational performance with practical business calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Work out budgets, affordability, savings targets, and everyday financial decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Compare growth scenarios, contributions, and compounding over time to support better planning decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Customer Lifetime Value (LTV) calculator for SaaS, ecommerce, and service businesses</h2>
+
+              <p>
+                Customer lifetime value (LTV) is the total gross profit you expect to earn from a typical customer over the time they remain active. People search for “LTV calculator” when they need a quick reality check on pricing, retention, marketing spend, or growth targets. If your LTV is unclear, you can waste money on acquisition, misprice your product, or overestimate how much growth you can fund.
+              </p>
+              <p>
+                This calculator is built for normal, imperfect data. You can use it with one strong input (average monthly revenue per customer) and then refine it with gross margin, churn, and an optional discount rate. You will get a simple LTV (undiscounted) and a discounted LTV (present value). Discounting matters when the payback period is long, churn is low, or your cost of capital is meaningful.
+              </p>
+              <p>
+                The outputs are designed to be decision-ready. You can use simple LTV for fast comparisons, and discounted LTV when you want a more conservative number for budgeting, investor updates, or marketing constraints. If you also enter CAC (customer acquisition cost), the calculator adds LTV:CAC and net LTV after CAC. That combination helps you spot when growth is “expensive growth” and when it is genuinely scalable.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If you leave gross margin blank, the calculator assumes a 60% gross margin.</li>
+                <li>If you enter monthly churn, lifespan is estimated as 1 divided by churn rate, capped to avoid unrealistic extremes.</li>
+                <li>If churn is blank, the calculator uses your lifespan months input, or defaults to 24 months if both are blank.</li>
+                <li>If discount rate is blank or zero, discounted LTV equals simple LTV.</li>
+                <li>Revenue and margin are treated as stable averages; seasonality, upsells, and cohort changes are not modeled.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between revenue LTV and gross profit LTV?</h3>
+              <p>
+                Revenue LTV counts total sales, but it ignores the cost to deliver your product or service. Gross profit LTV applies your gross margin to revenue, which is usually the number you want for acquisition decisions. If you spend money to acquire customers, you need profit to pay that back. Using revenue LTV can make acquisition look healthier than it is.
+              </p>
+
+              <h3>Should I use churn or a fixed lifespan?</h3>
+              <p>
+                Use churn if you have a reasonable estimate of monthly churn for a typical customer. Churn-based lifespan adapts automatically and stays consistent when you compare scenarios. Use a fixed lifespan when churn is unknown or unreliable, for example in early-stage businesses, low-volume datasets, or where customers renew irregularly. If you are unsure, start with a conservative lifespan and refine later.
+              </p>
+
+              <h3>Why does the calculator include a discount rate?</h3>
+              <p>
+                Money earned later is usually worth less than money earned now. Discounting captures this by reducing the value of future gross profit, especially when customers stay a long time. In practice, discounting helps you avoid overpaying for customers when cash is tight, when you need shorter payback periods, or when your funding cost is high. If you are doing a quick check, you can leave it at zero.
+              </p>
+
+              <h3>What is a good LTV:CAC ratio?</h3>
+              <p>
+                There is no universal “good” number because it depends on cash flow, growth targets, payback period, and risk. As a rough sanity check, many businesses aim for LTV to be comfortably higher than CAC, with enough margin to cover overhead and still generate profit. If your ratio is close to 1, growth is fragile. If it is strong, you have room to scale or to invest in retention and product.
+              </p>
+
+              <h3>My business has one-time purchases, not subscriptions. Does this still work?</h3>
+              <p>
+                Yes, if you interpret monthly revenue per customer as an average over time, including repeat purchases. For ecommerce, you can estimate monthly revenue by multiplying average order value by average orders per month. For service businesses, you can use the typical monthly billing for an active customer. If customers buy sporadically, your estimate will be rough, but it is still useful for comparing acquisition strategies.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-20</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KYBOi4" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Cost Accounting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand cost structures, allocation methods, and expense control techniques.</p>
+    <div class="affiliate-cta">Browse cost accounting books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

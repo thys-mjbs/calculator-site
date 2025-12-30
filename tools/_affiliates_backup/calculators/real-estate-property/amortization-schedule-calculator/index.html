@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amortization Schedule Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Generate a full loan amortization schedule with monthly payments, interest, principal breakdown, and payoff date. Add optional extra payments to see how fast you can pay off your loan.">
+
+    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/amortization-schedule-calculator/">
+
+    <meta property="og:title" content="Amortization Schedule Calculator | SnapCalc">
+    <meta property="og:description" content="Generate a full loan amortization schedule with monthly payments, interest, principal breakdown, and payoff date. Add optional extra payments to see how fast you can pay off your loan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/amortization-schedule-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amortization Schedule Calculator | SnapCalc">
+    <meta name="twitter:description" content="Generate a full loan amortization schedule with monthly payments, interest, principal breakdown, and payoff date. Add optional extra payments to see how fast you can pay off your loan.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Amortization Schedule Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/amortization-schedule-calculator/",
+      "description": "Generate a full loan amortization schedule with monthly payments, interest and principal breakdown, and payoff date. Optionally include extra monthly payments to see the impact on payoff time and total interest."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Amortization Schedule Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Amortization Schedule Calculator</h1>
+
+        <div class="page-grid">
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4iVHwxR" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Property Returns</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Analyze rental yields and returns on property investments.</p>
+                <div class="affiliate-cta">Explore property return books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Build a month by month amortization schedule</h2>
+
+              <p class="calculator-intro">Enter your loan details to see your monthly payment, payoff date, total interest, and a detailed principal and interest breakdown. Add an optional extra payment to see how much faster you can finish the loan.</p>
+
+              <div class="form-group">
+                <label for="loanAmount">Loan amount</label>
+                <input id="loanAmount" type="text" inputmode="decimal" placeholder="e.g., 1,500,000">
+              </div>
+
+              <div class="form-group">
+                <label for="annualRate">Interest rate (annual %)</label>
+                <input id="annualRate" type="text" inputmode="decimal" placeholder="e.g., 11.75">
+              </div>
+
+              <div class="form-group">
+                <label for="termYears">Loan term (years)</label>
+                <input id="termYears" type="text" inputmode="decimal" placeholder="e.g., 20">
+              </div>
+
+              <div class="form-group">
+                <label for="startDate">Start date (optional)</label>
+                <input id="startDate" type="text" inputmode="numeric" placeholder="YYYY-MM-DD">
+              </div>
+
+              <div class="form-group">
+                <label for="extraPayment">Extra monthly payment (optional)</label>
+                <input id="extraPayment" type="text" inputmode="decimal" placeholder="e.g., 1,000">
+              </div>
+
+              <div class="form-group">
+                <label for="rowsToShow">Schedule display</label>
+                <input id="rowsToShow" type="text" inputmode="numeric" placeholder="24 (default). Use 0 for full schedule">
+              </div>
+
+              <button id="calculateButton" type="button">Generate amortization schedule</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/44qHU1c" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Property Expenses</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Plan and manage ongoing expenses for property ownership.</p>
+                <div class="affiliate-cta">View property expense books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Model mortgages, rent, yields, and property ownership costs with practical tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Compare borrowing options, estimate payments, and understand interest and fees.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, savings, and trade-offs so decisions are based on real numbers.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48CcoQp" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Land Investing</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Understand land investment strategies and valuation factors.</p>
+                <div class="affiliate-cta">Browse land investment books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Amortization schedule calculator for mortgages and loans</h2>
+
+              <p>An amortization schedule shows how a loan gets paid down over time. Each monthly payment is split into interest and principal. Early on, interest usually takes a bigger share because your balance is still high. As the balance drops, interest shrinks, more of each payment goes toward principal, and the loan accelerates toward zero. This calculator generates that month by month schedule so you can see exactly what is happening, not just a single payment number.</p>
+
+              <p>This tool is designed for normal people making real decisions: buying a home, refinancing, planning extra payments, or checking whether a loan quote makes sense. You can use it for a typical fixed-rate mortgage, a personal loan, or any loan with a fixed interest rate and regular monthly payments. If you only want a quick answer, enter loan amount, interest rate, and term. If you want a more accurate view, add a start date and an optional extra monthly payment to see the payoff date and interest savings.</p>
+
+              <p>The main outputs are practical. You get your estimated monthly payment (before any optional extra payment), total interest paid across the life of the loan, total amount repaid, and the estimated payoff date. Below that, the schedule table shows each payment date, how much interest you paid that month, how much principal you reduced, and your remaining balance. This helps you sanity-check affordability, spot how slowly principal moves in the early years, and quantify what an extra payment does to the timeline.</p>
+
+              <p>Extra monthly payments are where the schedule becomes truly useful. Even a small extra payment can reduce total interest by a meaningful amount because it reduces your balance earlier, which reduces future interest. This calculator models that by applying the extra amount every month on top of the scheduled payment, then shortening the schedule automatically when the balance reaches zero. The last payment is adjusted so the balance does not go negative.</p>
+
+              <p>If you want to keep things lightweight, you can limit how many schedule rows you display. The default view shows 24 months so you can see how the loan behaves early on. If you need the full schedule, set “Schedule display” to 0 to show every month, which is useful when you want to see the exact payoff month or verify totals for a quote.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Payments are monthly and occur at regular monthly intervals.</li>
+                <li>The interest rate is fixed for the full term and is applied monthly as an annual rate divided by 12.</li>
+                <li>Extra monthly payment is applied every month starting with the first payment month.</li>
+                <li>Fees, insurance, taxes, and offset or redraw features are not included in the schedule.</li>
+                <li>The final payment is adjusted to exactly clear the remaining balance without overpaying.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the schedule show so much interest at the beginning?</h3>
+              <p>Interest is calculated on the remaining balance. At the start, the balance is highest, so the interest portion is also highest. As you pay down principal, the balance shrinks and the interest portion falls. This is normal for amortizing loans.</p>
+
+              <h3>What does the “monthly payment” include?</h3>
+              <p>The monthly payment shown is the base amortizing payment for the loan amount, interest rate, and term. If you enter an extra monthly payment, the schedule uses base payment plus extra payment. It still reports the base payment separately so you can compare the difference.</p>
+
+              <h3>What if my interest rate is 0%?</h3>
+              <p>If the rate is 0%, the calculator splits the loan amount evenly across the term. In that case, the “interest” column will be zero and every payment goes entirely to principal.</p>
+
+              <h3>What if I do not know the exact start date?</h3>
+              <p>Leave it blank. The calculator will assume a start date of today for the payoff date estimate and payment dates. The amortization math does not depend on the calendar date, only on the number of months, so the schedule values remain valid.</p>
+
+              <h3>How can I make the results more accurate for my mortgage?</h3>
+              <p>Use the exact interest rate from your quote and your exact term. If your lender uses different compounding conventions, has fees, or changes rates over time, your real schedule can differ. This calculator is best for fixed-rate, monthly-payment loans without additional fees or complex features.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,59 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO: title and description -->
-    <title>Wire Gauge (AWG) Current Capacity Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors."
-    />
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link
-      rel="canonical"
-      href="https://snapcalc.site/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/"
-    />
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta
-      property="og:title"
-      content="Wire Gauge (AWG) Current Capacity Calculator | SnapCalc"
-    />
-    <meta
-      property="og:description"
-      content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://snapcalc.site/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/"
-    />
-    <meta
-      property="og:image"
-      content="https://snapcalc.site/assets/share-default.png"
-    />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Wire Gauge (AWG) Current Capacity Calculator | SnapCalc"
-    />
-    <meta
-      name="twitter:description"
-      content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors."
-    />
-    <meta
-      name="twitter:image"
-      content="https://snapcalc.site/assets/share-default.png"
-    />
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Wire Gauge (AWG) Current Capacity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Wire Gauge (AWG) Current Capacity Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Wire Gauge (AWG) Current Capacity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -64,218 +33,172 @@
         "description": "Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors."
       }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
         <span>Wire Gauge (AWG) Current Capacity Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Wire Gauge (AWG) Current Capacity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Wire Gauge (AWG) Current Capacity Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/3MAQFjm" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Engineering Calculations</div>
--->
-    <p class="affiliate-copy">Tools and references for performing common engineering calculations accurately.</p>
-    <div class="affiliate-cta">Explore engineering calculation tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Estimate safe amp capacity from AWG size</h2>
-
-              <p class="calculator-intro">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate safe amp capacity from AWG size</h2>
+<p class="calculator-intro">
                 Pick an AWG wire size and material, then optionally adjust for insulation rating,
                 ambient temperature, and how many current-carrying conductors are bundled together.
               </p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="awgSelect">Wire size (AWG)</label>
-                <select id="awgSelect" aria-label="Wire size (AWG)">
-                  <option value="">Select AWG size</option>
-                  <option value="14">14 AWG</option>
-                  <option value="12">12 AWG</option>
-                  <option value="10">10 AWG</option>
-                  <option value="8">8 AWG</option>
-                  <option value="6">6 AWG</option>
-                  <option value="4">4 AWG</option>
-                  <option value="3">3 AWG</option>
-                  <option value="2">2 AWG</option>
-                  <option value="1">1 AWG</option>
-                  <option value="1/0">1/0 AWG</option>
-                  <option value="2/0">2/0 AWG</option>
-                  <option value="3/0">3/0 AWG</option>
-                  <option value="4/0">4/0 AWG</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="materialSelect">Conductor material</label>
-                <select id="materialSelect" aria-label="Conductor material">
-                  <option value="copper" selected>Copper</option>
-                  <option value="aluminum">Aluminum (or copper-clad aluminum)</option>
-                </select>
-              </div>
-
-              <details class="advanced-details">
-                <summary class="advanced-summary">Advanced (optional)</summary>
-
-                <div class="advanced-inner">
-                  <div class="form-group">
-                    <label for="tempRatingSelect">Insulation temperature rating</label>
-                    <select id="tempRatingSelect" aria-label="Insulation temperature rating">
-                      <option value="60">60°C</option>
-                      <option value="75" selected>75°C</option>
-                      <option value="90">90°C</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="ambientTempC">Ambient temperature (°C)</label>
-                    <input
-                      type="text"
-                      id="ambientTempC"
-                      inputmode="decimal"
-                      placeholder="30"
-                      aria-label="Ambient temperature in degrees Celsius"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="conductorsCount">Current-carrying conductors in the bundle</label>
-                    <input
-                      type="text"
-                      id="conductorsCount"
-                      inputmode="numeric"
-                      placeholder="3"
-                      aria-label="Number of current-carrying conductors"
-                    />
-                  </div>
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate current capacity</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="awgSelect">Wire size (AWG)</label>
+<select aria-label="Wire size (AWG)" id="awgSelect">
+<option value="">Select AWG size</option>
+<option value="14">14 AWG</option>
+<option value="12">12 AWG</option>
+<option value="10">10 AWG</option>
+<option value="8">8 AWG</option>
+<option value="6">6 AWG</option>
+<option value="4">4 AWG</option>
+<option value="3">3 AWG</option>
+<option value="2">2 AWG</option>
+<option value="1">1 AWG</option>
+<option value="1/0">1/0 AWG</option>
+<option value="2/0">2/0 AWG</option>
+<option value="3/0">3/0 AWG</option>
+<option value="4/0">4/0 AWG</option>
+</select>
+</div>
+<div class="form-group">
+<label for="materialSelect">Conductor material</label>
+<select aria-label="Conductor material" id="materialSelect">
+<option selected="" value="copper">Copper</option>
+<option value="aluminum">Aluminum (or copper-clad aluminum)</option>
+</select>
+</div>
+<details class="advanced-details">
+<summary class="advanced-summary">Advanced (optional)</summary>
+<div class="advanced-inner">
+<div class="form-group">
+<label for="tempRatingSelect">Insulation temperature rating</label>
+<select aria-label="Insulation temperature rating" id="tempRatingSelect">
+<option value="60">60°C</option>
+<option selected="" value="75">75°C</option>
+<option value="90">90°C</option>
+</select>
+</div>
+<div class="form-group">
+<label for="ambientTempC">Ambient temperature (°C)</label>
+<input aria-label="Ambient temperature in degrees Celsius" id="ambientTempC" inputmode="decimal" placeholder="30" type="text"/>
+</div>
+<div class="form-group">
+<label for="conductorsCount">Current-carrying conductors in the bundle</label>
+<input aria-label="Number of current-carrying conductors" id="conductorsCount" inputmode="numeric" placeholder="3" type="text"/>
+</div>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate current capacity</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/496ZJoJ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Thermal Calculations</div>
--->
-    <p class="affiliate-copy">Calculate heat transfer, temperature change, and energy flow.</p>
-    <div class="affiliate-cta">View thermal engineering tools on Amazon</div>
-  </a>
 </div>
-          </div>
+</div>
+</div>
+<div class="grid-slot">
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/engineering-technical/">
-              <h3 class="related-title">Engineering &amp; Technical</h3>
-              <p class="related-desc">
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">
                 Electrical, mechanical, and general engineering calculators for practical design and checks.
               </p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/construction-materials/">
-              <h3 class="related-title">Construction &amp; Materials</h3>
-              <p class="related-desc">
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">
                 Plan quantities, sizes, and material usage for building and renovation work.
               </p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/conversions-units-currencies/">
-              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">
                 Convert units and measurements quickly to avoid mistakes during calculations and quoting.
               </p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
+</a>
 </div>
--->
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Wire gauge (AWG) current capacity calculator for safe amp estimates</h2>
-
-              <p>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Wire gauge (AWG) current capacity calculator for safe amp estimates</h2>
+<p>
                 This Wire Gauge (AWG) Current Capacity Calculator estimates how many amps a wire can
                 carry safely for typical building and equipment wiring decisions. The most common real-world
                 use case is simple: you know the wire gauge you plan to use (or what is already installed),
                 and you want a defensible estimate of the maximum current before overheating becomes a risk.
                 This is commonly called ampacity.
               </p>
-              <p>
+<p>
                 The calculator is intentionally locked to one decision: estimating a practical, code-style
                 ampacity for a single conductor size, using a standard base table and straightforward
                 adjustment factors. It is not a voltage drop calculator, not a motor starting calculator,
@@ -283,7 +206,7 @@
                 voltage loss, you need a different tool. If your concern is inrush current, protective
                 device curves, or specialty installations, this page is not trying to solve those cases.
               </p>
-              <p>
+<p>
                 To use it, select the AWG size and the conductor material. Copper is the default because it is
                 the most common reference point. Then, optionally refine the estimate with the insulation
                 temperature rating, ambient temperature, and the number of current-carrying conductors grouped
@@ -291,103 +214,89 @@
                 current (a conservative “do not run at the limit all day” number), and a suggested standard
                 breaker size that does not exceed the estimated ampacity.
               </p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
                   Base ampacity values are table-style estimates for typical building wire sizes, intended
                   for common 60°C, 75°C, and 90°C insulation ratings at a 30°C ambient reference.
                 </li>
-                <li>
+<li>
                   Ambient temperature adjustment is applied as a simple correction factor around 30°C. If you
                   leave ambient blank, the calculator assumes 30°C.
                 </li>
-                <li>
+<li>
                   Conductor bundling adjustment is applied using a simplified conductor-count factor. If you
                   leave conductor count blank, the calculator assumes 3 current-carrying conductors.
                 </li>
-                <li>
+<li>
                   The result is an estimate for steady-state current. It does not model short-duration inrush,
                   motor starting, or rapid cycling loads.
                 </li>
-                <li>
+<li>
                   The recommended “continuous load” figure is a conservative 80% of the adjusted ampacity to
                   reflect practical heat margin. Your local code and installation details can be stricter.
                 </li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why do copper and aluminum give different current capacities?</h3>
-              <p>
+</ul>
+<h3>Common questions</h3>
+<h3>Why do copper and aluminum give different current capacities?</h3>
+<p>
                 Aluminum typically has higher electrical resistance than copper for the same cross-sectional
                 size, so it tends to run hotter at the same current. That is why standard ampacity tables
                 usually show lower allowable current for aluminum than for copper of the same AWG size.
               </p>
-
-              <h3>What should I enter for insulation temperature rating if I do not know it?</h3>
-              <p>
+<h3>What should I enter for insulation temperature rating if I do not know it?</h3>
+<p>
                 If you are unsure, 75°C is a practical default for many common wiring types, but the safest
                 conservative choice is 60°C. If you need a cautious estimate, choose 60°C. If you know the
                 marking on the cable jacket, use that rating.
               </p>
-
-              <h3>Does this replace electrical code or a qualified electrician?</h3>
-              <p>
+<h3>Does this replace electrical code or a qualified electrician?</h3>
+<p>
                 No. This is an estimating tool for typical scenarios. Real allowable current depends on
                 installation method, termination temperature limits, local regulations, and the specific cable
                 and environment. Use this to sanity-check and to plan, then verify against applicable code
                 and professional guidance for any high-risk or regulated work.
               </p>
-
-              <h3>Why does the result change when I increase the number of conductors?</h3>
-              <p>
+<h3>Why does the result change when I increase the number of conductors?</h3>
+<p>
                 When multiple current-carrying conductors are bundled together, they heat each other and the
                 assembly sheds heat less effectively. Standard practice applies a derating factor once you go
                 above a small number of conductors. That is why the calculator reduces allowable current as
                 conductor count increases.
               </p>
-
-              <h3>Should I use the “ampacity” number or the “continuous load” number?</h3>
-              <p>
+<h3>Should I use the “ampacity” number or the “continuous load” number?</h3>
+<p>
                 If the load will run for long periods (space heating, continuous equipment, always-on loads),
                 the continuous-load figure is the safer planning number because it builds in heat margin.
                 For short or intermittent loads, the ampacity estimate can be a reasonable upper bound, but
                 you still should not treat it as a target to run at constantly.
               </p>
-
-              <div class="last-updated">Last updated: 2025-12-22</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4q0U2OS" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Safety Factors</div>
--->
-    <p class="affiliate-copy">Apply safety factors correctly in engineering calculations.</p>
-    <div class="affiliate-cta">Browse safety factor tools on Amazon</div>
-  </a>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
-    ></script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
 </html>

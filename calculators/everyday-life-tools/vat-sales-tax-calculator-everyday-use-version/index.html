@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc">
-    <meta property="og:description" content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc">
-    <meta name="twitter:description" content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc" property="og:title"/>
+<meta content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/vat-sales-tax-calculator-everyday-use-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="VAT/Sales Tax Calculator (Everyday Use Version) | SnapCalc" name="twitter:title"/>
+<meta content="Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes per-item breakdowns if you enter a quantity." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,221 +33,176 @@
       "description": "Calculate VAT or sales tax on a price, or remove VAT from a total to find the pre-tax amount. Includes optional per-item breakdowns using quantity."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
         <span>VAT/Sales Tax Calculator (Everyday Use Version)</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>VAT/Sales Tax Calculator (Everyday Use Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>VAT/Sales Tax Calculator (Everyday Use Version)</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/4pCVYNP" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Time Saving</div>
--->
-                <p class="affiliate-copy">Save time on everyday tasks with practical household tools.</p>
-                <div class="affiliate-cta">Explore time saving tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Calculate VAT or sales tax in seconds</h2>
 
-              <p class="calculator-intro">Choose whether your amount is before tax (add VAT) or already includes VAT (remove VAT), then enter a tax rate. Add a quantity for a per-item breakdown.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="modeSelect">What does your amount represent?</label>
-                <select id="modeSelect">
-                  <option value="add">Amount is before tax (add VAT / sales tax)</option>
-                  <option value="remove">Amount includes tax (remove VAT / sales tax)</option>
-                </select>
-              </div>
+--&gt;
+                
 
-              <div class="form-group">
-                <label for="amountInput">Amount</label>
-                <input id="amountInput" type="text" inputmode="decimal" placeholder="e.g., 1,000.00">
-              </div>
 
-              <div class="form-group">
-                <label for="taxRateInput">Tax rate (%)</label>
-                <input id="taxRateInput" type="text" inputmode="decimal" placeholder="e.g., 15">
-              </div>
-
-              <div class="form-group">
-                <label for="quantityInput">Quantity (optional)</label>
-                <input id="quantityInput" type="text" inputmode="numeric" placeholder="e.g., 3">
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate VAT / Sales Tax</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate VAT or sales tax in seconds</h2>
+<p class="calculator-intro">Choose whether your amount is before tax (add VAT) or already includes VAT (remove VAT), then enter a tax rate. Add a quantity for a per-item breakdown.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="modeSelect">What does your amount represent?</label>
+<select id="modeSelect">
+<option value="add">Amount is before tax (add VAT / sales tax)</option>
+<option value="remove">Amount includes tax (remove VAT / sales tax)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="amountInput">Amount</label>
+<input id="amountInput" inputmode="decimal" placeholder="e.g., 1,000.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="taxRateInput">Tax rate (%)</label>
+<input id="taxRateInput" inputmode="decimal" placeholder="e.g., 15" type="text"/>
+</div>
+<div class="form-group">
+<label for="quantityInput">Quantity (optional)</label>
+<input id="quantityInput" inputmode="numeric" placeholder="e.g., 3" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate VAT / Sales Tax</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick calculators for daily decisions, shopping, household tasks, and simple planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, spending, savings, and day-to-day money tools to stay on track.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Practical calculations for invoices, margins, costs, and basic accounting checks.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>VAT and sales tax calculator for everyday prices</h2>
+<p>This VAT and sales tax calculator helps you do two common jobs quickly. First, it can add tax to a pre-tax price so you can see the final total you will pay. Second, it can remove tax from a tax-included total so you can estimate the pre-tax amount and the tax portion inside that total. People use this for shopping, splitting bills, checking receipts, comparing prices across stores, and sanity-checking invoices.</p>
+<p>The key is choosing the right mode. If you have a price tag that is before VAT or sales tax, use the add mode. You enter the pre-tax amount and the tax rate, and the calculator returns the tax amount and the final total. If you have a total that already includes VAT or sales tax, use the remove mode. You enter the tax-included total and the tax rate, and the calculator works backwards to estimate the pre-tax amount and the tax portion included in the price.</p>
+<p>You can also add a quantity if you want a per-item breakdown. This is useful when you buy multiple identical items, or when someone gives you a total for several units and you want to estimate what each unit costs before tax, how much tax is included per unit, and what the tax-included unit price is. Quantity is optional. If you leave it blank, the calculator treats it as 1 and shows totals only.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The tax rate you enter is applied as a percentage of the pre-tax amount (for add mode), or as a percentage embedded within the total (for remove mode).</li>
+<li>In remove mode, the calculator assumes the total includes a single tax rate applied to the full amount, not a mix of different tax rates.</li>
+<li>Results are shown with two decimals, which matches typical currency rounding, but real receipts may round per line item and then sum.</li>
+<li>Quantity is treated as a simple divider for per-item estimates, which is most accurate when all items are identical and taxed the same way.</li>
+<li>This tool does not handle special cases like tiered taxes, exemptions, fixed levies, or multiple taxes applied sequentially.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between VAT and sales tax in this calculator?</h3>
+<p>For the purpose of the math here, the calculator treats VAT and sales tax the same: a percentage rate applied to a base amount. The practical difference is how pricing is displayed in different places. Some regions show prices including VAT, while others show prices before sales tax and add it at checkout. Choose the mode based on whether your amount is before tax or includes tax.</p>
+<h3>Why is removing VAT not the same as subtracting the tax rate?</h3>
+<p>Because the tax is inside the total. If a total includes 15% VAT, the VAT portion is not 15% of the total. It is 15% of the pre-tax amount. To remove VAT, you divide the total by 1 + rate, then the difference between total and pre-tax is the tax portion.</p>
+<h3>What should I do if I do not know the exact tax rate?</h3>
+<p>Use your best estimate. Many everyday decisions only need a close answer. If you want more accuracy, check a recent receipt for the rate used, or look at the merchant invoice where the rate is usually listed. If the rate varies by item category, this calculator is still useful as an approximation, but the result will not match perfectly.</p>
+<h3>Why does my receipt not match the calculator exactly?</h3>
+<p>Two common reasons are rounding and mixed tax treatment. Some receipts round tax per item or per line and then add them up, which can differ slightly from calculating tax once on the total. Also, some items may be tax-exempt or taxed at a different rate, which makes a single-rate calculation only an estimate.</p>
+<h3>How can I use quantity for a quick per-item price?</h3>
+<p>Enter the total amount you paid (or the total before tax, depending on the mode), enter the tax rate, and set quantity to the number of items. The calculator will show estimated per-item amounts by dividing the computed totals across the quantity. This is most reliable when all items are identical and taxed the same way.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
 
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/48CyNNp" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Personal Organisation</div>
--->
-                <p class="affiliate-copy">Organise personal items, schedules, and responsibilities effectively.</p>
-                <div class="affiliate-cta">View personal organisation tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Quick calculators for daily decisions, shopping, household tasks, and simple planning.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Budgeting, spending, savings, and day-to-day money tools to stay on track.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/business-accounting/">
-              <h3 class="related-title">Business &amp; Accounting</h3>
-              <p class="related-desc">Practical calculations for invoices, margins, costs, and basic accounting checks.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a class="affiliate-link" href="https://amzn.to/4iW2EUo" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Routine Planning</div>
--->
-                <p class="affiliate-copy">Build and maintain daily routines with structured planning tools.</p>
-                <div class="affiliate-cta">Browse routine planning tools on Amazon</div>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>VAT and sales tax calculator for everyday prices</h2>
-
-              <p>This VAT and sales tax calculator helps you do two common jobs quickly. First, it can add tax to a pre-tax price so you can see the final total you will pay. Second, it can remove tax from a tax-included total so you can estimate the pre-tax amount and the tax portion inside that total. People use this for shopping, splitting bills, checking receipts, comparing prices across stores, and sanity-checking invoices.</p>
-
-              <p>The key is choosing the right mode. If you have a price tag that is before VAT or sales tax, use the add mode. You enter the pre-tax amount and the tax rate, and the calculator returns the tax amount and the final total. If you have a total that already includes VAT or sales tax, use the remove mode. You enter the tax-included total and the tax rate, and the calculator works backwards to estimate the pre-tax amount and the tax portion included in the price.</p>
-
-              <p>You can also add a quantity if you want a per-item breakdown. This is useful when you buy multiple identical items, or when someone gives you a total for several units and you want to estimate what each unit costs before tax, how much tax is included per unit, and what the tax-included unit price is. Quantity is optional. If you leave it blank, the calculator treats it as 1 and shows totals only.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>The tax rate you enter is applied as a percentage of the pre-tax amount (for add mode), or as a percentage embedded within the total (for remove mode).</li>
-                <li>In remove mode, the calculator assumes the total includes a single tax rate applied to the full amount, not a mix of different tax rates.</li>
-                <li>Results are shown with two decimals, which matches typical currency rounding, but real receipts may round per line item and then sum.</li>
-                <li>Quantity is treated as a simple divider for per-item estimates, which is most accurate when all items are identical and taxed the same way.</li>
-                <li>This tool does not handle special cases like tiered taxes, exemptions, fixed levies, or multiple taxes applied sequentially.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What is the difference between VAT and sales tax in this calculator?</h3>
-              <p>For the purpose of the math here, the calculator treats VAT and sales tax the same: a percentage rate applied to a base amount. The practical difference is how pricing is displayed in different places. Some regions show prices including VAT, while others show prices before sales tax and add it at checkout. Choose the mode based on whether your amount is before tax or includes tax.</p>
-
-              <h3>Why is removing VAT not the same as subtracting the tax rate?</h3>
-              <p>Because the tax is inside the total. If a total includes 15% VAT, the VAT portion is not 15% of the total. It is 15% of the pre-tax amount. To remove VAT, you divide the total by 1 + rate, then the difference between total and pre-tax is the tax portion.</p>
-
-              <h3>What should I do if I do not know the exact tax rate?</h3>
-              <p>Use your best estimate. Many everyday decisions only need a close answer. If you want more accuracy, check a recent receipt for the rate used, or look at the merchant invoice where the rate is usually listed. If the rate varies by item category, this calculator is still useful as an approximation, but the result will not match perfectly.</p>
-
-              <h3>Why does my receipt not match the calculator exactly?</h3>
-              <p>Two common reasons are rounding and mixed tax treatment. Some receipts round tax per item or per line and then add them up, which can differ slightly from calculating tax once on the total. Also, some items may be tax-exempt or taxed at a different rate, which makes a single-rate calculation only an estimate.</p>
-
-              <h3>How can I use quantity for a quick per-item price?</h3>
-              <p>Enter the total amount you paid (or the total before tax, depending on the mode), enter the tax rate, and set quantity to the number of items. The calculator will show estimated per-item amounts by dividing the computed totals across the quantity. This is most reliable when all items are identical and taxed the same way.</p>
-
-              <div class="last-updated">Last updated: 2025-12-18</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-              </a>
-            </div>
--->
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

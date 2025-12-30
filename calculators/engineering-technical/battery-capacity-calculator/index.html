@@ -1,51 +1,23 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Battery Capacity Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <meta
-      name="description"
-      content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run."
-    />
-
-    <link
-      rel="canonical"
-      href="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/"
-    />
-
-    <meta property="og:title" content="Battery Capacity Calculator | SnapCalc" />
-    <meta
-      property="og:description"
-      content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/"
-    />
-    <meta
-      property="og:image"
-      content="https://snapcalc.site/assets/share-default.png"
-    />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Battery Capacity Calculator | SnapCalc"
-    />
-    <meta
-      name="twitter:description"
-      content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run."
-    />
-    <meta
-      name="twitter:image"
-      content="https://snapcalc.site/assets/share-default.png"
-    />
-
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Battery Capacity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." name="description"/>
+<link href="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/" rel="canonical"/>
+<meta content="Battery Capacity Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Battery Capacity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -56,245 +28,158 @@
         "description": "Calculate the battery capacity you need in amp-hours (Ah) and watt-hours (Wh) from a device wattage, battery voltage, and desired runtime. Optional settings include efficiency and depth of discharge."
       }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
-        <a href="/categories/engineering-technical/"
-          >Engineering &amp; Technical</a
-        >
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a>
         ›
         <span>Battery Capacity Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Battery Capacity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1 -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Battery Capacity Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1 -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4oPfhlD" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Mechanical Tools</div>
--->
-    <p class="affiliate-copy">Tools for mechanical calculations, forces, torque, and motion analysis.</p>
-    <div class="affiliate-cta">Explore mechanical engineering tools on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Estimate required battery size (Ah)</h2>
-
-              <p class="calculator-intro">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate required battery size (Ah)</h2>
+<p class="calculator-intro">
                 Enter your device power, battery voltage, and the runtime you
                 want. You will get the minimum battery capacity plus a practical
                 recommendation.
               </p>
-
-              <div class="form-group">
-                <label for="loadWatts">Device load (watts, W)</label>
-                <input
-                  type="text"
-                  id="loadWatts"
-                  inputmode="decimal"
-                  placeholder="e.g., 1200"
-                  aria-label="Device load in watts"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="batteryVoltage">Battery/system voltage (V)</label>
-                <input
-                  type="text"
-                  id="batteryVoltage"
-                  inputmode="decimal"
-                  placeholder="e.g., 12"
-                  aria-label="Battery or system voltage in volts"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="runtimeHours">Desired runtime (hours)</label>
-                <input
-                  type="text"
-                  id="runtimeHours"
-                  inputmode="decimal"
-                  placeholder="e.g., 4"
-                  aria-label="Desired runtime in hours"
-                />
-              </div>
-
-              <details class="advanced-section">
-                <summary>Advanced (optional)</summary>
-
-                <!-- FIX: was <diva> -->
-                <div>
-                  <div class="form-group">
-                    <label for="efficiencyPercent">System efficiency (%)</label>
-                    <input
-                      type="text"
-                      id="efficiencyPercent"
-                      inputmode="decimal"
-                      placeholder="e.g., 90"
-                      aria-label="System efficiency percentage"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="dodPercent"
-                      >Usable depth of discharge, DoD (%)</label
-                    >
-                    <input
-                      type="text"
-                      id="dodPercent"
-                      inputmode="decimal"
-                      placeholder="e.g., 80"
-                      aria-label="Usable depth of discharge percentage"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="singleBatteryAh">Single battery size (Ah)</label>
-                    <input
-                      type="text"
-                      id="singleBatteryAh"
-                      inputmode="decimal"
-                      placeholder="e.g., 100"
-                      aria-label="Single battery capacity in amp-hours"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="singleBatteryVoltage"
-                      >Single battery voltage (V)</label
-                    >
-                    <input
-                      type="text"
-                      id="singleBatteryVoltage"
-                      inputmode="decimal"
-                      placeholder="e.g., 12"
-                      aria-label="Single battery voltage in volts"
-                    />
-                  </div>
-                </div>
-              </details>
-
-              <button id="calculateButton" type="button">
+<div class="form-group">
+<label for="loadWatts">Device load (watts, W)</label>
+<input aria-label="Device load in watts" id="loadWatts" inputmode="decimal" placeholder="e.g., 1200" type="text"/>
+</div>
+<div class="form-group">
+<label for="batteryVoltage">Battery/system voltage (V)</label>
+<input aria-label="Battery or system voltage in volts" id="batteryVoltage" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+<div class="form-group">
+<label for="runtimeHours">Desired runtime (hours)</label>
+<input aria-label="Desired runtime in hours" id="runtimeHours" inputmode="decimal" placeholder="e.g., 4" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<!-- FIX: was <diva> -->
+<div>
+<div class="form-group">
+<label for="efficiencyPercent">System efficiency (%)</label>
+<input aria-label="System efficiency percentage" id="efficiencyPercent" inputmode="decimal" placeholder="e.g., 90" type="text"/>
+</div>
+<div class="form-group">
+<label for="dodPercent">Usable depth of discharge, DoD (%)</label>
+<input aria-label="Usable depth of discharge percentage" id="dodPercent" inputmode="decimal" placeholder="e.g., 80" type="text"/>
+</div>
+<div class="form-group">
+<label for="singleBatteryAh">Single battery size (Ah)</label>
+<input aria-label="Single battery capacity in amp-hours" id="singleBatteryAh" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+<div class="form-group">
+<label for="singleBatteryVoltage">Single battery voltage (V)</label>
+<input aria-label="Single battery voltage in volts" id="singleBatteryVoltage" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+</div>
+</details>
+<button id="calculateButton" type="button">
                 Calculate capacity
               </button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/496ZJoJ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Thermal Calculations</div>
--->
-    <p class="affiliate-copy">Calculate heat transfer, temperature change, and energy flow.</p>
-    <div class="affiliate-cta">View thermal engineering tools on Amazon</div>
-  </a>
 </div>
-          </div>
+</div>
+</div>
+<div class="grid-slot">
 
-          <!-- Row 2 -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/engineering-technical/">
-              <h3 class="related-title">Engineering &amp; Technical</h3>
-              <p class="related-desc">
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">
                 Electrical, mechanical, and practical engineering calculators
                 for common real-world tasks.
               </p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a
-              class="related-card"
-              href="/categories/conversions-units-currencies/"
-            >
-              <h3 class="related-title">
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">
                 Conversions (Units, Currencies, etc.)
               </h3>
-              <p class="related-desc">
+<p class="related-desc">
                 Convert units and measurements quickly when you are working
                 across specs, labels, and standards.
               </p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math &amp; General Calculators</h3>
-              <p class="related-desc">
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">
                 Core math tools for percentages, ratios, averages, rounding, and
                 everyday calculations.
               </p>
-            </a>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
+</a>
 </div>
--->
+<!-- Row 3 -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Battery capacity calculator for runtime (Ah and Wh)</h2>
-
-              <p>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Battery capacity calculator for runtime (Ah and Wh)</h2>
+<p>
                 This Battery Capacity Calculator estimates the battery size you
                 need to power a device for a specific number of hours. The
                 dominant use case is planning a battery setup for a known
@@ -304,7 +189,7 @@
                 This is the decision most people are trying to make: “How big a
                 battery do I need to run this thing for that long?”
               </p>
-              <p>
+<p>
                 You enter three basics: device load in watts, the battery or
                 system voltage, and your desired runtime in hours. The
                 calculator then converts that into energy required (watt-hours),
@@ -316,7 +201,7 @@
                 optimistic paper result and a practical setup that actually
                 delivers the runtime you expect.
               </p>
-              <p>
+<p>
                 The results are shown as a minimum required battery capacity and
                 a practical recommendation. The minimum tells you the
                 theoretical amount of capacity needed under the assumptions you
@@ -329,50 +214,46 @@
                 This is meant for quick planning, not for detailed electrical
                 design.
               </p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
                   The load (watts) is treated as an average steady draw over the
                   full runtime. If your device cycles on and off, use an average
                   wattage.
                 </li>
-                <li>
+<li>
                   If you leave efficiency blank, the calculator assumes 90%
                   efficiency to reflect typical losses in wiring and conversion
                   equipment.
                 </li>
-                <li>
+<li>
                   If you leave depth of discharge blank, the calculator assumes
                   80% usable capacity. This is a common practical planning
                   value.
                 </li>
-                <li>
+<li>
                   The calculator outputs energy in Wh and capacity in Ah using
                   the relationship Wh = V × Ah. Voltage is assumed constant for
                   planning purposes.
                 </li>
-                <li>
+<li>
                   The optional “number of batteries” estimate assumes identical
                   batteries and is a sizing guide only. Series/parallel wiring,
                   surge currents, temperature, and manufacturer limits are not
                   modeled.
                 </li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What is the difference between Ah and Wh?</h3>
-              <p>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between Ah and Wh?</h3>
+<p>
                 Amp-hours (Ah) is capacity at a specific voltage. Watt-hours
                 (Wh) is energy and is easier to compare across voltages. A 12V
                 100Ah battery is roughly 1,200Wh (12 × 100), but the usable
                 energy depends on how much you are willing to discharge it and
                 on system losses.
               </p>
-
-              <h3>Why do efficiency and depth of discharge matter?</h3>
-              <p>
+<h3>Why do efficiency and depth of discharge matter?</h3>
+<p>
                 Efficiency accounts for losses, especially when converting
                 battery power to another form (like DC to AC via an inverter).
                 Depth of discharge (DoD) reflects that you typically do not use
@@ -380,9 +261,8 @@
                 makes the result more realistic and reduces the chance of
                 under-sizing.
               </p>
-
-              <h3>My device draw is in amps, not watts. Can I still use this?</h3>
-              <p>
+<h3>My device draw is in amps, not watts. Can I still use this?</h3>
+<p>
                 This page is locked to the “watts + voltage + hours” sizing
                 decision. If you only have amps, you can convert to watts using
                 watts = volts × amps, then enter the watts here. If you are
@@ -390,9 +270,8 @@
                 bus), use the system voltage that your battery setup actually
                 runs at.
               </p>
-
-              <h3>Why is my result larger than what I expected from the battery label?</h3>
-              <p>
+<h3>Why is my result larger than what I expected from the battery label?</h3>
+<p>
                 Battery labels are usually nominal capacity at ideal conditions.
                 Real-world runtime is reduced by conversion losses, usable
                 discharge limits, and the fact that voltage and available
@@ -400,9 +279,8 @@
                 plan, keep DoD at 80% or lower and do not assume 100%
                 efficiency.
               </p>
-
-              <h3>When does this calculator not apply?</h3>
-              <p>
+<h3>When does this calculator not apply?</h3>
+<p>
                 This tool is not for precise engineering of battery banks, surge
                 loads, or motor starting currents. It also does not model
                 temperature effects, battery chemistry curves, or
@@ -411,39 +289,32 @@
                 detailed manufacturer data and a full electrical design
                 approach.
               </p>
-
-              <div class="last-updated">Last updated: 2025-12-22</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4q0U2OS" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Safety Factors</div>
--->
-    <p class="affiliate-copy">Apply safety factors correctly in engineering calculations.</p>
-    <div class="affiliate-cta">Browse safety factor tools on Amazon</div>
-  </a>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
-    ></script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
 </html>

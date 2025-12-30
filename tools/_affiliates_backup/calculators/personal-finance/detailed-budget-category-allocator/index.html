@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Detailed Budget Category Allocator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Allocate your monthly income across budget categories using percentages. Validate totals, normalize if needed, and see exact amounts per category for a clear monthly plan.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/detailed-budget-category-allocator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Detailed Budget Category Allocator | SnapCalc">
+    <meta property="og:description" content="Allocate your monthly income across budget categories using percentages. Validate totals, normalize if needed, and see exact amounts per category for a clear monthly plan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/detailed-budget-category-allocator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Detailed Budget Category Allocator | SnapCalc">
+    <meta name="twitter:description" content="Allocate your monthly income across budget categories using percentages. Validate totals, normalize if needed, and see exact amounts per category for a clear monthly plan.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Detailed Budget Category Allocator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/detailed-budget-category-allocator/",
+      "description": "Allocate your monthly income across budget categories using percentages, validate totals, optionally normalize percentages to 100%, and see exact category amounts for a clear monthly budget plan."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Detailed Budget Category Allocator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Detailed Budget Category Allocator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48EF5fD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Interest Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how interest works across savings, loans, and everyday financial products.</p>
+    <div class="affiliate-cta">Browse interest calculation books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Allocate your income across budget categories</h2>
+
+              <p class="calculator-intro">
+                Enter your monthly income, set percentages for each category, and calculate exact amounts. If your percentages do not add up to 100%, you can normalize them automatically.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="monthlyIncome">Monthly income (after tax)</label>
+                <input id="monthlyIncome" type="text" inputmode="decimal" placeholder="e.g., 35,000">
+              </div>
+
+              <div class="form-group">
+                <label for="roundingMode">Rounding</label>
+                <select id="roundingMode">
+                  <option value="none">No rounding (show exact cents)</option>
+                  <option value="1">Round to nearest 1</option>
+                  <option value="10">Round to nearest 10</option>
+                  <option value="100">Round to nearest 100</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="spaced-label" for="normalizeToggle">
+                  <input id="normalizeToggle" type="checkbox">
+                  Normalize percentages to 100% if they do not add up
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label>Budget categories (name + %)</label>
+
+                <div class="category-grid" aria-label="Budget categories list">
+                  <div class="category-row">
+                    <input id="catName1" type="text" placeholder="Category name (e.g., Rent)">
+                    <input id="catPct1" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName2" type="text" placeholder="Category name (e.g., Groceries)">
+                    <input id="catPct2" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName3" type="text" placeholder="Category name (e.g., Transport)">
+                    <input id="catPct3" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName4" type="text" placeholder="Category name (e.g., Utilities)">
+                    <input id="catPct4" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName5" type="text" placeholder="Category name (e.g., Debt payments)">
+                    <input id="catPct5" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName6" type="text" placeholder="Category name (e.g., Savings)">
+                    <input id="catPct6" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName7" type="text" placeholder="Category name (optional)">
+                    <input id="catPct7" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName8" type="text" placeholder="Category name (optional)">
+                    <input id="catPct8" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName9" type="text" placeholder="Category name (optional)">
+                    <input id="catPct9" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+
+                  <div class="category-row">
+                    <input id="catName10" type="text" placeholder="Category name (optional)">
+                    <input id="catPct10" type="text" inputmode="decimal" placeholder="%">
+                  </div>
+                </div>
+
+                <div class="helper-note">
+                  Tip: Leave unused rows blank. If you do not normalize, your category percentages must add up to exactly 100%.
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate budget allocations</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48EF5fD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Interest Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how interest works across savings, loans, and everyday financial products.</p>
+    <div class="affiliate-cta">Browse interest calculation books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan monthly budgets, track spending, and make clearer money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Set savings targets, estimate growth, and plan contributions over time.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Work out margins, budgets, and basic accounting calculations for daily decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Budget category allocator for monthly income planning</h2>
+
+              <p>
+                A monthly budget is only useful if it becomes specific. Most people know roughly what they want to do with their money, but they get stuck when it is time to translate a plan into exact numbers. This detailed budget category allocator turns your income into clear category amounts based on percentages you choose. If you prefer the envelope method, a 50/30/20 style split, or a custom plan tailored to your life, the core job is the same: decide what each category gets, then commit to those limits.
+              </p>
+
+              <p>
+                The calculator works in a straightforward way. You enter your monthly income after tax, then add budget categories with percentage targets. For example, you might set Rent at 30%, Groceries at 12%, Transport at 8%, Debt payments at 10%, and Savings at 15%. The calculator multiplies your income by each percentage to produce a monthly amount per category. The output is a practical allocation list you can copy into a spreadsheet, a budgeting app, or a notes list for the month.
+              </p>
+
+              <p>
+                Percentages are powerful because they scale. If your income changes, your category allocations update automatically. That is useful when you get a raise, move to a new job, start a side income, or experience a temporary dip. If you want to build stability, start with fixed needs (rent, utilities, insurance, transport), then assign amounts to debt repayment and savings, then spread what is left across flexible categories like groceries, personal spending, and entertainment. If a category is consistently over budget, the right move is usually to increase its allocation and reduce another, rather than pretending the problem will disappear.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Use your monthly income after tax and after any automatic deductions you cannot control (if applicable).</li>
+                <li>Percentages should reflect your intended plan, not what happened last month. Use last month only as a reality check.</li>
+                <li>If you disable normalization, your category percentages must add up to exactly 100% to calculate a full plan.</li>
+                <li>If you enable normalization, the calculator rescales your entered percentages to total 100% while keeping their relative proportions.</li>
+                <li>Rounding is optional. If you round, expect small differences between the sum of category amounts and your income.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does it mean to normalize percentages?</h3>
+              <p>
+                Normalizing means the calculator adjusts your percentages so they total 100% without changing their relative weighting. Example: if your categories add up to 95%, normalization increases each one slightly so the final total becomes 100%. If they add up to 110%, normalization reduces each one proportionally. This is useful when your plan is “close enough” but you still want a complete allocation that matches your income.
+              </p>
+
+              <h3>Should my categories always add up to 100%?</h3>
+              <p>
+                If you want a full monthly plan, yes. A budget is an allocation of 100% of your money. If your categories total less than 100%, you have unassigned money that will usually disappear into unplanned spending. If they total more than 100%, your plan is mathematically impossible unless you reduce categories or increase income.
+              </p>
+
+              <h3>How many categories should I use?</h3>
+              <p>
+                Use enough categories to control the spending that matters, but not so many that you cannot track it. Many people do well with 6 to 12 categories. If you keep adding categories to feel “more detailed,” you often end up with a plan you do not maintain. Keep fixed commitments separate (rent, utilities, debt) and group the smaller flexible items if needed.
+              </p>
+
+              <h3>How do I choose reasonable percentages?</h3>
+              <p>
+                Start with fixed commitments and minimum needs, because those are the hardest to change quickly. Then set a savings or investing category that is realistic but meaningful. After that, distribute the remainder across the categories you care about. If you are repaying expensive debt, prioritizing repayment can produce a better long-term outcome than increasing lifestyle spending. The right percentages are the ones you can follow while still meeting your obligations.
+              </p>
+
+              <h3>Does this replace a full budgeting tool or bank tracking?</h3>
+              <p>
+                No. This calculator creates a plan. Tracking tools tell you what actually happened. The best approach is to use both: set allocations at the start of the month, then compare actual spending to these targets. If you consistently miss a category, either adjust the plan or change the behaviour. A budget that you repeatedly ignore is not a budget, it is a wish list.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-13</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

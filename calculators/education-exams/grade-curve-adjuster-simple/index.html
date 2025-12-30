@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Grade Curve Adjuster (Simple) | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/education-exams/grade-curve-adjuster-simple/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Grade Curve Adjuster (Simple) | SnapCalc">
-    <meta property="og:description" content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/education-exams/grade-curve-adjuster-simple/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Grade Curve Adjuster (Simple) | SnapCalc">
-    <meta name="twitter:description" content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Grade Curve Adjuster (Simple) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/education-exams/grade-curve-adjuster-simple/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Grade Curve Adjuster (Simple) | SnapCalc" property="og:title"/>
+<meta content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/education-exams/grade-curve-adjuster-simple/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Grade Curve Adjuster (Simple) | SnapCalc" name="twitter:title"/>
+<meta content="Adjust a test score using a simple grading curve. Add points, multiply scores, or convert to a new maximum, then see the curved score, percent, and the change." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,260 +33,213 @@
       "description": "Adjust a test score using a simple grading curve by adding points, multiplying the score, or converting to a new maximum, and see the resulting curved score and percentage."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
-        <a href="/categories/education-exams/">Education & Exams</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
         <span>Grade Curve Adjuster (Simple)</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Grade Curve Adjuster (Simple)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Grade Curve Adjuster (Simple)</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/3Mz06Qe" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Online Learning</div>
--->
-                <p class="affiliate-copy">Support self-paced learning with digital tools and study aids.</p>
-                <div class="affiliate-cta">Explore online learning tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Curve a score using a simple method</h2>
 
-              <p class="calculator-intro">Enter your raw score and choose a curve method. You will get the curved score, curved percentage, and the change from your original result.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="curveType">Curve method</label>
-                <select id="curveType" class="curve-select" aria-label="Curve method">
-                  <option value="addPoints">Add points (flat increase)</option>
-                  <option value="multiply">Multiply score (factor)</option>
-                  <option value="newMax">Convert to a new maximum</option>
-                </select>
-              </div>
+--&gt;
+                
 
-              <div class="form-group">
-                <label for="rawScore">Raw score (points)</label>
-                <input type="text" id="rawScore" inputmode="decimal" placeholder="e.g., 72">
-              </div>
 
-              <div class="form-group">
-                <label for="maxScore">Maximum possible (points)</label>
-                <input type="text" id="maxScore" inputmode="decimal" placeholder="e.g., 100">
-              </div>
-
-              <div id="modeAddPoints" class="mode-block">
-                <div class="form-group">
-                  <label for="pointsToAdd">Points to add</label>
-                  <input type="text" id="pointsToAdd" inputmode="decimal" placeholder="e.g., 5">
-                </div>
-                <div class="form-group">
-                  <label for="capAtMaxAdd">Cap at maximum?</label>
-                  <select id="capAtMaxAdd" class="curve-select" aria-label="Cap at maximum">
-                    <option value="yes" selected>Yes (recommended)</option>
-                    <option value="no">No (allow above maximum)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div id="modeMultiply" class="mode-block hidden">
-                <div class="form-group">
-                  <label for="multiplier">Multiplier</label>
-                  <input type="text" id="multiplier" inputmode="decimal" placeholder="e.g., 1.05">
-                </div>
-                <div class="form-group">
-                  <label for="capAtMaxMultiply">Cap at maximum?</label>
-                  <select id="capAtMaxMultiply" class="curve-select" aria-label="Cap at maximum">
-                    <option value="yes" selected>Yes (recommended)</option>
-                    <option value="no">No (allow above maximum)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div id="modeNewMax" class="mode-block hidden">
-                <div class="form-group">
-                  <label for="newMaximum">New maximum (points)</label>
-                  <input type="text" id="newMaximum" inputmode="decimal" placeholder="e.g., 110">
-                </div>
-                <div class="form-group">
-                  <label for="roundPoints">Round curved points</label>
-                  <select id="roundPoints" class="curve-select" aria-label="Round curved points">
-                    <option value="none" selected>No rounding</option>
-                    <option value="nearest1">Nearest 1 point</option>
-                    <option value="nearest0_5">Nearest 0.5 point</option>
-                  </select>
-                </div>
-              </div>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate curved score</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Curve a score using a simple method</h2>
+<p class="calculator-intro">Enter your raw score and choose a curve method. You will get the curved score, curved percentage, and the change from your original result.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="curveType">Curve method</label>
+<select aria-label="Curve method" class="curve-select" id="curveType">
+<option value="addPoints">Add points (flat increase)</option>
+<option value="multiply">Multiply score (factor)</option>
+<option value="newMax">Convert to a new maximum</option>
+</select>
+</div>
+<div class="form-group">
+<label for="rawScore">Raw score (points)</label>
+<input id="rawScore" inputmode="decimal" placeholder="e.g., 72" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxScore">Maximum possible (points)</label>
+<input id="maxScore" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+<div class="mode-block" id="modeAddPoints">
+<div class="form-group">
+<label for="pointsToAdd">Points to add</label>
+<input id="pointsToAdd" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="capAtMaxAdd">Cap at maximum?</label>
+<select aria-label="Cap at maximum" class="curve-select" id="capAtMaxAdd">
+<option selected="" value="yes">Yes (recommended)</option>
+<option value="no">No (allow above maximum)</option>
+</select>
+</div>
+</div>
+<div class="mode-block hidden" id="modeMultiply">
+<div class="form-group">
+<label for="multiplier">Multiplier</label>
+<input id="multiplier" inputmode="decimal" placeholder="e.g., 1.05" type="text"/>
+</div>
+<div class="form-group">
+<label for="capAtMaxMultiply">Cap at maximum?</label>
+<select aria-label="Cap at maximum" class="curve-select" id="capAtMaxMultiply">
+<option selected="" value="yes">Yes (recommended)</option>
+<option value="no">No (allow above maximum)</option>
+</select>
+</div>
+</div>
+<div class="mode-block hidden" id="modeNewMax">
+<div class="form-group">
+<label for="newMaximum">New maximum (points)</label>
+<input id="newMaximum" inputmode="decimal" placeholder="e.g., 110" type="text"/>
+</div>
+<div class="form-group">
+<label for="roundPoints">Round curved points</label>
+<select aria-label="Round curved points" class="curve-select" id="roundPoints">
+<option selected="" value="none">No rounding</option>
+<option value="nearest1">Nearest 1 point</option>
+<option value="nearest0_5">Nearest 0.5 point</option>
+</select>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate curved score</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Study tools for grades, GPA, exam planning, and academic performance tracking.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Percentages, ratios, rounding, and everyday math helpers for quick checks.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan study sessions, deadlines, and calendars with simple time and date tools.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Grade curve calculator to adjust scores with a simple curve</h2>
+<p>A grade curve changes raw scores after a test, quiz, or assignment. Teachers and schools use curves for different reasons, such as a hard exam, an unfair question, or a grading policy that targets a specific distribution. This calculator helps you estimate what a curve would do to your score using three common methods that show up in real classrooms: adding points, multiplying scores, or converting a score to a new maximum.</p>
+<p>To use it, enter your raw score in points and the maximum possible points for the assessment. Then pick a curve method and provide the one extra input for that method. The results show your curved score in points and as a percentage, plus the change from your original result. That way you can quickly see whether a small curve actually makes a meaningful difference.</p>
+<p>Curves are not universal. Some curves cap scores at the original maximum and some allow scores above the maximum. Some curves adjust points, while others adjust percentages. This tool is intentionally simple, so you can model typical curve rules without needing the full class distribution or a detailed grading rubric.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Raw scores are entered as points (not letter grades), and the maximum possible points must be greater than zero.</li>
+<li>“Add points” and “Multiply score” can optionally cap the curved score at the original maximum, which is the most common policy.</li>
+<li>“Convert to a new maximum” keeps your percentage the same, but expresses it on a different total (useful when an assessment is re-weighted or re-scored).</li>
+<li>Rounding is optional and only applies to the “new maximum” method, since schools often round converted points.</li>
+<li>This calculator does not model percentile curves, z-scores, or bell-curve grading, because those require class-wide data.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is adding points the same as adding percentage points?</h3>
+<p>No. Adding points means adding to your score out of the original maximum. Adding percentage points means adding directly to the percentage. For example, adding 5 points on a test out of 50 changes the percentage far more than adding 5 points on a test out of 100. This calculator treats “add points” as point-based, which is how many instructors describe it.</p>
+<h3>Should I cap the curved score at the maximum?</h3>
+<p>If you are trying to match typical school policies, yes. Many grading systems do not allow scores above the maximum (for example, above 100%). If your instructor allows extra credit or explicitly allows scores above the maximum, turn the cap off so you can see the full increase.</p>
+<h3>What does “multiply score” represent?</h3>
+<p>A multiplier is a proportional curve. Everyone’s score is scaled by the same factor, such as 1.05 for a 5% increase. This keeps the ranking of scores the same while lifting the overall results. It is common when an exam was harder than intended but the instructor wants a simple rule that applies to all students.</p>
+<h3>Why does converting to a new maximum sometimes not change my percentage?</h3>
+<p>Because it is a conversion, not a boost. If your percentage stays the same, your points change only because the total points changed. This is useful when an assessment is re-scored or re-weighted, but it is not the same thing as a curve that increases grades.</p>
+<h3>How can I make the result more accurate?</h3>
+<p>Use the curve method and policy your instructor actually states, and match any rounding rules. If the curve is based on class statistics (for example, “raise the average to 70%” or “grade on a bell curve”), this tool will not match that outcome without class-wide data. In that case, ask for the exact rule or the adjusted scoring scheme.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
 
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-              <a class="affiliate-link" href="https://amzn.to/48TNUkm" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Exam Timing</div>
--->
-                <p class="affiliate-copy">Practise time management strategies for exam conditions.</p>
-                <div class="affiliate-cta">View exam timing practice tools on Amazon</div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/education-exams/">
-              <h3 class="related-title">Education & Exams</h3>
-              <p class="related-desc">Study tools for grades, GPA, exam planning, and academic performance tracking.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math & General Calculators</h3>
-              <p class="related-desc">Percentages, ratios, rounding, and everyday math helpers for quick checks.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date & Scheduling</h3>
-              <p class="related-desc">Plan study sessions, deadlines, and calendars with simple time and date tools.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a class="affiliate-link" href="https://amzn.to/4iRIw5S" target="_blank" rel="nofollow sponsored noopener">
-                <div class="affiliate-label">Note Taking</div>
--->
-                <p class="affiliate-copy">Capture and organise study notes efficiently for revision.</p>
-                <div class="affiliate-cta">Browse note taking tools on Amazon</div>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Grade curve calculator to adjust scores with a simple curve</h2>
-
-              <p>A grade curve changes raw scores after a test, quiz, or assignment. Teachers and schools use curves for different reasons, such as a hard exam, an unfair question, or a grading policy that targets a specific distribution. This calculator helps you estimate what a curve would do to your score using three common methods that show up in real classrooms: adding points, multiplying scores, or converting a score to a new maximum.</p>
-
-              <p>To use it, enter your raw score in points and the maximum possible points for the assessment. Then pick a curve method and provide the one extra input for that method. The results show your curved score in points and as a percentage, plus the change from your original result. That way you can quickly see whether a small curve actually makes a meaningful difference.</p>
-
-              <p>Curves are not universal. Some curves cap scores at the original maximum and some allow scores above the maximum. Some curves adjust points, while others adjust percentages. This tool is intentionally simple, so you can model typical curve rules without needing the full class distribution or a detailed grading rubric.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Raw scores are entered as points (not letter grades), and the maximum possible points must be greater than zero.</li>
-                <li>“Add points” and “Multiply score” can optionally cap the curved score at the original maximum, which is the most common policy.</li>
-                <li>“Convert to a new maximum” keeps your percentage the same, but expresses it on a different total (useful when an assessment is re-weighted or re-scored).</li>
-                <li>Rounding is optional and only applies to the “new maximum” method, since schools often round converted points.</li>
-                <li>This calculator does not model percentile curves, z-scores, or bell-curve grading, because those require class-wide data.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Is adding points the same as adding percentage points?</h3>
-              <p>No. Adding points means adding to your score out of the original maximum. Adding percentage points means adding directly to the percentage. For example, adding 5 points on a test out of 50 changes the percentage far more than adding 5 points on a test out of 100. This calculator treats “add points” as point-based, which is how many instructors describe it.</p>
-
-              <h3>Should I cap the curved score at the maximum?</h3>
-              <p>If you are trying to match typical school policies, yes. Many grading systems do not allow scores above the maximum (for example, above 100%). If your instructor allows extra credit or explicitly allows scores above the maximum, turn the cap off so you can see the full increase.</p>
-
-              <h3>What does “multiply score” represent?</h3>
-              <p>A multiplier is a proportional curve. Everyone’s score is scaled by the same factor, such as 1.05 for a 5% increase. This keeps the ranking of scores the same while lifting the overall results. It is common when an exam was harder than intended but the instructor wants a simple rule that applies to all students.</p>
-
-              <h3>Why does converting to a new maximum sometimes not change my percentage?</h3>
-              <p>Because it is a conversion, not a boost. If your percentage stays the same, your points change only because the total points changed. This is useful when an assessment is re-scored or re-weighted, but it is not the same thing as a curve that increases grades.</p>
-
-              <h3>How can I make the result more accurate?</h3>
-              <p>Use the curve method and policy your instructor actually states, and match any rounding rules. If the curve is based on class statistics (for example, “raise the average to 70%” or “grade on a bell curve”), this tool will not match that outcome without class-wide data. In that case, ask for the exact rule or the adjusted scoring scheme.</p>
-
-              <div class="last-updated">Last updated: 2025-12-18</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-              </a>
-            </div>
--->
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

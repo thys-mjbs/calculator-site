@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Adjustable-Rate Mortgage (ARM) Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your adjustable-rate mortgage (ARM) payments over time, including the first adjustment, future rate changes, and a projected payment range based on common cap rules.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Adjustable-Rate Mortgage (ARM) Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your adjustable-rate mortgage (ARM) payments over time, including the first adjustment, future rate changes, and a projected payment range based on common cap rules.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adjustable-Rate Mortgage (ARM) Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your adjustable-rate mortgage (ARM) payments over time, including the first adjustment, future rate changes, and a projected payment range based on common cap rules.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Adjustable-Rate Mortgage (ARM) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/adjustable-rate-mortgage-arm-calculator/",
+      "description": "Estimate adjustable-rate mortgage (ARM) payments over time, including the first adjustment and projected payment range using common index, margin, and cap rules."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Adjustable-Rate Mortgage (ARM) Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Adjustable-Rate Mortgage (ARM) Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4915OlA" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Property Returns</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Analyze rental yields and returns on property investments.</p>
+                <div class="affiliate-cta">Explore property return books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>ARM payment estimate</h2>
+
+              <p class="calculator-intro">Get a quick ARM payment estimate now, then refine with optional index, margin, and caps to see a realistic payment range over time.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="loanAmount">Loan amount</label>
+                <input type="text" id="loanAmount" inputmode="decimal" placeholder="e.g., 1,500,000">
+              </div>
+
+              <div class="form-group">
+                <label for="initialRate">Initial interest rate (annual %)</label>
+                <input type="text" id="initialRate" inputmode="decimal" placeholder="e.g., 8.75">
+              </div>
+
+              <div class="form-group">
+                <label for="termYears">Loan term (years)</label>
+                <input type="text" id="termYears" inputmode="decimal" placeholder="e.g., 20 or 30">
+              </div>
+
+              <div class="form-group">
+                <label for="fixedYears">Initial fixed period (years)</label>
+                <input type="text" id="fixedYears" inputmode="decimal" placeholder="e.g., 3, 5, 7">
+              </div>
+
+              <div class="form-group">
+                <label for="adjFreqYears">Adjustment frequency after fixed period (years)</label>
+                <input type="text" id="adjFreqYears" inputmode="decimal" placeholder="Default: 1">
+              </div>
+
+              <div class="form-group">
+                <label for="indexRate">Index rate at adjustment (annual %)</label>
+                <input type="text" id="indexRate" inputmode="decimal" placeholder="Default: 3.00">
+              </div>
+
+              <div class="form-group">
+                <label for="margin">Margin (annual %)</label>
+                <input type="text" id="margin" inputmode="decimal" placeholder="Default: 2.25">
+              </div>
+
+              <div class="form-group">
+                <label for="periodicCap">Periodic rate cap (percentage points per adjustment)</label>
+                <input type="text" id="periodicCap" inputmode="decimal" placeholder="Default: 2.00">
+              </div>
+
+              <div class="form-group">
+                <label for="lifetimeCap">Lifetime cap above initial rate (percentage points)</label>
+                <input type="text" id="lifetimeCap" inputmode="decimal" placeholder="Default: 5.00">
+              </div>
+
+              <div class="form-group">
+                <label for="floorRate">Rate floor (annual %)</label>
+                <input type="text" id="floorRate" inputmode="decimal" placeholder="Default: 0.00">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate ARM payments</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rXdZI8" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Property Expenses</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Plan and manage ongoing expenses for property ownership.</p>
+                <div class="affiliate-cta">View property expense books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Run mortgage, rent, and property ownership calculations for buying and holding property.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Compare loan options, understand repayments, and estimate interest costs over time.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets and cash flow impacts, and test affordability before committing to a loan.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4rWVnIe" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Land Investing</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Understand land investment strategies and valuation factors.</p>
+                <div class="affiliate-cta">Browse land investment books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Adjustable-rate mortgage (ARM) payment calculator</h2>
+
+              <p>An adjustable-rate mortgage (ARM) can start with a lower interest rate than a fixed-rate loan, then change later based on a reference rate (an index) plus a lender margin. This calculator estimates your monthly payment during the fixed period and then projects how payments might change after adjustments begin. It is designed for two common use cases: a quick affordability check and a more careful stress test of what payments could become.</p>
+
+              <p>To use it quickly, enter your loan amount, initial interest rate, loan term, and the initial fixed period. You will immediately get an initial monthly payment and a projected payment path after the fixed period. If you want a more realistic ARM projection, fill in the optional fields for index rate, margin, and caps. These inputs define how the rate can move at each adjustment and the maximum rate you can reach over the life of the loan.</p>
+
+              <p>The key output is not just one number. You will see the initial payment, the payment right after the first adjustment, and a projected maximum payment under the cap rules you entered. This helps you answer practical questions like: Can I afford the payment today, can I afford the first adjustment, and what payment should I be able to survive if rates move against me over time.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator assumes a standard amortizing mortgage where the balance is repaid over the full term with monthly payments.</li>
+                <li>After the fixed period, the rate is estimated using: fully indexed rate = index rate + margin, then limited by the periodic cap, lifetime cap, and floor.</li>
+                <li>The projection assumes your index rate and margin inputs stay constant over time. Real index values can rise or fall, changing the result.</li>
+                <li>Rate caps are applied at each adjustment point, and the monthly payment is recalculated to pay off the remaining balance over the remaining term.</li>
+                <li>Fees, insurance, taxes, and escrow are not included. The output is principal-and-interest only, which is usually the base payment shown in loan quotes.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is an ARM “index” and “margin”?</h3>
+              <p>The index is a published reference rate that moves with broader interest rates. The margin is a fixed percentage added by the lender. Your adjusted rate is typically the index plus the margin, then limited by the cap rules in your loan contract. If you do not know your exact loan index and margin, the defaults can still produce a reasonable estimate for planning.</p>
+
+              <h3>Why does the payment change when the rate changes?</h3>
+              <p>When the rate adjusts, lenders generally recalculate your payment so the remaining loan balance is still paid off by the end of the original term. If the rate goes up, more of each payment goes to interest, so the total payment usually rises to stay on schedule. If the rate goes down, the payment can decrease. This calculator models that standard recalculation.</p>
+
+              <h3>What do periodic caps and lifetime caps mean in practice?</h3>
+              <p>A periodic cap limits how much the rate can change at a single adjustment, measured in percentage points. A lifetime cap limits how far the rate can rise above the initial rate over the entire loan life. These caps are why an ARM often does not jump straight to the fully indexed rate in one move. If you want a conservative plan, assume caps are reached over time and look at the projected maximum payment.</p>
+
+              <h3>What if I do not know the index rate today?</h3>
+              <p>If you do not know the current index value used by your lender, use a reasonable estimate and test a few scenarios. For example, you can try a lower index and a higher index to see how sensitive payments are. The goal is not perfect prediction. The goal is to understand the size of the risk and whether your budget can handle it.</p>
+
+              <h3>When does this calculator not apply?</h3>
+              <p>This calculator is a good fit for typical amortizing ARMs. It may not apply if your loan has interest-only periods, negative amortization features, or unusual recast rules. It also does not include taxes and insurance, which can be a major part of the total monthly payment. Use the principal-and-interest result as a base, then add your expected non-loan costs separately.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

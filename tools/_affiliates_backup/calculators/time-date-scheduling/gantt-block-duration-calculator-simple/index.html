@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Gantt Block Duration Calculator (Simple) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate the working duration of a Gantt task block between two date-times, with optional business-hours rules like workday hours and weekend handling.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/gantt-block-duration-calculator-simple/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Gantt Block Duration Calculator (Simple) | SnapCalc">
+    <meta property="og:description" content="Calculate the working duration of a Gantt task block between two date-times, with optional business-hours rules like workday hours and weekend handling.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/gantt-block-duration-calculator-simple/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gantt Block Duration Calculator (Simple) | SnapCalc">
+    <meta name="twitter:description" content="Calculate the working duration of a Gantt task block between two date-times, with optional business-hours rules like workday hours and weekend handling.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gantt Block Duration Calculator (Simple)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/gantt-block-duration-calculator-simple/",
+      "description": "Calculates the working duration of a Gantt task block between two date-times, with optional business-hours rules such as workday hours and weekend handling."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date & Scheduling</a> ›
+        <span>Gantt Block Duration Calculator (Simple)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Gantt Block Duration Calculator (Simple)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pGaiVN" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Project Timelines</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Visual tools for mapping timelines, phases, and delivery dates.</p>
+    <div class="affiliate-cta">Explore project timeline tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate a Gantt task block duration</h2>
+
+              <p class="calculator-intro">
+                Enter a start and end date-time. Optionally apply simple working-hours rules to estimate the planned duration used in many Gantt charts.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="startDate">Start date (YYYY-MM-DD)</label>
+                <input id="startDate" type="text" inputmode="numeric" placeholder="2026-01-05" />
+              </div>
+
+              <div class="form-group">
+                <label for="startTime">Start time (HH:MM, 24-hour)</label>
+                <input id="startTime" type="text" inputmode="numeric" placeholder="09:00" />
+              </div>
+
+              <div class="form-group">
+                <label for="endDate">End date (YYYY-MM-DD)</label>
+                <input id="endDate" type="text" inputmode="numeric" placeholder="2026-01-07" />
+              </div>
+
+              <div class="form-group">
+                <label for="endTime">End time (HH:MM, 24-hour)</label>
+                <input id="endTime" type="text" inputmode="numeric" placeholder="17:00" />
+              </div>
+
+              <div class="form-group">
+                <label for="useWorkingTime">
+                  <input id="useWorkingTime" type="checkbox" />
+                  Count working time only (recommended for Gantt planning)
+                </label>
+              </div>
+
+              <div id="advancedBlock" class="advanced-block hidden" aria-hidden="true">
+                <div class="form-group">
+                  <label for="workdayStart">Workday start (HH:MM)</label>
+                  <input id="workdayStart" type="text" inputmode="numeric" placeholder="09:00" />
+                </div>
+
+                <div class="form-group">
+                  <label for="workdayEnd">Workday end (HH:MM)</label>
+                  <input id="workdayEnd" type="text" inputmode="numeric" placeholder="17:00" />
+                </div>
+
+                <div class="form-group">
+                  <label for="includeWeekends">
+                    <input id="includeWeekends" type="checkbox" />
+                    Include weekends as working days
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label for="hoursPerDay">Hours per workday (optional override)</label>
+                  <input id="hoursPerDay" type="text" inputmode="decimal" placeholder="8" />
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate duration</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/44uCDFT" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Countdown Timers</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track remaining time to events, deadlines, or key milestones.</p>
+    <div class="affiliate-cta">View countdown timers on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan timelines, convert dates and times, and avoid scheduling mistakes.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Run planning, costing, and operations calculations for day to day decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering & Technical</h3>
+              <p class="related-desc">Calculate technical values and project inputs used in real work.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Gantt block duration calculator for task planning in working hours</h2>
+
+              <p>
+                A common problem in project planning is turning a start and end time into a duration that matches how your Gantt chart behaves. If you simply subtract date-times, you get elapsed time, which includes nights, weekends, and any non-working periods. Most project plans do not treat those hours as productive. This calculator focuses on one job: estimating the duration of a single task block the way many teams plan it, using a simple working-hours schedule.
+              </p>
+
+              <p>
+                Use it when you have a task start and end date-time and you want a clear, consistent duration to place on a Gantt timeline. You can choose between elapsed duration and working duration. Elapsed duration answers, “How much clock time passes between the two moments?” Working duration answers, “How many working hours are available between those two moments, given a basic workday window and optional weekend handling?”
+              </p>
+
+              <p>
+                The default path is fast. Enter start date, start time, end date, and end time, then calculate. If you leave working time off, the calculator returns the elapsed hours and a readable breakdown so you can sanity-check it quickly. If you enable working time, the calculator switches to a planning-friendly approach: it counts only minutes that fall inside a daily work window (for example 09:00 to 17:00) and it can exclude weekends by default, which matches many office schedules.
+              </p>
+
+              <p>
+                The results are designed for decision-making rather than showing a single number. You get total hours, an estimated number of workdays based on your hours-per-day setting, and a days-hours-minutes breakdown. That combination helps you align what the plan says (for example “2.5 days”) with what the team experiences (for example “20 working hours”) and reduces argument later when timelines slip.
+              </p>
+
+              <p>
+                This is intentionally a “simple” Gantt block calculator. It does not try to model resource calendars, partial-day holidays, task dependencies, lag, lead, critical path, or earned value. If you need those, you are not looking for a block-duration calculator. You are looking for scheduling software rules. This page stays focused on one block and one decision: what duration should be recorded for the task given a basic working schedule.
+              </p>
+
+              <p>
+                To improve accuracy for planning, turn on working time and set your workday start and end to match your organisation’s standard hours. If your team uses a different definition of a “day” than the work window suggests, you can override hours per day. That override changes only the “workdays” conversion, not the counted working minutes. This keeps the raw time calculation grounded while letting you present results in the unit your team uses in status meetings.
+              </p>
+
+              <p>
+                If you are unsure whether to use elapsed or working duration, think about how your Gantt chart will be interpreted. If you are mapping a real-world calendar event, elapsed time is often correct. If you are estimating task effort and schedule capacity, working duration is usually the better choice. This calculator supports both, but it does not blend them. Mixing the concepts is a reliable way to produce plans that look plausible and then fail in execution.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The start date-time must be earlier than the end date-time; reversed inputs are treated as an error.</li>
+                <li>If “Count working time only” is enabled, only minutes inside the workday window are counted toward working duration.</li>
+                <li>By default, weekends (Saturday and Sunday) are excluded from working duration unless you explicitly include them.</li>
+                <li>“Hours per workday” affects only the conversion from working hours to “workdays”; it does not change the counted working minutes.</li>
+                <li>This calculator does not account for public holidays, individual leave, shift rotations, or resource-specific calendars.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does my duration look too large when I include nights and weekends?</h3>
+              <p>
+                Because elapsed time counts every hour between the timestamps, including non-working periods. For Gantt planning, that often overstates available work time. Enable “Count working time only” if you want a duration that better matches planned capacity.
+              </p>
+
+              <h3>What happens if my start time is outside working hours?</h3>
+              <p>
+                With working time enabled, time outside the work window is not counted. If the start is before the workday starts, counting begins at the workday start. If the start is after the workday ends, counting begins at the next working window.
+              </p>
+
+              <h3>Should I include weekends?</h3>
+              <p>
+                Only if your team genuinely works weekends for this task. Many plans fail because weekends are silently assumed as working time. If weekend work is not guaranteed, leave weekends excluded and treat any weekend work as schedule buffer, not baseline capacity.
+              </p>
+
+              <h3>What does “workdays” mean in the results?</h3>
+              <p>
+                It is a conversion of working hours into a day-based unit using your hours-per-day value. It is a reporting convenience for Gantt labels and status updates. The more reliable number is the working hours total, especially when workdays vary.
+              </p>
+
+              <h3>When is this calculator not appropriate?</h3>
+              <p>
+                If you need to model holidays, custom calendars by person, multi-shift operations, dependencies, or leveling, this is not the right tool. Those needs require a scheduling engine. This calculator is for one block duration under a simple, consistent working-hours rule.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/456gH44" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Weekly Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools to organise weekly priorities, tasks, and time commitments.</p>
+    <div class="affiliate-cta">Browse weekly planning tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

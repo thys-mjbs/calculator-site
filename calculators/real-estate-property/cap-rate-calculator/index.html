@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Cap Rate Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/cap-rate-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Cap Rate Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/cap-rate-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cap Rate Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cap Rate Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/real-estate-property/cap-rate-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cap Rate Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/real-estate-property/cap-rate-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cap Rate Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,289 +33,235 @@
       "description": "Calculate capitalization rate (cap rate) for a rental property using purchase price, rent, vacancy, and operating expenses to estimate NOI and compare deals."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
         <span>Cap Rate Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Cap Rate Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Cap Rate Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
-</div>
--->
+
+
+
+--&gt;
           </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Cap rate from rent and operating costs</h2>
-
-              <p class="calculator-intro">
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Cap rate from rent and operating costs</h2>
+<p class="calculator-intro">
                 Use this to estimate NOI and cap rate for a rental property deal. This excludes mortgage payments on purpose.
               </p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="purchasePrice">Purchase price</label>
-                <input type="text" id="purchasePrice" inputmode="decimal" placeholder="e.g., 2,500,000">
-              </div>
-
-              <div class="form-group">
-                <label for="monthlyRent">Monthly rent (gross)</label>
-                <input type="text" id="monthlyRent" inputmode="decimal" placeholder="e.g., 18,000">
-              </div>
-
-              <div class="form-group">
-                <label for="baseMonthlyExpenses">Monthly operating expenses (basic)</label>
-                <input type="text" id="baseMonthlyExpenses" inputmode="decimal" placeholder="e.g., 3,500">
-              </div>
-
-              <div class="form-group">
-                <label for="vacancyRate">Vacancy and credit loss (%)</label>
-                <input type="text" id="vacancyRate" inputmode="decimal" placeholder="e.g., 5">
-              </div>
-
-              <details class="advanced-section">
-                <summary>Advanced (optional)</summary>
-
-                <div class="form-group">
-                  <label for="otherMonthlyIncome">Other monthly income (parking, laundry, etc.)</label>
-                  <input type="text" id="otherMonthlyIncome" inputmode="decimal" placeholder="e.g., 500">
-                </div>
-
-                <div class="form-group">
-                  <label for="propertyTaxesAnnual">Property taxes (annual)</label>
-                  <input type="text" id="propertyTaxesAnnual" inputmode="decimal" placeholder="e.g., 24,000">
-                </div>
-
-                <div class="form-group">
-                  <label for="insuranceAnnual">Insurance (annual)</label>
-                  <input type="text" id="insuranceAnnual" inputmode="decimal" placeholder="e.g., 9,600">
-                </div>
-
-                <div class="form-group">
-                  <label for="hoaMonthly">HOA or body corporate (monthly)</label>
-                  <input type="text" id="hoaMonthly" inputmode="decimal" placeholder="e.g., 1,200">
-                </div>
-
-                <div class="form-group">
-                  <label for="utilitiesMonthly">Owner-paid utilities (monthly)</label>
-                  <input type="text" id="utilitiesMonthly" inputmode="decimal" placeholder="e.g., 600">
-                </div>
-
-                <div class="form-group">
-                  <label for="managementRate">Property management fee (% of collected rent)</label>
-                  <input type="text" id="managementRate" inputmode="decimal" placeholder="e.g., 8">
-                </div>
-
-                <div class="form-group">
-                  <label for="maintenanceReserveRate">Maintenance reserve (% of gross rent)</label>
-                  <input type="text" id="maintenanceReserveRate" inputmode="decimal" placeholder="e.g., 5">
-                </div>
-
-                <div class="form-group">
-                  <label for="targetCapRate">Target cap rate for valuation (%)</label>
-                  <input type="text" id="targetCapRate" inputmode="decimal" placeholder="e.g., 7">
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate cap rate</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="purchasePrice">Purchase price</label>
+<input id="purchasePrice" inputmode="decimal" placeholder="e.g., 2,500,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyRent">Monthly rent (gross)</label>
+<input id="monthlyRent" inputmode="decimal" placeholder="e.g., 18,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="baseMonthlyExpenses">Monthly operating expenses (basic)</label>
+<input id="baseMonthlyExpenses" inputmode="decimal" placeholder="e.g., 3,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="vacancyRate">Vacancy and credit loss (%)</label>
+<input id="vacancyRate" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="otherMonthlyIncome">Other monthly income (parking, laundry, etc.)</label>
+<input id="otherMonthlyIncome" inputmode="decimal" placeholder="e.g., 500" type="text"/>
+</div>
+<div class="form-group">
+<label for="propertyTaxesAnnual">Property taxes (annual)</label>
+<input id="propertyTaxesAnnual" inputmode="decimal" placeholder="e.g., 24,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="insuranceAnnual">Insurance (annual)</label>
+<input id="insuranceAnnual" inputmode="decimal" placeholder="e.g., 9,600" type="text"/>
+</div>
+<div class="form-group">
+<label for="hoaMonthly">HOA or body corporate (monthly)</label>
+<input id="hoaMonthly" inputmode="decimal" placeholder="e.g., 1,200" type="text"/>
+</div>
+<div class="form-group">
+<label for="utilitiesMonthly">Owner-paid utilities (monthly)</label>
+<input id="utilitiesMonthly" inputmode="decimal" placeholder="e.g., 600" type="text"/>
+</div>
+<div class="form-group">
+<label for="managementRate">Property management fee (% of collected rent)</label>
+<input id="managementRate" inputmode="decimal" placeholder="e.g., 8" type="text"/>
+</div>
+<div class="form-group">
+<label for="maintenanceReserveRate">Maintenance reserve (% of gross rent)</label>
+<input id="maintenanceReserveRate" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="targetCapRate">Target cap rate for valuation (%)</label>
+<input id="targetCapRate" inputmode="decimal" placeholder="e.g., 7" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate cap rate</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/real-estate-property/">
-              <h3 class="related-title">Real Estate &amp; Property</h3>
-              <p class="related-desc">Compare property deals, rental metrics, and housing costs with practical calculators.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/personal-finance/">
-              <h3 class="related-title">Personal Finance</h3>
-              <p class="related-desc">Plan budgets, savings, and financial trade-offs with clear, decision-focused tools.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/loans-credit/">
-              <h3 class="related-title">Loans &amp; Credit</h3>
-              <p class="related-desc">Estimate repayments, interest costs, and break-even points for common borrowing decisions.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3KRHwSH" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Home Buying</div>
--->
-    <p class="affiliate-copy">Understand the process of buying a home, from budgeting to closing.</p>
-    <div class="affiliate-cta">Browse home buying guides on Amazon</div>
-  </a>
 </div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Compare property deals, rental metrics, and housing costs with practical calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, savings, and financial trade-offs with clear, decision-focused tools.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Estimate repayments, interest costs, and break-even points for common borrowing decisions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Cap rate calculator for rental property deals (NOI based)</h2>
 
-              <p>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Cap rate calculator for rental property deals (NOI based)</h2>
+<p>
                 Cap rate is a fast way to compare rental property deals using income and operating costs, without mixing in mortgage payments.
                 This calculator estimates net operating income (NOI) from rent, vacancy, and operating expenses, then calculates the capitalization rate:
                 NOI divided by purchase price. It is most useful when you are deciding whether a property is priced fairly relative to its income potential.
               </p>
-              <p>
+<p>
                 The primary output is the cap rate percentage. Higher cap rates generally mean more income for each unit of purchase price, but that does not automatically mean a better deal.
                 A property can have a high cap rate because it has higher risk, weaker demand, deferred maintenance, unstable tenants, or unusually low reported expenses.
                 Use cap rate as a screening metric, then validate the numbers with real quotes, leases, and expense history.
               </p>
-              <p>
+<p>
                 To use the calculator quickly, enter the purchase price, monthly rent, and basic monthly operating expenses, then choose a vacancy percentage.
                 If you have more detail, open the Advanced section to add taxes, insurance, HOA, owner-paid utilities, a management fee, and a maintenance reserve.
                 The calculator will show your estimated NOI per year and per month, plus a simple valuation based on a target cap rate if you want to reverse-engineer price.
               </p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Cap rate is based on NOI and purchase price only. Mortgage payments, interest, and loan fees are excluded by design.</li>
-                <li>Vacancy and credit loss is applied to rent to estimate collected rent. Other income is treated as additional effective income.</li>
-                <li>Basic monthly operating expenses are assumed to be ongoing, non-financing costs (repairs, small services, admin, etc.).</li>
-                <li>Management fee is calculated as a percentage of collected rent, not gross scheduled rent.</li>
-                <li>Maintenance reserve is a planning allowance based on gross rent. It is not a guaranteed expense, but it reduces the chance you overstate NOI.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>What is cap rate, in plain language?</h3>
-              <p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Cap rate is based on NOI and purchase price only. Mortgage payments, interest, and loan fees are excluded by design.</li>
+<li>Vacancy and credit loss is applied to rent to estimate collected rent. Other income is treated as additional effective income.</li>
+<li>Basic monthly operating expenses are assumed to be ongoing, non-financing costs (repairs, small services, admin, etc.).</li>
+<li>Management fee is calculated as a percentage of collected rent, not gross scheduled rent.</li>
+<li>Maintenance reserve is a planning allowance based on gross rent. It is not a guaranteed expense, but it reduces the chance you overstate NOI.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is cap rate, in plain language?</h3>
+<p>
                 Cap rate is the property’s estimated annual operating profit (NOI) divided by the price you pay for it. If a property produces 150,000 per year in NOI
                 and costs 2,500,000, the cap rate is 6%. It tells you the income yield of the property as if you bought it with cash, before financing effects.
               </p>
-
-              <h3>Why does this calculator exclude mortgage payments?</h3>
-              <p>
+<h3>Why does this calculator exclude mortgage payments?</h3>
+<p>
                 Because cap rate is meant to compare the property itself, not your specific loan structure. Financing can make cash-on-cash returns higher or lower,
                 but cap rate stays focused on the asset’s operating performance. If you want a loan-focused metric, you would use a separate cash flow or bond repayment calculator.
               </p>
-
-              <h3>Which expenses should be included in operating expenses?</h3>
-              <p>
+<h3>Which expenses should be included in operating expenses?</h3>
+<p>
                 Include recurring costs needed to keep the property producing income: taxes, insurance, HOA, owner-paid utilities, maintenance, minor repairs, landscaping,
                 cleaning for common areas, and management. Exclude mortgage payments, renovations that materially improve the property (capital expenditures), and one-off purchase costs.
                 If you are unsure, it is safer to include an expense than to pretend it does not exist.
               </p>
-
-              <h3>What vacancy percentage should I use?</h3>
-              <p>
+<h3>What vacancy percentage should I use?</h3>
+<p>
                 If you have no data, 5% is a common planning default for many stable rentals, but it can be too low in weak markets or for high-turnover tenant types.
                 If the property already has a vacancy history, use that. If the deal relies on perfect occupancy to look good, it is fragile and the cap rate is overstated.
               </p>
-
-              <h3>How can I improve accuracy if I only know rough numbers?</h3>
-              <p>
+<h3>How can I improve accuracy if I only know rough numbers?</h3>
+<p>
                 Start with realistic ranges: rent slightly below optimistic expectations, vacancy slightly above best case, and expenses slightly above what you assume.
                 Then replace estimates with evidence: current lease schedule, comparable market rents, recent municipal tax bills, insurance quotes, HOA statements, and maintenance invoices.
                 Cap rate is only as reliable as your NOI estimate.
               </p>
-
-              <div class="last-updated">Last updated: 2025-12-29</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4pNP8EY" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Market Cycles</div>
--->
-    <p class="affiliate-copy">Understand how property markets move through cycles over time.</p>
-    <div class="affiliate-cta">Browse real estate cycle books on Amazon</div>
-  </a>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Age Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/age-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Age Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/age-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Age Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Age Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/time-date-scheduling/age-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Age Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/time-date-scheduling/age-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Age Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your exact age from your date of birth in years, months, and days, plus total days and time until your next birthday." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,210 +33,169 @@
       "description": "Calculate your age from a date of birth as of a chosen date (or today), including years, months, days, total days, and time to next birthday."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
-        <a href="/categories/time-date-scheduling/">Time, Date & Scheduling</a> ›
-        <span>Age Calculator</span>
-      </nav>
-
-      <div class="page-layout">
-        <h1>Age Calculator</h1>
-
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4s1wZoY" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Shift Scheduling</div>
--->
-    <p class="affiliate-copy">Manage rotating shifts, availability, and workforce schedules efficiently.</p>
-    <div class="affiliate-cta">Explore shift scheduling tools on Amazon</div>
-  </a>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
 </div>
-          </div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Age Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Age Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Calculate your age as of today or any date</h2>
 
-              <p class="calculator-intro">Enter your date of birth, then (optionally) a date to calculate your age on. Get an exact years-months-days result, totals, and how long until your next birthday.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="dob">Date of birth (YYYY-MM-DD)</label>
-                <input id="dob" type="text" inputmode="numeric" placeholder="e.g., 1995-08-17">
-              </div>
 
-              <div class="form-group">
-                <label for="asOf">As-of date (optional, YYYY-MM-DD)</label>
-                <input id="asOf" type="text" inputmode="numeric" placeholder="Leave blank for today">
-              </div>
-              <!-- CALCULATOR UI END -->
 
-              <button id="calculateButton" type="button">Calculate age</button>
+--&gt;
+    
 
-              <div id="result" aria-live="polite"></div>
 
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate your age as of today or any date</h2>
+<p class="calculator-intro">Enter your date of birth, then (optionally) a date to calculate your age on. Get an exact years-months-days result, totals, and how long until your next birthday.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="dob">Date of birth (YYYY-MM-DD)</label>
+<input id="dob" inputmode="numeric" placeholder="e.g., 1995-08-17" type="text"/>
+</div>
+<div class="form-group">
+<label for="asOf">As-of date (optional, YYYY-MM-DD)</label>
+<input id="asOf" inputmode="numeric" placeholder="Leave blank for today" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate age</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/3L1BrTQ" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Calendar Planning</div>
--->
-    <p class="affiliate-copy">Digital and physical tools for organising schedules, events, and deadlines.</p>
-    <div class="affiliate-cta">View calendar planning tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date & Scheduling</h3>
-              <p class="related-desc">Work out time differences, deadlines, date ranges, and planning windows with practical time calculators.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/education-exams/">
-              <h3 class="related-title">Education & Exams</h3>
-              <p class="related-desc">Plan study timelines, track grades, and calculate academic metrics for exams and coursework.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Quick tools for daily decisions like splitting bills, tracking habits, and simple household calculations.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4aP8zJ0" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Long-Term Planning</div>
--->
-    <p class="affiliate-copy">Plan months and years ahead using structured time frameworks.</p>
-    <div class="affiliate-cta">View long-term planning tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Age calculator for exact years, months, and days from your date of birth</h2>
-
-              <p>An age calculator answers one specific question: how old are you on a particular date. The most common reason people search for this is simple and practical, such as completing a form, confirming eligibility, or checking an age requirement where “years” alone is not enough. This page is built for that everyday use case, not for legal edge cases or time zone debates.</p>
-
-              <p>To use it, enter your date of birth in YYYY-MM-DD format. You can leave the as-of date blank to calculate your age as of today, or enter another date to calculate your age on that day. The result is shown as an exact calendar age in years, months, and days. That output is the clearest way to represent age for normal planning because it follows the calendar, not a rough average.</p>
-
-              <p>In addition to the main result, the calculator also shows totals that are useful in real life. Total days is helpful when you want a single number (for example, comparing two people’s ages precisely, or tracking a milestone). Total weeks and approximate total months help when you are thinking in longer planning blocks. Finally, the next birthday countdown shows the number of days until your next birthday and the date it falls on, which is useful for reminders and time planning.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>This calculator treats dates as whole days (it ignores time of day). If you need to be precise to the hour, this is not the right tool.</li>
-                <li>If you leave the as-of date blank, the calculator uses today’s date on your device.</li>
-                <li>The “years, months, days” result is a calendar difference (it adjusts for different month lengths and leap years).</li>
-                <li>Total weeks and total months are derived from total days (weeks = days ÷ 7, months ≈ days ÷ 30.436875). These are approximations.</li>
-                <li>For birthdays on February 29, non-leap-year birthdays are treated as February 28 for the next-birthday countdown.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why does my age show different “months and days” than another website?</h3>
-              <p>There are multiple ways to express the same time span. Some calculators use a simple day-count conversion (for example, days ÷ 30) and then label it as months, which produces different results. This calculator uses a calendar-based method for years, months, and days, which matches how people normally talk about age.</p>
-
-              <h3>What date format should I use?</h3>
-              <p>Use YYYY-MM-DD, for example 2004-11-03. This avoids confusion between day-month and month-day formats. If the calculator cannot read your date, it will ask you to correct it.</p>
-
-              <h3>Can I calculate my age on a future or past date?</h3>
-              <p>Yes. Enter an as-of date in the same format. This is useful for checking eligibility on an upcoming date, or calculating age at a past event. The only restriction is that the as-of date cannot be before your date of birth.</p>
-
-              <h3>Does the result include today as a full day?</h3>
-              <p>The calculator works with whole calendar days, not partial days. If your as-of date is the same as your birthday, the years-months-days result will show a clean year count with 0 months and 0 days. The total days count is based on the difference between the two dates, not on the current time of day.</p>
-
-              <h3>How can I make the result more accurate for official or legal use?</h3>
-              <p>If accuracy matters for an official process, use the same as-of date and time zone that the form or authority uses, and confirm their definition of age (some processes treat age as the number of full years only). This calculator is designed for everyday accuracy, not for jurisdiction-specific rules.</p>
-
-              <div class="last-updated">Last updated: 2025-12-22</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/3Kzt4Po" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Daily Scheduling</div>
--->
-    <p class="affiliate-copy">Plan daily activities with structured schedules and clear time blocks.</p>
-    <div class="affiliate-cta">Browse daily schedule planners on Amazon</div>
-  </a>
 </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Work out time differences, deadlines, date ranges, and planning windows with practical time calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Plan study timelines, track grades, and calculate academic metrics for exams and coursework.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick tools for daily decisions like splitting bills, tracking habits, and simple household calculations.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Age calculator for exact years, months, and days from your date of birth</h2>
+<p>An age calculator answers one specific question: how old are you on a particular date. The most common reason people search for this is simple and practical, such as completing a form, confirming eligibility, or checking an age requirement where “years” alone is not enough. This page is built for that everyday use case, not for legal edge cases or time zone debates.</p>
+<p>To use it, enter your date of birth in YYYY-MM-DD format. You can leave the as-of date blank to calculate your age as of today, or enter another date to calculate your age on that day. The result is shown as an exact calendar age in years, months, and days. That output is the clearest way to represent age for normal planning because it follows the calendar, not a rough average.</p>
+<p>In addition to the main result, the calculator also shows totals that are useful in real life. Total days is helpful when you want a single number (for example, comparing two people’s ages precisely, or tracking a milestone). Total weeks and approximate total months help when you are thinking in longer planning blocks. Finally, the next birthday countdown shows the number of days until your next birthday and the date it falls on, which is useful for reminders and time planning.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator treats dates as whole days (it ignores time of day). If you need to be precise to the hour, this is not the right tool.</li>
+<li>If you leave the as-of date blank, the calculator uses today’s date on your device.</li>
+<li>The “years, months, days” result is a calendar difference (it adjusts for different month lengths and leap years).</li>
+<li>Total weeks and total months are derived from total days (weeks = days ÷ 7, months ≈ days ÷ 30.436875). These are approximations.</li>
+<li>For birthdays on February 29, non-leap-year birthdays are treated as February 28 for the next-birthday countdown.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does my age show different “months and days” than another website?</h3>
+<p>There are multiple ways to express the same time span. Some calculators use a simple day-count conversion (for example, days ÷ 30) and then label it as months, which produces different results. This calculator uses a calendar-based method for years, months, and days, which matches how people normally talk about age.</p>
+<h3>What date format should I use?</h3>
+<p>Use YYYY-MM-DD, for example 2004-11-03. This avoids confusion between day-month and month-day formats. If the calculator cannot read your date, it will ask you to correct it.</p>
+<h3>Can I calculate my age on a future or past date?</h3>
+<p>Yes. Enter an as-of date in the same format. This is useful for checking eligibility on an upcoming date, or calculating age at a past event. The only restriction is that the as-of date cannot be before your date of birth.</p>
+<h3>Does the result include today as a full day?</h3>
+<p>The calculator works with whole calendar days, not partial days. If your as-of date is the same as your birthday, the years-months-days result will show a clean year count with 0 months and 0 days. The total days count is based on the difference between the two dates, not on the current time of day.</p>
+<h3>How can I make the result more accurate for official or legal use?</h3>
+<p>If accuracy matters for an official process, use the same as-of date and time zone that the form or authority uses, and confirm their definition of age (some processes treat age as the number of full years only). This calculator is designed for everyday accuracy, not for jurisdiction-specific rules.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Tile Adhesive Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/tile-adhesive-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Tile Adhesive Calculator | SnapCalc">
-    <meta property="og:description" content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/tile-adhesive-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tile Adhesive Calculator | SnapCalc">
-    <meta name="twitter:description" content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Tile Adhesive Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/tile-adhesive-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Tile Adhesive Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/tile-adhesive-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Tile Adhesive Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how many bags of tile adhesive you need based on tiling area, typical coverage per bag, and a realistic wastage allowance." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,242 +33,191 @@
       "description": "Estimate how many bags of tile adhesive you need based on tiling area, coverage per bag, and a wastage allowance."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
-        <a href="/categories/construction-materials/">Construction & Materials</a> ›
-        <span>Tile Adhesive Calculator</span>
-      </nav>
-
-      <div class="page-layout">
-        <h1>Tile Adhesive Calculator</h1>
-
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4pNLKde" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Technical Problem Solving</div>
--->
-    <p class="affiliate-copy">Structured tools for solving technical and engineering problems.</p>
-    <div class="affiliate-cta">Explore technical problem solving tools on Amazon</div>
-  </a>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
 </div>
-          </div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Tile Adhesive Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Tile Adhesive Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Estimate tile adhesive bags needed</h2>
 
-              <p class="calculator-intro">Use this to estimate how many bags of standard cement-based tile adhesive to buy for a floor or wall. Enter area directly or calculate from room dimensions, then adjust coverage and wastage if you want higher accuracy.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="modeSelect">What do you know?</label>
-                <select id="modeSelect" aria-label="Choose input mode">
-                  <option value="area">Total area (m²)</option>
-                  <option value="dimensions">Room dimensions (m)</option>
-                </select>
-              </div>
 
-              <div id="modeBlockArea">
-                <div class="form-group">
-                  <label for="areaM2">Total tiling area (m²)</label>
-                  <input type="text" id="areaM2" inputmode="decimal" placeholder="e.g., 18">
-                </div>
-              </div>
 
-              <div id="modeBlockDimensions" class="hidden">
-                <div class="form-group">
-                  <label for="lengthM">Length (m)</label>
-                  <input type="text" id="lengthM" inputmode="decimal" placeholder="e.g., 4.2">
-                </div>
+--&gt;
+    
 
-                <div class="form-group">
-                  <label for="widthM">Width (m)</label>
-                  <input type="text" id="widthM" inputmode="decimal" placeholder="e.g., 3.6">
-                </div>
-              </div>
 
-              <fieldset class="advanced-fieldset">
-                <legend>Advanced (optional)</legend>
-
-                <div class="form-group">
-                  <label for="coveragePerBag">Coverage per bag (m² per bag)</label>
-                  <input type="text" id="coveragePerBag" inputmode="decimal" placeholder="Default: 4.0">
-                </div>
-
-                <div class="form-group">
-                  <label for="wastagePercent">Wastage allowance (%)</label>
-                  <input type="text" id="wastagePercent" inputmode="decimal" placeholder="Default: 10">
-                </div>
-
-                <div class="form-group">
-                  <label for="bagKg">Bag size (kg)</label>
-                  <input type="text" id="bagKg" inputmode="decimal" placeholder="Default: 20">
-                </div>
-              </fieldset>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate adhesive needed</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate tile adhesive bags needed</h2>
+<p class="calculator-intro">Use this to estimate how many bags of standard cement-based tile adhesive to buy for a floor or wall. Enter area directly or calculate from room dimensions, then adjust coverage and wastage if you want higher accuracy.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="modeSelect">What do you know?</label>
+<select aria-label="Choose input mode" id="modeSelect">
+<option value="area">Total area (m²)</option>
+<option value="dimensions">Room dimensions (m)</option>
+</select>
+</div>
+<div id="modeBlockArea">
+<div class="form-group">
+<label for="areaM2">Total tiling area (m²)</label>
+<input id="areaM2" inputmode="decimal" placeholder="e.g., 18" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeBlockDimensions">
+<div class="form-group">
+<label for="lengthM">Length (m)</label>
+<input id="lengthM" inputmode="decimal" placeholder="e.g., 4.2" type="text"/>
+</div>
+<div class="form-group">
+<label for="widthM">Width (m)</label>
+<input id="widthM" inputmode="decimal" placeholder="e.g., 3.6" type="text"/>
+</div>
+</div>
+<fieldset class="advanced-fieldset">
+<legend>Advanced (optional)</legend>
+<div class="form-group">
+<label for="coveragePerBag">Coverage per bag (m² per bag)</label>
+<input id="coveragePerBag" inputmode="decimal" placeholder="Default: 4.0" type="text"/>
+</div>
+<div class="form-group">
+<label for="wastagePercent">Wastage allowance (%)</label>
+<input id="wastagePercent" inputmode="decimal" placeholder="Default: 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="bagKg">Bag size (kg)</label>
+<input id="bagKg" inputmode="decimal" placeholder="Default: 20" type="text"/>
+</div>
+</fieldset>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate adhesive needed</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4s1sv1C" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Load & Stress</div>
--->
-    <p class="affiliate-copy">Calculate loads, stresses, and safety factors in structures.</p>
-    <div class="affiliate-cta">View load and stress tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/construction-materials/">
-              <h3 class="related-title">Construction & Materials</h3>
-              <p class="related-desc">Estimate quantities, costs, and measurements for common building and renovation materials.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/real-estate-property/">
-              <h3 class="related-title">Real Estate & Property</h3>
-              <p class="related-desc">Run practical property calculations like affordability, costs, and project comparisons.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/everyday-life-tools/">
-              <h3 class="related-title">Everyday Life Tools</h3>
-              <p class="related-desc">Quick calculators for everyday decisions, planning, and simple estimates.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Tile adhesive calculator for estimating bags needed for a floor or wall</h2>
-
-              <p>This tile adhesive calculator is designed for one specific decision: how many bags of standard cement-based tile adhesive you should buy before you start tiling. The goal is to reduce the two common failure modes on tile jobs: underbuying (running out mid-install and risking shade, batch, or cure differences) and overbuying (paying for extra material that cannot be returned once opened or stored poorly). This page is intentionally focused on planning bag quantities for typical ceramic or porcelain tile installs.</p>
-
-              <p>To use it, choose what you know. If you already know the total tiling area in square metres, select “Total area (m²)” and enter the area. If you only know the room size, select “Room dimensions (m)” and enter the length and width, and the calculator will compute the area for you. Then, if you want a more realistic estimate, adjust the advanced settings. These advanced inputs are optional because most people do not know the exact coverage, but small changes to coverage can have a big impact on bag count.</p>
-
-              <p>The calculator outputs more than a single number. First, it shows the base area and the “effective area” after adding wastage. That wastage covers normal job realities like adhesive left on the trowel, mixing bucket losses, minor surface unevenness, and small layout changes. Second, it shows how many full bags you should buy. In practice you cannot buy “half a bag” safely, and partial bags stored badly often go hard, so the calculator rounds up to whole bags. Finally, it shows the total weight of adhesive you are planning to purchase and an approximate consumption rate in kilograms per square metre based on your bag size and coverage.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>This calculator is for standard cement-based tile adhesive (powder mixed with water), not epoxy adhesives or ready-mixed mastics, which have different coverage behavior.</li>
-                <li>The default coverage of 4.0 m² per 20 kg bag assumes a common mid-range trowel notch and typical bed thickness. If your adhesive bag lists a different coverage, use the manufacturer number.</li>
-                <li>The default wastage allowance is 10%. Increase it for first-time installers, uneven substrates, larger-format tiles, or back-buttering, and reduce it only if you have experience and a flat surface.</li>
-                <li>Coverage figures are averages. Real coverage depends on substrate flatness, trowel notch size, tile back pattern, installation technique, and how much adhesive is combed versus collapsed.</li>
-                <li>The output is intended for purchasing and planning. It is not a guarantee of performance, bonding strength, or suitability for your substrate. Always follow the adhesive product instructions.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why does the calculator ask for “coverage per bag” instead of tile size?</h3>
-              <p>Tile size matters, but it matters indirectly through the trowel notch size and adhesive bed thickness you end up using. Manufacturers publish coverage per bag because it captures those realities without guessing. If you know the brand and adhesive type, the best input is the coverage stated on the bag for your trowel notch. If you do not know it, the default is a practical midpoint that gets you a reasonable estimate.</p>
-
-              <h3>What wastage percentage should I use for a typical job?</h3>
-              <p>Ten percent is a defensible starting point for most small tiling jobs. Use 15% to 20% if the substrate is rough or out of level, if you are installing large-format tiles that often require additional adhesive, or if you are not experienced. If you are tiling a simple, flat, rectangular area with consistent technique, you can keep it closer to 10%.</p>
-
-              <h3>What if I only know the room dimensions but the space is not a perfect rectangle?</h3>
-              <p>This calculator is optimized for fast planning, so it uses a simple area approach. For L-shaped rooms or multiple sections, either measure the total area in m² and enter it directly, or break the room into rectangles, calculate each area, add them together, and enter the total. If you do not account for the shape, you will likely underbuy.</p>
-
-              <h3>Does this include adhesive for skirting, trims, or small feature areas?</h3>
-              <p>Only if you include that area in your total. The calculator cannot guess your trim details. If you have skirting tiles, stair nosings, or feature strips, add their area to your total m². If you want a quick safety buffer instead, increase wastage slightly, but the cleaner approach is to include the real area.</p>
-
-              <h3>How can I make the estimate more accurate without overcomplicating it?</h3>
-              <p>Use the manufacturer’s stated coverage per bag for the adhesive you plan to buy, and choose a wastage percent that matches your job conditions. That is the highest-leverage improvement. If your adhesive is sold in a different bag size, update the bag size too so the weight and consumption numbers make sense. After that, the remaining variability is mostly technique and substrate flatness, which is why the calculator rounds up to whole bags.</p>
-
-              <div class="last-updated">Last updated: 2025-12-30</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
 </div>
--->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, costs, and measurements for common building and renovation materials.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Run practical property calculations like affordability, costs, and project comparisons.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick calculators for everyday decisions, planning, and simple estimates.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Tile adhesive calculator for estimating bags needed for a floor or wall</h2>
+<p>This tile adhesive calculator is designed for one specific decision: how many bags of standard cement-based tile adhesive you should buy before you start tiling. The goal is to reduce the two common failure modes on tile jobs: underbuying (running out mid-install and risking shade, batch, or cure differences) and overbuying (paying for extra material that cannot be returned once opened or stored poorly). This page is intentionally focused on planning bag quantities for typical ceramic or porcelain tile installs.</p>
+<p>To use it, choose what you know. If you already know the total tiling area in square metres, select “Total area (m²)” and enter the area. If you only know the room size, select “Room dimensions (m)” and enter the length and width, and the calculator will compute the area for you. Then, if you want a more realistic estimate, adjust the advanced settings. These advanced inputs are optional because most people do not know the exact coverage, but small changes to coverage can have a big impact on bag count.</p>
+<p>The calculator outputs more than a single number. First, it shows the base area and the “effective area” after adding wastage. That wastage covers normal job realities like adhesive left on the trowel, mixing bucket losses, minor surface unevenness, and small layout changes. Second, it shows how many full bags you should buy. In practice you cannot buy “half a bag” safely, and partial bags stored badly often go hard, so the calculator rounds up to whole bags. Finally, it shows the total weight of adhesive you are planning to purchase and an approximate consumption rate in kilograms per square metre based on your bag size and coverage.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator is for standard cement-based tile adhesive (powder mixed with water), not epoxy adhesives or ready-mixed mastics, which have different coverage behavior.</li>
+<li>The default coverage of 4.0 m² per 20 kg bag assumes a common mid-range trowel notch and typical bed thickness. If your adhesive bag lists a different coverage, use the manufacturer number.</li>
+<li>The default wastage allowance is 10%. Increase it for first-time installers, uneven substrates, larger-format tiles, or back-buttering, and reduce it only if you have experience and a flat surface.</li>
+<li>Coverage figures are averages. Real coverage depends on substrate flatness, trowel notch size, tile back pattern, installation technique, and how much adhesive is combed versus collapsed.</li>
+<li>The output is intended for purchasing and planning. It is not a guarantee of performance, bonding strength, or suitability for your substrate. Always follow the adhesive product instructions.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator ask for “coverage per bag” instead of tile size?</h3>
+<p>Tile size matters, but it matters indirectly through the trowel notch size and adhesive bed thickness you end up using. Manufacturers publish coverage per bag because it captures those realities without guessing. If you know the brand and adhesive type, the best input is the coverage stated on the bag for your trowel notch. If you do not know it, the default is a practical midpoint that gets you a reasonable estimate.</p>
+<h3>What wastage percentage should I use for a typical job?</h3>
+<p>Ten percent is a defensible starting point for most small tiling jobs. Use 15% to 20% if the substrate is rough or out of level, if you are installing large-format tiles that often require additional adhesive, or if you are not experienced. If you are tiling a simple, flat, rectangular area with consistent technique, you can keep it closer to 10%.</p>
+<h3>What if I only know the room dimensions but the space is not a perfect rectangle?</h3>
+<p>This calculator is optimized for fast planning, so it uses a simple area approach. For L-shaped rooms or multiple sections, either measure the total area in m² and enter it directly, or break the room into rectangles, calculate each area, add them together, and enter the total. If you do not account for the shape, you will likely underbuy.</p>
+<h3>Does this include adhesive for skirting, trims, or small feature areas?</h3>
+<p>Only if you include that area in your total. The calculator cannot guess your trim details. If you have skirting tiles, stair nosings, or feature strips, add their area to your total m². If you want a quick safety buffer instead, increase wastage slightly, but the cleaner approach is to include the real area.</p>
+<h3>How can I make the estimate more accurate without overcomplicating it?</h3>
+<p>Use the manufacturer’s stated coverage per bag for the adhesive you plan to buy, and choose a wastage percent that matches your job conditions. That is the highest-leverage improvement. If your adhesive is sold in a different bag size, update the bag size too so the weight and consumption numbers make sense. After that, the remaining variability is mostly technique and substrate flatness, which is why the calculator rounds up to whole bags.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

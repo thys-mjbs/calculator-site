@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Workday Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate the date after adding or subtracting a number of workdays from a start date, excluding weekends and optionally excluding public holidays.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/workday-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Workday Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate the date after adding or subtracting a number of workdays from a start date, excluding weekends and optionally excluding public holidays.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/workday-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workday Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate the date after adding or subtracting a number of workdays from a start date, excluding weekends and optionally excluding public holidays.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Workday Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/workday-calculator/",
+      "description": "Calculate the date after adding or subtracting a number of workdays from a start date, excluding weekends and optionally excluding public holidays."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date & Scheduling</a> ›
+        <span>Workday Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Workday Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rUNgvR" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Deadline Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Monitor deadlines and avoid missed dates across tasks and projects.</p>
+    <div class="affiliate-cta">Explore deadline tracking tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Workday deadline date</h2>
+
+              <p class="calculator-intro">
+                Add or subtract workdays from a start date. Weekends are skipped. Optionally skip public holidays.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="startDate">Start date (YYYY-MM-DD)</label>
+                <input id="startDate" type="text" inputmode="numeric" placeholder="2025-12-22">
+              </div>
+
+              <div class="form-group">
+                <label for="workdays">Workdays to add (or subtract)</label>
+                <input id="workdays" type="text" inputmode="numeric" placeholder="10">
+              </div>
+
+              <div class="form-group">
+                <label for="direction">Direction</label>
+                <select id="direction">
+                  <option value="forward" selected>Add workdays (forward)</option>
+                  <option value="backward">Subtract workdays (backward)</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox-row">
+                <label class="checkbox-label">
+                  <input id="showAdvanced" type="checkbox">
+                  Show advanced options
+                </label>
+              </div>
+
+              <div id="advancedSection" class="advanced-section hidden" aria-hidden="true">
+                <div class="form-group checkbox-row">
+                  <label class="checkbox-label">
+                    <input id="includeStartDay" type="checkbox">
+                    Count the start date as workday 1 (only if it is a workday)
+                  </label>
+                </div>
+
+                <div class="form-group checkbox-row">
+                  <label class="checkbox-label">
+                    <input id="excludeHolidays" type="checkbox">
+                    Exclude public holidays (optional list)
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label for="holidayDates">Holiday dates (comma-separated YYYY-MM-DD)</label>
+                  <textarea id="holidayDates" rows="3" placeholder="2025-12-25, 2026-01-01"></textarea>
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate workday date</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48XwMdD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Date Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for calculating date differences, deadlines, and future milestones.</p>
+    <div class="affiliate-cta">View date calculation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan deadlines, countdowns, date differences, and day-based schedules with quick tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Work out business metrics, reporting numbers, and operational timelines for decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Handle daily practical calculations and quick planning tasks without spreadsheets.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3MFL9M7" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Work Schedules</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Create structured work schedules for shifts, projects, and recurring tasks.</p>
+    <div class="affiliate-cta">Browse work schedule planners on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Workday calculator for deadline dates and business-day planning</h2>
+
+              <p>
+                A workday calculator helps you find the calendar date that lands a specific number of workdays away from a start date. This is useful when a promise, service-level agreement, or internal task is defined in business days rather than calendar days. Instead of guessing and then correcting for weekends, you can calculate the deadline in one step and understand how many days were skipped.
+              </p>
+              <p>
+                This calculator is designed for a simple, common decision: “If I start on this date, what date is N workdays later (or earlier)?” It excludes weekends (Saturday and Sunday) automatically. If you want to tighten the result for real-world planning, you can optionally exclude public holidays by entering a list of dates. That keeps the tool practical without forcing you to look up a full holiday calendar when you do not need it.
+              </p>
+              <p>
+                To use it, enter your start date in YYYY-MM-DD format and enter how many workdays you need to add. If you are counting backwards from a due date to find a start date, switch the direction to subtract workdays. The result shows the target date and a small breakdown so you can see the impact of weekends and holidays. If the answer looks off, the fastest fix is usually to confirm the start date format and whether you meant to count the start day as day 1.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Workdays are Monday through Friday. Saturday and Sunday are treated as non-working days.</li>
+                <li>The start date must be a real calendar date in YYYY-MM-DD format (for example 2025-12-22).</li>
+                <li>The workday count is a whole number. Decimals are not meaningful for most deadline definitions.</li>
+                <li>If “Count the start date as workday 1” is enabled, the start date is only counted when it falls on a workday.</li>
+                <li>Holiday exclusion only applies to the dates you provide. If you do not supply a date list, the calculator will not assume any holiday calendar.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between workdays and calendar days?</h3>
+              <p>
+                Calendar days count every day in a row. Workdays skip non-working days (typically weekends). Ten calendar days after a Monday is always a Thursday, but ten workdays after a Monday usually lands later because weekends are skipped.
+              </p>
+
+              <h3>Should I count the start date as day 1?</h3>
+              <p>
+                It depends on how the deadline is defined. Many business processes treat the next workday as day 1, especially if work starts after the beginning of the day. If your instruction says “within 5 workdays of receipt,” you usually do not count the receipt day unless it is explicitly stated. Use the advanced option to match your specific rule.
+              </p>
+
+              <h3>What happens if my start date is on a weekend?</h3>
+              <p>
+                Weekends are not counted as workdays. If you are not counting the start date, the calculator will move forward (or backward) until it reaches the next workday and then begin counting. If you enable counting the start date as day 1, a weekend start date still will not count as day 1.
+              </p>
+
+              <h3>How do I handle public holidays accurately?</h3>
+              <p>
+                If your deadline is sensitive to holidays, enable holiday exclusion and paste the holiday dates you care about as YYYY-MM-DD values separated by commas. Only those dates will be excluded. This is intentional: it avoids wrong results caused by assuming the wrong country or region.
+              </p>
+
+              <h3>Why does my result differ from another workday calculator?</h3>
+              <p>
+                Differences almost always come from definitions: whether the start day counts, what the weekend days are, and which holidays are excluded. If another tool uses a built-in holiday calendar or a different weekend pattern, it will produce a different date even with the same start date and workday count.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

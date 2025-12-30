@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Time Converter | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/time-converter/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Time Converter | SnapCalc">
-    <meta property="og:description" content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/time-converter/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Time Converter | SnapCalc">
-    <meta name="twitter:description" content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Time Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/time-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Time Converter | SnapCalc" property="og:title"/>
+<meta content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/time-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Time Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,243 +33,196 @@
       "description": "Convert time between seconds, minutes, hours, days, weeks, months, and years with optional assumptions for month and year length."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
         <span>Time Converter</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Time Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Time Converter</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/452Iu5p" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Brick & Block</div>
--->
-    <p class="affiliate-copy">Calculate quantities of bricks and blocks for walls and structures.</p>
-    <div class="affiliate-cta">Explore brick and block calculators on Amazon</div>
-  </a>
+
+
+
+--&gt;
+    
+
+
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Convert time units instantly</h2>
-
-              <p class="calculator-intro">Convert between seconds, minutes, hours, days, weeks, months, and years. Use the optional month and year assumptions when you need a more realistic result.</p>
-
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="timeValue">Value</label>
-                <input id="timeValue" type="text" inputmode="decimal" placeholder="e.g., 90">
-              </div>
-
-              <div class="form-group">
-                <label for="fromUnit">From unit</label>
-                <select id="fromUnit">
-                  <option value="second">Seconds (s)</option>
-                  <option value="minute">Minutes (min)</option>
-                  <option value="hour" selected>Hours (h)</option>
-                  <option value="day">Days (d)</option>
-                  <option value="week">Weeks (wk)</option>
-                  <option value="month">Months (mo)</option>
-                  <option value="year">Years (yr)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="toUnit">To unit</label>
-                <select id="toUnit">
-                  <option value="second">Seconds (s)</option>
-                  <option value="minute" selected>Minutes (min)</option>
-                  <option value="hour">Hours (h)</option>
-                  <option value="day">Days (d)</option>
-                  <option value="week">Weeks (wk)</option>
-                  <option value="month">Months (mo)</option>
-                  <option value="year">Years (yr)</option>
-                </select>
-              </div>
-
-              <fieldset class="advanced-fieldset">
-                <legend>Advanced assumptions (optional)</legend>
-
-                <div class="form-group">
-                  <label for="monthDays">Days per month</label>
-                  <input id="monthDays" type="text" inputmode="decimal" placeholder="Default: 30.44" value="30.44">
-                </div>
-
-                <div class="form-group">
-                  <label for="yearDays">Days per year</label>
-                  <input id="yearDays" type="text" inputmode="decimal" placeholder="Default: 365.24" value="365.24">
-                </div>
-              </fieldset>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Convert time</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert time units instantly</h2>
+<p class="calculator-intro">Convert between seconds, minutes, hours, days, weeks, months, and years. Use the optional month and year assumptions when you need a more realistic result.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="timeValue">Value</label>
+<input id="timeValue" inputmode="decimal" placeholder="e.g., 90" type="text"/>
+</div>
+<div class="form-group">
+<label for="fromUnit">From unit</label>
+<select id="fromUnit">
+<option value="second">Seconds (s)</option>
+<option value="minute">Minutes (min)</option>
+<option selected="" value="hour">Hours (h)</option>
+<option value="day">Days (d)</option>
+<option value="week">Weeks (wk)</option>
+<option value="month">Months (mo)</option>
+<option value="year">Years (yr)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="toUnit">To unit</label>
+<select id="toUnit">
+<option value="second">Seconds (s)</option>
+<option selected="" value="minute">Minutes (min)</option>
+<option value="hour">Hours (h)</option>
+<option value="day">Days (d)</option>
+<option value="week">Weeks (wk)</option>
+<option value="month">Months (mo)</option>
+<option value="year">Years (yr)</option>
+</select>
+</div>
+<fieldset class="advanced-fieldset">
+<legend>Advanced assumptions (optional)</legend>
+<div class="form-group">
+<label for="monthDays">Days per month</label>
+<input id="monthDays" inputmode="decimal" placeholder="Default: 30.44" type="text" value="30.44"/>
+</div>
+<div class="form-group">
+<label for="yearDays">Days per year</label>
+<input id="yearDays" inputmode="decimal" placeholder="Default: 365.24" type="text" value="365.24"/>
+</div>
+</fieldset>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert time</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/452Iu5p" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Brick & Block</div>
--->
-    <p class="affiliate-copy">Calculate quantities of bricks and blocks for walls and structures.</p>
-    <div class="affiliate-cta">Explore brick and block calculators on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/conversions-units-currencies/">
-              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-              <p class="related-desc">Convert everyday units quickly, including time, distance, temperature, and more.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/time-date-scheduling/">
-              <h3 class="related-title">Time, Date & Scheduling</h3>
-              <p class="related-desc">Plan and compare dates, durations, and schedules for work and personal use.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math & General Calculators</h3>
-              <p class="related-desc">Handle quick calculations, ratios, percentages, rounding, and general math tasks.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Time converter for seconds, minutes, hours, days, weeks, months, and years</h2>
-
-              <p>A time converter helps you translate a duration from one unit into another, such as converting hours into minutes, weeks into days, or seconds into hours. This is useful for planning, reporting, studying, fitness tracking, work logs, billing, and any situation where time is recorded in one unit but needs to be understood in another.</p>
-
-              <p>This calculator is designed for two common needs. First, quick everyday conversions where you just want the answer fast. Second, more careful conversions where “months” and “years” are involved and you want to control the assumption behind those units. Unlike seconds, minutes, hours, days, and weeks, months and years are not fixed lengths in the real world. A month can be 28, 29, 30, or 31 days, and a year can be 365 or 366 days. For many use cases you still need a single conversion rule, so this calculator lets you set it explicitly.</p>
-
-              <p>To use it, enter a value, choose the unit you are converting from, and choose the unit you want to convert to. The result will show the converted value, a quick breakdown into common time parts, and a simple reference table so you can sanity-check the magnitude. If you are converting to or from months or years, you can optionally adjust “days per month” and “days per year” to match your context. If you do not change these, the calculator uses common average approximations that work well for general planning.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>Seconds, minutes, hours, days, and weeks use fixed definitions (60 seconds per minute, 60 minutes per hour, 24 hours per day, 7 days per week).</li>
-                <li>Months and years require an assumption. By default this calculator uses 30.44 days per month and 365.24 days per year, which are widely used average approximations.</li>
-                <li>If your scenario is tied to real calendar dates, convert using dates in a calendar tool or calculate the actual number of days between two dates, then convert to your target unit.</li>
-                <li>For billing or reporting, use the conventions in your contract or policy. Some organizations define a month as 30 days, or use 365 days per year for simplicity.</li>
-                <li>Rounding is normal. For large conversions (for example, seconds to years), small rounding differences are expected depending on your month/year assumptions.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why do month and year conversions sometimes look “off”?</h3>
-              <p>Months and years are not a single fixed length. If you convert 1 month into days, the correct answer depends on which month you mean and whether you care about a specific calendar period. This calculator uses averages by default, but you can change the assumptions to match your use case.</p>
-
-              <h3>What should I enter for “days per month”?</h3>
-              <p>If you just want a general-purpose result, keep the default. If you are using a business rule, set it to that rule (for example, 30). If you are working with a specific month, you can set it to 28, 29, 30, or 31, but remember that doing so makes the conversion “month-specific” and may not apply elsewhere.</p>
-
-              <h3>What’s the difference between 365 and 365.24 days per year?</h3>
-              <p>365 is the common “non-leap-year” assumption and is often used in simple models. 365.24 is an average that better reflects the long-term length of a calendar year when leap years are accounted for. Neither is universally correct; the right choice depends on whether you need a simple convention or a more realistic average.</p>
-
-              <h3>Can this calculator tell me the exact number of months between two dates?</h3>
-              <p>No. That is a date problem, not a unit conversion problem. If you need exact calendar differences, you should calculate the difference between two dates (including calendar month boundaries) and then convert the resulting days or hours. This calculator focuses on converting a duration value between units under a stated assumption.</p>
-
-              <h3>How can I improve accuracy for real-world planning?</h3>
-              <p>Use the smallest reliable unit you know (often minutes, hours, or days), then convert upward. If your timeline crosses different months or includes a known set of dates, compute the actual day count first. For contracts and payroll, follow the definition your organization uses rather than a generic average.</p>
-
-              <div class="last-updated">Last updated: 2025-12-18</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/48R9OER" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Cement Usage</div>
--->
-    <p class="affiliate-copy">Estimate cement requirements for construction projects.</p>
-    <div class="affiliate-cta">View cement usage calculators on Amazon</div>
-  </a>
 </div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert everyday units quickly, including time, distance, temperature, and more.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan and compare dates, durations, and schedules for work and personal use.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle quick calculations, ratios, percentages, rounding, and general math tasks.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Time converter for seconds, minutes, hours, days, weeks, months, and years</h2>
+<p>A time converter helps you translate a duration from one unit into another, such as converting hours into minutes, weeks into days, or seconds into hours. This is useful for planning, reporting, studying, fitness tracking, work logs, billing, and any situation where time is recorded in one unit but needs to be understood in another.</p>
+<p>This calculator is designed for two common needs. First, quick everyday conversions where you just want the answer fast. Second, more careful conversions where “months” and “years” are involved and you want to control the assumption behind those units. Unlike seconds, minutes, hours, days, and weeks, months and years are not fixed lengths in the real world. A month can be 28, 29, 30, or 31 days, and a year can be 365 or 366 days. For many use cases you still need a single conversion rule, so this calculator lets you set it explicitly.</p>
+<p>To use it, enter a value, choose the unit you are converting from, and choose the unit you want to convert to. The result will show the converted value, a quick breakdown into common time parts, and a simple reference table so you can sanity-check the magnitude. If you are converting to or from months or years, you can optionally adjust “days per month” and “days per year” to match your context. If you do not change these, the calculator uses common average approximations that work well for general planning.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Seconds, minutes, hours, days, and weeks use fixed definitions (60 seconds per minute, 60 minutes per hour, 24 hours per day, 7 days per week).</li>
+<li>Months and years require an assumption. By default this calculator uses 30.44 days per month and 365.24 days per year, which are widely used average approximations.</li>
+<li>If your scenario is tied to real calendar dates, convert using dates in a calendar tool or calculate the actual number of days between two dates, then convert to your target unit.</li>
+<li>For billing or reporting, use the conventions in your contract or policy. Some organizations define a month as 30 days, or use 365 days per year for simplicity.</li>
+<li>Rounding is normal. For large conversions (for example, seconds to years), small rounding differences are expected depending on your month/year assumptions.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why do month and year conversions sometimes look “off”?</h3>
+<p>Months and years are not a single fixed length. If you convert 1 month into days, the correct answer depends on which month you mean and whether you care about a specific calendar period. This calculator uses averages by default, but you can change the assumptions to match your use case.</p>
+<h3>What should I enter for “days per month”?</h3>
+<p>If you just want a general-purpose result, keep the default. If you are using a business rule, set it to that rule (for example, 30). If you are working with a specific month, you can set it to 28, 29, 30, or 31, but remember that doing so makes the conversion “month-specific” and may not apply elsewhere.</p>
+<h3>What’s the difference between 365 and 365.24 days per year?</h3>
+<p>365 is the common “non-leap-year” assumption and is often used in simple models. 365.24 is an average that better reflects the long-term length of a calendar year when leap years are accounted for. Neither is universally correct; the right choice depends on whether you need a simple convention or a more realistic average.</p>
+<h3>Can this calculator tell me the exact number of months between two dates?</h3>
+<p>No. That is a date problem, not a unit conversion problem. If you need exact calendar differences, you should calculate the difference between two dates (including calendar month boundaries) and then convert the resulting days or hours. This calculator focuses on converting a duration value between units under a stated assumption.</p>
+<h3>How can I improve accuracy for real-world planning?</h3>
+<p>Use the smallest reliable unit you know (often minutes, hours, or days), then convert upward. If your timeline crosses different months or includes a known set of dates, compute the actual day count first. For contracts and payroll, follow the definition your organization uses rather than a generic average.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

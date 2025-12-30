@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Sleep Need Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate how many hours of sleep you should aim for tonight based on your age, plus optional adjustments for activity level and sleep debt. Includes a recommended bedtime window from your wake-up time.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/health-fitness/sleep-need-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Sleep Need Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate how many hours of sleep you should aim for tonight based on your age, plus optional adjustments for activity level and sleep debt. Includes a recommended bedtime window from your wake-up time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/health-fitness/sleep-need-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sleep Need Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate how many hours of sleep you should aim for tonight based on your age, plus optional adjustments for activity level and sleep debt. Includes a recommended bedtime window from your wake-up time.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sleep Need Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/sleep-need-calculator/",
+      "description": "Estimate your nightly sleep need based on age, with optional adjustments for activity level and sleep debt, and get a recommended bedtime window from your wake-up time."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health &amp; Fitness</a> ›
+        <span>Sleep Need Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Sleep Need Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pFVbLY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Activity Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track daily movement, steps, and activity levels consistently.</p>
+    <div class="affiliate-cta">Explore activity tracking books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>How much sleep should you aim for tonight?</h2>
+
+              <p class="calculator-intro">Enter your age and your planned wake-up time. Optionally adjust for activity level and sleep debt to get a practical target and a bedtime window.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="ageYears">Age (years)</label>
+                <input type="text" id="ageYears" inputmode="decimal" placeholder="e.g., 32">
+              </div>
+
+              <div class="form-group">
+                <label for="wakeTime">Planned wake-up time (24h, HH:MM)</label>
+                <input type="text" id="wakeTime" inputmode="numeric" placeholder="e.g., 06:30">
+              </div>
+
+              <div class="advanced-block" aria-label="Advanced options">
+                <div class="advanced-title">Advanced (optional)</div>
+
+                <div class="form-group">
+                  <label for="activityLevel">Activity level</label>
+                  <select id="activityLevel">
+                    <option value="typical" selected>Typical day</option>
+                    <option value="active">Active day (training, long physical work)</option>
+                    <option value="very_active">Very active (hard training, high load)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="sleepDebtHours">Estimated sleep debt (hours)</label>
+                  <input type="text" id="sleepDebtHours" inputmode="decimal" placeholder="e.g., 0">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate sleep need</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Plan calories, body metrics, and healthy routines with practical calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Work with times, dates, schedules, and planning tools that reduce mistakes.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Solve common daily problems fast, from quick planning to simple estimates.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4s1RfXE" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Health Metrics</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand key health metrics and how to track them over time.</p>
+    <div class="affiliate-cta">Browse health metric tracking books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Sleep Need Calculator: recommended hours of sleep and your ideal bedtime window</h2>
+
+              <p>This Sleep Need Calculator is built for one practical decision: how many hours of sleep you should aim for tonight, and what bedtime that implies based on when you need to wake up. Most people do not need a complicated sleep dashboard. They need a clear target and a realistic time window they can act on.</p>
+
+              <p>The default result is based on your age because age is the strongest, simplest driver of recommended sleep duration. Different age groups tend to function best within different ranges. The calculator returns your recommended range and a single target value you can use as a goal for tonight.</p>
+
+              <p>If you want a more realistic plan, you can optionally adjust for activity level and sleep debt. Activity level can push your sleep need slightly higher on days with heavy training or physically demanding work. Sleep debt is your best estimate of how many hours you are behind your typical healthy baseline. The calculator does not assume you can “repay” all debt in one night. Instead, it suggests a capped catch-up amount for tonight, then shows how that changes your bedtime window.</p>
+
+              <p>After calculating your target hours, the calculator converts that into a bedtime window using your planned wake-up time. The window is there because sleep need is not a single exact number. It is a range. A window helps you make trade-offs: going to bed earlier increases your chances of getting the full benefit, while going to bed later compresses sleep and increases fatigue risk the next day.</p>
+
+              <p>To use it, enter your age and the time you plan to wake up (24-hour format like 06:30). If you are unsure about your sleep debt, leave it at zero. If you trained hard or did heavy physical work, select a higher activity level. Then click calculate. The output gives your recommended sleep range, your suggested target for tonight, and the earliest and latest bedtime that match the range and the optional adjustments.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Age-based recommendations are treated as a range, not a precise prescription, because people vary in sleep efficiency, stress, and recovery needs.</li>
+                <li>Activity adjustments are small by design (up to about 1 extra hour) because most day-to-day sleep changes are better handled by consistency, not large swings.</li>
+                <li>Sleep debt catch-up is capped for a single night to avoid unrealistic plans and to reduce the chance of oversleeping that disrupts the next night.</li>
+                <li>The bedtime window assumes you can fall asleep at roughly the bedtime shown; it does not model sleep onset latency or night awakenings.</li>
+                <li>This tool is for general planning, not medical diagnosis; persistent insomnia, snoring, or extreme daytime sleepiness needs clinical evaluation.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the calculator use an age-based range instead of one exact number?</h3>
+              <p>Because sleep need varies across individuals even within the same age group. A range is more honest and more useful. It lets you pick a target that fits your schedule while still keeping you inside a defensible recommendation.</p>
+
+              <h3>What if I do not know my sleep debt?</h3>
+              <p>Leave it at zero. You will still get a solid plan based on age. If you want a rough estimate, think about the last 3 to 7 nights and compare what you slept to what you believe you function best on. The gap is your approximate debt. Keep the number conservative; guessing too high leads to unrealistic bedtimes.</p>
+
+              <h3>Can I catch up all missed sleep in one night?</h3>
+              <p>Usually not. Even if you sleep longer, recovery is not perfectly “bankable,” and very long sleep can push your schedule later and worsen the next night. That is why the calculator limits catch-up for tonight and keeps the plan implementable.</p>
+
+              <h3>Why does activity level change the result?</h3>
+              <p>Hard training, long physical work, and high load days increase recovery needs. The calculator applies a modest adjustment so you aim slightly higher on those days, without turning the tool into a training program.</p>
+
+              <h3>When is this calculator not a good fit?</h3>
+              <p>If your main issue is choosing a bedtime for a fixed number of hours, or planning naps, or dealing with jet lag, this is the wrong tool. This page is locked to one purpose: estimating nightly sleep need and translating it into a bedtime window from your planned wake-up time.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4q3xX1X" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Exercise Intensity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to manage exercise intensity for optimal results.</p>
+    <div class="affiliate-cta">Browse exercise intensity books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

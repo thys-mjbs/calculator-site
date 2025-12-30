@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Fuel Cost per Trip Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate fuel cost for a trip using distance, fuel efficiency, and fuel price. Includes round trip, detours, and cost per person.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Fuel Cost per Trip Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate fuel cost for a trip using distance, fuel efficiency, and fuel price. Includes round trip, detours, and cost per person.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fuel Cost per Trip Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate fuel cost for a trip using distance, fuel efficiency, and fuel price. Includes round trip, detours, and cost per person.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fuel Cost per Trip Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/fuel-cost-per-trip-calculator/",
+      "description": "Estimate fuel cost for a trip using distance, fuel efficiency, and fuel price. Includes round trip, detours, and cost per person."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Fuel Cost per Trip Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Fuel Cost per Trip Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48Xt5Vj" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Daily Organisation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Tools to organise daily tasks, priorities, and routines efficiently.</p>
+                <div class="affiliate-cta">Explore daily organisation tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate fuel cost for a trip</h2>
+
+              <p class="calculator-intro">Enter your trip distance, your vehicle fuel efficiency, and your fuel price. Optional settings let you include a round trip, detours, and a per-person split.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="distanceInput">Trip distance</label>
+                <input id="distanceInput" type="text" inputmode="decimal" placeholder="e.g., 180">
+              </div>
+
+              <div class="form-group">
+                <label for="distanceUnit">Distance unit</label>
+                <select id="distanceUnit" aria-label="Distance unit">
+                  <option value="km" selected>Kilometres (km)</option>
+                  <option value="mi">Miles (mi)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="efficiencyInput">Fuel efficiency</label>
+                <input id="efficiencyInput" type="text" inputmode="decimal" placeholder="e.g., 7.5">
+              </div>
+
+              <div class="form-group">
+                <label for="efficiencyUnit">Efficiency unit</label>
+                <select id="efficiencyUnit" aria-label="Fuel efficiency unit">
+                  <option value="l_per_100km" selected>Litres per 100 km (L/100km)</option>
+                  <option value="km_per_l">Kilometres per litre (km/L)</option>
+                  <option value="mpg_us">Miles per gallon (US mpg)</option>
+                  <option value="mpg_uk">Miles per gallon (UK mpg)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fuelPriceInput">Fuel price per litre</label>
+                <input id="fuelPriceInput" type="text" inputmode="decimal" placeholder="e.g., 24.50">
+              </div>
+
+              <div class="form-group checkbox-row">
+                <label class="checkbox-label" for="roundTripCheckbox">
+                  <input id="roundTripCheckbox" type="checkbox">
+                  Round trip (double the distance)
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label for="extraPercentInput">Extra distance (optional, %)</label>
+                <input id="extraPercentInput" type="text" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="passengersInput">People sharing cost (optional)</label>
+                <input id="passengersInput" type="text" inputmode="numeric" placeholder="e.g., 2">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate trip fuel cost</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/44qET0S" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Household Management</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Manage chores, schedules, and household responsibilities with ease.</p>
+                <div class="affiliate-cta">View household management tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for everyday decisions like costs, splits, and practical planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan trips, compare routes, and estimate travel time and travel-related costs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, track spending, and estimate everyday expenses to stay in control of money.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Fuel cost per trip calculator for road trips, commutes, and errands</h2>
+
+              <p>This calculator estimates how much fuel a specific trip will use and what that fuel will cost, based on three things: your trip distance, your vehicle fuel efficiency, and the fuel price per litre. It is designed for normal, real-world use. You can get a quick answer in seconds, or you can refine the estimate if your trip includes detours, a return journey, or a shared cost between passengers.</p>
+
+              <p>To use it, start with the trip distance and pick the unit that matches what you see on your map app or odometer: kilometres or miles. Next, enter your vehicle’s fuel efficiency. If you know your typical consumption as L/100km, that is usually the easiest. If your car reports km/L or mpg, you can choose that unit and enter the value as-is. Finally, enter the current fuel price per litre. The calculator converts everything into a consistent format behind the scenes and then estimates fuel used and cost.</p>
+
+              <p>The results include more than a single total. You will see estimated litres used, the total trip fuel cost, the cost per kilometre, and (if you enter more than one person) an estimated cost per person. The per-kilometre number is useful for comparing two route options, comparing your vehicle to another one, or deciding whether a short trip is worth it when fuel prices jump.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Fuel efficiency is treated as constant for the trip. Real driving varies with speed, traffic, load, tyres, and air conditioning.</li>
+                <li>Fuel price is assumed to be per litre and stable for the whole trip. If prices vary by region, use an average.</li>
+                <li>If you choose miles, the calculator converts miles to kilometres before estimating fuel used.</li>
+                <li>The “Extra distance” percentage is a simple buffer for detours, wrong turns, or route changes. It increases total distance before the fuel estimate.</li>
+                <li>Cost per person is a simple split of fuel cost only. It does not include tolls, parking, maintenance, or depreciation.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What fuel efficiency unit should I use?</h3>
+              <p>Use the one you trust and can enter confidently. Many drivers in metric regions know L/100km from the car display or trip computer. If you have km/L or mpg from your vehicle or a spec sheet, choose that unit instead. The calculator converts it into an equivalent L/100km value internally so the final litres-used estimate stays consistent.</p>
+
+              <h3>What if I do not know my exact fuel efficiency?</h3>
+              <p>Use a realistic typical value. If you have a mixed driving pattern, pick something close to what you see over a few weeks rather than a best-case highway figure. If you want a safer budget estimate, use a slightly worse efficiency than normal. That gives you a buffer so the fuel cost estimate is less likely to be too low.</p>
+
+              <h3>Should I include a detour percentage?</h3>
+              <p>If your trip is simple and you have a reliable route distance, you can leave it blank. If you expect traffic diversions, multiple stops, or driving around at the destination, adding 5% to 10% often produces a more realistic total. For unfamiliar routes or busy cities, a higher buffer can be sensible.</p>
+
+              <h3>Does “Round trip” double everything?</h3>
+              <p>It doubles the distance used for the calculation, which typically doubles fuel used and total cost. It does not change efficiency or fuel price. If your return drive is likely to be very different (for example, towing on the way back or heavy traffic at a different time), a single estimate can still be useful, but it will not capture those differences perfectly.</p>
+
+              <h3>Why is cost per kilometre useful?</h3>
+              <p>Cost per kilometre helps you compare options. For example, if one route is 20 km longer but avoids steep hills or stop-start traffic, the total fuel cost difference might be smaller than you expect. It also helps you sanity-check fuel spending across trips, since it turns fuel price and efficiency into a single number you can compare over time.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4q8i2Q8" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Daily Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Plan everyday activities with simple and structured planning tools.</p>
+                <div class="affiliate-cta">Browse daily planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

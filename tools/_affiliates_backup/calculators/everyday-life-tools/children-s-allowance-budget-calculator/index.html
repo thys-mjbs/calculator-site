@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Children’s Allowance Budget Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Plan a weekly children’s allowance budget for one or more kids. Calculate total weekly and monthly cost, and split the allowance into spend, save, and give amounts using simple percentages.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/children-s-allowance-budget-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Children’s Allowance Budget Calculator | SnapCalc">
+    <meta property="og:description" content="Plan a weekly children’s allowance budget for one or more kids. Calculate total weekly and monthly cost, and split the allowance into spend, save, and give amounts using simple percentages.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/children-s-allowance-budget-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Children’s Allowance Budget Calculator | SnapCalc">
+    <meta name="twitter:description" content="Plan a weekly children’s allowance budget for one or more kids. Calculate total weekly and monthly cost, and split the allowance into spend, save, and give amounts using simple percentages.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Children’s Allowance Budget Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/children-s-allowance-budget-calculator/",
+      "description": "Calculate the total weekly and monthly cost of children’s allowances and split the allowance into spend, save, and give amounts using percentages."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Children’s Allowance Budget Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Children’s Allowance Budget Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iVrZhn" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Decision Making</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Make everyday decisions easier using structured decision tools.</p>
+    <div class="affiliate-cta">Explore decision making tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Set a weekly allowance budget and a simple split</h2>
+
+              <p class="calculator-intro">Use this to plan what you will pay per week for one or more children, estimate the monthly cost, and split the base allowance into spend, save, and give amounts.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="childrenCount">Number of children</label>
+                <input type="text" id="childrenCount" inputmode="numeric" placeholder="e.g., 2">
+              </div>
+
+              <div class="form-group">
+                <label for="weeklyAllowancePerChild">Weekly allowance per child</label>
+                <input type="text" id="weeklyAllowancePerChild" inputmode="decimal" placeholder="e.g., 50">
+              </div>
+
+              <div class="form-group">
+                <label for="spendPercent">Spend percentage (of base allowance)</label>
+                <input type="text" id="spendPercent" inputmode="decimal" placeholder="e.g., 70">
+              </div>
+
+              <div class="form-group">
+                <label for="savePercent">Save percentage (of base allowance)</label>
+                <input type="text" id="savePercent" inputmode="decimal" placeholder="e.g., 20">
+              </div>
+
+              <div class="form-group">
+                <label for="givePercent">Give percentage (of base allowance)</label>
+                <input type="text" id="givePercent" inputmode="decimal" placeholder="e.g., 10">
+              </div>
+
+              <div class="advanced-toggle">
+                <label class="checkbox-row">
+                  <input type="checkbox" id="showAdvanced" />
+                  Show advanced options
+                </label>
+              </div>
+
+              <div id="advancedFields" class="advanced-fields hidden">
+                <div class="form-group">
+                  <label for="bonusPerChildWeekly">Weekly bonus per child (optional)</label>
+                  <input type="text" id="bonusPerChildWeekly" inputmode="decimal" placeholder="e.g., 10">
+                </div>
+
+                <div class="form-group">
+                  <label for="weeksPerMonth">Weeks per month (optional)</label>
+                  <input type="text" id="weeksPerMonth" inputmode="decimal" placeholder="Default: 4.33">
+                </div>
+
+                <div class="form-group">
+                  <label for="extraMonthly">Extra monthly allowance top-up (optional)</label>
+                  <input type="text" id="extraMonthly" inputmode="decimal" placeholder="e.g., 100">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate allowance budget</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/44qET0S" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Household Management</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Manage chores, schedules, and household responsibilities with ease.</p>
+    <div class="affiliate-cta">View household management tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for daily decisions, routines, and practical planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting, saving, and money planning tools for individuals and families.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study, grades, and school-related calculators to support learning goals.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Children’s allowance budget calculator for weekly spending, saving, and giving</h2>
+
+              <p>Parents often want a simple answer to one question: “If I pay a weekly allowance, what does it really cost per month, and how should it be split?” This calculator is built for that decision. You enter how many children you are budgeting for, the weekly allowance per child, and how you want to divide the base allowance into three buckets: spend, save, and give. You get totals for the household and a clear per-child view.</p>
+
+              <p>The default setup is intentionally simple because that is what most families actually need. Allowances are usually paid weekly, and the practical problem is not a complex financial model. The practical problem is consistency: picking an amount that fits the household budget, then sticking to a split that teaches basic money habits without turning allowance into a negotiation every week.</p>
+
+              <p>If you want a slightly more realistic plan, the Advanced options let you add a weekly “bonus” per child (for example, for chores or goals), set the number of weeks per month used for the monthly estimate, and add an occasional monthly top-up. These advanced inputs are optional. If you leave them blank, the calculator still produces a usable result using sensible defaults and shows what it assumed.</p>
+
+              <p>What the results mean: the weekly total is the amount you will pay out in a typical week across all children. The monthly estimate converts that weekly plan into a monthly budget line item. The spend, save, and give split is calculated on the base allowance only, so it stays stable and easy to teach. Any bonus or monthly top-up is shown separately so you can decide whether to keep it flexible or fold it into a stricter plan.</p>
+
+              <p>How to use this in real life: decide your weekly base allowance first, then pick a split that matches your values. Many families start with a simple 70% spend, 20% save, 10% give split. You can change those percentages, but the total must still add up to 100% to represent a complete split of the base allowance. Once you have a stable base, you can optionally layer in bonuses or a monthly top-up for school events, transport, or other irregular costs.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The allowance is treated as a weekly amount per child, because weekly allowance is the most common household pattern for pocket money.</li>
+                <li>The default weeks-per-month value is 4.33, which approximates 52 weeks divided by 12 months for a smoother monthly estimate.</li>
+                <li>The spend/save/give split applies to the base allowance only, not to optional bonuses or optional monthly top-ups, to keep the teaching framework stable.</li>
+                <li>Percentages must total 100% to produce a complete split; if they do not, the calculator will ask you to adjust them.</li>
+                <li>This calculator estimates totals and splits; it does not prescribe what allowance “should” be, and it does not account for taxes, inflation, or investment returns.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Should I use a weekly or monthly allowance amount?</h3>
+              <p>This calculator is locked to weekly allowances because the common real-world use case is setting a weekly amount and then checking what it costs per month. If you only know the monthly amount, convert it to weekly by dividing by about 4.33, then use that weekly figure here for a consistent comparison.</p>
+
+              <h3>What if the spend, save, and give percentages do not add up to 100%?</h3>
+              <p>Then you do not have a complete split of the base allowance. The calculator will flag this and stop, because partial splits create confusion for budgeting and for teaching kids what each bucket means. Adjust the percentages until they total exactly 100%.</p>
+
+              <h3>Do I have to include “give” as a category?</h3>
+              <p>No, but the split still needs to total 100%. If you do not want a giving bucket, set “give” to 0% and adjust spend and save to total 100%. The calculator is neutral about values; it simply allocates the base allowance according to your chosen split.</p>
+
+              <h3>How should I treat bonuses for chores or goals?</h3>
+              <p>Use the weekly bonus input if you want to budget for it. The calculator shows bonus totals separately from the base split so you can keep bonuses flexible. If you prefer a fixed plan, set a typical bonus amount you expect most weeks. If bonuses are rare, leave it blank and treat it as an occasional expense.</p>
+
+              <h3>How can I make the monthly estimate more accurate?</h3>
+              <p>Use the default 4.33 weeks per month if you want a smooth monthly budget line. If you pay allowances only during school terms, or you pay on a fixed calendar schedule, you can change the weeks-per-month input to match your pattern. The goal is not mathematical purity. The goal is a budget number you can rely on.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

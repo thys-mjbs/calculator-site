@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Debt Avalanche Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Use the debt avalanche method to estimate how long it will take to pay off multiple debts, how much interest you will pay, and which debt to pay first based on highest APR.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/debt-avalanche-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Debt Avalanche Calculator | SnapCalc">
+    <meta property="og:description" content="Use the debt avalanche method to estimate payoff time, total interest, and a payoff order for multiple debts based on highest APR.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/debt-avalanche-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Debt Avalanche Calculator | SnapCalc">
+    <meta name="twitter:description" content="Use the debt avalanche method to estimate payoff time, total interest, and a payoff order for multiple debts based on highest APR.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Debt Avalanche Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/debt-avalanche-calculator/",
+      "description": "Debt avalanche payoff calculator for multiple debts. Estimates payoff time, total interest, and payoff order based on highest APR first, with optional comparison to the snowball method."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Debt Avalanche Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Debt Avalanche Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KTMkHf" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Expense Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track spending patterns to identify leaks and improve financial discipline.</p>
+    <div class="affiliate-cta">Browse expense tracking planners on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Pay off debt faster with the avalanche method</h2>
+
+              <p class="calculator-intro">
+                Enter your debts (balance, APR, and minimum payment). This calculator estimates payoff time and total interest
+                using the debt avalanche method (highest APR first). Leave unused rows blank.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="extraPayment">Extra monthly payment (above all minimums)</label>
+                <input type="text" id="extraPayment" inputmode="decimal" placeholder="e.g., 1,000">
+              </div>
+
+              <div class="input-group checkbox-row">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="compareSnowball">
+                  Also compare to the debt snowball method (smallest balance first)
+                </label>
+              </div>
+
+              <div class="debts-wrap" aria-label="Debt list">
+                <div class="debt-row debt-row-head">
+                  <div class="debt-col debt-name">Debt name</div>
+                  <div class="debt-col debt-balance">Balance</div>
+                  <div class="debt-col debt-apr">APR %</div>
+                  <div class="debt-col debt-min">Min / month</div>
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName1" class="debt-col debt-name" placeholder="Credit card A">
+                  <input type="text" id="balance1" class="debt-col debt-balance" inputmode="decimal" placeholder="10,000">
+                  <input type="text" id="apr1" class="debt-col debt-apr" inputmode="decimal" placeholder="24">
+                  <input type="text" id="min1" class="debt-col debt-min" inputmode="decimal" placeholder="400">
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName2" class="debt-col debt-name" placeholder="Car loan">
+                  <input type="text" id="balance2" class="debt-col debt-balance" inputmode="decimal" placeholder="150,000">
+                  <input type="text" id="apr2" class="debt-col debt-apr" inputmode="decimal" placeholder="12">
+                  <input type="text" id="min2" class="debt-col debt-min" inputmode="decimal" placeholder="3,200">
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName3" class="debt-col debt-name" placeholder="Store account">
+                  <input type="text" id="balance3" class="debt-col debt-balance" inputmode="decimal" placeholder="5,500">
+                  <input type="text" id="apr3" class="debt-col debt-apr" inputmode="decimal" placeholder="18">
+                  <input type="text" id="min3" class="debt-col debt-min" inputmode="decimal" placeholder="250">
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName4" class="debt-col debt-name" placeholder="Personal loan">
+                  <input type="text" id="balance4" class="debt-col debt-balance" inputmode="decimal" placeholder="">
+                  <input type="text" id="apr4" class="debt-col debt-apr" inputmode="decimal" placeholder="">
+                  <input type="text" id="min4" class="debt-col debt-min" inputmode="decimal" placeholder="">
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName5" class="debt-col debt-name" placeholder="Debt (optional)">
+                  <input type="text" id="balance5" class="debt-col debt-balance" inputmode="decimal" placeholder="">
+                  <input type="text" id="apr5" class="debt-col debt-apr" inputmode="decimal" placeholder="">
+                  <input type="text" id="min5" class="debt-col debt-min" inputmode="decimal" placeholder="">
+                </div>
+
+                <div class="debt-row">
+                  <input type="text" id="debtName6" class="debt-col debt-name" placeholder="Debt (optional)">
+                  <input type="text" id="balance6" class="debt-col debt-balance" inputmode="decimal" placeholder="">
+                  <input type="text" id="apr6" class="debt-col debt-apr" inputmode="decimal" placeholder="">
+                  <input type="text" id="min6" class="debt-col debt-min" inputmode="decimal" placeholder="">
+                </div>
+              </div>
+
+              <p class="helper-note">
+                Tip: If you do not know the exact APR, use the rate shown on your statement. If you only know an approximate minimum payment,
+                enter your typical monthly minimum.
+              </p>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate debt avalanche payoff</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KTMkHf" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Expense Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track spending patterns to identify leaks and improve financial discipline.</p>
+    <div class="affiliate-cta">Browse expense tracking planners on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting, payoff planning, net worth, and everyday money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Compare repayments, interest costs, and credit-related trade-offs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Estimate growth, contributions, and long-term savings outcomes.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4rUqGDl" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Emergency Funds</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to size and build an effective emergency fund.</p>
+    <div class="affiliate-cta">View emergency fund books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Debt avalanche payoff calculator (highest interest first)</h2>
+
+              <p>
+                The debt avalanche method is a simple rule for paying off multiple debts while minimizing interest.
+                You keep paying the minimum payment on every debt, and you direct any extra money to the debt with the highest APR.
+                Once that debt is fully paid, you roll that payment into the next-highest APR debt, and repeat.
+                Over time, your payment “snowball” grows, but the key difference is that avalanche prioritizes interest rate,
+                not balance size.
+              </p>
+
+              <p>
+                This calculator estimates how your payoff could look if your balances and interest rates stay stable and you keep making
+                the same monthly payments. You will see an estimated payoff timeline, an estimate of total interest paid, and a payoff order.
+                If you choose the comparison option, the calculator also runs the same inputs through the debt snowball method
+                (smallest balance first) so you can compare speed and interest cost side by side.
+              </p>
+
+              <p>
+                Use this as a planning tool, not a promise. Real statements may apply interest daily, add fees, change minimum payments,
+                or change rates over time. Even with those differences, avalanche logic stays the same: protect minimum payments first,
+                then attack the highest APR with everything else you can reliably add each month.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Interest is estimated monthly using APR ÷ 12 and applied before each month’s payments.</li>
+                <li>Minimum payments are treated as fixed amounts (your actual minimum may change as the balance changes).</li>
+                <li>Extra monthly payment is applied after all minimum payments, and rolls to the next target if a debt is paid early.</li>
+                <li>Fees, penalties, balance transfers, promotional rates, and new spending are not included.</li>
+                <li>Results are estimates; if your payments are too low to reduce balances, the calculator will flag it as not payable.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the debt avalanche method in plain terms?</h3>
+              <p>
+                You pay the minimum on everything so you stay current, then you put every extra rand or dollar toward the debt with the highest APR.
+                The goal is to reduce the most expensive interest first. When the highest-APR debt is gone, you move to the next-highest APR.
+              </p>
+
+              <h3>Is debt avalanche always the cheapest option?</h3>
+              <p>
+                If all else is equal and you stick to the plan, avalanche typically produces the lowest interest cost because it targets the
+                highest interest rate first. The main reason people pick snowball instead is motivation: clearing a small balance early can feel
+                rewarding and keep you consistent. This calculator can compare both so you can decide which trade-off you prefer.
+              </p>
+
+              <h3>What if I do not know my exact minimum payment?</h3>
+              <p>
+                Use your typical minimum from recent statements. If you are unsure, it is better to slightly overestimate the minimum than
+                underestimate it, because underestimating can make the plan look easier than it really is. If your minimums change a lot, treat
+                the result as a rough range and rerun it when you have clearer numbers.
+              </p>
+
+              <h3>Why does the calculator say my debts may not be payable?</h3>
+              <p>
+                If your monthly payments are too low to cover interest across your debts, some balances can grow instead of shrink.
+                This can happen when a minimum payment is extremely low relative to the APR, or when there is no extra payment available.
+                The fix is straightforward: increase the extra payment, increase one or more minimum payments, reduce the APR (for example via refinancing),
+                or remove new spending on revolving accounts.
+              </p>
+
+              <h3>How can I make the estimate more accurate?</h3>
+              <p>
+                Use current statement balances, the APR shown on each account, and the minimum payment shown on your statement.
+                If you have a debt with a promotional rate that will change later, rerun the calculator with the future APR as a separate scenario.
+                If your lender uses fees or daily compounding, the real result may differ, but the payoff order logic still holds.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-20</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

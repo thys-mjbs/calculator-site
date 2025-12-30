@@ -1,44 +1,30 @@
-# temp_affiliates_enable.py
-# Re-enables affiliate blocks by removing the single HTML comment
-# wrapper added by temp_affiliates_disable.py
-# Idempotent and safe to re-run.
+import os
+import shutil
 
-from pathlib import Path
-import re
-
-COMMENTED_RE = re.compile(
-    r'<!--\s*(<div\s+class="ad-block"[\s\S]*?</div>)\s*-->',
-    re.IGNORECASE
-)
-
-def enable_file(path: Path) -> bool:
-    html = path.read_text(encoding="utf-8")
-
-    new_html, count = COMMENTED_RE.subn(r"\1", html)
-
-    if count > 0:
-        path.write_text(new_html, encoding="utf-8")
-        return True
-
-    return False
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+BACKUP_DIR = os.path.abspath(os.path.join(PROJECT_ROOT, "tools", "_affiliates_backup"))
 
 def main():
-    tools_dir = Path(__file__).resolve().parent
-    repo_root = tools_dir.parent
-    calculators = repo_root / "calculators"
+    if not os.path.isdir(BACKUP_DIR):
+        print(f"ERROR: backup folder not found: {BACKUP_DIR}")
+        return
 
-    touched = 0
-    modified = 0
+    restored = 0
 
-    for file in calculators.rglob("index.html"):
-        touched += 1
-        if enable_file(file):
-            modified += 1
-            print(f"ENABLED: {file}")
+    for root, _, files in os.walk(BACKUP_DIR):
+        for name in files:
+            if name.lower() != "index.html":
+                continue
 
-    print(f"\nScanned: {touched}")
-    print(f"Modified: {modified}")
-    print("Done.")
+            backup_path = os.path.join(root, name)
+            rel = os.path.relpath(backup_path, BACKUP_DIR)
+            target_path = os.path.join(PROJECT_ROOT, rel)
+
+            os.makedirs(os.path.dirname(target_path), exist_ok=True)
+            shutil.copy2(backup_path, target_path)
+            restored += 1
+
+    print(f"ENABLE DONE: restored_files={restored}")
 
 if __name__ == "__main__":
     main()

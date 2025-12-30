@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Soil Volume Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/soil-volume-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Soil Volume Calculator | SnapCalc">
-    <meta property="og:description" content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/soil-volume-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Soil Volume Calculator | SnapCalc">
-    <meta name="twitter:description" content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Soil Volume Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/soil-volume-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Soil Volume Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/soil-volume-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Soil Volume Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate how much soil you need for a rectangular garden bed or landscaping area. Get volume in cubic meters and cubic yards, plus bag estimates and weight." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,238 +33,188 @@
       "description": "Calculate how much soil you need for a rectangular area using length, width, and depth. Outputs cubic meters, cubic yards, liters, bag estimates, and an optional weight estimate."
     }
     </script>
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/#categories">Categories</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
-        <a href="/categories/construction-materials/">Construction & Materials</a> ›
-        <span>Soil Volume Calculator</span>
-      </nav>
-
-      <div class="page-layout">
-        <h1>Soil Volume Calculator</h1>
-
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a class="affiliate-link" href="https://amzn.to/4iXUY4i" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Fluid Mechanics</div>
--->
-    <p class="affiliate-copy">Tools for flow rate, pressure, and fluid behaviour calculations.</p>
-    <div class="affiliate-cta">Explore fluid mechanics tools on Amazon</div>
-  </a>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
 </div>
-          </div>
+<nav class="site-nav">
+<a href="/">Home</a>
+<a href="/#categories">Categories</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Soil Volume Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Soil Volume Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-          <div class="grid-slot">
-            <div class="calculator-container">
-              <h2>Estimate soil needed for a rectangular area</h2>
 
-              <p class="calculator-intro">Enter your area size and target soil depth to estimate how much soil to order. This is designed for garden beds and landscaping areas that are roughly rectangular.</p>
 
-              <!-- CALCULATOR UI START -->
-              <div class="form-group">
-                <label for="unitsSelect">Measurement units</label>
-                <select id="unitsSelect" aria-label="Choose measurement units">
-                  <option value="metric">Metric (meters, centimeters)</option>
-                  <option value="imperial">Imperial (feet, inches)</option>
-                </select>
-              </div>
 
-              <div class="form-group">
-                <label id="lengthLabel" for="lengthInput">Length (m)</label>
-                <input id="lengthInput" type="text" inputmode="decimal" placeholder="e.g., 6">
-              </div>
 
-              <div class="form-group">
-                <label id="widthLabel" for="widthInput">Width (m)</label>
-                <input id="widthInput" type="text" inputmode="decimal" placeholder="e.g., 3">
-              </div>
+--&gt;
+    
 
-              <div class="form-group">
-                <label id="depthLabel" for="depthInput">Depth (cm)</label>
-                <input id="depthInput" type="text" inputmode="decimal" placeholder="e.g., 10">
-              </div>
 
-              <details class="advanced-details">
-                <summary>Advanced (optional)</summary>
-
-                <div class="form-group">
-                  <label for="extraPercentInput">Extra for settling and waste (%)</label>
-                  <input id="extraPercentInput" type="text" inputmode="decimal" placeholder="10">
-                </div>
-
-                <div class="form-group">
-                  <label for="densitySelect">Soil type (for weight estimate)</label>
-                  <select id="densitySelect" aria-label="Choose soil type for weight estimate">
-                    <option value="1300">Typical topsoil (1,300 kg/m³)</option>
-                    <option value="1200">Dry topsoil (1,200 kg/m³)</option>
-                    <option value="1500">Moist/heavy soil (1,500 kg/m³)</option>
-                    <option value="600">Compost/blend (600 kg/m³)</option>
-                  </select>
-                </div>
-              </details>
-              <!-- CALCULATOR UI END -->
-
-              <button id="calculateButton" type="button">Calculate soil volume</button>
-
-              <div id="result" aria-live="polite"></div>
-
-              <div class="share-buttons">
-                <button id="shareWhatsAppButton" type="button">
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate soil needed for a rectangular area</h2>
+<p class="calculator-intro">Enter your area size and target soil depth to estimate how much soil to order. This is designed for garden beds and landscaping areas that are roughly rectangular.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="unitsSelect">Measurement units</label>
+<select aria-label="Choose measurement units" id="unitsSelect">
+<option value="metric">Metric (meters, centimeters)</option>
+<option value="imperial">Imperial (feet, inches)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="lengthInput" id="lengthLabel">Length (m)</label>
+<input id="lengthInput" inputmode="decimal" placeholder="e.g., 6" type="text"/>
+</div>
+<div class="form-group">
+<label for="widthInput" id="widthLabel">Width (m)</label>
+<input id="widthInput" inputmode="decimal" placeholder="e.g., 3" type="text"/>
+</div>
+<div class="form-group">
+<label for="depthInput" id="depthLabel">Depth (cm)</label>
+<input id="depthInput" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="extraPercentInput">Extra for settling and waste (%)</label>
+<input id="extraPercentInput" inputmode="decimal" placeholder="10" type="text"/>
+</div>
+<div class="form-group">
+<label for="densitySelect">Soil type (for weight estimate)</label>
+<select aria-label="Choose soil type for weight estimate" id="densitySelect">
+<option value="1300">Typical topsoil (1,300 kg/m³)</option>
+<option value="1200">Dry topsoil (1,200 kg/m³)</option>
+<option value="1500">Moist/heavy soil (1,500 kg/m³)</option>
+<option value="600">Compost/blend (600 kg/m³)</option>
+</select>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate soil volume</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Advertisement area">
-  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
-  </a>
 </div>
--->
-          </div>
-
-          <!-- Row 2: related CATEGORIES (three thin tiles) -->
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/construction-materials/">
-              <h3 class="related-title">Construction & Materials</h3>
-              <p class="related-desc">Estimate quantities for concrete, gravel, soil, paint, and other project materials.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/real-estate-property/">
-              <h3 class="related-title">Real Estate & Property</h3>
-              <p class="related-desc">Run quick property math for areas, renovations, running costs, and comparisons.</p>
-            </a>
-          </div>
-
-          <div class="grid-slot">
-            <a class="related-card" href="/categories/math-general-calculators/">
-              <h3 class="related-title">Math & General Calculators</h3>
-              <p class="related-desc">Handle everyday calculations like percentages, ratios, rounding, and unit basics.</p>
-            </a>
-          </div>
-
-          <!-- Row 3: affiliate + SEO + affiliate -->
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a class="affiliate-link" href="https://amzn.to/4agcTko" target="_blank" rel="nofollow sponsored noopener">
-    <div class="affiliate-label">Unit Conversions</div>
--->
-    <p class="affiliate-copy">Convert engineering units quickly and accurately.</p>
-    <div class="affiliate-cta">Browse engineering unit conversion tools on Amazon</div>
-  </a>
 </div>
-          </div>
-
-          <div class="grid-slot">
-            <section class="seo-section">
-              <h2>Soil volume calculator for ordering topsoil for garden beds</h2>
-
-              <p>If you are planning a garden bed, leveling a lawn, topping up a planter area, or building up a landscaping section, the most common problem is ordering the right amount of soil. Order too little and the job stalls. Order too much and you pay for excess material, extra handling, and sometimes additional delivery fees. This soil volume calculator is built for the most typical real-world case: estimating how much soil to buy for a roughly rectangular area using length, width, and depth.</p>
-
-              <p>The calculator produces more than a single number because ordering soil is not only about volume. Suppliers may quote in cubic meters or cubic yards, while bagged soil is sold in liters. Also, soil settles after watering and compacting, and some soil is lost to uneven ground and spreading. That is why the calculator includes an optional extra percentage, and it can also estimate weight if you want to sanity-check transport limits or plan manual handling.</p>
-
-              <p>To use it, choose your measurement system, then enter the length and width of your area, followed by the target depth of soil you want to add. For garden beds, depth is often the number you are least certain about, so aim for a realistic average depth rather than a perfect measurement. When you press calculate, you will see the base volume and the adjusted volume (if you use an extra percentage), plus helpful conversions like liters and an estimated number of 40 liter bags.</p>
-
-              <h3>Assumptions and how to use this calculator</h3>
-              <ul>
-                <li>This calculator is for a rectangular or roughly rectangular area. If your area is irregular, break it into rectangles and add the results.</li>
-                <li>Depth is treated as an average depth across the whole area. If the ground is uneven, measure a few spots and use a reasonable average.</li>
-                <li>The optional “extra for settling and waste” is a simple percentage applied to the base volume. A common default is 10% for topsoil projects.</li>
-                <li>The weight estimate is approximate because soil density changes with moisture, compaction, and composition. Use it for planning, not as a precise specification.</li>
-                <li>Bag estimates assume 40 liter bags. If your local bags are 25L, 30L, or 50L, convert using the liters value shown in the results.</li>
-              </ul>
-
-              <h3>Common questions</h3>
-
-              <h3>Why does soil “volume needed” change after watering or time?</h3>
-              <p>Soil contains air gaps when it is loose. After watering, raking, and normal foot traffic, those gaps reduce and the soil settles. The surface level drops, which can make it feel like you were short even if your base measurement was correct. Using an extra percentage helps you order enough to finish the job cleanly.</p>
-
-              <h3>What depth should I use for topsoil or garden beds?</h3>
-              <p>There is no single universal depth, but typical topping up projects are shallow and garden beds are deeper. For topping up lawns and smoothing low spots, people often add a thin layer. For beds where plants will root into the added material, the depth is usually larger. The practical approach is to choose a depth you can explain: “I want an average of X cm across the area.” Then use the extra percentage to reduce the risk of a shortfall.</p>
-
-              <h3>How do I measure an area that is not a perfect rectangle?</h3>
-              <p>Split the space into two or more simple rectangles. Measure each rectangle, calculate soil for each, then add the totals. This is faster and more reliable than trying to invent a single number for an irregular shape. If your area has curves, use a rectangle that slightly overestimates and apply a smaller extra percentage, or use multiple smaller rectangles for better accuracy.</p>
-
-              <h3>Why does the calculator show both cubic meters and cubic yards?</h3>
-              <p>Suppliers and project guides vary by region. Many landscaping suppliers quote bulk soil in cubic meters, while some markets commonly use cubic yards. Showing both removes friction when you are comparing supplier quotes, reading advice online, or switching between bulk and bagged options.</p>
-
-              <h3>Is the weight estimate reliable enough for trailers and delivery planning?</h3>
-              <p>It is a reasonable planning estimate, not a guarantee. Soil can be much heavier when wet, and “topsoil” from different suppliers can have different composition. Use the weight estimate as a warning flag: if it suggests you are near the limit of a trailer, vehicle, or manual handling capacity, plan for smaller loads or confirm with your supplier’s stated density and moisture condition.</p>
-
-              <div class="last-updated">Last updated: 2025-12-22</div>
-            </section>
-          </div>
-
-          <div class="grid-slot">
-            <!--
-<div class="ad-block" aria-label="Affiliate link area">
-  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
-    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
-  </a>
 </div>
--->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
           </div>
-        </div>
-      </div>
-    </main>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities for concrete, gravel, soil, paint, and other project materials.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Run quick property math for areas, renovations, running costs, and comparisons.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle everyday calculations like percentages, ratios, rounding, and unit basics.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
 
-    <footer class="site-footer">
-      <div class="site-footer-inner">
-        <span>© 2025 SnapCalc</span>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
-    </script>
-  </body>
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Soil volume calculator for ordering topsoil for garden beds</h2>
+<p>If you are planning a garden bed, leveling a lawn, topping up a planter area, or building up a landscaping section, the most common problem is ordering the right amount of soil. Order too little and the job stalls. Order too much and you pay for excess material, extra handling, and sometimes additional delivery fees. This soil volume calculator is built for the most typical real-world case: estimating how much soil to buy for a roughly rectangular area using length, width, and depth.</p>
+<p>The calculator produces more than a single number because ordering soil is not only about volume. Suppliers may quote in cubic meters or cubic yards, while bagged soil is sold in liters. Also, soil settles after watering and compacting, and some soil is lost to uneven ground and spreading. That is why the calculator includes an optional extra percentage, and it can also estimate weight if you want to sanity-check transport limits or plan manual handling.</p>
+<p>To use it, choose your measurement system, then enter the length and width of your area, followed by the target depth of soil you want to add. For garden beds, depth is often the number you are least certain about, so aim for a realistic average depth rather than a perfect measurement. When you press calculate, you will see the base volume and the adjusted volume (if you use an extra percentage), plus helpful conversions like liters and an estimated number of 40 liter bags.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator is for a rectangular or roughly rectangular area. If your area is irregular, break it into rectangles and add the results.</li>
+<li>Depth is treated as an average depth across the whole area. If the ground is uneven, measure a few spots and use a reasonable average.</li>
+<li>The optional “extra for settling and waste” is a simple percentage applied to the base volume. A common default is 10% for topsoil projects.</li>
+<li>The weight estimate is approximate because soil density changes with moisture, compaction, and composition. Use it for planning, not as a precise specification.</li>
+<li>Bag estimates assume 40 liter bags. If your local bags are 25L, 30L, or 50L, convert using the liters value shown in the results.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does soil “volume needed” change after watering or time?</h3>
+<p>Soil contains air gaps when it is loose. After watering, raking, and normal foot traffic, those gaps reduce and the soil settles. The surface level drops, which can make it feel like you were short even if your base measurement was correct. Using an extra percentage helps you order enough to finish the job cleanly.</p>
+<h3>What depth should I use for topsoil or garden beds?</h3>
+<p>There is no single universal depth, but typical topping up projects are shallow and garden beds are deeper. For topping up lawns and smoothing low spots, people often add a thin layer. For beds where plants will root into the added material, the depth is usually larger. The practical approach is to choose a depth you can explain: “I want an average of X cm across the area.” Then use the extra percentage to reduce the risk of a shortfall.</p>
+<h3>How do I measure an area that is not a perfect rectangle?</h3>
+<p>Split the space into two or more simple rectangles. Measure each rectangle, calculate soil for each, then add the totals. This is faster and more reliable than trying to invent a single number for an irregular shape. If your area has curves, use a rectangle that slightly overestimates and apply a smaller extra percentage, or use multiple smaller rectangles for better accuracy.</p>
+<h3>Why does the calculator show both cubic meters and cubic yards?</h3>
+<p>Suppliers and project guides vary by region. Many landscaping suppliers quote bulk soil in cubic meters, while some markets commonly use cubic yards. Showing both removes friction when you are comparing supplier quotes, reading advice online, or switching between bulk and bagged options.</p>
+<h3>Is the weight estimate reliable enough for trailers and delivery planning?</h3>
+<p>It is a reasonable planning estimate, not a guarantee. Soil can be much heavier when wet, and “topsoil” from different suppliers can have different composition. Use the weight estimate as a warning flag: if it suggests you are near the limit of a trailer, vehicle, or manual handling capacity, plan for smaller loads or confirm with your supplier’s stated density and moisture condition.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
 </html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Operating Profit Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate operating profit and operating margin from revenue, cost of goods sold, and operating expenses. Add optional other operating income and expenses for a more complete view.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/operating-profit-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Operating Profit Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate operating profit and operating margin from revenue, cost of goods sold, and operating expenses. Add optional other operating income and expenses for a more complete view.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/operating-profit-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Operating Profit Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate operating profit and operating margin from revenue, cost of goods sold, and operating expenses. Add optional other operating income and expenses for a more complete view.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Operating Profit Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/operating-profit-calculator/",
+      "description": "Calculate operating profit and operating margin from revenue, cost of goods sold, and operating expenses, with optional other operating income and expenses."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business & Accounting</a> ›
+        <span>Operating Profit Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Operating Profit Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3MYjtSM" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Business Cash Flow</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Improve cash flow visibility and stability for ongoing business operations.</p>
+                <div class="affiliate-cta">Explore business cash flow books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate operating profit and operating margin</h2>
+
+              <p class="calculator-intro">Use this to estimate operating profit from revenue, COGS, and operating expenses. Add other operating income and expenses if you want a more complete operating view.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="revenueInput">Revenue (sales)</label>
+                <input type="text" id="revenueInput" inputmode="decimal" placeholder="e.g., 250,000">
+              </div>
+
+              <div class="form-group">
+                <label for="cogsInput">Cost of goods sold (COGS)</label>
+                <input type="text" id="cogsInput" inputmode="decimal" placeholder="e.g., 120,000">
+              </div>
+
+              <div class="form-group">
+                <label for="opexInput">Operating expenses (OPEX)</label>
+                <input type="text" id="opexInput" inputmode="decimal" placeholder="e.g., 80,000">
+              </div>
+
+              <div class="form-group">
+                <label for="otherOpIncomeInput">Other operating income (optional)</label>
+                <input type="text" id="otherOpIncomeInput" inputmode="decimal" placeholder="e.g., 5,000">
+              </div>
+
+              <div class="form-group">
+                <label for="otherOpExpenseInput">Other operating expenses (optional)</label>
+                <input type="text" id="otherOpExpenseInput" inputmode="decimal" placeholder="e.g., 2,000">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate operating profit</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3L06e3q" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Business Forecasting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn how to project revenue, expenses, and growth scenarios realistically.</p>
+                <div class="affiliate-cta">Browse business forecasting books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Work through core business metrics, margins, cash flow, and accounting ratios.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Estimate returns, growth, and targets for long-term saving and investing decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Compare borrowing costs, repayments, and interest impacts across common loan types.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Operating profit calculator for businesses and financial reporting</h2>
+
+              <p>Operating profit is a practical measure of how much money your core business activities generate after you pay for what you sell (COGS) and the costs of running the business day to day (operating expenses). People also call it operating income or EBIT in casual conversation, although in formal reporting EBIT can be defined slightly differently depending on what gets classified as “operating.” This calculator focuses on the everyday use case: you want a clean operating result that helps you understand whether your operations are working, before financing and taxes complicate the picture.</p>
+
+              <p>To use the calculator, enter your revenue (sales), your cost of goods sold (COGS), and your operating expenses (OPEX). COGS is the direct cost tied to producing or purchasing the items you sold in that period. Operating expenses are the costs required to run the business, like salaries (non-production), rent, marketing, software subscriptions, utilities, insurance, and admin costs. If you have additional operating income or operating expenses that sit outside your main sales and core OPEX (for example, a recurring service fee income line, or an ongoing operational fee that is not in your normal expense categories), you can add them as optional inputs.</p>
+
+              <p>The calculator returns more than one number because a single profit figure is easy to misread. You will see operating profit (the money left after operating costs), operating margin (operating profit as a percentage of revenue), gross profit (revenue minus COGS), and gross margin. This helps you separate two common issues: pricing or product costs (shown by gross margin) versus overhead and operating efficiency (shown by the difference between gross profit and operating profit). If your gross margin is healthy but operating profit is weak, the business is often carrying too much overhead, or spending is not aligned to revenue.</p>
+
+              <p>Operating profit is useful for internal decisions and for comparing performance across time because it reduces noise. Interest and taxes can jump around due to financing changes, tax timing, or one-off items. Operating profit is closer to “what the business itself is doing.” It is also a metric that investors and lenders look at because it indicates the business’s ability to fund its own growth, absorb shocks, and service debt in the long run. However, operating profit is only as good as your inputs. If expenses are missing, misclassified, or lumped into the wrong bucket, the number will be misleading.</p>
+
+              <p>If you do not have perfect data, you can still get a useful estimate. Many small businesses do not have clean splits between COGS and OPEX, or may not track all operating expenses monthly. In that case, use reasonable estimates and treat the result as a directional signal. Over time, improving the accuracy of your COGS and OPEX split will make operating profit a much stronger decision tool. The point is not to be perfect, it is to be consistent and to know what assumptions you are making.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator assumes revenue, COGS, and OPEX are for the same time period (for example, one month or one year).</li>
+                <li>Operating profit here excludes interest, taxes, and non-operating gains or losses (for example, selling assets or major once-off restructuring costs).</li>
+                <li>Optional “other operating income/expenses” should only include ongoing operational items, not financing or investment-related items.</li>
+                <li>If you are unsure where an expense belongs, use a consistent rule (for example: direct production or purchase costs as COGS, everything else as OPEX) and keep it consistent across periods.</li>
+                <li>Results are estimates. For formal reporting, align your categories with your accounting system and your financial statements.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between gross profit and operating profit?</h3>
+              <p>Gross profit is revenue minus COGS. It tells you whether your product or service pricing covers the direct costs of what you sold. Operating profit goes one step further and subtracts operating expenses as well, showing what is left after running the business. If gross profit is strong but operating profit is weak, overhead or operating spend is the likely problem.</p>
+
+              <h3>Is operating profit the same as EBIT?</h3>
+              <p>In many small business contexts, people use the terms interchangeably. In formal accounting, the exact definition can vary based on what is treated as operating versus non-operating. This calculator focuses on core operations and excludes interest and taxes. If your statements include unusual items, reconcile the definitions so you are comparing like with like.</p>
+
+              <h3>What should I do if I do not know my COGS exactly?</h3>
+              <p>Use your best estimate for the period. For product businesses, a starting point is opening inventory plus purchases minus closing inventory. For service businesses, COGS may be low or may include direct labor and subcontractors tied to delivering the service. If you cannot split perfectly, be consistent and improve accuracy over time.</p>
+
+              <h3>Why does a small change in revenue sometimes swing operating profit a lot?</h3>
+              <p>Because many operating expenses are fixed or semi-fixed. If rent, salaries, and admin costs do not change much month to month, extra revenue can drop through to operating profit quickly. The reverse is also true: a small revenue drop can cause operating profit to collapse if the cost base is fixed.</p>
+
+              <h3>What is a “good” operating margin?</h3>
+              <p>It depends heavily on the industry, business model, and growth stage. Retail and distribution often have lower margins, while software and high-value services can have higher margins. Use operating margin mainly to track your own trend over time and compare to peers in your specific industry, using the same calculation definitions.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4j69s1Z" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Business Financial Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Align budgets, forecasts, and strategy into a structured financial plan.</p>
+                <div class="affiliate-cta">View business financial planning books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Tax-Deferred vs Taxable Investment Comparison | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Compare the after-tax value of investing in a tax-deferred account versus a taxable brokerage account using the same gross contribution, expected returns, and tax rates.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/savings-investments/tax-deferred-vs-taxable-investment-comparison/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Tax-Deferred vs Taxable Investment Comparison | SnapCalc">
+    <meta property="og:description" content="Compare the after-tax value of investing in a tax-deferred account versus a taxable brokerage account using the same gross contribution, expected returns, and tax rates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/savings-investments/tax-deferred-vs-taxable-investment-comparison/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tax-Deferred vs Taxable Investment Comparison | SnapCalc">
+    <meta name="twitter:description" content="Compare the after-tax value of investing in a tax-deferred account versus a taxable brokerage account using the same gross contribution, expected returns, and tax rates.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tax-Deferred vs Taxable Investment Comparison",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/tax-deferred-vs-taxable-investment-comparison/",
+      "description": "Compares the estimated after-tax ending value of investing the same gross contribution in a tax-deferred account versus a taxable investment account, using expected returns and tax assumptions."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings & Investments</a> ›
+        <span>Tax-Deferred vs Taxable Investment Comparison</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Tax-Deferred vs Taxable Investment Comparison</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oXkojD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Retirement Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Plan long-term retirement income, savings targets, and withdrawal strategies.</p>
+    <div class="affiliate-cta">Explore retirement planning books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Compare after-tax outcomes</h2>
+
+              <p class="calculator-intro">Uses the same gross contribution amount. Tax-deferred contributions avoid tax today and are taxed at withdrawal. Taxable contributions are after-tax and may owe dividend tax yearly plus capital gains tax at the end.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="initialGross">Initial lump sum (gross)</label>
+                <input type="text" id="initialGross" inputmode="decimal" placeholder="e.g., 50,000">
+              </div>
+
+              <div class="form-group">
+                <label for="annualGross">Annual contribution (gross)</label>
+                <input type="text" id="annualGross" inputmode="decimal" placeholder="e.g., 12,000">
+              </div>
+
+              <div class="form-group">
+                <label for="years">Time horizon (years)</label>
+                <input type="text" id="years" inputmode="numeric" placeholder="e.g., 20">
+              </div>
+
+              <div class="form-group">
+                <label for="annualReturn">Expected annual return (percent)</label>
+                <input type="text" id="annualReturn" inputmode="decimal" placeholder="e.g., 8">
+              </div>
+
+              <div class="form-group">
+                <label for="taxNow">Current marginal income tax rate (percent)</label>
+                <input type="text" id="taxNow" inputmode="decimal" placeholder="e.g., 30">
+              </div>
+
+              <div class="form-group">
+                <label for="taxWithdraw">Tax rate at withdrawal (percent)</label>
+                <input type="text" id="taxWithdraw" inputmode="decimal" placeholder="e.g., 25">
+              </div>
+
+              <details class="advanced-details">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group">
+                  <label for="dividendYield">Dividend yield (percent of balance per year)</label>
+                  <input type="text" id="dividendYield" inputmode="decimal" placeholder="Default: 2">
+                </div>
+
+                <div class="form-group">
+                  <label for="dividendTaxRate">Dividend tax rate (percent)</label>
+                  <input type="text" id="dividendTaxRate" inputmode="decimal" placeholder="Default: current tax rate">
+                </div>
+
+                <div class="form-group">
+                  <label for="capGainsTaxRate">Capital gains tax rate (percent)</label>
+                  <input type="text" id="capGainsTaxRate" inputmode="decimal" placeholder="Default: 15">
+                </div>
+
+                <div class="form-group">
+                  <label for="expenseRatio">Annual fee / expense ratio (percent)</label>
+                  <input type="text" id="expenseRatio" inputmode="decimal" placeholder="Default: 0">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Compare outcomes</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iU4rcV" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Savings Growth</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn strategies to accelerate savings growth over time.</p>
+    <div class="affiliate-cta">View savings growth books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Plan contributions, compare growth scenarios, and estimate future values for common investing decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, track goals, and estimate the impact of everyday money choices over time.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Compare borrowing costs, repayment schedules, and trade-offs between debt and investing.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Tax-deferred vs taxable investment comparison (after-tax value)</h2>
+
+              <p>This calculator compares two common ways people invest long term: putting money into a tax-deferred account (where contributions reduce taxable income today and the account grows without annual tax), versus putting money into a taxable investment account (where you invest after-tax money and may owe tax along the way). The goal is simple: estimate which option leaves you with more spendable money after taxes at the end of your time horizon.</p>
+
+              <p>The primary use case is deciding where to put your next contribution when you have a fixed gross amount available from your salary or business income. In the tax-deferred scenario, the calculator assumes the full gross amount is contributed because you are not paying tax on that contribution today. In the taxable scenario, the calculator assumes you first pay your current marginal income tax, and then invest what is left.</p>
+
+              <p>Results are shown as an after-tax ending value for each path, plus a difference so you can see the size of the advantage. The calculator also gives a small breakdown of taxes paid in the taxable account (dividend taxes during the years and capital gains tax at the end) and the estimated tax paid at withdrawal for the tax-deferred account. This is not a personal tax filing tool. It is a decision aid to compare the two account types under a consistent set of assumptions.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Contributions are treated as end-of-year deposits for simplicity. Real contributions made throughout the year will slightly change results.</li>
+                <li>The “expected annual return” is treated as a total return before fees. If you enter a dividend yield, the remaining return is treated as price growth.</li>
+                <li>Taxable account dividends are taxed each year at the dividend tax rate, and the remaining dividend amount is reinvested, increasing cost basis.</li>
+                <li>Capital gains tax is applied once at the end on the taxable account’s gain (ending value minus cost basis). Loss harvesting, exemptions, and timing strategies are ignored.</li>
+                <li>Tax-deferred withdrawals are taxed once at the withdrawal tax rate. Early withdrawal penalties, contribution caps, and specific country rules are not modeled.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the tax-deferred option often look better in this calculator?</h3>
+              <p>Two effects can compound over time. First, the tax-deferred path invests the full gross contribution, while the taxable path invests a smaller after-tax amount. Second, tax-deferred growth is not reduced by annual dividend taxes. The larger starting base and cleaner compounding can produce a meaningful gap, especially over long periods.</p>
+
+              <h3>What if my withdrawal tax rate is higher than my current tax rate?</h3>
+              <p>If you expect to be taxed at a higher rate later, the tax-deferred advantage can shrink or even reverse. This calculator makes that sensitivity visible. If the withdrawal tax rate is materially higher than your current rate, it can reduce the after-tax value of the tax-deferred option even if growth is higher along the way.</p>
+
+              <h3>What should I enter for dividend yield and dividend tax rate?</h3>
+              <p>If you are unsure, leave the advanced section blank. The calculator defaults dividend yield to 2% and dividend tax rate to your current tax rate. If you know your portfolio is dividend-heavy, increase the dividend yield. If your dividends are typically taxed at a special rate, enter that rate instead of using your marginal income tax rate.</p>
+
+              <h3>Does this include inflation?</h3>
+              <p>No. Outputs are shown in nominal currency. If you want a rough inflation adjustment, reduce the expected annual return by your inflation estimate before running the comparison. Keep the approach consistent across both options so you are still comparing apples to apples.</p>
+
+              <h3>When might a taxable account be the better choice?</h3>
+              <p>A taxable account can win when your future withdrawal tax rate is much higher than today, when your taxable investing has unusually low tax drag (for example, low dividends and low realized gains), or when you cannot use tax-deferred accounts effectively due to access restrictions or contribution limits. This calculator intentionally focuses on the account type comparison itself, not eligibility rules or contribution caps.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KKpyBM" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Compound Interest</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how compound growth accelerates investment returns.</p>
+    <div class="affiliate-cta">Browse compound interest books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>World Clock Time Difference Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Compare the time between two world time zones for a specific date and time. Useful for scheduling calls, meetings, and deadlines across countries."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/time-date-scheduling/world-clock-time-difference-calculator/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta
+      property="og:title"
+      content="World Clock Time Difference Calculator | SnapCalc"
+    />
+    <meta
+      property="og:description"
+      content="Compare the time between two world time zones for a specific date and time. Useful for scheduling calls, meetings, and deadlines across countries."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/time-date-scheduling/world-clock-time-difference-calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="World Clock Time Difference Calculator | SnapCalc"
+    />
+    <meta
+      name="twitter:description"
+      content="Compare the time between two world time zones for a specific date and time. Useful for scheduling calls, meetings, and deadlines across countries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://snapcalc.site/assets/share-default.png"
+    />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "World Clock Time Difference Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/time-date-scheduling/world-clock-time-difference-calculator/",
+        "description": "Compare the time between two world time zones for a specific date and time so you can schedule meetings and deadlines across countries."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a>
+        ›
+        <span>World Clock Time Difference Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>World Clock Time Difference Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4ahDIVq" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Productivity Scheduling</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Combine scheduling and productivity systems into one streamlined workflow.</p>
+    <div class="affiliate-cta">Explore productivity scheduling tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Compare times between two world time zones</h2>
+
+              <p class="calculator-intro">
+                Enter two time zones and a reference time. Get the matching time
+                in the other zone and the exact offset difference for that
+                moment.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="fromTimeZone">From time zone (IANA name)</label>
+                <input
+                  type="text"
+                  id="fromTimeZone"
+                  placeholder="e.g., Africa/Johannesburg"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="toTimeZone">To time zone (IANA name)</label>
+                <input
+                  type="text"
+                  id="toTimeZone"
+                  placeholder="e.g., America/New_York"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="fromDateTime"
+                  >Date and time in From zone (optional)</label
+                >
+                <input
+                  type="text"
+                  id="fromDateTime"
+                  placeholder="YYYY-MM-DD HH:MM (leave blank for now)"
+                  autocomplete="off"
+                />
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">
+                Calculate time difference
+              </button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48XwMdD" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Date Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for calculating date differences, deadlines, and future milestones.</p>
+    <div class="affiliate-cta">View date calculation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">
+                Convert time zones, calculate date differences, and plan
+                schedules accurately.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">
+                Plan trips, estimate travel times, and compare timing across
+                locations.
+              </p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">
+                Quick utilities for daily decisions, planning, and practical
+                calculations.
+              </p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KGUrHf" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Appointments</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Schedule appointments, meetings, and reminders with minimal friction.</p>
+    <div class="affiliate-cta">Browse appointment scheduling tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>
+                World clock time difference calculator for scheduling across
+                time zones
+              </h2>
+
+              <p>
+                This calculator is for one specific job: you have a time in one
+                place and you need to know what time it is in another place, at
+                that same moment. That is the real-world pain behind most
+                searches for “time difference between cities,” “what time is it
+                in X when it’s Y in Z,” and “convert meeting time across time
+                zones.”
+              </p>
+
+              <p>
+                The input is simple. You enter a “From” time zone, a “To” time
+                zone, and (optionally) a date and time as written in the From
+                zone. If you leave the date and time blank, the calculator uses
+                the current moment and tells you what time it is right now in
+                the other zone and the current offset difference. If you enter a
+                date and time, it converts that scheduled time instead, which is
+                the only reliable way to plan meetings around daylight saving
+                changes.
+              </p>
+
+              <p>
+                The results are designed for decisions, not trivia. You get the
+                matching time in the To zone, the exact time difference in hours
+                and minutes for that moment, and the UTC offsets for both zones.
+                You also get a day-shift hint (same day, next day, or previous
+                day) so you do not accidentally schedule something on the wrong
+                date when the zones are far apart.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
+                  Time zones must be valid IANA names (for example
+                  Africa/Johannesburg or America/New_York). Abbreviations like
+                  “EST” can be ambiguous and may fail.
+                </li>
+                <li>
+                  If you leave the date and time blank, the calculator uses your
+                  current moment and converts it between zones.
+                </li>
+                <li>
+                  If you enter a date and time, it must be in the From zone
+                  (not your device’s zone), formatted as YYYY-MM-DD HH:MM using
+                  24-hour time.
+                </li>
+                <li>
+                  Daylight saving time is handled automatically based on the
+                  official rules in each zone for that date.
+                </li>
+                <li>
+                  If a chosen wall time is “skipped” or “repeated” during a DST
+                  change, the calculator applies the most practical interpretation
+                  by resolving to the nearest valid instant.
+                </li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why do I need a date, not just a city-to-city time difference?</h3>
+              <p>
+                Because the difference between two places can change during the
+                year when daylight saving rules start or end. A fixed “X hours
+                ahead” statement can be wrong for scheduled meetings. Using a
+                date and time gives the correct offset for that specific moment.
+              </p>
+
+              <h3>What should I type for the time zone?</h3>
+              <p>
+                Use an IANA time zone name. It looks like Region/City, such as
+                Europe/London, Asia/Dubai, or America/Los_Angeles. If you are
+                not sure, search your device settings for “time zone” and use
+                the name shown there.
+              </p>
+
+              <h3>What if I only know the city name?</h3>
+              <p>
+                This calculator does not guess cities. City names are not
+                standardized and many cities share the same offset but different
+                daylight saving rules. Use a known IANA time zone instead. If you
+                are planning travel, your airline or hotel confirmations often
+                include the correct time zone for the location.
+              </p>
+
+              <h3>Why does it say “next day” or “previous day”?</h3>
+              <p>
+                When zones are far apart, converting a time can cross midnight.
+                The day-shift note is there to prevent common scheduling errors,
+                like booking a call for Monday in one zone that is already Tuesday
+                in the other zone.
+              </p>
+
+              <h3>Why did my input time fail validation?</h3>
+              <p>
+                The calculator expects a strict format: YYYY-MM-DD HH:MM using
+                24-hour time (for example 2025-12-22 14:30). If you prefer, leave
+                it blank and use “now,” then adjust your meeting time externally.
+                The strict format avoids silent parsing mistakes that lead to
+                incorrect scheduling.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3Kzt4Po" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Daily Scheduling</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Plan daily activities with structured schedules and clear time blocks.</p>
+    <div class="affiliate-cta">Browse daily schedule planners on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

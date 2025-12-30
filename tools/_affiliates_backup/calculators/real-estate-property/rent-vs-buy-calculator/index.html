@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Rent vs Buy Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Compare the long term cost and estimated net worth outcome of renting versus buying a home using realistic monthly cash flows and assumptions.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/real-estate-property/rent-vs-buy-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Rent vs Buy Calculator | SnapCalc">
+    <meta property="og:description" content="Compare the long term cost and estimated net worth outcome of renting versus buying a home using realistic monthly cash flows and assumptions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/real-estate-property/rent-vs-buy-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rent vs Buy Calculator | SnapCalc">
+    <meta name="twitter:description" content="Compare the long term cost and estimated net worth outcome of renting versus buying a home using realistic monthly cash flows and assumptions.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rent vs Buy Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/rent-vs-buy-calculator/",
+      "description": "Compare renting versus buying by simulating monthly rent, mortgage costs, home value changes, and investment growth over a chosen time horizon."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Rent vs Buy Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Rent vs Buy Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4oQpnTa" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Recommended reading</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Understand investing basics, risk management, and long-term wealth building.</p>
+                <div class="affiliate-cta">Explore investing books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Compare renting vs buying over time</h2>
+
+              <p class="calculator-intro">
+                Enter your rent, home price, loan details, and a time horizon. This calculator estimates total out-of-pocket costs and an end-of-horizon net worth for each option.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="homePrice">Home price</label>
+                <input id="homePrice" type="text" inputmode="decimal" placeholder="e.g. 2,500,000">
+              </div>
+
+              <div class="form-group">
+                <label for="downPaymentPercent">Down payment percent</label>
+                <input id="downPaymentPercent" type="text" inputmode="decimal" placeholder="e.g. 10">
+              </div>
+
+              <div class="form-group">
+                <label for="interestRate">Interest rate (annual percent)</label>
+                <input id="interestRate" type="text" inputmode="decimal" placeholder="e.g. 11.5">
+              </div>
+
+              <div class="form-group">
+                <label for="loanTermYears">Loan term (years)</label>
+                <input id="loanTermYears" type="text" inputmode="decimal" placeholder="e.g. 20">
+              </div>
+
+              <div class="form-group">
+                <label for="propertyTaxPercent">Property tax (annual percent of home value)</label>
+                <input id="propertyTaxPercent" type="text" inputmode="decimal" placeholder="e.g. 1.2">
+              </div>
+
+              <div class="form-group">
+                <label for="insuranceAnnual">Home insurance (annual amount)</label>
+                <input id="insuranceAnnual" type="text" inputmode="decimal" placeholder="e.g. 12,000">
+              </div>
+
+              <div class="form-group">
+                <label for="maintenancePercent">Maintenance (annual percent of home value)</label>
+                <input id="maintenancePercent" type="text" inputmode="decimal" placeholder="e.g. 1.0">
+              </div>
+
+              <div class="form-group">
+                <label for="hoaMonthly">HOA or levies (monthly amount)</label>
+                <input id="hoaMonthly" type="text" inputmode="decimal" placeholder="e.g. 1,500">
+              </div>
+
+              <div class="form-group">
+                <label for="closingCostsPercent">Buying closing costs (percent of home price)</label>
+                <input id="closingCostsPercent" type="text" inputmode="decimal" placeholder="e.g. 3">
+              </div>
+
+              <div class="form-group">
+                <label for="sellingCostsPercent">Selling costs (percent of sale price)</label>
+                <input id="sellingCostsPercent" type="text" inputmode="decimal" placeholder="e.g. 5">
+              </div>
+
+              <div class="form-group">
+                <label for="rentMonthly">Current monthly rent</label>
+                <input id="rentMonthly" type="text" inputmode="decimal" placeholder="e.g. 18,000">
+              </div>
+
+              <div class="form-group">
+                <label for="rentIncreasePercent">Rent increase (annual percent)</label>
+                <input id="rentIncreasePercent" type="text" inputmode="decimal" placeholder="e.g. 7">
+              </div>
+
+              <div class="form-group">
+                <label for="homeAppreciationPercent">Home appreciation (annual percent)</label>
+                <input id="homeAppreciationPercent" type="text" inputmode="decimal" placeholder="e.g. 5">
+              </div>
+
+              <div class="form-group">
+                <label for="investmentReturnPercent">Investment return (annual percent)</label>
+                <input id="investmentReturnPercent" type="text" inputmode="decimal" placeholder="e.g. 8">
+              </div>
+
+              <div class="form-group">
+                <label for="horizonYears">Time horizon (years)</label>
+                <input id="horizonYears" type="text" inputmode="decimal" placeholder="e.g. 7">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Compare rent vs buy</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4q9dsBb" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Recommended reading</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn how to plan finances, set goals, and make informed long-term decisions.</p>
+                <div class="affiliate-cta">See financial planning books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Estimate mortgages, affordability, and buying decisions using property-focused calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Compare loan payments, interest costs, and repayment timelines for common borrowing.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, savings, and goals with calculators built for everyday money decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Rent vs buy calculator for comparing monthly costs and long term outcomes</h2>
+
+              <p>
+                The rent vs buy decision is usually not about a single number like the mortgage payment. It is a mix of cash flow, risk, flexibility, and what happens to your money over time. This calculator compares renting and buying by simulating monthly cash flows over your chosen time horizon, then estimating what your net worth could look like at the end under each option.
+              </p>
+              <p>
+                On the buying side, it includes a standard mortgage payment estimate, property tax, insurance, maintenance, and HOA or levies. It also tracks home value changes using your appreciation input and estimates what you might take home after selling costs. On the renting side, it grows rent each year by your rent increase input and treats the renter as investing the upfront cash they did not spend on a down payment and buying costs.
+              </p>
+              <p>
+                The main output is not a guarantee. It is a structured comparison that makes your assumptions visible. If a small change in inputs flips the result, that tells you the decision is sensitive and you should be cautious about relying on a single forecast. Use this to explore scenarios, not to predict the future.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The mortgage uses a fixed interest rate and a fixed monthly payment based on your loan term.</li>
+                <li>Home value appreciation and investment return are applied as smooth monthly growth rates derived from your annual inputs.</li>
+                <li>Property tax and maintenance are modeled as a percent of home value and move up as the home value changes.</li>
+                <li>Buying closing costs are treated as an upfront percent of the home price. Selling costs are applied at the end as a percent of the sale price.</li>
+                <li>If one option is cheaper in a given month, the calculator assumes the cheaper option invests the difference. It does not model debt for negative investment balances.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does “net worth” mean in the results?</h3>
+              <p>
+                Net worth here is a simplified end-of-horizon snapshot. For renting, it is the value of the investment account (starting with the avoided down payment and closing costs, plus any monthly savings). For buying, it is your estimated home equity after selling costs plus any invested monthly savings if buying is cheaper than renting in some months.
+              </p>
+
+              <h3>Why can renting win even if the home goes up in value?</h3>
+              <p>
+                Buying has multiple costs beyond the mortgage: taxes, insurance, maintenance, levies, and transaction costs. If those costs are high, or if the investment return is strong, investing the upfront cash and monthly savings can outgrow the home equity over your time horizon, especially for shorter horizons.
+              </p>
+
+              <h3>Why can buying win even if rent feels “cheaper” today?</h3>
+              <p>
+                Rent often increases over time, while a fixed-rate mortgage payment stays stable (even though taxes and maintenance may rise). Over longer horizons, principal repayment and home appreciation can build equity that a renter does not build, depending on your assumptions.
+              </p>
+
+              <h3>How should I pick a time horizon?</h3>
+              <p>
+                Use a horizon that matches how long you realistically expect to stay in the home. Transaction costs can dominate short horizons, so a 3 to 5 year horizon often favors renting unless appreciation is strong. A 7 to 15 year horizon can change the answer materially.
+              </p>
+
+              <h3>Does this include taxes, tax deductions, or inflation?</h3>
+              <p>
+                No. This version keeps the comparison broadly applicable and easy to use. Tax impacts, inflation-adjusted returns, and personal circumstances can be significant. If you want a more conservative view, lower the appreciation and investment return inputs and increase maintenance and selling costs.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-14</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

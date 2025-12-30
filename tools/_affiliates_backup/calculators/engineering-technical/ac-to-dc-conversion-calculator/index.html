@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>AC to DC Conversion Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate DC output voltage and ripple from an AC source using a rectifier and smoothing capacitor. Useful for quick power supply planning and sanity checks.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/ac-to-dc-conversion-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="AC to DC Conversion Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate DC output voltage and ripple from an AC source using a rectifier and smoothing capacitor. Useful for quick power supply planning and sanity checks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/ac-to-dc-conversion-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AC to DC Conversion Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate DC output voltage and ripple from an AC source using a rectifier and smoothing capacitor. Useful for quick power supply planning and sanity checks.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AC to DC Conversion Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/ac-to-dc-conversion-calculator/",
+      "description": "Estimate DC output voltage and ripple from an AC source using a rectifier and smoothing capacitor."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>AC to DC Conversion Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>AC to DC Conversion Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pcRNax" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Structural Engineering</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for structural calculations, beam sizing, and load analysis.</p>
+    <div class="affiliate-cta">Explore structural engineering tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate DC output from an AC source</h2>
+
+              <p class="calculator-intro">Use this to estimate the DC voltage you will get after rectifying AC, and (optionally) how much ripple to expect with a smoothing capacitor under load.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="acVrms">AC voltage (RMS, volts)</label>
+                <input type="text" id="acVrms" inputmode="decimal" placeholder="e.g., 12">
+              </div>
+
+              <div class="form-group">
+                <label for="rectifierType">Rectifier type</label>
+                <select id="rectifierType">
+                  <option value="full" selected>Full-wave bridge (most common)</option>
+                  <option value="half">Half-wave (single diode)</option>
+                </select>
+              </div>
+
+              <details>
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group">
+                  <label for="frequencyHz">AC frequency (Hz)</label>
+                  <input type="text" id="frequencyHz" inputmode="decimal" placeholder="Default: 50">
+                </div>
+
+                <div class="form-group">
+                  <label for="diodeDropV">Diode forward drop (volts per diode)</label>
+                  <input type="text" id="diodeDropV" inputmode="decimal" placeholder="Default: 0.7">
+                </div>
+
+                <div class="form-group">
+                  <label for="loadCurrentA">Load current (amps)</label>
+                  <input type="text" id="loadCurrentA" inputmode="decimal" placeholder="e.g., 0.5">
+                </div>
+
+                <div class="form-group">
+                  <label for="capacitanceUf">Smoothing capacitor (µF)</label>
+                  <input type="text" id="capacitanceUf" inputmode="decimal" placeholder="e.g., 2200">
+                </div>
+
+                <div class="form-group">
+                  <label for="targetRippleVpp">Target ripple (V peak-to-peak)</label>
+                  <input type="text" id="targetRippleVpp" inputmode="decimal" placeholder="Default: 1.0">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate DC output</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4aOjsL6" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Engineering Workflows</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Improve engineering workflows with planning and calculation aids.</p>
+    <div class="affiliate-cta">View engineering workflow tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Electrical, mechanical, and engineering calculators for practical sizing, checks, and conversions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units, rates, and common measures quickly without manual formulas or guesswork.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Everyday math tools for percentages, ratios, averages, and quick number checks.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4q6kMgN" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Material Properties</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Reference material strength, elasticity, and performance data.</p>
+    <div class="affiliate-cta">View material property references on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Convert AC voltage to estimated DC voltage (with optional ripple)</h2>
+
+              <p>This AC to DC conversion calculator estimates what DC voltage you can expect when you take an AC source (like a transformer or wall adapter) and run it through a rectifier, optionally with a smoothing capacitor. The dominant intent here is simple: you want to know whether an AC source can produce a usable DC voltage for a project, and whether the DC will stay high enough under load to avoid brownouts or unstable behaviour.</p>
+
+              <p>The calculator assumes a basic, widely used “linear” front end: AC input, then either a full-wave bridge rectifier (most common) or a half-wave rectifier (single diode), and then a reservoir capacitor. That setup is common in basic DC supplies and quick prototypes. If you are using a switching regulator, an active PFC stage, or a regulated bench supply, this tool is not for those systems. It is for estimating the unregulated DC you get immediately after rectification and filtering.</p>
+
+              <p>Start with the minimum inputs: your AC RMS voltage and rectifier type. That gives you a no-load DC estimate based on peak voltage minus diode losses. If you also know (or can estimate) your load current and your capacitor value, the calculator estimates ripple (the up-and-down voltage variation) and shows a practical minimum voltage. That minimum voltage is often what matters, because many circuits fail at the dips, not at the average.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The AC input value is RMS voltage at the rectifier input (not “peak” and not a regulated DC label).</li>
+                <li>Full-wave bridge rectification is assumed to have two diode drops in the conduction path; half-wave is assumed to have one.</li>
+                <li>Diode drop is treated as a fixed value (default 0.7 V per diode). Real diode drop changes with current and temperature.</li>
+                <li>Ripple is estimated using the standard capacitor-discharge approximation: ripple (Vpp) ≈ I / (f<sub>ripple</sub> × C), where f<sub>ripple</sub> is 2× mains frequency for full-wave and 1× for half-wave.</li>
+                <li>Transformer regulation, wiring resistance, rectifier heating, and inrush effects are not modelled. Treat results as a planning estimate, not a lab measurement.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why is the DC estimate higher than the AC RMS input?</h3>
+              <p>AC RMS is not the peak voltage. A sine wave’s peak is approximately RMS × 1.414. After rectification and smoothing, the capacitor charges close to that peak (minus diode losses), so the no-load DC can look “higher” than the AC RMS rating.</p>
+
+              <h3>What does “ripple (V peak-to-peak)” mean in practice?</h3>
+              <p>Ripple is how much the DC voltage rises and falls between charging peaks. For a capacitor-input supply, the voltage climbs near the peak, then decays as the load draws current, then gets topped up again. The peak-to-peak value is the difference between the highest and lowest points of that cycle.</p>
+
+              <h3>If I leave load current and capacitor blank, is the result still useful?</h3>
+              <p>Yes. You still get a no-load DC estimate, which is a quick sanity check for whether the rectified peak is in the right ballpark. Just remember that real supplies drop under load and will not stay at the no-load value.</p>
+
+              <h3>How do I pick a capacitor value if I only know the load current?</h3>
+              <p>Use the target ripple input. If you know your load current and you choose an acceptable ripple level (for example 1.0 V peak-to-peak), the calculator estimates the capacitance needed. Larger capacitors reduce ripple but increase inrush current and stress the rectifier and transformer.</p>
+
+              <h3>When will this calculator not apply?</h3>
+              <p>Do not use this for regulated DC outputs (like a phone charger’s USB output), switch-mode power supplies, or designs where the AC source sags significantly under load. Also avoid using it for precision design limits without a safety margin. It is intended for first-pass planning and quick checks.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

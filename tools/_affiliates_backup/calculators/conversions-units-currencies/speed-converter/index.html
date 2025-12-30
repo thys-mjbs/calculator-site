@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Speed Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert speed between km/h, mph, m/s, ft/s, and knots. Get a quick main conversion plus a full breakdown into common speed units.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/speed-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Speed Converter | SnapCalc">
+    <meta property="og:description" content="Convert speed between km/h, mph, m/s, ft/s, and knots. Get a quick main conversion plus a full breakdown into common speed units.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/speed-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Speed Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert speed between km/h, mph, m/s, ft/s, and knots. Get a quick main conversion plus a full breakdown into common speed units.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Speed Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/speed-converter/",
+      "description": "Convert speed between km/h, mph, m/s, ft/s, and knots with a main result and a multi-unit breakdown."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Speed Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Speed Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4iVTPtK" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Flooring Materials</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Calculate flooring material quantities for tiles, wood, and laminate.</p>
+                <div class="affiliate-cta">Explore flooring material calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert speed between common units</h2>
+
+              <p class="calculator-intro">Enter a speed, choose the input unit and output unit, then calculate. You will get a main conversion plus a quick breakdown into other popular units.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="speedValue">Speed value</label>
+                <input type="text" id="speedValue" inputmode="decimal" placeholder="e.g., 100">
+              </div>
+
+              <div class="form-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit">
+                  <option value="kmh">Kilometers per hour (km/h)</option>
+                  <option value="mph">Miles per hour (mph)</option>
+                  <option value="ms">Meters per second (m/s)</option>
+                  <option value="fts">Feet per second (ft/s)</option>
+                  <option value="knot">Knots (kn)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="toUnit">To unit</label>
+                <select id="toUnit">
+                  <option value="mph">Miles per hour (mph)</option>
+                  <option value="kmh">Kilometers per hour (km/h)</option>
+                  <option value="ms">Meters per second (m/s)</option>
+                  <option value="fts">Feet per second (ft/s)</option>
+                  <option value="knot">Knots (kn)</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert speed</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rRzlGV" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Wall Area</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Measure wall surface areas for paint, plaster, and finishes.</p>
+                <div class="affiliate-cta">View wall area calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert everyday units, measurements, and formats quickly for work, travel, and study.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan trips, compare travel times, and convert travel-related numbers like speed and distance.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Solve practical technical calculations and unit conversions used in engineering and trades.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Speed converter for km/h, mph, m/s, ft/s, and knots</h2>
+
+              <p>A speed converter helps you translate one speed unit into another without mental math. This matters more than people think. Car dashboards, road signs, fitness apps, aircraft and marine navigation, and engineering references often use different units. If you mix them up, you do not just get the wrong number, you make the wrong decision. This calculator converts between kilometers per hour (km/h), miles per hour (mph), meters per second (m/s), feet per second (ft/s), and knots (kn).</p>
+
+              <p>To use it, enter your speed value, choose the unit you currently have, and choose the unit you want. Click convert and you will get a main conversion plus a breakdown into all the supported units. The main conversion is the one you asked for. The breakdown is there to reduce friction when you are comparing multiple references, like a speed limit in km/h vs a vehicle specification in mph, or a wind speed given in knots vs a running pace tool that expects km/h.</p>
+
+              <p>Under the hood, the calculator converts your input to a neutral base unit first, then converts from the base unit to the unit you selected. In this calculator the base is meters per second. This approach is more reliable than trying to maintain dozens of direct unit-to-unit formulas. It also makes it easier to add more units later without increasing error risk.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This tool converts speed units only. It does not estimate travel time, acceleration, or distance.</li>
+                <li>The conversion uses standard international definitions (for example, 1 mph and 1 knot have fixed relationships to meters per second).</li>
+                <li>Results are rounded to 2 decimals for readability. If you need high precision, use the unrounded value in a dedicated engineering tool.</li>
+                <li>Enter non-negative values. Negative speeds are uncommon in real-world use and usually indicate direction, which is outside a unit converter’s scope.</li>
+                <li>Knots are treated as nautical miles per hour, which is the standard meaning of knots in navigation and weather reporting.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the result show only two decimals?</h3>
+              <p>Two decimals is a practical balance for most users. Speed readings from dashboards, GPS, and weather reports are rarely precise beyond that. If you are doing a design calculation where rounding matters, treat the displayed value as a rounded summary and compute with more precision in your engineering workflow.</p>
+
+              <h3>What is the difference between km/h, mph, and m/s?</h3>
+              <p>They measure the same thing: distance per unit time, but in different measurement systems. km/h is common in most countries for road travel. mph is common in the United States and a few others. m/s is common in physics and engineering because it fits cleanly into SI units.</p>
+
+              <h3>When should I use knots?</h3>
+              <p>Knots are widely used in marine and aviation contexts, and also in weather reporting for wind speeds. If you are reading marine forecasts, nautical charts, aircraft performance tables, or wind data at airports, you will frequently see knots.</p>
+
+              <h3>What if I only know an approximate speed?</h3>
+              <p>That is fine. The calculator does not require perfect inputs. Use the best estimate you have. The conversion is exact given the input, so the only uncertainty is in your estimate. If the number is rough, treat the output as rough too.</p>
+
+              <h3>Why do my converted values differ slightly from another website?</h3>
+              <p>Small differences usually come from rounding. Some tools show more decimals or round at a different step. If you compare values, check how many decimals are displayed and whether the tool rounds intermediate results. For normal use, these differences are not meaningful.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4iT3rFK" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Measurements</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Tools for accurate construction measurements and layout planning.</p>
+                <div class="affiliate-cta">Browse construction measurement tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

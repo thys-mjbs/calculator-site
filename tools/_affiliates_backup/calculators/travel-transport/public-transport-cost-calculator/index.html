@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Public Transport Cost Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your public transport commuting cost per week, month, and year, and check whether a monthly pass is cheaper than paying per ride.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/public-transport-cost-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Public Transport Cost Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your public transport commuting cost per week, month, and year, and check whether a monthly pass is cheaper than paying per ride.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/public-transport-cost-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Public Transport Cost Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your public transport commuting cost per week, month, and year, and check whether a monthly pass is cheaper than paying per ride.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Public Transport Cost Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/public-transport-cost-calculator/",
+      "description": "Estimate commuting costs for public transport and compare pay-per-ride versus a monthly pass."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Public Transport Cost Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Public Transport Cost Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KKSVUA" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Vehicle Maintenance</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track vehicle servicing, maintenance intervals, and running costs.</p>
+    <div class="affiliate-cta">Explore vehicle maintenance trackers on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your commute cost and check if a monthly pass is worth it</h2>
+
+              <p class="calculator-intro">Use this for regular commuting (home to work or school). Enter your typical one-way fare and commute pattern, then optionally compare against a monthly pass.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="oneWayFare">One-way fare (your currency)</label>
+                <input id="oneWayFare" type="text" inputmode="decimal" placeholder="e.g., 25.00">
+              </div>
+
+              <div class="form-group">
+                <label for="ridesPerDay">Rides per day (commute rides)</label>
+                <input id="ridesPerDay" type="text" inputmode="numeric" placeholder="e.g., 2">
+              </div>
+
+              <div class="form-group">
+                <label for="commuteDaysPerWeek">Commute days per week</label>
+                <input id="commuteDaysPerWeek" type="text" inputmode="numeric" placeholder="e.g., 5">
+              </div>
+
+              <details class="advanced-section">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group">
+                  <label for="monthlyPassCost">Monthly pass cost (optional)</label>
+                  <input id="monthlyPassCost" type="text" inputmode="decimal" placeholder="e.g., 950.00">
+                </div>
+
+                <div class="form-group">
+                  <label for="fareDiscountPercent">Discount on per-ride fares (optional %)</label>
+                  <input id="fareDiscountPercent" type="text" inputmode="decimal" placeholder="e.g., 10">
+                </div>
+
+                <div class="form-group">
+                  <label for="extraRidesPerWeek">Extra rides per week (non-commute)</label>
+                  <input id="extraRidesPerWeek" type="text" inputmode="numeric" placeholder="e.g., 4">
+                </div>
+
+                <div class="form-group">
+                  <label for="weeksPerMonth">Weeks per month (default 4.33)</label>
+                  <input id="weeksPerMonth" type="text" inputmode="decimal" placeholder="e.g., 4.33">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate transport cost</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oUbyTY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Transport Modes</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Compare transport modes based on time, cost, and efficiency.</p>
+    <div class="affiliate-cta">View transport mode comparison tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Budget trips, compare travel options, and estimate transport costs for everyday journeys.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan spending, set budgets, and understand how recurring costs affect your monthly cash flow.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Convert and plan schedules, estimate time requirements, and keep recurring routines predictable.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Public transport commuting cost per month, week, and year</h2>
+
+              <p>This public transport cost calculator is built for one job: estimating what your regular commute is costing you, and deciding whether paying per ride or buying a monthly pass is the cheaper option. Most people underestimate transport spend because it is small and frequent. A quick monthly estimate turns “a few rides” into a clear number you can plan around, compare against a pass, or use in a budget conversation.</p>
+
+              <p>The default view keeps it simple: you enter your one-way fare, how many rides you do on a typical commuting day, and how many commuting days you have per week. That gives you a weekly cost, a monthly cost, and an annual cost. The monthly figure uses a standard weeks-per-month average so it stays realistic over a full year, rather than assuming every month has exactly four weeks.</p>
+
+              <p>If you want a more accurate estimate, open the Advanced section. There you can account for fare discounts (for example, a stored-value card discount or off-peak discount), extra rides that are not part of your commute (errands, gym, weekend trips), and a monthly pass price. If you enter a pass price, the calculator also tells you the break-even point in rides and whether the pass saves you money for your current pattern.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator is for recurring commuting (home to work or school). It is not designed for one-off travel days, tourism, or multi-city travel planning.</li>
+                <li>Your “one-way fare” is treated as the per-ride price in the same currency you use in real life. The calculator does not convert currencies or add taxes or fees.</li>
+                <li>Monthly estimates use a default of 4.33 weeks per month (52 weeks ÷ 12 months). You can override this if you prefer to budget using 4.0 or another figure.</li>
+                <li>If you enter a discount percentage, it reduces the per-ride cost only (pay-per-ride scenario). It does not change the pass cost.</li>
+                <li>“Extra rides per week” are added on top of commuting rides. If you do not know this number, leave it blank and the calculator will assume zero.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What should I enter for “rides per day”?</h3>
+              <p>Use the number of rides you take on a typical commuting day. For a simple round trip on one service, that is usually 2 (one ride to your destination and one ride back). If you regularly transfer and you pay separately for each segment, use the number of paid rides you actually take in a day, not the number of trips.</p>
+
+              <h3>What if my fare changes on weekends or peak times?</h3>
+              <p>This calculator assumes one typical fare for the pattern you are estimating. If your commute fare is different from your weekend fare, keep the default view focused on the commute and use “extra rides per week” only if those extra rides are usually at the same fare. If the extra rides are consistently cheaper or more expensive, run the calculator twice (once for commute, once for extras) and add the totals.</p>
+
+              <h3>How does the monthly pass comparison work?</h3>
+              <p>When you enter a monthly pass cost, the calculator compares your estimated monthly pay-per-ride cost (including any discount and extra rides) to the pass cost. It then reports whether the pass is cheaper and the estimated difference. It also calculates the approximate number of rides per month where the pass breaks even, so you can see how many rides you need before a pass makes sense.</p>
+
+              <h3>What if I do not know my exact weeks per month?</h3>
+              <p>You do not need to. The default 4.33 is a realistic long-run average. If you budget month-to-month and prefer a conservative estimate, you can set it to 4.0 to match a simple “four-week month” budget. If you want to reflect five-week months, leave it at 4.33 and the annual number will stay consistent.</p>
+
+              <h3>What costs are not included in this calculator?</h3>
+              <p>This is strictly a fare-based calculator. It does not include parking fees at stations, bike storage, ride-hailing to and from stops, penalties, card purchase fees, or the value of your time. If those costs matter for your decision, treat this result as the fare baseline and add your additional recurring costs separately.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4aQfYI3" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Travel Logistics</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Manage travel logistics including timing, routes, and connections.</p>
+    <div class="affiliate-cta">Browse travel logistics tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
