@@ -1,51 +1,43 @@
 # temp_affiliates_enable.py
-# Remove the HTML comment wrappers added by temp_affiliates_disable.py
-# Safe to run multiple times (idempotent). Only touches calculators/**/index.html
-
-from __future__ import annotations
+# Re-enables affiliate blocks by removing the single HTML comment
+# wrapper added by temp_affiliates_disable.py
+# Idempotent and safe to re-run.
 
 from pathlib import Path
+import re
 
-START_MARK = "<!-- AFFILIATES_DISABLED_START -->"
-END_MARK = "<!-- AFFILIATES_DISABLED_END -->"
+COMMENTED_RE = re.compile(
+    r'<!--\s*(<div\s+class="ad-block"[\s\S]*?</div>)\s*-->',
+    re.IGNORECASE
+)
 
-def enable_in_file(path: Path) -> bool:
+def enable_file(path: Path) -> bool:
     html = path.read_text(encoding="utf-8")
-    if START_MARK not in html:
-        return False
 
-    # Remove only our exact markers (and the newlines immediately around them)
-    html2 = html.replace(START_MARK + "\n", "")
-    html2 = html2.replace("\n" + END_MARK, "")
-    html2 = html2.replace(START_MARK, "")
-    html2 = html2.replace(END_MARK, "")
+    new_html, count = COMMENTED_RE.subn(r"\1", html)
 
-    if html2 != html:
-        path.write_text(html2, encoding="utf-8")
+    if count > 0:
+        path.write_text(new_html, encoding="utf-8")
         return True
+
     return False
 
-def main() -> None:
+def main():
     tools_dir = Path(__file__).resolve().parent
     repo_root = tools_dir.parent
-    calculators_dir = repo_root / "calculators"
+    calculators = repo_root / "calculators"
 
-    if not calculators_dir.exists():
-        raise SystemExit(f"ERROR: calculators folder not found at: {calculators_dir}")
-
-    files = list(calculators_dir.rglob("index.html"))
     touched = 0
-    changed = 0
+    modified = 0
 
-    for f in files:
+    for file in calculators.rglob("index.html"):
         touched += 1
-        if enable_in_file(f):
-            changed += 1
-            print(f"ENABLED: {f}")
+        if enable_file(file):
+            modified += 1
+            print(f"ENABLED: {file}")
 
-    print("")
-    print(f"Scanned: {touched} files")
-    print(f"Modified: {changed} files")
+    print(f"\nScanned: {touched}")
+    print(f"Modified: {modified}")
     print("Done.")
 
 if __name__ == "__main__":
