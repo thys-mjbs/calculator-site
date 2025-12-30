@@ -3,7 +3,6 @@ import re
 
 # === CONFIG ===
 ROOT_DIR = "."  # run from repo root
-TARGET_FILENAME = "index.html"
 
 CANONICAL_NAV = """<nav class="site-nav">
   <a href="/">Home</a>
@@ -11,6 +10,7 @@ CANONICAL_NAV = """<nav class="site-nav">
   <a href="/about.html">About</a>
   <a href="/methodology.html">Methodology</a>
   <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>"""
 
@@ -24,7 +24,7 @@ changed_files = []
 
 for root, _, files in os.walk(ROOT_DIR):
     for file in files:
-        if file != TARGET_FILENAME:
+        if not file.lower().endswith(".html"):
             continue
 
         path = os.path.join(root, file)
@@ -41,11 +41,7 @@ for root, _, files in os.walk(ROOT_DIR):
         if current_nav.strip() == CANONICAL_NAV.strip():
             continue  # already correct
 
-        new_content = (
-            content[: match.start()]
-            + CANONICAL_NAV
-            + content[match.end() :]
-        )
+        new_content = content[: match.start()] + CANONICAL_NAV + content[match.end() :]
 
         with open(path, "w", encoding="utf-8") as f:
             f.write(new_content)
