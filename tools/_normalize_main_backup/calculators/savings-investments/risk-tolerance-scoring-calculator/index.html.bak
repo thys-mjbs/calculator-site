@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Risk Tolerance Scoring Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Score your investing risk tolerance with a simple questionnaire and get a clear risk profile from conservative to aggressive, plus practical context for what it means." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/savings-investments/risk-tolerance-scoring-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Risk Tolerance Scoring Calculator | SnapCalc" property="og:title"/>
+<meta content="Score your investing risk tolerance with a simple questionnaire and get a clear risk profile from conservative to aggressive, plus practical context for what it means." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/savings-investments/risk-tolerance-scoring-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Risk Tolerance Scoring Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Score your investing risk tolerance with a simple questionnaire and get a clear risk profile from conservative to aggressive, plus practical context for what it means." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Risk Tolerance Scoring Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/risk-tolerance-scoring-calculator/",
+      "description": "Answer a short investing questionnaire to score your risk tolerance and get a conservative-to-aggressive profile with practical explanation."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings &amp; Investments</a> ›
+        <span>Risk Tolerance Scoring Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Risk Tolerance Scoring Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Score your risk tolerance</h2>
+<p class="calculator-intro">Answer the questions, then calculate your risk score (0–100). Add optional details to fine-tune the result. This is not financial advice. It is a structured self-check for how much volatility you can realistically tolerate.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="q1">1) If your portfolio dropped 15% in a month, what would you do?</label>
+<select id="q1">
+<option value="">Select…</option>
+<option value="1">Sell most or all to avoid further losses</option>
+<option value="2">Sell some and move to safer assets</option>
+<option value="3">Do nothing and wait it out</option>
+<option value="4">Buy a little more while prices are lower</option>
+<option value="5">Buy more aggressively</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q2">2) How stable is your income?</label>
+<select id="q2">
+<option value="">Select…</option>
+<option value="1">Unstable or uncertain</option>
+<option value="2">Somewhat unstable</option>
+<option value="3">Moderately stable</option>
+<option value="4">Stable</option>
+<option value="5">Very stable and predictable</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q3">3) How long can you leave this money invested before you need it?</label>
+<select id="q3">
+<option value="">Select…</option>
+<option value="1">Less than 2 years</option>
+<option value="2">2–5 years</option>
+<option value="3">6–10 years</option>
+<option value="4">11–20 years</option>
+<option value="5">More than 20 years</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q4">4) How experienced are you with investing?</label>
+<select id="q4">
+<option value="">Select…</option>
+<option value="1">New, little or no experience</option>
+<option value="2">Basic knowledge, limited experience</option>
+<option value="3">Some experience over a few years</option>
+<option value="4">Experienced, comfortable with markets</option>
+<option value="5">Very experienced, strong understanding</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q5">5) Which result matters more to you?</label>
+<select id="q5">
+<option value="">Select…</option>
+<option value="1">Avoid losses even if returns are lower</option>
+<option value="2">Prefer stability with modest growth</option>
+<option value="3">Balance growth and stability</option>
+<option value="4">Prefer growth even with ups and downs</option>
+<option value="5">Maximize long-term growth; volatility is fine</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q6">6) If returns vary year to year, how do you feel?</label>
+<select id="q6">
+<option value="">Select…</option>
+<option value="1">Very uncomfortable</option>
+<option value="2">Uncomfortable</option>
+<option value="3">Neutral</option>
+<option value="4">Mostly comfortable</option>
+<option value="5">Very comfortable</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q7">7) How important is quick access to this money?</label>
+<select id="q7">
+<option value="">Select…</option>
+<option value="1">Very important (may need it anytime)</option>
+<option value="2">Important</option>
+<option value="3">Somewhat important</option>
+<option value="4">Not very important</option>
+<option value="5">Not important (can lock it away)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="q8">8) What is your main investing goal?</label>
+<select id="q8">
+<option value="">Select…</option>
+<option value="1">Preserve capital (avoid drawdowns)</option>
+<option value="2">Income first, growth second</option>
+<option value="3">Balanced income and growth</option>
+<option value="4">Growth first, income second</option>
+<option value="5">Aggressive long-term growth</option>
+</select>
+</div>
+<div class="form-group">
+<label for="horizonYears">Optional: investment horizon in years (overrides question 3 adjustment)</label>
+<input id="horizonYears" placeholder="e.g., 12" type="text"/>
+</div>
+<div class="form-group">
+<label for="emergencyMonths">Optional: emergency fund coverage in months (cash or very safe assets)</label>
+<input id="emergencyMonths" placeholder="e.g., 3" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate risk tolerance score</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Compare savings options, investment outcomes, and portfolio trade-offs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, net worth, cash flow, and practical money decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Understand borrowing costs, repayment plans, and credit metrics.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Risk tolerance score calculator for conservative to aggressive investing profiles</h2>
+<p>A risk tolerance score helps you estimate how much market volatility you can actually live with. Two people can want the same outcome, like retiring comfortably, but react very differently when markets move. This calculator turns your answers into a simple score from 0 to 100, then classifies you into a profile range such as conservative, balanced, or aggressive.</p>
+<p>This score is useful because investment risk is not just a math problem. It is a behavior problem. A portfolio only works if you can stick with it through normal drawdowns. If you panic sell during a downturn, your real-world results can be worse than the “expected return” of the strategy. A realistic risk profile makes it easier to choose investments you can hold for the long run.</p>
+<p>Use this calculator in two ways. First, as a quick check: answer all eight questions and get your base score. Second, as a refinement: if you know your investment horizon in years and whether you have a cash buffer, add those optional inputs. The calculator will slightly adjust your score to reflect time and liquidity pressure, because needing money soon usually reduces the amount of volatility you can tolerate.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The questionnaire assumes a typical long-term investing context where market prices move up and down, sometimes sharply.</li>
+<li>The score reflects tolerance for volatility and uncertainty, not your ability to take risk based on wealth, debt, or obligations.</li>
+<li>Optional horizon and emergency-fund inputs apply small adjustments to reflect real-world liquidity pressure, but they do not replace a full financial plan.</li>
+<li>Results are ranges and categories, not a guarantee of future performance or a recommendation to buy or sell any specific investment.</li>
+<li>If your situation changes (job loss risk, new debt, near-term expenses), your practical risk tolerance can change even if your personality does not.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between risk tolerance and risk capacity?</h3>
+<p>Risk tolerance is your emotional and behavioral comfort with volatility. Risk capacity is your financial ability to take risk without derailing your goals. You might tolerate big swings but have low capacity if you will need money soon, or if a loss would force you to change plans. This calculator focuses mainly on tolerance, then applies small adjustments for time and liquidity using the optional inputs.</p>
+<h3>Why does time horizon affect the score?</h3>
+<p>A longer time horizon usually makes short-term losses easier to ignore because you have more time to recover. If you need the money soon, volatility matters more because a drawdown can become a real loss at the moment you must sell. That is why the calculator nudges scores down for short horizons and up slightly for very long horizons.</p>
+<h3>What if I do not know my emergency fund months?</h3>
+<p>Leave it blank. You will still get a valid result. If you do know it, adding it can improve realism. People with little or no cash buffer often feel more pressure to sell investments during stress, even if their original plan was long-term. The adjustment is deliberately small so you are not “punished” for missing data.</p>
+<h3>Does a higher score mean I should invest aggressively?</h3>
+<p>No. A higher score only means you are more likely to stay calm through volatility. What you should do depends on your goals, time horizon, obligations, and whether you can afford a bad sequence of returns. The correct outcome is a strategy you can keep for years, not the most exciting strategy on paper.</p>
+<h3>How can I make this result more accurate?</h3>
+<p>Answer as if you are in a real downturn, not as your “best self.” Use your past behavior as evidence, for example how you reacted to previous market drops. If you can, review your cash buffer and time horizon, and re-run the calculator after major life changes. Consistency matters more than the exact score.</p>
+<div class="last-updated">Last updated: 2025-12-20</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

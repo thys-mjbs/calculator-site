@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Median Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Find the median (middle value) of a list of numbers. Paste values separated by commas, spaces, or new lines and get the median plus key summary stats." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/math-general-calculators/median-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Median Calculator | SnapCalc" property="og:title"/>
+<meta content="Find the median (middle value) of a list of numbers. Paste values separated by commas, spaces, or new lines and get the median plus key summary stats." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/math-general-calculators/median-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Median Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Find the median (middle value) of a list of numbers. Paste values separated by commas, spaces, or new lines and get the median plus key summary stats." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Median Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/median-calculator/",
+      "description": "Calculate the median (middle value) from a pasted list of numbers, with optional sorted preview and basic summary statistics."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Median Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Median Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Find the median of a list of numbers</h2>
+<p class="calculator-intro">
+                Paste your numbers (commas, spaces, or new lines). This calculator returns the median and a small set of helpful summary stats.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="numbersInput">Numbers (comma, space, or line separated)</label>
+<textarea id="numbersInput" placeholder="Example: 12, 7, 9, 15, 3" rows="7"></textarea>
+</div>
+<div aria-label="Advanced options" class="advanced-block">
+<h3 class="advanced-title">Advanced (optional)</h3>
+<div class="checkbox-row">
+<input id="showSorted" type="checkbox"/>
+<label for="showSorted">Show a sorted preview of your numbers</label>
+</div>
+<div class="form-group">
+<label for="displayLimit">Sorted preview limit (how many to show)</label>
+<input id="displayLimit" inputmode="numeric" type="text" value="25"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate median</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Percentages, averages, ratios, rounding, and other everyday math tools.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Study and grading calculators for marks, averages, and exam planning.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Practical tools for pricing, margins, ratios, and business number checks.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Median calculator for a pasted list of numbers</h2>
+<p>
+                This Median Calculator is built for one common job: you already have a list of values (test scores, prices, response times, weights, delivery days, survey ratings, or any other numeric set) and you want the median quickly. The median is the “middle” value after sorting the numbers from smallest to largest. It is especially useful when your data includes outliers, because the median is much harder to distort than the average.
+              </p>
+<p>
+                To use it, paste your numbers into the box and click “Calculate median.” You can separate values with commas, spaces, or new lines. The tool will clean the input, sort the values, and then identify the middle point. Along with the median, it also shows the count of values used and a few summary stats that help you sanity-check the data you pasted, including minimum, maximum, and mean (average).
+              </p>
+<p>
+                The main result is the median. If you have an odd number of values, the median is the single value that sits in the middle after sorting. If you have an even number of values, there is no single middle value, so the median is defined as the average of the two middle values. This calculator uses that standard definition. If you enable the optional sorted preview, you can also see the first part of the ordered list (useful for spotting mistakes like an extra zero or a missing decimal).
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The median is calculated from the standard definition: sort the list; take the middle value (odd count) or average the two middle values (even count).</li>
+<li>Only numeric entries are used. If your pasted text includes words or symbols that cannot be read as numbers, the calculator will stop and tell you to fix the input.</li>
+<li>Commas used as thousand separators are allowed (for example, 1,200). If you use commas as decimal separators (for example, 1,5 meaning 1.5), convert them to decimal points first.</li>
+<li>The calculator treats each value equally (no weighting). If you need a weighted median, this tool is not intended for that use case.</li>
+<li>The “sorted preview limit” only affects what is displayed, not the calculation. The median always uses the full list.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between the median and the average?</h3>
+<p>
+                The average (mean) adds all values and divides by how many there are, so a single extreme value can pull the result up or down. The median depends only on order, so it is usually a better “typical value” when your data includes outliers (for example, income, property prices, or delivery times with rare delays).
+              </p>
+<h3>How does the calculator handle an even number of values?</h3>
+<p>
+                If there are two middle values, the median is the average of those two numbers. For example, the median of 2, 5, 9, 20 is (5 + 9) ÷ 2 = 7. This is the most common practical definition used in basic statistics and everyday reporting.
+              </p>
+<h3>Can I paste values from Excel or Google Sheets?</h3>
+<p>
+                Yes. Copy a column or row and paste it into the input box. Tabs and new lines are treated as separators. If you copied values with thousand separators (like 3,500) that is fine. If you copied values with currency symbols (like $3,500), remove the symbols first to avoid parsing errors.
+              </p>
+<h3>Why is the tool saying one of my entries is invalid?</h3>
+<p>
+                The calculator expects each entry to be a number. Common issues include currency symbols, units (like “kg”), stray characters, or mixed formatting such as “1,2” to mean 1.2. Clean the list so each item is purely numeric (digits, optional leading minus sign, optional decimal point, optional thousand commas).
+              </p>
+<h3>How can I improve accuracy and avoid mistakes?</h3>
+<p>
+                Use the sorted preview option and scan for obvious outliers that are actually input errors (extra zeros, wrong decimal placement, duplicates from copy-paste, or blank lines). If your list is large, set a reasonable preview limit and check the minimum and maximum values shown in the results to confirm the paste looks correct.
+              </p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -73,3 +73,19 @@ function formatInputWithCommas(value) {
 function initCalculator() {
   console.log("Global script loaded");
 }
+
+/* =========================
+   MOBILE NAV TOGGLE
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!toggle || !navLinks) return;
+
+  toggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});

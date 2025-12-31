@@ -1,0 +1,218 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Markup Calculator (General Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate a selling price from cost and markup percentage, plus profit and gross margin. Optional tax and price rounding for practical pricing." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/math-general-calculators/markup-calculator-general-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Markup Calculator (General Version) | SnapCalc" property="og:title"/>
+<meta content="Calculate a selling price from cost and markup percentage, plus profit and gross margin. Optional tax and price rounding for practical pricing." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/math-general-calculators/markup-calculator-general-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Markup Calculator (General Version) | SnapCalc" name="twitter:title"/>
+<meta content="Calculate a selling price from cost and markup percentage, plus profit and gross margin. Optional tax and price rounding for practical pricing." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Markup Calculator (General Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/markup-calculator-general-version/",
+      "description": "Calculate a selling price from cost and markup percentage, with profit and gross margin. Includes optional tax and practical rounding."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Markup Calculator (General Version)</span>
+</nav>
+<div class="page-layout">
+<h1>Markup Calculator (General Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Price from cost and markup</h2>
+<p class="calculator-intro">Enter your cost and markup percent to get a selling price, profit, and gross margin. Use Advanced for tax and practical rounding.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="costInput">Cost price</label>
+<input id="costInput" inputmode="decimal" placeholder="e.g., 1250" type="text"/>
+</div>
+<div class="form-group">
+<label for="markupInput">Markup percent (%)</label>
+<input id="markupInput" inputmode="decimal" placeholder="e.g., 30" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced</summary>
+<div class="form-group">
+<label for="taxInput">Tax rate (%) (optional)</label>
+<input id="taxInput" inputmode="decimal" placeholder="e.g., 15" type="text"/>
+</div>
+<div class="form-group">
+<label for="roundingSelect">Price rounding (optional)</label>
+<select id="roundingSelect">
+<option selected="" value="none">No rounding</option>
+<option value="nearest005">Nearest 0.05</option>
+<option value="nearest010">Nearest 0.10</option>
+<option value="end99">End in .99 (round up)</option>
+</select>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate markup price</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Work out percentages, ratios, rounding, and everyday math without manual steps.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Price, margin, revenue, costs, and operational metrics for practical business decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, spending, and simple money planning tools for day-to-day choices.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Markup calculator for selling price, profit, and gross margin</h2>
+<p>This markup calculator helps you set a selling price when you know your cost price and the markup percentage you want to apply. It is built for the most common real-world pricing decision: “I paid X for this item or service. If I add Y% markup, what price should I charge?” The result is a clear pre-tax selling price, plus the profit amount and the gross margin percentage implied by that markup.</p>
+<p>Markup and margin are often confused, and that confusion leads to underpricing. Markup is calculated on cost. Margin is calculated on selling price. If you enter a 25% markup, your margin will be lower than 25%, because the selling price is bigger than the cost. This calculator shows both so you can sanity-check your pricing and avoid mixing the two concepts when you talk to customers, compare competitors, or build price lists.</p>
+<p>Use the Advanced section only if it genuinely applies to how you quote prices. If you need to show a tax-inclusive figure to customers, add a tax rate and the calculator will show the tax amount and total price including tax. If you prefer “psychological pricing” or retail-friendly numbers, choose a rounding option to nudge the selling price to a practical figure. The core intent stays the same: cost plus markup gives you a target selling price. This page does not try to handle complex pricing models, discounts, commissions, or multi-item baskets.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Cost price is your direct cost for one unit (or one job) before any markup is applied.</li>
+<li>Markup percent is applied to cost, using the standard formula: selling price = cost × (1 + markup% ÷ 100).</li>
+<li>Gross profit is calculated as selling price minus cost, and gross margin is profit divided by selling price.</li>
+<li>Tax is treated as a simple percentage applied to the calculated selling price, and shown as an added amount for the tax-inclusive total.</li>
+<li>Rounding (if used) changes the selling price for presentation; it may slightly increase or decrease the implied margin, so treat it as a commercial choice.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between markup and margin?</h3>
+<p>Markup is the percentage you add on top of cost. Margin is the percentage of the selling price that is profit. They are related but not the same. For example, cost 100 with 25% markup gives a selling price of 125 and a profit of 25. The margin is 25 ÷ 125 = 20%. If you accidentally treat margin as markup, you will usually underprice.</p>
+<h3>Why does a 50% markup not equal a 50% margin?</h3>
+<p>Because the denominator changes. Markup uses cost as the base, while margin uses selling price as the base. With cost 100 and 50% markup, the selling price is 150 and profit is 50. Margin is 50 ÷ 150 = 33.33%. The bigger the markup, the bigger the gap between markup and margin.</p>
+<h3>What should I enter as “cost price” if I have extra costs?</h3>
+<p>Use the cost figure you actually need to recover for one unit. If you have known per-unit extras like packaging, payment fees, or a standard delivery cost, add them into your cost before applying markup. If you have overhead that is not reliably per-unit, this calculator can still be used as a quick price setter, but you should choose a markup that covers overhead on average.</p>
+<h3>How does rounding affect my profit and margin?</h3>
+<p>Rounding changes the selling price after the markup calculation. If you round down, you reduce profit and margin slightly. If you round up (like ending in .99 by rounding up), you increase profit and margin slightly. The calculator shows the updated numbers so you can decide whether the rounded price still meets your minimum acceptable outcome.</p>
+<h3>Should I include tax in my markup?</h3>
+<p>Usually no. Markup is typically applied to your cost to set a pre-tax selling price, and tax is then added or shown separately depending on your quoting practice and local rules. If customers expect tax-inclusive pricing, use the Advanced tax rate so you can see both the pre-tax price and the total including tax. If you are not sure, treat the tax field as a display step, not part of your profit calculation.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

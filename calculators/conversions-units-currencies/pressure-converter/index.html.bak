@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Pressure Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert pressure between Pa, kPa, MPa, bar, psi, atm, mmHg (torr), inHg, and more. Get a quick conversion plus a full table of equivalents." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/pressure-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Pressure Converter | SnapCalc" property="og:title"/>
+<meta content="Convert pressure between Pa, kPa, MPa, bar, psi, atm, mmHg (torr), inHg, and more. Get a quick conversion plus a full table of equivalents." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/pressure-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Pressure Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert pressure between Pa, kPa, MPa, bar, psi, atm, mmHg (torr), inHg, and more. Get a quick conversion plus a full table of equivalents." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pressure Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/pressure-converter/",
+      "description": "Convert pressure between common units such as pascals, kilopascals, megapascals, bar, psi, atmospheres, and mmHg (torr)."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Pressure Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Pressure Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert pressure between common units</h2>
+<p class="calculator-intro">Enter a pressure value, choose the unit you have, then pick a target unit or view a full conversion table.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="pressureValue">Pressure value</label>
+<input id="pressureValue" inputmode="decimal" placeholder="e.g., 2,500 or 36.5" type="text"/>
+</div>
+<div class="input-group">
+<label for="fromUnit">From unit</label>
+<select id="fromUnit">
+<option value="pa">Pascal (Pa)</option>
+<option value="kpa">Kilopascal (kPa)</option>
+<option value="mpa">Megapascal (MPa)</option>
+<option value="bar">Bar (bar)</option>
+<option value="mbar">Millibar (mbar)</option>
+<option value="psi">Pounds per square inch (psi)</option>
+<option value="atm">Standard atmosphere (atm)</option>
+<option value="torr">Torr (mmHg)</option>
+<option value="inhg">Inches of mercury (inHg)</option>
+<option value="kgfcm2">Kilogram-force per cm² (kgf/cm²)</option>
+</select>
+</div>
+<div class="input-group">
+<label for="toUnit">To unit</label>
+<select id="toUnit">
+<option value="all">Show all units (table)</option>
+<option value="pa">Pascal (Pa)</option>
+<option value="kpa">Kilopascal (kPa)</option>
+<option value="mpa">Megapascal (MPa)</option>
+<option value="bar">Bar (bar)</option>
+<option value="mbar">Millibar (mbar)</option>
+<option value="psi">Pounds per square inch (psi)</option>
+<option value="atm">Standard atmosphere (atm)</option>
+<option value="torr">Torr (mmHg)</option>
+<option value="inhg">Inches of mercury (inHg)</option>
+<option value="kgfcm2">Kilogram-force per cm² (kgf/cm²)</option>
+</select>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert everyday units quickly across metric and imperial systems.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Electrical, mechanical, and technical calculators for practical engineering work.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, sizing, and common building material needs.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Pressure unit conversion for Pa, kPa, bar, psi, atm, and mmHg</h2>
+<p>Pressure shows up everywhere, from tyre inflation and air compressors to plumbing, hydraulics, HVAC, and weather reports. The problem is that different industries and regions use different units. Some manuals use bar, many gauges use psi, engineering specs may use kPa or MPa, and medical or vacuum readings often appear in mmHg (torr) or inHg. This pressure converter lets you enter a value in one unit and immediately see it in other common units.</p>
+<p>To use the calculator, type your pressure value, choose the unit you currently have, and then choose a target unit if you only need a single result. If you select “Show all units,” the calculator will output a table of equivalents so you can compare units at a glance. This is useful when you are reading a datasheet, translating a gauge reading, or matching a spec written in a different unit system.</p>
+<p>The output is designed to be practical, not just a raw number. You get a primary conversion (when a target unit is selected), plus a full conversion table for cross-checking. You also get quick context ratios against standard atmospheric pressure (1 atm) and common reference units (bar and psi). That extra context helps you sanity-check whether a number makes sense, especially when a misplaced decimal would turn a normal system pressure into something unrealistic.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This tool converts units only. It does not decide whether your value is gauge pressure or absolute pressure.</li>
+<li>Negative values are allowed to support vacuum or gauge readings, but they may not be valid for absolute pressure in many applications.</li>
+<li>Conversion factors are fixed constants. Real instruments can have calibration error that this calculator cannot correct.</li>
+<li>“Torr” is treated as equivalent to “mmHg” for typical conversion use, which matches how most users encounter the unit.</li>
+<li>Rounding is applied for readability. For high-precision work, use the full table and keep more significant digits where needed.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is psi the same as psig?</h3>
+<p>No. “psi” is a unit. “psig” means pounds per square inch gauge, which is measured relative to ambient atmospheric pressure. This converter handles the unit conversion, but you must know whether your value is gauge or absolute to interpret it correctly.</p>
+<h3>Why does my tyre pressure not match the converted value exactly?</h3>
+<p>Tyre gauges often show gauge pressure, and the reading can shift with temperature and gauge accuracy. A perfect unit conversion will not remove instrument or temperature effects. If you need better accuracy, measure at a stable temperature and use a calibrated gauge.</p>
+<h3>What is the difference between kPa and MPa?</h3>
+<p>They are both metric units based on the pascal. MPa is one thousand kPa. MPa is commonly used for higher pressures like hydraulic systems, material strength, and engineering specs.</p>
+<h3>When should I use bar instead of kPa?</h3>
+<p>Bar is commonly used in many industrial settings and on air equipment and compressors. kPa is common in scientific and many metric-based technical documents. Use whichever matches your equipment label or the document you are working from, then convert when you need to compare.</p>
+<h3>How do I improve accuracy for very small or very large pressures?</h3>
+<p>Use the “Show all units” option and compare multiple units for a sanity check. For very small values, choose a unit like kPa, mbar, torr, or inHg that produces a more readable number. For very large values, MPa or bar is often easier to interpret than Pa.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

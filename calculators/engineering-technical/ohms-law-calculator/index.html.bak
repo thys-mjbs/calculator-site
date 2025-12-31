@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Ohm’s Law Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate voltage, current, or resistance using Ohm’s Law. Enter any two values and get the missing value instantly." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/ohms-law-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Ohm’s Law Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate voltage, current, or resistance using Ohm’s Law. Enter any two values and get the missing value instantly." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/ohms-law-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ohm’s Law Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate voltage, current, or resistance using Ohm’s Law. Enter any two values and get the missing value instantly." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ohm’s Law Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/ohms-law-calculator/",
+      "description": "Calculate voltage, current, or resistance using Ohm’s Law by entering any two values."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Ohm’s Law Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Ohm’s Law Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate voltage, current, or resistance</h2>
+<div class="form-group">
+<label for="modeSelect">What do you want to calculate?</label>
+<select id="modeSelect">
+<option value="voltage">Voltage (V)</option>
+<option value="current">Current (I)</option>
+<option value="resistance">Resistance (R)</option>
+</select>
+</div>
+<div class="form-group" id="voltageInputs">
+<label for="currentInputForV">Current (I) in amps (A)</label>
+<input id="currentInputForV" inputmode="decimal" placeholder="e.g. 2" type="text"/>
+<label class="spaced-label" for="resistanceInputForV">Resistance (R) in ohms (Ω)</label>
+<input id="resistanceInputForV" inputmode="decimal" placeholder="e.g. 5" type="text"/>
+</div>
+<div class="form-group hidden" id="currentInputs">
+<label for="voltageInputForI">Voltage (V) in volts (V)</label>
+<input id="voltageInputForI" inputmode="decimal" placeholder="e.g. 10" type="text"/>
+<label class="spaced-label" for="resistanceInputForI">Resistance (R) in ohms (Ω)</label>
+<input id="resistanceInputForI" inputmode="decimal" placeholder="e.g. 5" type="text"/>
+</div>
+<div class="form-group hidden" id="resistanceInputs">
+<label for="voltageInputForR">Voltage (V) in volts (V)</label>
+<input id="voltageInputForR" inputmode="decimal" placeholder="e.g. 10" type="text"/>
+<label class="spaced-label" for="currentInputForR">Current (I) in amps (A)</label>
+<input id="currentInputForR" inputmode="decimal" placeholder="e.g. 2" type="text"/>
+</div>
+<button id="calculateButton" type="button">Calculate</button>
+<div id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Circuit tools, electrical formulas, and practical technical calculators.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units, measurements, and common values used in everyday work.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Quick math tools for percentages, ratios, and everyday calculations.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Use Ohm’s Law to calculate voltage, current, or resistance</h2>
+<p>This Ohm’s Law calculator helps you solve basic circuit relationships using the standard formula: V = I × R. If you know any two values, you can calculate the third.</p>
+<p>Select what you want to calculate, enter the two known values, and press Calculate. The result is shown with units so you can sanity check it against what you expect.</p>
+<p>This is useful for quick checks when troubleshooting simple DC circuits, sizing resistors, estimating current draw, or verifying basic lab calculations.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Uses Ohm’s Law for linear, resistive behavior (V = I × R).</li>
+<li>Assumes steady-state values (no time-varying behavior).</li>
+<li>Does not model AC impedance, phase angle, or reactive components.</li>
+<li>Enter values in base units: volts (V), amps (A), ohms (Ω).</li>
+<li>For division calculations, the denominator must be greater than zero.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is Ohm’s Law?</h3>
+<p>Ohm’s Law describes the relationship between voltage (V), current (I), and resistance (R) in a simple resistive circuit: V = I × R.</p>
+<h3>When should I calculate current?</h3>
+<p>Calculate current when you know the applied voltage and the resistance, and you want to estimate how much current will flow (I = V ÷ R).</p>
+<h3>When should I calculate resistance?</h3>
+<p>Calculate resistance when you know the voltage and current and want the equivalent resistance of a component or load (R = V ÷ I).</p>
+<h3>Why does my real-world circuit not match the result?</h3>
+<p>Real circuits include internal resistance, wiring losses, temperature effects, and sometimes non-linear components. Ohm’s Law is a simplified model and works best for resistors and near-linear loads.</p>
+<h3>Does this work for AC circuits?</h3>
+<p>Not directly. AC circuits often use impedance (Z) instead of resistance (R), and calculations can involve phase and frequency.</p>
+<div class="last-updated">Last updated: 2025-12-12</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

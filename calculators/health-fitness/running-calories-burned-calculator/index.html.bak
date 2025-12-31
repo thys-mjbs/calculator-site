@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Running Calories Burned Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate calories burned while running using your distance, time, and body weight. Includes pace, speed, calories per km, and calories per minute." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/health-fitness/running-calories-burned-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Running Calories Burned Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate calories burned while running using your distance, time, and body weight. Includes pace, speed, calories per km, and calories per minute." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/health-fitness/running-calories-burned-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Running Calories Burned Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate calories burned while running using your distance, time, and body weight. Includes pace, speed, calories per km, and calories per minute." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Running Calories Burned Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/running-calories-burned-calculator/",
+      "description": "Estimate calories burned from a run based on distance, time, and body weight, with optional incline and carried weight for improved accuracy."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health &amp; Fitness</a> ›
+        <span>Running Calories Burned Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Running Calories Burned Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate calories burned from a run</h2>
+<p class="calculator-intro">Enter your run distance, time, and body weight to estimate total calories burned. Optional settings improve accuracy for hills and carried weight.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="distanceKm">Distance (km)</label>
+<input id="distanceKm" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="timeMinutes">Time (minutes)</label>
+<input id="timeMinutes" inputmode="decimal" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="weightKg">Body weight (kg)</label>
+<input id="weightKg" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="gradePercent">Average incline / grade (%)</label>
+<input id="gradePercent" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+<div class="field-hint">Use your best estimate for the overall route. Flat routes are 0%. Downhill is negative (e.g., -2).</div>
+</div>
+<div class="form-group">
+<label for="carriedKg">Extra carried weight (kg)</label>
+<input id="carriedKg" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+<div class="field-hint">Optional. Use this for a backpack/vest. Leave blank if none.</div>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate calories</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Estimate calories, macros, body metrics, and training targets for everyday fitness decisions.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Convert time, plan schedules, compare durations, and simplify time-based calculations.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle percentages, ratios, averages, and quick checks that support daily calculations.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Running calories burned calculator for distance and time</h2>
+<p>This running calories burned calculator estimates how many calories you used during a run based on three inputs most people already have: distance, time, and body weight. It is designed for a single, practical decision: understanding the energy cost of a specific run so you can track training load and manage weight change with more realism. It is not a “one number fixes everything” tool, because calorie burn varies with pace, terrain, and individual efficiency, but it gives a defensible estimate that is consistent and repeatable.</p>
+<p>To use it, enter your run distance in kilometres, the total time in minutes, and your body weight in kilograms. The calculator converts your distance and time into speed and pace, then estimates energy cost using a standard exercise physiology approach. The primary output is total calories burned for the run. You also get calories per kilometre and calories per minute, which are often more useful than a single total because they help you compare runs of different lengths and keep training consistent week to week.</p>
+<p>If you want a more accurate estimate for hilly routes or runs with a backpack or weight vest, expand the Advanced section. Average incline (grade) changes the cost of running substantially. Carrying extra weight increases the energy cost because you are moving more mass. These advanced inputs are optional. If you leave them blank, the calculator assumes a flat route and no additional carried weight, and it will still return a complete answer.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The estimate is for running only. It is not intended for walking, hiking, cycling, gym workouts, or mixed sessions.</li>
+<li>Distance and time are assumed to be the actual moving work for the run (including normal slowdowns). If your device paused heavily during stops, use “moving time” rather than elapsed time.</li>
+<li>If you do not enter an incline, the route is treated as flat (0% grade). If you enter incline, use the average for the whole route, not the steepest hill.</li>
+<li>Extra carried weight is treated as added mass. If you carry water that you drink during the run, use a rough average rather than the starting weight.</li>
+<li>The result is an estimate. Individual running economy, wind, surface softness, temperature, and biomechanics can move real burn up or down, so use it for tracking trends rather than judging single-run precision.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why do two runs of the same distance burn different calories?</h3>
+<p>Because pace and terrain matter. Faster running increases energy use per minute. Hills increase cost even more. Two people can also have different running economy due to biomechanics and training history. If your runs differ in time or elevation profile, you should expect different totals even at the same distance.</p>
+<h3>Should I enter elapsed time or moving time?</h3>
+<p>Use the time that best reflects how the run felt physically. If you stopped at lights for a few short pauses, elapsed time is fine. If you had long pauses or your watch auto-paused for extended breaks, moving time will better match the work done and will give a more realistic estimate.</p>
+<h3>How do I estimate average incline (grade) if I do not know it?</h3>
+<p>If you have a GPS app, look for route elevation gain and profile. If you do not, leave it blank. The default flat assumption will still produce a usable estimate. Only enter incline when you are confident the route was meaningfully uphill overall, or when you want to compare hill runs to flat runs more fairly.</p>
+<h3>Is calories per kilometre useful?</h3>
+<p>Yes. It is a simple way to compare effort across different run lengths. If your calories per kilometre is unusually high, it often indicates a slower pace, hills, soft surfaces, carrying weight, or a route with frequent stops. If it is stable over time, it is a good sign your runs are consistent and your tracking is reliable.</p>
+<h3>Can I use this number to set my daily calorie intake?</h3>
+<p>Use it as one input, not the whole plan. Daily intake decisions depend on your baseline energy needs, your weekly training volume, and your target (maintain, lose, or gain weight). This tool is best for understanding the energy cost of a run so you can avoid overestimating exercise calories and making diet decisions that do not match reality.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

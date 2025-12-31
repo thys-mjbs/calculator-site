@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Standard Deviation (Simple) Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Standard Deviation (Simple) Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Standard Deviation (Simple) Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate standard deviation from a list of numbers (sample or population). Get mean, variance, and a quick variability summary for your dataset." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Standard Deviation (Simple) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/standard-deviation-simple-calculator/",
+      "description": "Calculate standard deviation from a list of numbers (sample or population), plus mean and variance, for a quick view of how spread out your dataset is."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Standard Deviation (Simple) Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Standard Deviation (Simple) Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Standard deviation from a list of numbers</h2>
+<p class="calculator-intro">Paste your numbers and get standard deviation, variance, and a quick spread summary. Choose sample (n−1) or population (n).</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="valuesInput">Values (separate by commas, spaces, or new lines)</label>
+<textarea id="valuesInput" placeholder="Example: 12, 15, 15, 18, 22" rows="6"></textarea>
+<p class="field-hint">Tip: You can paste a column from a spreadsheet. Any extra spaces or blank lines are ignored.</p>
+</div>
+<div class="form-group">
+<label for="sdType">Standard deviation type</label>
+<select id="sdType">
+<option selected="" value="sample">Sample standard deviation (n − 1)</option>
+<option value="population">Population standard deviation (n)</option>
+</select>
+<p class="field-hint">Use sample when your list is a subset of a bigger group. Use population when your list is the whole group.</p>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate standard deviation</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Work with numbers fast: averages, ranges, ratios, rounding, and other everyday math tools.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Study and grading helpers like GPA tools, grade calculators, and exam planning utilities.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Estimate growth, compare scenarios, and understand return-related calculations for planning.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Standard deviation calculator for a list of numbers (simple, practical spread)</h2>
+<p>Standard deviation tells you how spread out your numbers are around the average. If your values cluster close to the mean, standard deviation is small. If they jump around widely, standard deviation is larger. This “simple” calculator is designed for the most common real-world task: you have a short list of measurements or scores and you want one reliable number that summarizes variability.</p>
+<p>To use the calculator, paste your values into the box. You can separate values with commas, spaces, or new lines, and you can paste a column from a spreadsheet. Then choose the standard deviation type. If your list is a sample taken from a larger group (for example, 20 test scores out of a full grade, or a few measurements from a production run), pick sample standard deviation (n − 1). If your list represents the entire group you care about (for example, every score in the class or every recorded measurement), pick population standard deviation (n). Click calculate to see standard deviation plus supporting figures like mean and variance.</p>
+<p>The output is meant to be decision-friendly. Standard deviation is the main result. Variance is shown because it is part of the same calculation and is useful in some formulas, but standard deviation is easier to interpret because it uses the same units as your original values. You also get a quick dataset summary (count, min, max, range) because standard deviation makes more sense when you can see the scale and the extremes. If your mean is not zero, the calculator also shows the coefficient of variation (CV%), which expresses spread as a percentage of the mean, making it easier to compare variability across datasets with different scales.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Your list represents one set of comparable numbers measured in the same unit (for example, all in seconds, all in marks, or all in kilograms).</li>
+<li>Blank entries and extra separators are ignored, but non-numeric items are not treated as values.</li>
+<li>Sample standard deviation uses n − 1 in the denominator; population standard deviation uses n.</li>
+<li>At least two valid numbers are required, because “spread” is not meaningful with only one value.</li>
+<li>This tool assumes a straightforward list of raw values and does not support grouped frequency tables or weighted values.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between sample and population standard deviation?</h3>
+<p>Population standard deviation treats your list as the full set you care about and divides by n. Sample standard deviation assumes your list is only a subset and divides by n − 1 to correct for the fact that samples tend to underestimate spread. If you are unsure, sample is usually the safer default for real-world data you collected from a bigger group.</p>
+<h3>Why do I need at least two numbers?</h3>
+<p>With one value, there is no variation to measure. Standard deviation is built from differences between values and the mean, so you need at least two data points to produce a meaningful spread estimate.</p>
+<h3>My standard deviation seems “too high” or “too low.” How do I sanity-check it?</h3>
+<p>Start by checking your range (max minus min). Standard deviation cannot be bigger than the range and will usually be much smaller unless your data is extremely polarized. Also check if you accidentally mixed units (for example, seconds and milliseconds) or included a stray extra digit (like 500 instead of 50). Outliers can push standard deviation up fast, so scan for obvious abnormal values.</p>
+<h3>What does variance mean, and why is it shown?</h3>
+<p>Variance is the average squared distance from the mean. It is the core quantity used to calculate standard deviation (standard deviation is the square root of variance). Variance is shown mainly for completeness and for cases where you need it for another calculation, but standard deviation is usually easier to interpret because it is in the same unit as your data.</p>
+<h3>When should I use coefficient of variation (CV%)?</h3>
+<p>CV% is useful when you want to compare spread across datasets with different averages. For example, a standard deviation of 5 might be small if the mean is 200, but large if the mean is 20. CV% expresses spread relative to the mean. If the mean is near zero, CV% becomes unstable and is not a good comparison metric.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

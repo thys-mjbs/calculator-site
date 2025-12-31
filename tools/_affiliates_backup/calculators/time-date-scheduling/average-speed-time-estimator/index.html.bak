@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Average Speed Time Estimator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate travel time from distance and average speed. Include an optional delay to account for stops or traffic, and optionally calculate an arrival time.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/average-speed-time-estimator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Average Speed Time Estimator | SnapCalc">
+    <meta property="og:description" content="Estimate travel time from distance and average speed. Include an optional delay to account for stops or traffic, and optionally calculate an arrival time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/average-speed-time-estimator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Average Speed Time Estimator | SnapCalc">
+    <meta name="twitter:description" content="Estimate travel time from distance and average speed. Include an optional delay to account for stops or traffic, and optionally calculate an arrival time.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Average Speed Time Estimator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/average-speed-time-estimator/",
+      "description": "Estimate travel time from distance and average speed. Optionally include a delay for stops or traffic and calculate an estimated arrival time."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Average Speed Time Estimator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Average Speed Time Estimator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3YxY3hP" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Management</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools and resources for planning time, prioritising tasks, and reducing scheduling conflicts.</p>
+    <div class="affiliate-cta">Explore time management tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate travel time from distance and average speed</h2>
+
+              <p class="calculator-intro">Enter your distance and average speed, then optionally add a delay for stops or traffic. You can also add a departure time to estimate arrival.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="unitSystem">Units</label>
+                <select id="unitSystem" class="select-input" aria-label="Unit system">
+                  <option value="metric" selected>Metric (km, km/h)</option>
+                  <option value="imperial">Imperial (miles, mph)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="distanceInput">Distance</label>
+                <input id="distanceInput" type="text" inputmode="decimal" placeholder="e.g., 250" aria-label="Distance">
+              </div>
+
+              <div class="form-group">
+                <label for="speedInput">Average speed</label>
+                <input id="speedInput" type="text" inputmode="decimal" placeholder="e.g., 100" aria-label="Average speed">
+              </div>
+
+              <div class="advanced-section">
+                <h3 class="advanced-title">Advanced (optional)</h3>
+
+                <div class="form-group">
+                  <label for="delayMinutesInput">Extra delay (minutes)</label>
+                  <input id="delayMinutesInput" type="text" inputmode="numeric" placeholder="e.g., 20" aria-label="Extra delay in minutes">
+                </div>
+
+                <div class="form-group">
+                  <label for="departureTimeInput">Departure time (HH:MM)</label>
+                  <input id="departureTimeInput" type="text" inputmode="numeric" placeholder="e.g., 08:30" aria-label="Departure time in HH:MM">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Estimate time</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4q8WuD1" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Zones</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Convert time zones accurately for travel, meetings, and remote work.</p>
+    <div class="affiliate-cta">View time zone conversion tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Plan durations, time windows, and schedules with practical time and date tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Estimate travel metrics like time, distance, and simple trip planning figures.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units and values so your inputs match the numbers you have.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Average speed travel time estimator for drives and trips</h2>
+
+              <p>This calculator estimates how long a trip will take when you know two things: the distance you plan to travel and the average speed you expect to maintain. This is the common real world question people search for before a drive or commute: “If I travel X kilometres at about Y km/h, how long will it take?” The result is shown as a clear total time (hours and minutes), plus a short breakdown so you can sanity check whether the estimate matches your expectations.</p>
+
+              <p>The key idea is simple. Time equals distance divided by speed. If you are travelling 200 km at an average of 100 km/h, the driving portion is roughly 2 hours. Real trips usually include non-driving time, so this estimator also lets you add a single extra delay in minutes. That delay is useful for stopovers, refuelling, toll queues, traffic slowdowns, loading time, or any other overhead you want to include without trying to model the route in detail.</p>
+
+              <p>If you also want an arrival estimate, you can enter a departure time in 24-hour format (HH:MM). The calculator will add the estimated total duration (driving time plus delay) to your departure time and show the resulting arrival time. This helps when you are planning meetups, booking check-in windows, or simply deciding whether you need to leave earlier to avoid arriving late.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Average speed means your overall speed for the trip, not your peak speed. If you plan to drive at 120 km/h but expect traffic, your average might be closer to 90–100 km/h.</li>
+                <li>The extra delay is added once to the trip total. Use it for total expected stops and overhead, not for repeated, per-hour breaks.</li>
+                <li>Distance should be the full trip distance, not just the motorway segment. If you only know a rough distance, the result is still useful as a planning estimate.</li>
+                <li>Arrival time is calculated using your device’s local time and today’s date. If the trip crosses midnight, the arrival time will roll into the next day.</li>
+                <li>This calculator is for estimating travel time from distance and average speed only. It does not model routes, elevations, weather, fuel use, costs, or legal speed limits.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between average speed and speed limit?</h3>
+              <p>A speed limit is the maximum allowed speed on a road segment. Average speed is what you actually achieve across the full trip once you include slower sections, intersections, merges, congestion, and any time spent below the limit. For time estimates, average speed is the number that matters.</p>
+
+              <h3>What should I use if I do not know my average speed?</h3>
+              <p>Use a conservative estimate based on the trip type. For highways in light traffic, many drivers use a rough average below the posted limit. For mixed urban driving, averages are usually much lower due to stops and slower flow. If you are unsure, run the calculator twice with a low and a high average speed to create a realistic range.</p>
+
+              <h3>How should I use the extra delay field?</h3>
+              <p>Add up the time you expect to lose that is not captured by average speed. Examples include a planned fuel stop, a meal stop, or known traffic bottlenecks. If you are already choosing a lower average speed to reflect heavy traffic, keep the delay smaller so you do not double count the same slowdown.</p>
+
+              <h3>Why does a small change in speed change the time a lot?</h3>
+              <p>Time is distance divided by speed, so the relationship is not linear in the way people intuitively expect. On longer distances, changing average speed from 90 to 100 km/h can save meaningful time. The same change on a short trip might only save a few minutes. This is exactly why using the formula is better than guessing.</p>
+
+              <h3>Can I use this for walking, running, or cycling?</h3>
+              <p>Not for the intended use case. This page is designed for trip and drive planning where people think in average speed like km/h or mph and want an arrival estimate. For walking or running, pace-based tools are typically more appropriate because the inputs and outputs people use are different.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3Kzt4Po" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Daily Scheduling</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Plan daily activities with structured schedules and clear time blocks.</p>
+    <div class="affiliate-cta">Browse daily schedule planners on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

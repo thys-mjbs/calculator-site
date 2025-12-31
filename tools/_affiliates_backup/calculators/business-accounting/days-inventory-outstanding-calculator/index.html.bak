@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Days Inventory Outstanding Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate Days Inventory Outstanding (DIO) using beginning and ending inventory, cost of goods sold (COGS), and your period length.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/days-inventory-outstanding-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Days Inventory Outstanding Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate Days Inventory Outstanding (DIO) using beginning and ending inventory, cost of goods sold (COGS), and your period length.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/days-inventory-outstanding-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Days Inventory Outstanding Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate Days Inventory Outstanding (DIO) using beginning and ending inventory, cost of goods sold (COGS), and your period length.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Days Inventory Outstanding Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/days-inventory-outstanding-calculator/",
+      "description": "Calculate Days Inventory Outstanding (DIO) from beginning inventory, ending inventory, cost of goods sold (COGS), and the period length in days."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>Days Inventory Outstanding Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Days Inventory Outstanding Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/3KzfYlc" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Business Profitability</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn strategies to increase profits through pricing and cost control.</p>
+                <div class="affiliate-cta">Explore business profitability books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate Days Inventory Outstanding (DIO)</h2>
+
+              <p class="calculator-intro">
+                Enter your inventory and COGS to estimate how many days, on average, your inventory is sitting before it is sold.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="beginningInventory">Beginning inventory (currency)</label>
+                <input type="text" id="beginningInventory" inputmode="decimal" placeholder="e.g., 150,000">
+              </div>
+
+              <div class="form-group">
+                <label for="endingInventory">Ending inventory (currency)</label>
+                <input type="text" id="endingInventory" inputmode="decimal" placeholder="e.g., 170,000">
+              </div>
+
+              <div class="form-group">
+                <label for="cogs">Cost of goods sold, COGS (currency)</label>
+                <input type="text" id="cogs" inputmode="decimal" placeholder="e.g., 1,200,000">
+              </div>
+
+              <div class="form-group">
+                <label for="periodDays">Period length (days)</label>
+                <input type="text" id="periodDays" inputmode="numeric" placeholder="e.g., 365">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate DIO</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Track margins, inventory, and core business metrics with practical calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, compare costs, and make everyday money decisions with clarity.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Run property and rental numbers, from costs to cash flow, in plain language.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3KQhIGA" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Financial Controls</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Implement controls to reduce risk and improve financial accuracy.</p>
+                <div class="affiliate-cta">Browse financial controls books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Days Inventory Outstanding (DIO) calculator for inventory efficiency</h2>
+
+              <p>
+                Days Inventory Outstanding (DIO) estimates how many days, on average, your inventory is held before it is sold.
+                If you manage a product business, DIO is a simple way to sanity check whether stock is moving at a healthy pace or getting stuck.
+                Lower is not always better, but extreme values are usually a signal worth investigating.
+              </p>
+
+              <p>
+                This calculator uses a standard approach based on average inventory and cost of goods sold (COGS).
+                You enter beginning inventory, ending inventory, COGS, and the length of the period in days.
+                The calculator then estimates your average inventory for the period and converts that into an average number of days of inventory on hand.
+              </p>
+
+              <p>
+                The output helps you compare performance across months, quarters, or years, and it gives you a shared language for discussions between operations, finance, and purchasing.
+                When you combine DIO with Days Sales Outstanding (DSO) and Days Payables Outstanding (DPO), you can also use it as an input into cash conversion cycle thinking.
+                Even on its own, DIO is a practical metric for identifying slow-moving inventory and cash tied up in stock.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator uses average inventory = (beginning inventory + ending inventory) ÷ 2.</li>
+                <li>DIO is calculated as (average inventory ÷ COGS) × period days.</li>
+                <li>Inventory and COGS should be for the same period and the same accounting basis.</li>
+                <li>If your inventory is highly seasonal, a simple beginning/ending average can misstate reality.</li>
+                <li>DIO is a directional management metric, not a substitute for SKU-level ageing analysis.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does DIO actually mean in plain terms?</h3>
+              <p>
+                DIO is the average time your money sits in inventory before it turns into a sale.
+                If your DIO is 60, it suggests that, on average, inventory is held for about 60 days before being sold.
+                In practice, this is a blended average across fast-moving and slow-moving items.
+              </p>
+
+              <h3>Is a lower DIO always better?</h3>
+              <p>
+                Not always. Very low DIO can mean you are running lean, but it can also indicate frequent stock-outs, lost sales, or an overreliance on just-in-time supply that may not be realistic.
+                The right target depends on your industry, supplier lead times, minimum order quantities, service level goals, and whether you sell made-to-order or off-the-shelf.
+              </p>
+
+              <h3>What inputs should I use for inventory and COGS?</h3>
+              <p>
+                Use the inventory valuation and COGS numbers from the same set of financials for the same period.
+                For example, if you are calculating annual DIO, use beginning inventory at the start of the year, ending inventory at the end of the year, and total annual COGS.
+                Mixing periods or using sales instead of COGS will distort the result.
+              </p>
+
+              <h3>Why does this calculator use average inventory instead of ending inventory?</h3>
+              <p>
+                Using average inventory reduces the effect of timing and one-off purchases.
+                If you only use ending inventory, the metric can swing sharply depending on whether you stocked up just before period end.
+                Average inventory is still imperfect, but it is usually more stable and more comparable across periods.
+              </p>
+
+              <h3>How should I interpret a sudden increase in DIO?</h3>
+              <p>
+                A rising DIO often means inventory is building faster than it is being sold.
+                That can come from weaker demand, overbuying, new product launches that have not yet found traction, supply-chain changes that forced bulk purchasing, or pricing and assortment problems.
+                The next step is usually to split inventory into fast-moving, slow-moving, and obsolete buckets rather than relying only on a single blended number.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-14</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3Ytfr7q" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Expense Management</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Manage operational expenses to improve efficiency and margins.</p>
+                <div class="affiliate-cta">View expense management books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
+</html>

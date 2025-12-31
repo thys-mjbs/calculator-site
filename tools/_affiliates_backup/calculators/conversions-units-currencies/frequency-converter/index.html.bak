@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Frequency Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Frequency Converter | SnapCalc">
+    <meta property="og:description" content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Frequency Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Frequency Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/",
+      "description": "Convert frequency values between common units like Hz, kHz, MHz, GHz, THz, and RPM. Optionally view period and angular frequency derived from the input."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Frequency Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Frequency Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4abAR07" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Material Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools for calculating quantities of concrete, timber, steel, and building materials.</p>
+    <div class="affiliate-cta">Explore construction material calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert frequency between common units</h2>
+
+              <p class="calculator-intro">Enter a frequency once, pick the unit you have, and get the equivalent values in other units (plus optional derived values).</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="frequencyValue">Frequency value</label>
+                <input type="text" id="frequencyValue" inputmode="decimal" placeholder="e.g., 1000">
+              </div>
+
+              <div class="form-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit">
+                  <option value="hz">Hertz (Hz)</option>
+                  <option value="khz">Kilohertz (kHz)</option>
+                  <option value="mhz">Megahertz (MHz)</option>
+                  <option value="ghz">Gigahertz (GHz)</option>
+                  <option value="thz">Terahertz (THz)</option>
+                  <option value="rpm">Revolutions per minute (RPM)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="toUnit">Show as</label>
+                <select id="toUnit">
+                  <option value="all">All common units</option>
+                  <option value="hz">Hertz (Hz)</option>
+                  <option value="khz">Kilohertz (kHz)</option>
+                  <option value="mhz">Megahertz (MHz)</option>
+                  <option value="ghz">Gigahertz (GHz)</option>
+                  <option value="thz">Terahertz (THz)</option>
+                  <option value="rpm">Revolutions per minute (RPM)</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox-row">
+                <label class="checkbox-label" for="showDerived">
+                  <input type="checkbox" id="showDerived" checked>
+                  Also show period and angular frequency
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert frequency</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4rRzlGV" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Wall Area</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Measure wall surface areas for paint, plaster, and finishes.</p>
+    <div class="affiliate-cta">View wall area calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert between everyday and technical units quickly and consistently.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering & Technical</h3>
+              <p class="related-desc">Solve common engineering calculations with practical, ready-to-use tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Handle core math tasks like ratios, percentages, and number conversions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oU9OKn" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Structural Materials</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Reference material properties for concrete, steel, and timber.</p>
+    <div class="affiliate-cta">Browse structural material references on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Frequency converter for Hz, kHz, MHz, GHz, THz, and RPM</h2>
+
+              <p>A frequency converter helps you translate a number from one frequency unit to another without manual scaling mistakes. The most common case is converting Hertz (Hz) into kilohertz (kHz), megahertz (MHz), gigahertz (GHz), or terahertz (THz) when you are reading a spec sheet, a datasheet, a test report, or a label on equipment. A second common case is converting revolutions per minute (RPM) into Hz, or the other way around, when a rotating system is described in RPM but you need frequency in cycles per second.</p>
+
+              <p>This page is intentionally locked to one job: converting frequency units. It does not try to convert wavelength, speed of light relationships, audio pitch, musical notes, or “frequency to period” as a separate calculator. Those are adjacent topics that require extra assumptions and often confuse people. Here you enter one frequency, select the unit you have, and the calculator returns the equivalent values in other common units using standard unit relationships.</p>
+
+              <p>For practical usefulness, the calculator can also show two derived values based on the converted Hz value: the period (seconds per cycle) and angular frequency (radians per second). These are optional because many users only need unit conversion. If you switch the derived values on, you get extra context that can help with timing and oscillation work, while still keeping the core purpose unchanged.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The input is treated as a frequency magnitude and must be greater than 0 (frequency of 0 does not convert into meaningful period or rotation rate).</li>
+                <li>Unit conversions use standard SI scaling: 1 kHz = 1,000 Hz, 1 MHz = 1,000,000 Hz, 1 GHz = 1,000,000,000 Hz, and 1 THz = 1,000,000,000,000 Hz.</li>
+                <li>RPM is treated as revolutions per minute where 1 revolution equals 1 cycle, so Hz = RPM ÷ 60 and RPM = Hz × 60.</li>
+                <li>Period is calculated as T = 1 ÷ f(Hz) and is shown in seconds; extremely high frequencies will produce very small periods.</li>
+                <li>Angular frequency is calculated as ω = 2πf(Hz) and is shown in radians per second; it is only meaningful when your “frequency” describes a periodic cycle.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between Hz and RPM?</h3>
+              <p>Hz is cycles per second, while RPM is cycles (revolutions) per minute. If one revolution corresponds to one repeating cycle, then RPM and Hz describe the same thing in different time bases. The conversion is straightforward: Hz = RPM ÷ 60.</p>
+
+              <h3>Why does the calculator require a value greater than 0?</h3>
+              <p>A value of 0 implies no oscillation or rotation. Conversions between scaled frequency units would still be “0,” but derived values like period (1 ÷ f) are not defined at zero. Enforcing a positive value prevents misleading outputs and division-by-zero results.</p>
+
+              <h3>When should I use kHz vs MHz vs GHz?</h3>
+              <p>Use the unit that keeps the number readable. Audio and low-speed timing often sits in Hz or kHz, many microcontroller clocks and radio channels appear in MHz, and modern RF, CPU clocks, and microwave applications frequently use GHz. The calculator shows all common units so you can choose the one that matches the context you are reading.</p>
+
+              <h3>What does “period” mean, and why is it useful?</h3>
+              <p>Period is the time for one full cycle. If a sensor pulses at 50 Hz, the period is 1 ÷ 50 = 0.02 seconds per cycle. Period is often the easier number to reason about when you are planning delays, sampling intervals, or timing constraints.</p>
+
+              <h3>Is angular frequency the same as frequency?</h3>
+              <p>No. Angular frequency (rad/s) is scaled by 2π compared to Hz because it measures rotation around a circle in radians rather than cycles. It is used frequently in physics and control systems where equations are written in radians.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

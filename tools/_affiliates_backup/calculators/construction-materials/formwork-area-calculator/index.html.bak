@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Formwork Area Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate concrete formwork area for slabs, walls, and columns, including optional openings and waste percentage for a practical on-site estimate.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/formwork-area-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Formwork Area Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate concrete formwork area for slabs, walls, and columns, including optional openings and waste percentage for a practical on-site estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/formwork-area-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Formwork Area Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate concrete formwork area for slabs, walls, and columns, including optional openings and waste percentage for a practical on-site estimate.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Formwork Area Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/formwork-area-calculator/",
+      "description": "Calculate concrete formwork area for slabs, walls, and columns, including optional openings and waste percentage for a practical on-site estimate."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Formwork Area Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Formwork Area Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/452Iu5p" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Brick &amp; Block</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Calculate quantities of bricks and blocks for walls and structures.</p>
+                <div class="affiliate-cta">Explore brick and block calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate formwork area for slabs, walls, and columns</h2>
+
+              <p class="calculator-intro">Choose an element type, enter dimensions, and get net and adjusted formwork area. Openings and waste are optional.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="modeSelect">Element type</label>
+                <select id="modeSelect">
+                  <option value="slab">Slab soffit (underside)</option>
+                  <option value="wall">Wall faces (both sides)</option>
+                  <option value="column">Column sides (perimeter × height)</option>
+                </select>
+              </div>
+
+              <div id="modeBlockSlab">
+                <div class="input-group">
+                  <label for="slabLength">Slab length (m)</label>
+                  <input id="slabLength" type="text" inputmode="decimal" placeholder="e.g., 6">
+                </div>
+
+                <div class="input-group">
+                  <label for="slabWidth">Slab width (m)</label>
+                  <input id="slabWidth" type="text" inputmode="decimal" placeholder="e.g., 4">
+                </div>
+
+                <div class="input-group">
+                  <label for="slabOpenings">Openings area to subtract (m²) (optional)</label>
+                  <input id="slabOpenings" type="text" inputmode="decimal" placeholder="e.g., 1.2">
+                </div>
+              </div>
+
+              <div id="modeBlockWall" class="hidden">
+                <div class="input-group">
+                  <label for="wallLength">Wall length (m)</label>
+                  <input id="wallLength" type="text" inputmode="decimal" placeholder="e.g., 10">
+                </div>
+
+                <div class="input-group">
+                  <label for="wallHeight">Wall height (m)</label>
+                  <input id="wallHeight" type="text" inputmode="decimal" placeholder="e.g., 2.4">
+                </div>
+
+                <div class="input-group">
+                  <label for="wallOpenings">Openings area to subtract (m²) (optional)</label>
+                  <input id="wallOpenings" type="text" inputmode="decimal" placeholder="e.g., 2.1">
+                </div>
+              </div>
+
+              <div id="modeBlockColumn" class="hidden">
+                <div class="input-group">
+                  <label for="colPerimeter">Column perimeter (m)</label>
+                  <input id="colPerimeter" type="text" inputmode="decimal" placeholder="e.g., 1.6">
+                </div>
+
+                <div class="input-group">
+                  <label for="colHeight">Column height (m)</label>
+                  <input id="colHeight" type="text" inputmode="decimal" placeholder="e.g., 3">
+                </div>
+
+                <div class="input-group">
+                  <label for="colQty">Number of columns (optional)</label>
+                  <input id="colQty" type="text" inputmode="numeric" placeholder="e.g., 6">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="wastePercent">Waste / allowance (%) (optional)</label>
+                <input id="wastePercent" type="text" inputmode="decimal" placeholder="Default: 5">
+              </div>
+
+              <div class="input-group">
+                <label for="sheetArea">Standard sheet coverage (m²) (optional)</label>
+                <input id="sheetArea" type="text" inputmode="decimal" placeholder="Default: 2.98 (1.22×2.44)">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate formwork area</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate quantities, areas, weights, and site needs for common building tasks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Run practical engineering calculations for electrical, mechanical, and technical planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Work out areas, costs, and property-related numbers for planning and comparisons.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48R9OER" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Cement Usage</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Estimate cement requirements for construction projects.</p>
+                <div class="affiliate-cta">View cement usage calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Formwork area calculator for slabs, walls, and columns</h2>
+
+              <p>Formwork is usually priced, hired, or planned by surface area, not by concrete volume. If you can estimate how many square metres of shuttering you need, you can sanity-check quotes, plan material orders, and avoid running short halfway through a pour. This formwork area calculator gives a practical estimate for three common cases: slab soffit (the underside), wall faces (typically both sides), and column sides (perimeter times height). You can also subtract openings and add an allowance for waste.</p>
+
+              <p>Use it for quick planning when you have limited information, or tighten the estimate when you have proper drawings. For slabs, you typically need formwork on the underside (soffit) and possibly edges, but edge formwork varies a lot by project and is often handled separately. For walls, most conventional systems require formwork on both faces, which is why the calculator defaults to “both sides.” For columns, the key input is perimeter, because columns can be square, rectangular, or circular. If you know width and depth, perimeter is 2 × (width + depth). If you know diameter for a round column, perimeter is π × diameter.</p>
+
+              <p>The calculator produces more than one number because decisions are rarely made off a single figure. You get the gross area, any deductions for openings, the net formwork area, and the adjusted area after your waste or allowance percentage. If you enter a standard sheet coverage, you also get an estimated sheet count. That sheet count is not a procurement list, but it is useful for rough planning and for comparing options like plywood sheets versus modular panel systems.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Slab mode estimates soffit area only (length × width) and does not include edge formwork unless you handle it separately.</li>
+                <li>Wall mode assumes formwork is needed on both faces (2 × length × height). If you only need one face, halve the result.</li>
+                <li>Openings are entered as a total area and are subtracted once from the total formwork area (use drawings to total door, window, and service openings).</li>
+                <li>Waste/allowance is applied as a percentage uplift to the net area to cover laps, offcuts, joints, damage, and layout inefficiency.</li>
+                <li>Sheet count uses a user-defined coverage area and assumes full usable coverage per sheet; real projects may need more sheets due to cutting and re-use limits.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What does “formwork area” actually measure?</h3>
+              <p>It measures the total surface area that needs to be temporarily covered or supported by formwork. For walls and columns, it is the area of the vertical faces. For slabs, it is usually the underside surface that needs support during curing. Contractors often price labor and hire systems based on this area.</p>
+
+              <h3>Should I subtract doors and windows for a wall?</h3>
+              <p>Yes, if your pricing or material planning is based on net formed surface. Add up the area of all openings (width × height for each door/window) and enter the total as “openings area.” If your formwork system still requires framing around openings that offsets the deduction, use a smaller deduction or increase the waste percentage.</p>
+
+              <h3>What waste percentage should I use?</h3>
+              <p>For early estimates, 5% is a reasonable default. Complex geometry, lots of openings, tight tolerances, or inexperienced crews can push the allowance higher. If you are comparing quotes, keep the same waste percentage across scenarios so the comparison stays fair.</p>
+
+              <h3>How do I estimate column perimeter if I only know the size?</h3>
+              <p>For a rectangular column, perimeter is 2 × (width + depth). For a square column, perimeter is 4 × side. For a circular column, perimeter is π × diameter. Once you have perimeter, the formed area is perimeter × height × quantity.</p>
+
+              <h3>Does the sheet count tell me exactly how many plywood sheets to buy?</h3>
+              <p>No. It is a planning proxy based on coverage area. Real sheet requirements depend on re-use cycles, cutting patterns, bracing details, edge conditions, and whether sheets can be recovered intact. Use the sheet estimate to check order-of-magnitude and then confirm with drawings and your chosen system.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4oX8zKh" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Productivity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Improve construction productivity with planning and tracking tools.</p>
+                <div class="affiliate-cta">Browse construction productivity tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

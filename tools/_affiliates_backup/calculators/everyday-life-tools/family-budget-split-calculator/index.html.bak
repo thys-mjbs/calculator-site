@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>Family Budget Split Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Split shared family household expenses fairly. Compare equal split vs income-based split, and see per-person amounts, percentages, and weekly and daily equivalents."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/everyday-life-tools/family-budget-split-calculator/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Family Budget Split Calculator | SnapCalc" />
+    <meta
+      property="og:description"
+      content="Split shared family household expenses fairly. Compare equal split vs income-based split, and see per-person amounts, percentages, and weekly and daily equivalents."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/everyday-life-tools/family-budget-split-calculator/"
+    />
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Family Budget Split Calculator | SnapCalc" />
+    <meta
+      name="twitter:description"
+      content="Split shared family household expenses fairly. Compare equal split vs income-based split, and see per-person amounts, percentages, and weekly and daily equivalents."
+    />
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png" />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Family Budget Split Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/everyday-life-tools/family-budget-split-calculator/",
+        "description": "Split shared household expenses across family members using an equal split or an income-based split. Shows per-person amounts, percentages, and weekly and daily equivalents."
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div id="siteSearchResults" class="site-search-results" aria-hidden="true"></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Family Budget Split Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Family Budget Split Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oRRf9G" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Home Budgeting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Manage everyday household budgets and spending effectively.</p>
+    <div class="affiliate-cta">Explore home budgeting tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Split shared household expenses fairly</h2>
+
+              <p class="calculator-intro">
+                Use this to split shared monthly costs (rent, groceries, utilities) either equally or
+                based on each person’s monthly income.
+              </p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="totalExpenses">Total shared monthly expenses</label>
+                <input
+                  type="text"
+                  id="totalExpenses"
+                  inputmode="decimal"
+                  placeholder="e.g., 18,500"
+                  aria-label="Total shared monthly expenses"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="splitMethod">Split method</label>
+                <select id="splitMethod" aria-label="Split method">
+                  <option value="income">Split by income (proportional)</option>
+                  <option value="equal">Split equally</option>
+                </select>
+              </div>
+
+              <div id="modeIncome" class="mode-block">
+                <div class="form-group">
+                  <label for="incomeNote">Monthly incomes (enter at least two)</label>
+                  <div class="small-note" id="incomeNote">
+                    Names are optional. Leave extra people blank if not needed.
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="person1Income">Person 1 monthly income</label>
+                  <input
+                    type="text"
+                    id="person1Income"
+                    inputmode="decimal"
+                    placeholder="e.g., 25,000"
+                    aria-label="Person 1 monthly income"
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="person2Income">Person 2 monthly income</label>
+                  <input
+                    type="text"
+                    id="person2Income"
+                    inputmode="decimal"
+                    placeholder="e.g., 18,000"
+                    aria-label="Person 2 monthly income"
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="person3Income">Person 3 monthly income (optional)</label>
+                  <input
+                    type="text"
+                    id="person3Income"
+                    inputmode="decimal"
+                    placeholder="e.g., 12,000"
+                    aria-label="Person 3 monthly income"
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label for="person4Income">Person 4 monthly income (optional)</label>
+                  <input
+                    type="text"
+                    id="person4Income"
+                    inputmode="decimal"
+                    placeholder="e.g., 10,000"
+                    aria-label="Person 4 monthly income"
+                  />
+                </div>
+              </div>
+
+              <div id="modeEqual" class="mode-block hidden">
+                <div class="form-group">
+                  <label for="peopleCount">Number of people sharing the expenses</label>
+                  <input
+                    type="text"
+                    id="peopleCount"
+                    inputmode="numeric"
+                    placeholder="e.g., 2"
+                    aria-label="Number of people"
+                  />
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate split</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pCvAn3" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Home Organisation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Organise home spaces and systems for everyday efficiency.</p>
+    <div class="affiliate-cta">View home organisation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for day-to-day decisions and household planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting, affordability, and money decisions for real life.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Plan goals, compare options, and understand long-term outcomes.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Family budget split calculator for shared household expenses</h2>
+
+              <p>
+                When multiple adults share a home, the hardest part is not the math. It is deciding
+                what “fair” looks like when rent, groceries, utilities, and other shared costs have
+                to be paid every month. This family budget split calculator is designed for one
+                specific decision: how much each person should contribute toward shared monthly
+                household expenses, either equally or in proportion to income.
+              </p>
+              <p>
+                The two most common approaches are an equal split and an income-based split. Equal
+                split is simple and fast: divide the total shared expenses by the number of people.
+                Income-based split aims to reduce strain on the lower earner by assigning each
+                person a share that matches their share of total household income. This calculator
+                shows both styles with practical outputs so you can agree on a split and move on.
+              </p>
+              <p>
+                To use it, start with your best estimate of total shared monthly expenses. This
+                should include the items everyone benefits from, such as rent or bond repayment,
+                groceries, electricity, water, internet, and shared subscriptions. Then choose a
+                split method. If you choose income-based split, enter at least two monthly incomes
+                and optionally add up to two more. If you choose equal split, enter the number of
+                people sharing the expense total. The result shows the monthly amount per person,
+                each person’s percentage share, and simple weekly and daily equivalents to make the
+                numbers feel real.
+              </p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
+                  “Shared expenses” means costs that benefit the household as a whole (rent,
+                  utilities, shared groceries), not personal spending like individual debt payments.
+                </li>
+                <li>
+                  In income-based mode, the split is proportional to the incomes you enter (if one
+                  person earns 60% of total income, they pay 60% of shared expenses).
+                </li>
+                <li>
+                  In equal mode, everyone pays the same amount regardless of income, because that
+                  is the point of this method.
+                </li>
+                <li>
+                  Weekly equivalents use 52 weeks per year divided by 12 months (about 4.33 weeks
+                  per month). Daily equivalents use 365 days per year divided by 12 months (about
+                  30.42 days per month).
+                </li>
+                <li>
+                  The calculator assumes all entered incomes are monthly take-home or monthly gross,
+                  but you must be consistent. Mixing gross and take-home will distort “fairness.”
+                </li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What expenses should I include in “shared monthly expenses”?</h3>
+              <p>
+                Include only costs that the household shares: housing, utilities, shared groceries,
+                internet, security, and shared subscriptions. If you want to include personal items
+                (like a car payment that only one person benefits from), handle those separately
+                and keep the split discussion clean.
+              </p>
+
+              <h3>Is splitting by income always “fairer” than splitting equally?</h3>
+              <p>
+                Not always. Income-based splitting reduces pressure on the lower earner and often
+                feels fair when incomes differ. Equal splitting is simple and can feel fair when
+                incomes are similar or when both people contribute in other non-financial ways. The
+                method you choose is a values decision. The calculator just gives you the numbers
+                clearly.
+              </p>
+
+              <h3>What if one person has irregular income or is temporarily unemployed?</h3>
+              <p>
+                Use an average monthly income estimate if earnings fluctuate, or choose equal mode
+                if that fits your household agreement. If someone is temporarily earning nothing,
+                income-based mode will push nearly all shared expenses onto the earners, which may
+                be accurate in the short term. If that is not acceptable, renegotiate what is
+                “shared” or agree on a minimum contribution outside this calculator.
+              </p>
+
+              <h3>Should I use gross income or take-home income for the income-based split?</h3>
+              <p>
+                Use whichever is more meaningful for your decision, but do not mix them. Take-home
+                (after tax) often aligns better with affordability. Gross income can be useful if
+                your household wants a simple rule and both people have similar tax situations. If
+                taxes, benefits, or deductions differ a lot, take-home usually produces a more
+                realistic split.
+              </p>
+
+              <h3>How can I improve accuracy if our expenses vary month to month?</h3>
+              <p>
+                Use a three-month average for shared expenses and a three- to six-month average for
+                income (especially if commissions or overtime are involved). You can also rerun the
+                calculator when a major cost changes, such as rent increases, a new utility rate, or
+                a change in employment. The goal is consistency, not perfection.
+              </p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oUXbi6" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Reminders</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Stay on top of daily tasks and commitments with reminder tools.</p>
+    <div class="affiliate-cta">Browse daily reminder tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

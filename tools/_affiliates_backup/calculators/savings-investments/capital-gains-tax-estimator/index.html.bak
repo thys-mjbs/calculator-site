@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Capital Gains Tax Estimator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate capital gains tax on an investment sale using sale proceeds, cost basis, fees, and optional offsets like losses and exemptions.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/savings-investments/capital-gains-tax-estimator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Capital Gains Tax Estimator | SnapCalc">
+    <meta property="og:description" content="Estimate capital gains tax on an investment sale using sale proceeds, cost basis, fees, and optional offsets like losses and exemptions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/savings-investments/capital-gains-tax-estimator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capital Gains Tax Estimator | SnapCalc">
+    <meta name="twitter:description" content="Estimate capital gains tax on an investment sale using sale proceeds, cost basis, fees, and optional offsets like losses and exemptions.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Capital Gains Tax Estimator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/capital-gains-tax-estimator/",
+      "description": "Estimate capital gains tax on an investment sale using sale proceeds, cost basis, fees, and optional offsets like losses and exemptions."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings &amp; Investments</a> ›
+        <span>Capital Gains Tax Estimator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Capital Gains Tax Estimator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/44uCySB" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Investment Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to plan investments based on goals and risk tolerance.</p>
+    <div class="affiliate-cta">Explore investment planning books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate tax and net proceeds from an investment sale</h2>
+
+              <p class="calculator-intro">Use this to estimate capital gains tax on a single sale based on your proceeds, cost basis, fees, and optional offsets like losses and exemptions.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="saleProceeds">Sale proceeds (total)</label>
+                <input type="text" id="saleProceeds" inputmode="decimal" placeholder="e.g., 250,000" aria-label="Sale proceeds total">
+              </div>
+
+              <div class="form-group">
+                <label for="costBasis">Cost basis (total)</label>
+                <input type="text" id="costBasis" inputmode="decimal" placeholder="e.g., 180,000" aria-label="Cost basis total">
+              </div>
+
+              <div class="advanced-section" aria-label="Advanced inputs">
+                <div class="form-group">
+                  <label for="saleFees">Sale fees (optional)</label>
+                  <input type="text" id="saleFees" inputmode="decimal" placeholder="e.g., 750" aria-label="Sale fees">
+                </div>
+
+                <div class="form-group">
+                  <label for="purchaseFees">Purchase fees not included in basis (optional)</label>
+                  <input type="text" id="purchaseFees" inputmode="decimal" placeholder="e.g., 500" aria-label="Purchase fees not included in basis">
+                </div>
+
+                <div class="form-group">
+                  <label for="lossesToOffset">Capital losses to offset this gain (optional)</label>
+                  <input type="text" id="lossesToOffset" inputmode="decimal" placeholder="e.g., 10,000" aria-label="Capital losses to offset">
+                </div>
+
+                <div class="form-group">
+                  <label for="gainAllowance">Tax free gain allowance or exemption (optional)</label>
+                  <input type="text" id="gainAllowance" inputmode="decimal" placeholder="e.g., 0" aria-label="Tax free gain allowance or exemption">
+                </div>
+
+                <div class="form-group">
+                  <label for="taxRate">Capital gains tax rate (percent)</label>
+                  <input type="text" id="taxRate" inputmode="decimal" placeholder="Default: 15" aria-label="Capital gains tax rate percent">
+                </div>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Estimate tax</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4iU4rcV" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Savings Growth</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn strategies to accelerate savings growth over time.</p>
+    <div class="affiliate-cta">View savings growth books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Plan contributions, estimate returns, and compare growth scenarios across investment choices.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, track spending, and make practical money decisions with quick calculators and checks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Model revenue, margins, and cash flow to support basic planning and reporting decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4iTfoLC" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Long-Term Investing</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand strategies for compounding wealth through long-term investments.</p>
+    <div class="affiliate-cta">View long-term investing books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Capital gains tax calculator for estimating tax on an investment sale</h2>
+
+              <p>When you sell an investment for more than you paid, the profit is usually called a capital gain. In many systems, capital gains can be taxed, but the exact rules vary by country, account type, and asset class. This calculator is a practical estimator for one straightforward situation: a single taxable sale where you know your sale proceeds and your original cost basis. It helps you translate that sale into an estimated tax amount and the net cash you keep after tax.</p>
+
+              <p>The primary decision this page supports is simple: if you sell this investment now, roughly how much tax should you set aside? That matters when you are planning a withdrawal, rebalancing a portfolio, or deciding whether to sell today or wait. The estimator is intentionally not trying to be a full tax system. It does not model brackets, holding period rules, special rates, surtaxes, or account-specific exemptions. Instead, it uses a single tax rate that you can enter, plus a few common offsets like fees, losses, and a gain allowance.</p>
+
+              <p>To use it, enter your total sale proceeds and your total cost basis. Sale proceeds is the total amount you received (before tax). Cost basis is what you paid for the investment, including amounts you want treated as part of the purchase cost. Then refine the estimate with the optional fields: fees that reduce your gain (such as broker commissions), purchase fees you forgot to include in your basis, capital losses you want to offset against this gain, and any tax free gain allowance you expect to apply. Finally, set a capital gains tax rate. If you do not enter one, the calculator defaults to 15% as a generic placeholder rate, which you should replace with a rate that matches your situation.</p>
+
+              <p>The calculator produces more than one number because a tax estimate is only useful if it explains what is happening. It shows your raw gain or loss, your taxable gain after offsets and allowance, the estimated tax due, your net proceeds after tax, and your effective tax rate as a share of your sale proceeds. If your sale is a loss, it shows zero tax and highlights the loss amount so you can decide whether it may be useful as an offset elsewhere.</p>
+
+              <p>This estimator is best used for planning and budgeting, not filing. If you have multiple sales, partial lots, complex cost basis tracking, or special rules (like wash sales, inflation indexing, or country-specific inclusion rates), you should treat the result as a rough starting point only. The point is to give a fast, defensible estimate that helps you avoid being surprised by a tax bill and helps you compare simple sell scenarios.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This is for a single taxable sale and uses one flat capital gains tax rate that you provide (or a 15% default if you leave it blank).</li>
+                <li>Cost basis is treated as one total number and the calculator does not allocate lots or handle partial-lot accounting methods.</li>
+                <li>Fees reduce the gain by adding purchase fees to basis and subtracting sale fees from proceeds, which is a common simplifying approach.</li>
+                <li>Loss offsets and gain allowances reduce taxable gain, but taxable gain cannot go below zero in this estimator.</li>
+                <li>This does not include income tax brackets, holding-period rules, surtaxes, rebates, account wrappers, or jurisdiction-specific adjustments.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What numbers should I use for sale proceeds and cost basis?</h3>
+              <p>Use totals for the sale you are estimating. Sale proceeds is the total amount you received from selling the investment before tax. Cost basis is what you originally paid for that position, plus any purchase costs you want included. If you have multiple buys at different prices, your platform may show an average cost or a cost basis report. If you are unsure, treat the basis as your best estimate and use the optional fees field to improve it.</p>
+
+              <h3>What if my sale is a loss instead of a gain?</h3>
+              <p>If your proceeds are less than your adjusted basis (including purchase fees), the result is a loss and the estimated tax is zero in this calculator. The tool still shows the loss amount because it is often the key planning output. Whether that loss can offset other gains depends on your local rules, but the calculator does not apply losses beyond the single sale you entered.</p>
+
+              <h3>Why is the tax rate a single percent and not a full tax bracket system?</h3>
+              <p>Most people searching for a quick capital gains tax estimate want a number they can set aside today, not a full tax filing engine. A single rate keeps the calculator fast and usable. If your real tax treatment depends on brackets or holding periods, use a rate that matches your expected effective capital gains rate for this sale, or run two quick scenarios using a lower and higher rate to see the range.</p>
+
+              <h3>Do fees really reduce taxable gains?</h3>
+              <p>In many setups, certain transaction costs can reduce the taxable gain by reducing proceeds or increasing basis. This calculator models that in a simple, transparent way: sale fees reduce proceeds, and purchase fees increase basis. If your fees are already included in your platform’s cost basis, leave purchase fees at zero so you do not double-count them.</p>
+
+              <h3>What is the gain allowance or exemption field for?</h3>
+              <p>Some tax systems allow a portion of capital gains to be tax free, either as an annual exemption or a threshold. If you expect such an allowance to apply to this sale, enter it here. If you do not know, leave it at zero. The calculator subtracts the allowance after losses and fees, then floors taxable gain at zero so you never get a negative taxable gain result.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oWLfMZ" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Diversification</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn why diversification reduces risk in investment portfolios.</p>
+    <div class="affiliate-cta">Browse diversification books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

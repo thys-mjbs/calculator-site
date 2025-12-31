@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Resistor Color Code Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Decode 4-band, 5-band, and 6-band resistor color codes into ohms, tolerance, and range, or generate band colors from a target resistance." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/resistor-color-code-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Resistor Color Code Calculator | SnapCalc" property="og:title"/>
+<meta content="Decode 4-band, 5-band, and 6-band resistor color codes into ohms, tolerance, and range, or generate band colors from a target resistance." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/resistor-color-code-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Resistor Color Code Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Decode 4-band, 5-band, and 6-band resistor color codes into ohms, tolerance, and range, or generate band colors from a target resistance." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Resistor Color Code Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/resistor-color-code-calculator/",
+      "description": "Decode 4-band, 5-band, and 6-band resistor color codes into resistance, tolerance, and range, or generate band colors from a target resistance."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Resistor Color Code Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Resistor Color Code Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Decode or generate resistor band colors</h2>
+<p class="calculator-intro">Pick a mode. Decode a resistor’s band colors into resistance and tolerance, or enter a target resistance to generate the closest standard band colors.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="modeSelect">Mode</label>
+<select id="modeSelect">
+<option selected="" value="decode">Decode colors to resistance</option>
+<option value="encode">Generate colors from resistance</option>
+</select>
+</div>
+<div id="modeBlockDecode">
+<div class="form-group">
+<label for="bandCount">Number of bands</label>
+<select id="bandCount">
+<option selected="" value="4">4-band (2 digits + multiplier + tolerance)</option>
+<option value="5">5-band (3 digits + multiplier + tolerance)</option>
+<option value="6">6-band (5-band + temperature coefficient)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="band1">Band 1 (1st digit)</label>
+<select id="band1"></select>
+</div>
+<div class="form-group">
+<label for="band2">Band 2 (2nd digit)</label>
+<select id="band2"></select>
+</div>
+<div class="form-group" id="band3Group">
+<label for="band3">Band 3 (3rd digit, 5/6-band only)</label>
+<select id="band3"></select>
+</div>
+<div class="form-group">
+<label for="multiplierBand">Multiplier</label>
+<select id="multiplierBand"></select>
+</div>
+<div class="form-group">
+<label for="toleranceBand">Tolerance</label>
+<select id="toleranceBand"></select>
+</div>
+<div class="form-group" id="tempcoGroup">
+<label for="tempcoBand">Temp coefficient (ppm/°C, 6-band only)</label>
+<select id="tempcoBand"></select>
+</div>
+</div>
+<div class="hidden" id="modeBlockEncode">
+<div class="form-group">
+<label for="encodeBandCount">Number of bands</label>
+<select id="encodeBandCount">
+<option selected="" value="4">4-band</option>
+<option value="5">5-band</option>
+</select>
+</div>
+<div class="form-group">
+<label for="targetResistance">Target resistance</label>
+<input id="targetResistance" inputmode="decimal" placeholder="e.g., 4700" type="text"/>
+</div>
+<div class="form-group">
+<label for="targetUnit">Unit</label>
+<select id="targetUnit">
+<option selected="" value="ohm">Ω (ohms)</option>
+<option value="kohm">kΩ (kilo-ohms)</option>
+<option value="mohm">MΩ (mega-ohms)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="encodeTolerance">Tolerance</label>
+<select id="encodeTolerance"></select>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve practical engineering problems with calculators for electronics, mechanics, and technical formulas.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units and scales quickly, including metric, imperial, temperature, and other everyday conversions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle common math tasks like percentages, ratios, rounding, and other quick calculations.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Resistor color code calculator for 4-band, 5-band, and 6-band resistors</h2>
+<p>Resistors are often marked with colored bands instead of printed numbers, especially on through-hole parts and older components. The bands encode a resistance value (in ohms), a tolerance (how far the real value can vary), and sometimes a temperature coefficient. This resistor color code calculator helps you translate band colors into a readable resistance and range, and it can also generate a reasonable set of band colors if you already know the resistance you need.</p>
+<p>If you are troubleshooting a circuit, the most common need is decoding: you see the bands on a resistor and want to know if it is 220 Ω, 2.2 kΩ, 22 kΩ, or something else. This tool supports 4-band, 5-band, and 6-band decoding. It calculates the nominal resistance, shows the tolerance percentage, and gives a minimum and maximum value range so you can quickly judge whether a measured resistance is within spec.</p>
+<p>If you are designing or ordering parts, the second common need is encoding: you know the target resistance (for example 4.7 kΩ) and want to confirm what the bands should look like, or you want a close match if your exact value is not available in a given tolerance series. In encode mode, you enter the target resistance and unit, pick a tolerance, then the calculator outputs a standard band set that represents a close, practical resistor value for either 4-band (2 significant digits) or 5-band (3 significant digits).</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>4-band resistors use 2 significant digits plus a multiplier, then a tolerance band. 5-band and 6-band resistors use 3 significant digits plus a multiplier, then a tolerance band.</li>
+<li>Decode results assume standard resistor color meanings: digits 0 to 9, multiplier values including gold (0.1) and silver (0.01), and common tolerance colors.</li>
+<li>If you select 6-band, the last band is treated as temperature coefficient in parts per million per degree Celsius (ppm/°C). The calculator reports what that implies for drift per 10°C as a simple reference.</li>
+<li>Encode mode prioritizes practical banding: it uses 2 digits for 4-band and 3 digits for 5-band, then chooses an appropriate multiplier to represent a close value. If your exact value cannot be represented at that digit precision, the output is a closest match, and the result tells you the represented resistance.</li>
+<li>This tool does not identify physical orientation for every resistor style. Many resistors have a slightly wider gap before the tolerance band. If your reading seems off by a factor of 10 or 100, flip the band order and try again.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>How do I know if my resistor is 4-band or 5-band?</h3>
+<p>Most general-purpose resistors with a gold or silver tolerance band are 4-band. Precision resistors often use 5 bands and may have a brown tolerance band (1%) or other tighter tolerances. If there are five colored bands with no obvious “spaced” tolerance band, it is likely a 5-band part. When in doubt, select 5-band and see if the value looks realistic for the circuit.</p>
+<h3>What does the tolerance range mean for real measurements?</h3>
+<p>Tolerance means the resistor’s actual resistance can vary from its nominal value by the stated percentage at manufacture. For example, a 1 kΩ resistor at 5% tolerance can be anywhere from 950 Ω to 1050 Ω and still be considered in spec. When measuring in-circuit, other components in parallel can also affect the reading, so use the range as a guide, not absolute proof of failure.</p>
+<h3>What is the multiplier band doing?</h3>
+<p>The multiplier band scales the significant digits. For instance, digits “47” with a multiplier of 100 becomes 4700 Ω (4.7 kΩ). A gold multiplier represents 0.1 and silver represents 0.01, which are used for low-ohm resistors. If your decoded result seems too large or too small, multiplier interpretation or band orientation is the usual cause.</p>
+<h3>When does the 6th band (tempco) matter?</h3>
+<p>Temperature coefficient matters when the resistor value must remain stable across temperature changes, such as in precision analog circuits, sensors, or reference networks. A value like 100 ppm/°C means the resistance changes about 0.01% per °C. This calculator shows an approximate drift per 10°C so you can quickly estimate whether the temperature effect is meaningful in your application.</p>
+<h3>Why does encode mode sometimes return a “closest match” value?</h3>
+<p>A 4-band resistor can only represent two significant digits, so not every resistance can be represented exactly. For example, 4730 Ω cannot be expressed precisely with only two digits and a multiplier, so the closest representable values are 4.7 kΩ or 4.8 kΩ depending on rounding. A 5-band resistor has three digits and can represent more values exactly, which is why it is common for tighter tolerances.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

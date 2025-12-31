@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Calorie Maintenance (Non-Fitness Version) | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your daily maintenance calories to keep your weight stable for everyday meal planning and routines. Includes a practical calorie range and simple breakdowns.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/calorie-maintenance-non-fitness-version/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Calorie Maintenance (Non-Fitness Version) | SnapCalc">
+    <meta property="og:description" content="Estimate your daily maintenance calories to keep your weight stable for everyday meal planning and routines. Includes a practical calorie range and simple breakdowns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/calorie-maintenance-non-fitness-version/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calorie Maintenance (Non-Fitness Version) | SnapCalc">
+    <meta name="twitter:description" content="Estimate your daily maintenance calories to keep your weight stable for everyday meal planning and routines. Includes a practical calorie range and simple breakdowns.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calorie Maintenance (Non-Fitness Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/calorie-maintenance-non-fitness-version/",
+      "description": "Estimate daily maintenance calories to keep weight stable for everyday meal planning. Provides a practical range and simple breakdowns."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Calorie Maintenance (Non-Fitness Version)</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Calorie Maintenance (Non-Fitness Version)</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48Xt5Vj" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Daily Organisation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Tools to organise daily tasks, priorities, and routines efficiently.</p>
+    <div class="affiliate-cta">Explore daily organisation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your daily maintenance calories</h2>
+
+              <p class="calculator-intro">Use this to estimate how many calories you likely need per day to keep your weight stable for everyday routines and meal planning. This is not a diet or workout planner.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="input-group">
+                <label for="unitSystem">Units</label>
+                <select id="unitSystem">
+                  <option value="metric">Metric (kg, cm)</option>
+                  <option value="imperial">Imperial (lb, ft/in)</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="sex">Sex</label>
+                <select id="sex">
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="ageYears">Age (years)</label>
+                <input type="text" id="ageYears" inputmode="numeric" placeholder="e.g., 34">
+              </div>
+
+              <div id="metricBlock">
+                <div class="input-group">
+                  <label for="heightCm">Height (cm)</label>
+                  <input type="text" id="heightCm" inputmode="decimal" placeholder="e.g., 170">
+                </div>
+
+                <div class="input-group">
+                  <label for="weightKg">Weight (kg)</label>
+                  <input type="text" id="weightKg" inputmode="decimal" placeholder="e.g., 72">
+                </div>
+              </div>
+
+              <div id="imperialBlock" class="hidden">
+                <div class="input-group">
+                  <label for="heightFt">Height (feet)</label>
+                  <input type="text" id="heightFt" inputmode="numeric" placeholder="e.g., 5">
+                </div>
+
+                <div class="input-group">
+                  <label for="heightIn">Height (inches)</label>
+                  <input type="text" id="heightIn" inputmode="numeric" placeholder="e.g., 7">
+                </div>
+
+                <div class="input-group">
+                  <label for="weightLb">Weight (lb)</label>
+                  <input type="text" id="weightLb" inputmode="decimal" placeholder="e.g., 160">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="activityLevel">Daily activity level</label>
+                <select id="activityLevel">
+                  <option value="1.2">Mostly sitting (little movement)</option>
+                  <option value="1.375">Lightly active (some walking, normal day)</option>
+                  <option value="1.55" selected>Moderately active (regular moving, busy day)</option>
+                  <option value="1.725">Very active (physical job or lots of movement)</option>
+                  <option value="1.9">Extremely active (hard physical work most days)</option>
+                </select>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate maintenance calories</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Simple tools for common daily decisions, planning, and quick calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Calculate health metrics and routines like hydration, BMI, and activity planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting and planning tools to understand spending, saving, and everyday costs.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KwwP8h" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Life Organisation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Organise personal life tasks, commitments, and responsibilities clearly.</p>
+    <div class="affiliate-cta">Browse life organisation tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Calorie maintenance calculator for everyday meal planning and stable weight</h2>
+
+              <p>This calculator estimates your daily calorie maintenance, meaning the number of calories you likely need per day to keep your body weight roughly stable. The goal is practical: help you plan everyday meals, portions, and routines without turning it into a diet plan or a gym program. If you have ever wondered why some weeks you feel hungrier, why your weight slowly drifts up or down, or how much food fits a normal day, maintenance calories are the baseline that makes those questions easier to answer.</p>
+
+              <p>To use it, enter your sex, age, height, weight, and a simple activity level that matches a typical day. You can use metric or imperial units. The calculator first estimates your baseline energy needs at rest, then scales it up based on how active your day is. The result is a single daily number, plus a small practical range, because real life is not perfectly consistent and calorie needs change slightly from day to day.</p>
+
+              <p>The main output is your estimated maintenance calories per day. Under that, you will see supporting numbers that make the result more usable in the real world: a reasonable high and low range, an approximate per meal target (based on three meals), and a weekly total. If you do not eat exactly the same every day, that is normal. The weekly total helps you think in averages, which is usually more realistic than trying to be exact on a single day.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This uses a standard resting-calorie estimate based on age, sex, height, and weight, then applies an activity multiplier to reflect a typical day.</li>
+                <li>Activity level is an average. If you have very active days and very quiet days, pick the option that best represents your usual week.</li>
+                <li>The result is an estimate, not a lab measurement. A practical range is shown because small differences in movement, sleep, and stress can change daily needs.</li>
+                <li>This is designed for stable-weight planning, not for setting weight loss or weight gain targets. If you want a deliberate change, use a dedicated goal-based calculator.</li>
+                <li>Medical conditions, pregnancy, breastfeeding, and certain medications can change calorie needs. In those cases, treat this as a rough starting point and use professional guidance for decisions.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the calculator show a range instead of one perfect number?</h3>
+              <p>Your calorie needs are not fixed to a single exact value. Day-to-day movement, temperature, sleep, and routine changes all move the number slightly. The range is a realistic planning tool. If your intake lands somewhere inside the range on most days, your weight is likely to stay broadly stable over time.</p>
+
+              <h3>What activity level should I choose if my week is mixed?</h3>
+              <p>Pick the option that matches your average week, not your best day. If you sit most days but have a few active days, “Lightly active” is often closer than “Very active.” If your job involves physical movement most days, “Very active” may be a better fit. If you are unsure, start with “Moderately active” and adjust after you watch real-world results for a couple of weeks.</p>
+
+              <h3>If I eat this number of calories, will my weight never change?</h3>
+              <p>No. Weight naturally fluctuates due to water, salt intake, digestion, and monthly hormonal cycles. Maintenance calories are about trend, not daily scale readings. If your average intake is close to maintenance, your weight trend should stay roughly stable across weeks, even if the scale moves up and down day to day.</p>
+
+              <h3>What if I do not know my exact height or weight?</h3>
+              <p>Use a recent estimate. Being off by a small amount will not break the result. If your numbers are very old or uncertain, update them when you can, because maintenance calories depend on body size. The purpose is to be directionally correct for meal planning, not to produce a perfect clinical measurement.</p>
+
+              <h3>How can I tell if the estimate is too high or too low for me?</h3>
+              <p>Use it as a starting point for two to three weeks. If your average intake is near the estimate and your weight trends up over multiple weeks, your true maintenance is likely lower. If your weight trends down, it is likely higher. Adjust the daily target by a small amount, such as 100 to 200 calories, and reassess. That small adjustment is usually enough for fine tuning without overreacting to normal fluctuations.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oUXbi6" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Reminders</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Stay on top of daily tasks and commitments with reminder tools.</p>
+    <div class="affiliate-cta">Browse daily reminder tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

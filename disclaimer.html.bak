@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disclaimer | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Match hubs / homepage rendering: centered, clean, readable -->
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Disclaimer</h1>
+        </div>
+
+        <section class="seo-section">
+          <p>
+            This Disclaimer applies to SnapCalc and all calculators, utilities,
+            tools, pages, content, and outputs provided on this website. The site
+            exists to help users estimate values, explore scenarios, and improve
+            clarity when working with numbers. It is not a substitute for
+            professional judgement, official sources, or regulated advice. By using SnapCalc, you agree to accept all disclaimers outlined here and acknowledge the inherent limitations of using such tools for personal, business, or professional decision-making.
+          </p>
+
+          <h2>No financial, legal, tax, investment, medical, engineering, or professional advice</h2>
+          <p>
+            All calculators and content on SnapCalc are provided for general
+            informational and educational purposes. The website operator is not
+            acting as a financial advisor, accountant, tax practitioner, attorney,
+            investment consultant, medical practitioner, engineer, or licensed
+            professional through the operation of this site.
+          </p>
+          <p>
+            Nothing on SnapCalc should be interpreted as professional advice,
+            recommendations, approvals, certifications, instructions, or guarantees
+            for your specific situation. If you require professional advice, consult
+            an appropriately qualified professional who can assess your situation
+            directly and reference official sources and requirements.
+          </p>
+          <p>
+            **Scope of Usage:** SnapCalc is not intended for complex, high-risk, or professional-level calculations, nor is it designed to be the sole basis for significant financial, health, or legal decisions. For important matters like tax filing, legal agreements, medical treatments, or engineering projects, please consult with a certified professional.
+          </p>
+
+          <h2>General information only</h2>
+          <p>
+            Calculator outputs and explanatory text are designed for general reference
+            and estimation. SnapCalc may use simplified assumptions, default values,
+            rounding, and generic conversion factors to keep tools usable. Those
+            assumptions may not reflect your jurisdiction, industry, contract terms,
+            employer policies, insurance terms, local regulations, building codes,
+            safety requirements, medical guidance, or other context that can materially
+            change outcomes. Calculators may also be based on current average standards, which are subject to change and may not reflect future rates, fees, or laws.
+          </p>
+          <p>
+            **No Tailored Advice:** SnapCalc is not tailored to your specific personal, business, or regional circumstances. While our calculators aim for general accuracy, users should independently verify results with authoritative, real-world sources to ensure relevance and correctness. Users are encouraged to verify assumptions or adjust them as needed for context-specific accuracy.
+          </p>
+
+          <h2>No guarantee of accuracy or suitability</h2>
+          <p>
+            SnapCalc makes no warranties regarding accuracy, completeness, suitability,
+            availability, timeliness, or reliability of any calculator, output, or
+            content. Results can be incorrect or misleading if:
+          </p>
+          <ul>
+            <li>Inputs are inaccurate, incomplete, or inconsistent</li>
+            <li>Units are mixed or misunderstood</li>
+            <li>Assumptions built into a tool do not match real-world conditions</li>
+            <li>Rounding or approximations meaningfully affect the result</li>
+            <li>External rules, rates, policies, or standards have changed</li>
+            <li>Results are generated based on incomplete or outdated data</li>
+          </ul>
+          <p>
+            You must independently verify results before relying on them, especially
+            where errors could cause financial loss, contract disputes, compliance
+            issues, health impacts, safety risks, or engineering failures. SnapCalc
+            assumes no responsibility for any damages arising from reliance on its outputs.
+          </p>
+
+          <h2>User responsibility for inputs and interpretation</h2>
+          <p>
+            You are responsible for choosing appropriate inputs, confirming values are
+            correct, and interpreting outputs responsibly. SnapCalc cannot validate your
+            intent or your constraints. Examples or helper text are general guidance only
+            and do not reduce your obligation to verify outcomes. You should consult authoritative sources if you are unsure about any input data or result interpretation.
+          </p>
+          <p>
+            **Accuracy and Verification:** You agree to ensure that all data input into SnapCalc’s calculators are accurate, complete, and relevant. Results produced from incomplete, incorrect, or inconsistent inputs should be considered unreliable. If a result appears incorrect, treat it as unverified, cross-check with an
+            independent source, and report the issue via the Contact page with the page
+            URL and the input values used. You are solely responsible for how results are applied.
+          </p>
+
+          <h2>Use at your own risk</h2>
+          <p>
+            You use this website and its calculators at your own risk. To the maximum
+            extent permitted by law, SnapCalc and the website operator are not liable
+            for loss, damage, cost, injury, liability, or negative outcomes arising
+            from use of or reliance on the site, its calculators, its outputs, or any
+            information displayed. This includes, but is not limited to, financial losses,
+            contractual issues, health issues, safety concerns, or business disruptions
+            caused by incorrect or misleading results.
+          </p>
+          <p>
+            **Limitation of Liability:** Under no circumstances will SnapCalc, its affiliates, employees, or agents be held liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of the site or calculators.
+          </p>
+
+          <h2>No client, advisory, or professional relationship</h2>
+          <p>
+            Using SnapCalc does not create a client relationship, advisory relationship,
+            fiduciary relationship, or professional duty of care between you and the
+            website operator. No professional services are provided through availability
+            of calculators or content. SnapCalc does not take any responsibility for providing customized recommendations or advice specific to your case.
+          </p>
+
+          <h2>Third-party links, ads, and external resources</h2>
+          <p>
+            SnapCalc may contain links to third-party websites, tools, services, or
+            resources. The site may also display advertising and include affiliate
+            links. These are provided for convenience. SnapCalc does not control and
+            is not responsible for third-party content, accuracy, availability, security,
+            or privacy practices. Clicking on third-party links or interacting with
+            third-party services is entirely at your own discretion, and SnapCalc is
+            not responsible for any outcomes resulting from such interactions.
+          </p>
+          <p>
+            **Third-Party Liability:** SnapCalc disclaims all liability for any interactions with third-party services, including financial or personal data shared with external advertisers or service providers.
+          </p>
+
+          <h2>Updates, changes, and maintenance</h2>
+          <p>
+            SnapCalc may update calculators, adjust formulas, improve explanations, correct
+            errors, or modify site content at any time. Tools may be added, removed, or
+            changed without notice. The site may also be temporarily unavailable due to
+            maintenance or updates. SnapCalc assumes no responsibility for these interruptions.
+          </p>
+
+          <h2>Changes to this Disclaimer</h2>
+          <p>
+            This Disclaimer may be updated periodically to reflect changes in site
+            functionality, policies, legal requirements, or operational practices.
+            Updates are effective once posted. Continued use of the site indicates
+            acceptance of the updated Disclaimer. Users should check this page periodically
+            for any changes or additions.
+          </p>
+
+          <h2>Governing Law</h2>
+          <p>
+            These Terms & Conditions are governed by the laws applicable in the
+            site operator’s jurisdiction, subject to mandatory consumer protection
+            rules in your location. Any disputes arising from these terms shall be resolved in the courts of the jurisdiction where SnapCalc is based, or where applicable, international courts for cross-border cases.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            For questions about this Disclaimer or to report an issue with a calculator
+            or page, please use the Contact page and include the relevant URL and a short
+            description. SnapCalc strives to address concerns promptly and with transparency.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

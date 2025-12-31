@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Markup Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate selling price, profit, and margin from cost and markup, or work backwards from cost and selling price to find markup and margin." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/business-accounting/markup-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Markup Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate selling price, profit, and margin from cost and markup, or work backwards from cost and selling price to find markup and margin." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/business-accounting/markup-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Markup Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate selling price, profit, and margin from cost and markup, or work backwards from cost and selling price to find markup and margin." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Markup Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/markup-calculator/",
+      "description": "Use this markup calculator to compute selling price, profit, and margin from a cost and markup percentage, or reverse-calculate markup and margin from cost and selling price."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>Markup Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Markup Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate markup, selling price, profit, and margin</h2>
+<p class="calculator-intro">Choose a mode, enter your numbers, and get a clean pricing breakdown. This helps you price products consistently and avoid confusing markup with margin.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="modeSelect">Calculation mode</label>
+<select id="modeSelect">
+<option value="percent">Cost + markup % → selling price</option>
+<option value="price">Cost + selling price → markup %</option>
+</select>
+</div>
+<div class="form-group">
+<label for="costInput">Cost price</label>
+<input id="costInput" inputmode="decimal" placeholder="e.g. 1,250.00" type="text"/>
+</div>
+<div id="modeBlockPercent">
+<div class="form-group">
+<label for="markupInput">Markup percentage</label>
+<input id="markupInput" inputmode="decimal" placeholder="e.g. 35" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeBlockPrice">
+<div class="form-group">
+<label for="sellingInput">Selling price</label>
+<input id="sellingInput" inputmode="decimal" placeholder="e.g. 1,687.50" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Pricing, margins, break-even, cash flow, and practical business math tools.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, spending, affordability, and everyday money planning calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Repayment estimates, interest costs, and credit planning tools for real decisions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Markup calculator for pricing, profit, and margin</h2>
+<p>A markup calculator helps you price items consistently by turning a cost price into a selling price, then showing what that implies for profit and margin. If you run a small business, quote jobs, sell products, or manage a catalogue, you will eventually face the same question: “If this costs me X, what should I charge?” Markup is one of the simplest ways to answer that question. You pick a markup percentage that matches your business model, apply it to cost, and you get a target selling price.</p>
+<p>This calculator supports the two most common real-world situations. First, you know your cost and you choose a markup percentage. The calculator will output the selling price, the profit in currency, and the gross margin percentage. Second, you know your cost and you already have a selling price in mind (or a competitor price you must match). In that case, the calculator works backwards and tells you what markup and margin you are really getting. That second mode is where most pricing mistakes get exposed.</p>
+<p>Markup and margin are related but not the same, and confusing them creates bad decisions. Markup is based on cost. Margin is based on selling price. Two businesses can sell at the same price but have very different markups if their costs differ. Likewise, a markup that sounds healthy might produce a margin that is too thin once you consider discounts, returns, payment fees, delivery, and wastage. Use the breakdown from this calculator to sanity-check your pricing before you publish prices or send quotes.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Cost price should be your true unit cost for the item or job, ideally including direct costs you must pay to deliver it.</li>
+<li>Markup percentage is applied to cost: selling price = cost × (1 + markup% ÷ 100).</li>
+<li>Profit shown here is gross profit on the item: profit = selling price − cost. It does not include overheads like rent, salaries, marketing, or admin unless you include those in your cost figure.</li>
+<li>Margin percentage is calculated on selling price: margin% = profit ÷ selling price × 100.</li>
+<li>If your selling price is less than your cost, the calculator will still show the implied negative profit, markup, and margin so you can see the loss clearly.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is markup?</h3>
+<p>Markup is the percentage you add on top of your cost to get your selling price. A 25% markup means you charge cost plus 25% of cost. It is a simple rule for setting prices when you start from cost.</p>
+<h3>What is margin, and why does it differ from markup?</h3>
+<p>Margin is the percentage of the selling price that is profit. Because it uses selling price in the denominator, margin will always be lower than markup for the same item (unless profit is zero). This matters because many targets and benchmarks, like gross margin targets, are defined in margin terms.</p>
+<h3>How do I choose a markup percentage?</h3>
+<p>Start with your required gross margin target, then consider what your market can realistically pay. If you have frequent discounts, returns, or payment fees, you may need a higher markup to protect your margin. If you are unsure, use the reverse mode: test a selling price you think the market will accept, and check whether the implied margin is high enough to cover your overheads and still leave net profit.</p>
+<h3>Should I include VAT or sales tax in the selling price?</h3>
+<p>This calculator treats cost and selling price as comparable figures. If you price excluding VAT and invoice VAT separately, enter figures excluding VAT. If you must publish VAT-inclusive prices, enter VAT-inclusive cost and VAT-inclusive selling price. The key is consistency so the profit calculation remains meaningful.</p>
+<h3>How does discounting affect markup and margin?</h3>
+<p>Discounts reduce selling price but your cost usually stays the same, so profit and margin shrink fast. A small discount can wipe out a large chunk of margin. Use this calculator to compare your normal selling price versus your discounted selling price and see the implied margin before you approve discounts.</p>
+<div class="last-updated">Last updated: 2025-12-14</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

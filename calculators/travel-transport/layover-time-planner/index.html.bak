@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Layover Time Planner | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Plan whether your layover is long enough between flights by calculating total connection time, required buffers, and remaining slack." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/travel-transport/layover-time-planner/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Layover Time Planner | SnapCalc" property="og:title"/>
+<meta content="Plan whether your layover is long enough between flights by calculating total connection time, required buffers, and remaining slack." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/travel-transport/layover-time-planner/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Layover Time Planner | SnapCalc" name="twitter:title"/>
+<meta content="Plan whether your layover is long enough between flights by calculating total connection time, required buffers, and remaining slack." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Layover Time Planner",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/layover-time-planner/",
+      "description": "Calculate layover duration between flights, subtract realistic buffers, and see whether your connection is comfortable, tight, or too short."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Layover Time Planner</span>
+</nav>
+<div class="page-layout">
+<h1>Layover Time Planner</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Check if your layover is long enough</h2>
+<p class="calculator-intro">Enter your arrival and next departure times. The planner calculates your total layover, subtracts realistic buffers, and tells you if the connection is comfortable, tight, or too short.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="arrivalDate">Arrival date (local)</label>
+<input id="arrivalDate" inputmode="numeric" placeholder="YYYY-MM-DD" type="text"/>
+</div>
+<div class="input-group">
+<label for="arrivalTime">Arrival time (24-hour)</label>
+<input id="arrivalTime" inputmode="numeric" placeholder="HH:MM" type="text"/>
+</div>
+<div class="input-group">
+<label for="departureDate">Next departure date (local)</label>
+<input id="departureDate" inputmode="numeric" placeholder="YYYY-MM-DD" type="text"/>
+</div>
+<div class="input-group">
+<label for="departureTime">Next departure time (24-hour)</label>
+<input id="departureTime" inputmode="numeric" placeholder="HH:MM" type="text"/>
+</div>
+<button aria-expanded="false" class="advanced-toggle" id="toggleAdvancedButton" type="button">
+                Show advanced options
+              </button>
+<div aria-hidden="true" class="advanced-section hidden" id="advancedSection">
+<div class="input-group">
+<label for="minConnectionMinutes">Recommended minimum connection time (minutes)</label>
+<input id="minConnectionMinutes" inputmode="numeric" placeholder="90" type="text"/>
+</div>
+<div class="input-group">
+<label for="personalBufferMinutes">Your extra buffer (minutes)</label>
+<input id="personalBufferMinutes" inputmode="numeric" placeholder="30" type="text"/>
+</div>
+<div class="input-group">
+<label for="terminalChangeMinutes">Terminal or gate change time (minutes)</label>
+<input id="terminalChangeMinutes" inputmode="numeric" placeholder="0" type="text"/>
+</div>
+<div class="input-group">
+<label for="extraChecksMinutes">Extra security, passport control, or customs time (minutes)</label>
+<input id="extraChecksMinutes" inputmode="numeric" placeholder="0" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Plan layover</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Plan travel time, compare routes, and estimate schedules for common trips and logistics.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Convert times and dates, calculate durations, and plan schedules with fewer mistakes.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for daily decisions, from planning and budgeting to simple calculations.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Layover time planner for flight connections and minimum connection time checks</h2>
+<p>A layover is the time between your first flight arriving and your next flight departing. The obvious question is simple: do you have enough time to make the connection? In practice, the answer is not just the raw minutes on the timetable. You need to account for real delays, the time it takes to get off the aircraft, walking between gates or terminals, security checks, and boarding cutoffs. This Layover Time Planner gives you a fast, realistic way to judge whether a connection is comfortable, tight, or too short.</p>
+<p>Use the default view when you just want the total layover time. Enter the local arrival date and time, then the local next departure date and time. The calculator returns the total layover duration and a plain-language verdict. If you want a more realistic decision, open the advanced options and add buffers like a recommended minimum connection time and any extra time you expect to need, such as terminal changes or passport control.</p>
+<p>The main output is “slack,” which is your layover time minus the time you realistically need to complete the connection. If slack is large, your connection is comfortable. If slack is small, a minor delay can break your itinerary. If slack is negative, the plan is not realistic and you should change flights, choose a longer connection, or reduce complexity (for example, avoid terminal changes). This planner is designed for the most common traveler decision: should I book this connection, or is it too risky?</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>All times are assumed to be local airport times for the connection airport. Do not mix time zones in the same calculation.</li>
+<li>The planner assumes a same-airport connection. It is not designed for changing airports within a city.</li>
+<li>The “recommended minimum connection time” is a practical planning threshold, not an airline guarantee. Defaults are conservative for a typical large airport.</li>
+<li>Airlines often close boarding before departure time. This planner treats that risk as part of your buffer rather than trying to predict a specific cutoff.</li>
+<li>Actual connection risk depends on factors you may not know (gate location, queue length, inbound delays). Use the advanced fields to add realistic extra time when uncertain.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is a “good” layover time for a connection?</h3>
+<p>There is no universal number, but for planning purposes a conservative baseline is 60 to 120 minutes at a larger airport. Shorter connections can work when you stay in the same terminal and your inbound flight is reliable. Longer connections are safer when you expect queues, terminal changes, or immigration checks.</p>
+<h3>Why can a 60-minute layover still be risky?</h3>
+<p>The published layover is not all usable time. You may spend time taxiing, waiting to deplane, walking long distances, passing security, or dealing with a gate change. Also, boarding can effectively end before the scheduled departure. A small delay on your first flight can erase the margin.</p>
+<h3>Do I need to fill in the advanced options?</h3>
+<p>No. The default calculation is still useful because it gives the true duration between arrival and departure. Advanced options are for a better decision. If you are unsure, keep the defaults and only add extra minutes when you know you will need them (for example, you always prefer a bigger buffer).</p>
+<h3>What if my departure is the next day?</h3>
+<p>This calculator supports overnight layovers. Enter the correct departure date for the next flight. The planner will compute the full duration across midnight. If you accidentally enter the same date for an overnight layover, the calculator will show an error because it would look like your next flight leaves before you arrive.</p>
+<h3>When should I treat a connection as “too short” even if slack is positive?</h3>
+<p>If slack is positive but small, the connection is fragile. Treat it as risky if you have checked baggage recheck, you are connecting internationally, you have mobility limitations, or missing the flight would have high consequences. In those cases, increase your buffer until the slack is comfortably positive.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

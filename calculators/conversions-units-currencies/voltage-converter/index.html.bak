@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Voltage Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert voltage between millivolts (mV), volts (V), kilovolts (kV), and megavolts (MV). Get a clear converted value and an optional quick reference across common units." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/voltage-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Voltage Converter | SnapCalc" property="og:title"/>
+<meta content="Convert voltage between millivolts (mV), volts (V), kilovolts (kV), and megavolts (MV). Get a clear converted value and an optional quick reference across common units." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/voltage-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Voltage Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert voltage between millivolts (mV), volts (V), kilovolts (kV), and megavolts (MV). Get a clear converted value and an optional quick reference across common units." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Voltage Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/voltage-converter/",
+      "description": "Convert voltage values between common voltage units (mV, V, kV, MV) using standard metric scaling."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Voltage Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Voltage Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert voltage between mV, V, kV, and MV</h2>
+<p class="calculator-intro">Enter a voltage, choose the source unit and target unit, then convert. Optionally show a quick reference across common voltage units.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="voltageValue">Voltage value</label>
+<input id="voltageValue" inputmode="decimal" placeholder="e.g., 230 or 12,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="fromUnit">From unit</label>
+<select aria-label="From unit" id="fromUnit">
+<option value="mV">Millivolts (mV)</option>
+<option selected="" value="V">Volts (V)</option>
+<option value="kV">Kilovolts (kV)</option>
+<option value="MV">Megavolts (MV)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="toUnit">To unit</label>
+<select aria-label="To unit" id="toUnit">
+<option value="mV">Millivolts (mV)</option>
+<option value="V">Volts (V)</option>
+<option selected="" value="kV">Kilovolts (kV)</option>
+<option value="MV">Megavolts (MV)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="showAllUnits">
+<input id="showAllUnits" type="checkbox"/>
+                  Show conversions in all common units (mV, V, kV, MV)
+                </label>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert voltage</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert everyday and technical values between common units with simple, reliable tools.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Work through practical engineering calculations for electrical, mechanical, and general technical tasks.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle core math tasks like ratios, percentages, rounding, and number conversions quickly.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Voltage converter for mV to V, V to kV, and other common voltage units</h2>
+<p>This voltage converter is built for one primary job: converting a known voltage value from one unit to another using standard metric scaling. Most people searching for a “voltage converter” already have a number (like 230 V, 12 mV, or 11 kV) and need the same electrical potential expressed in a different unit for a datasheet, a component selection, a measurement report, or a quick sanity check. This tool converts between millivolts (mV), volts (V), kilovolts (kV), and megavolts (MV) and shows the result in a clean, readable format.</p>
+<p>Using the calculator is straightforward. Enter your voltage value, select the unit you are starting from, select the unit you want to convert to, and click Convert voltage. The calculation is just a change of scale, so it is fast and consistent. If you want a broader view, enable the option to show conversions in all common units. That produces a compact reference that helps you spot unit mistakes instantly, like confusing 12 mV with 12 V, or reading a spec in kV when you expected V.</p>
+<p>The main output is the converted voltage in your target unit. Under the hood, the converter first normalizes your input to volts (V) and then scales to the target unit. This approach is simple and robust, because it avoids direct unit-to-unit edge cases. You can also use the “all units” view as a secondary insight: it gives you the same value expressed across mV, V, kV, and MV so you can compare magnitudes without doing mental math. If the converted value looks wildly off, that is usually a sign that the source unit was chosen incorrectly or the original number was taken from the wrong context.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator converts voltage units only (mV, V, kV, MV) using base-10 metric scaling.</li>
+<li>The tool assumes your input is already a voltage value, not a power, current, resistance, or energy measurement.</li>
+<li>Negative voltages are allowed, since some signals and reference voltages can be below zero.</li>
+<li>The “all units” view is a convenience display and does not change the underlying calculation.</li>
+<li>Displayed rounding is for readability; if you need higher precision, use the smaller unit view (for example mV instead of V) to reduce the impact of rounding.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is this the same as converting AC and DC voltage?</h3>
+<p>No. This tool only changes the unit scale (for example V to kV). It does not convert between RMS, peak, or peak-to-peak values, and it does not interpret waveform type. If you need RMS-to-peak conversions, you need a different calculator and you must know the waveform assumptions.</p>
+<h3>Why do I get a very small number when converting to MV?</h3>
+<p>Because megavolts are extremely large units. For example, 10,000 V equals 0.01 MV. When converting to a much larger unit, the numeric value shrinks. Use the “all units” option to confirm the scale is consistent across mV, V, kV, and MV.</p>
+<h3>Can I enter a negative voltage?</h3>
+<p>Yes. Negative values are valid in many real cases, such as sensor outputs centered around 0 V, certain audio signals, and reference offsets. The converter preserves the sign and applies the same scaling.</p>
+<h3>What is the most common mistake people make with voltage units?</h3>
+<p>Mixing up prefixes. The gap between mV and V is 1,000 times, and the gap between V and kV is also 1,000 times. A single wrong prefix can create a 1,000x error. If a result seems off by a factor of 1,000 or 1,000,000, the unit selection is the first thing to check.</p>
+<h3>How can I improve accuracy if I need more digits?</h3>
+<p>First, pick a target unit that matches the magnitude of your value. Converting a tiny signal into MV will force the number into many leading zeros and rounding becomes more noticeable. If you want a more detailed display, convert to a smaller unit (like mV) and then copy that value into your work. The underlying scaling is exact, but the on-screen formatting is optimized for readability.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

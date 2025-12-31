@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Meal Cost Per Person Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Split a meal bill and calculate the cost per person, with optional tax, tip, fees, and discounts." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/meal-cost-per-person-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Meal Cost Per Person Calculator | SnapCalc" property="og:title"/>
+<meta content="Split a meal bill and calculate the cost per person, with optional tax, tip, fees, and discounts." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/meal-cost-per-person-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Meal Cost Per Person Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Split a meal bill and calculate the cost per person, with optional tax, tip, fees, and discounts." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Meal Cost Per Person Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/meal-cost-per-person-calculator/",
+      "description": "Split a meal bill and calculate the cost per person, with optional tax, tip, fees, and discounts."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Meal Cost Per Person Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Meal Cost Per Person Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Split a meal bill into a clear per-person cost</h2>
+<p class="calculator-intro">Enter the meal total and number of people, then add optional tax, tip, fees, or discounts to see a clean per-person breakdown.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="mealTotal">Meal total (before extras)</label>
+<input id="mealTotal" inputmode="decimal" placeholder="e.g., 650.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="peopleCount">Number of people</label>
+<input id="peopleCount" inputmode="numeric" placeholder="e.g., 4" type="text"/>
+</div>
+<div class="form-group">
+<label for="taxPercent">Tax percentage (optional)</label>
+<input id="taxPercent" inputmode="decimal" placeholder="e.g., 15" type="text"/>
+</div>
+<div class="form-group">
+<label for="tipPercent">Tip or service percentage (optional)</label>
+<input id="tipPercent" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="extraFees">Extra fees (optional)</label>
+<input id="extraFees" inputmode="decimal" placeholder="e.g., 25.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="discountAmount">Discount or voucher (optional)</label>
+<input id="discountAmount" inputmode="decimal" placeholder="e.g., 50.00" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate per-person cost</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Handle practical day-to-day calculations for errands, home costs, and simple planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, track spending, and compare costs so you can make cleaner money decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Plan routines and nutrition-related totals with simple tools you can use daily.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Meal cost per person calculator for splitting a bill fairly</h2>
+<p>When you eat out with friends, split takeout with roommates, or host a family meal, the awkward part is usually not the food. It is the math. People remember the big total, then everyone argues about whether tax was included, whether tip should be a percentage or a flat amount, and how to handle small extras like delivery fees or a voucher. This meal cost per person calculator turns a messy receipt into one clear per-person number.</p>
+<p>The core idea is simple: start with the meal total and divide by the number of people. But real bills rarely stop there. This calculator lets you add common extras that change the final split, including tax percentage, tip or service percentage, and any extra fees. It also lets you subtract a discount or voucher so you can split what was actually paid, not what was printed on the menu.</p>
+<p>Use it in two ways. If you want a quick answer, enter only the meal total and the number of people and calculate. If you want a more accurate split, add the optional fields you know. The result includes a per-person breakdown (base, tax, tip, fees, discount) so you can see what is driving the total and explain it to others without redoing the math.</p>
+<p>Under the hood, the calculator applies percentages to the meal total (not to fees, and not to the discounted total). That matches how many real receipts work, but receipts vary. If your receipt applies tax after a discount or adds service on a taxed subtotal, you can still get a close answer by entering the final total as the meal total and leaving extras at zero. The goal is practical fairness, not perfect receipt reconstruction.</p>
+<p>The output is designed to be usable in real conversations. It shows the final total payable, the final cost per person, and a compact breakdown so each person can understand where the number comes from. If you are collecting money via cash or a quick transfer, the per-person number is the one that matters. If you are checking whether a restaurant charge looks right, the breakdown helps you spot the cause fast.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The meal total is the base amount before tax, tip, fees, and discounts unless you choose to enter a final all-in total.</li>
+<li>Tax and tip percentages are applied to the meal total only, not to extra fees and not to the discounted amount.</li>
+<li>Extra fees are treated as a flat add-on (for example delivery, packaging, or booking fees) and are split evenly.</li>
+<li>Discount or voucher is treated as a flat amount subtracted once from the combined total and then split evenly.</li>
+<li>The split is equal across all people; this calculator does not weight the split by what each person ate or drank.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What should I put in “Meal total” if I only know the final amount paid?</h3>
+<p>If you only know the final amount paid, enter that number as the meal total and leave tax, tip, and fees at zero. This gives you a correct per-person split for what was actually paid. You lose the breakdown, but you keep the only number that matters for splitting.</p>
+<h3>Should tip be calculated before or after tax?</h3>
+<p>Different places do it differently. Many people tip on the pre-tax amount, while some tip on the taxed total. This calculator applies tip percentage to the meal total (pre-tax). If you want to tip on the taxed amount, a practical workaround is to add tax into the meal total and leave tax at zero, then apply tip percentage.</p>
+<h3>What if there is a service charge already included on the bill?</h3>
+<p>If the service charge is included in the printed total, you do not need to add it again. If it is listed separately as a percentage or amount, enter it as tip percentage (if it is a percent) or as extra fees (if it is a flat amount).</p>
+<h3>What if only one person used a voucher or paid a deposit?</h3>
+<p>This calculator assumes the discount reduces the group total and is shared equally. If the voucher belongs to one person and the group agrees they should benefit from it, calculate the normal per-person split without the discount, then subtract the voucher value from that person’s share outside the calculator.</p>
+<h3>Can this handle uneven splits (someone had dessert, someone did not)?</h3>
+<p>No. This tool is for equal splits. For uneven splits, your best option is to calculate the shared extras per person (tax, tip, fees, discount) and then add each person’s own food subtotal separately. This calculator can still help by giving you the per-person extras portion as a reference.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

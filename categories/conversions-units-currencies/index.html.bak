@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Calculators (Units, Currencies, etc.)</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+        
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="category-layout">
+
+        <div class="category-header">
+          <h1>Conversions (Units, Currencies, etc.)</h1>
+          <p>Unit, currency and other everyday conversion tools.</p>
+        </div>
+
+        <div class="category-content-block category-content-primary">
+          <h2>What Conversions tools are for</h2>
+        
+          <p>
+            Conversion tools exist for one practical reason: real life uses multiple measurement systems at the same time, and confusion costs time, money, and accuracy. This category groups converters that translate a value from one unit or format into another using deterministic rules. The goal is speed and consistency, whether you are comparing specifications, doing coursework, cooking, working on a build, checking a utility bill, reading international product labels, or validating calculations from another source. Instead of hunting for formulas or manually applying ratios, you enter a number once and get the equivalent value in the unit you actually need.
+          </p>
+        
+          <p>
+            The utilities in this category cover physical units, digital units, numeric systems, and practical format conversions. Core physics and engineering converters include length, mass, volume, area, temperature, speed, time, pressure, energy, power, force, density, torque, angle, and frequency. Electrical converters include charge, current, voltage, resistance, capacitance, and inductance. Light and sound coverage includes luminous intensity, lux to lumens approximations, and decibel conversions. Digital and computing tools include binary and base-N conversion, data storage, data transfer rate, scientific notation, and metric prefix conversion. Everyday and applied converters include fuel consumption formats, cooking and baking measurements, ingredient density adjustments, clothing and shoe sizes by region, paper sizes, pixel to millimeter conversions, DPI, aspect ratio, and resolution scaling. Together, these tools cover the conversion problems that appear most often across daily life, education, and technical work.
+          </p>
+        
+          <p>
+            Converters are not “nice-to-have” utilities. They reduce the most common class of avoidable mistakes: mixing units, misreading labels, and calculating with the wrong scale. A length or area mismatch can produce the wrong material order. A pressure or torque mismatch can create safety risks. A fuel consumption format mismatch can distort operating costs. A data rate mismatch can lead to incorrect network expectations. Even in simple tasks like cooking, using the wrong measurement standard can ruin outcomes. This category exists to make those mismatches rare by giving you a reliable and repeatable way to translate values.
+          </p>
+        
+          <p>
+            All tools in this category are rule-based and transparent. For most units, the conversion is a direct mathematical mapping between defined standards. Where a conversion is inherently approximate, the tool is treated as an estimate rather than a guarantee. Examples include lux to lumens without full beam geometry, decibel conversions depending on reference context, or cooking ingredient density conversions where the same “cup” can vary by ingredient packing and moisture. The purpose is still practical: provide the best usable conversion under a clear assumption set, not vague advice.
+          </p>
+        
+          <p>
+            This category also includes currency-related utilities where users need quick comparisons. A static-rate currency converter is useful for offline estimation and planning, and a currency rate difference tool helps quantify how much a change in rate affects a transaction or budget. These are not live market tools. They are designed for deterministic inputs so users can reproduce results and run scenarios consistently.
+          </p>
+        </div>        
+        
+        <div class="category-back">
+          <a href="/">← Back to all categories</a>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/angle-converter/">
+              <div class="category-item-title">Angle Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert angles between degrees, radians, gradians, turns, arcminutes, and arcseconds. Get a clean conversion plus a full unit breakdown.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/area-converter/">
+              <div class="category-item-title">Area Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert area between square meters, square feet, acres, hectares, and more. Get accurate conversions with optional precision control.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/baking-conversion-calculator/">
+              <div class="category-item-title">Baking Conversion Calculator | SnapCalc</div>
+              <p class="category-item-desc">Convert baking measurements between cups, tablespoons, teaspoons, grams, ounces, pounds, milliliters, and kilograms. Includes common ingredient weight conversions for practical recipe scaling.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/capacitance-converter/">
+              <div class="category-item-title">Capacitance Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert capacitance values between farads (F), millifarads (mF), microfarads (µF), nanofarads (nF), and picofarads (pF).</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/cooking-measurement-converter/">
+              <div class="category-item-title">Cooking Measurement Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert recipe volumes between cups, tablespoons, teaspoons, milliliters, liters, and US fluid ounces with clear results and practical equivalents.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/currency-converter-static-rate-version/">
+              <div class="category-item-title">Currency Converter (Static Rate Version) | SnapCalc</div>
+              <p class="category-item-desc">Convert an amount between two currencies using a fixed exchange rate you provide, with optional fees for a more realistic net result.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/currency-rate-difference-calculator/">
+              <div class="category-item-title">Currency Rate Difference Calculator | SnapCalc</div>
+              <p class="category-item-desc">Compare two exchange rates for the same currency pair and see the percent difference and how much more or less you would receive on a given amount.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/density-converter/">
+              <div class="category-item-title">Density Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert density between common units like kg/m³, g/cm³, lb/ft³, and lb/in³. Useful for material specs, engineering values, and everyday conversions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/electric-charge-converter/">
+              <div class="category-item-title">Electric Charge Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert electric charge between coulombs (C), mC, μC, nC, pC, ampere-hours (Ah), milliampere-hours (mAh), and faradays (F).</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/electric-current-converter/">
+              <div class="category-item-title">Electric Current Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert electric current between amps (A), milliamps (mA), microamps (µA), nanoamps (nA), and kiloamps (kA). Enter a value and instantly see accurate conversions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/energy-converter/">
+              <div class="category-item-title">Energy Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert energy units like joules, kWh, calories, and BTU. Get quick conversions plus a practical multi-unit breakdown in one step.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/fluid-ounce-milliliter-converter/">
+              <div class="category-item-title">Fluid Ounce / Milliliter Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert between fluid ounces (fl oz) and milliliters (mL) using a simple, accurate converter for cooking, mixing, and everyday measurements.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/force-converter/">
+              <div class="category-item-title">Force Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert force values between newtons (N), kilonewtons (kN), pounds-force (lbf), kilogram-force (kgf), and dynes (dyn).</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/frequency-converter/">
+              <div class="category-item-title">Frequency Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/fuel-consumption-converter-l-100km-km-l-mpg/">
+              <div class="category-item-title">Fuel Consumption Converter (L/100km, km/L, MPG) | SnapCalc</div>
+              <p class="category-item-desc">Convert fuel consumption between L/100km, km/L, and MPG (US and Imperial). Useful for comparing vehicle economy across countries, specs, and reviews.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/inductance-converter/">
+              <div class="category-item-title">Inductance Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert inductance between H, mH, µH, nH, and pH. Enter a value and unit to get an instant, accurate conversion for electronics and engineering work.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/length-converter/">
+              <div class="category-item-title">Length Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert length units like meters, kilometers, centimeters, millimeters, inches, feet, yards, and miles. Quick, accurate conversions for everyday use.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/luminous-intensity-converter/">
+              <div class="category-item-title">Luminous Intensity Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert luminous intensity between candela (cd), millicandela (mcd), kilocandela (kcd), megacandela (Mcd), and candlepower (cp) to compare LED and lighting specs.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/power-converter/">
+              <div class="category-item-title">Power Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert power units like watts, kilowatts, megawatts, horsepower, and BTU/hr. Get instant conversions and a quick reference table.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/pressure-converter/">
+              <div class="category-item-title">Pressure Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert pressure between Pa, kPa, MPa, bar, psi, atm, mmHg (torr), inHg, and more. Get a quick conversion plus a full table of equivalents.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/resistance-converter/">
+              <div class="category-item-title">Resistance Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert electrical resistance between mΩ, Ω, kΩ, MΩ, and GΩ. Enter a value, pick the unit, and get an immediate conversion with a quick reference table.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/speed-converter/">
+              <div class="category-item-title">Speed Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert speed between km/h, mph, m/s, ft/s, and knots. Get a quick main conversion plus a full breakdown into common speed units.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/teaspoon-tablespoon-cup-converter/">
+              <div class="category-item-title">Teaspoon/Tablespoon/Cup Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert between teaspoons, tablespoons, and cups for cooking and baking. Get exact conversions plus quick equivalents across all three units.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/temperature-converter/">
+              <div class="category-item-title">Temperature Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert temperatures between Celsius, Fahrenheit, Kelvin, and Rankine. Get a quick conversion plus a full scale breakdown.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/time-converter/">
+              <div class="category-item-title">Time Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert time between seconds, minutes, hours, days, weeks, months, and years. Includes optional month and year length assumptions for accurate conversions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/torque-converter/">
+              <div class="category-item-title">Torque Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert torque between N·m, lb-ft, lb-in, kgf·m, and kgf·cm. Useful for cars, tools, fasteners, and engineering specs.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/unit-price-converter/">
+              <div class="category-item-title">Unit Price Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert a product price into a comparable unit price (per item, per 100g, per kg, per 100ml, per litre, per metre) so you can compare deals quickly.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/voltage-converter/">
+              <div class="category-item-title">Voltage Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert voltage between millivolts (mV), volts (V), kilovolts (kV), and megavolts (MV). Get a clear converted value and an optional quick reference across common units.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/volume-converter/">
+              <div class="category-item-title">Volume Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert volume between liters, milliliters, cubic meters, gallons, cups, tablespoons, and more. Fast unit conversion with clear results.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/conversions-units-currencies/weightmass-converter/">
+              <div class="category-item-title">Weight/Mass Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert weight and mass between grams, kilograms, pounds, ounces, stones, and tons. Quickly switch units and get a clean, accurate conversion result.</p>
+            </a>
+          </div>
+        </div>
+
+          <div class="category-content-block category-content-secondary">
+            <h2>How to use conversions correctly and avoid common mistakes</h2>
+          
+            <p>
+              The most common conversion error is using the right unit family but the wrong direction or scale. Always confirm what the input represents and what the output should be used for. For example, converting speed from km/h to mph is straightforward, but fuel consumption can be expressed as distance per volume (km/L, MPG) or volume per distance (L/100km), and the relationship is inverse. A larger number can mean better efficiency in one format and worse efficiency in another. The safest practice is to check the meaning of the unit label, then sanity-check whether the converted value makes intuitive sense for the situation.
+            </p>
+          
+            <p>
+              For geometry-related conversions like area, volume, and resolution scaling, users often forget that conversions can compound. A length conversion factor does not automatically apply to area or volume. Area scales with the square of length, and volume scales with the cube. That is why tools like square feet to square meters and cubic meters to liters are separate from simple length converters. The same principle applies in imaging and display work. Aspect ratio and resolution scaling calculators are useful because they preserve proportional relationships and prevent the subtle distortion that occurs when values are converted without maintaining consistent ratios.
+            </p>
+          
+            <p>
+              Precision and rounding are another hidden trap. Many conversions involve repeating decimals or values that are best expressed with a practical number of decimal places. If you round too aggressively early, errors can stack up when the converted value is used in later calculations. This is common when converting between small units (millimeters, pixels, teaspoons) and then multiplying by large quantities. A good approach is to keep extra precision during intermediate steps, then round at the end based on how the result will be used. Cooking conversions can usually tolerate rounding to sensible fractions, while engineering or electrical conversions may require more precision depending on the tolerance of the system.
+            </p>
+          
+            <p>
+              Some conversions are not purely mathematical because the context matters. Lux to lumens depends on the area illuminated and beam characteristics, so any “direct” converter is approximate unless assumptions are specified. Decibels depend on the reference level and whether you are converting power or amplitude. Clothing and shoe sizes vary by region and brand, so simple region-based tools are best treated as a starting point rather than an exact guarantee. Cooking ingredient density adjustments depend on ingredient type and packing. In these cases, the role of the converter is to provide a consistent baseline estimate, not absolute certainty.
+            </p>
+          
+            <p>
+              Electrical and physics conversions should be used with unit awareness, not memorised shortcuts. Current, voltage, resistance, capacitance, and inductance all show up in real components with prefixes (micro, milli, kilo, mega) that change magnitude dramatically. The prefix converter is therefore not a convenience add-on. It is a safety mechanism that reduces scale errors, such as interpreting 470 microfarads as 470 millifarads, or confusing kilohertz and hertz in frequency work. When converting electrical values, treat the prefix as part of the value, not decoration, and always confirm that the result matches the expected order of magnitude for the component or system.
+            </p>
+          
+            <p>
+              Currency tools in this category are intentionally deterministic. A static-rate currency converter is for planning, budgeting, and scenario testing, where you want repeatable outputs under a chosen rate rather than live market movement. The currency rate difference calculator exists to quantify sensitivity. If the rate moves from one number to another, how much does that change the cost of a purchase, subscription, or invoice? This is particularly useful for international purchases, pricing, and travel planning, where exchange rate movement can change affordability and margin. If you need live conversion, you should treat that as a separate task. The calculators here are for controlled inputs.
+            </p>
+          
+            <p>
+              The best way to use this category is to treat it as a consistent translation layer between systems. Convert once, verify the direction, keep sensible precision, and then apply the converted value in your downstream calculation or decision. If a result looks extreme, check for the usual culprits: inverted ratios, wrong prefixes, wrong base system, or silent rounding. These tools are designed to remove friction and reduce unit confusion, but they still depend on careful inputs. Used consistently, they eliminate one of the most common sources of avoidable mistakes across technical work and everyday tasks.
+            </p>
+          </div>
+                    
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Battery Life Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how long a battery or power bank will run your device based on battery capacity, voltage, power draw, and realistic efficiency assumptions." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/battery-life-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Battery Life Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how long a battery or power bank will run your device based on battery capacity, voltage, power draw, and realistic efficiency assumptions." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/battery-life-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Battery Life Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how long a battery or power bank will run your device based on battery capacity, voltage, power draw, and realistic efficiency assumptions." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Battery Life Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/battery-life-calculator/",
+      "description": "Estimate battery runtime from capacity, voltage, and device power draw using realistic efficiency and usable-capacity assumptions."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Battery Life Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Battery Life Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate battery runtime from capacity and power draw</h2>
+<p class="calculator-intro">Use this to estimate how long a battery or power bank will run a device, using realistic efficiency and usable-capacity defaults.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="capacityUnit">Battery capacity unit</label>
+<select aria-label="Battery capacity unit" id="capacityUnit">
+<option selected="" value="mah">mAh (typical for batteries and power banks)</option>
+<option value="wh">Wh (watt-hours, typical for laptops and UPS)</option>
+</select>
+</div>
+<div id="capacityMahBlock">
+<div class="form-group">
+<label for="capacityMah">Battery capacity (mAh)</label>
+<input id="capacityMah" inputmode="decimal" placeholder="e.g. 10,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="batteryVoltage">Battery voltage (V) (optional)</label>
+<input id="batteryVoltage" inputmode="decimal" placeholder="Default 3.7" type="text"/>
+</div>
+</div>
+<div class="hidden" id="capacityWhBlock">
+<div class="form-group">
+<label for="capacityWh">Battery capacity (Wh)</label>
+<input id="capacityWh" inputmode="decimal" placeholder="e.g. 60" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="devicePower">Device power draw (W)</label>
+<input id="devicePower" inputmode="decimal" placeholder="e.g. 15" type="text"/>
+</div>
+<details class="advanced">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="efficiencyPercent">Conversion efficiency (%) (optional)</label>
+<input id="efficiencyPercent" inputmode="decimal" placeholder="Default 85" type="text"/>
+</div>
+<div class="form-group">
+<label for="usablePercent">Usable capacity (%) (optional)</label>
+<input id="usablePercent" inputmode="decimal" placeholder="Default 90" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate battery life</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve practical engineering problems with electrical, mechanical, and technical calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units and measurements for quick checks, planning, and day-to-day calculations.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Simple utilities for daily decisions like budgeting, planning, timing, and comparisons.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Estimate battery runtime and power bank duration from mAh, Wh, and watts</h2>
+<p>A “battery life” number is only meaningful when you connect battery capacity to the device’s actual power draw. This calculator is built for the most common real-world question: how long will a battery or power bank run a device at a roughly steady load. It turns the capacity you see on a label (mAh or Wh) into usable energy, then divides by the device’s watt draw to estimate runtime.</p>
+<p>To use it fast, enter either the battery capacity in mAh (typical for power banks and single cells) or in Wh (typical for laptop batteries and UPS packs), and enter the device power draw in watts. If you only know current (amps) and voltage, you can usually estimate watts using W = V × A on the device side, but this page focuses on the most direct input most people can find: watts from a charger label, spec sheet, power meter, or manufacturer datasheet.</p>
+<p>The result shows an estimated runtime in hours and minutes, plus supporting values so you can sanity-check the number. You will also see a simple low and high range that assumes your actual power draw varies by about twenty percent, which is common in real use (screen brightness changes, CPU spikes, radio transmit bursts, and temperature effects). The goal is not laboratory precision. The goal is a defensible estimate you can use to decide whether a battery is big enough for a trip, a field job, or a backup scenario.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Battery capacity labels are treated as nominal. A “10,000 mAh” power bank often delivers less usable energy than the headline number once you account for conversion losses and cutoffs.</li>
+<li>If you use the mAh option and leave voltage blank, the calculator assumes 3.7 V (typical nominal voltage for lithium-ion cells inside many power banks).</li>
+<li>Conversion efficiency defaults to 85%. This roughly covers common boost and regulation losses between the battery and the device.</li>
+<li>Usable capacity defaults to 90% to reflect that most systems do not discharge a battery from 100% to 0% in practice due to protection limits, voltage sag, and reserve margins.</li>
+<li>The device watt draw is treated as a steady average. If your device load swings significantly, use the low and high range as a quick reality check and consider measuring average watts over time.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does my power bank never deliver the full mAh printed on the box?</h3>
+<p>Because the printed mAh is usually referenced to the internal battery voltage, not the USB output voltage, and because energy is lost in conversion and regulation. A power bank rated in mAh at about 3.7 V must be boosted to 5 V (or higher for fast charging). That process is not 100% efficient, and many devices also stop drawing power before the power bank is fully empty. Using mAh plus the efficiency and usable-capacity defaults typically gets you much closer to reality than using the label number directly.</p>
+<h3>Should I use mAh or Wh if I have both?</h3>
+<p>Use Wh if you have it. Wh already represents energy and removes voltage guesswork. If you only have mAh, you need a voltage assumption to convert mAh to Wh. The default 3.7 V is reasonable for many lithium-ion based packs, but some batteries use different chemistry or series arrangements, so using Wh avoids incorrect voltage assumptions.</p>
+<h3>How do I find my device’s power draw in watts?</h3>
+<p>The quickest options are a power meter (for plug-in devices), a USB power meter (for USB-powered devices), the device power adapter label, or the manufacturer’s spec sheet. If you only have volts and amps, multiply them to estimate watts. For example, 5 V at 2 A is about 10 W. Real draw can be lower or higher depending on usage, which is why the calculator includes a practical range.</p>
+<h3>Why does the estimate change so much when I change efficiency or usable capacity?</h3>
+<p>Because those settings directly reduce the energy available to your device. If a battery has 60 Wh on paper, and you assume 90% usable capacity and 85% conversion efficiency, the usable energy becomes 60 × 0.90 × 0.85 = 45.9 Wh. If your device uses 15 W, runtime changes from 4.0 hours (ideal) to about 3.1 hours (more realistic). These assumptions are not “extra.” They are the difference between marketing numbers and usable runtime.</p>
+<h3>When is this calculator not a good fit?</h3>
+<p>If you need precise engineering estimates for discharge curves, battery internal resistance, temperature derating, peak-current limits, or highly variable loads, this is not the right tool. This calculator is meant for a practical planning estimate using average watts. If your device has short, intense bursts (for example, transmitters or motors), you may also hit peak power limits even if the average runtime looks fine.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

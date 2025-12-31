@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Mortgage Affordability (Personal Finance Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the home price you can afford based on income, debts, deposit, interest rate, and term. Also check whether a specific home price fits typical affordability ratios." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/personal-finance/mortgage-affordability-personal-finance-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Mortgage Affordability (Personal Finance Version) | SnapCalc" property="og:title"/>
+<meta content="Estimate the home price you can afford based on income, debts, deposit, interest rate, and term. Also check whether a specific home price fits typical affordability ratios." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/personal-finance/mortgage-affordability-personal-finance-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mortgage Affordability (Personal Finance Version) | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the home price you can afford based on income, debts, deposit, interest rate, and term. Also check whether a specific home price fits typical affordability ratios." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mortgage Affordability (Personal Finance Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/mortgage-affordability-personal-finance-version/",
+      "description": "Estimate mortgage affordability from income, debts, deposit, interest rate, and term. Includes a mode to check a specific home price against affordability ratios."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Mortgage Affordability (Personal Finance Version)</span>
+</nav>
+<div class="page-layout">
+<h1>Mortgage Affordability (Personal Finance Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate what home price fits your monthly budget</h2>
+<p class="calculator-intro">Use quick defaults or add optional costs like taxes and insurance to get a more realistic affordability estimate.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="modeSelect">Calculation mode</label>
+<select id="modeSelect">
+<option value="max">Max home price (from your income)</option>
+<option value="check">Check a home price (pass or fail)</option>
+</select>
+</div>
+<div id="modeBlockMax">
+<div class="input-group">
+<label for="incomeMonthly">Gross monthly income</label>
+<input id="incomeMonthly" inputmode="decimal" placeholder="e.g., 65,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="debtsMonthly">Monthly debt payments (non-mortgage)</label>
+<input id="debtsMonthly" inputmode="decimal" placeholder="e.g., 4,500" type="text"/>
+</div>
+<div class="input-group">
+<label for="downPayment">Down payment (deposit)</label>
+<input id="downPayment" inputmode="decimal" placeholder="e.g., 250,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="interestRate">Interest rate (annual %)</label>
+<input id="interestRate" inputmode="decimal" placeholder="e.g., 11.75" type="text"/>
+</div>
+<div class="input-group">
+<label for="termYears">Loan term (years)</label>
+<input id="termYears" inputmode="decimal" placeholder="e.g., 20 or 30" type="text"/>
+</div>
+<div class="input-group">
+<label for="taxInsMonthly">Property taxes + insurance (monthly, optional)</label>
+<input id="taxInsMonthly" inputmode="decimal" placeholder="e.g., 2,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="hoaMonthly">HOA / levies (monthly, optional)</label>
+<input id="hoaMonthly" inputmode="decimal" placeholder="e.g., 1,200" type="text"/>
+</div>
+<div class="input-group">
+<label for="frontEndRatio">Housing ratio (front-end %, optional)</label>
+<input id="frontEndRatio" inputmode="decimal" placeholder="Default 28" type="text"/>
+</div>
+<div class="input-group">
+<label for="backEndRatio">Debt ratio (back-end %, optional)</label>
+<input id="backEndRatio" inputmode="decimal" placeholder="Default 36" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeBlockCheck">
+<div class="input-group">
+<label for="homePrice">Home price to check</label>
+<input id="homePrice" inputmode="decimal" placeholder="e.g., 1,850,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="downPaymentCheck">Down payment (deposit)</label>
+<input id="downPaymentCheck" inputmode="decimal" placeholder="e.g., 250,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="incomeMonthlyCheck">Gross monthly income</label>
+<input id="incomeMonthlyCheck" inputmode="decimal" placeholder="e.g., 65,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="debtsMonthlyCheck">Monthly debt payments (non-mortgage)</label>
+<input id="debtsMonthlyCheck" inputmode="decimal" placeholder="e.g., 4,500" type="text"/>
+</div>
+<div class="input-group">
+<label for="interestRateCheck">Interest rate (annual %)</label>
+<input id="interestRateCheck" inputmode="decimal" placeholder="e.g., 11.75" type="text"/>
+</div>
+<div class="input-group">
+<label for="termYearsCheck">Loan term (years)</label>
+<input id="termYearsCheck" inputmode="decimal" placeholder="e.g., 20 or 30" type="text"/>
+</div>
+<div class="input-group">
+<label for="taxInsMonthlyCheck">Property taxes + insurance (monthly, optional)</label>
+<input id="taxInsMonthlyCheck" inputmode="decimal" placeholder="e.g., 2,000" type="text"/>
+</div>
+<div class="input-group">
+<label for="hoaMonthlyCheck">HOA / levies (monthly, optional)</label>
+<input id="hoaMonthlyCheck" inputmode="decimal" placeholder="e.g., 1,200" type="text"/>
+</div>
+<div class="input-group">
+<label for="frontEndRatioCheck">Housing ratio (front-end %, optional)</label>
+<input id="frontEndRatioCheck" inputmode="decimal" placeholder="Default 28" type="text"/>
+</div>
+<div class="input-group">
+<label for="backEndRatioCheck">Debt ratio (back-end %, optional)</label>
+<input id="backEndRatioCheck" inputmode="decimal" placeholder="Default 36" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate affordability</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, affordability, and everyday money decisions built for practical planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Compare borrowing costs, repayments, and interest impacts across common loan types.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Plan property costs, ownership expenses, and trade-offs before you commit.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Mortgage affordability calculator to estimate the home price you can afford</h2>
+<p>When people search “how much house can I afford” they usually want a fast number they can trust enough to plan around. The problem is that mortgage affordability is not just a loan calculation. It is a monthly budget question. Lenders and financial planners typically look at two limits at the same time: how much of your income can go to housing costs (the housing ratio) and how much of your income can go to total monthly debt (the debt ratio). If either limit is exceeded, the payment may be unrealistic even if the math says the loan is possible.</p>
+<p>This calculator gives you two practical ways to use the same inputs. In “Max home price” mode, you enter your gross monthly income, your existing monthly debt payments, and your intended down payment. You also enter the interest rate and the term, since those two inputs determine how much loan you can support for a given monthly payment. Optional fields let you add ongoing housing costs that many people forget, like property taxes, insurance, levies, or HOA fees. The output is a max affordable home price estimate and the implied maximum loan amount, based on the strictest limit between the two affordability ratios.</p>
+<p>In “Check a home price” mode, you start with a specific home price and down payment, then the calculator estimates the monthly principal and interest payment and adds optional monthly costs like taxes, insurance, and HOA. It then calculates your housing ratio and your total debt ratio and tells you whether the scenario passes typical guideline thresholds. This is useful when you have a listing in front of you and want a quick pass or fail, plus a clear explanation of what is driving the result.</p>
+<p>Affordability ratios are not laws, and they are not the same everywhere. They are a starting point that helps you avoid the most common mistake: picking a home price first and hoping the monthly payment will work out later. This calculator uses defaults that are common in personal finance guidance (28 percent for housing, 36 percent for total debt), but you can override them. If you have a higher risk tolerance, strong savings, or variable income, you may choose a stricter threshold to create a buffer. If you have a stable high income with low fixed costs, you may choose a slightly higher housing ratio, but you should understand the trade-off: a higher housing payment usually reduces flexibility, increases stress during rate changes, and makes it harder to handle surprises.</p>
+<p>The math behind the result is straightforward. First, the calculator estimates the maximum monthly housing budget allowed by each ratio. The housing ratio limits housing costs to a percentage of your gross monthly income. The debt ratio limits total debt (housing plus other debts) to a percentage of your gross monthly income, so it effectively caps housing by subtracting your existing monthly debts from the allowed total. The calculator takes the smaller of these two allowed housing budgets because the strictest limit is the one that matters.</p>
+<p>Next, the calculator removes optional monthly housing costs like taxes, insurance, and HOA from the allowed housing budget. The remaining amount is what is left for the mortgage principal and interest payment. Using the interest rate and term, the calculator converts that principal and interest payment into an estimated maximum loan amount using standard amortization. Finally, it adds your down payment to estimate a maximum home price. The result is a planning estimate, not a guarantee of approval, because real lenders also consider factors like credit profile, variable income stability, and their own policy rules.</p>
+<p>Use this tool as a budgeting guardrail. If your max home price feels lower than expected, that is often a signal that existing debt payments are consuming your debt ratio capacity or that your interest rate and term are making the loan expensive per month. You can test trade-offs quickly: higher down payment increases home price capacity without raising monthly payment, lower interest rate increases loan capacity for the same payment, and longer terms reduce monthly principal and interest but increase total interest paid over time. The goal is not to maximize the loan. The goal is to choose a monthly payment you can live with even when life does not go to plan.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Default affordability ratios are 28% (housing) and 36% (total debt) unless you enter your own percentages.</li>
+<li>Income is treated as gross monthly income, not take-home pay, because ratio guidelines are typically based on gross income.</li>
+<li>Taxes, insurance, and HOA are optional monthly add-ons and are not included unless you enter values.</li>
+<li>The mortgage payment calculation assumes a standard fixed-rate amortizing loan over the chosen term.</li>
+<li>Results are estimates for planning and do not include lender-specific fees, closing costs, or changing interest rates.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator use both a housing ratio and a total debt ratio?</h3>
+<p>Because each ratio catches a different risk. The housing ratio prevents housing from taking too much of your income on its own. The total debt ratio prevents all debts combined from becoming unmanageable. If you have high car payments or other loans, the total debt ratio will usually be the limiting factor.</p>
+<h3>What if I do not know my taxes, insurance, or levies yet?</h3>
+<p>Leave them blank and the calculator will still work using a principal-and-interest-only estimate. That is useful for a quick check, but it can be optimistic. If you want a more realistic result, add a conservative monthly estimate for these costs once you have a rough idea.</p>
+<h3>My income is variable. What number should I use?</h3>
+<p>Use a cautious average. A common approach is to take a 6 to 12 month average and then reduce it slightly to build a buffer. The more uncertain your income, the more important it is to choose stricter ratios or include extra monthly room for error.</p>
+<h3>Does a longer loan term mean I can afford a more expensive home?</h3>
+<p>Usually, yes, because a longer term lowers the monthly principal and interest payment for the same loan amount. The trade-off is that total interest paid over the life of the loan is typically higher. Affordability is about the monthly payment, but cost is about the total interest.</p>
+<h3>Why might a lender still reject a loan that “passes” here?</h3>
+<p>This tool only models income, debt payments, and the loan math. Lenders also assess credit history, proof of income stability, detailed expense patterns, policy limits, and sometimes stricter ratio thresholds. Use this as a budgeting baseline, then confirm with your lender or broker for underwriting-specific rules.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

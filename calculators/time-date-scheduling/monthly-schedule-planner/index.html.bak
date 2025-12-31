@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Monthly Schedule Planner | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Build a clear monthly schedule in seconds. Generate a month calendar, count workdays and weekends, and optionally exclude holidays or custom dates." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/time-date-scheduling/monthly-schedule-planner/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Monthly Schedule Planner | SnapCalc" property="og:title"/>
+<meta content="Build a clear monthly schedule in seconds. Generate a month calendar, count workdays and weekends, and optionally exclude holidays or custom dates." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/time-date-scheduling/monthly-schedule-planner/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Monthly Schedule Planner | SnapCalc" name="twitter:title"/>
+<meta content="Build a clear monthly schedule in seconds. Generate a month calendar, count workdays and weekends, and optionally exclude holidays or custom dates." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Monthly Schedule Planner",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/monthly-schedule-planner/",
+      "description": "Generate a monthly calendar schedule, count workdays and weekends, and optionally exclude holidays or custom dates for planning."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Monthly Schedule Planner</span>
+</nav>
+<div class="page-layout">
+<h1>Monthly Schedule Planner</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Plan a month at a glance</h2>
+<p class="calculator-intro">Generate a clean monthly calendar, count workdays and weekends, and optionally exclude holidays or custom dates.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="monthSelect">Month</label>
+<select aria-label="Select month" id="monthSelect">
+<option value="0">January</option>
+<option value="1">February</option>
+<option value="2">March</option>
+<option value="3">April</option>
+<option value="4">May</option>
+<option value="5">June</option>
+<option value="6">July</option>
+<option value="7">August</option>
+<option value="8">September</option>
+<option value="9">October</option>
+<option value="10">November</option>
+<option value="11">December</option>
+</select>
+</div>
+<div class="form-group">
+<label for="yearInput">Year</label>
+<input aria-label="Enter year" id="yearInput" inputmode="numeric" placeholder="e.g., 2026" type="text"/>
+</div>
+<div class="form-group">
+<label for="weekStartSelect">Week starts on</label>
+<select aria-label="Select week start day" id="weekStartSelect">
+<option value="0">Sunday</option>
+<option selected="" value="1">Monday</option>
+</select>
+</div>
+<div class="form-group">
+<label for="excludeDatesInput">Exclude dates (optional)</label>
+<input aria-label="Enter dates to exclude" id="excludeDatesInput" placeholder="YYYY-MM-DD, YYYY-MM-DD" type="text"/>
+</div>
+<div class="form-group">
+<label>
+<input id="highlightWeekendsCheckbox" type="checkbox"/>
+                  Highlight weekends
+                </label>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Generate monthly schedule</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan time blocks, calculate dates, and build schedules that actually hold up in real life.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Handle time zones, trip timing, and travel planning with practical tools.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Simple calculators for daily planning, routines, and common decisions.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Monthly schedule planner for a clean calendar and workday counts</h2>
+<p>A monthly planner is useful when you need the full month in one view, not a long list of dates. This Monthly Schedule Planner generates a clear month calendar and gives you the numbers that usually drive real planning: total days, weekdays, weekends, and workdays. You can also exclude specific dates (like public holidays, leave days, or blackout dates) so your workday count matches how you actually operate.</p>
+<p>This tool is built for two common use cases. First, quick planning: pick the month and year, generate the calendar, and you immediately have a reliable view for deadlines, pay cycles, rotations, training schedules, or study plans. Second, more accurate planning: add an exclusion list to reflect how many working days you truly have available. That is useful for capacity planning, timelines, billing expectations, and any plan that depends on working days rather than calendar days.</p>
+<p>The output includes a month grid that follows the real calendar for the year you choose. If you enable weekend highlighting, Saturdays and Sundays are visually marked to reduce scanning errors. If you add excluded dates, those dates are also flagged, and the summary updates to show working days after exclusions. You can treat excluded dates as non-working days even if they fall on weekdays, which is exactly how holidays and leave affect capacity.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The calendar is Gregorian and uses your device’s local date rules for the selected year and month.</li>
+<li>Weekends are defined as Saturday and Sunday.</li>
+<li>Excluded dates are treated as non-working days for counting purposes, even if they fall on weekdays.</li>
+<li>Excluded dates must be entered in YYYY-MM-DD format and must fall within the selected month to affect the counts.</li>
+<li>This planner does not automatically pull public holidays, because holidays differ by country and employer; you control the exclusions.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>How do I use this monthly schedule planner quickly?</h3>
+<p>Select the month and year, then click “Generate monthly schedule.” You will get a calendar grid plus a summary showing total days, weekdays, weekends, and workdays. If you just need a month view for planning, you can stop there.</p>
+<h3>What does “workdays after exclusions” mean?</h3>
+<p>Workdays are normally weekdays (Monday to Friday). “Workdays after exclusions” subtracts any dates you entered that fall on weekdays within the selected month. This is useful for planning capacity when holidays, leave, or shutdown days reduce your available working time.</p>
+<h3>What format should excluded dates be in?</h3>
+<p>Use YYYY-MM-DD, separated by commas. Example: 2026-01-01, 2026-01-02. Dates outside the selected month are ignored, and invalid entries are skipped so you still get a schedule.</p>
+<h3>Can I start the week on Monday or Sunday?</h3>
+<p>Yes. Use the “Week starts on” option to switch between Monday-first and Sunday-first layouts. This only changes the calendar layout and weekday labels, not the underlying date logic.</p>
+<h3>Why does the calendar not include my tasks or recurring events?</h3>
+<p>This tool is designed to generate a correct month view and planning counts without forcing you into data entry. If you need a task system, use the calendar output to anchor deadlines and capacity, then manage tasks in your preferred app. The exclusion list is the only optional input because it directly changes capacity calculations.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

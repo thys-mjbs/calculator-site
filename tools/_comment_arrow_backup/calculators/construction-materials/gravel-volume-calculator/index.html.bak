@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Gravel Volume Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how much gravel you need for a rectangular area using length, width, and depth. Get volume in cubic yards, cubic feet, and cubic metres, plus estimated weight in tonnes." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/gravel-volume-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Gravel Volume Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how much gravel you need for a rectangular area using length, width, and depth. Get volume in cubic yards, cubic feet, and cubic metres, plus estimated weight in tonnes." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/gravel-volume-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Gravel Volume Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how much gravel you need for a rectangular area using length, width, and depth. Get volume in cubic yards, cubic feet, and cubic metres, plus estimated weight in tonnes." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gravel Volume Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/gravel-volume-calculator/",
+      "description": "Estimate how much gravel you need for a rectangular area using length, width, and depth, with volume and weight outputs."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Gravel Volume Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Gravel Volume Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate gravel needed for a rectangular area</h2>
+<p class="calculator-intro">Enter length, width, and gravel depth to estimate volume and weight. Use Advanced only if you want a compaction allowance, waste allowance, or a different density.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="length">Length (metres)</label>
+<input id="length" inputmode="decimal" placeholder="e.g. 12" type="text"/>
+</div>
+<div class="form-group">
+<label for="width">Width (metres)</label>
+<input id="width" inputmode="decimal" placeholder="e.g. 3" type="text"/>
+</div>
+<div class="form-group">
+<label for="depth">Depth (millimetres)</label>
+<input id="depth" inputmode="decimal" placeholder="e.g. 75" type="text"/>
+</div>
+<details class="advanced-block">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="compactionPercent">Compaction allowance (%)</label>
+<input id="compactionPercent" inputmode="decimal" placeholder="Default 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="wastePercent">Waste / spillage allowance (%)</label>
+<input id="wastePercent" inputmode="decimal" placeholder="Default 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="density">Bulk density (kg/m³)</label>
+<input id="density" inputmode="decimal" placeholder="Default 1600" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate gravel volume</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities for concrete, gravel, sand, bricks, rebar, and other site materials.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Run electrical, thermal, and technical calculations for real-world projects and troubleshooting.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Plan property costs and comparisons, including rentals, maintenance, and renovation budgeting.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Gravel volume calculator for driveways, paths, and base layers</h2>
+<p>This gravel volume calculator is designed for one job: estimating how much loose gravel you need to buy for a rectangular area such as a driveway, walkway, patio base, or a simple trench backfill. You enter the length and width of the area, plus the planned gravel depth, and the calculator returns the material volume in practical units. It also estimates total weight using a typical bulk density, so you can sanity-check delivery limits and pricing.</p>
+<p>The primary output is volume. Gravel is often sold by volume (cubic metres or cubic yards) even when suppliers talk about tonnes, loads, or truck capacity. Because gravel contains air gaps and is delivered loose, the same physical space can weigh quite differently depending on stone size, moisture, and how much it settles. That is why this calculator also provides an optional density setting. If you know your supplier’s published density, use it. If you do not, the default is a sensible general-purpose estimate for loose gravel.</p>
+<p>To use the calculator, measure the area you plan to cover and decide the compacted depth you want after it is laid and levelled. Enter length and width in metres and depth in millimetres, then calculate. If you are building a base that will be compacted (common for driveways and paving), open Advanced and keep the compaction allowance on. That allowance adds extra material so that after compaction you still reach your target depth. If you expect trimming, spreading losses, or uneven subgrade, keep a small waste allowance as well.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The area is rectangular and reasonably uniform. Irregular shapes and heavily sloped surfaces are excluded by design.</li>
+<li>Depth is the target compacted depth. If you are not compacting, set compaction allowance to 0%.</li>
+<li>Default bulk density is 1600 kg/m³, which is a common midpoint for loose gravel, but real values vary by material and moisture.</li>
+<li>Compaction allowance defaults to 10% to reflect typical settling during placement and compaction for base layers.</li>
+<li>Waste allowance defaults to 5% to cover spillage, uneven ground, edge trimming, and minor measurement error.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator show both volume and weight?</h3>
+<p>Suppliers often quote gravel by volume, but transport and handling are constrained by weight. A truck, trailer, or delivery vehicle has weight limits, and pricing sometimes switches between cubic metres and tonnes. The volume tells you how much space the gravel occupies, while the weight estimate helps you check whether your order matches delivery constraints. If your supplier sells strictly by tonnes, use the weight output with a density that matches their material.</p>
+<h3>What depth should I use for a driveway or pathway?</h3>
+<p>This calculator does not choose a depth for you because it depends on soil, drainage, and how the surface will be used. Use the depth that your plan or contractor specifies. If you only have a rough target, measure existing sections or follow local construction guidance for your project type. Once you pick a depth, this tool converts that decision into a clear material estimate and includes allowances if you enable them.</p>
+<h3>Do I need to include compaction and waste?</h3>
+<p>If you are compacting a base layer, it is normal for loose gravel to settle. Ordering exactly the compacted volume often leads to coming up short. The compaction allowance is a simple way to add extra material without guessing. Waste is optional but realistic, especially on long runs, uneven subgrade, or when you are hand-spreading. If you have tight access and cannot easily top up later, keep both allowances on.</p>
+<h3>My supplier quotes in cubic metres or “loads”. How do I use the result?</h3>
+<p>Use the cubic metres output if your supplier sells by cubic metre. If they sell by load, ask how many cubic metres a typical load contains or what the truck’s bed volume is. Then compare that against the total volume this calculator returns. If your supplier quotes in tonnes, use the tonnes estimate with the supplier’s density or conversion factor if they provide one.</p>
+<h3>How can I make the estimate more accurate?</h3>
+<p>Measure the area carefully, especially if the width changes. Use the planned compacted depth, not the loose depth. If possible, get the bulk density or tonnes-per-cubic-metre conversion from your supplier, because that is the biggest variable in weight estimates. Finally, keep a modest allowance for compaction and waste unless you have very controlled conditions and professional placement.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

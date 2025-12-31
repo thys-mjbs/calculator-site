@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering &amp; Technical Calculators</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+        
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="category-layout">
+
+        <div class="category-header">
+          <h1>Engineering &amp; Technical</h1>
+          <p>Simple engineering, physics and technical calculations.</p>
+        </div>
+
+        <div class="category-content-block category-content-primary">
+          <h2>What Engineering & Technical calculators are built to do</h2>
+        
+          <p>
+            Engineering and technical work depends on getting fundamentals right: units, relationships, limits, and assumptions. This category exists to provide structured calculators that turn common engineering inputs into usable outputs without requiring you to rebuild formulas each time. The tools here support quick checks, sizing estimates, sanity validation, and basic design calculations across electrical, mechanical, thermal, fluid, structural, and fabrication contexts. They are intended for technicians, engineering students, makers, tradespeople, maintenance teams, and engineers who need fast, repeatable math for real-world decisions and troubleshooting.
+          </p>
+        
+          <p>
+            The utilities in this category cover several practical domains. Electrical and electronics tools include Ohm’s law, wattage and power, voltage drop, resistor and capacitor combinations, reactance, impedance, power factor, AC/DC conversions, inverter load sizing, wire gauge capacity, cable resistance, and PCB trace width. Energy storage and runtime tools include battery capacity, battery life, recharge time, and UPS runtime estimation. Mechanical tools include RPM, torque, gear ratios, belts and pulleys, and basic kinematics such as velocity, acceleration, work, power, energy, and projectile motion. Thermal tools include thermal resistance, heat dissipation, cooling and HVAC load approximations, R-value and U-value, and thermal expansion. Fluids tools include hydraulic pressure and force, pneumatic flow, compressor power, pump flow and efficiency, pipe volume and flow rate approximations, pressure drop and friction loss, and Reynolds number basics. Structural and materials tools include simplified beam loading, shear and bending approximations, and safety factor calculations. Applied and fabrication tools include solar output and storage estimation, LED power consumption, 3D printing usage and cost, CNC feed rate estimation, welding consumption and heat input, soldering temperature guides, and prototype or PCB build costing.
+          </p>
+        
+          <p>
+            These calculators are separated into focused utilities because engineering problems are often solved by chaining small, correct steps rather than relying on one oversized tool. A power system check might start with wattage, then verify current through Ohm’s law, then evaluate voltage drop and wire gauge capacity, then size an inverter and estimate battery runtime. A thermal problem might begin with heat dissipation, then use thermal resistance to estimate temperature rise, then validate whether cooling load or airflow needs to change. In mechanical design, torque and RPM drive power calculations, which then influence motor selection and efficiency estimates. This category supports those workflows by keeping each calculation clear and independent.
+          </p>
+        
+          <p>
+            Outputs here are deterministic and based on standard relationships, commonly used conventions, and user-supplied inputs. They are not replacements for detailed engineering design, compliance standards, site-specific constraints, or safety-critical verification. Many tools are intentionally marked as basic or simplified versions because they provide fast baseline estimates rather than full simulation. The value is speed and repeatability: getting a reliable first-pass answer, checking whether a scenario is plausible, and identifying when a deeper analysis is required.
+          </p>
+        
+          <p>
+            Used correctly, these tools reduce errors such as mismatched units, incorrect scaling, underestimated losses, and unrealistic expectations. They also support clearer communication between teams by expressing results in standard terms like voltage drop, power factor, efficiency, flow rate, pressure drop, heat load, and safety factor. Whether you are designing, troubleshooting, estimating, or learning, this category serves as a practical reference for technical calculations that show up repeatedly across projects.
+          </p>
+        </div>
+        
+        <div class="category-back">
+          <a href="/">← Back to all categories</a>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/ac-to-dc-conversion-calculator/">
+              <div class="category-item-title">AC to DC Conversion Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate DC output voltage and ripple from an AC source using a rectifier and smoothing capacitor. Useful for quick power supply planning and sanity checks.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/battery-capacity-calculator/">
+              <div class="category-item-title">Battery Capacity Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/battery-life-calculator/">
+              <div class="category-item-title">Battery Life Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how long a battery or power bank will run your device based on battery capacity, voltage, power draw, and realistic efficiency assumptions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/belt-length-calculator/">
+              <div class="category-item-title">Belt Length Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate the approximate belt length for an open belt drive using two pulley diameters and the center distance. Includes optional allowance and wrap angle estimates.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/btu-to-kw-converter/">
+              <div class="category-item-title">BTU to kW Converter | SnapCalc</div>
+              <p class="category-item-desc">Convert BTU per hour (BTU/hr) into kilowatts (kW) for HVAC, heating, and cooling capacity comparisons. Includes watts and tons of refrigeration equivalents.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/cable-length-resistance-calculator/">
+              <div class="category-item-title">Cable Length Resistance Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate the electrical resistance of a cable run based on length, conductor size, material, and temperature. Optionally estimate voltage drop and power loss for a given current.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/capacitive-reactance-calculator/">
+              <div class="category-item-title">Capacitive Reactance Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate capacitive reactance (Xc) from frequency and capacitance. Optional voltage input estimates AC current and reactive power.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/cooling-load-calculator-simple-version/">
+              <div class="category-item-title">Cooling Load Calculator (Simple Version) | SnapCalc</div>
+              <p class="category-item-desc">Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/dc-to-ac-inverter-load-calculator/">
+              <div class="category-item-title">DC to AC Inverter Load Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate the inverter size you need for your AC appliances from a DC source. Calculate recommended continuous and surge inverter ratings, DC input current, and a practical fuse size.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/gear-ratio-calculator/">
+              <div class="category-item-title">Gear Ratio Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate gear ratio from tooth counts and estimate output RPM and torque multiplier for simple gear pairs.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/heat-dissipation-calculator/">
+              <div class="category-item-title">Heat Dissipation Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate the maximum heatsink thermal resistance you need to keep an electronic component within its safe temperature limit, based on power, ambient temperature, and thermal resistances.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/hydraulic-force-calculator/">
+              <div class="category-item-title">Hydraulic Force Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate hydraulic cylinder force from system pressure and cylinder bore. Includes optional rod diameter and efficiency to estimate push and pull force.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/hydraulic-pressure-calculator/">
+              <div class="category-item-title">Hydraulic Pressure Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate the hydraulic pressure needed to generate a target cylinder force from a given bore diameter, with optional efficiency and safety factor adjustments.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/impedance-calculator-basic/">
+              <div class="category-item-title">Impedance Calculator (Basic) | SnapCalc</div>
+              <p class="category-item-desc">Calculate electrical impedance from resistance and reactance, or from R, L, C, and frequency. Get magnitude, phase angle, rectangular form, and power factor.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/inductor-reactance-calculator/">
+              <div class="category-item-title">Inductor Reactance Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate inductive reactance (XL) in ohms from frequency and inductance. Useful for AC circuits, filters, and impedance checks at 50 Hz, 60 Hz, and any custom frequency.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/motor-efficiency-calculator/">
+              <div class="category-item-title">Motor Efficiency Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate electric motor efficiency from input power and output power, or from torque and RPM. See efficiency percent and estimated power loss.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/motor-power-calculator/">
+              <div class="category-item-title">Motor Power Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate an electric motor’s input power and estimated shaft power from voltage, current, power factor, efficiency, and phase (single or three-phase).</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/ohms-law-calculator/">
+              <div class="category-item-title">Ohm’s Law Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate voltage, current, or resistance using Ohm’s Law. Enter any two values and get the missing value instantly.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/power-factor-calculator/">
+              <div class="category-item-title">Power Factor Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate power factor from kW and kVA, kW and kVAR, or voltage, current, and phase angle. Includes apparent power, reactive power, and PF correction estimate.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/pulley-ratio-calculator/">
+              <div class="category-item-title">Pulley Ratio Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate pulley mechanical advantage and the pulling force needed to lift a load, with optional efficiency and lift height for rope travel.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/recharge-time-calculator/">
+              <div class="category-item-title">Recharge Time Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how long it will take to recharge a battery based on battery size and charger power, with optional efficiency and charging taper assumptions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/resistor-color-code-calculator/">
+              <div class="category-item-title">Resistor Color Code Calculator | SnapCalc</div>
+              <p class="category-item-desc">Decode 4-band, 5-band, and 6-band resistor color codes into ohms, tolerance, and range, or generate band colors from a target resistance.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/rpm-calculator/">
+              <div class="category-item-title">RPM Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate RPM from surface speed and diameter for wheels, pulleys, shafts, and rotating parts. Get RPM plus angular speed and time per revolution.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/series-and-parallel-capacitor-calculator/">
+              <div class="category-item-title">Series &amp; Parallel Capacitor Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate equivalent capacitance for capacitors in series or parallel. Enter up to six capacitor values, choose units, and get a clear result with practical context.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/series-and-parallel-resistor-calculator/">
+              <div class="category-item-title">Series &amp; Parallel Resistor Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate equivalent resistance for resistors in series or parallel. Paste a list of resistor values and get total resistance plus optional tolerance range.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/thermal-resistance-calculator/">
+              <div class="category-item-title">Thermal Resistance Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate thermal resistance (K/W) for one or more flat layers and estimate temperature rise for a given heat load. Useful for quick conduction stack checks in engineering.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/torque-calculator/">
+              <div class="category-item-title">Torque Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate torque from power and RPM for rotating equipment. Get torque in N·m and lb·ft, plus a practical force-at-radius reference.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/voltage-drop-calculator/">
+              <div class="category-item-title">Voltage Drop Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate voltage drop, percentage drop, and end-of-run voltage for DC, single-phase, or three-phase circuits based on cable size, length, and load current.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/wattage-calculator/">
+              <div class="category-item-title">Wattage Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate electrical wattage (power) using volts, amps, and resistance. Use common formulas to find watts and convert to kilowatts for real-world electrical sizing.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/engineering-technical/wire-gauge-awg-current-capacity-calculator/">
+              <div class="category-item-title">Wire Gauge (AWG) Current Capacity Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate the safe current capacity (ampacity) of a copper or aluminum wire by AWG size, insulation temperature rating, ambient temperature, and number of current-carrying conductors.</p>
+            </a>
+          </div>
+        </div>
+
+          <div class="category-content-block category-content-secondary">
+            <h2>How to use technical calculators safely and interpret results</h2>
+          
+            <p>
+              The first rule in technical calculation is to treat units as part of the input, not decoration. Many errors come from mixing volts and millivolts, watts and kilowatts, psi and bar, or meters and millimeters. Converters help, but you still need to confirm that the numbers entered match the physical situation. A quick sanity check is order of magnitude: if a result is unexpectedly large or small, the most likely causes are unit scale, missing prefixes, or incorrect assumptions about whether a value is RMS, peak, average, or rated. This category’s tools are structured to keep inputs explicit so you can verify them before trusting outputs.
+            </p>
+          
+            <p>
+              Electrical tools are often chained because losses and limits stack. Ohm’s law and wattage calculators give basic current and power, but real systems are constrained by voltage drop, wire gauge capacity, cable resistance, and power factor. Voltage drop becomes significant over distance and at higher current, and it directly affects load performance and heat generation in conductors. Power factor matters in AC systems because apparent power and real power diverge, affecting current draw and equipment sizing. Inverter sizing and UPS runtime estimates depend on load profile, efficiency, and surge behavior, so treat results as baseline sizing guidance and apply safety margin where loads can spike or duty cycles vary.
+            </p>
+          
+            <p>
+              Batteries and storage calculators depend heavily on how capacity is specified and how the load behaves over time. Battery capacity in amp-hours does not automatically translate to usable energy without considering voltage, discharge rate, and efficiency. Recharge time depends on charger power, battery chemistry, and charging curves, so results are best treated as estimates. For solar output and storage estimators, input realism matters more than math. Panel ratings are typically measured under ideal test conditions, while real output depends on sun hours, temperature, shading, orientation, inverter losses, and system degradation. Use these tools to compare scenarios and get baseline sizing, not to assume guaranteed daily performance.
+            </p>
+          
+            <p>
+              Mechanical and motion calculators are sensitive to assumptions about friction, load, and efficiency. Torque, RPM, and power calculations are foundational, but real systems lose energy through transmission inefficiencies, belt slip, bearing friction, and load variation. Gear ratios and pulley ratios affect both speed and torque, and a change that improves one often reduces the other. Kinematics tools like acceleration, velocity, and energy calculators are useful for understanding relationships and doing sanity checks, but real-world motion often includes non-constant acceleration, drag, rolling resistance, and constraints that simplified models do not capture.
+            </p>
+          
+            <p>
+              Thermal tools are most useful for estimating temperature rise and verifying whether a design is plausible before building or modifying hardware. Thermal resistance and heat dissipation calculations help predict whether components will overheat under steady load. R-value and U-value tools translate insulation properties into heat transfer expectations, which supports HVAC and envelope planning. Cooling load and airflow calculators are simplified approximations and should be treated as first-pass checks, especially because real spaces involve ventilation rates, humidity, infiltration, occupant load, equipment heat, and climate conditions. If the estimated load is close to system limits, assume you need a more detailed analysis.
+            </p>
+          
+            <p>
+              Fluids tools often look precise but depend on flow regime, pipe condition, and fluid properties. Pipe volume is straightforward geometry, but flow rate, pressure drop, and friction loss depend on diameter, length, fittings, roughness, viscosity, and whether flow is laminar or turbulent. Reynolds number is a useful classification tool that indicates which assumptions are reasonable. Pump efficiency and compressor power calculators are sensitive to operating point, so treat outputs as baseline estimates unless you have manufacturer curves. Hydraulic pressure and force calculations are reliable if inputs are correct, but practical systems include losses in valves, hoses, and fittings that reduce delivered performance.
+            </p>
+          
+            <p>
+              Structural and materials tools in this category are simplified by design. Beam loading, shear and bending moment approximations, and safety factor calculations can help with material takeoffs, preliminary checks, and understanding how loads distribute, but they do not substitute for engineered design, code requirements, or professional sign-off where safety is involved. Material strength and safety factor tools are useful for comparing options and identifying when a design is clearly underbuilt, but they rely on accurate load assumptions and correct material properties. If a result suggests borderline adequacy, treat that as a signal to verify through formal design methods.
+            </p>
+          
+            <p>
+              Fabrication and prototyping calculators are about cost and process control. 3D printing filament usage and cost tools help prevent underestimating material and time costs. CNC feed rate tools provide starting points, but real feeds depend on machine rigidity, tooling, material hardness, and desired finish. Welding consumption and heat input calculators help standardize process planning, but real consumption varies with joint prep, operator technique, and position. Prototype and PCB cost tools help quantify build economics early, which is often the difference between a viable and non-viable iteration cycle.
+            </p>
+          
+            <p>
+              These calculators are most valuable when you use them iteratively: enter realistic inputs, review outputs, adjust assumptions, and rerun. The goal is visibility and control, not false certainty. If an output materially influences cost, safety, or compliance, treat it as a first-pass calculation and confirm with standards, specifications, or detailed engineering methods. Used properly, this category reduces avoidable mistakes, accelerates troubleshooting, and provides a consistent baseline for technical decision making across a wide range of practical scenarios.
+            </p>
+          </div>
+          
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+  </script>
+
+  </body>
+</html>

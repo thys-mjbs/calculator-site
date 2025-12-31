@@ -1,0 +1,218 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Calorie Deficit Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate your daily calorie deficit and target intake based on your maintenance calories and weight goal, using either a target weight timeline or a weekly loss rate." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/health-fitness/calorie-deficit-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Calorie Deficit Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate your daily calorie deficit and target intake based on your maintenance calories and weight goal, using either a target weight timeline or a weekly loss rate." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/health-fitness/calorie-deficit-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Calorie Deficit Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate your daily calorie deficit and target intake based on your maintenance calories and weight goal, using either a target weight timeline or a weekly loss rate." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calorie Deficit Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/calorie-deficit-calculator/",
+      "description": "Estimate your daily calorie deficit and target intake based on maintenance calories and a weight goal, using either a target weight timeline or a weekly loss rate."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health &amp; Fitness</a> ›
+        <span>Calorie Deficit Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Calorie Deficit Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate your daily calorie deficit and target intake</h2>
+<p class="calculator-intro">Use a quick maintenance estimate (or enter your own) and choose a goal method to get a daily calorie target, expected weekly change, and a simple safety check.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="sex">Sex (for BMR estimate)</label>
+<select id="sex">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</div>
+<div class="form-group">
+<label for="ageYears">Age (years)</label>
+<input id="ageYears" inputmode="numeric" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="heightCm">Height (cm)</label>
+<input id="heightCm" inputmode="numeric" placeholder="e.g., 175" type="text"/>
+</div>
+<div class="form-group">
+<label for="weightKg">Current weight (kg)</label>
+<input id="weightKg" inputmode="decimal" placeholder="e.g., 82.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="activityLevel">Activity level</label>
+<select id="activityLevel">
+<option value="1.2">Sedentary (little to no exercise)</option>
+<option value="1.375">Lightly active (1 to 3 days per week)</option>
+<option selected="" value="1.55">Moderately active (3 to 5 days per week)</option>
+<option value="1.725">Very active (6 to 7 days per week)</option>
+<option value="1.9">Extra active (very hard training or physical job)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="maintenanceOverride">Maintenance calories (optional override)</label>
+<input id="maintenanceOverride" inputmode="numeric" placeholder="Leave blank to estimate from your stats" type="text"/>
+</div>
+<div class="form-group">
+<label for="goalMode">Goal method</label>
+<select id="goalMode">
+<option selected="" value="timeline">Reach a target weight in a set number of weeks</option>
+<option value="rate">Use a weekly weight change rate (kg per week)</option>
+</select>
+</div>
+<div class="mode-block" id="modeTimeline">
+<div class="form-group">
+<label for="targetWeightKg">Target weight (kg)</label>
+<input id="targetWeightKg" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+</div>
+<div class="form-group">
+<label for="timelineWeeks">Timeline (weeks)</label>
+<input id="timelineWeeks" inputmode="numeric" placeholder="e.g., 12" type="text"/>
+</div>
+</div>
+<div class="mode-block hidden" id="modeRate">
+<div class="form-group">
+<label for="rateKgPerWeek">Weekly change (kg per week)</label>
+<input id="rateKgPerWeek" inputmode="decimal" placeholder="e.g., 0.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="optionalTargetWeightKg">Optional target weight (kg)</label>
+<input id="optionalTargetWeightKg" inputmode="decimal" placeholder="Optional, for estimating weeks to goal" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate calorie deficit</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Estimate nutrition, training, and body metrics with practical tools for daily health decisions.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, compare costs, and run everyday money calculations to stay on track.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for common tasks, simple planning, and practical household decisions.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Calorie deficit calculator for daily calorie targets and weight goals</h2>
+<p>A calorie deficit is the gap between the calories your body uses (your maintenance calories) and the calories you eat. When you consistently eat below maintenance, your body has to cover some of its energy needs from stored energy, which typically shows up as weight loss over time. This calculator helps you translate a goal into a practical daily calorie target by estimating your maintenance calories and then calculating the deficit needed.</p>
+<p>The calculator supports two common real world approaches. If you have a specific target weight and a timeframe, it calculates the daily deficit needed to reach that target on average. If you prefer a steady pace, you can set a weekly rate (for example 0.25 kg to 0.75 kg per week) and it will calculate the daily deficit that rate implies. Either way, you also get a quick summary showing how big the deficit is per day and per week, plus what daily calorie intake that suggests.</p>
+<p>To make the tool usable even when you do not have perfect data, maintenance calories can be estimated from your age, sex, height, weight, and activity level. If you already know your maintenance calories from a wearable, a food tracking app, or prior tracking, you can enter it as an override and the calculator will use your number instead of the estimate. The results are estimates, not guarantees. Day to day scale changes are noisy, so the useful signal is the trend over multiple weeks.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Maintenance calories are estimated using a standard BMR formula plus an activity multiplier. This is an estimate, not a measurement.</li>
+<li>Energy-to-weight conversion is simplified using 7,700 kcal per kilogram of body weight change. Real outcomes vary by person and over time.</li>
+<li>Weight change is treated as a smooth weekly average. In practice, water, glycogen, digestion, and sleep can mask progress for days.</li>
+<li>If you enter a maintenance calorie override, that value replaces the estimate entirely and will drive the rest of the outputs.</li>
+<li>Very aggressive deficits can be unsafe, especially for teens, athletes, and people with medical conditions. Use conservative targets and seek professional advice if unsure.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is a reasonable calorie deficit?</h3>
+<p>For many adults, a moderate deficit is often more sustainable than a large one. A common range is around 10% to 25% below maintenance, depending on starting point and goals. If the deficit is too large, hunger, fatigue, poor training performance, and rebound eating become more likely. This calculator flags overly aggressive results so you can adjust your plan.</p>
+<h3>Why does the calculator ask for sex, height, weight, age, and activity?</h3>
+<p>Those inputs are used to estimate maintenance calories when you do not provide your own maintenance number. Weight and height influence baseline energy needs, age shifts the estimate slightly, and activity level scales the estimate based on how much energy you likely burn through movement and training. If you already know your maintenance calories, you can skip relying on the estimate by using the override field.</p>
+<h3>What if I do not know my maintenance calories?</h3>
+<p>Use the estimate as a starting point. The most practical way to improve accuracy is to track food intake and body weight trend for 2 to 4 weeks. If your weight trend is stable, your average intake is close to maintenance. If you are losing faster than expected, maintenance might be lower than estimated; if you are losing slower, it might be higher. Small adjustments are usually better than large swings.</p>
+<h3>Why can my scale weight stall even when I am in a deficit?</h3>
+<p>Short stalls are common. Water retention from stress, salt, training soreness, and hormonal changes can temporarily hide fat loss. The most useful approach is to compare weekly averages rather than single weigh-ins. If your trend is flat for several weeks, then it is time to reassess either your calorie intake, your activity level, or the accuracy of your tracking.</p>
+<h3>Does this apply to teens or people with special medical situations?</h3>
+<p>If you are under 18, pregnant, breastfeeding, recovering from an eating disorder, or managing a medical condition, calorie targets can be more complex and the risks of aggressive dieting are higher. Use this calculator only as a rough educational estimate and consult a qualified health professional for personalized guidance. If the suggested intake feels extreme or drives anxiety or compulsive restriction, do not follow it.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

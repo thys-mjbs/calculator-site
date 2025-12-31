@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Loan Affordability Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the maximum loan amount you can afford based on your monthly income, existing debt payments, interest rate, and loan term." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/personal-finance/loan-affordability-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Loan Affordability Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate the maximum loan amount you can afford based on your monthly income, existing debt payments, interest rate, and loan term." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/personal-finance/loan-affordability-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Loan Affordability Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the maximum loan amount you can afford based on your monthly income, existing debt payments, interest rate, and loan term." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Loan Affordability Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/loan-affordability-calculator/",
+      "description": "Estimate the maximum loan amount you can afford using income, existing monthly debt payments, interest rate, and loan term, based on common affordability rules."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Loan Affordability Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Loan Affordability Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>How much can you safely borrow?</h2>
+<p class="calculator-intro">
+                Enter your monthly income, existing debt payments, and the loan rate and term. This estimates your maximum affordable monthly payment and the loan amount it supports.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="monthlyIncome">Monthly gross income</label>
+<input aria-label="Monthly gross income" id="monthlyIncome" inputmode="decimal" placeholder="e.g., 45,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyDebt">Existing monthly debt payments</label>
+<input aria-label="Existing monthly debt payments" id="monthlyDebt" inputmode="decimal" placeholder="e.g., 6,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="apr">Loan interest rate (APR %)</label>
+<input aria-label="Loan interest rate APR percent" id="apr" inputmode="decimal" placeholder="e.g., 18" type="text"/>
+</div>
+<div class="form-group">
+<label for="termYears">Loan term (years)</label>
+<input aria-label="Loan term in years" id="termYears" inputmode="numeric" placeholder="e.g., 5" type="text"/>
+</div>
+<details class="advanced-settings">
+<summary>Advanced settings (optional)</summary>
+<div class="form-group">
+<label for="paymentBudget">Monthly payment budget (optional override)</label>
+<input aria-label="Monthly payment budget" id="paymentBudget" inputmode="decimal" placeholder="e.g., 4,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxDti">Max debt-to-income (DTI %) (default 36)</label>
+<input aria-label="Maximum debt to income percent" id="maxDti" inputmode="decimal" placeholder="36" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxPti">Max loan payment-to-income (PTI %) (default 15)</label>
+<input aria-label="Maximum loan payment to income percent" id="maxPti" inputmode="decimal" placeholder="15" type="text"/>
+</div>
+<p class="advanced-note">
+                  These settings change the affordability rules, not the loan math. If you are unsure, leave them blank.
+                </p>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate affordability</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, affordability, and everyday money decisions with simple tools.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Estimate repayments, payoff timelines, and credit metrics before you borrow.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Compare saving goals and growth scenarios to balance debt and future plans.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Loan affordability calculator for estimating the maximum loan you can borrow</h2>
+<p>
+                A loan can look affordable on paper until the monthly payment collides with your real budget. This loan affordability calculator is built for one decision: estimating the maximum loan amount you can reasonably afford right now, using your monthly income, your existing debt payments, and the loan’s interest rate and term. The output is not a lender approval. It is a practical ceiling that helps you avoid borrowing yourself into a payment that becomes unstable.
+              </p>
+<p>
+                The calculator works in two steps. First, it estimates a maximum monthly loan payment you can carry based on common affordability rules. Second, it converts that maximum payment into a loan amount using standard loan math. This is useful when you are shopping for a personal loan, consolidating debt, or deciding whether to accept an offer and how much to request. If you only have rough numbers, you can still get a usable estimate, then refine it with optional settings.
+              </p>
+<p>
+                To use it, enter your monthly gross income and the total of your existing monthly debt payments (things like credit cards, vehicle finance, or other loans). Then enter the loan interest rate (APR) and the term in years. The calculator estimates the maximum affordable monthly payment and the corresponding maximum loan amount. It also shows the total repaid and total interest over the full term so you can see what the loan really costs if you keep it to completion.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This tool assumes a standard amortizing loan with fixed monthly payments over the full term.</li>
+<li>By default, the calculator uses a maximum DTI of 36% and a maximum loan payment-to-income (PTI) of 15%, then uses the stricter limit.</li>
+<li>DTI is treated as total monthly debt payments (existing debts plus the new loan payment) divided by monthly gross income.</li>
+<li>If you enter a monthly payment budget, the calculator uses the smallest of your budget, the PTI limit, and the DTI limit.</li>
+<li>Fees, insurance add-ons, balloon payments, and variable interest rates are not included, so real lender offers can differ.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does this calculator ask for gross income instead of take-home pay?</h3>
+<p>
+                Affordability rules are usually expressed as a percentage of gross income (before tax). That makes comparisons consistent across different tax situations. If your take-home pay is much lower than typical, use the monthly payment budget in Advanced settings to enforce a stricter limit that matches your cash flow.
+              </p>
+<h3>What counts as “existing monthly debt payments”?</h3>
+<p>
+                Include any regular debt obligations that reduce your ability to pay a new loan: credit card minimums, car payments, other personal loans, store cards, and similar fixed monthly commitments. Do not include rent, groceries, utilities, or discretionary spending here because those are not “debt payments” in the DTI sense. If your living costs are high, use the monthly payment budget to reflect that reality.
+              </p>
+<h3>What do DTI and PTI mean, and why are there two limits?</h3>
+<p>
+                DTI (debt-to-income) limits your total monthly debt burden, including the new loan, relative to your income. PTI (payment-to-income) limits the new loan payment by itself. Using both prevents edge cases where total debt looks acceptable but the new loan payment still takes too much of your monthly income. The calculator uses whichever limit produces the smaller payment because that is the safer constraint.
+              </p>
+<h3>What if the calculator says I can’t afford any new loan?</h3>
+<p>
+                That usually happens when your existing debt payments already exceed the chosen DTI limit. In practical terms, it means any new payment would push your debt load beyond a typical safety threshold. Your options are to reduce existing debt, increase income, choose a longer term (which reduces the payment but can increase total interest), or borrow a smaller amount with a smaller payment budget.
+              </p>
+<h3>How can I make this estimate more accurate?</h3>
+<p>
+                Start by using a realistic APR and term for your situation, not best-case rates. Then set a monthly payment budget that reflects your true cash flow after essentials and savings goals. If you already know a lender’s max DTI or you have a personal rule you follow, replace the default DTI and PTI percentages in Advanced settings. The calculation will still work even if you only provide the basic inputs, but accuracy improves when the affordability limits match your real constraints.
+              </p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Teaspoon/Tablespoon/Cup Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert between teaspoons, tablespoons, and cups for cooking and baking. Get exact conversions plus quick equivalents across all three units." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/teaspoon-tablespoon-cup-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Teaspoon/Tablespoon/Cup Converter | SnapCalc" property="og:title"/>
+<meta content="Convert between teaspoons, tablespoons, and cups for cooking and baking. Get exact conversions plus quick equivalents across all three units." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/teaspoon-tablespoon-cup-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Teaspoon/Tablespoon/Cup Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert between teaspoons, tablespoons, and cups for cooking and baking. Get exact conversions plus quick equivalents across all three units." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Teaspoon/Tablespoon/Cup Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/teaspoon-tablespoon-cup-converter/",
+      "description": "Convert cooking volumes between teaspoons, tablespoons, and cups using standard US kitchen conversions, with optional rounding for easier measuring."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Teaspoon/Tablespoon/Cup Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Teaspoon/Tablespoon/Cup Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert teaspoons, tablespoons, and cups</h2>
+<p class="calculator-intro">Enter an amount, choose your starting unit and target unit, then convert. You will also get quick equivalents in all three units.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="amountInput">Amount</label>
+<input aria-label="Amount to convert" id="amountInput" inputmode="decimal" placeholder="e.g., 2.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="fromUnit">From unit</label>
+<select aria-label="From unit" id="fromUnit">
+<option value="tsp">Teaspoon (tsp)</option>
+<option value="tbsp">Tablespoon (tbsp)</option>
+<option value="cup">Cup (cup)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="toUnit">To unit</label>
+<select aria-label="To unit" id="toUnit">
+<option value="tbsp">Tablespoon (tbsp)</option>
+<option value="tsp">Teaspoon (tsp)</option>
+<option value="cup">Cup (cup)</option>
+</select>
+</div>
+<fieldset class="advanced-fieldset">
+<legend>Advanced (optional)</legend>
+<div class="form-group">
+<label for="roundingSelect">Round the result for easier measuring</label>
+<select aria-label="Rounding option" id="roundingSelect">
+<option value="none">No rounding (exact)</option>
+<option value="0.125">Nearest 1/8 teaspoon</option>
+<option value="0.25">Nearest 1/4 teaspoon</option>
+<option value="0.5">Nearest 1/2 teaspoon</option>
+<option value="1">Nearest 1 teaspoon</option>
+<option value="0.75">Nearest 1/4 tablespoon</option>
+<option value="1.5">Nearest 1/2 tablespoon</option>
+<option value="3">Nearest 1 tablespoon</option>
+<option value="6">Nearest 1/8 cup</option>
+<option value="12">Nearest 1/4 cup</option>
+</select>
+</div>
+</fieldset>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert common units for cooking, travel, DIY, and everyday comparisons.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for daily decisions, planning, and simple calculations.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Practice-friendly calculators and helpers for learning and studying.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Convert teaspoons to tablespoons or cups (and back) for cooking and baking</h2>
+<p>This Teaspoon/Tablespoon/Cup Converter is built for one practical situation: you are following a recipe and the measuring tools you have do not match the recipe unit. Instead of guessing, you can convert the exact amount from teaspoons (tsp) to tablespoons (tbsp) or cups, or convert in the other direction when you need to scale a small measurement up or down. The result is shown clearly in your target unit, plus quick equivalents in all three units so you can choose the easiest tool to use.</p>
+<p>To use it, enter the amount you have, choose the unit you are starting from, and choose the unit you want. Press Convert. If you want a measurement that is easier to scoop with common spoons, open the Advanced section and choose a rounding option. Rounding is optional, and the calculator still gives you an exact conversion even if you do not round. When rounding is selected, the tool also shows a suggested rounded measurement that is closer to what you can realistically measure in a kitchen.</p>
+<p>The outputs are meant to support one decision: what should you measure with the tool you have in your hand. If the conversion lands on an awkward number like 0.83 tbsp, the equivalents help you see that 0.83 tbsp is the same as 2.50 tsp, which might be easier if you have a teaspoon set. If you are working in cups and the result is very small, the equivalents help you switch to spoons without doing extra math. This page intentionally stays focused on these three units and does not attempt to convert to milliliters, ounces, grams, or ingredient-specific weights.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Uses standard US kitchen volume relationships: 1 tablespoon equals 3 teaspoons, and 1 cup equals 16 tablespoons (48 teaspoons).</li>
+<li>All inputs are treated as volume measures, not weight. This is not a grams converter and does not depend on ingredient density.</li>
+<li>Rounding options are designed for practical measuring. If rounding changes the amount, the tool shows both exact and rounded values.</li>
+<li>Very small results may look precise in decimals, but real measuring spoons have tolerance. Use rounding when precision is not critical.</li>
+<li>This tool is for recipe measurement conversions only. It does not handle nutrition calculations, serving size scaling, or unit systems outside tsp, tbsp, and cup.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does 1 cup equal 16 tablespoons and 48 teaspoons?</h3>
+<p>In standard US kitchen measures, 1 cup is defined as 16 tablespoons. A tablespoon is defined as 3 teaspoons. Combining those two relationships means 1 cup is 16 × 3 = 48 teaspoons. The converter uses that fixed chain so all results remain consistent whether you convert directly to the target unit or use the equivalents list.</p>
+<h3>Should I round the result or use the exact number?</h3>
+<p>Use the exact value when the recipe is sensitive to small changes, such as baking powder, yeast, salt, or strong flavor extracts. Use rounding when you are measuring something forgiving like water, broth, or many sauces. The Advanced rounding options are there to match common spoon and cup increments so you can measure quickly without trying to hit an awkward decimal.</p>
+<h3>What if my recipe uses fractions like 1/3 cup instead of decimals?</h3>
+<p>This calculator outputs decimals because they are easy to compute and consistent across units. If you prefer fractions, use the rounding options to land on common increments like 1/4 cup or 1/8 cup, then measure with your cup set. For spoons, rounding to 1/4 teaspoon or 1/2 teaspoon often matches standard spoon markings.</p>
+<h3>Does this work the same in every country?</h3>
+<p>Not always. Spoon and cup sizes can vary slightly between measurement systems, and some countries use metric cups. This tool is locked to the common US kitchen relationships so it stays predictable and useful for typical online recipes. If your measuring set explicitly says “metric” or “Australian tablespoon,” results may differ from what your tools represent.</p>
+<h3>Why does the calculator not convert to milliliters or grams?</h3>
+<p>This page is intentionally narrow. It converts only between teaspoons, tablespoons, and cups so the inputs, assumptions, and results stay aligned with the most common kitchen problem. Milliliters are a separate conversion system, and grams depend on ingredient density, which turns a simple conversion into an ingredient-specific calculator.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

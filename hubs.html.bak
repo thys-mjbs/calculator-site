@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hubs | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta
+      name="description"
+      content="SnapCalc hubs group related tool libraries into clear sections with short explanations and direct access points."
+    >
+
+    <link rel="canonical" href="https://snapcalc.site/hubs.html">
+
+    <meta property="og:title" content="Hubs | SnapCalc">
+    <meta
+      property="og:description"
+      content="Hubs group SnapCalc tool libraries into clear sections with short explanations and direct access points."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/hubs.html">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hubs | SnapCalc">
+    <meta
+      name="twitter:description"
+      content="Hubs group SnapCalc tool libraries into clear sections with short explanations and direct access points."
+    >
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Hubs",
+      "url": "https://snapcalc.site/hubs.html",
+      "description": "SnapCalc hubs group related tool libraries into clear sections with short explanations and direct access points."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+
+    <style>
+      /* Minimal, self-contained section heading styling (hub page only) */
+      .hub-section-title {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 22px 0 12px 0;
+        text-align: center;
+      }
+
+      .hub-section {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Match homepage rendering: same outer layout wrapper -->
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Hubs</h1>
+        </div>
+
+        <!-- Editorial intro block (matches homepage spacing/typography) -->
+        <section class="seo-section" aria-label="What hubs are">
+          <h2>What hubs are for</h2>
+
+          <p>
+            Hubs are simple entry points to the main SnapCalc libraries. They give you a quick
+            explanation of what a section contains and what it is useful for, then take you
+            straight into the tools.
+          </p>
+
+          <p>
+            Results depend on what you enter. Use outputs for quick checking and planning, and
+            confirm anything important against your own figures and constraints.
+          </p>
+
+          <p>
+            If you want detail on how tools are designed and how to interpret results, read:
+            <a href="/about.html">About</a>, <a href="/methodology.html">Methodology</a>, and
+            <a href="/accuracy.html">Accuracy</a>.
+          </p>
+        </section>
+
+        <!-- Hub: Calculators -->
+        <section class="hub-section" aria-label="Calculators hub">
+          <div class="hub-section-title">Calculators</div>
+
+          <section class="seo-section" aria-label="About the calculators hub">
+            <p>
+              The calculators library is the core of SnapCalc. It brings together focused, single-purpose tools designed to answer specific questions with minimal inputs and clearly defined outputs. These calculators are intended for quick sense-checking, comparing scenarios, and exploring “what-if” outcomes without unnecessary complexity. When you need a fast, practical way to work through numbers or test assumptions, the calculators library is where you will spend most of your time using SnapCalc’s tools.
+            </p>
+
+            <p>
+              The full calculators library is available in the
+              <a href="/hubpages/calculators.html">Calculators</a> section, where tools are
+              grouped by category and designed for quick, practical use.
+            </p>            
+
+          </section>
+        </section>
+
+        <!-- Hub: Scorecards (commented out, written as if live) -->
+        <!--
+        <section class="hub-section" aria-label="Scorecards hub">
+          <div class="hub-section-title">Scorecards</div>
+
+          <section class="seo-section" aria-label="About the scorecards hub">
+            <p>
+              Scorecards will be structured evaluation tools for decisions, trade-offs, and performance.
+              The goal is consistent thinking and clearer comparisons, not perfect scoring.
+            </p>
+
+            <p>
+              Browse the library here:
+              <a href="/hubpages/scorecards.html">Scorecards</a>.
+            </p>
+          </section>
+        </section>
+        -->
+
+        <section class="seo-section" aria-label="Last updated">
+          <div class="last-updated">Last updated: 2025-12-30</div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

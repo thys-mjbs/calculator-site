@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Meeting Time Zone Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert a meeting time between time zones, including daylight saving changes, and see the local time for multiple participants instantly.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/meeting-time-zone-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Meeting Time Zone Converter | SnapCalc">
+    <meta property="og:description" content="Convert a meeting time between time zones, including daylight saving changes, and see the local time for multiple participants instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/meeting-time-zone-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meeting Time Zone Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert a meeting time between time zones, including daylight saving changes, and see the local time for multiple participants instantly.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Meeting Time Zone Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/meeting-time-zone-converter/",
+      "description": "Convert a meeting time between time zones, including daylight saving changes, and see the local time for multiple participants instantly."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date & Scheduling</a> ›
+        <span>Meeting Time Zone Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Meeting Time Zone Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rUNgvR" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Deadline Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Monitor deadlines and avoid missed dates across tasks and projects.</p>
+                <div class="affiliate-cta">Explore deadline tracking tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert a meeting time for multiple time zones</h2>
+
+              <p class="calculator-intro">Enter the meeting date and time in the organizer’s time zone, then add one or more participant time zones to see local times, date changes, and time differences.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="meetingDate">Meeting date (YYYY-MM-DD)</label>
+                <input id="meetingDate" type="text" inputmode="numeric" placeholder="2025-12-17" />
+              </div>
+
+              <div class="form-group">
+                <label for="meetingTime">Meeting time (HH:MM)</label>
+                <input id="meetingTime" type="text" inputmode="numeric" placeholder="14:30" />
+              </div>
+
+              <div class="form-group">
+                <label for="sourceTimeZone">Organizer time zone (IANA)</label>
+                <input id="sourceTimeZone" type="text" list="tzList" placeholder="Africa/Johannesburg" />
+              </div>
+
+              <div class="form-group">
+                <label for="targetTimeZone1">Participant time zone 1 (required)</label>
+                <input id="targetTimeZone1" type="text" list="tzList" placeholder="Europe/London" />
+              </div>
+
+              <div class="form-group">
+                <label for="targetTimeZone2">Participant time zone 2 (optional)</label>
+                <input id="targetTimeZone2" type="text" list="tzList" placeholder="America/New_York" />
+              </div>
+
+              <div class="form-group">
+                <label for="targetTimeZone3">Participant time zone 3 (optional)</label>
+                <input id="targetTimeZone3" type="text" list="tzList" placeholder="Asia/Tokyo" />
+              </div>
+
+              <div class="form-group">
+                <label for="timeFormat">Display format</label>
+                <select id="timeFormat">
+                  <option value="24" selected>24-hour (14:30)</option>
+                  <option value="12">12-hour (2:30 PM)</option>
+                </select>
+              </div>
+
+              <div class="form-group checkbox-row">
+                <label>
+                  <input id="includeUtc" type="checkbox" checked />
+                  Also show UTC time
+                </label>
+              </div>
+
+              <datalist id="tzList">
+                <option value="Africa/Johannesburg"></option>
+                <option value="Africa/Cairo"></option>
+                <option value="Africa/Nairobi"></option>
+                <option value="Europe/London"></option>
+                <option value="Europe/Paris"></option>
+                <option value="Europe/Berlin"></option>
+                <option value="Europe/Madrid"></option>
+                <option value="Europe/Rome"></option>
+                <option value="Europe/Amsterdam"></option>
+                <option value="Europe/Zurich"></option>
+                <option value="Europe/Stockholm"></option>
+                <option value="Europe/Helsinki"></option>
+                <option value="America/New_York"></option>
+                <option value="America/Chicago"></option>
+                <option value="America/Denver"></option>
+                <option value="America/Los_Angeles"></option>
+                <option value="America/Toronto"></option>
+                <option value="America/Vancouver"></option>
+                <option value="America/Sao_Paulo"></option>
+                <option value="America/Mexico_City"></option>
+                <option value="Asia/Dubai"></option>
+                <option value="Asia/Kolkata"></option>
+                <option value="Asia/Bangkok"></option>
+                <option value="Asia/Singapore"></option>
+                <option value="Asia/Hong_Kong"></option>
+                <option value="Asia/Shanghai"></option>
+                <option value="Asia/Tokyo"></option>
+                <option value="Asia/Seoul"></option>
+                <option value="Australia/Sydney"></option>
+                <option value="Australia/Melbourne"></option>
+                <option value="Pacific/Auckland"></option>
+                <option value="UTC"></option>
+              </datalist>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert time zones</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan schedules, compare dates, convert times, and manage everyday time-based decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business & Accounting</h3>
+              <p class="related-desc">Run quick business math for planning, reporting, pricing, and operational decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel & Transport</h3>
+              <p class="related-desc">Estimate travel timing and logistics, including time differences that affect arrival and planning.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aP8zJ0" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Long-Term Planning</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Plan months and years ahead using structured time frameworks.</p>
+                <div class="affiliate-cta">View long-term planning tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Meeting time zone converter for scheduling across countries</h2>
+
+              <p>When you schedule a meeting with people in different countries, the hardest part is not choosing a time. The hardest part is choosing a time that means the same moment for everyone. A meeting set for “9:00 AM” is not a universal time. It is a local label that depends on the time zone, daylight saving rules, and sometimes even the date boundary. If you have ever joined a call one hour early, or missed one entirely, you already know the problem: time zones are easy to guess and easy to get wrong.</p>
+
+              <p>This Meeting Time Zone Converter helps you turn a meeting time in one time zone into the correct local time for one or more participant time zones. You enter the meeting date and time as the organizer sees it, pick the organizer’s time zone, then add participant time zones. The calculator outputs each participant’s local date and local time for the same meeting moment. It also shows whether the meeting lands on the same calendar day, the previous day, or the next day for each participant. That last detail matters more than most people expect, especially when you schedule late afternoon in the Americas or early morning in Asia and Oceania.</p>
+
+              <p>This calculator is designed for normal scheduling tasks: coordinating remote teams, client calls, interviews, webinars, and recurring check-ins. It works best when you use IANA time zone names such as <strong>Africa/Johannesburg</strong> or <strong>America/New_York</strong>, because those names include daylight saving behavior automatically. If your organization uses a calendar tool that displays IANA zones, this converter will match what those tools do, without relying on you to memorize offsets.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>You enter the meeting date in <strong>YYYY-MM-DD</strong> (for example 2025-12-17) and the meeting time in <strong>HH:MM</strong> using 24-hour time (for example 14:30).</li>
+                <li>Time zones should be entered as <strong>IANA time zone names</strong> (like Europe/London). These automatically include daylight saving rules for that region.</li>
+                <li>If a participant time zone is left blank, it is ignored. Only participant time zone 1 is required.</li>
+                <li>Daylight saving changes are applied based on the meeting date you enter. The same city can have a different offset in different months.</li>
+                <li>This calculator converts a single meeting instance. For recurring meetings, convert the first occurrence, then re-check dates near daylight saving transitions.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the date change for some participants?</h3>
+              <p>Time zones are separated by hours, and that difference can push the meeting time across midnight. A meeting at 23:30 in one region can be 01:30 the next day somewhere else. The converter shows the local date so nobody shows up on the wrong day.</p>
+
+              <h3>What is the difference between “UTC” and a city time zone like Europe/London?</h3>
+              <p>UTC is a fixed reference time that does not observe daylight saving. City or region time zones can change their offset during the year. Europe/London, for example, can be UTC+0 or UTC+1 depending on the date. If you want a stable reference for a meeting invitation, enabling the “Also show UTC time” option can help.</p>
+
+              <h3>What should I enter if I only know an offset like GMT+2?</h3>
+              <p>Offsets like GMT+2 can work for quick estimates, but they are risky because they do not encode daylight saving rules. Two different places can share the same offset today and diverge later. If possible, use an IANA name for a city or region. If you must use an offset, consider converting using a city that matches the region you mean, then verify in your calendar.</p>
+
+              <h3>Why do my results differ from a coworker’s phone or calendar?</h3>
+              <p>The most common causes are (1) one person using an offset instead of an IANA time zone, (2) a different meeting date being entered, or (3) daylight saving rules being applied differently because the zones were not the same. Double-check that everyone is using the same meeting date and the same named time zones.</p>
+
+              <h3>How can I make recurring cross-time-zone meetings less painful?</h3>
+              <p>Choose a time that remains reasonable for all participants across daylight saving seasons, then re-check the schedule when major DST changes happen. If the meeting must stay at a fixed local time for the organizer, participants in other zones may experience a shift by one hour during parts of the year. If the meeting must stay at a fixed global moment, anchor it to UTC in the invite and let local times adjust automatically.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4q0wB88" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Reminders</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Set reminders and alerts to stay on top of important dates.</p>
+                <div class="affiliate-cta">Browse reminder tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

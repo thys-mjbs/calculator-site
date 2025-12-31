@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Mortgage Insurance (PMI) Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate your monthly PMI payment from home price, down payment, and credit score. See your loan amount, LTV, annual PMI, and an estimate of when PMI may end." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/real-estate-property/mortgage-insurance-pmi-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Mortgage Insurance (PMI) Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate your monthly PMI payment from home price, down payment, and credit score. See your loan amount, LTV, annual PMI, and an estimate of when PMI may end." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/real-estate-property/mortgage-insurance-pmi-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mortgage Insurance (PMI) Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate your monthly PMI payment from home price, down payment, and credit score. See your loan amount, LTV, annual PMI, and an estimate of when PMI may end." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mortgage Insurance (PMI) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/mortgage-insurance-pmi-calculator/",
+      "description": "Estimate monthly PMI payment using home price, down payment, and credit score. Includes loan amount, LTV, PMI estimate, and an estimated PMI end point."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Mortgage Insurance (PMI) Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Mortgage Insurance (PMI) Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate your monthly PMI cost</h2>
+<p class="calculator-intro">Enter your home price and down payment. Add credit score and loan details for a more realistic PMI estimate and an approximate PMI end date.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="homePrice">Home price</label>
+<input id="homePrice" inputmode="decimal" placeholder="e.g., 3,500,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="downPaymentMode">Down payment input</label>
+<select class="select" id="downPaymentMode">
+<option selected="" value="percent">Percent (%)</option>
+<option value="amount">Amount</option>
+</select>
+</div>
+<div id="downPaymentPercentBlock">
+<div class="form-group">
+<label for="downPaymentPercent">Down payment (%)</label>
+<input id="downPaymentPercent" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+</div>
+<div class="hidden" id="downPaymentAmountBlock">
+<div class="form-group">
+<label for="downPaymentAmount">Down payment amount</label>
+<input id="downPaymentAmount" inputmode="decimal" placeholder="e.g., 350,000" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="creditScore">Credit score (optional)</label>
+<input id="creditScore" inputmode="numeric" placeholder="e.g., 740" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanTermYears">Loan term in years (optional)</label>
+<input id="loanTermYears" inputmode="numeric" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="interestRate">Interest rate APR % (optional)</label>
+<input id="interestRate" inputmode="decimal" placeholder="e.g., 7.25" type="text"/>
+</div>
+<div class="form-group">
+<label for="customPmiRate">PMI rate % per year (optional override)</label>
+<input id="customPmiRate" inputmode="decimal" placeholder="e.g., 0.60" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate PMI</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Compare home costs, estimate closing expenses, and plan property-related payments.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Understand interest, payments, and payoff timelines for loans, credit cards, and borrowing.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, track affordability, and make clearer decisions about everyday money and big purchases.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Mortgage insurance (PMI) calculator for monthly cost and payoff planning</h2>
+<p>Private mortgage insurance, usually called PMI, is an extra monthly cost that can apply when you buy a home with a smaller down payment. It protects the lender, not the borrower. The practical impact is simple: it increases your monthly housing cost until the insurance is removed. This calculator estimates your PMI cost using your home price and down payment, then adds credit score and loan details to produce a more realistic estimate.</p>
+<p>Start by entering the home price and down payment. The calculator converts that into a loan amount and loan-to-value ratio (LTV). LTV is the key driver for PMI because it reflects how much equity you have at the start. If you enter a credit score, the calculator uses it to choose a more appropriate PMI rate band. If you do not know your score, you still get a result using a reasonable default. If you already have a PMI rate from a lender quote, you can override the estimate by entering your own annual PMI rate.</p>
+<p>To make the result useful for planning, the calculator also estimates when PMI may end based on the common 80% LTV threshold. To do that, it needs a rough mortgage amortization path, which depends on term and interest rate. If you leave those fields blank, the calculator uses sensible defaults. The “PMI end estimate” is not a promise or a legal schedule, but it is a practical way to see how long PMI might stick around if you make standard payments and your home value does not change.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>PMI is estimated for conventional loans and is shown as a simple annual rate applied to the starting loan balance; real quotes vary by lender, product, and underwriting.</li>
+<li>The default credit score assumption is a mid-to-strong borrower profile when no score is entered, which may understate PMI for weaker credit and overstate it for excellent credit.</li>
+<li>The PMI end estimate assumes PMI can end around 80% LTV based on the original purchase price and a standard amortization path; actual cancellation rules can be stricter or require a request.</li>
+<li>If you do not enter interest rate and term, the calculator uses reasonable defaults to estimate the amortization timeline; your real loan terms will change the timeline.</li>
+<li>This calculator does not model upfront mortgage insurance, lender-paid mortgage insurance structures, or government insurance programs that follow different rules and pricing.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is PMI the same as homeowners insurance?</h3>
+<p>No. Homeowners insurance covers damage and liability related to the property. PMI protects the lender against default risk when the down payment is smaller. You can have both at the same time, and they are priced and cancelled differently.</p>
+<h3>What down payment triggers PMI?</h3>
+<p>PMI is commonly associated with down payments below 20% on conventional loans. The exact threshold and pricing depend on the lender and the loan program. This calculator assumes PMI is relevant when your LTV is above 80% and will show “no PMI” when the LTV is at or below 80%.</p>
+<h3>Why does credit score matter for PMI?</h3>
+<p>PMI pricing reflects risk. Better credit often qualifies for lower PMI rates at the same LTV, while weaker credit can increase the rate. If you do not know your credit score, leave it blank and treat the result as a planning estimate, not a quote.</p>
+<h3>How accurate is the PMI rate estimate if I do not enter a custom rate?</h3>
+<p>It is directionally useful, not guaranteed. The calculator uses typical risk patterns: higher LTV and lower credit score raise PMI. Lenders can price differently, and some loan structures change the effective PMI cost. If you have a quote, use the PMI rate override to match your real offer.</p>
+<h3>When does PMI end and how can I get rid of it faster?</h3>
+<p>Many conventional loans allow PMI removal once the loan balance reaches a lower LTV threshold, often around 80% if you request it, and sometimes later if it happens automatically. You can generally reach the threshold faster by making extra principal payments or by refinancing. Your servicer’s rules, your payment history, and documentation requirements can matter, so use this calculator’s timeline as a planning estimate and confirm the exact policy with your lender or servicer.</p>
+<div class="last-updated">Last updated: 2025-12-20</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

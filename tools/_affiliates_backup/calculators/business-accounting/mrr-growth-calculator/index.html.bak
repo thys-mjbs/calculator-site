@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>MRR Growth Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate month-over-month MRR growth, net change, and the implied ARR impact using starting and ending monthly recurring revenue.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/business-accounting/mrr-growth-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="MRR Growth Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate month-over-month MRR growth, net change, and the implied ARR impact using starting and ending monthly recurring revenue.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/business-accounting/mrr-growth-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MRR Growth Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate month-over-month MRR growth, net change, and the implied ARR impact using starting and ending monthly recurring revenue.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MRR Growth Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/mrr-growth-calculator/",
+      "description": "Calculate MRR growth rate, net MRR change, and implied ARR change using starting and ending monthly recurring revenue across a period."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>MRR Growth Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>MRR Growth Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4q88nJm" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Financial Statements</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to read income statements, balance sheets, and cash flow reports.</p>
+    <div class="affiliate-cta">Explore financial statement books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Measure how fast your MRR is growing</h2>
+
+              <p class="calculator-intro">Enter starting and ending monthly recurring revenue to get growth rate, net change, and implied ARR impact.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="startMrr">Starting MRR (beginning of period)</label>
+                <input type="text" id="startMrr" inputmode="decimal" placeholder="e.g., 50,000">
+              </div>
+
+              <div class="form-group">
+                <label for="endMrr">Ending MRR (end of period)</label>
+                <input type="text" id="endMrr" inputmode="decimal" placeholder="e.g., 57,500">
+              </div>
+
+              <div class="form-group">
+                <label for="months">Period length (months)</label>
+                <input type="text" id="months" inputmode="numeric" placeholder="e.g., 1">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate MRR growth</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3L06e3q" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Business Forecasting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn how to project revenue, expenses, and growth scenarios realistically.</p>
+    <div class="affiliate-cta">Browse business forecasting books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Track revenue, margins, runway, burn rate, and key SaaS metrics used to run a business.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Model growth over time, compare scenarios, and understand compounding and long-term outcomes.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets and cash flow, estimate affordability, and convert numbers into practical decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>MRR growth calculator for month over month recurring revenue tracking</h2>
+
+              <p>If you run a subscription business, the most common question is simple: is monthly recurring revenue (MRR) actually moving in the right direction, and by how much? This MRR Growth Calculator is built for that exact decision. It takes your starting MRR and ending MRR over a period and converts them into a clear growth rate, a net change figure, and an implied annual recurring revenue (ARR) impact.</p>
+
+              <p>The primary output is the MRR growth rate for the period. For most users, that period is one month, so the result acts as your month over month (MoM) MRR growth percentage. This is the number investors, operators, and finance teams use as a quick signal of traction. However, percentages can hide reality, so the calculator also shows the plain currency change in MRR and the annualized impact of that change.</p>
+
+              <p>This page is intentionally locked to a single purpose: measuring overall MRR growth between two points in time. It does not attempt to forecast future MRR, build a cohort model, or calculate LTV, CAC, churn rate, or net revenue retention. Those are separate problems with different inputs. If you only want a reliable growth read, this is the cleanest way to get it without extra friction.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Starting MRR should be the recurring revenue at the beginning of the period, not total invoiced revenue.</li>
+                <li>Ending MRR should be the recurring revenue at the end of the period, using the same measurement method as the start.</li>
+                <li>If you leave period length blank, the calculator assumes 1 month and reports standard MoM growth.</li>
+                <li>Implied ARR change is calculated as 12 × net MRR change, which is a run-rate view, not a guarantee of future performance.</li>
+                <li>MRR is treated as a snapshot metric; timing differences (mid-month upgrades, proration, delayed billing) can affect results, so use consistent cutoff dates.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between MRR growth rate and net MRR change?</h3>
+              <p>Net MRR change is the currency difference between ending and starting MRR. Growth rate expresses that same change as a percentage of starting MRR. A small company can show a high percentage growth with a small amount of money, while a larger company can show a low percentage growth with a large amount of money. You need both to interpret performance correctly.</p>
+
+              <h3>What does “implied ARR change” mean and when should I trust it?</h3>
+              <p>Implied ARR change is a run-rate translation of the MRR change: it multiplies the net MRR change by 12. It is useful for communicating impact in annual terms, but it assumes your current MRR level persists for a full year. It is not the same as booked annual contracts, and it should not be treated as a revenue forecast.</p>
+
+              <h3>My ending MRR is lower than starting MRR. Will the calculator still work?</h3>
+              <p>Yes. The calculator supports negative growth. You will see a negative net change and a negative growth rate. If your ending MRR is zero, the percentage change will be very large in magnitude. That reflects a real collapse in recurring revenue, not a math error.</p>
+
+              <h3>What should I enter for “period length (months)”?</h3>
+              <p>Enter the number of months between the two MRR snapshots. If you are comparing one month to the next, use 1. If you are comparing quarter start to quarter end, use 3. When months is greater than 1, the calculator also reports compound monthly growth rate (CMGR) across the period, which is more accurate than dividing total growth by months.</p>
+
+              <h3>Why does CMGR matter compared to a simple average monthly growth?</h3>
+              <p>Compound monthly growth rate accounts for compounding across multiple months. If growth is not perfectly linear, CMGR gives a fair single monthly rate that would produce the same start and end values over the period. For multi-month comparisons, it is usually the most defensible summary metric.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4iTRq33" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Financial Reporting</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Improve accuracy and clarity in business financial reports.</p>
+    <div class="affiliate-cta">View financial reporting books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
