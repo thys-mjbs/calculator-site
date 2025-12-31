@@ -558,3 +558,35 @@
     margin: 2.5rem 0 1.5rem;
   }
   
+  /* =========================
+   UNIFORM SECTION SEPARATION
+   Ensures consistent “border gap” between tile areas and content blocks
+   ========================= */
+
+/* Homepage: add clear separation between the category tile grid and the next content block */
+.home-grid {
+  margin-bottom: 24px;
+}
+
+/* Homepage: if a tile section is followed by a content block, add consistent spacing */
+.home-section + .seo-section {
+  margin-top: 24px;
+}
+
+/* Hubs and any other pages using home-layout with multiple seo-section blocks */
+.home-layout .seo-section {
+  margin: 24px auto 0;
+}
+
+.home-layout .seo-section + .seo-section {
+  margin-top: 24px;
+}
+
+/* Category pages: enforce spacing between the last tile and the next text block */
+.category-grid {
+  margin-bottom: 24px;
+}
+
+.category-grid + .category-content-block {
+  margin-top: 24px;
+}
