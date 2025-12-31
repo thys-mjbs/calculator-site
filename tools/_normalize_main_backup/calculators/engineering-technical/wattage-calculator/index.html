@@ -1,0 +1,261 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Wattage Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate electrical wattage (power) using volts, amps, and resistance. Use common formulas to find watts and convert to kilowatts for real-world electrical sizing." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/wattage-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Wattage Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate electrical wattage (power) using volts, amps, and resistance. Use common formulas to find watts and convert to kilowatts for real-world electrical sizing." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/wattage-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Wattage Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate electrical wattage (power) using volts, amps, and resistance. Use common formulas to find watts and convert to kilowatts for real-world electrical sizing." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Wattage Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/wattage-calculator/",
+      "description": "Calculate electrical wattage (power) using volts, amps, and resistance. Supports P=V×I, P=V²/R, and P=I²×R, and provides watts and kilowatts."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Wattage Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Wattage Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate watts from common electrical inputs</h2>
+<p class="calculator-intro">
+                Choose what you know (volts and amps, volts and resistance, or amps and resistance). The calculator shows power in watts and kilowatts.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="modeSelect">Calculation method</label>
+<select id="modeSelect">
+<option value="vi">Volts and Amps (P = V × I)</option>
+<option value="vr">Volts and Resistance (P = V² ÷ R)</option>
+<option value="ir">Amps and Resistance (P = I² × R)</option>
+</select>
+</div>
+<div id="modeBlockVI">
+<div class="form-group">
+<label for="voltsVI">Voltage (V)</label>
+<input autocomplete="off" id="voltsVI" inputmode="decimal" placeholder="e.g., 230" type="text"/>
+</div>
+<div class="form-group">
+<label for="ampsVI">Current (A)</label>
+<input autocomplete="off" id="ampsVI" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeBlockVR">
+<div class="form-group">
+<label for="voltsVR">Voltage (V)</label>
+<input autocomplete="off" id="voltsVR" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+<div class="form-group">
+<label for="ohmsVR">Resistance (Ω)</label>
+<input autocomplete="off" id="ohmsVR" inputmode="decimal" placeholder="e.g., 6" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeBlockIR">
+<div class="form-group">
+<label for="ampsIR">Current (A)</label>
+<input autocomplete="off" id="ampsIR" inputmode="decimal" placeholder="e.g., 2" type="text"/>
+</div>
+<div class="form-group">
+<label for="ohmsIR">Resistance (Ω)</label>
+<input autocomplete="off" id="ohmsIR" inputmode="decimal" placeholder="e.g., 8" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate wattage</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Calculate electrical, electronics, and technical values for practical sizing and planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units and measurements fast, including common engineering and everyday conversions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle percentages, ratios, and general calculations that show up in technical work and life.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Wattage calculator for volts, amps, and resistance</h2>
+<p>
+                Wattage is electrical power. It tells you how quickly electrical energy is being used or delivered. In real life, wattage helps you size
+                power supplies, choose cables, estimate load on a circuit, compare appliances, and sanity-check electrical measurements. If you have ever
+                looked at a device label that says something like “230 V, 2 A” or “12 V, 60 W”, you have already seen the variables this calculator uses.
+              </p>
+<p>
+                This wattage calculator supports the three most common ways to calculate power (P) depending on what you know. If you know voltage (V) and
+                current (I), use <strong>P = V × I</strong>. If you know voltage (V) and resistance (R), use <strong>P = V² ÷ R</strong>. If you know
+                current (I) and resistance (R), use <strong>P = I² × R</strong>. The calculator also converts the result to kilowatts (kW) so you can
+                compare against circuit ratings and appliance specs.
+              </p>
+<p>
+                Pick the method that matches your situation. For household appliances and basic circuit load checks, volts and amps are often easiest because
+                those values are commonly listed on labels or measured with a meter. For resistive components (heaters, resistors, some simple loads), volts
+                and resistance can be more natural. For cases where you measure current through a component and know its resistance, amps and resistance can be
+                the fastest way to estimate power.
+              </p>
+<p>
+                After you enter your values and calculate, you will see wattage in W and kW, plus the formula used. Use this output to compare loads, check
+                whether a power supply is undersized, or estimate whether a circuit may be overloaded. Keep in mind that electrical systems are not always ideal.
+                Power factor, efficiency losses, and real-world operating conditions can make actual power different from the ideal math result. This calculator is
+                meant for practical estimates and quick checks, not a replacement for design standards or professional inspection.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator uses ideal DC or purely resistive AC relationships (no power factor or reactive components).</li>
+<li>Enter positive values only. If your measured values vary, use a typical operating value rather than a brief peak.</li>
+<li>Units are volts (V), amps (A), ohms (Ω), watts (W), and kilowatts (kW). kW is shown as W ÷ 1000.</li>
+<li>If you are working on mains electricity, treat calculations as estimates and follow local electrical codes and safety practices.</li>
+<li>For motor loads, switch-mode power supplies, and other non-resistive loads, real power can differ due to efficiency and power factor.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between watts and kilowatts?</h3>
+<p>
+                A watt (W) is a unit of power. A kilowatt (kW) is 1,000 watts. Utility bills and larger equipment often use kW because the numbers are easier
+                to read. For example, 2,000 W is the same as 2.0 kW.
+              </p>
+<h3>Can I calculate watts from volts and amps for AC power?</h3>
+<p>
+                You can estimate power using P = V × I, but for many AC loads the real power depends on power factor. If the load is mostly resistive
+                (like a simple heater), the estimate is close. For motors and many electronics, the real power can be lower than V × I.
+              </p>
+<h3>Why does the calculator offer three different formulas?</h3>
+<p>
+                Power can be expressed using different known values. If you know voltage and current, use V × I. If you know resistance instead of current,
+                you can use V² ÷ R. If you know current and resistance, you can use I² × R. They are all consistent forms of the same relationships.
+              </p>
+<h3>How do I use this to size a power supply?</h3>
+<p>
+                Calculate the expected wattage of your load, then choose a power supply with a higher continuous rating than the calculated value. Leave margin
+                for startup surges, efficiency losses, and temperature. A conservative approach is to add headroom rather than aiming for an exact match.
+              </p>
+<h3>What if my resistance changes with temperature?</h3>
+<p>
+                Many real components change resistance as they heat up. If you use V² ÷ R or I² × R, your wattage estimate will only be as accurate as the
+                resistance value you entered. If you expect temperature change, use typical operating resistance or measure under normal conditions.
+              </p>
+<div class="last-updated">Last updated: 2025-12-13</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Downpipe Capacity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Check whether your roof downpipes can handle a given rainfall intensity. Calculate required flow (L/s), compare it to downpipe capacity, and see how many downpipes or what diameter you may need." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/downpipe-capacity-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Downpipe Capacity Calculator | SnapCalc" property="og:title"/>
+<meta content="Check whether your roof downpipes can handle a given rainfall intensity. Calculate required flow (L/s), compare it to downpipe capacity, and see how many downpipes or what diameter you may need." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/downpipe-capacity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Downpipe Capacity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Check whether your roof downpipes can handle a given rainfall intensity. Calculate required flow (L/s), compare it to downpipe capacity, and see how many downpipes or what diameter you may need." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Downpipe Capacity Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/downpipe-capacity-calculator/",
+      "description": "Estimate roof runoff flow from rainfall intensity and compare it to downpipe capacity based on diameter and a practical design velocity, with an optional safety factor."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Downpipe Capacity Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Downpipe Capacity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Check roof runoff vs downpipe capacity</h2>
+<p class="calculator-intro">
+                Enter roof area, rainfall intensity, downpipe size, and how many downpipes you have. The calculator estimates required flow and compares it to practical downpipe capacity.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="roofArea">Roof area drained (m²)</label>
+<input id="roofArea" inputmode="decimal" placeholder="e.g., 180" type="text"/>
+<div class="field-hint">Use the area feeding these downpipes (not the whole property).</div>
+</div>
+<div class="form-group">
+<label for="rainfallIntensity">Rainfall intensity (mm/hour)</label>
+<input id="rainfallIntensity" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+<div class="field-hint">If unsure, use a heavy storm estimate like 75–150 mm/hour.</div>
+</div>
+<div class="form-group">
+<label for="downpipeDiameter">Downpipe internal diameter (mm)</label>
+<input id="downpipeDiameter" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+<div class="field-hint">Common round sizes include 63, 75, 90, 100 mm.</div>
+</div>
+<div class="form-group">
+<label for="downpipeCount">Number of downpipes serving this roof area</label>
+<input id="downpipeCount" inputmode="numeric" placeholder="e.g., 2" type="text"/>
+<div class="field-hint">Count only the downpipes connected to this gutter run or roof section.</div>
+</div>
+<fieldset class="advanced-fieldset">
+<legend>Advanced (optional)</legend>
+<div class="form-group">
+<label for="designVelocity">Design velocity in downpipe (m/s)</label>
+<input id="designVelocity" inputmode="decimal" placeholder="Default: 3.0" type="text"/>
+<div class="field-hint">Higher velocity increases capacity but may not be realistic for every setup.</div>
+</div>
+<div class="form-group">
+<label for="safetyFactor">Safety factor (capacity reduction)</label>
+<input id="safetyFactor" inputmode="decimal" placeholder="Default: 1.25" type="text"/>
+<div class="field-hint">Accounts for inlet losses, debris, bends, and real-world inefficiency.</div>
+</div>
+</fieldset>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate capacity</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, coverage, and practical site calculations for building and repairs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Work with flow, pressure, power, and other core engineering calculations.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Plan property costs and maintenance decisions with clear, numbers-first tools.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Downpipe capacity calculator for roof drainage and stormwater flow</h2>
+<p>
+                This downpipe capacity calculator is designed for one main decision: checking whether your existing downpipes are likely to cope with heavy rain for a specific roof area. Homeowners and contractors usually search for this when gutters overflow during storms, when adding an extension, or when swapping gutter and downpipe sizes. The output helps you compare the estimated runoff flow to a practical downpipe capacity based on diameter, then highlights whether your setup has headroom or is operating close to the limit.
+              </p>
+<p>
+                The first part is the required flow from your roof. Rainfall intensity is entered in millimetres per hour, and roof area is entered in square metres. A useful shortcut is that 1 mm of rain on 1 m² equals 1 litre of water. That means roof flow in litres per second can be estimated as: roof area multiplied by rainfall intensity, divided by 3,600. This gives a peak flow estimate for a short, intense storm over the roof area you specify. If your roof has multiple sections draining to different gutters, use the area that actually feeds the downpipes you are checking, not the total roof area.
+              </p>
+<p>
+                The second part is downpipe capacity. In real life, downpipe performance depends on inlet losses at the gutter outlet, bends, junctions, partial blockages, and how the gutter delivers water into the pipe. Rather than pretending this is a lab test, this calculator uses a practical capacity model: the pipe cross sectional area multiplied by a design velocity. You can leave the advanced inputs blank to use sensible defaults, or you can adjust them if you have reason to do so. A safety factor is applied by reducing effective capacity, which is a simple way to protect against the messy reality of stormwater systems. The results show total required flow, required flow per downpipe, effective capacity per downpipe, total effective capacity, and an easy utilisation percentage so you can judge risk at a glance.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Runoff from a roof is treated as 100% (no absorption), which is typical for most roof coverings.</li>
+<li>Rainfall intensity is a short-duration peak input; it is not a daily average or monthly rainfall figure.</li>
+<li>Downpipe capacity is estimated using full-pipe flow area times a design velocity, which is a practical approximation.</li>
+<li>The safety factor reduces usable capacity to account for losses (inlets, bends, debris, roughness, and imperfect installation).</li>
+<li>This tool checks downpipes only; it does not size gutters, roof outlets, or stormwater drains downstream of the downpipe.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What rainfall intensity should I use?</h3>
+<p>
+                Use a heavy storm value that matches your goal. If you want a quick stress test, use a high short-duration intensity (for example 75 to 150 mm/hour). If you have local design rainfall data, use that value instead. Higher intensity increases required flow linearly, so this input dominates the result.
+              </p>
+<h3>Why does the calculator ask for a design velocity?</h3>
+<p>
+                Downpipes do not have a single universal capacity. In practice, capacity depends on how quickly water can move through the pipe, and that is constrained by inlets, fittings, and system losses. A design velocity is a simple and transparent way to represent that. The default value is a practical assumption, and you can lower it if your system has many bends or frequent blockages.
+              </p>
+<h3>What does the safety factor do?</h3>
+<p>
+                The safety factor reduces the calculated capacity to give a more conservative answer. For example, a safety factor of 1.25 means only 80% of theoretical capacity is treated as usable. This helps avoid false confidence when the real system has debris, imperfect connections, or partial restrictions.
+              </p>
+<h3>If the utilisation is over 100%, does that guarantee overflow?</h3>
+<p>
+                Not guaranteed, but it indicates a high risk during peak rainfall. Overflow can still occur below 100% if gutters or outlets restrict inflow, or if water concentrates at one point due to roof shape. Treat the result as a decision aid: the closer you are to 100%, the less margin you have.
+              </p>
+<h3>How do I improve accuracy without overcomplicating it?</h3>
+<p>
+                Use the correct roof area that feeds the specific downpipes, choose a realistic peak rainfall intensity for your location, and apply a safety factor if your system is older or tends to clog. If you know your downpipe size is nominal rather than internal diameter, you can slightly reduce the diameter input to be conservative.
+              </p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

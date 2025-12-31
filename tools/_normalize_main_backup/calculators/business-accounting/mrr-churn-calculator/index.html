@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>MRR Churn Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate gross MRR churn, net MRR churn, retention, and ending MRR from monthly churn, downgrades, and expansion." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/business-accounting/mrr-churn-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="MRR Churn Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate gross MRR churn, net MRR churn, retention, and ending MRR from monthly churn, downgrades, and expansion." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/business-accounting/mrr-churn-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="MRR Churn Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate gross MRR churn, net MRR churn, retention, and ending MRR from monthly churn, downgrades, and expansion." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MRR Churn Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/business-accounting/mrr-churn-calculator/",
+      "description": "Calculate gross MRR churn, net MRR churn, retention, and ending MRR from monthly churn, downgrades, and expansion."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/business-accounting/">Business &amp; Accounting</a> ›
+        <span>MRR Churn Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>MRR Churn Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Measure gross churn, net churn, and monthly retention</h2>
+<p class="calculator-intro">Use this when you know your starting MRR and how much MRR you lost from cancellations and downgrades. Add expansion and new MRR if you want net churn and ending MRR.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="startingMrr">Starting MRR (beginning of month)</label>
+<input id="startingMrr" inputmode="decimal" placeholder="e.g., 125000" type="text"/>
+</div>
+<div class="form-group">
+<label for="churnedMrr">Churned MRR (cancellations)</label>
+<input id="churnedMrr" inputmode="decimal" placeholder="e.g., 8500" type="text"/>
+</div>
+<div class="form-group">
+<label for="contractionMrr">Contraction MRR (downgrades)</label>
+<input id="contractionMrr" inputmode="decimal" placeholder="e.g., 2400" type="text"/>
+</div>
+<div class="form-group">
+<label for="expansionMrr">Expansion MRR (upsells to existing customers, optional)</label>
+<input id="expansionMrr" inputmode="decimal" placeholder="e.g., 3100" type="text"/>
+</div>
+<div class="form-group">
+<label for="newMrr">New MRR (new customers this month, optional)</label>
+<input id="newMrr" inputmode="decimal" placeholder="e.g., 12000" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate churn</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Track revenue, margins, runway, churn, and core operating metrics for your business.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Model growth, compounding, and time-to-target outcomes to support planning decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Estimate payments, interest costs, payoff timelines, and affordability for common debt products.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>MRR churn calculator for monthly recurring revenue loss and retention</h2>
+<p>If you run a subscription business, MRR churn is one of the fastest ways to see whether revenue is leaking faster than it is being replaced. This calculator is built for a single, practical decision: understanding how much monthly recurring revenue you are losing from existing customers, and what that implies for retention. It focuses on MRR movements inside a month: cancellations (churned MRR), downgrades (contraction MRR), and optional upsells (expansion MRR). You can also add new MRR if you want an ending MRR estimate for the month.</p>
+<p>Start by entering your Starting MRR, which is the recurring revenue you had at the beginning of the month before any changes. Then enter Churned MRR, which is the monthly recurring revenue you lost because customers fully cancelled. Next, enter Contraction MRR, which is the monthly recurring revenue you lost because customers stayed but downgraded or reduced seats. These two values combined represent your gross MRR loss from your existing base.</p>
+<p>For a more complete picture, add Expansion MRR, which is extra MRR earned from the same existing customers through upgrades, additional seats, or plan increases. Expansion offsets churn and contraction when you look at net churn. If you also want to estimate ending MRR, add New MRR from brand-new customers. The outputs are designed to be scannable: you get gross churn rate, net churn rate, gross retention, net revenue retention, and a simple ending MRR bridge so you can see what actually happened to MRR across the month.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>All inputs are for one month and should be measured in the same currency and billing basis (monthly recurring revenue).</li>
+<li>Gross MRR churn is calculated from cancellations plus downgrades, divided by starting MRR. It ignores expansion and new business by design.</li>
+<li>Net MRR churn subtracts expansion from gross MRR loss, divided by starting MRR. New MRR does not affect net churn because it is not from the existing base.</li>
+<li>If you do not know expansion or new MRR, leave them blank or as zero. The calculator will still produce valid gross churn and gross retention.</li>
+<li>This is an MRR movement model, not a GAAP revenue model. It does not handle proration, one-time charges, refunds, annual prepayments, or usage-based volatility.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between gross churn and net churn?</h3>
+<p>Gross churn measures how much MRR you lost from the existing customer base, before considering any offsetting upgrades. Net churn measures the same base, but it subtracts expansion MRR earned from existing customers. Gross churn answers, “How much leaked?” Net churn answers, “Did upgrades cover the leak?”</p>
+<h3>Should I include new customers when calculating churn?</h3>
+<p>No. Churn is about retention of the existing base. New MRR is useful for calculating ending MRR and overall growth, but it should not be used to reduce churn rates. That is why this calculator keeps new MRR separate from net churn.</p>
+<h3>What do I enter if I only track customer churn and not MRR churn?</h3>
+<p>This calculator is for MRR churn, not customer churn. If you do not track churned MRR, you can estimate it by summing the monthly recurring revenue of cancelled subscriptions for the month. If you only have a churned customer count, you will need average MRR per cancelled customer to convert it into churned MRR.</p>
+<h3>Why can net churn be negative?</h3>
+<p>If expansion MRR is larger than churned plus contraction MRR, the existing base grew even after losses. In that case net churn is negative and net revenue retention is above 100%. This is common in strong product-led or seat-based businesses with reliable upsell paths.</p>
+<h3>How should I interpret the 12-month retention estimate?</h3>
+<p>The calculator includes a simple projection that applies the monthly gross churn rate repeatedly for 12 months. It is not a forecast and it assumes churn stays constant. Use it as a quick sensitivity check: even small changes in monthly churn can compound into large differences over a year.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>
