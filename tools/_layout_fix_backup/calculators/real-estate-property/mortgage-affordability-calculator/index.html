@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Mortgage Affordability Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how much house you can afford based on income, debts, deposit, interest rate, term, taxes, insurance, and HOA. See an affordable home price, loan amount, and monthly payment breakdown." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/real-estate-property/mortgage-affordability-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Mortgage Affordability Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how much house you can afford based on income, debts, deposit, interest rate, term, taxes, insurance, and HOA. See an affordable home price, loan amount, and monthly payment breakdown." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/real-estate-property/mortgage-affordability-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mortgage Affordability Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how much house you can afford based on income, debts, deposit, interest rate, term, taxes, insurance, and HOA. See an affordable home price, loan amount, and monthly payment breakdown." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mortgage Affordability Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/mortgage-affordability-calculator/",
+      "description": "Estimate affordable home price and loan amount using income, debt payments, deposit, interest rate, loan term, and monthly housing costs such as taxes, insurance, and HOA."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Mortgage Affordability Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Mortgage Affordability Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate the home price you can realistically afford</h2>
+<p class="calculator-intro">Enter your income, monthly debts, deposit, and expected mortgage details. This estimates a maximum affordable home price using common DTI limits and a payment breakdown.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="monthlyIncome">Gross monthly income</label>
+<input id="monthlyIncome" inputmode="decimal" placeholder="e.g., 80,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyDebts">Other monthly debt payments</label>
+<input id="monthlyDebts" inputmode="decimal" placeholder="e.g., 6,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="downPayment">Deposit / down payment</label>
+<input id="downPayment" inputmode="decimal" placeholder="e.g., 200,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="interestRate">Interest rate (annual %)</label>
+<input id="interestRate" inputmode="decimal" placeholder="e.g., 11.25" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanTermYears">Loan term (years)</label>
+<input id="loanTermYears" inputmode="decimal" placeholder="e.g., 20" type="text"/>
+</div>
+<div class="form-group">
+<label for="annualPropertyTaxes">Property taxes (annual)</label>
+<input id="annualPropertyTaxes" inputmode="decimal" placeholder="e.g., 24,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="annualInsurance">Homeowners insurance (annual)</label>
+<input id="annualInsurance" inputmode="decimal" placeholder="e.g., 12,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyHoa">HOA / levies (monthly)</label>
+<input id="monthlyHoa" inputmode="decimal" placeholder="e.g., 1,800" type="text"/>
+</div>
+<div class="form-group">
+<label for="frontEndDti">Front-end DTI limit (housing % of income)</label>
+<input id="frontEndDti" inputmode="decimal" placeholder="e.g., 28" type="text" value="28"/>
+</div>
+<div class="form-group">
+<label for="backEndDti">Back-end DTI limit (total debt % of income)</label>
+<input id="backEndDti" inputmode="decimal" placeholder="e.g., 36" type="text" value="36"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate affordability</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Estimate mortgages, deposits, rental yields, and property-related costs before you buy or invest.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Compare loan payments, interest costs, and affordability across different debt types and terms.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, savings goals, and everyday money decisions with simple calculators.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Mortgage affordability calculator for income, debts, deposit, and monthly housing costs</h2>
+<p>A mortgage affordability calculator helps you estimate the maximum home price you can reasonably target before you start viewing properties, making offers, or applying for finance. Most people only look at a rough loan amount, but affordability is driven by the monthly payment you can sustain. That payment depends on your income, other debt commitments, interest rate, loan term, and the extra housing costs that sit on top of the mortgage itself, such as property taxes, insurance, and HOA levies.</p>
+<p>This calculator works backwards from your income using two common affordability guardrails called debt-to-income ratios (DTI). The first is a front-end limit, which caps housing costs as a percentage of your gross monthly income. The second is a back-end limit, which caps your total monthly debt load (housing plus other debts) as a percentage of your gross income. The calculator uses both and applies the stricter result, because lenders and responsible budgets typically do the same. If your other debt payments are already high, your back-end limit will often be the one that bites first.</p>
+<p>Once the calculator estimates a maximum monthly housing budget, it splits that housing budget into two parts. The first part is fixed monthly housing costs that are not part of the mortgage principal and interest payment (taxes, insurance, and HOA). Whatever remains is the amount available for the mortgage principal-and-interest payment. From there, it uses the loan term and interest rate to estimate the maximum loan amount that could be supported by that payment. Finally, it adds your deposit to estimate the maximum home price you can target.</p>
+<p>Use the results as a planning baseline, not as a guarantee of approval. Real approvals depend on lender policy, credit score, employment stability, verified income, the specific property, and how the lender treats taxes, insurance, and other deductions. In some countries, affordability is assessed on net income and includes additional statutory deductions. In others, lenders apply stress testing by using a higher interest rate than the current market rate. If you want a conservative estimate, you can increase the interest rate by one to two percentage points and lower the DTI limits slightly to build a buffer.</p>
+<p>The output is most useful when you compare scenarios. If you are unsure about taxes or insurance, try a low and high estimate and see how much it moves your affordable price. If your income is stable but your other debts are not, try reducing monthly debts and see how quickly affordability improves. This is often the fastest way to identify the real constraint in your budget, because people tend to focus only on the deposit while ignoring the monthly drag of other loans and credit commitments.</p>
+<p>If you are buying jointly with a partner, use combined income and combined monthly debts. If you are self-employed or have variable income, use an average monthly income that you can defend over a full year, not a best month. If you expect a rate change soon, test the affordability at the likely future rate. The goal is not to find the absolute maximum you could stretch to, but the maximum you can pay comfortably while still saving, maintaining the home, and handling surprises without missing payments.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>DTI limits are applied to gross monthly income using both a front-end (housing) and back-end (housing plus other debts) cap.</li>
+<li>Monthly housing cost includes principal and interest plus estimated monthly taxes, insurance, and HOA/levies.</li>
+<li>The loan amount is calculated from the available principal-and-interest budget using a standard fixed-rate payment formula.</li>
+<li>If the interest rate is set to 0%, the calculator uses a simple principal = payment × months estimate.</li>
+<li>Results exclude closing costs, transfer duties, maintenance, utilities, and lender-specific stress testing.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does adding property taxes or HOA reduce the loan amount so much?</h3>
+<p>Because lenders and budgets care about the total monthly housing cost, not only the mortgage payment. Taxes, insurance, and HOA come out of the same monthly affordability limit. If those non-mortgage costs rise, the amount left for principal-and-interest drops, which reduces the loan amount you can support at the same interest rate and term.</p>
+<h3>Should I use gross income or take-home pay?</h3>
+<p>This calculator uses gross income because DTI limits are often published on a gross basis. For personal budgeting, take-home pay is the stricter and safer measure. If your deductions are large, treat the DTI limits as optimistic and consider lowering them or using a higher interest rate to build a realistic buffer.</p>
+<h3>What are typical front-end and back-end DTI limits?</h3>
+<p>Many rules of thumb use something like 28% for housing (front-end) and 36% for total debt (back-end), but real lender criteria vary. If you want a conservative result, try 25% and 33% or keep 28/36 and increase the interest rate to stress test the payment.</p>
+<h3>Does a larger deposit always improve affordability?</h3>
+<p>A larger deposit increases the home price you can target at the same loan amount. It may also improve affordability if it reduces the loan size enough to lower the monthly payment. However, if your affordability is limited by monthly income and debts, deposit size alone cannot overcome a tight monthly budget unless it is large enough to materially reduce the payment.</p>
+<h3>How should I handle variable interest rates?</h3>
+<p>If you expect rates to rise, run the calculation at a higher rate than today. Small rate increases can meaningfully reduce affordability, especially on long terms. If you are choosing between terms, a shorter term costs more per month but usually reduces total interest paid over time.</p>
+<div class="last-updated">Last updated: 2025-12-13</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>
