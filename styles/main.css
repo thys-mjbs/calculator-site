@@ -38,12 +38,16 @@
   .site-nav {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;              /* NEW: allow wrapping */
+    justify-content: center;      /* NEW: keep centered */
+    width: 100%;                  /* NEW: ensures wrap works cleanly */
   }
   
   .site-nav a {
     text-decoration: none;
     color: #333333;
     font-size: 14px;
+    white-space: normal;          /* NEW: allow link text to wrap */
   }
   
   .site-nav a:hover {
@@ -176,6 +180,9 @@
     border-radius: 8px;
     padding: 16px;
     font-size: 14px;
+  
+    margin: 0 auto;              /* NEW: center the box everywhere */
+    box-sizing: border-box;      /* NEW: safer sizing */
   }
   
   .seo-section h2 {
@@ -403,7 +410,7 @@
     padding: 10px 12px;
     font-size: 14px;
     border-radius: 8px;
-    border: 1px solid #bbb;
+    border: 1px solid #bbbbbb;
     box-sizing: border-box;
     background: #ffffff;
   }
@@ -468,115 +475,86 @@
   }
   
   /* =========================
-     HAMBURGER MENU (MOBILE)
+     HOMEPAGE / Hubs / Simple Pages – ABOUT / CONTEXT BLOCK WIDTH
      ========================= */
   
-  /* Hide the site nav on mobile by default */
-  @media (max-width: 768px) {
-    .site-nav {
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      align-items: center;
-      background: #ffffff;
-      position: absolute;
-      top: 60px; /* Adjust based on header height */
-      left: 0;
-      right: 0;
-      padding: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  
-    .site-nav a {
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-      font-size: 16px;
-      color: #333333;
-      border-bottom: 1px solid #dddddd;
-    }
-  
-    .site-nav a:hover {
-      background-color: #f3f6ff;
-    }
-  
-    .hamburger-menu {
-      display: block;
-      background: transparent;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: #333;
-      margin-right: 10px;
-    }
-  
-    .site-nav.active {
-      display: flex; /* Show the menu when active */
-    }
-  }
-  
-  /* =========================
-     DESKTOP NAVIGATION (DEFAULT)
-     ========================= */
-  @media (min-width: 769px) {
-    .site-nav {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-  
-    .site-nav a {
-      color: #333;
-      font-size: 14px;
-    }
-  }
-  
-  /* =========================
-     HAMBURGER MENU: STYLE
-     ========================= */
-  
-  /* Display only on mobile */
-  .hamburger-menu {
-    display: none;
-  }
-  
-  /* =========================
-     GENERAL HEADER AND NAVIGATION
-     ========================= */
-  
-  /* Existing header styles */
-  .site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 16px;
-  }
-  
-  .site-header-inner {
-    max-width: 1200px;
+  /* NEW: make these centered and wider site-wide, without affecting calculator grid layout */
+  .home-layout .seo-section {
+    max-width: 900px;        /* wider, centered column */
     margin: 0 auto;
-    padding: 10px 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
   
-  /* Ensure logo and navigation are aligned correctly */
-  .site-logo {
-    font-weight: bold;
-    text-decoration: none;
-    color: #1a4b8f;
-    font-size: 18px;
+  /* =========================
+     MOBILE: NAV WRAP (keep old stacked header layout)
+     ========================= */
+  
+  @media (max-width: 520px) {
+    .site-nav {
+      gap: 10px;
+      row-gap: 8px;
+    }
+  
+    .site-nav a {
+      font-size: 13px;
+    }
   }
   
-  .site-nav a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 14px;
+  /* HARD ENFORCEMENT: text affiliate blocks (legacy-safe) */
+  .ad-block a.affiliate-link {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 300px !important;
+  
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    gap: 16px !important;
   }
   
-  .site-nav a:hover {
-    text-decoration: underline;
+  .ad-block a.affiliate-link > * {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  
+  /* FORCE canonical text styling for text-based affiliate blocks */
+  .ad-block a.affiliate-link {
+    color: #111111 !important;
+    text-decoration: none !important;
+  }
+  
+  .ad-block a.affiliate-link .affiliate-label {
+    font-weight: 900 !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    color: #111111 !important;
+    margin: 0 !important;
+  }
+  
+  .ad-block a.affiliate-link .affiliate-copy {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    color: #666666 !important;
+    margin: 0 !important;
+  }
+  
+  .ad-block a.affiliate-link .affiliate-cta {
+    margin-top: 12px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-decoration: underline !important;
+    color: #222222 !important;
+  }
+  
+  .home-section-title {
+    text-align: center;
+    font-weight: 700;
+    margin: 2.5rem 0 1.5rem;
   }
   
