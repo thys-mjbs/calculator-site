@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculators Library | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Switch to the wide "About" style wrapper -->
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Calculators Library</h1>
+        </div>
+
+        <section class="seo-section">
+          <p>
+            SnapCalc’s calculators library sits at the centre of the site. It is a collection of focused tools built to answer one question at a time, using inputs that are easy to understand and outputs that are meant to be used, not admired. Most calculators are intentionally simple. They aim to give you clarity quickly, not to model every edge case or real-world exception.
+          </p>
+
+          <p>
+            Everything is organised by category so that context comes first. Different types of decisions fail in different ways. Financial numbers compound, time estimates slip, units get mixed, and assumptions quietly drift. Starting in the right category makes those risks easier to see and manage. A sensible way to use the library is to begin with a clean baseline, then adjust one or two inputs to understand how sensitive the result really is.
+          </p>
+
+          <h2>Personal Finance</h2>
+          <p>
+            Personal finance decisions often feel small in isolation but add up quickly over time. The
+            <a href="https://snapcalc.site/hubpages/calculators/personal-finance.html">Personal Finance hub</a>
+            is designed for everyday money questions where visibility matters more than precision. It helps surface cash-flow pressure, affordability limits, and the trade-offs hidden inside routine choices. These tools are most useful when you are trying to understand why a budget feels tight, or when comparing options that look similar until the monthly totals are laid out clearly.
+          </p>
+
+          <h2>Business &amp; Accounting</h2>
+          <p>
+            Running a business involves constant small calculations that tend to be done informally, fast, and sometimes incorrectly. The
+            <a href="https://snapcalc.site/hubpages/calculators/business-accounting.html">Business &amp; Accounting hub</a>
+            exists to make those numbers cleaner and more consistent, whether you are checking margins, estimating totals, or validating a figure before it lands in a spreadsheet. These tools are especially useful when you need quick clarity on what a change in price, volume, cost, or timing is likely to do to the underlying picture.
+          </p>
+
+          <h2>Loans &amp; Credit</h2>
+          <p>
+            Loan decisions are driven by structure as much as they are by interest rate. The
+            <a href="https://snapcalc.site/hubpages/calculators/loans-credit.html">Loans &amp; Credit hub</a>
+            helps you make that structure visible by showing repayment amounts, time effects, and how interest behaves across a term. A practical way to use these tools is to model a clean baseline first, then layer in realism such as fees, insurance, rate changes, or different payment schedules so you can see what actually moves the outcome.
+          </p>
+
+          <h2>Savings &amp; Investments</h2>
+          <p>
+            Long-term growth is mostly about consistency, time, and compounding rather than perfect forecasting. The
+            <a href="https://snapcalc.site/hubpages/calculators/savings-investments.html">Savings &amp; Investments hub</a>
+            focuses on what happens when contributions repeat and time does the heavy lifting. These calculators are best used to explore ranges. Run conservative and optimistic scenarios to understand what a plan looks like under different assumptions, then pick a contribution level you can sustain rather than one that only works in a best-case outcome.
+          </p>
+
+          <h2>Real Estate &amp; Property</h2>
+          <p>
+            Property choices tend to be expensive, long-lived, and difficult to undo, so small assumption errors can matter. The
+            <a href="https://snapcalc.site/hubpages/calculators/real-estate-property.html">Real Estate &amp; Property hub</a>
+            helps you compare financing structures, estimate affordability, and think through break-even timelines when refinancing or switching options. These tools work best when you treat each output as a scenario, then run a second scenario with slightly worse terms to see how fragile the affordability picture really is.
+          </p>
+
+          <h2>Health &amp; Fitness</h2>
+          <p>
+            Health and fitness numbers are rarely exact because human bodies respond differently and behaviours matter more than formulas. The
+            <a href="https://snapcalc.site/hubpages/calculators/health-fitness.html">Health &amp; Fitness hub</a>
+            is designed to translate common inputs into usable reference points so you can set targets, track consistency, and avoid relying on vague rules of thumb. Used properly, these calculators support planning and measurement, not diagnosis or medical decision-making.
+          </p>
+
+          <h2>Math &amp; General Calculators</h2>
+          <p>
+            Most “complex” problems collapse into simple maths once the structure is clear. The
+            <a href="https://snapcalc.site/hubpages/calculators/math-general-calculators.html">Math &amp; General Calculators hub</a>
+            exists so you can quickly handle the fundamentals: percentages, ratios, rounding, fractions, and related basics that show up everywhere. This category is often the fastest way to sanity-check an intermediate step before you move on to a financial, technical, or time-based calculator.
+          </p>
+
+          <h2>Time, Date &amp; Scheduling</h2>
+          <p>
+            People are consistently bad at estimating time, especially when tasks stack and calendars shift. The
+            <a href="https://snapcalc.site/hubpages/calculators/time-date-scheduling.html">Time, Date &amp; Scheduling hub</a>
+            helps convert vague planning into numbers you can actually work with, whether that is deadlines, durations, work hours, or schedule comparisons. These tools are useful when you want to reduce “it should be fine” thinking and replace it with clear buffers and realistic timelines.
+          </p>
+
+          <h2>Engineering &amp; Technical</h2>
+          <p>
+            Technical work fails quietly when units are off, assumptions are inconsistent, or a small relationship is misunderstood. The
+            <a href="https://snapcalc.site/hubpages/calculators/engineering-technical.html">Engineering &amp; Technical hub</a>
+            supports quick checks and basic sizing estimates across common domains. It is designed for speed and transparency so you can validate the result against standards, specifications, and real-world constraints. For safety-critical or compliance work, treat these tools as a verification layer, not a final authority.
+          </p>
+
+          <h2>Construction &amp; Materials</h2>
+          <p>
+            Construction estimates usually fail because of missing waste, packaging constraints, or mixed units rather than bad arithmetic. The
+            <a href="https://snapcalc.site/hubpages/calculators/construction-materials.html">Construction &amp; Materials hub</a>
+            helps you establish clean baseline quantities for common planning tasks, then adjust for the factors that change ordering and budget in practice. A sensible approach is to calculate the ideal quantity first, then add allowances and constraints once the baseline is clear.
+          </p>
+
+          <h2>Conversions (Units, Currencies, etc.)</h2>
+          <p>
+            Conversion errors are common and easy to miss, especially when working fast across different measurement systems. The
+            <a href="https://snapcalc.site/hubpages/calculators/conversions-units-currencies.html">Conversions hub</a>
+            exists to reduce that friction and remove a common source of “why does this look wrong?” problems. This category is also a dependency toolset. When an output looks unexpected, the cause is often that the input was entered in the wrong unit or interpreted in the wrong scale.
+          </p>
+
+          <h2>Education &amp; Exams</h2>
+          <p>
+            Academic planning becomes simpler when you can see how weighting and thresholds actually work. The
+            <a href="https://snapcalc.site/hubpages/calculators/education-exams.html">Education &amp; Exams hub</a>
+            helps turn marks, averages, and requirements into clear targets so effort goes to the right place. These tools are useful for answering practical questions like what score is needed to reach a goal, how much one assignment affects a final result, or whether a study plan is realistic given the time available.
+          </p>
+
+          <h2>Travel &amp; Transport</h2>
+          <p>
+            Travel planning breaks when assumptions stay hidden: fuel cost, delays, parking, exchange rates, and timing across legs. The
+            <a href="https://snapcalc.site/hubpages/calculators/travel-transport.html">Travel &amp; Transport hub</a>
+            makes those drivers explicit so you can compare routes, costs, and time trade-offs with fewer surprises. These calculators work best when you treat them as scenario tools, adjusting one or two variables to see which parts of the plan are most fragile.
+          </p>
+
+          <h2>Everyday Life Tools</h2>
+          <p>
+            Small repeated decisions often feel too minor to model, but they accumulate into meaningful time and money costs. The
+            <a href="https://snapcalc.site/hubpages/calculators/everyday-life-tools.html">Everyday Life Tools hub</a>
+            focuses on the practical maths of routines: splitting costs, managing subscriptions, planning household tasks, and keeping everyday totals visible. The goal is not optimisation theatre. It is making patterns obvious so adjustments are easier to justify and stick with.
+          </p>
+
+          <h2>How to use the library without fooling yourself</h2>
+          <p>
+            The most common mistake is treating a clean output as a final answer. A better habit is to run a baseline scenario, then run a conservative scenario and compare them. If the result swings widely, you are not looking at a single “number.” You are seeing sensitivity, which usually means the decision depends on inputs you do not fully know or do not fully control yet. In that situation, the calculator has done its job by showing you what to verify next.
+          </p>
+
+          <p>
+            When the decision is high-stakes, validate against source documents and real constraints. Confirm units, fees, thresholds, timing rules, and any standards or policies that apply. SnapCalc is built to be fast, consistent, and transparent. Used correctly, it reduces confusion and makes trade-offs visible, while leaving the final judgement where it belongs.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

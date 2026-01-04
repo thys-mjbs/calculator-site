@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health &amp; Fitness Calculators</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+        
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="category-layout">
+        
+        <div class="category-header">
+          <h1>Health &amp; Fitness</h1>
+          <p>Everyday health, activity and basic fitness calculations.</p>
+        </div>
+
+        <div class="category-content-block category-content-primary">
+          <h2>What Health & Fitness calculators are designed to support</h2>
+        
+          <p>
+            Health and fitness decisions often involve balancing effort, consistency, and expectations over time. This category exists to provide structured calculators that translate body metrics, activity inputs, nutrition targets, and lifestyle habits into clear, usable reference points. The tools here are designed for everyday individuals, athletes, and learners who want to understand their numbers without relying on guesswork, trends, or opaque recommendations. Instead of subjective judgement, these calculators provide transparent outputs based on commonly used health, nutrition, and exercise formulas.
+          </p>
+        
+          <p>
+            The calculators in this category span several interconnected areas. Body composition and baseline metrics include BMI, body fat percentage, ideal body weight, waist ratios, and body measurement tracking. Energy balance and metabolism tools include BMR, TDEE, calorie maintenance, deficit and surplus calculators, resting metabolic differences, and weight change timelines. Nutrition-focused tools cover protein intake, macro splits, fibre intake, sugar limits, glycemic load, hydration needs, fasting windows, meal planning, and nutrition label decoding. Activity and performance tools include calorie burn estimates for walking, running, cycling, swimming, workouts, step counts, pace calculations, race time prediction, VO2 max estimation, heart rate zones, and training volume calculations.
+          </p>
+        
+          <p>
+            The category also includes health monitoring and lifecycle tools such as blood pressure range evaluation, cholesterol ratios, pregnancy weight gain, due date estimation, ovulation and menstrual cycle tracking, sleep need and sleep debt analysis, recovery time estimation, and general fitness scoring. These tools exist to help users understand trends and ranges rather than diagnose conditions. They provide structure for tracking progress, planning routines, and evaluating whether current habits are broadly aligned with stated goals.
+          </p>
+        
+          <p>
+            These calculators are intentionally modular. Health and fitness outcomes rarely depend on one variable alone. A calorie target without protein context can lead to muscle loss. A training plan without recovery awareness increases fatigue risk. A pace goal without volume context can lead to overuse. By separating calculations, users can adjust one input at a time, observe how outputs change, and build a more realistic picture of progress and sustainability.
+          </p>
+        
+          <p>
+            All tools in this category are deterministic and input-driven. They do not provide medical advice, diagnosis, or personalised treatment recommendations. Where biological variability is high, outputs should be interpreted as estimates or reference ranges. The purpose is to support informed planning, consistency, and expectation management rather than promise specific outcomes.
+          </p>
+        </div>
+        
+        <div class="category-back">
+          <a href="/">← Back to all categories</a>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-item">
+            <a href="/calculators/health-fitness/basal-metabolic-rate-bmr-calculator/">
+              <div class="category-item-title">Basal Metabolic Rate (BMR) Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your Basal Metabolic Rate (BMR) and get a practical daily calorie baseline, plus optional maintenance calorie estimates based on activity level.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/bmi-calculator/">
+              <div class="category-item-title">BMI Calculator | SnapCalc</div>
+              <p class="category-item-desc">Use this BMI Calculator to estimate your Body Mass Index and weight category using metric or imperial units.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/body-fat-percentage-calculator-basic/">
+              <div class="category-item-title">Body Fat Percentage Calculator (Basic) | SnapCalc</div>
+              <p class="category-item-desc">Estimate your body fat percentage using the US Navy tape method. Enter simple measurements and get body fat %, fat mass, and lean mass.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/body-measurements-progress-calculator/">
+              <div class="category-item-title">Body Measurements Progress Calculator | SnapCalc</div>
+              <p class="category-item-desc">Compare two sets of body measurements (waist, hips, chest, arms, thighs) to see your change, percent change, and weekly pace over time.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/calorie-deficit-calculator/">
+              <div class="category-item-title">Calorie Deficit Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your daily calorie deficit and target intake based on your maintenance calories and weight goal, using either a target weight timeline or a weekly loss rate.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/calorie-maintenance-calculator/">
+              <div class="category-item-title">Calorie Maintenance Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your daily maintenance calories (TDEE) using age, sex, height, weight, and activity level. Includes BMR and optional macro targets.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/calorie-surplus-calculator/">
+              <div class="category-item-title">Calorie Surplus Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your daily calorie surplus target and estimated weight gain over time using maintenance calories and a surplus amount or default.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/cycling-calories-burned-calculator/">
+              <div class="category-item-title">Cycling Calories Burned Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how many calories you burn during a cycling session using duration, body weight, and ride intensity. Includes calories per hour and a simple comparison view.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/daily-meal-planner-calories-calculator/">
+              <div class="category-item-title">Daily Meal Planner Calories Calculator | SnapCalc</div>
+              <p class="category-item-desc">Split your daily calorie target into breakfast, lunch, dinner, and an optional snack. Get a simple per-meal calorie plan with clear assumptions.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/daily-water-intake-calculator/">
+              <div class="category-item-title">Daily Water Intake Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your recommended daily water intake based on body weight, activity, and climate, with a practical hydration target and range.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/due-date-calculator/">
+              <div class="category-item-title">Due Date Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your pregnancy due date from the first day of your last period, with optional cycle length adjustment. Get gestational age, trimester, and key milestone dates.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/heart-rate-zones-calculator/">
+              <div class="category-item-title">Heart Rate Zones Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your heart rate training zones in BPM using your age or a custom max heart rate. Optional resting heart rate enables more accurate Karvonen (HRR) zones.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/ideal-body-weight-calculator/">
+              <div class="category-item-title">Ideal Body Weight Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your ideal body weight from your height and sex using common clinical formulas, plus a healthy BMI weight range for comparison.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/macro-split-calculator/">
+              <div class="category-item-title">Macro Split Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate a daily macro split (protein, carbs, fat) from your calorie target using either macro percentages or grams per kg bodyweight.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/menstrual-cycle-tracker-simple-calculator-version/">
+              <div class="category-item-title">Menstrual Cycle Tracker (Simple Calculator Version) | SnapCalc</div>
+              <p class="category-item-desc">Estimate your next period date, ovulation date, and fertile window using your last period start date and average cycle length.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/ovulation-calculator/">
+              <div class="category-item-title">Ovulation Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your ovulation date and fertile window using your last period date and average cycle length.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/pregnancy-weight-gain-calculator/">
+              <div class="category-item-title">Pregnancy Weight Gain Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate a healthy pregnancy weight gain range based on your pre-pregnancy BMI and current pregnancy week, and see whether you are on track for a singleton pregnancy.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/protein-intake-calculator/">
+              <div class="category-item-title">Protein Intake Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate a practical daily protein target based on your body weight, goal, and activity level, with an easy per-meal breakdown.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/running-calories-burned-calculator/">
+              <div class="category-item-title">Running Calories Burned Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate calories burned while running using your distance, time, and body weight. Includes pace, speed, calories per km, and calories per minute.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/sleep-need-calculator/">
+              <div class="category-item-title">Sleep Need Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how many hours of sleep you should aim for tonight based on your age, plus optional adjustments for activity level and sleep debt. Includes a recommended bedtime window from your wake-up time.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/steps-to-calories-calculator/">
+              <div class="category-item-title">Steps to Calories Calculator | SnapCalc</div>
+              <p class="category-item-desc">Convert your daily step count into an estimated number of calories burned from walking. Includes optional weight, cadence, and step length for a more accurate estimate.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/swimming-calories-burned-calculator/">
+              <div class="category-item-title">Swimming Calories Burned Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how many calories you burn swimming based on time and intensity. Optional weight and unit settings included for a more accurate result.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/target-heart-rate-calculator/">
+              <div class="category-item-title">Target Heart Rate Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your target heart rate range for cardio training using your age, intensity, and optional resting heart rate for more accurate zones.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/total-daily-energy-expenditure-tdee-calculator/">
+              <div class="category-item-title">Total Daily Energy Expenditure (TDEE) Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your Total Daily Energy Expenditure (TDEE) to understand how many calories you burn per day based on your age, sex, height, weight, and activity level.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/vo2-max-estimate-calculator/">
+              <div class="category-item-title">VO2 Max Estimate Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate your VO2 max using the 1-mile (1.6 km) walk test. Enter your age, sex, weight, walk time, and finish heart rate to get an estimated VO2 max and a simple fitness interpretation.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/waist-to-height-ratio-calculator/">
+              <div class="category-item-title">Waist-to-Height Ratio Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your waist-to-height ratio (WHtR) to estimate central fat risk and get a practical target waist size based on your height.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/waist-to-hip-ratio-calculator/">
+              <div class="category-item-title">Waist-to-Hip Ratio Calculator | SnapCalc</div>
+              <p class="category-item-desc">Calculate your waist-to-hip ratio (WHR) from waist and hip measurements to understand body fat distribution and get a simple risk interpretation.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/walking-calories-burned-calculator/">
+              <div class="category-item-title">Walking Calories Burned Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate calories burned from walking using your weight, time, and walking speed. Optional incline improves accuracy for hills and treadmill walks.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/weight-loss-timeline-calculator/">
+              <div class="category-item-title">Weight Loss Timeline Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate how long it may take to reach a target weight based on your current weight, goal weight, start date, and an expected weekly loss rate.</p>
+            </a>
+          </div>
+          <div class="category-item">
+            <a href="/calculators/health-fitness/workout-calories-burned-calculator/">
+              <div class="category-item-title">Workout Calories Burned Calculator | SnapCalc</div>
+              <p class="category-item-desc">Estimate calories burned in a single workout based on activity type, your weight, and workout duration. Includes a practical range for real-world variability.</p>
+            </a>
+          </div>
+        </div>
+
+          <div class="category-content-block category-content-secondary">
+            <h2>How to interpret health and fitness numbers responsibly</h2>
+          
+            <p>
+              The most important principle when using health and fitness calculators is to treat them as guidance, not verdicts. Human physiology varies widely, and many inputs are estimates rather than measured values. Height, weight, age, activity level, and training intensity are often approximated, which means outputs such as calorie needs, burn estimates, and timelines should be read as ranges rather than precise prescriptions. If a number feels aggressive or unsustainable, that is usually a signal to reassess assumptions rather than force compliance.
+            </p>
+          
+            <p>
+              Energy balance tools are best used together. Calorie maintenance, deficit, surplus, BMR, and TDEE calculators describe related concepts from different angles. Maintenance represents a baseline, while deficit and surplus model directional change. Weight loss or gain timelines assume consistency that rarely exists in real life. Plateaus, water retention, hormonal shifts, and adherence all affect outcomes. The safest use case is scenario testing: what happens if activity increases, intake decreases slightly, or recovery improves. Small, sustainable changes are more predictive than aggressive targets.
+            </p>
+          
+            <p>
+              Activity and calorie burn calculators are particularly sensitive to input quality. Walking, running, cycling, swimming, and workout burn estimates depend on speed, intensity, body weight, terrain, and efficiency. Wearable devices often report different numbers because they use proprietary models. The value of these calculators lies in comparison, not absolute truth. If one workout burns more than another under similar conditions, the direction is meaningful even if the exact number is not.
+            </p>
+          
+            <p>
+              Training volume, strength, and performance tools should be interpreted in context of recovery. Volume calculators, one-rep max estimates, strength standards, pace calculators, and race predictors assume adequate recovery, nutrition, and sleep. Recovery time estimators and sleep calculators help balance effort with rest. Ignoring recovery signals is a common cause of stalled progress and injury. Use these tools to check whether increases in load are matched by adequate rest and energy intake.
+            </p>
+          
+            <p>
+              Body composition and ratio tools provide different perspectives on the same underlying data. BMI is a population-level screening metric, not a fitness score. Waist ratios and body fat estimates add context but still rely on measurement accuracy. Progress calculators are most useful when measurements are taken consistently under similar conditions. Single readings are less informative than trends over time.
+            </p>
+          
+            <p>
+              Nutrition calculators are effective when used for awareness rather than control. Protein targets, macro splits, fibre intake, sugar limits, hydration needs, and glycemic load tools help identify gaps and excesses, not dictate rigid rules. Fasting and caffeine intake calculators are particularly sensitive to individual tolerance and lifestyle constraints. If a tool highlights extreme intake or restriction, treat that as a signal to moderate rather than escalate.
+            </p>
+          
+            <p>
+              Health monitoring tools such as blood pressure and cholesterol ratio calculators should be used as reference checks, not diagnostic conclusions. They help users understand where values fall relative to common ranges and whether further professional input may be warranted. Similarly, pregnancy-related and reproductive cycle tools provide planning support and timing estimates, but they do not replace medical guidance.
+            </p>
+          
+            <p>
+              The real value of this category is consistency. Health and fitness outcomes are driven by habits repeated over time, not single calculations. Revisit these tools periodically as weight, activity, goals, or routines change. Use them to refine plans, set realistic expectations, and maintain awareness without becoming fixated on any one number. When used responsibly, they support steady progress and better decision-making rather than short-term extremes.
+            </p>
+          </div>
+          
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+  </script>
+
+  </body>
+</html>

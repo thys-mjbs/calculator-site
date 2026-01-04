@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Unit Price Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert a product price into a comparable unit price (per item, per 100g, per kg, per 100ml, per litre, per metre) so you can compare deals quickly." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/unit-price-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Unit Price Converter | SnapCalc" property="og:title"/>
+<meta content="Convert a product price into a comparable unit price (per item, per 100g, per kg, per 100ml, per litre, per metre) so you can compare deals quickly." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/unit-price-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Unit Price Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert a product price into a comparable unit price (per item, per 100g, per kg, per 100ml, per litre, per metre) so you can compare deals quickly." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Unit Price Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/unit-price-converter/",
+      "description": "Convert a product price into a comparable unit price (per item, per 100g, per kg, per 100ml, per litre, per metre) so you can compare deals quickly."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Unit Price Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Unit Price Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert price to unit cost for easy comparison</h2>
+<p class="calculator-intro">Enter a product price and quantity, then choose how you want the unit price shown. Use the optional comparison to see which option is cheaper.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="price1">Product price</label>
+<input id="price1" inputmode="decimal" placeholder="e.g., 49.99" type="text"/>
+</div>
+<div class="form-group">
+<label for="quantity1">Quantity (amount)</label>
+<input id="quantity1" inputmode="decimal" placeholder="e.g., 750" type="text"/>
+</div>
+<div class="form-group">
+<label for="unitType">Quantity type</label>
+<select aria-label="Quantity type" id="unitType">
+<option value="items">Items (count)</option>
+<option value="mass">Mass (g, kg)</option>
+<option value="volume">Volume (ml, l)</option>
+<option value="length">Length (m, cm)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="unitInput">Quantity unit</label>
+<select aria-label="Quantity unit" id="unitInput"></select>
+</div>
+<div class="form-group">
+<label for="perBasis">Show unit price per</label>
+<select aria-label="Show unit price per" id="perBasis"></select>
+</div>
+<details class="advanced-block">
+<summary>Advanced: compare a second product (optional)</summary>
+<div class="form-group">
+<label for="price2">Second product price (optional)</label>
+<input id="price2" inputmode="decimal" placeholder="e.g., 59.99" type="text"/>
+</div>
+<div class="form-group">
+<label for="quantity2">Second product quantity (optional)</label>
+<input id="quantity2" inputmode="decimal" placeholder="e.g., 1" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate unit price</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert between everyday units, rates, and formats for faster comparisons and clearer decisions.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, compare costs, and plan spending with practical calculators that reduce guesswork.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick tools for common tasks, from splitting bills to checking time and simple household maths.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Unit price calculator for comparing product value (per item, per 100g, per litre, and more)</h2>
+<p>When two products have different sizes, pack counts, or formats, the sticker price is a bad comparison tool. What you actually want is the unit price: the cost per one standard unit of quantity. This Unit Price Converter takes a product’s price and quantity and converts it into a comparable unit cost, such as price per item, price per 100 grams, price per kilogram, price per 100 millilitres, price per litre, or price per metre.</p>
+<p>The dominant use case is shopping comparison. You are choosing between two similar products where the only meaningful decision is: which option is cheaper for the same underlying quantity. Examples include 750 ml vs 1 litre drinks, 500 g vs 1 kg rice, a 6-pack vs a 10-pack, or a 1 m vs 120 cm cable. This calculator is not for profit margins, resale pricing, or complex inventory planning. It is for quickly normalising prices to the same basis so you can pick the better deal.</p>
+<p>To use it, enter the product price and quantity, then pick the quantity type and unit (items, grams/kilograms, millilitres/litres, or metres/centimetres). Next, choose the “show per” basis. The calculator converts your quantity to a consistent internal base (count, grams, millilitres, or metres) and divides price by that quantity to produce the unit cost. It also shows common shopping-friendly equivalents (for example per 100 g and per kg for mass, or per 100 ml and per litre for volume) so you can compare labels that use different conventions.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator assumes you are comparing like-for-like products (same product category and similar quality), where quantity is the main driver of value.</li>
+<li>For mass and volume, conversions use standard metric relationships (1 kg = 1000 g, 1 l = 1000 ml). For length, (1 m = 100 cm). No other unit systems are included.</li>
+<li>Unit price is calculated as price ÷ quantity, after converting quantity into the selected base unit. Any taxes, delivery fees, coupons, or loyalty discounts are not included unless you bake them into the price you enter.</li>
+<li>If you use the optional comparison, both products are assumed to use the same type of unit. You should enter the second product quantity in the same unit family (items, mass, volume, or length) for a meaningful comparison.</li>
+<li>Rounding is displayed to two decimals for readability. Small rounding differences can matter on very low unit prices, so treat the result as a decision aid, not a legal label.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is “unit price” and why does it matter?</h3>
+<p>Unit price is the cost per standard unit of quantity. It matters because it removes packaging and size differences from the decision. A larger product can look expensive but still be cheaper per unit. Unit pricing makes the comparison fair.</p>
+<h3>Which “per” basis should I choose (per item, per 100g, per litre, etc.)?</h3>
+<p>Choose the basis that matches how you consume or compare the product. For groceries, per 100 g and per kg are common. For liquids, per 100 ml and per litre are common. For pack items, per item is usually the clearest. If you are comparing shelf labels, match the label basis to avoid mental conversion.</p>
+<h3>Can I compare a 750 ml product to a 1 litre product?</h3>
+<p>Yes. Enter each product’s quantity in its correct unit, and the calculator will convert them to a consistent internal base (millilitres) before computing unit prices. The comparison section then shows which is cheaper per the basis you selected and the approximate percentage difference.</p>
+<h3>What if I do not know the exact quantity?</h3>
+<p>Use your best estimate. Unit price is linear: if the quantity is off by 5%, the unit price will be off by about 5% in the opposite direction. If the two options are close, accuracy matters. If one option is clearly cheaper by a wide margin, estimates are usually enough to decide.</p>
+<h3>Why does my result look different from a store’s unit price label?</h3>
+<p>Stores may include or exclude tax, use different rounding rules, apply promotions, or choose a different basis (per 100 g vs per kg). To align, enter the final price you would actually pay and select the same “per” basis shown on the shelf label.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Rebar Length Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate total rebar length needed, add waste allowance, and estimate how many stock-length bars to buy based on your cut lengths or total required length." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/rebar-length-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Rebar Length Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate total rebar length needed, add waste allowance, and estimate how many stock-length bars to buy based on your cut lengths or total required length." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/rebar-length-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Rebar Length Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate total rebar length needed, add waste allowance, and estimate how many stock-length bars to buy based on your cut lengths or total required length." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rebar Length Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/rebar-length-calculator/",
+      "description": "Calculate total rebar length needed, add waste allowance, and estimate how many stock-length bars to buy based on your cut lengths or total required length."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Rebar Length Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Rebar Length Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate total rebar length and how many stock bars to buy</h2>
+<p class="calculator-intro">Enter your cut lengths or a total required length, then add waste allowance and convert to stock bars (for example 12 m lengths).</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="modeSelect">Calculation method</label>
+<select aria-label="Select calculation method" id="modeSelect">
+<option value="cuts">From cut length and quantity</option>
+<option value="total">From total required length</option>
+</select>
+</div>
+<div id="modeCutsBlock">
+<div class="input-group">
+<label for="quantityInput">Number of identical bars</label>
+<input id="quantityInput" inputmode="numeric" placeholder="e.g., 24" type="text"/>
+</div>
+<div class="input-group">
+<label for="cutLengthInput">Cut length per bar (meters)</label>
+<input id="cutLengthInput" inputmode="decimal" placeholder="e.g., 3.6" type="text"/>
+</div>
+<div class="input-group">
+<label for="spliceLengthInput">Extra length per bar for laps or bends (meters, optional)</label>
+<input id="spliceLengthInput" inputmode="decimal" placeholder="e.g., 0.3" type="text"/>
+</div>
+</div>
+<div class="hidden" id="modeTotalBlock">
+<div class="input-group">
+<label for="totalLengthInput">Total required rebar length (meters)</label>
+<input id="totalLengthInput" inputmode="decimal" placeholder="e.g., 96" type="text"/>
+</div>
+</div>
+<div class="input-group">
+<label for="stockLengthInput">Stock bar length (meters)</label>
+<input id="stockLengthInput" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+<div class="input-group">
+<label for="wastePercentInput">Waste allowance (percent)</label>
+<input id="wastePercentInput" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate rebar length</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, coverage, and mixes for common building and renovation tasks.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Run practical engineering calculations for circuits, components, and technical sizing.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units and values quickly for planning, purchasing, and measurement checks.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Rebar length calculator for estimating total steel and stock bar quantities</h2>
+<p>This rebar length calculator helps you estimate how much reinforcing steel you need in linear meters, and how many stock-length bars to buy. On many sites you work from drawings that list bar marks and dimensions, or you might be planning a small slab or beam and want a quick purchasing estimate. Either way, the practical questions are the same: how many meters of rebar will be used, what allowance should be added for waste, and how many standard bars will be required to cover that total.</p>
+<p>The calculator supports two ways of working. If you know a typical cut length and the number of bars, use the cut length method. This is common when you have repeated bars such as stirrups, straight dowels, or a series of identical starter bars. If you already know the total length from a bar bending schedule or a takeoff, use the total length method and skip straight to the purchasing estimate. In both cases you can add an optional extra length per bar to account for laps, hooks, or bends if your list does not already include them.</p>
+<p>After it estimates the base required length, the calculator adds a waste allowance and converts the final length into the number of stock bars. This gives you a clear purchasing figure and a quick sense of likely offcuts. If you want a fast answer, accept the defaults for stock length and waste. If you want a tighter estimate, use stock length that matches your supplier and adjust waste to match the complexity of the work, the cutting accuracy, and how well offcuts can be reused across the job.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Stock bar length defaults to 12 m if you leave it blank, since 12 m is common in many regions.</li>
+<li>Waste allowance defaults to 5% if you leave it blank, to cover cutting loss, offcuts, and minor on-site changes.</li>
+<li>The optional “extra length per bar” is added once per bar in the cut-length method and is assumed to already include any laps, hooks, or bend allowances you want to include.</li>
+<li>This calculator estimates length only. It does not convert to weight because that depends on bar diameter and local standards.</li>
+<li>Results are planning estimates. Always confirm final quantities against drawings, bar schedules, and supplier constraints.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What should I enter as “extra length per bar”?</h3>
+<p>Use this only if your cut length does not already include laps or bend-related extra length. For example, if each bar needs an overlap splice, you can enter an extra amount you want to add per bar to cover that overlap. If your takeoff already includes those details, leave this field at zero.</p>
+<h3>What waste percentage is reasonable?</h3>
+<p>For simple repeatable cutting with good reuse of offcuts, 3% to 5% is often workable. For more complex cutting, tight shapes, or uncertain site conditions, 7% to 10% can be more realistic. If you are unsure, start with 5% and adjust based on your experience and the job complexity.</p>
+<h3>Why does the calculator show offcut length?</h3>
+<p>Offcut is the difference between the total stock length you plan to buy and the total length after waste is added. It is a rough indicator of how much leftover material you may have. In practice, offcuts can be reused, so the true waste may be lower if you plan cutting efficiently.</p>
+<h3>Can I use this for multiple different bar lengths?</h3>
+<p>This page is designed for a single repeated bar length or a known total length. If you have multiple bar marks and different lengths, the best approach is to total the lengths from your schedule first, then use the “total required length” method here to add waste and convert to stock bars.</p>
+<h3>Does this calculator replace a bar bending schedule?</h3>
+<p>No. A bar bending schedule includes detailed bending shapes, diameters, and counts. This calculator is a fast estimator for total length and purchasing quantities. Use it for planning, quick checks, and early-stage ordering estimates, then confirm against final drawings and schedules.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

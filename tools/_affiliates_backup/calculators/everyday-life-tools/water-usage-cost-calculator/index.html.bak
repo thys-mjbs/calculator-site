@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Water Usage Cost Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your household water bill from monthly usage or a daily-use estimate. Includes a clear cost breakdown, optional fixed fees, wastewater surcharge, and VAT.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/water-usage-cost-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Water Usage Cost Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your household water bill from monthly usage or a daily-use estimate. Includes a clear cost breakdown, optional fixed fees, wastewater surcharge, and VAT.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/water-usage-cost-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Water Usage Cost Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your household water bill from monthly usage or a daily-use estimate. Includes a clear cost breakdown, optional fixed fees, wastewater surcharge, and VAT.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Water Usage Cost Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/water-usage-cost-calculator/",
+      "description": "Estimate your household water bill from monthly usage or a daily-use estimate. Includes a clear cost breakdown with optional fixed fees, wastewater surcharge, and VAT."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Water Usage Cost Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Water Usage Cost Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pCVYNP" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Saving</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Save time on everyday tasks with practical household tools.</p>
+    <div class="affiliate-cta">Explore time saving tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your monthly water bill from usage or daily habits</h2>
+
+              <p class="calculator-intro">Use this to budget, sense-check a bill, or see how daily habits affect your monthly cost. Enter your tariff per kL (1 kL = 1,000 litres) and add optional fees if they apply.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="modeSelect">How do you want to enter your usage?</label>
+                <select id="modeSelect" class="select-control" aria-label="Usage input mode">
+                  <option value="known">I know my monthly usage (kL)</option>
+                  <option value="estimate">Estimate from daily use</option>
+                </select>
+              </div>
+
+              <div id="modeBlockKnown">
+                <div class="form-group">
+                  <label for="monthlyUsageKl">Monthly water usage (kL)</label>
+                  <input id="monthlyUsageKl" type="text" inputmode="decimal" placeholder="e.g. 18" aria-label="Monthly water usage in kilolitres">
+                </div>
+              </div>
+
+              <div id="modeBlockEstimate" class="hidden">
+                <div class="form-group">
+                  <label for="peopleCount">People in household</label>
+                  <input id="peopleCount" type="text" inputmode="numeric" placeholder="e.g. 3" aria-label="People in household">
+                </div>
+
+                <div class="form-group">
+                  <label for="litersPerPersonPerDay">Litres per person per day</label>
+                  <input id="litersPerPersonPerDay" type="text" inputmode="decimal" placeholder="e.g. 150" aria-label="Litres per person per day">
+                </div>
+
+                <div class="form-group">
+                  <label for="daysInMonth">Days in month (optional)</label>
+                  <input id="daysInMonth" type="text" inputmode="numeric" placeholder="Default: 30" aria-label="Days in month">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="ratePerKl">Water tariff (per kL)</label>
+                <input id="ratePerKl" type="text" inputmode="decimal" placeholder="e.g. 28.50" aria-label="Water tariff per kilolitre">
+              </div>
+
+              <fieldset class="advanced-fields">
+                <legend>Advanced (optional)</legend>
+
+                <div class="form-group">
+                  <label for="fixedFee">Fixed monthly water service fee</label>
+                  <input id="fixedFee" type="text" inputmode="decimal" placeholder="Default: 0" aria-label="Fixed monthly fee">
+                </div>
+
+                <div class="form-group">
+                  <label for="wastewaterPercent">Wastewater surcharge (% of water usage charge)</label>
+                  <input id="wastewaterPercent" type="text" inputmode="decimal" placeholder="Default: 0" aria-label="Wastewater surcharge percent">
+                </div>
+
+                <div class="form-group">
+                  <label for="vatPercent">VAT or sales tax (%)</label>
+                  <input id="vatPercent" type="text" inputmode="decimal" placeholder="Default: 0" aria-label="VAT percent">
+                </div>
+              </fieldset>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate water cost</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/48IF8Wg" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Habit Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Track habits consistently to support personal growth and routines.</p>
+    <div class="affiliate-cta">View habit tracking tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for daily costs, budgeting, and common life admin decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan spending, compare costs, and make cleaner money decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and common measures so your inputs and bills match the same units.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Water usage cost calculator for monthly budgeting and bill sense checking</h2>
+
+              <p>This water usage cost calculator estimates what your household water use costs per month. The goal is practical: you want a quick, defensible number to budget your utilities, compare two months, or spot when a bill looks too high for the amount of water you believe you used. This calculator keeps the intent narrow on purpose. It estimates water supply charges and common add-ons, not the full complexity of every municipality.</p>
+
+              <p>You can use it in two ways. If your bill shows monthly consumption in kilolitres (kL) or cubic metres (m³), pick the option that lets you enter monthly usage directly. If you do not know your monthly usage, use the daily estimate mode. That lets you approximate monthly usage from people in the household and litres per person per day. This is useful when you are moving, planning a budget, or trying to translate everyday habits into monthly costs.</p>
+
+              <p>The output is more than one number because a single total is not actionable. You will see a breakdown of the water usage charge (usage multiplied by tariff), plus optional fixed monthly fees, an optional wastewater surcharge (often billed as a percentage of water use), and optional VAT or sales tax. You also get a cost per day estimate, which is often easier to think about when comparing behaviour changes.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Tariff is treated as a flat rate per kL. If your bill uses tiered blocks (increasing rates by usage), this calculator will not match perfectly.</li>
+                <li>1 kL equals 1,000 litres, and is effectively the same as 1 m³ for billing purposes in most contexts.</li>
+                <li>Fixed monthly fees are optional and default to 0 if you do not enter them.</li>
+                <li>Wastewater surcharge, if used, is applied as a percentage of the water usage charge only, not on the fixed fee, unless your bill explicitly does that.</li>
+                <li>VAT or sales tax, if used, is applied to the subtotal of water usage charge plus fixed fee plus wastewater surcharge.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is a kL, and why does my bill use it?</h3>
+              <p>A kilolitre (kL) is 1,000 litres. Many utilities bill water consumption in kL or cubic metres (m³) because it matches how meters measure volume at scale. If your bill shows m³, you can usually treat it the same as kL for a quick estimate.</p>
+
+              <h3>I do not know my monthly usage. How should I choose litres per person per day?</h3>
+              <p>Pick a realistic number based on your household. If you take longer showers, do frequent laundry, water plants, or have a pool top-up, your daily litres will be higher. If you are conservative with showers, fix leaks quickly, and run full loads, it will be lower. The estimate mode is meant for budgeting and comparisons, not for perfectly matching a municipal meter.</p>
+
+              <h3>Why does my real bill not match the result?</h3>
+              <p>The most common reasons are tiered pricing, additional municipal line items, and different tax treatment. Some areas charge different rates after certain usage thresholds. Others add infrastructure levies, meter service charges, sanitation line items, or rebates. Use this calculator as a clean baseline and add missing line items as fixed fees if you want a closer match.</p>
+
+              <h3>Should I include wastewater or sanitation as a percentage?</h3>
+              <p>Only if your billing model matches that pattern. Some utilities bill wastewater based on metered water used, sometimes as a multiplier or percentage. If your bill has a separate sanitation charge that is not tied to usage, treat it as a fixed fee instead of a percentage.</p>
+
+              <h3>How can I use this to reduce my costs?</h3>
+              <p>The fastest lever is usage. In estimate mode, lower the litres per person per day to see what a practical change means in money. For example, shorter showers, fixing leaks, and shifting laundry habits can reduce litres meaningfully. If your area uses tiered pricing, reducing usage can also move you into a cheaper block, which this calculator does not model but still makes the direction of change correct.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4oUXbi6" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Reminders</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Stay on top of daily tasks and commitments with reminder tools.</p>
+    <div class="affiliate-cta">Browse daily reminder tools on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+    <!-- :contentReference[oaicite:0]{index=0} -->
+  </body>
+</html>

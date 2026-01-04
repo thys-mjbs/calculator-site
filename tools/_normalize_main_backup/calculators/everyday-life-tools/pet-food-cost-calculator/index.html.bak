@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Pet Food Cost Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how much you spend on pet food per day, month, and year based on bag price, bag size, and daily feeding amount." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/pet-food-cost-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Pet Food Cost Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how much you spend on pet food per day, month, and year based on bag price, bag size, and daily feeding amount." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/pet-food-cost-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Pet Food Cost Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how much you spend on pet food per day, month, and year based on bag price, bag size, and daily feeding amount." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pet Food Cost Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/pet-food-cost-calculator/",
+      "description": "Estimate pet food spending per day, month, and year using bag price, bag size, and daily feeding amount."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Pet Food Cost Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Pet Food Cost Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate your monthly pet food cost</h2>
+<p class="calculator-intro">Use your bag price, bag size, and daily feeding amount to estimate cost per day, per month, and how long a bag lasts.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="petsCount">Number of pets</label>
+<input id="petsCount" inputmode="numeric" placeholder="e.g., 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="bagPrice">Dry food bag price</label>
+<input id="bagPrice" inputmode="decimal" placeholder="e.g., 899.99" type="text"/>
+</div>
+<div class="form-group">
+<label for="bagSizeKg">Dry food bag size (kg)</label>
+<input id="bagSizeKg" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="gramsPerPetPerDay">Dry food per pet per day (grams)</label>
+<input id="gramsPerPetPerDay" inputmode="decimal" placeholder="e.g., 250" type="text"/>
+</div>
+<details class="advanced-section">
+<summary class="advanced-summary">Advanced options (optional)</summary>
+<div class="form-group advanced-field">
+<label for="wetFoodCostPerDay">Wet food cost per day (total)</label>
+<input id="wetFoodCostPerDay" inputmode="decimal" placeholder="e.g., 25" type="text"/>
+</div>
+<div class="form-group advanced-field">
+<label for="treatsCostPerWeek">Treats cost per week (total)</label>
+<input id="treatsCostPerWeek" inputmode="decimal" placeholder="e.g., 50" type="text"/>
+</div>
+<div class="form-group advanced-field">
+<label for="wastagePercent">Wastage/spoilage (%)</label>
+<input id="wastagePercent" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+</div>
+<div class="form-group advanced-field">
+<label for="deliveryFeePerOrder">Delivery fee per order</label>
+<input id="deliveryFeePerOrder" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+</div>
+<div class="form-group advanced-field">
+<label for="ordersPerMonth">Orders per month</label>
+<input id="ordersPerMonth" inputmode="decimal" placeholder="e.g., 1" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate pet food cost</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Run quick everyday calculations for household costs, errands, and practical planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, compare expenses, and plan monthly spending with clear, simple calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Track health-related numbers and habits with straightforward, practical tools.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Pet food cost calculator for monthly budgeting</h2>
+<p>If you buy pet food in bags, it is easy to underestimate the real monthly cost. A bag price looks simple, but what matters for budgeting is how many days that bag lasts and what that translates to per day and per month. This pet food cost calculator turns the inputs you actually know (bag price, bag size, and daily feeding amount) into practical numbers you can plan around.</p>
+<p>The main goal is one decision: estimate your ongoing food spend so you can set a realistic monthly budget. This page is not for choosing a diet, comparing brands by nutrition, or deciding feeding portions. It is purely a cost estimator that converts your current feeding routine into daily, monthly, and yearly spending, plus a purchase rhythm so you can predict when you will need the next bag.</p>
+<p>Start with the required fields. Enter the number of pets, the price of the dry food bag, the bag size in kilograms, and the grams you feed per pet per day. The calculator estimates the cost per day for dry food, how many days the bag should last, and how many bags you will typically need over a 30 day month. If you also buy wet food, treats, or pay delivery fees, open the Advanced options and add those costs. Advanced inputs are optional and the calculator still works if you leave them blank.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This estimates cost based on your current routine, not a recommended feeding amount. Use your label, scoop, or measured grams as your input.</li>
+<li>Dry food cost is calculated from price per gram (bag price divided by bag grams) multiplied by your total grams per day.</li>
+<li>Monthly totals use a 30 day month for budgeting consistency. Your real month may be slightly higher or lower depending on the calendar.</li>
+<li>Wastage percentage increases food cost to account for spillage, spoilage, stale food, or over-pouring. If you have no idea, leave it at 0%.</li>
+<li>Delivery fees are spread across the month based on your typical orders per month. If you buy in-store, set delivery to 0.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator ask for grams per day instead of cups or scoops?</h3>
+<p>Costs become reliable when you use a consistent unit. Cups and scoops vary by brand, kibble size, and how full the scoop is. Grams are stable and make it possible to estimate how long a bag lasts. If you only know cups, a practical workaround is to weigh one typical scoop once, then reuse that number.</p>
+<h3>What if I feed different amounts on different days?</h3>
+<p>Use an average. If weekdays differ from weekends, estimate a weekly average and convert it to grams per day. For example, add up your weekly grams and divide by 7. The budget outcome is more useful when it is stable, even if the day-to-day feeding varies.</p>
+<h3>Does this include treats, chews, or supplements?</h3>
+<p>Only if you enter them. Treats are optional because many people do not track them precisely. If you want a tighter budget, add your typical weekly treats spend. Supplements and vet diets are also not included unless you treat them as a daily or weekly cost and enter them in the optional fields.</p>
+<h3>My bag does not last as long as the estimate. What should I change?</h3>
+<p>Two things usually cause a gap: the grams per day are understated, or there is wastage. Increase the grams per pet per day to match reality, or add a small wastage percentage (for example 3% to 10%) if you suspect spillage, extra servings, or sharing with another animal. If multiple pets share a bowl, the total grams per day is what matters.</p>
+<h3>Should I use the monthly total or the “bags needed per month” for budgeting?</h3>
+<p>Use the monthly total for budgeting, because it spreads the cost evenly and avoids lumpy expenses. Use “bags needed per month” for planning purchases, especially if you want to buy in bulk, coordinate delivery, or avoid running out. Both numbers are derived from the same inputs, but they help different decisions.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Credit Card Payoff Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how long it will take to pay off your credit card balance with a fixed monthly payment, and see total interest, total paid, and an estimated payoff date." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/personal-finance/credit-card-payoff-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Credit Card Payoff Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how long it will take to pay off your credit card balance with a fixed monthly payment, and see total interest, total paid, and an estimated payoff date." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/personal-finance/credit-card-payoff-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Credit Card Payoff Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how long it will take to pay off your credit card balance with a fixed monthly payment, and see total interest, total paid, and an estimated payoff date." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Credit Card Payoff Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/personal-finance/credit-card-payoff-calculator/",
+        "description": "Estimate how long it will take to pay off your credit card balance with a fixed monthly payment, and see total interest, total paid, and an estimated payoff date."
+      }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Credit Card Payoff Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Credit Card Payoff Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Pay off your credit card with a fixed monthly payment</h2>
+<p class="calculator-intro">
+                Enter your current balance, APR, and your monthly payment to estimate payoff time,
+                total interest, and an estimated payoff date.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="balanceInput">Current balance</label>
+<input autocomplete="off" id="balanceInput" inputmode="decimal" placeholder="e.g., 25,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="aprInput">APR (annual interest rate %)</label>
+<input autocomplete="off" id="aprInput" inputmode="decimal" placeholder="e.g., 22.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyPaymentInput">Monthly payment</label>
+<input autocomplete="off" id="monthlyPaymentInput" inputmode="decimal" placeholder="e.g., 1,200" type="text"/>
+</div>
+<div class="form-group">
+<label for="extraMonthlyInput">Extra monthly payment (optional)</label>
+<input autocomplete="off" id="extraMonthlyInput" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+</div>
+<div class="form-group">
+<label for="lumpSumInput">One-time lump sum payment now (optional)</label>
+<input autocomplete="off" id="lumpSumInput" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate payoff</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">
+                Plan budgets, manage spending, and understand everyday money decisions.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">
+                Estimate repayments, compare borrowing costs, and model debt payoff scenarios.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">
+                Project growth, compare options, and quantify the impact of rates over time.
+              </p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Credit card payoff calculator for fixed monthly payments</h2>
+<p>
+                This credit card payoff calculator estimates how long it will take to pay off a
+                credit card balance when you make a fixed monthly payment. It also estimates the
+                total interest you will pay, the total amount you will pay in all, and an estimated
+                payoff date. The goal is simple: help you decide whether your current payment is
+                enough to get out of debt in a timeframe that feels acceptable, and show the hidden
+                cost of interest along the way.
+              </p>
+<p>
+                The dominant use case is someone who already knows what they can afford to pay each
+                month and wants to answer a single decision: “If I pay this amount every month, how
+                long am I stuck with this card balance?” That is why the default inputs are just
+                balance, APR, and monthly payment. If you want a slightly more realistic estimate
+                without adding complexity, you can optionally add an extra monthly amount and a
+                one-time lump sum payment you plan to make right now.
+              </p>
+<p>
+                Your results are based on monthly compounding, which is how most credit card
+                interest is applied in practice. Each month, interest is calculated on the remaining
+                balance, then your payment reduces what is left. Because interest is calculated on a
+                smaller balance as you pay it down, the payoff accelerates over time, assuming your
+                monthly payment stays consistent. If your payment is too low to cover the interest
+                being added, the balance will not meaningfully fall and payoff becomes impossible
+                without increasing the payment, reducing the interest rate, or adding a lump sum.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
+                  The monthly interest rate is APR divided by 12, and interest compounds monthly.
+                </li>
+<li>
+                  Your monthly payment is treated as fixed and made once per month until the balance
+                  reaches zero.
+                </li>
+<li>
+                  The optional lump sum is applied immediately before the first month of interest in
+                  the payoff simulation.
+                </li>
+<li>
+                  Fees, penalty APR, promotional periods, and new purchases are not included. Adding
+                  new spending will extend payoff time.
+                </li>
+<li>
+                  The payoff date is an estimate based on the current date and the number of months
+                  required, not the exact statement cycle dates.
+                </li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does my payoff time look so long even with a decent payment?</h3>
+<p>
+                High APRs make the early months expensive because interest is calculated on the full
+                balance. If your payment is only slightly higher than the monthly interest, most of
+                what you pay goes to interest at the start. Increasing your payment even a little
+                can shorten payoff time disproportionately because it reduces principal faster,
+                which reduces future interest.
+              </p>
+<h3>What does “payment is too low to cover interest” mean?</h3>
+<p>
+                It means your monthly payment is less than or equal to the interest that accrues in
+                a typical month at your current balance and APR. In that case, the balance will
+                shrink extremely slowly or not at all. To fix it, increase the payment, add an extra
+                monthly amount, make a lump sum payment, or reduce the APR through a lower-rate card
+                or a negotiated rate.
+              </p>
+<h3>Should I include my card’s minimum payment or what I actually pay?</h3>
+<p>
+                Use what you actually plan to pay. Minimum payments are designed to stretch payoff
+                out and maximize interest. If you only know the minimum right now, you can start
+                with it to see how bad the timeline is, then adjust the payment upward until the
+                payoff timeframe becomes acceptable.
+              </p>
+<h3>Do I need to enter the exact APR from my statement?</h3>
+<p>
+                Exact is better, but an estimate still gives a useful range. If you do not know the
+                precise APR, use the rate shown in your banking app or statement summary. If your
+                APR can change (variable rate), treat this result as a best-effort estimate at the
+                current rate.
+              </p>
+<h3>What if I keep using the card while trying to pay it off?</h3>
+<p>
+                Then this result is not valid. New purchases add to the balance, generate interest,
+                and can prevent payoff entirely. If your goal is payoff, stop using the card or move
+                spending to a separate card that you pay in full each month, otherwise the payoff
+                timeline will keep moving out.
+              </p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>

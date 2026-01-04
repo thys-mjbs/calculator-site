@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Sleep Duration Calculator (Time Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate sleep duration from bedtime and wake time, including overnight shifts and optional adjustments like time to fall asleep and time awake during the night." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/time-date-scheduling/sleep-duration-calculator-time-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Sleep Duration Calculator (Time Version) | SnapCalc" property="og:title"/>
+<meta content="Calculate sleep duration from bedtime and wake time, including overnight shifts and optional adjustments like time to fall asleep and time awake during the night." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/time-date-scheduling/sleep-duration-calculator-time-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Sleep Duration Calculator (Time Version) | SnapCalc" name="twitter:title"/>
+<meta content="Calculate sleep duration from bedtime and wake time, including overnight shifts and optional adjustments like time to fall asleep and time awake during the night." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sleep Duration Calculator (Time Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-scheduling/sleep-duration-calculator-time-version/",
+      "description": "Calculate sleep duration from bedtime and wake time, including overnight shifts and optional adjustments like time to fall asleep and time awake during the night."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/time-date-and-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Sleep Duration Calculator (Time Version)</span>
+</nav>
+<div class="page-layout">
+<h1>Sleep Duration Calculator (Time Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate sleep duration from bedtime and wake time</h2>
+<p class="calculator-intro">Enter your bedtime and wake time. If you sleep past midnight, the calculator automatically treats the wake time as the next day.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="bedTime">Bedtime (24-hour time)</label>
+<input aria-label="Bedtime in 24-hour format" id="bedTime" inputmode="numeric" placeholder="23:00" type="text"/>
+<div class="field-hint">Examples: 22:30, 0:15, 07:05</div>
+</div>
+<div class="form-group">
+<label for="wakeTime">Wake time (24-hour time)</label>
+<input aria-label="Wake time in 24-hour format" id="wakeTime" inputmode="numeric" placeholder="06:30" type="text"/>
+<div class="field-hint">If wake time is earlier than bedtime, it is treated as the next day.</div>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional adjustments)</summary>
+<div class="form-group">
+<label for="sleepLatencyMins">Time to fall asleep (minutes)</label>
+<input aria-label="Minutes to fall asleep" id="sleepLatencyMins" inputmode="numeric" placeholder="0" type="text"/>
+<div class="field-hint">If you usually fall asleep 15 minutes after bed, enter 15.</div>
+</div>
+<div class="form-group">
+<label for="nightAwakeMins">Time awake during the night (minutes)</label>
+<input aria-label="Minutes awake during the night" id="nightAwakeMins" inputmode="numeric" placeholder="0" type="text"/>
+<div class="field-hint">Total awake time across the night, if you track it.</div>
+</div>
+<div class="form-group">
+<label for="targetSleepHours">Target sleep (hours)</label>
+<input aria-label="Target sleep hours" id="targetSleepHours" inputmode="decimal" placeholder="8" type="text"/>
+<div class="field-hint">Used to estimate a recommended bedtime for your wake time.</div>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate sleep duration</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/time-date-and-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Work out durations, deadlines, time differences, and scheduling windows.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/health-fitness/">
+<h3 class="related-title">Health &amp; Fitness</h3>
+<p class="related-desc">Estimate daily needs and track practical metrics like activity, intake, and recovery.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for daily decisions and simple planning without spreadsheets.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Sleep duration calculator for bedtime and wake time across midnight</h2>
+<p>This sleep duration calculator is built for one specific job: you know the time you went to bed and the time you woke up, and you want a clean, accurate sleep duration. It handles the common real world situation where bedtime is late and wake time is the next morning. If your wake time is earlier than your bedtime, the calculator automatically treats the wake time as the next day.</p>
+<p>The default view is intentionally simple. Enter bedtime and wake time using 24 hour time (for example 23:15 and 06:45). You will get the total time between those two times, shown as hours and minutes. This is your time in bed, which is the starting point for understanding how long you had available for sleep.</p>
+<p>If you want a more realistic estimate of actual sleep, open the Advanced section. You can subtract a typical time to fall asleep (sleep latency) and any time you were awake during the night. Many people care about sleep opportunity (time in bed) and sleep time (time actually asleep). This calculator can show both, without forcing you to track every detail. If you do not know the advanced values, leave them blank and the calculator will still give a valid answer.</p>
+<p>The output is designed to be practical, not academic. First, you get time in bed. Then you get an estimated sleep duration after adjustments. You also get a simple comparison against a target sleep value (default 8 hours unless you change it). Finally, if you provide a target, the calculator estimates a recommended bedtime for your chosen wake time, including your optional adjustments. This is useful when your wake time is fixed but your bedtime is flexible.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Times are interpreted in 24 hour format (HH:MM). Single digit hours like 7:05 are allowed and treated as 07:05.</li>
+<li>If wake time is earlier than bedtime, the calculator assumes you woke up the next day, not earlier the same day.</li>
+<li>Sleep latency and time awake during the night are optional adjustments. If left blank, they are treated as 0 minutes.</li>
+<li>Estimated sleep duration is never allowed to go below 0. If adjustments exceed time in bed, the estimate is set to 0 and shown clearly.</li>
+<li>The recommended bedtime is a planning aid based on your target sleep plus your optional adjustments. It is not a medical recommendation.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why is my wake time treated as the next day?</h3>
+<p>If your wake time is earlier than your bedtime (for example 23:30 to 06:30), it almost always means you slept past midnight. The calculator assumes the wake time is the following day to avoid a negative or tiny duration.</p>
+<h3>What is the difference between time in bed and sleep duration?</h3>
+<p>Time in bed is the full window from bedtime to wake time. Sleep duration is the amount of that window you were likely asleep. If you take time to fall asleep or wake up during the night, your sleep duration can be lower than your time in bed.</p>
+<h3>What should I enter for time to fall asleep if I do not track it?</h3>
+<p>Leave it blank for a time in bed calculation, or use a rough estimate you believe is typical for you, such as 10 to 30 minutes. The calculator is designed to work even if you do not know this value.</p>
+<h3>What if I woke up multiple times and do not know the total awake time?</h3>
+<p>Leave the field blank if you do not know. If you want a better estimate, think in total minutes awake across the night and enter that total, even if it is approximate. The result will still be useful for comparing nights.</p>
+<h3>Can this calculator handle naps or daytime sleep?</h3>
+<p>Yes, as long as you enter a bedtime and wake time. If the wake time is later than the bedtime, it treats it as the same day. If it is earlier, it treats it as the next day. The logic is time based, not tied to night sleep only.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Auto Loan Affordability Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the maximum car price you can afford based on your monthly payment budget, loan term, APR, down payment, trade-in value, tax rate, and fees." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/loans-credit/auto-loan-affordability-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Auto Loan Affordability Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate the maximum car price you can afford based on your monthly payment budget, loan term, APR, down payment, trade-in value, tax rate, and fees." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/loans-credit/auto-loan-affordability-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Auto Loan Affordability Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the maximum car price you can afford based on your monthly payment budget, loan term, APR, down payment, trade-in value, tax rate, and fees." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Auto Loan Affordability Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/loans-credit/auto-loan-affordability-calculator/",
+      "description": "Estimate the maximum car price you can afford based on a monthly payment budget, loan term, APR, down payment, trade-in value, tax rate, and fees."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+        <span>Auto Loan Affordability Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Auto Loan Affordability Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Find the max car price your monthly budget supports</h2>
+<p class="calculator-intro">Enter the monthly payment you can comfortably afford, then add optional details like down payment, trade-in, tax, and fees to estimate the maximum vehicle price that fits your budget.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="monthlyBudget">Monthly payment budget</label>
+<input aria-label="Monthly payment budget" id="monthlyBudget" inputmode="decimal" placeholder="e.g., 450" type="text"/>
+</div>
+<div class="form-group">
+<label for="aprPercent">APR (annual interest rate %)</label>
+<input aria-label="APR percentage" id="aprPercent" inputmode="decimal" placeholder="e.g., 9.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="termMonths">Loan term (months)</label>
+<input aria-label="Loan term in months" id="termMonths" inputmode="numeric" placeholder="e.g., 60" type="text"/>
+</div>
+<div class="form-group">
+<label for="downPayment">Down payment (optional)</label>
+<input aria-label="Down payment" id="downPayment" inputmode="decimal" placeholder="e.g., 2000" type="text"/>
+</div>
+<div class="form-group">
+<label for="tradeIn">Trade-in value (optional)</label>
+<input aria-label="Trade in value" id="tradeIn" inputmode="decimal" placeholder="e.g., 3500" type="text"/>
+</div>
+<div class="form-group">
+<label for="salesTaxPercent">Sales tax rate % (optional)</label>
+<input aria-label="Sales tax percentage" id="salesTaxPercent" inputmode="decimal" placeholder="e.g., 8.25" type="text"/>
+</div>
+<div class="form-group">
+<label for="fees">Upfront fees (documentation, registration, etc.) (optional)</label>
+<input aria-label="Upfront fees" id="fees" inputmode="decimal" placeholder="e.g., 600" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate affordability</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Compare borrowing options, estimate repayments, and understand how interest affects total cost.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, manage monthly cash flow, and pressure-test big purchases against your income.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Run affordability checks for large commitments and understand how financing changes your limits.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Auto loan affordability based on the monthly payment you can afford</h2>
+<p>This auto loan affordability calculator answers one specific question: if you know the monthly car payment you can handle, what is the maximum vehicle price that budget supports? Most people start shopping by looking at the sticker price. Lenders and dealers often steer the conversation toward the monthly payment. This tool is designed for the practical middle ground: you set the monthly budget first, then translate it into an estimated maximum purchase price.</p>
+<p>To use it, enter your monthly payment budget, the APR (interest rate), and the loan term in months. Those three inputs are the core of the calculation. The calculator works backward from the standard loan payment formula to estimate the maximum amount you can finance. Then, if you add a down payment, trade-in value, sales tax rate, and fees, it converts that financed amount into an estimated maximum vehicle price before tax. That helps you filter listings quickly and avoid test-driving cars that were never realistically in range.</p>
+<p>The results include more than a single number. You will see the maximum amount financed, an estimated maximum vehicle price before tax, and an estimated out-the-door total (vehicle price plus tax and fees). You will also see how much interest you would pay over the full term if you borrowed the maximum amount. This matters because two cars with the same monthly payment can have very different total costs depending on the APR and term length.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The monthly payment budget is treated as the payment for principal and interest only. Insurance, fuel, maintenance, and extended warranties are not included.</li>
+<li>Sales tax and fees are assumed to be rolled into the loan, unless your inputs make that impossible. If you pay fees separately, set fees to 0 and treat them outside the loan.</li>
+<li>Down payment and trade-in value reduce the amount that must be financed. Trade-in is treated as net value applied to the purchase, not gross value before payoff.</li>
+<li>APR is assumed to be fixed for the full term. Variable rates, balloon loans, and leases are excluded by design.</li>
+<li>The vehicle price estimate assumes tax is a percentage applied to the vehicle price, and fees are added on top as a flat amount.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator show both “amount financed” and “vehicle price”?</h3>
+<p>Your monthly budget determines the maximum amount you can borrow (the amount financed). The vehicle price is what you can pay before tax and fees after accounting for your down payment and trade-in. Separating them prevents confusion when taxes, fees, and cash contributions change the numbers.</p>
+<h3>What if I do not know the sales tax rate or fees?</h3>
+<p>Leave them blank or set them to 0 for a quick estimate. The result will still be valid as a financing limit. If you want a tighter number for shopping listings, add your best estimate for tax and fees later. Taxes and fees mainly change the maximum vehicle price, not the amount financed supported by your payment.</p>
+<h3>Does a longer term always mean I can afford a more expensive car?</h3>
+<p>A longer term usually increases the maximum amount financed for the same monthly payment, but it also increases total interest paid. That trade-off is real. If you extend the term to “afford” a higher price, you may end up paying substantially more over time, and you can be upside down on the loan for longer.</p>
+<h3>What if my APR is 0%?</h3>
+<p>If APR is 0%, the monthly payment is simply the amount financed divided by the number of months. The calculator handles this case and will estimate affordability without using the interest formula.</p>
+<h3>Why does my dealer quote a different payment than this calculator?</h3>
+<p>Dealer quotes can differ because of rounding, lender-specific rules, add-ons rolled into the loan, taxes calculated differently by region, or because the quote includes items not modeled here (insurance products, service plans, or negative equity from a prior loan). Use this calculator as a planning tool, then compare it to the final loan disclosure for the exact numbers.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

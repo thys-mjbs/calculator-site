@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Concrete Volume Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate how much concrete you need for slabs, footings, walls, columns, and circular pads. Get volume in m³, litres, and yd³, plus an ordering estimate with waste allowance.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/concrete-volume-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Concrete Volume Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate how much concrete you need for slabs, footings, walls, columns, and circular pads. Get volume in m³, litres, and yd³, plus an ordering estimate with waste allowance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/concrete-volume-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Concrete Volume Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate how much concrete you need for slabs, footings, walls, columns, and circular pads. Get volume in m³, litres, and yd³, plus an ordering estimate with waste allowance.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Concrete Volume Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/concrete-volume-calculator/",
+      "description": "Calculate how much concrete you need for slabs, footings, walls, columns, and circular pads. Get volume in m³, litres, and yd³, plus an ordering estimate with waste allowance."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Concrete Volume Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Concrete Volume Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ads + main calculator -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pNLKde" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Technical Problem Solving</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Structured tools for solving technical and engineering problems.</p>
+    <div class="affiliate-cta">Explore technical problem solving tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate concrete needed</h2>
+
+              <div class="form-group">
+                <label for="unitSelect">Units</label>
+                <select id="unitSelect">
+                  <option value="m">Meters (m)</option>
+                  <option value="cm">Centimeters (cm)</option>
+                  <option value="mm">Millimeters (mm)</option>
+                  <option value="ft">Feet (ft)</option>
+                  <option value="in">Inches (in)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="shapeSelect">Shape</label>
+                <select id="shapeSelect">
+                  <option value="slab">Rectangular slab / pad</option>
+                  <option value="footing">Footing / beam (rectangular)</option>
+                  <option value="wall">Wall (length × height × thickness)</option>
+                  <option value="cylinder">Round column (cylinder)</option>
+                  <option value="circular">Circular slab / pad</option>
+                </select>
+              </div>
+
+              <div class="shape-panels">
+                <div class="shape-panel" data-shape="slab">
+                  <div class="form-group">
+                    <label for="slabLength">Length</label>
+                    <input id="slabLength" type="text" inputmode="decimal" placeholder="e.g. 6">
+                  </div>
+                  <div class="form-group">
+                    <label for="slabWidth">Width</label>
+                    <input id="slabWidth" type="text" inputmode="decimal" placeholder="e.g. 4">
+                  </div>
+                  <div class="form-group">
+                    <label for="slabThickness">Thickness</label>
+                    <input id="slabThickness" type="text" inputmode="decimal" placeholder="e.g. 0.1">
+                  </div>
+                </div>
+
+                <div class="shape-panel" data-shape="footing" hidden>
+                  <div class="form-group">
+                    <label for="footingLength">Length</label>
+                    <input id="footingLength" type="text" inputmode="decimal" placeholder="e.g. 12">
+                  </div>
+                  <div class="form-group">
+                    <label for="footingWidth">Width</label>
+                    <input id="footingWidth" type="text" inputmode="decimal" placeholder="e.g. 0.6">
+                  </div>
+                  <div class="form-group">
+                    <label for="footingDepth">Depth</label>
+                    <input id="footingDepth" type="text" inputmode="decimal" placeholder="e.g. 0.25">
+                  </div>
+                </div>
+
+                <div class="shape-panel" data-shape="wall" hidden>
+                  <div class="form-group">
+                    <label for="wallLength">Length</label>
+                    <input id="wallLength" type="text" inputmode="decimal" placeholder="e.g. 10">
+                  </div>
+                  <div class="form-group">
+                    <label for="wallHeight">Height</label>
+                    <input id="wallHeight" type="text" inputmode="decimal" placeholder="e.g. 2.4">
+                  </div>
+                  <div class="form-group">
+                    <label for="wallThickness">Thickness</label>
+                    <input id="wallThickness" type="text" inputmode="decimal" placeholder="e.g. 0.15">
+                  </div>
+                </div>
+
+                <div class="shape-panel" data-shape="cylinder" hidden>
+                  <div class="form-group">
+                    <label for="cylDiameter">Diameter</label>
+                    <input id="cylDiameter" type="text" inputmode="decimal" placeholder="e.g. 0.3">
+                  </div>
+                  <div class="form-group">
+                    <label for="cylHeight">Height</label>
+                    <input id="cylHeight" type="text" inputmode="decimal" placeholder="e.g. 2.7">
+                  </div>
+                </div>
+
+                <div class="shape-panel" data-shape="circular" hidden>
+                  <div class="form-group">
+                    <label for="circDiameter">Diameter</label>
+                    <input id="circDiameter" type="text" inputmode="decimal" placeholder="e.g. 3">
+                  </div>
+                  <div class="form-group">
+                    <label for="circThickness">Thickness</label>
+                    <input id="circThickness" type="text" inputmode="decimal" placeholder="e.g. 0.12">
+                  </div>
+                </div>
+              </div>
+
+              <button id="calculateButton" type="button">Calculate</button>
+
+              <div id="result"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4pNLKde" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Technical Problem Solving</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Structured tools for solving technical and engineering problems.</p>
+    <div class="affiliate-cta">Explore technical problem solving tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Plan quantities for concrete, materials, and site measurements with practical build calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Work out technical values and sizing for common engineering tasks and everyday calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Estimate costs, margins, and totals for projects and day-to-day business decisions.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Concrete volume calculator for slabs, footings, walls, and columns</h2>
+
+              <p>This calculator estimates how much concrete you need based on your shape and dimensions. It is useful for common jobs like slabs and pads, strip footings, concrete walls, round columns, and circular pads.</p>
+              <p>Choose your units, pick the shape, and enter the measurements. The calculator returns the concrete volume in cubic meters (m³), litres, and cubic yards (yd³).</p>
+              <p>It also provides an ordering estimate that adds a waste allowance, which helps cover spillage, uneven excavation, formwork gaps, and over-excavation.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>All inputs are converted to meters internally before calculating volume.</li>
+                <li>The ordering estimate adds a default waste allowance of 10% (common on many small-to-medium pours).</li>
+                <li>Truck counts are estimates based on typical 6 m³ and 8 m³ loads. Your supplier may differ.</li>
+                <li>This tool estimates volume only. It does not design reinforcement, mix strength, or structural details.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>How do I calculate concrete for a slab?</h3>
+              <p>Select “Rectangular slab / pad” and enter length, width, and thickness. Thickness is usually the most commonly mistyped value, so double-check the unit you selected.</p>
+
+              <h3>What thickness should I use?</h3>
+              <p>This depends on the job and local standards. If you are unsure, use the thickness from your plan or builder and treat this calculator as a volume check, not a design tool.</p>
+
+              <h3>Why add a waste allowance?</h3>
+              <p>Concrete pours rarely match the perfect geometric shape. Waste allowance helps cover small losses and real-world variability so you do not run short mid-pour.</p>
+
+              <h3>Should I order exactly the calculated volume?</h3>
+              <p>Usually no. Ordering slightly more is common. This calculator shows both the exact volume and a 10% extra estimate so you can decide what is appropriate.</p>
+
+              <h3>Does this include rebar, mesh, or formwork?</h3>
+              <p>No. It calculates concrete volume only. Materials like reinforcement and formwork are separate quantities.</p>
+
+              <div class="last-updated">Last updated: 2025-12-12</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+
+  </body>
+</html>

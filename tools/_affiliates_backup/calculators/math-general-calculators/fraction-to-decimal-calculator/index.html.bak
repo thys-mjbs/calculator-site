@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Fraction to Decimal Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert fractions (including mixed numbers) to decimals with optional rounding, repeating-decimal detection, and percent conversion.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/fraction-to-decimal-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Fraction to Decimal Calculator | SnapCalc">
+    <meta property="og:description" content="Convert fractions (including mixed numbers) to decimals with optional rounding, repeating-decimal detection, and percent conversion.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/fraction-to-decimal-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fraction to Decimal Calculator | SnapCalc">
+    <meta name="twitter:description" content="Convert fractions (including mixed numbers) to decimals with optional rounding, repeating-decimal detection, and percent conversion.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fraction to Decimal Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/fraction-to-decimal-calculator/",
+      "description": "Convert fractions and mixed numbers to decimals with optional rounding, repeating-decimal detection, and percent conversion."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math & General Calculators</a> ›
+        <span>Fraction to Decimal Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Fraction to Decimal Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert a fraction into a decimal</h2>
+
+              <p class="calculator-intro">Enter a fraction like 3/8 or a mixed number like 1 3/4. Choose how many decimal places you want, and the calculator will show a rounded decimal, percent, and whether the decimal repeats.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="inputMode">Input type</label>
+                <select id="inputMode">
+                  <option value="text" selected>Type a fraction (recommended)</option>
+                  <option value="parts">Numerator and denominator</option>
+                </select>
+              </div>
+
+              <div id="modeTextBlock">
+                <div class="form-group">
+                  <label for="fractionText">Fraction or mixed number</label>
+                  <input id="fractionText" type="text" inputmode="text" placeholder="Examples: 3/8, 7/4, 1 3/4, -2 5/16">
+                </div>
+              </div>
+
+              <div id="modePartsBlock" class="hidden">
+                <div class="form-group">
+                  <label for="wholePart">Whole number (optional)</label>
+                  <input id="wholePart" type="text" inputmode="numeric" placeholder="Example: 1">
+                </div>
+
+                <div class="form-group">
+                  <label for="numerator">Numerator</label>
+                  <input id="numerator" type="text" inputmode="numeric" placeholder="Example: 3">
+                </div>
+
+                <div class="form-group">
+                  <label for="denominator">Denominator</label>
+                  <input id="denominator" type="text" inputmode="numeric" placeholder="Example: 4">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="decimalPlaces">Decimal places (optional)</label>
+                <input id="decimalPlaces" type="text" inputmode="numeric" placeholder="Default: 6">
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input id="showSteps" type="checkbox">
+                  Also show calculation details
+                </label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4iXXNCq" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Percentage Calculations</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Learn how to calculate percentages for discounts, increases, and comparisons.</p>
+                <div class="affiliate-cta">Explore percentage calculation books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Work with fractions, percentages, ratios, and everyday math quickly and accurately.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/education-exams/">
+              <h3 class="related-title">Education & Exams</h3>
+              <p class="related-desc">Study support calculators for homework, test prep, grading, and basic conversions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units and values when you need a quick, practical answer.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4alNqWR" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Ratios and Proportions</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Understand ratios and proportions used in scaling and comparisons.</p>
+                <div class="affiliate-cta">View ratio and proportion books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Fraction to decimal conversion for mixed numbers, rounding, and repeating decimals</h2>
+
+              <p>A fraction is a division problem written in a compact form. When you convert a fraction to a decimal, you are calculating numerator ÷ denominator. This calculator is built for normal situations where you might see fractions in cooking, building measurements, schoolwork, finance, or spreadsheets. It accepts simple fractions like 3/8, improper fractions like 7/4, and mixed numbers like 1 3/4. It also supports negative values.</p>
+
+              <p>The main result is the decimal value, rounded to a number of decimal places you choose. If you do not choose a value, the calculator uses a sensible default so you can get a quick answer without extra typing. Alongside the decimal, you also get the equivalent percent (decimal × 100). This matters because many everyday comparisons are easier in percent, for example turning 3/8 into 37.5% for a discount or a probability.</p>
+
+              <p>Not all fractions terminate as decimals. Some decimals end after a certain number of digits (for example, 3/8 = 0.375). Others repeat forever (for example, 1/3 = 0.333… repeating). This calculator detects whether the decimal terminates or repeats, and if it repeats, it will display the repeating part in parentheses. You still get a rounded decimal for practical use, but you also see what is happening mathematically so you can avoid confusion when results look slightly different across calculators, calculators on phones, or spreadsheet rounding settings.</p>
+
+              <p>How to use it: choose your input style, type your fraction or enter numerator and denominator, then press Convert. If you are working from a worksheet or a recipe, the text input is usually fastest. If you are copying values from a measurement or a problem statement, the numerator and denominator fields can be clearer. If you want a more accurate rounded decimal, increase decimal places. If you want a cleaner number for display, reduce decimal places.</p>
+
+              <p>The calculator also simplifies the fraction internally so your result is stable and consistent. For example, 50/100 and 1/2 are the same value. Simplifying helps when you want to double-check a fraction, and it reduces the chance of mistakes when the numbers are large.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If decimal places are left blank, the calculator uses 6 decimal places for the rounded decimal output.</li>
+                <li>Fractions are interpreted as numerator divided by denominator, and mixed numbers are interpreted as whole + (numerator/denominator) with the sign applied to the overall value.</li>
+                <li>Denominator cannot be zero. If you enter 0, the calculator will stop and explain what needs fixing.</li>
+                <li>For repeating decimals, the calculator shows a repeating pattern in parentheses and also shows a rounded decimal for practical use.</li>
+                <li>Very large inputs are supported, but the displayed repeating pattern is limited in length so results remain readable.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why do some fractions end and others repeat?</h3>
+              <p>A fraction has a terminating decimal only when the simplified denominator has no prime factors other than 2 and 5. That is why 1/8 (denominator 2×2×2) terminates, and 1/3 repeats. This calculator simplifies the fraction first, then determines whether the decimal terminates or repeats.</p>
+
+              <h3>What does the repeating part in parentheses mean?</h3>
+              <p>Parentheses mark the digits that repeat forever. For example, 0.(3) means 0.333333… repeating, and 0.1(6) means 0.166666… repeating. The value is exact even though the decimal representation is infinite.</p>
+
+              <h3>How should I choose the number of decimal places?</h3>
+              <p>Choose based on how the number will be used. For display and rough comparisons, 2 to 4 decimal places are often enough. For calculations in spreadsheets or engineering contexts, you may want 6 or more. If you are using the result in later calculations, keep more decimal places to reduce rounding error.</p>
+
+              <h3>Can I enter mixed numbers like 2 5/16?</h3>
+              <p>Yes. Use the text input and type a space between the whole number and the fraction, like 2 5/16. If you use the numerator and denominator fields, you can enter the whole number in the optional whole number box.</p>
+
+              <h3>Why does my answer differ slightly from another website or my calculator app?</h3>
+              <p>Small differences usually come from rounding. Another tool may round to fewer digits, may not show repeating patterns, or may use a different default precision. Increase decimal places here to see more digits, and check the repeating-decimal note if the fraction does not terminate.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3N0A34o" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Problem Solving</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Develop logical approaches to solving everyday math problems.</p>
+                <div class="affiliate-cta">Browse math problem solving books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

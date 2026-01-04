@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodology | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Match hubs / homepage rendering: centered, clean, readable -->
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Methodology</h1>
+        </div>
+
+        <section class="seo-section">
+          <p>
+            This page explains how SnapCalc calculators are designed and what the site
+            optimizes for: practical decision support with clear assumptions. Our methodology is rooted in a simple yet profound idea: clarity, speed, and accuracy are the cornerstones of any effective calculator. At SnapCalc, we prioritize your time, giving you answers quickly and in a way that you can understand—without unnecessary complexity or ambiguity. We’re building tools that you can rely on, backed by a design philosophy that ensures transparency, usability, and meaningful outputs.
+          </p>
+
+          <h2>1) Scope is intent-first</h2>
+          <p>
+            Every calculator is meticulously crafted with a singular focus: answering one specific question. This singularity of purpose ensures that each tool is directly aligned with the user's need, without the distractions of irrelevant data or extraneous use cases. By concentrating on a single problem, we can streamline the input and output process, making calculations quick and straightforward while ensuring the tools remain accessible to everyone, regardless of their expertise. The aim is not to create catch-all solutions, but to hone in on precision, which ultimately leads to better, faster decisions.
+          </p>
+
+          <h2>2) Minimal inputs, optional refinement</h2>
+          <p>
+            The most fundamental design principle of SnapCalc is to start with the minimal set of inputs necessary to deliver a meaningful result. Most users don’t need every variable to make a decision. Instead, we focus on the essential information that allows you to make sound calculations quickly. To achieve this, SnapCalc’s calculators begin with a core set of fields, keeping the user interface clean and intuitive. For those who want more precision, we offer optional inputs. These refinements are not required but give you the option to fine-tune your results based on additional data or specific circumstances. By offering both simplicity and flexibility, we cater to a wide range of users, from those looking for fast answers to those who need deeper insights.
+          </p>
+
+          <h2>3) Assumptions are explicit</h2>
+          <p>
+            Every calculation carries assumptions. In most cases, these assumptions are unavoidable. What’s important is that SnapCalc makes them explicit. Whenever a calculator uses assumptions such as default values, rounding, or simplified models, we state this clearly and openly. Transparency about assumptions helps users understand the limits of the results and where those assumptions might impact accuracy. Whether it’s the interest rate applied to a loan or the default inflation rate used for future value calculations, SnapCalc gives you the full context behind the numbers. This is crucial for anyone making decisions based on these results, as it empowers you to weigh the reliability of those numbers.
+          </p>
+
+          <h2>4) Guardrails for invalid inputs</h2>
+          <p>
+            User experience is at the heart of SnapCalc’s design. We recognize that users don’t always input perfect data, and calculators often deal with imperfect or missing values. Therefore, we’ve built guardrails to handle these issues. Invalid ranges, negative numbers, and mixed units (such as entering inches for height and kilograms for weight) can all derail a calculation. SnapCalc automatically detects and corrects these errors by alerting the user to the issue and guiding them back to valid entries. This proactive approach ensures that the user experience remains seamless and that the output remains as reliable as possible.
+          </p>
+
+          <h2>5) Outputs focus on decision support</h2>
+          <p>
+            The purpose of any calculator is not to produce a perfect academic result, but to help the user make a decision. SnapCalc’s outputs are designed with this in mind. Rather than overwhelming you with excessive data, we focus on delivering the key results in a format that’s immediately actionable. This usually means presenting the final answer, highlighting any key intermediate values, and providing a brief, digestible explanation of what the result means in the context of the question. The goal is to give you the most critical insights without bogging you down with unnecessary complexity or technical detail.
+          </p>
+
+          <h2>6) Static and browser-based by design</h2>
+          <p>
+            SnapCalc is a static website—a design choice that plays a key role in its speed and reliability. All calculations are processed locally in your browser, without the need to send data back to a server. This eliminates latency, ensuring that pages load quickly and that calculations happen in real-time. Furthermore, this design reduces privacy concerns since no personal data is collected or transmitted during the calculation process. SnapCalc’s simplicity in both design and architecture ensures that users can rely on a fast, seamless experience regardless of their internet connection or device.
+          </p>
+
+          <h2>Reporting issues</h2>
+          <p>
+            While SnapCalc strives for accuracy, we understand that occasional issues may arise. If you encounter a problem with one of our calculators, we encourage you to report it, but only after ensuring that the inputs and results are carefully documented. The useful report for any calculator error includes:
+          </p>
+          <ul>
+            <li>The page URL of the calculator where the error occurred.</li>
+            <li>The exact inputs you used in the calculation.</li>
+            <li>The expected result and why you expected that particular outcome.</li>
+            <li>The actual result shown by the calculator.</li>
+          </ul>
+          <p>
+            Providing detailed feedback helps us improve the calculators and ensures we can quickly address any inaccuracies. SnapCalc is committed to ongoing improvement, and user feedback plays an essential role in refining our tools and keeping them relevant.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

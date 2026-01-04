@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Refinance Break-Even Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how many months it takes to break even when refinancing by comparing your current loan payment to a new loan payment after closing costs." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/real-estate-property/refinance-break-even-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Refinance Break-Even Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how many months it takes to break even when refinancing by comparing your current loan payment to a new loan payment after closing costs." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/real-estate-property/refinance-break-even-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Refinance Break-Even Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how many months it takes to break even when refinancing by comparing your current loan payment to a new loan payment after closing costs." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Refinance Break-Even Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/real-estate-property/refinance-break-even-calculator/",
+      "description": "Estimate refinance break-even time by comparing current vs new monthly loan payments and factoring in closing costs."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/real-estate-property/">Real Estate &amp; Property</a> ›
+        <span>Refinance Break-Even Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Refinance Break-Even Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Find your refinance break-even point</h2>
+<p class="calculator-intro">Compare your current loan to a new refinance option and see how long it takes for monthly savings to repay your closing costs.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="currentBalance">Current loan balance</label>
+<input id="currentBalance" inputmode="decimal" placeholder="e.g., 1,250,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="currentRate">Current interest rate (APR %)</label>
+<input id="currentRate" inputmode="decimal" placeholder="e.g., 11.75" type="text"/>
+</div>
+<div class="form-group">
+<label for="remainingYears">Remaining term (years)</label>
+<input id="remainingYears" inputmode="decimal" placeholder="e.g., 18" type="text"/>
+</div>
+<div class="form-group">
+<label for="newRate">New interest rate (APR %)</label>
+<input id="newRate" inputmode="decimal" placeholder="e.g., 10.25" type="text"/>
+</div>
+<div class="form-group">
+<label for="newTermYears">New term (years)</label>
+<input id="newTermYears" inputmode="decimal" placeholder="Leave blank to use remaining term" type="text"/>
+</div>
+<div class="form-group">
+<label for="closingCosts">Closing costs (once-off)</label>
+<input id="closingCosts" inputmode="decimal" placeholder="e.g., 35,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="costsRolledIn">How are closing costs paid?</label>
+<select id="costsRolledIn">
+<option selected="" value="upfront">Paid upfront (cash)</option>
+<option value="rolled">Rolled into new loan balance</option>
+</select>
+</div>
+<div class="form-group">
+<label for="stayMonths">How long will you keep the property (months, optional)?</label>
+<input id="stayMonths" inputmode="decimal" placeholder="e.g., 48" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate break-even</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Model home ownership costs, property scenarios, and affordability decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Compare borrowing options, repayments, interest costs, and debt tradeoffs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan budgets, cash flow, savings targets, and everyday money decisions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Refinance break-even calculator: how long until a refinance pays for itself?</h2>
+<p>Refinancing can lower your monthly payment, shorten your loan term, or both. The problem is that a refinance usually comes with once-off costs, such as bank fees, bond registration, valuation fees, and other closing costs. A refinance can look attractive on the rate alone, but if you sell the property or refinance again too soon, you may never recover those costs. This refinance break-even calculator helps you estimate when the monthly savings from a new loan option have “paid back” the closing costs.</p>
+<p>The break-even point is most commonly expressed in months. It is the point where your cumulative monthly savings equals the upfront cost of refinancing. For example, if refinancing saves you R1,200 per month and your closing costs are R24,000, your simple break-even time is 20 months. After that point, the refinance is saving you money (in a cash-flow sense), assuming nothing else changes. If your refinance costs are rolled into the loan, your balance increases and the “cost” is repaid over time through higher payments and interest, which can change the break-even picture.</p>
+<p>This calculator is designed for real-world use, not perfect data. If you only want a quick answer, enter your current balance, current rate, remaining term, the new rate, and an estimate of closing costs. If you want a more accurate view, add the new term if it differs, choose whether costs are paid upfront or rolled into the new loan, and optionally enter how long you expect to keep the property. That last input lets the calculator estimate whether you come out ahead within your planned holding period, not just when you break even.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator compares principal-and-interest payments only and does not include taxes, insurance, HOA/levies, or escrow amounts.</li>
+<li>Interest rates are treated as fixed APRs over the comparison period, even though many real loans can change over time.</li>
+<li>Closing costs are treated as a single once-off amount, either paid upfront or added to the new loan balance, depending on your selection.</li>
+<li>Payments are estimated using standard amortization math and assume you will make on-time monthly payments.</li>
+<li>If you enter a “months you will keep the property” value, the calculator assumes you keep both loan scenarios for that entire period (no additional refinance, no early payoff, no major payment changes).</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What does “break even” mean for a refinance?</h3>
+<p>In this calculator, break even means the point where your cumulative monthly payment savings equals your refinance costs. If you paid costs upfront, it is the number of months needed for savings to “pay you back.” If you rolled costs into the loan, the calculator still estimates a break-even point, but the new loan balance and payment are higher than they would be otherwise, so the savings may be smaller or disappear entirely.</p>
+<h3>Does a lower interest rate always mean I should refinance?</h3>
+<p>No. A lower rate often helps, but the decision depends on closing costs, how long you will keep the loan, and whether the new term is longer. Extending the term can reduce monthly payments but can increase total interest over the life of the loan. Break-even time helps you sanity-check whether the rate reduction is meaningful for your timeline.</p>
+<h3>What if my new loan term is longer or shorter than what I have left?</h3>
+<p>That matters a lot. If you refinance into a longer term, you may lower your monthly payment even without a big rate change, but you can end up paying interest for longer. If you refinance into a shorter term, your monthly payment may increase even though you save on interest. This calculator lets you set the new term separately so you can see the tradeoff clearly.</p>
+<h3>Should I roll closing costs into the new loan?</h3>
+<p>Rolling costs into the loan can reduce upfront cash needed, but it increases your loan balance and typically increases the total interest you pay over time. Paying costs upfront often produces a cleaner break-even calculation because the cost is known and immediate. If you are short on cash, rolling costs in may still be worth it, but you should expect break-even to take longer.</p>
+<h3>How can I make this estimate more accurate?</h3>
+<p>Use the most accurate remaining term you can, and include a realistic closing cost estimate from your lender or broker. If you know you will sell or move within a certain time, enter that “months you will keep the property” value and focus on whether the refinance produces net savings within your timeline. Also consider whether your rate is fixed or variable, since future rate changes can alter the savings.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

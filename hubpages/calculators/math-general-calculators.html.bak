@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percentages, Ratios, and Fractions Foundations Summary | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Percentages, Ratios, and Fractions Foundations</h1>
+        </div>
+
+        <section class="seo-section">
+          <h2>The Core Conversions That Keep Everyday Comparisons Coherent</h2>
+          <p>
+            Percentages, ratios, proportions, and fraction conversions sit underneath an outsized share of practical decisions because they standardise comparisons across different scales. Percent calculations translate a part-whole relationship into a single interpretable number, but the reliability hinges on choosing the correct baseline: percent change is anchored to the original value, percentage points are absolute differences between percentages, and confusing the two quietly breaks reporting and pricing logic. Increase and decrease are not symmetric, so a drop followed by an equal rise does not restore the starting point, which matters whenever outcomes are presented as “back to normal.” Ratios and proportions handle allocation and scaling, yet errors usually come from treating ratios like subtraction, mixing units across sides, or setting up correspondence incorrectly before any arithmetic begins. Fractions, decimals, and percents are the same idea expressed in different formats, and the common failure is pretending rounding is harmless: terminating decimals preserve exactness, repeating decimals require a precision decision, and small approximations amplify when repeated in totals, measurements, or multipliers. Simplifying fractions and finding a greatest common divisor are not cosmetic steps; they reduce relationships to lowest terms so subsequent comparisons, scaling, and grouping remain structurally accurate. For the full expanded reference that connects these concepts to real-world interpretation traps and consistent setup rules, use the SnapCalc hub page:
+            <a href="/hubpages/calculators/math-general-calculators/percentages-ratios-fractions-foundations.html">Percentages, Ratios, and Fractions Foundations</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

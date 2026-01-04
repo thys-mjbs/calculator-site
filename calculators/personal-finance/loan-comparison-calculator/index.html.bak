@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Loan Comparison Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Compare two loan offers side by side. See monthly payments, total interest, and total cost (including fees) to pick the cheaper loan." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/personal-finance/loan-comparison-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Loan Comparison Calculator | SnapCalc" property="og:title"/>
+<meta content="Compare two loan offers side by side. See monthly payments, total interest, and total cost (including fees) to pick the cheaper loan." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/personal-finance/loan-comparison-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Loan Comparison Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Compare two loan offers side by side. See monthly payments, total interest, and total cost (including fees) to pick the cheaper loan." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Loan Comparison Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/loan-comparison-calculator/",
+      "description": "Compare two loan offers side by side by calculating monthly payments, total interest, and total cost including fees."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Loan Comparison Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Loan Comparison Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Compare two loan offers</h2>
+<p class="calculator-intro">Enter both offers and compare monthly payment, total interest, and total cost (including fees).</p>
+<!-- CALCULATOR UI START -->
+<div class="loan-compare-grid">
+<div aria-label="Loan A inputs" class="loan-panel">
+<h3 class="loan-panel-title">Loan A</h3>
+<div class="form-group">
+<label for="loanAAmount">Loan amount</label>
+<input id="loanAAmount" inputmode="decimal" placeholder="e.g. 250000" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanAApr">APR (annual interest rate %)</label>
+<input id="loanAApr" inputmode="decimal" placeholder="e.g. 12.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanATermYears">Term (years)</label>
+<input id="loanATermYears" inputmode="numeric" placeholder="e.g. 5" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="loanAUpfrontFee">Upfront fee (once-off)</label>
+<input id="loanAUpfrontFee" inputmode="decimal" placeholder="e.g. 1500" type="text"/>
+</div>
+<div class="checkbox-row">
+<input id="loanAFeeFinanced" type="checkbox"/>
+<label for="loanAFeeFinanced">Roll the fee into the loan (finance the fee)</label>
+</div>
+</details>
+</div>
+<div aria-label="Loan B inputs" class="loan-panel">
+<h3 class="loan-panel-title">Loan B</h3>
+<div class="form-group">
+<label for="loanBAmount">Loan amount</label>
+<input id="loanBAmount" inputmode="decimal" placeholder="e.g. 250000" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanBApr">APR (annual interest rate %)</label>
+<input id="loanBApr" inputmode="decimal" placeholder="e.g. 11.9" type="text"/>
+</div>
+<div class="form-group">
+<label for="loanBTermYears">Term (years)</label>
+<input id="loanBTermYears" inputmode="numeric" placeholder="e.g. 5" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="loanBUpfrontFee">Upfront fee (once-off)</label>
+<input id="loanBUpfrontFee" inputmode="decimal" placeholder="e.g. 0" type="text"/>
+</div>
+<div class="checkbox-row">
+<input id="loanBFeeFinanced" type="checkbox"/>
+<label for="loanBFeeFinanced">Roll the fee into the loan (finance the fee)</label>
+</div>
+</details>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Compare loans</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Plan your money with practical calculators for budgets, affordability, and everyday decisions.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Estimate payments, compare borrowing options, and understand interest, fees, and payoff timelines.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Model growth over time and compare saving or investing choices with clear, simple outputs.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Loan comparison calculator for monthly payments and total cost</h2>
+<p>When you are choosing between two loan offers, the headline interest rate is not enough. Two loans can look similar on paper and still cost very different amounts over time because of term length and fees. This loan comparison calculator is built for a single decision: picking the cheaper of two fixed-rate, fully amortizing loans by comparing monthly payment, total interest, and total cost including fees.</p>
+<p>To use it, enter the loan amount, APR, and term for Loan A and Loan B. The calculator estimates the monthly payment for each loan using the standard amortization formula. It then totals all monthly payments across the full term and separates what you pay back into principal and interest. If you have an upfront fee, you can add it as an optional input and choose whether that fee is paid upfront or rolled into the loan balance.</p>
+<p>The results are designed to be practical. You get a side-by-side table for both offers and a simple “winner” statement based on total cost. You also see how much higher one monthly payment is versus the other, and how much extra interest you would pay by choosing the more expensive option. If you are trying to stay under a monthly budget cap, the monthly payment line matters. If you are trying to minimize what you pay overall, the total cost line matters more.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator assumes a fixed interest rate for the full term with a standard amortizing repayment (same payment each month).</li>
+<li>APR is treated as nominal annual interest divided into monthly periods (APR ÷ 12), which matches common consumer loan quoting.</li>
+<li>Upfront fees are treated as a once-off cost, either paid upfront or financed into the loan balance based on your selection.</li>
+<li>Optional fees not entered are assumed to be zero, and the calculator still produces a complete comparison.</li>
+<li>Results do not include variable-rate adjustments, insurance add-ons, penalties, taxes, or changes in payment schedule.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Which number should I use to choose between the two loans?</h3>
+<p>If your goal is “cheapest overall,” use total cost (total of payments plus any upfront fee paid separately). If your goal is “lowest monthly commitment,” use the monthly payment. The cheapest loan can still have a higher monthly payment if it has a shorter term, so decide which constraint matters most for you before choosing.</p>
+<h3>What does “rolling the fee into the loan” change?</h3>
+<p>If you roll a fee into the loan, you borrow more money and pay interest on that fee over the term. That usually increases the monthly payment slightly and increases total interest. If you pay the fee upfront instead, your monthly payment is lower and total interest is lower, but you need cash now. This calculator shows the difference by including the fee either in the loan balance (financed) or as an added once-off cost (paid upfront).</p>
+<h3>Can I compare loans with different terms?</h3>
+<p>Yes. Different terms are common in real offers. A longer term usually lowers the monthly payment but increases total interest because you pay interest for more months. This calculator handles different terms and shows both monthly affordability and total cost so you can make a deliberate trade-off instead of guessing.</p>
+<h3>What if the APR is 0% or extremely low?</h3>
+<p>If APR is 0%, the monthly payment becomes the loan balance divided by the number of months. The calculator handles this case without breaking. If the APR is very low, results can look similar between offers, so fees and term length become the deciding factors.</p>
+<h3>When should I not rely on this calculator?</h3>
+<p>Do not rely on it for variable-rate loans, loans with balloon payments, interest-only periods, irregular payment schedules, or products where fees are charged monthly or are conditional. This page is intentionally locked to standard amortizing fixed-rate loans because that is the most common consumer comparison scenario.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

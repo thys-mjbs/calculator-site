@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Late Assignment Penalty Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate how a late submission penalty affects your assignment grade. Enter your score, max points, days late, and penalty rate to see your final result." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/education-exams/late-assignment-penalty-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Late Assignment Penalty Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate how a late submission penalty affects your assignment grade. Enter your score, max points, days late, and penalty rate to see your final result." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/education-exams/late-assignment-penalty-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Late Assignment Penalty Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate how a late submission penalty affects your assignment grade. Enter your score, max points, days late, and penalty rate to see your final result." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Late Assignment Penalty Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/late-assignment-penalty-calculator/",
+      "description": "Calculate the final assignment score after a late submission penalty, based on points, days late, and a per-day penalty rate."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Late Assignment Penalty Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Late Assignment Penalty Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate your final score after late penalties</h2>
+<p class="calculator-intro">Use this when your syllabus deducts a percentage of the assignment’s total points for each day late.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="pointsEarned">Points earned (before late penalty)</label>
+<input id="pointsEarned" inputmode="decimal" placeholder="e.g., 85" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxPoints">Maximum points for the assignment</label>
+<input id="maxPoints" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+<div class="form-group">
+<label for="daysLate">Days late</label>
+<input id="daysLate" inputmode="numeric" placeholder="e.g., 2" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="penaltyRatePerDay">Penalty rate per day (% of max points)</label>
+<input id="penaltyRatePerDay" inputmode="decimal" placeholder="Default: 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="graceDays">Grace days (no penalty applied)</label>
+<input id="graceDays" inputmode="numeric" placeholder="Default: 0" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxPenaltyCap">Maximum total penalty cap (% of max points)</label>
+<input id="maxPenaltyCap" inputmode="decimal" placeholder="Default: 100" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate late penalty</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Plan study time, estimate grades, and prepare for exams with practical tools.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Work out deadlines, time differences, and schedules to stay on track.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle percentages, averages, ratios, and everyday math conversions quickly.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Late assignment penalty calculator for final score and points deducted</h2>
+<p>Late penalties are simple on paper, but they often get confusing in practice because the deduction is usually based on the assignment’s total points, not the points you earned. This calculator is designed for the most common real-world rule used in schools and universities: a percentage of the maximum points is deducted for each day the work is late. If you want to know what your final grade will be before you submit, or you want to check whether a penalty was applied correctly, this page gives you a clean breakdown that matches how many syllabi describe the policy.</p>
+<p>Start with the minimum you actually know: your score before the late penalty (points earned), the assignment’s maximum points, and how many days late you are. The calculator then converts the late rule into an actual points deduction and subtracts it from your score. It also shows your final percentage, which is usually what matters for your course grade. The result is practical: it tells you how much the lateness costs you in points and in percentage terms, so you can make a clear decision about whether submitting late is still worth it, or whether you should prioritise a different assessment.</p>
+<p>The optional Advanced section exists for typical policy details that vary by instructor. Many courses include grace days (for example, “one day free”), a cap on how large the total penalty can become, or a specific per-day percentage. If you do not know these settings, you can still get a useful answer using the defaults. If you do know them, you can refine the estimate without changing what the calculator is for. This calculator is intentionally not for “percentage off the earned score” policies or “fixed points off per day” rules. Those are different formulas and mixing them creates wrong results.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The penalty is calculated as a percentage of the assignment’s maximum points, not a percentage of your earned points.</li>
+<li>Days late are treated as whole days; if you enter a partial day, the calculator rounds up to the next full day (common “any part of a day counts” policy).</li>
+<li>If grace days are used, they reduce the number of charged late days, but they cannot make charged late days negative.</li>
+<li>The total penalty is capped at the maximum penalty cap you set (default is 100% of max points, meaning your score can fall to 0 but not below).</li>
+<li>Your final score cannot go below zero, even if the penalty is larger than your points earned.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the calculator deduct points based on the maximum points, not my earned score?</h3>
+<p>Because that is what most “X% per day late” rules imply in practice. A 10% per day penalty on a 100-point assignment typically means 10 points per day, regardless of whether you earned 95 or 55. If your instructor explicitly says the penalty is taken from your earned score instead, this calculator will not match that policy.</p>
+<h3>What should I enter for the penalty rate per day?</h3>
+<p>Use the exact number stated in your syllabus (for example, 5% per day or 10% per day). If the rule is written in words, translate it into a percentage of the assignment’s total points. If you cannot find a number, use the default as a rough estimate and treat the result as a planning guide, not a guarantee.</p>
+<h3>How does rounding work if I am late by hours, not full days?</h3>
+<p>This calculator rounds partial days up to a full day. That matches common policies where any late submission after the deadline counts as one day late. If your course uses a different system, such as hourly penalties or a strict cutoff time, you should use the actual whole-day count your instructor applies when grading.</p>
+<h3>What if my course has a grace period or “free day” policy?</h3>
+<p>Enter the number of grace days in the Advanced section. The calculator subtracts grace days from the days late to get the charged late days. Example: 2 days late with 1 grace day becomes 1 charged day. If you are late by less than or equal to the grace days, the penalty becomes zero.</p>
+<h3>My final score shows 0. Is that correct?</h3>
+<p>It can be. If the total penalty points are equal to or greater than your points earned, your final score cannot go negative, so the practical result is 0. This often happens when the assignment is several days late under a high per-day penalty. If your instructor uses a different cap, minimum score, or “no submission accepted after X days” rule, the real outcome may differ.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Area Converter | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert area between square meters, square feet, acres, hectares, and more. Get accurate conversions with optional precision control.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/conversions-units-currencies/area-converter/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Area Converter | SnapCalc">
+    <meta property="og:description" content="Convert area between square meters, square feet, acres, hectares, and more. Get accurate conversions with optional precision control.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/conversions-units-currencies/area-converter/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Area Converter | SnapCalc">
+    <meta name="twitter:description" content="Convert area between square meters, square feet, acres, hectares, and more. Get accurate conversions with optional precision control.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Area Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/area-converter/",
+      "description": "Convert area between common metric and imperial units such as square meters, square feet, acres, hectares, and more, with optional precision control."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Area Converter</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Area Converter</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/452Iu5p" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Brick & Block</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Calculate quantities of bricks and blocks for walls and structures.</p>
+                <div class="affiliate-cta">Explore brick and block calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Area Converter</h2>
+
+              <p class="calculator-intro">Convert any area value between common metric and imperial units. Use the optional precision setting if you need more than two decimals.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="areaValue">Area value</label>
+                <input type="text" id="areaValue" inputmode="decimal" placeholder="e.g., 2500">
+              </div>
+
+              <div class="form-group">
+                <label for="fromUnit">From unit</label>
+                <select id="fromUnit">
+                  <option value="m2">Square meters (m²)</option>
+                  <option value="cm2">Square centimeters (cm²)</option>
+                  <option value="mm2">Square millimeters (mm²)</option>
+                  <option value="km2">Square kilometers (km²)</option>
+                  <option value="ft2">Square feet (ft²)</option>
+                  <option value="in2">Square inches (in²)</option>
+                  <option value="yd2">Square yards (yd²)</option>
+                  <option value="acre">Acres (ac)</option>
+                  <option value="hectare">Hectares (ha)</option>
+                  <option value="mi2">Square miles (mi²)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="toUnit">To unit</label>
+                <select id="toUnit">
+                  <option value="ft2">Square feet (ft²)</option>
+                  <option value="m2">Square meters (m²)</option>
+                  <option value="cm2">Square centimeters (cm²)</option>
+                  <option value="mm2">Square millimeters (mm²)</option>
+                  <option value="km2">Square kilometers (km²)</option>
+                  <option value="in2">Square inches (in²)</option>
+                  <option value="yd2">Square yards (yd²)</option>
+                  <option value="acre">Acres (ac)</option>
+                  <option value="hectare">Hectares (ha)</option>
+                  <option value="mi2">Square miles (mi²)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="decimals">Optional precision (decimals)</label>
+                <input type="text" id="decimals" inputmode="numeric" placeholder="Default: 2">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Convert Area</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert common units quickly, including length, area, volume, and more.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math & General Calculators</h3>
+              <p class="related-desc">Handle everyday math like percentages, ratios, rounding, and unit-style calculations.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction & Materials</h3>
+              <p class="related-desc">Estimate quantities, sizes, and material needs for projects and site work.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48R9OER" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Cement Usage</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Estimate cement requirements for construction projects.</p>
+                <div class="affiliate-cta">View cement usage calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Convert area units like m² to ft², acres to hectares, and more</h2>
+
+              <p>An area converter helps you switch between different ways of measuring surface size. People usually need this when comparing property listings, planning flooring or paint coverage, reading building drawings, estimating land size, or translating measurements from a product spec into the units they actually use. If you are staring at square meters on a plan but your supplier quotes in square feet, or you have land in acres but need hectares for a form, this calculator gives you the conversion without manual math.</p>
+
+              <p>To use the calculator, enter the area value, choose the unit you are converting from, and choose the unit you want to convert to. The result shows the converted value in your target unit. If you want a quick, clean answer, leave the optional precision field blank and the calculator will show results to two decimals. If you need more detail for small areas (like square inches) or very large areas (like square miles), you can set a higher number of decimals so rounding does not hide meaningful differences.</p>
+
+              <p>The conversion works by translating your input into a neutral base unit (square meters), then converting from square meters into your chosen target unit. This approach avoids chaining conversions (which can compound rounding errors) and keeps results consistent no matter which pair of units you choose. As a practical extra, the result section also includes a few common reference conversions (square meters, square feet, and acres) so you can sanity-check the scale at a glance.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The conversion is purely mathematical and assumes standard definitions for each unit (no regional variants).</li>
+                <li>If you leave “Optional precision (decimals)” blank, the calculator defaults to 2 decimals for readability.</li>
+                <li>Very large or very small values can look “rounded” if you use low precision, so increase decimals when needed.</li>
+                <li>This tool converts area only, not linear dimensions. If you have length and width, calculate area first.</li>
+                <li>For land measurements, note that “acre” and “hectare” are fixed units and do not change by country.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the difference between m² and ft²?</h3>
+              <p>Square meters (m²) are a metric area unit commonly used worldwide. Square feet (ft²) are an imperial area unit used heavily in the United States and in some industries. The units measure the same kind of thing (area), just in different scales.</p>
+
+              <h3>Why do my conversions look slightly different from another website?</h3>
+              <p>Most differences come from rounding. If another site rounds earlier or displays fewer decimals, you can see a small mismatch. Increase the optional precision setting here to compare like-for-like. If two tools still disagree at higher precision, one of them may be using an incorrect conversion factor.</p>
+
+              <h3>How many decimals should I use?</h3>
+              <p>For everyday tasks like room size, flooring, or basic property comparisons, 2 decimals is usually fine. For small parts (converting between in² and cm²) or for technical work, use 3–6 decimals. For extremely large areas (km² or mi²), more decimals can help when comparing close values.</p>
+
+              <h3>Can I convert acres to hectares reliably for official forms?</h3>
+              <p>Yes. Acres and hectares are fixed definitions, so the conversion is consistent. The only common issue is rounding. If the form expects a certain level of precision, set the decimals field to match that requirement.</p>
+
+              <h3>When does this calculator not apply?</h3>
+              <p>This tool is for converting a known area value between units. It does not calculate area from dimensions, and it does not account for irregular shapes, slopes, or measurement uncertainty. If your input is an estimate, your output will be an estimate too, just expressed in a different unit.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4oX8zKh" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Productivity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Improve construction productivity with planning and tracking tools.</p>
+                <div class="affiliate-cta">Browse construction productivity tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

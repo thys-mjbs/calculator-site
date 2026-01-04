@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Brick Quantity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how many bricks you need for a wall based on wall size, brick size, mortar joint thickness, openings, and waste percentage." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/brick-quantity-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Brick Quantity Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how many bricks you need for a wall based on wall size, brick size, mortar joint thickness, openings, and waste percentage." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/brick-quantity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Brick Quantity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how many bricks you need for a wall based on wall size, brick size, mortar joint thickness, openings, and waste percentage." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Brick Quantity Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/brick-quantity-calculator/",
+      "description": "Estimate how many bricks you need for a wall based on wall size, brick size, mortar joint thickness, openings, and waste percentage."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Brick Quantity Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Brick Quantity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate bricks needed for your wall</h2>
+<p class="calculator-intro">Enter your wall size, brick size, mortar joint thickness, and any openings. You will get total bricks (including waste), plus useful breakdowns.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="wallLengthM">Wall length (m)</label>
+<input id="wallLengthM" inputmode="decimal" placeholder="e.g., 4.2" type="text"/>
+</div>
+<div class="form-group">
+<label for="wallHeightM">Wall height (m)</label>
+<input id="wallHeightM" inputmode="decimal" placeholder="e.g., 2.4" type="text"/>
+</div>
+<div class="form-group">
+<label for="openingAreaM2">Total openings area (m², optional)</label>
+<input id="openingAreaM2" inputmode="decimal" placeholder="e.g., 1.6" type="text"/>
+</div>
+<div class="form-group">
+<label for="brickLengthMM">Brick length (mm)</label>
+<input id="brickLengthMM" inputmode="decimal" placeholder="e.g., 215" type="text"/>
+</div>
+<div class="form-group">
+<label for="brickHeightMM">Brick height (mm)</label>
+<input id="brickHeightMM" inputmode="decimal" placeholder="e.g., 65" type="text"/>
+</div>
+<div class="form-group">
+<label for="mortarJointMM">Mortar joint thickness (mm)</label>
+<input id="mortarJointMM" inputmode="decimal" placeholder="Default: 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="wastePercent">Waste allowance (%)</label>
+<input id="wastePercent" inputmode="decimal" placeholder="Default: 5" type="text"/>
+</div>
+<div class="form-group">
+<label for="bricksPerPack">Bricks per pack or pallet (optional)</label>
+<input id="bricksPerPack" inputmode="decimal" placeholder="Default: 500" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate bricks</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, mix ratios, and material needs for common building jobs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve practical engineering calculations for electrical, mechanical, and site work.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units and measurements quickly, including length, area, volume, and more.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Brick quantity calculator for walls, openings, and waste</h2>
+<p>This brick quantity calculator helps you estimate how many bricks you need to build a wall. It is designed for normal, real-world planning where you might know the wall length and height, but you may not have perfect information about brick sizes, mortar joints, and how much waste to allow. The output gives a practical total brick count you can use for ordering, plus a breakdown that helps you sense-check the result.</p>
+<p>To use it, enter your wall length and wall height in metres. If your wall has windows, doors, or other openings, add the total opening area in square metres. Then enter the brick length and brick height in millimetres. The calculator also includes mortar joint thickness, because bricks are laid with mortar between courses and between bricks, which changes how many bricks fit into a square metre. If you do not know your joint thickness, a typical default of 10 mm is used. Finally, add a waste allowance percentage to cover cuts, breakages, chipping, and site losses.</p>
+<p>The main result is the total bricks required including waste, rounded up to a whole brick. You also get the brick count without waste, the extra bricks added for waste, and the estimated bricks per square metre for your chosen brick and mortar setup. If you enter bricks per pack or pallet, the calculator also estimates how many packs you should order, rounded up. This is useful when suppliers sell in fixed quantities and you want an ordering number that matches how materials are actually delivered.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The wall is treated as a flat rectangle: wall area = length × height, minus any opening area you provide.</li>
+<li>Brick coverage is estimated using a simple grid based on brick length and height plus one mortar joint in each direction.</li>
+<li>Mortar joint thickness is assumed consistent across the wall; if you are doing thicker beds or uneven joints, results can vary.</li>
+<li>Waste percentage covers breakage and cutting; complex corners, patterns, or lots of cutting usually need a higher waste allowance.</li>
+<li>This calculator estimates brick counts only; it does not estimate mortar, sand, cement, lintels, reinforcement, or wall ties.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does mortar joint thickness change the number of bricks?</h3>
+<p>Because each brick takes up more space once you include mortar. A brick is not laid edge-to-edge with another brick. The mortar joint adds extra width and height to the repeating pattern, which reduces how many bricks fit into one square metre. Even a small change in joint thickness can noticeably shift bricks per square metre across a whole wall.</p>
+<h3>What should I use for waste percentage?</h3>
+<p>For a simple straight wall with minimal cutting, 5% is a common starting point. If you have many openings, lots of cutting, or you are using bricks that chip easily, consider 7% to 12%. If you are matching face bricks where appearance matters, you may also want a higher allowance to reject imperfect bricks.</p>
+<h3>What if I do not know the exact brick size?</h3>
+<p>Use the size printed on the product spec, or measure one brick with a tape measure. If you are unsure, estimate using the closest common size and treat the result as a planning figure. For an order you cannot easily adjust later, measure a sample brick and confirm the typical mortar joint you expect to use.</p>
+<h3>How do I handle doors and windows?</h3>
+<p>Add up the area of each opening in square metres and enter the total in the openings field. For example, a 0.9 m by 2.1 m door is 1.89 m². If you have multiple openings, sum them. If you are unsure, it is better to slightly understate openings than to forget them entirely.</p>
+<h3>Why does the calculator round up?</h3>
+<p>Bricks are ordered and used as whole units. Rounding up also prevents under-ordering due to small measurement errors or variations in mortar joints. If the result is close to a pack or pallet boundary, it is usually safer to order the next full pack, especially if replacement stock may differ in colour or batch later.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Metrics & Nutrition Planning Summary | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Health Metrics & Nutrition Planning</h1>
+        </div>
+
+        <section class="seo-section">
+          <h2>The Baselines That Keep Fitness Decisions Honest</h2>
+          <p>
+            Nutrition and fitness plans usually fail for one of two reasons: the wrong metric is treated as the goal, or the right metric is built on assumptions that were never made explicit. Body size measures like BMI and “ideal weight” can offer quick context, but they become misleading when they are read as proxies for health, physique, or performance rather than broad reference points. Body fat estimates help separate composition change from scale noise, yet accuracy is less important than consistent measurement and trend interpretation across weeks. Energy planning starts with a baseline: BMR describes minimum physiological demand, while maintenance calories translate that baseline into real daily living; mixing the two produces targets that feel precise but behave unpredictably. From that foundation, deficit and surplus targets become controlled levers rather than motivational slogans, clarifying the trade-offs between pace, adherence, training output, and recovery. Protein targets and macro splits then operationalise the plan by turning an abstract calorie number into food structure that is repeatable under real constraints, reducing drift that typically hides behind “eating healthy.” Hydration is the supporting variable that is often either ignored or overcorrected; practical ranges beat rigid rules, especially when training volume, climate, and diet change. If you want the expanded reference version that shows how these measures connect and how to use them without mistaking estimates for certainty, use the SnapCalc hub page:
+            <a href="/hubpages/calculators/health-fitness/health-metrics-and-nutrition-planning.html">Health Metrics and Nutrition Planning</a>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

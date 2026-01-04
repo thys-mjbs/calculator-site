@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Typing Speed (WPM) Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your typing speed in words per minute (WPM) from a typing test using time, words or characters, and optional accuracy." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/education-exams/typing-speed-wpm-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Typing Speed (WPM) Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your typing speed in words per minute (WPM) from a typing test using time, words or characters, and optional accuracy." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/education-exams/typing-speed-wpm-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Typing Speed (WPM) Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your typing speed in words per minute (WPM) from a typing test using time, words or characters, and optional accuracy." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Typing Speed (WPM) Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/typing-speed-wpm-calculator/",
+      "description": "Calculate typing speed in words per minute (WPM) from a typing test using duration, word or character count, and optional accuracy."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Typing Speed (WPM) Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Typing Speed (WPM) Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Typing speed from a test result</h2>
+<p class="calculator-intro">
+                Enter your test duration and either the words you typed or the characters you typed. Add accuracy if your test reports it.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="minutes">Time (minutes)</label>
+<input id="minutes" inputmode="numeric" placeholder="e.g., 1" type="text"/>
+<div class="input-hint">Use minutes and seconds together. If your test says 60 seconds, enter 0 minutes and 60 seconds.</div>
+</div>
+<div class="form-group">
+<label for="seconds">Time (seconds)</label>
+<input id="seconds" inputmode="numeric" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="wordsTyped">Words typed (optional if you enter characters)</label>
+<input id="wordsTyped" inputmode="numeric" placeholder="e.g., 52" type="text"/>
+</div>
+<div class="form-group">
+<label for="charactersTyped">Characters typed (optional if you enter words)</label>
+<input id="charactersTyped" inputmode="numeric" placeholder="e.g., 260" type="text"/>
+<div class="input-hint">If you enter characters, this calculator converts to words using 5 characters = 1 word (standard WPM rule).</div>
+</div>
+<div class="form-group">
+<label for="accuracyPercent">Accuracy (optional, %)</label>
+<input id="accuracyPercent" inputmode="decimal" placeholder="e.g., 95" type="text"/>
+<div class="input-hint">Leave blank if you do not know it. Default is 100%.</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate typing speed</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Prep smarter with study, revision, and exam calculators that turn effort into measurable progress.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan sessions, estimate durations, and convert time units for everyday scheduling decisions.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle percentages, ratios, averages, and quick calculations that support school and daily life.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate typing speed (WPM) from a typing test time and word count</h2>
+<p>Most typing tests give you a time and a result like words typed, characters typed, and sometimes an accuracy percentage. This Typing Speed (WPM) Calculator turns those test outputs into clear speed numbers you can compare across different tests. The main result is words per minute (WPM), which is the standard unit used for school, work screening, and personal benchmarks.</p>
+<p>The dominant use case for this page is simple: you finished a typing test and want to calculate your speed from the raw counts and the exact time. This is not a training plan, and it does not try to rate your typing style or recommend practice routines. It is strictly a calculator that converts your test measurements into consistent speed metrics so you can track progress or report a number confidently.</p>
+<p>To use it, enter the duration of your typing test using minutes and seconds. Then enter either the number of words you typed or the number of characters you typed. If your test reports accuracy, enter it as a percentage. If you do not know accuracy, leave it blank and the calculator assumes 100% so you still get a usable result. The output shows a gross WPM (based on what you typed regardless of mistakes) and a net WPM (adjusted by accuracy). It also shows characters per minute (CPM), which some tests use instead of WPM.</p>
+<p>Gross WPM is the speed you produced based on input volume and time. Net WPM is the practical speed after accounting for errors. If you are comparing results across different platforms, net WPM is usually the fairer number because it reduces inflated scores from sloppy typing. If you are comparing your own performance day to day on the same test type, gross WPM can still be useful because it isolates raw speed from accuracy variance.</p>
+<p>If you enter characters, the calculator converts characters to words using the most common practical standard: 5 characters equals 1 word. This matches the convention used by many typing tests and employers, and it avoids distortions from long or short words in a specific passage. If you enter words instead, it uses your word count directly. If you enter both words and characters, the calculator will compute both versions and show a small consistency note so you can spot a mismatch caused by how the test defined “word” or counted spaces.</p>
+<p>The output includes a secondary insight that matters in real use: an estimated words per hour number. This helps you translate a WPM score into a practical throughput sense for longer tasks, like completing an exam section, transcribing notes, or drafting a timed written response. It is not a promise of real-world productivity, but it is a clean conversion that helps with planning.</p>
+<p>What this calculator intentionally does not do: it does not estimate your speed from a short sample without time, it does not predict your future improvement, and it does not convert between languages or keyboard layouts. Typing speed is highly sensitive to test design, device, and error penalties. This tool only does the math on the numbers you provide.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Time must be the actual duration you typed, not the total test window if you paused or stopped early.</li>
+<li>If you enter characters, WPM is calculated using 5 characters per word, which is the common standard for typing metrics.</li>
+<li>Accuracy is treated as a simple percentage multiplier on gross WPM to estimate net WPM (for example, 95% accuracy means net WPM is 95% of gross).</li>
+<li>If accuracy is unknown and left blank, the calculator assumes 100% so you still get gross WPM and CPM results.</li>
+<li>This calculator reports speed metrics only and does not account for test-specific penalties like backspace rules, corrected errors, or “true” WPM variants.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between gross WPM and net WPM?</h3>
+<p>Gross WPM measures how much you typed per minute without considering mistakes. Net WPM adjusts for accuracy so the number better reflects usable typing. If your platform reports accuracy, net WPM is the more comparable metric across different test sites.</p>
+<h3>Should I enter words typed or characters typed?</h3>
+<p>Use whichever number your test reports. If it reports characters, the calculator converts to WPM using the standard 5-characters-per-word convention. If it reports words, enter words directly. If you have both, entering both can help you see whether your test counted spaces or used a different word definition.</p>
+<h3>My test was 30 seconds. Can I still calculate WPM?</h3>
+<p>Yes. Enter 0 minutes and 30 seconds, then enter your words or characters. The calculator converts your volume to a per-minute rate. Short tests can be noisier, so use the result as a quick benchmark rather than a precise measurement.</p>
+<h3>What if I do not know my accuracy?</h3>
+<p>Leave the accuracy field blank. The calculator will assume 100% and show gross WPM and CPM. If you later learn your accuracy, enter it to get a more realistic net WPM. If your test heavily penalizes errors, use the platform’s own net score as the primary reference.</p>
+<h3>Why do different typing sites give different WPM for the same performance?</h3>
+<p>Typing tests vary in how they count words, whether they include spaces, how they treat corrected mistakes, and how they compute accuracy. Device and keyboard layout also matter. This calculator standardizes the math from your reported counts and time, but it cannot normalize the test rules themselves.</p>
+<div class="last-updated">Last updated: 2025-12-23</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

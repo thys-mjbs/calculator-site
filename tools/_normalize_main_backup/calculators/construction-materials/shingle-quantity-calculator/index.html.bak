@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Shingle Quantity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how many asphalt shingle bundles you need based on your roof area, waste allowance, and bundle coverage. Includes squares and a round-up purchase recommendation." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/shingle-quantity-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Shingle Quantity Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how many asphalt shingle bundles you need based on your roof area, waste allowance, and bundle coverage. Includes squares and a round-up purchase recommendation." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/shingle-quantity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Shingle Quantity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how many asphalt shingle bundles you need based on your roof area, waste allowance, and bundle coverage. Includes squares and a round-up purchase recommendation." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Shingle Quantity Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/shingle-quantity-calculator/",
+      "description": "Estimate asphalt shingle bundles needed from roof area, waste allowance, and bundle coverage, including squares and a round-up purchase recommendation."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Shingle Quantity Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Shingle Quantity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate how many shingle bundles to buy</h2>
+<p class="calculator-intro">Enter your roof area, choose your units, and add a waste allowance. You will get bundles to purchase (rounded up), plus roof squares for quick supplier conversations.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="areaUnit">Area unit</label>
+<select aria-label="Area unit" id="areaUnit">
+<option value="m2">Square meters (m²)</option>
+<option value="ft2">Square feet (ft²)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="roofArea">Roof area</label>
+<input aria-label="Roof area" id="roofArea" inputmode="decimal" placeholder="e.g. 120" type="text"/>
+</div>
+<div class="form-group">
+<label for="wastePercent">Waste allowance (percent)</label>
+<input aria-label="Waste allowance percent" id="wastePercent" inputmode="decimal" placeholder="e.g. 10" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced options (optional)</summary>
+<div class="form-group">
+<label for="bundleCoverage">Coverage per bundle (same unit as selected above)</label>
+<input aria-label="Coverage per bundle" id="bundleCoverage" inputmode="decimal" placeholder="Auto-filled based on unit" type="text"/>
+</div>
+<div class="form-group">
+<label for="shinglesPerBundle">Shingles per bundle (optional)</label>
+<input aria-label="Shingles per bundle" id="shinglesPerBundle" inputmode="numeric" placeholder="Leave blank if unknown" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate shingles needed</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities for building materials, coverage rates, and project waste so you can buy the right amount.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/real-estate-property/">
+<h3 class="related-title">Real Estate &amp; Property</h3>
+<p class="related-desc">Run property-related numbers like repair costs, renovation planning, and ownership affordability checks.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for common tasks, comparisons, and everyday planning when you need a fast, practical answer.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Shingle bundle calculator for roof area, waste, and roof squares</h2>
+<p>This shingle quantity calculator is for one job: estimating how many asphalt shingle bundles you should buy when you already have an estimated roof area. The common failure mode is ordering “about enough” and then losing a half day because you are short one or two bundles. The second common failure mode is overbuying heavily because you did not account for how shingles are sold and rounded. This tool gives you a clean purchase number you can take to a supplier.</p>
+<p>Start by choosing your area unit and entering your roof area. If you only have a rough area estimate, that is still fine. Add a waste allowance to cover cuts, starter strips, ridge caps, pattern alignment, and the reality that you buy whole bundles. The calculator then computes an effective roof area (roof area plus waste), converts that to roof squares for reference, and estimates bundles needed. Finally, it rounds up to a whole-bundle purchase recommendation because you cannot buy fractions of a bundle in most cases.</p>
+<p>The default logic uses typical asphalt-shingle packaging conventions, where “one square” is 100 square feet of coverage and many common shingles are packaged as three bundles per square. If your product has different coverage per bundle, you can override it in the Advanced options and the calculator will use your coverage value instead. If you know how many shingles are in a bundle, you can also get an estimated shingle count, which helps when comparing product lines or checking whether your delivery matches what you paid for.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator is for asphalt shingles sold in bundles. It is not for tiles, metal sheets, slate, or thatch.</li>
+<li>Roof area is assumed to be the surface area to be covered (not the building footprint). If you only have footprint area, your result will be low.</li>
+<li>Waste allowance covers cutting and practical job losses. If you do not know what to use, 10% is a reasonable default for simple roofs.</li>
+<li>Roof squares are calculated using 1 square = 100 ft² (about 9.29 m²). This is a reference unit used by many suppliers and installers.</li>
+<li>If you override “coverage per bundle,” the calculator assumes your value already reflects real coverage after overlaps and exposure, as specified by the manufacturer.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is a “roof square” and why does it matter?</h3>
+<p>A roof square is a coverage unit equal to 100 square feet. Many shingle products and roofing quotes are discussed in squares because it makes quantities easier to communicate. Even if you work in square meters, the square number is useful when a supplier or contractor asks for it.</p>
+<h3>What roof area should I enter if I only know the house size?</h3>
+<p>Do not enter floor area or footprint area unless you have no alternative. A pitched roof has more surface area than the footprint, sometimes significantly more. If you only have a footprint, the result will understate bundles needed. The safest approach is to use measured roof surface area from plans, a roof measurement report, or a quick takeoff from each roof plane.</p>
+<h3>How much waste should I use?</h3>
+<p>For simple gable roofs with few penetrations, 7% to 10% is common. For hips, valleys, dormers, lots of cut work, or complex layouts, 12% to 15% is more realistic. If you are matching existing shingles or working around many obstacles, you may want a higher allowance. This calculator treats waste as an allowance on area before rounding up to whole bundles.</p>
+<h3>Why does the calculator round up to whole bundles?</h3>
+<p>Because you generally buy bundles as complete units. The “raw bundles” number shows the math result, but the “bundles to buy” is the practical number that prevents shortages. The round-up is not optional if you want a purchase quantity you can actually order.</p>
+<h3>My shingles are not 3 bundles per square. What should I do?</h3>
+<p>Use the Advanced option for “coverage per bundle” and enter the coverage stated by your manufacturer or supplier. The calculator will base bundles on that value. The roof squares output remains a separate reference based on standard squares, which helps with comparisons and discussions even when packaging differs.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

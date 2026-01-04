@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Uber/Taxi Tip Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate an Uber or taxi tip from the fare, see the total, and optionally split the cost or round the total for a cleaner payment." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/travel-transport/uber-taxi-tip-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Uber/Taxi Tip Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate an Uber or taxi tip from the fare, see the total, and optionally split the cost or round the total for a cleaner payment." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/travel-transport/uber-taxi-tip-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Uber/Taxi Tip Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate an Uber or taxi tip from the fare, see the total, and optionally split the cost or round the total for a cleaner payment." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Uber/Taxi Tip Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/travel-transport/uber-taxi-tip-calculator/",
+      "description": "Calculate an Uber or taxi tip from the fare, see the total cost, and optionally split the amount or round the total for simpler payment."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
+        <span>Uber/Taxi Tip Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Uber/Taxi Tip Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate your tip and total ride cost</h2>
+<p class="calculator-intro">Enter your ride fare, choose a tip percentage, and get the tip amount and total. Use Advanced options to split the cost or round the total.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="fareAmount">Ride fare (before tip)</label>
+<input id="fareAmount" inputmode="decimal" placeholder="e.g. 185.50" type="text"/>
+</div>
+<div class="form-group">
+<label for="tipPercent">Tip percentage</label>
+<input id="tipPercent" inputmode="decimal" placeholder="e.g. 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="ridersCount">Advanced: Number of riders (optional)</label>
+<input id="ridersCount" inputmode="numeric" placeholder="e.g. 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="roundTo">Advanced: Round total to nearest amount (optional)</label>
+<input id="roundTo" inputmode="decimal" placeholder="e.g. 5" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate Tip</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Estimate travel costs, compare transport options, and plan budgets for trips and commutes.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Make quick money decisions with budgeting, affordability, and everyday cost calculators.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Use simple tools for day to day numbers like splitting costs, tips, and quick estimates.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Uber and taxi tip calculator for fast, practical totals</h2>
+<p>Tipping is usually a quick decision made at the end of a ride, often while you are tired, in a hurry, or juggling bags and messages. The dominant intent for this page is simple: you already know the ride fare and you want to decide a tip amount that feels reasonable, then you want to see the total you will pay. This calculator is locked to that use case only. It is not meant to estimate the ride fare, compare ride share providers, calculate surge pricing, or manage long distance trip budgets. It just turns a fare into a tip and a final total you can act on immediately.</p>
+<p>Start by entering the ride fare before tip. Then enter your tip percentage. If you leave the tip percentage blank, the calculator uses a default percentage so you still get an answer fast. The result shows the tip amount and the total including tip. This is useful when you want to avoid mental math, especially when the fare is not a round number or when you want to stay consistent across rides. If you are paying with cash, the optional rounding feature helps you choose a total that is easier to pay. For example, if your fare plus tip comes to 193.40 and you want a clean number, rounding the total to the nearest 5 or 10 gives you a simple final amount, and the calculator adjusts the tip accordingly so the fare is still covered.</p>
+<p>If you are riding with friends, the optional split feature turns the same result into a per person view. This does not change the tipping logic. It only divides the tip and the total across the number of riders so each person can pay a fair share. The calculator keeps the outputs small and decision focused: tip amount, total amount, and per person totals when splitting is used. If you need higher accuracy, you can refine by entering a specific tip percentage and choosing a rounding step that matches your payment habits. If you do not know exact values, you can still use reasonable estimates and the calculator will make the assumptions explicit below.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The ride fare you enter is the amount before tip. Any in app service fees or adjustments are assumed to be included in that fare if they affect what you pay.</li>
+<li>If you leave the tip percentage blank, a default tip percentage is used so you still get a usable result.</li>
+<li>Rounding is applied to the total (fare plus tip), not to the fare alone. The calculator increases the tip as needed to reach the rounded total.</li>
+<li>Splitting divides the tip and the total evenly across riders. It does not handle complex splits where one person pays more.</li>
+<li>This tool does not judge what is socially appropriate in your location. It only performs the math so you can decide quickly.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What tip percentage should I use for Uber or taxis?</h3>
+<p>This calculator does not decide the percentage for you. It assumes you already have a number in mind or you want a default for speed. If you want consistency, pick a percentage you are comfortable with and reuse it. If you want to adjust for service quality, change the percentage before calculating.</p>
+<h3>Can I tip a fixed amount instead of a percentage?</h3>
+<p>This page is locked to percentage based tipping. If you prefer a fixed amount, you can approximate by entering a percentage that produces a similar tip for the current fare, or you can use the rounding option to reach a total that implies the fixed tip you want.</p>
+<h3>What does the rounding option actually do?</h3>
+<p>Rounding changes the total you pay to the next multiple of your chosen rounding step. If you enter 10, the calculator rounds up the total to the next multiple of 10 and increases the tip to match. This is mainly for cash payments or when you want a cleaner final charge.</p>
+<h3>What if I do not know the exact fare yet?</h3>
+<p>Use an estimate. The calculator will still give you a reasonable tip and total based on what you enter. For better accuracy, update the fare when the trip ends and calculate again. The intent is quick decision support, not perfect prediction.</p>
+<h3>Why does my tip change when I round the total?</h3>
+<p>Because the fare is treated as fixed. When you choose to round the total up, the only part that can change is the tip. The calculator adjusts the tip so the total matches the rounded value while still covering the fare.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

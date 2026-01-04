@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percentages, Ratios, and Fractions Foundations | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Percentages, Ratios, and Fractions Foundations</h1>
+        </div>
+
+        <section class="seo-section">
+          <p>
+            Everyday decisions often collapse into the same few math moves: compare one value to another,
+            express a part as a share, scale a relationship without breaking it, or convert a number into a
+            form that matches how people talk about it. Percentages, ratios, and fractions sit underneath
+            discounts, performance changes, recipe scaling, budgeting splits, test scores, and measurement work.
+          </p>
+          <p>
+            Confusion usually comes from mixing definitions. People treat percentage points and percent change
+            as the same thing, read ratios as subtraction instead of relationships, or bounce between fractions,
+            decimals, and percents without noticing the rounding they introduced. The tools below focus on the
+            practical thinking: clarifying what question is being asked, then producing a result that can be
+            used without mental gymnastics.
+          </p>
+
+          <h2>Percentage Calculator</h2>
+          <p>
+            Percentage work breaks into three common decision types: finding a part of a whole, identifying what
+            share one number represents of another, and measuring change between a “before” and an “after.”
+            Missteps happen when the wrong frame is used, such as asking “what percent is this?” when the real
+            question is “how much did it change?” or dividing by the new value instead of the original.
+            <a href="https://snapcalc.site/calculators/math-general-calculators/percentage-calculator/">Percentage Calculator</a>
+            is used as a quick truth check for discounts, score conversions, progress tracking, and any comparison
+            where a clean percentage is easier to reason about than raw numbers.
+          </p>
+
+          <h2>Percentage Increase Calculator</h2>
+          <p>
+            Increase calculations support pricing decisions, performance reporting, and target setting, but the
+            usual trap is confusing absolute change with relative change. Moving from 50 to 60 is an increase of
+            10 units, but the percent increase depends on the original baseline, not the new total. Another common
+            error is treating “increase by 10%” as “add 10” because the original context is forgotten.
+            <a href="https://snapcalc.site/calculators/math-general-calculators/percentage-increase-calculator/">Percentage Increase Calculator</a>
+            is practical when comparing periods, checking growth claims, and translating a raw jump into a baseline-relative
+            increase that can be compared across different starting points.
+          </p>
+
+          <h2>Percentage Decrease Calculator</h2>
+          <p>
+            Decrease calculations show up in markdowns, cost cuts, error rate reduction, and “before vs after” outcomes.
+            People get misled by assuming that a 20% decrease followed by a 20% increase returns to the original, when it
+            does not. Another frequent mistake is dividing by the final value instead of the original, which flips the logic.
+            <a href="https://snapcalc.site/calculators/math-general-calculators/percentage-decrease-calculator/">Percentage Decrease Calculator</a>
+            helps translate a drop into a comparable reduction rate, which matters when assessing savings, shrinkage, or declines
+            across items with very different starting levels.
+          </p>
+
+          <h2>Percentage Change Calculator</h2>
+          <p>
+            Percent change is the clean way to express “how different is this now?” and it supports decisions where trend direction
+            matters more than magnitude, such as month-to-month performance, price moves, and KPI reporting. Confusion usually comes
+            from sign handling and from selecting the wrong reference point, especially when values cross zero or move from negative
+            to positive. <a href="https://snapcalc.site/calculators/math-general-calculators/percentage-change-calculator/">Percentage Change Calculator</a>
+            is used to standardise comparisons so different categories can be evaluated on the same relative scale instead of arguing
+            about raw unit differences.
+          </p>
+
+          <h2>Ratio Calculator</h2>
+          <p>
+            Ratios support allocation and mixing decisions: splitting budgets, blending ingredients, setting parts-based targets, or
+            converting “A:B” into real quantities. The most common misunderstanding is treating a ratio like a difference rather than
+            a relationship, or simplifying incorrectly by dividing only one side. Scaling is where errors compound, especially when the
+            known value applies to the total rather than one side. <a href="https://snapcalc.site/calculators/math-general-calculators/ratio-calculator/">Ratio Calculator</a>
+            is practical for reducing ratios to a readable form and for converting parts into actual numbers when one component or the
+            total is known.
+          </p>
+
+          <h2>Proportion Calculator</h2>
+          <p>
+            Proportion thinking answers “if these are equivalent relationships, what must the missing value be?” and it underpins
+            scaling, rate conversions, and unit-based planning. Errors typically come from swapping corresponding terms, mixing units
+            between sides, or setting up the relationship as additive instead of multiplicative. When the structure is correct, the
+            arithmetic is straightforward, but the setup is everything. <a href="https://snapcalc.site/calculators/math-general-calculators/proportion-calculator/">Proportion Calculator</a>
+            is used for recipe scaling, map and drawing scales, dosage and mixture relationships, and any context where “same ratio, different size”
+            needs a fast, reliable missing-value solve.
+          </p>
+
+          <h2>Fraction to Decimal Calculator</h2>
+          <p>
+            Converting fractions to decimals supports decisions that need direct comparability, especially in spreadsheets, measurements,
+            and percentage-based reasoning. Confusion comes from rounding: some fractions terminate cleanly, while others repeat, and a rounded
+            decimal can quietly change totals when multiplied or summed repeatedly. Another common slip is treating the decimal as “more accurate”
+            when the exact form was the fraction. <a href="https://snapcalc.site/calculators/math-general-calculators/fraction-to-decimal-calculator/">Fraction to Decimal Calculator</a>
+            is practical when a device, sheet, or system expects decimals and the goal is a usable approximation with the right magnitude.
+          </p>
+
+          <h2>Decimal to Fraction Calculator</h2>
+          <p>
+            Decimal-to-fraction conversion is useful when an approximate measurement needs an exact rational form, or when a decimal represents a
+            known fraction disguised by rounding or display settings. Misunderstandings usually involve repeating decimals and the assumption that every
+            decimal has a “nice” fraction, which is only true when the decimal is terminating or a recognised repeating pattern. Precision settings also
+            matter: 0.33 is not the same as 0.333… in fraction form. <a href="https://snapcalc.site/calculators/math-general-calculators/decimal-to-fraction-calculator/">Decimal to Fraction Calculator</a>
+            is used to express values cleanly for measurement, communication, and exact calculations where fractions are preferred.
+          </p>
+
+          <h2>Fraction Simplifier</h2>
+          <p>
+            Simplifying fractions supports clarity and reduces downstream error, especially when comparing fractions, combining them, or presenting results
+            in a standard form. People often simplify by “canceling” digits incorrectly (for example, removing a common digit rather than a common factor),
+            or they stop early without reaching lowest terms. The real anchor concept is greatest common divisor: divide numerator and denominator by the same
+            factor until none remains. <a href="https://snapcalc.site/calculators/math-general-calculators/fraction-simplifier/">Fraction Simplifier</a>
+            is practical for homework checking, recipe adjustments, measurement work, and any step where cleaner numbers make the next decision easier.
+          </p>
+
+          <h2>Greatest Common Divisor Calculator</h2>
+          <p>
+            GCD shows up whenever “shared structure” matters: simplifying fractions, reducing ratios, finding repeating cycle lengths, or splitting items into
+            equal groups with no remainder. Confusion usually comes from mixing up GCD with LCM, or assuming that prime factors need to be listed manually.
+            In practice, GCD is a tool for reducing complexity and proving that two numbers can be scaled down without changing the relationship. <a href="https://snapcalc.site/calculators/math-general-calculators/greatest-common-divisor-calculator/">Greatest Common Divisor Calculator</a>
+            is used as the backbone step for fraction reduction and ratio simplification, and as a fast check when “even splitting” is required.
+          </p>
+
+          <p>
+            Taken together, these tools cover a high-leverage cluster of everyday math: define the relationship, choose the correct baseline, keep units consistent,
+            and only round when the decision can tolerate it. When results feel surprising, the issue is usually the question setup, not the arithmetic.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

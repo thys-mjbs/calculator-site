@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>HELOC Payment Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your monthly HELOC payment using your current balance and interest rate. Includes interest-only payment and an optional repayment (principal + interest) estimate.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/loans-credit/heloc-payment-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="HELOC Payment Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your monthly HELOC payment using your current balance and interest rate. Includes interest-only payment and an optional repayment (principal + interest) estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/loans-credit/heloc-payment-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HELOC Payment Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your monthly HELOC payment using your current balance and interest rate. Includes interest-only payment and an optional repayment (principal + interest) estimate.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HELOC Payment Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/loans-credit/heloc-payment-calculator/",
+      "description": "Estimate a monthly HELOC payment from your current balance and interest rate, showing interest-only and optional principal-and-interest repayment estimates."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+        <span>HELOC Payment Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>HELOC Payment Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate your monthly HELOC payment</h2>
+
+              <p class="calculator-intro">Use your current HELOC balance and interest rate to estimate the payment due right now (interest-only). Optionally, estimate what the payment could be during the repayment phase (principal + interest).</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="helocBalance">Current HELOC balance (amount borrowed)</label>
+                <input type="text" id="helocBalance" inputmode="decimal" placeholder="e.g., 250,000" aria-label="Current HELOC balance">
+              </div>
+
+              <div class="form-group">
+                <label for="annualRate">Annual interest rate (APR %)</label>
+                <input type="text" id="annualRate" inputmode="decimal" placeholder="e.g., 11.75" aria-label="Annual interest rate APR percent">
+              </div>
+
+              <details class="advanced-section">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group">
+                  <label for="repaymentTermYears">Repayment term (years) for principal + interest estimate</label>
+                  <input type="text" id="repaymentTermYears" inputmode="decimal" placeholder="Default: 10" aria-label="Repayment term years">
+                </div>
+
+                <div class="form-group">
+                  <label for="roundToNearestRand">Round payment to nearest whole unit</label>
+                  <input type="text" id="roundToNearestRand" inputmode="numeric" placeholder="Default: 0 (no rounding) e.g., 1 or 10 or 100" aria-label="Rounding step for payment">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate payment</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Estimate payments, compare borrowing options, and understand real borrowing costs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Run quick property and home-finance numbers like affordability, repayments, and break-even points.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, track cash flow, and make everyday money decisions with simple tools.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/4pBCQ2r" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Borrowing Fundamentals</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand core borrowing principles and responsible credit use.</p>
+    <div class="affiliate-cta">View borrowing fundamentals books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>HELOC monthly payment calculator for interest-only and repayment estimates</h2>
+
+              <p>A HELOC (home equity line of credit) usually works differently from a normal home loan. Instead of receiving one lump sum and paying it back on a fixed schedule from day one, a HELOC lets you borrow and repay repeatedly up to a credit limit. That flexibility is useful, but it also makes payment amounts harder to predict. This HELOC payment calculator is built for one primary purpose: estimating what your monthly payment is likely to be based on your current outstanding balance and interest rate.</p>
+
+              <p>The most common real-world question is simple: “If I owe this much on my HELOC right now, what payment will I need to make this month?” During a typical draw period, many HELOCs require interest-only payments. That means your minimum payment is mainly the interest on your current balance, and your balance will not automatically reduce unless you choose to pay extra. This calculator gives you that interest-only payment estimate first, because that is usually the immediate decision you are trying to make.</p>
+
+              <p>Some people also want a repayment-phase estimate, where the balance is paid down over a fixed number of years with principal plus interest. That number can be useful for planning, but it is not always your current required payment. To keep the tool practical, the repayment calculation is optional and uses a standard loan amortization payment formula. If you enter a repayment term, the calculator estimates what the payment would be if your current balance were amortized over that term at the rate you entered.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator is for estimating payment amounts from your current HELOC balance, not for estimating how much you can borrow or your available credit limit.</li>
+                <li>The default “right now” payment is treated as interest-only, which matches many HELOC draw-period minimum payment rules.</li>
+                <li>The interest rate is treated as an annual percentage rate (APR) and converted to a monthly rate by dividing by 12.</li>
+                <li>The optional repayment estimate assumes a fixed monthly payment that would fully amortize your current balance over the repayment term you enter.</li>
+                <li>Fees, minimum-payment quirks, daily interest accrual differences, and rate changes during the month are not included unless your lender builds them into the APR you enter.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does my HELOC payment look lower than a regular loan payment?</h3>
+              <p>If your HELOC is in the draw period and your lender allows interest-only payments, your required payment can be much lower because you are not paying down principal automatically. That does not mean the debt is cheaper. It means the principal may remain unchanged unless you pay extra. Use the repayment estimate to see what a principal plus interest payment could look like if you had to fully pay down the balance over a set term.</p>
+
+              <h3>What if my HELOC rate changes (variable rate)?</h3>
+              <p>This calculator uses the rate you enter as a snapshot. If your rate changes, your payment changes. For quick planning, rerun the calculator with a higher and lower rate to see the sensitivity. If you want a conservative estimate, use a slightly higher rate than today’s rate to account for possible increases.</p>
+
+              <h3>My lender calculates interest daily. Is monthly still accurate?</h3>
+              <p>Many lenders accrue interest daily and bill monthly. A monthly-rate estimate is usually close enough for planning, especially if your balance is relatively stable. If your balance fluctuates a lot during the month (borrowing and repaying multiple times), your actual interest-only payment may differ because interest is calculated on the daily balances, not just the month-end balance.</p>
+
+              <h3>What balance should I enter if I keep drawing and repaying?</h3>
+              <p>Enter the balance you expect to carry into the next billing cycle, or your current balance if you are estimating the next payment. If you expect to repay a chunk before the statement closes, use the expected post-payment balance instead. The interest-only payment is directly proportional to the balance, so even rough estimates are useful.</p>
+
+              <h3>Does the repayment estimate match my actual HELOC repayment phase?</h3>
+              <p>It is a planning estimate. Some HELOCs convert to a fixed amortization schedule for the repayment period. Others have minimum payment rules, balloon features, or different repayment mechanics. If your lender specifies a repayment term and a conversion method, enter the term here and use your current rate for a reasonable approximation. If your lender uses a different structure, this calculator can still give you a baseline for what a standard amortizing payment would look like.</p>
+
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KKQK3m" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Interest Rate Risk</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand how changing interest rates affect loans and repayments.</p>
+    <div class="affiliate-cta">Browse interest rate risk books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Currency Converter (Static Rate Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert an amount between two currencies using a fixed exchange rate you provide, with optional fees for a more realistic net result." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/currency-converter-static-rate-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Currency Converter (Static Rate Version) | SnapCalc" property="og:title"/>
+<meta content="Convert an amount between two currencies using a fixed exchange rate you provide, with optional fees for a more realistic net result." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/currency-converter-static-rate-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Currency Converter (Static Rate Version) | SnapCalc" name="twitter:title"/>
+<meta content="Convert an amount between two currencies using a fixed exchange rate you provide, with optional fees for a more realistic net result." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Currency Converter (Static Rate Version)",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/currency-converter-static-rate-version/",
+      "description": "Convert an amount between two currencies using a fixed exchange rate you provide, with optional fees for a more realistic net result."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Currency Converter (Static Rate Version)</span>
+</nav>
+<div class="page-layout">
+<h1>Currency Converter (Static Rate Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert currency using a fixed rate you provide</h2>
+<p class="calculator-intro">Use this when you already have an exchange rate (quoted rate, card rate, invoice rate) and you want a quick, consistent conversion. This calculator does not fetch live rates.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="fromCurrencyInput">From currency (code or label)</label>
+<input id="fromCurrencyInput" inputmode="text" placeholder="e.g., USD" type="text"/>
+</div>
+<div class="form-group">
+<label for="toCurrencyInput">To currency (code or label)</label>
+<input id="toCurrencyInput" inputmode="text" placeholder="e.g., ZAR" type="text"/>
+</div>
+<div class="form-group">
+<label for="amountInput">Amount (in “from” currency)</label>
+<input id="amountInput" inputmode="decimal" placeholder="e.g., 1000" type="text"/>
+</div>
+<div class="form-group">
+<label for="rateInput">Exchange rate (1 “from” = ? “to”)</label>
+<input id="rateInput" inputmode="decimal" placeholder="e.g., 18.50" type="text"/>
+</div>
+<details>
+<summary>Advanced (optional fees)</summary>
+<div class="form-group">
+<label for="feePercentInput">Percentage fee (in “to” currency, %)</label>
+<input id="feePercentInput" inputmode="decimal" placeholder="e.g., 2.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="feeFixedInput">Fixed fee (in “to” currency)</label>
+<input id="feeFixedInput" inputmode="decimal" placeholder="e.g., 35" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert between units, currencies, and common measurement formats for everyday use.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Plan trips, compare travel costs, and estimate time or distance for journeys.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, compare costs, and estimate real-world money impacts with simple tools.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Currency converter using a fixed exchange rate (no live rates)</h2>
+<p>A lot of people search for a currency converter when they already have a quoted exchange rate and just need a reliable way to turn it into a number they can act on. That situation shows up when you are paying an overseas invoice, checking what a card transaction will roughly cost, converting a salary or price list, or planning a purchase where the rate is fixed for the day. This calculator is designed for that single job: convert an amount from one currency into another using the exact rate you type in.</p>
+<p>The core inputs are straightforward. Enter your “from” currency label (like USD), your “to” currency label (like ZAR), the amount in the “from” currency, and the exchange rate in the form “1 from equals how many to.” Press Convert and you get a gross converted amount. If you want something closer to what you will actually receive or be charged, open the Advanced section and add fees. Fees are common with banks, card processors, money transfer services, and payment gateways, and they can change the effective outcome even when the headline rate looks good.</p>
+<p>The output is built for decision making, not just a single number. You see the gross conversion first, then (if you add fees) the net amount after fees, the fee amount in the target currency, and the effective rate after fees. That effective rate is what you should compare across providers because it rolls the “real” cost into a single number. This page intentionally does not fetch live rates or try to predict provider-specific pricing models. If you need live rates, this is not the right tool. Use it when you already have a rate and want consistent math.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The exchange rate you enter is treated as fixed and correct for your situation. This tool does not verify it or pull live market rates.</li>
+<li>The rate is interpreted as: 1 unit of the “from” currency equals the rate value in the “to” currency.</li>
+<li>Optional fees are applied in the “to” currency and reduce the final (net) amount you end up with in the “to” currency.</li>
+<li>The percentage fee is calculated on the gross converted amount (in the “to” currency) before the fixed fee is subtracted.</li>
+<li>Rounding is shown to two decimals for readability. Some currencies have different minor units, so use exact provider statements if you need settlement precision.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does this say “static rate” instead of giving me today’s rate?</h3>
+<p>Because the intent here is conversion using a rate you already have. Many real situations start with a quoted rate from a bank, a transfer service, an invoice, or a card estimate. A live-rate tool would introduce uncertainty, and you would still have to deal with fees and spreads. This calculator stays predictable: your rate in, your conversion out.</p>
+<h3>What if I only know the rate in the opposite direction?</h3>
+<p>This calculator expects “1 from = ? to.” If you have “1 to = ? from” instead, invert it before you enter it. For example, if 1 EUR = 1.10 USD and you want USD to EUR, use 1 / 1.10 = 0.9091 as the rate (rounded appropriately) for 1 USD in EUR.</p>
+<h3>Are fees applied in the correct place?</h3>
+<p>The fee model here is intentionally simple and common in practice: a percentage fee applied to the converted amount, plus an optional fixed fee, both expressed in the target currency. Some providers bake fees into the rate instead (spread). If your provider uses a worse rate rather than a visible fee, put that worse rate in the rate field and leave fees at zero.</p>
+<h3>What should I enter for currency labels?</h3>
+<p>Use short codes like USD, EUR, GBP, ZAR, or a clear label like “US Dollars.” The labels do not affect the math. They only control how results are displayed, so keep them short and unambiguous.</p>
+<h3>When is this calculator not a good fit?</h3>
+<p>If you need live exchange rates, historical charts, multi-currency baskets, or provider-specific pricing rules (tiered spreads, minimum fees, weekend markups), this is not the right tool. This page is locked to a single decision: convert an amount using one fixed rate and optionally subtract simple fees to estimate the net outcome.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

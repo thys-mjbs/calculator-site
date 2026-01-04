@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Frequency Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Frequency Converter | SnapCalc" property="og:title"/>
+<meta content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Frequency Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert frequency values between Hz, kHz, MHz, GHz, THz, and RPM. Includes optional period and angular frequency outputs." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Frequency Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/frequency-converter/",
+      "description": "Convert frequency values between common units like Hz, kHz, MHz, GHz, THz, and RPM. Optionally view period and angular frequency derived from the input."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Frequency Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Frequency Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert frequency between common units</h2>
+<p class="calculator-intro">Enter a frequency once, pick the unit you have, and get the equivalent values in other units (plus optional derived values).</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="frequencyValue">Frequency value</label>
+<input id="frequencyValue" inputmode="decimal" placeholder="e.g., 1000" type="text"/>
+</div>
+<div class="form-group">
+<label for="fromUnit">From unit</label>
+<select id="fromUnit">
+<option value="hz">Hertz (Hz)</option>
+<option value="khz">Kilohertz (kHz)</option>
+<option value="mhz">Megahertz (MHz)</option>
+<option value="ghz">Gigahertz (GHz)</option>
+<option value="thz">Terahertz (THz)</option>
+<option value="rpm">Revolutions per minute (RPM)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="toUnit">Show as</label>
+<select id="toUnit">
+<option value="all">All common units</option>
+<option value="hz">Hertz (Hz)</option>
+<option value="khz">Kilohertz (kHz)</option>
+<option value="mhz">Megahertz (MHz)</option>
+<option value="ghz">Gigahertz (GHz)</option>
+<option value="thz">Terahertz (THz)</option>
+<option value="rpm">Revolutions per minute (RPM)</option>
+</select>
+</div>
+<div class="form-group checkbox-row">
+<label class="checkbox-label" for="showDerived">
+<input checked="" id="showDerived" type="checkbox"/>
+                  Also show period and angular frequency
+                </label>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert frequency</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert between everyday and technical units quickly and consistently.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve common engineering calculations with practical, ready-to-use tools.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Handle core math tasks like ratios, percentages, and number conversions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Frequency converter for Hz, kHz, MHz, GHz, THz, and RPM</h2>
+<p>A frequency converter helps you translate a number from one frequency unit to another without manual scaling mistakes. The most common case is converting Hertz (Hz) into kilohertz (kHz), megahertz (MHz), gigahertz (GHz), or terahertz (THz) when you are reading a spec sheet, a datasheet, a test report, or a label on equipment. A second common case is converting revolutions per minute (RPM) into Hz, or the other way around, when a rotating system is described in RPM but you need frequency in cycles per second.</p>
+<p>This page is intentionally locked to one job: converting frequency units. It does not try to convert wavelength, speed of light relationships, audio pitch, musical notes, or “frequency to period” as a separate calculator. Those are adjacent topics that require extra assumptions and often confuse people. Here you enter one frequency, select the unit you have, and the calculator returns the equivalent values in other common units using standard unit relationships.</p>
+<p>For practical usefulness, the calculator can also show two derived values based on the converted Hz value: the period (seconds per cycle) and angular frequency (radians per second). These are optional because many users only need unit conversion. If you switch the derived values on, you get extra context that can help with timing and oscillation work, while still keeping the core purpose unchanged.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The input is treated as a frequency magnitude and must be greater than 0 (frequency of 0 does not convert into meaningful period or rotation rate).</li>
+<li>Unit conversions use standard SI scaling: 1 kHz = 1,000 Hz, 1 MHz = 1,000,000 Hz, 1 GHz = 1,000,000,000 Hz, and 1 THz = 1,000,000,000,000 Hz.</li>
+<li>RPM is treated as revolutions per minute where 1 revolution equals 1 cycle, so Hz = RPM ÷ 60 and RPM = Hz × 60.</li>
+<li>Period is calculated as T = 1 ÷ f(Hz) and is shown in seconds; extremely high frequencies will produce very small periods.</li>
+<li>Angular frequency is calculated as ω = 2πf(Hz) and is shown in radians per second; it is only meaningful when your “frequency” describes a periodic cycle.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between Hz and RPM?</h3>
+<p>Hz is cycles per second, while RPM is cycles (revolutions) per minute. If one revolution corresponds to one repeating cycle, then RPM and Hz describe the same thing in different time bases. The conversion is straightforward: Hz = RPM ÷ 60.</p>
+<h3>Why does the calculator require a value greater than 0?</h3>
+<p>A value of 0 implies no oscillation or rotation. Conversions between scaled frequency units would still be “0,” but derived values like period (1 ÷ f) are not defined at zero. Enforcing a positive value prevents misleading outputs and division-by-zero results.</p>
+<h3>When should I use kHz vs MHz vs GHz?</h3>
+<p>Use the unit that keeps the number readable. Audio and low-speed timing often sits in Hz or kHz, many microcontroller clocks and radio channels appear in MHz, and modern RF, CPU clocks, and microwave applications frequently use GHz. The calculator shows all common units so you can choose the one that matches the context you are reading.</p>
+<h3>What does “period” mean, and why is it useful?</h3>
+<p>Period is the time for one full cycle. If a sensor pulses at 50 Hz, the period is 1 ÷ 50 = 0.02 seconds per cycle. Period is often the easier number to reason about when you are planning delays, sampling intervals, or timing constraints.</p>
+<h3>Is angular frequency the same as frequency?</h3>
+<p>No. Angular frequency (rad/s) is scaled by 2π compared to Hz because it measures rotation around a circle in radians rather than cycles. It is used frequently in physics and control systems where equations are written in radians.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cable Length Resistance Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate the electrical resistance of a cable run based on length, conductor size, material, and temperature. Optionally estimate voltage drop and power loss for a given current." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/cable-length-resistance-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cable Length Resistance Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate the electrical resistance of a cable run based on length, conductor size, material, and temperature. Optionally estimate voltage drop and power loss for a given current." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/cable-length-resistance-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cable Length Resistance Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate the electrical resistance of a cable run based on length, conductor size, material, and temperature. Optionally estimate voltage drop and power loss for a given current." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cable Length Resistance Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/cable-length-resistance-calculator/",
+      "description": "Calculate the electrical resistance of a cable run from length, conductor size, material, and temperature, with optional voltage drop and power loss using a provided current."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Cable Length Resistance Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Cable Length Resistance Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate cable resistance for a real cable run</h2>
+<p class="calculator-intro">Enter the one-way length and cable size to estimate total resistance. Optionally include the return path and add current to estimate voltage drop and heat loss.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="lengthMeters">One-way cable length (m)</label>
+<input id="lengthMeters" inputmode="decimal" placeholder="e.g., 25" type="text"/>
+</div>
+<div class="form-group checkbox-row">
+<label for="includeReturn">
+<input checked="" id="includeReturn" type="checkbox"/>
+                  Include return path (round-trip length)
+                </label>
+</div>
+<div class="form-group">
+<label for="material">Conductor material</label>
+<select id="material">
+<option selected="" value="copper">Copper</option>
+<option value="aluminum">Aluminum</option>
+</select>
+</div>
+<div class="form-group">
+<label for="sizePreset">Cable size preset</label>
+<select id="sizePreset">
+<option value="0.823">18 AWG (0.823 mm²)</option>
+<option value="1.31">16 AWG (1.31 mm²)</option>
+<option value="2.08">14 AWG (2.08 mm²)</option>
+<option value="3.31">12 AWG (3.31 mm²)</option>
+<option value="5.26">10 AWG (5.26 mm²)</option>
+<option value="8.37">8 AWG (8.37 mm²)</option>
+<option value="13.30">6 AWG (13.30 mm²)</option>
+<option value="21.15">4 AWG (21.15 mm²)</option>
+<option value="33.62">2 AWG (33.62 mm²)</option>
+<option value="53.50">1/0 AWG (53.50 mm²)</option>
+<option value="67.40">2/0 AWG (67.40 mm²)</option>
+<option value="1">1.0 mm²</option>
+<option selected="" value="1.5">1.5 mm²</option>
+<option value="2.5">2.5 mm²</option>
+<option value="4">4 mm²</option>
+<option value="6">6 mm²</option>
+<option value="10">10 mm²</option>
+<option value="16">16 mm²</option>
+<option value="25">25 mm²</option>
+<option value="35">35 mm²</option>
+<option value="50">50 mm²</option>
+<option value="custom">Custom (enter mm²)</option>
+</select>
+</div>
+<div class="form-group hidden" id="customAreaGroup">
+<label for="areaMm2">Custom conductor area (mm²)</label>
+<input id="areaMm2" inputmode="decimal" placeholder="e.g., 7.5" type="text"/>
+</div>
+<div class="form-group advanced-block">
+<label for="tempC">Conductor temperature (°C) (optional)</label>
+<input id="tempC" inputmode="decimal" placeholder="Default: 20" type="text"/>
+</div>
+<div class="form-group advanced-block">
+<label for="currentA">Current (A) (optional, for voltage drop and heat)</label>
+<input id="currentA" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate resistance</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Work with electrical, mechanical, and engineering calculations for real projects and troubleshooting.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert common units fast, including length, area, volume, power, and other practical measures.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, sizes, and material needs for builds, repairs, and planning work.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate cable resistance from length and wire size</h2>
+<p>This cable length resistance calculator estimates the total electrical resistance of a cable run using the cable length, conductor size, and conductor material. If you also enter the expected current, it can estimate voltage drop and heat loss (power dissipated) in the cable. The main use case is planning or checking a practical cable run so you can understand how much resistance you are adding before you worry about device performance, dimming, motor starting, or wasted power.</p>
+<p>To use it, start with the one-way cable length in meters. Then decide whether you want the calculator to include the return path. For many real circuits, current leaves the source and returns through another conductor, so the effective resistance is based on round-trip length. If you are only interested in the resistance of a single conductor (for example, a single bonding conductor, a shield, or a one-conductor measurement), you can untick the return path option.</p>
+<p>Next, choose the conductor material and the cable size. The size preset lets you pick a common metric cross-sectional area (mm²) or a common AWG size. If your cable is not a standard size, select Custom and enter the conductor area in mm². The calculator then uses a standard resistance model based on resistivity at 20°C, with an optional temperature adjustment. Temperature matters because resistance rises as the conductor gets hotter. If you do not know temperature, leave it blank and the calculator assumes 20°C.</p>
+<p>When you provide a current value, the calculator adds two useful outputs. Voltage drop is the electrical pressure lost across the cable, calculated as current multiplied by resistance. Power loss is the heat dissipated in the cable, calculated as current squared multiplied by resistance. These figures help you judge whether the cable run is likely to cause performance issues or inefficient energy loss for the specific load you are planning.</p>
+<p>What the outputs mean is straightforward. Total resistance is the resistance of the conductor path you selected, using the effective length and conductor area. A higher resistance means more voltage drop at the same current. Voltage drop matters when your supply voltage is limited or when your device is sensitive to low voltage. Power loss matters when you are trying to avoid wasted energy or when cable heating could become significant in tightly bundled installations.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The resistance model uses a simple DC or low-frequency assumption and ignores skin effect and other high-frequency behavior.</li>
+<li>Conductor resistivity is based on typical values at 20°C, then adjusted using a linear temperature coefficient when a temperature is provided.</li>
+<li>The cable size is treated as conductor cross-sectional area, not overall cable diameter, insulation thickness, or installation method.</li>
+<li>If “Include return path” is enabled, the effective length is doubled to represent a typical out-and-back circuit path.</li>
+<li>Voltage drop and power loss are calculated only from the cable resistance and the entered current, not from load characteristics, inrush, or supply regulation.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is this the same as a full voltage drop calculator?</h3>
+<p>No. This page is focused on cable resistance first. Voltage drop is derived directly from resistance and current. It does not model AC reactance, power factor, or special installation conditions. If you need a compliance-oriented voltage drop check, use a dedicated voltage drop tool and your local standards.</p>
+<h3>Should I include the return path?</h3>
+<p>Usually yes. Most real circuits have an outgoing conductor and a return conductor, and both contribute resistance. Leave it enabled for typical DC loads and many AC circuits where current returns through another conductor. Disable it only when you intentionally want the resistance of one conductor only.</p>
+<h3>What if I only know the wire gauge, not the area?</h3>
+<p>Use the preset dropdown and pick the closest AWG size shown. The calculator converts that size into a typical cross-sectional area. If your cable is a different standard or has a different conductor construction, you can switch to Custom and enter the area from the cable datasheet.</p>
+<h3>What temperature should I use?</h3>
+<p>If you do not know, leave it blank. The 20°C default is the reference point used for most resistivity tables. If the cable runs hot (for example, in a warm roof space, near machinery, or in a bundle), using a higher temperature gives a more realistic, higher resistance estimate.</p>
+<h3>Why does my measured resistance not match exactly?</h3>
+<p>Real-world resistance varies with exact alloy, strand construction, connector quality, measurement method, and temperature at the time of measurement. This calculator is intended for planning and estimation. For tight tolerances, use the cable manufacturer’s resistance per meter value and measure at the actual operating temperature.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

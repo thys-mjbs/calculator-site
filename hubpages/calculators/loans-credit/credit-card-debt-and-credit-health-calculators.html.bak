@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Debt and Credit Health Calculators | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="home-layout">
+        <div class="home-header">
+          <h1>Credit Card Debt and Credit Health Calculators</h1>
+        </div>
+
+        <section class="seo-section">
+          <p>
+            Credit card debt rarely becomes a problem overnight. It accumulates through small, repeated decisions that feel manageable in isolation but compound into long timelines, rising interest costs, and mounting pressure on credit health. Understanding how balances behave over time, how interest is applied, and which levers meaningfully change outcomes is essential for anyone using revolving credit.
+          </p>
+          <p>
+            The calculators in this hub focus on the mechanics that actually drive results: payoff timelines, utilization ratios, consolidation trade-offs, and the hidden cost of minimum payments. These tools are designed to replace assumptions with numbers, making it easier to see whether a strategy reduces real cost and risk or merely improves short-term cash flow.
+          </p>
+
+          <h2>Early Payoff Date Calculator</h2>
+          <p>
+            Accelerating repayment only matters if it produces a materially earlier end date. The
+            <a href="https://snapcalc.site/calculators/loans-credit/early-payoff-date-calculator/">Early Payoff Date Calculator</a>
+            translates balance, APR, and payment size into a concrete timeline, showing how extra payments compress interest and shorten repayment horizons in practice.
+          </p>
+
+          <h2>Debt Consolidation Calculator</h2>
+          <p>
+            Consolidation decisions often focus on monthly relief while ignoring total cost. The
+            <a href="https://snapcalc.site/calculators/loans-credit/debt-consolidation-calculator/">Debt Consolidation Calculator</a>
+            helps compare multiple debts against a single replacement loan, making it clear when simplification reduces real interest versus when it merely stretches repayment.
+          </p>
+
+          <h2>Debt Consolidation Savings Calculator</h2>
+          <p>
+            Savings can mean lower payments or lower lifetime cost, and those outcomes are not the same. The
+            <a href="https://snapcalc.site/calculators/loans-credit/debt-consolidation-savings-calculator/">Debt Consolidation Savings Calculator</a>
+            separates cash flow relief from true interest savings so trade-offs are explicit before committing.
+          </p>
+
+          <h2>Debt-to-Income Ratio Calculator</h2>
+          <p>
+            Debt-to-income ratios shape borrowing capacity and approval outcomes. The
+            <a href="https://snapcalc.site/calculators/loans-credit/debt-to-income-ratio-calculator/">Debt-to-Income Ratio Calculator</a>
+            clarifies how existing obligations and new payments interact, helping assess whether additional credit meaningfully increases risk.
+          </p>
+
+          <h2>Credit Utilization Calculator</h2>
+          <p>
+            Utilization drives short-term credit score movement and is often misunderstood. The
+            <a href="https://snapcalc.site/calculators/loans-credit/credit-utilization-calculator/">Credit Utilization Calculator</a>
+            converts balances and limits into clear ratios and shows how much paydown is required to reach specific thresholds.
+          </p>
+
+          <h2>Credit Score Improvement Impact Calculator</h2>
+          <p>
+            Score improvement responds to measurable behaviors, not guesswork. The
+            <a href="https://snapcalc.site/calculators/loans-credit/credit-score-improvement-impact-calculator/">Credit Score Improvement Impact Calculator</a>
+            helps evaluate which changes are likely to move outcomes and which simply feel productive.
+          </p>
+
+          <h2>Credit Card Payoff Calculator</h2>
+          <p>
+            Interest is front-loaded on revolving balances, making early months disproportionately expensive. The
+            <a href="https://snapcalc.site/calculators/loans-credit/credit-card-payoff-calculator/">Credit Card Payoff Calculator</a>
+            shows how payment size affects both payoff date and total interest paid.
+          </p>
+
+          <h2>Minimum Payment Trap Calculator</h2>
+          <p>
+            Minimum payments maintain account status while extending debt for years. The
+            <a href="https://snapcalc.site/calculators/loans-credit/minimum-payment-trap-calculator/">Minimum Payment Trap Calculator</a>
+            exposes the long-term cost of minimum-only behavior and the impact of sustainable payment increases.
+          </p>
+
+          <h2>Credit Card Interest Accrued Daily Calculator</h2>
+          <p>
+            Daily interest accrual magnifies the cost of carrying balances. The
+            <a href="https://snapcalc.site/calculators/loans-credit/credit-card-interest-accrued-daily-calculator/">Credit Card Interest Accrued Daily Calculator</a>
+            illustrates how timing and average daily balance affect total interest.
+          </p>
+
+          <h2>Line of Credit Cost Calculator</h2>
+          <p>
+            Flexible borrowing often hides persistent cost. The
+            <a href="https://snapcalc.site/calculators/loans-credit/line-of-credit-cost-calculator/">Line of Credit Cost Calculator</a>
+            helps evaluate whether payments reduce principal meaningfully or simply service interest over time.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
+</html>

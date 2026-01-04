@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Aggregate Weight Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate aggregate weight in tonnes from a known volume and material type (gravel, crushed stone, sand, recycled concrete). Useful for ordering, hauling, and load planning." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/construction-materials/aggregate-weight-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Aggregate Weight Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate aggregate weight in tonnes from a known volume and material type (gravel, crushed stone, sand, recycled concrete). Useful for ordering, hauling, and load planning." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/construction-materials/aggregate-weight-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Aggregate Weight Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate aggregate weight in tonnes from a known volume and material type (gravel, crushed stone, sand, recycled concrete). Useful for ordering, hauling, and load planning." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Aggregate Weight Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/construction-materials/aggregate-weight-calculator/",
+      "description": "Estimate aggregate weight in tonnes from a known volume and selected material type for ordering and haul planning."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
+        <span>Aggregate Weight Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Aggregate Weight Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate aggregate weight from volume</h2>
+<p class="calculator-intro">
+                Enter the volume of aggregate and choose the material. You will get an estimated total weight in tonnes,
+                plus the density used and optional truckload planning.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="volumeInput">Volume</label>
+<input id="volumeInput" inputmode="decimal" placeholder="e.g., 12.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="unitSelect">Volume unit</label>
+<select id="unitSelect">
+<option value="m3">Cubic meters (m³)</option>
+<option value="yd3">Cubic yards (yd³)</option>
+<option value="ft3">Cubic feet (ft³)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="materialSelect">Aggregate type</label>
+<select id="materialSelect">
+<option value="gravel">Gravel (typical bulk)</option>
+<option value="crushed_stone">Crushed stone (typical bulk)</option>
+<option value="sand">Sand (typical bulk)</option>
+<option value="limestone">Limestone (typical bulk)</option>
+<option value="granite">Granite (typical bulk)</option>
+<option value="recycled_concrete">Recycled concrete (typical bulk)</option>
+<option value="custom">Custom density</option>
+</select>
+</div>
+<div class="form-group">
+<label for="customDensityInput">Custom density (kg/m³) (only if using Custom)</label>
+<input id="customDensityInput" inputmode="decimal" placeholder="e.g., 1650" type="text"/>
+</div>
+<div aria-label="Advanced options" class="advanced-section">
+<h3 class="advanced-title">Advanced (optional)</h3>
+<div class="form-group">
+<label for="adjustmentPercentInput">Density adjustment (%)</label>
+<input id="adjustmentPercentInput" inputmode="decimal" placeholder="e.g., 5" type="text"/>
+<div class="field-hint">Use for compaction or unusually wet/dry material. Leave blank for 0%.</div>
+</div>
+<div class="form-group">
+<label for="truckCapacityInput">Truck capacity (tonnes)</label>
+<input id="truckCapacityInput" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+<div class="field-hint">Optional. If provided, the calculator estimates required truckloads.</div>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate weight</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, coverage, volumes, mixes, and material requirements for common site jobs.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units quickly, including lengths, areas, volumes, weights, and everyday measurement formats.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Run practical engineering calculations for electrical, mechanical, and general technical planning.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Aggregate weight calculator for estimating tonnes from volume</h2>
+<p>
+                When you order aggregate (gravel, crushed stone, sand, limestone, granite, or recycled concrete), suppliers often sell by
+                weight while site planning often starts with volume. You might know you need “12 cubic meters” for a base layer or backfill,
+                but the truck, tipping limits, and quote are usually based on tonnes. This calculator converts a known volume into an estimated
+                weight using a practical bulk density for common aggregates.
+              </p>
+<p>
+                The primary intent of this page is simple: estimate how many tonnes of aggregate you are moving or ordering so you can plan
+                deliveries and avoid under-ordering or exceeding a vehicle’s legal or safe load. It is not a geotechnical tool, it does not
+                estimate compaction performance, and it does not calculate how much volume you need for a given area and thickness. If you
+                need volume from dimensions, use a volume or coverage calculator first, then bring the resulting volume here.
+              </p>
+<p>
+                To use the calculator, enter the volume you already have (in cubic meters, cubic yards, or cubic feet). Select the aggregate
+                type that best matches what you are buying or hauling. The result shows an estimated total weight in metric tonnes and kilograms,
+                plus the density used so you can sanity-check it against your supplier’s spec sheet. If you have a specific density from a
+                datasheet or supplier quote, select “Custom density” and enter it in kg/m³ for the most accurate conversion.
+              </p>
+<p>
+                The advanced options are intentionally limited. Real-world loads vary because aggregate is not a uniform product: moisture,
+                gradation, void ratio, fines content, and handling method all affect bulk density. If your material is known to be more compacted
+                or unusually wet/dry relative to typical bulk, you can apply a simple density adjustment percentage. You can also enter an
+                approximate truck capacity in tonnes to estimate the number of loads required, which helps with scheduling and cost planning.
+              </p>
+<p>
+                The calculation behind the scenes is straightforward. The calculator converts your entered volume into cubic meters, selects a
+                bulk density (kg/m³), applies any optional percentage adjustment, and multiplies volume by density to get total kilograms. It
+                then converts kilograms to metric tonnes. The output is an estimate designed for ordering and haul planning, where “close enough
+                with clear assumptions” is usually more useful than false precision.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator uses typical bulk densities for common aggregate types, which can differ from your supplier’s actual product and moisture state.</li>
+<li>Volume is treated as loose bulk volume (what you measure in a truck bed or stockpile), not compacted in-place volume unless you apply an adjustment.</li>
+<li>The optional density adjustment is a simple percentage applied to the selected density; it does not model gradation, voids, or moisture physics.</li>
+<li>Results are shown in metric tonnes (t) and kilograms (kg). If your supplier quotes in a different system, convert separately using a dedicated unit converter.</li>
+<li>Truckload estimates assume every load is filled to the same usable payload and do not account for legal axle limits, road rules, or uneven loading.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does the same volume of aggregate weigh different amounts?</h3>
+<p>
+                Aggregate is not a single uniform material. Different rock types have different particle densities, and the way it is graded
+                (how much fine material vs larger pieces) changes how tightly it packs. Moisture also adds mass and can change how the material
+                sits in the pile. That is why suppliers often provide a density range rather than a single perfect number.
+              </p>
+<h3>Should I use “compacted” or “loose” volume for ordering?</h3>
+<p>
+                Most ordering and hauling problems start with loose bulk volume because that is what you handle and transport. If your volume was
+                calculated from an in-place compacted spec (for example, a compacted base layer), your supplier might recommend ordering extra to
+                account for compaction and waste. In that case, either adjust the volume before using this calculator, or apply a reasonable
+                density adjustment and document it in your notes.
+              </p>
+<h3>What if my supplier gives a density in tonnes per cubic meter?</h3>
+<p>
+                If you have a supplier spec, use it. Convert tonnes per cubic meter to kg/m³ by multiplying by 1,000 (for example, 1.6 t/m³ is
+                1,600 kg/m³). Select “Custom density,” enter the converted value, and the calculator will use that exact figure.
+              </p>
+<h3>Do I need to enter the advanced adjustment percent?</h3>
+<p>
+                No. Leave it blank if you do not have a defensible reason to change the default density. The defaults are meant to be practical
+                “typical bulk” values. Use the adjustment only when you know your material is consistently heavier or lighter than typical, or
+                when you are deliberately stress-testing best and worst case planning.
+              </p>
+<h3>Is the truckload estimate reliable for legal compliance?</h3>
+<p>
+                Treat it as planning guidance only. Legal loads depend on the truck configuration, axle limits, and local rules, and the usable
+                payload can be lower than the headline capacity. If compliance matters, use your fleet’s rated payload and confirm with your
+                transport provider. The estimate is still useful for quickly guessing whether you need one load or multiple loads.
+              </p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

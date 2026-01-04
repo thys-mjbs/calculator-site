@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Clothing Cost Per Wear Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the true cost per wear of a clothing item using price, wear frequency, ownership duration, care costs, and resale value." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/clothing-cost-per-wear-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Clothing Cost Per Wear Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate the true cost per wear of a clothing item using price, wear frequency, ownership duration, care costs, and resale value." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/clothing-cost-per-wear-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Clothing Cost Per Wear Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the true cost per wear of a clothing item using price, wear frequency, ownership duration, care costs, and resale value." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Clothing Cost Per Wear Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/clothing-cost-per-wear-calculator/",
+      "description": "Calculate the net cost per wear of a clothing item based on purchase price, wear frequency, ownership duration, care costs, and resale value."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Clothing Cost Per Wear Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Clothing Cost Per Wear Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate your true cost per wear</h2>
+<p class="calculator-intro">Use a simple estimate of how often you will wear an item to see what each wear will really cost, including care and resale.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="itemPrice">Item price (your currency)</label>
+<input id="itemPrice" inputmode="decimal" placeholder="e.g., 1,499.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="wearsPerMonth">Estimated wears per month</label>
+<input id="wearsPerMonth" inputmode="numeric" placeholder="e.g., 4" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthsOwned">Planned months of ownership</label>
+<input id="monthsOwned" inputmode="numeric" placeholder="e.g., 12" type="text"/>
+</div>
+<details class="advanced-details">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="resaleValue">Expected resale value at the end</label>
+<input id="resaleValue" inputmode="decimal" placeholder="e.g., 300.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="alterationCost">One-time alterations or repairs</label>
+<input id="alterationCost" inputmode="decimal" placeholder="e.g., 150.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="careCostPerWear">Care cost per wear (dry cleaning, special wash, etc.)</label>
+<input id="careCostPerWear" inputmode="decimal" placeholder="e.g., 25.00" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate cost per wear</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+    </div>
+    <div class="grid-slot">
+    </div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+    <div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick calculators for daily decisions like household costs, routines, and practical planning.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting and money tools to compare costs, plan spending, and make smarter purchases.</p>
+</a>
+    </div>
+    <div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">See how small decisions add up, and model trade-offs between spending now and saving more.</p>
+</a>
+    </div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+    <div class="grid-slot">
+    </div>
+    <div class="grid-slot">
+<section class="seo-section">
+<h2>Clothing cost per wear calculator for smarter buying decisions</h2>
+<p>This calculator is built for one decision: should you buy (or keep) a specific clothing item based on what it will cost you each time you wear it. A low cost per wear usually means the item earns its place in your wardrobe because you actually use it. A high cost per wear is a warning sign that you are paying for the idea of the item, not the real usage. The goal is not to judge the price tag in isolation. The goal is to connect price to a realistic wear pattern so you can compare items fairly across your wardrobe.</p>
+<p>To use it, start with the item price and a rough estimate of how many times you will wear the item per month. Then choose how long you expect to keep it (in months). These three numbers create an estimated total number of wears. From there, the calculator works out a baseline cost per wear by dividing your net cost by your expected wears. Net cost matters because two items with the same price can behave very differently over time. If one needs dry cleaning or tailoring, or if one can be resold later, the real per-wear cost changes. You do not need perfect data. You need a reasonable estimate that matches how you actually dress.</p>
+<p>The result section is designed to be practical. You will see the cost per wear first, plus the estimated total wears and the net cost the calculator used. You will also see a quick sensitivity check that shows what happens if you wear the item 25% less or 25% more than your estimate. This matters because most purchase regret is not about the number you paid. It is about overestimating future use. If the cost per wear is acceptable even when your wears drop, the purchase is usually safer. If the cost per wear becomes unacceptable with a small drop in wear frequency, you are relying on best-case usage to justify the spend.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Your wears per month and months of ownership are estimates, not guarantees, and the calculator treats them as an average.</li>
+<li>Net cost is calculated as item price plus alterations/repairs plus care costs per wear, minus resale value (resale is treated as cash recovered at the end).</li>
+<li>Care cost per wear is optional and should include only costs that scale with wearing the item (for example dry cleaning), not fixed wardrobe costs.</li>
+<li>Resale value defaults to zero and should be conservative unless you reliably resell similar items.</li>
+<li>This calculator is for a single item decision, not for building a full wardrobe budget or comparing brands across many items at once.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is a “good” cost per wear?</h3>
+<p>There is no universal number because acceptable cost depends on your budget and the role of the item. Daily basics usually need a low cost per wear because you want repeated use. Occasion items can have a higher cost per wear, but you should be honest about how often that occasion happens. Use this calculator to compare the item to alternatives you already own, not to a generic benchmark.</p>
+<h3>Should I include shipping, tax, or returns?</h3>
+<p>If those costs are real and you cannot avoid them, include them by adding them into the item price. If you returned the item and got a full refund, the correct cost per wear is zero because you did not keep it. The calculator is meant to reflect your net out-of-pocket cost for keeping the item.</p>
+<h3>What if I do not know how many months I will keep it?</h3>
+<p>Use a realistic minimum. If you are unsure, assume you keep it for fewer months rather than more. Overestimating ownership duration is a common way to artificially lower cost per wear. The sensitivity section helps you see the impact of being wrong about wear frequency, but your ownership estimate still matters.</p>
+<h3>How do I handle items with variable care costs?</h3>
+<p>Use an average care cost per wear. If you dry clean every second wear, use half the dry-clean cost as your per-wear care cost. If care costs are rare or occasional, you can leave the field blank and instead add a one-time repair or alteration estimate if that is more accurate for the item.</p>
+<h3>Can I use this to compare two items directly?</h3>
+<p>Yes, as long as the items serve the same purpose in your wardrobe. Compare a work shirt to another work shirt, or a winter jacket to another winter jacket. Do not compare a once-a-year outfit to a weekly staple and expect the same cost per wear to mean the same thing. The calculator is intentionally focused on one item at a time so you can make a clear, grounded decision.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+    </div>
+    <div class="grid-slot">
+    </div>
+</div>
+</div>
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

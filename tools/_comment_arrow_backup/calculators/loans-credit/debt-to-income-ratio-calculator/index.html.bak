@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Debt-to-Income Ratio Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your debt-to-income (DTI) ratio using monthly income and debt payments. See front-end and back-end DTI and what the result typically means for borrowing." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/loans-credit/debt-to-income-ratio-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Debt-to-Income Ratio Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your debt-to-income (DTI) ratio using monthly income and debt payments. See front-end and back-end DTI and what the result typically means for borrowing." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/loans-credit/debt-to-income-ratio-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Debt-to-Income Ratio Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your debt-to-income (DTI) ratio using monthly income and debt payments. See front-end and back-end DTI and what the result typically means for borrowing." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Debt-to-Income Ratio Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/loans-credit/debt-to-income-ratio-calculator/",
+      "description": "Calculate your debt-to-income (DTI) ratio using monthly income and debt payments, including optional housing payment for front-end DTI and back-end DTI guidance."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+        <span>Debt-to-Income Ratio Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Debt-to-Income Ratio Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate your monthly DTI ratio</h2>
+<p class="calculator-intro">Enter your gross monthly income and monthly debt payments to estimate your debt-to-income ratio. Add a housing payment to see front-end DTI too.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="grossMonthlyIncome">Gross monthly income</label>
+<input id="grossMonthlyIncome" inputmode="decimal" placeholder="e.g., 45,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="totalMonthlyDebt">Total monthly debt payments</label>
+<input id="totalMonthlyDebt" inputmode="decimal" placeholder="e.g., 12,500" type="text"/>
+</div>
+<div class="form-group">
+<label for="monthlyHousingPayment">Monthly housing payment (optional)</label>
+<input id="monthlyHousingPayment" inputmode="decimal" placeholder="e.g., 9,500" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate DTI</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/loans-credit/">
+<h3 class="related-title">Loans &amp; Credit</h3>
+<p class="related-desc">Estimate repayments, compare borrowing costs, and understand credit basics before applying.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budget, plan monthly cash flow, and make clearer trade-offs across spending and saving.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Work through margins, cash flow, and operating metrics that affect affordability and risk.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Debt-to-income ratio calculator for loans, credit checks, and affordability</h2>
+<p>A debt-to-income ratio, usually shortened to DTI, is a simple way to compare your monthly debt payments to your monthly income. Lenders use it because it is a fast proxy for affordability. If a large share of your income is already committed to debt payments, taking on a new loan becomes riskier for both you and the lender.</p>
+<p>This calculator estimates your DTI using gross monthly income (income before tax and deductions) and your total monthly debt payments. The main output is your back-end DTI, which is the number most lenders focus on. If you also enter a monthly housing payment, the calculator shows a front-end DTI too, which isolates housing costs as a share of income.</p>
+<p>DTI is not a full underwriting decision. It does not know your credit score, your savings buffer, your employment stability, or how variable your income is. What it does give you is a quick constraint. If your DTI is high, you usually have only three levers: reduce monthly debt payments, increase income, or borrow less so the new payment is smaller.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Income is entered as gross monthly income (before tax). If you only know take-home pay, your true DTI will likely be higher than this estimate.</li>
+<li>Total monthly debt payments should include minimum required payments for credit cards, personal loans, vehicle finance, student loans, and any other recurring debt obligations.</li>
+<li>Housing payment is optional and is used only to calculate front-end DTI. If you do not enter it, the calculator still produces a valid back-end DTI.</li>
+<li>All values are assumed to be monthly. If you have weekly or annual figures, convert them to monthly before entering them.</li>
+<li>DTI is a screening metric, not a guarantee. Different lenders and products use different thresholds and may apply additional rules.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between front-end and back-end DTI?</h3>
+<p>Front-end DTI looks only at housing costs as a percentage of your gross income. Back-end DTI includes all monthly debt payments, including housing. Many lenders care most about back-end DTI because it captures your total fixed debt burden.</p>
+<h3>What counts as “debt payments” for DTI?</h3>
+<p>DTI typically uses required monthly payments, not total balances. Include minimum payments on credit cards, installment loans, vehicle finance, student loans, and any other contractual debt payments. Everyday expenses like groceries or utilities are not “debt” in the DTI sense, even though they matter for your real budget.</p>
+<h3>Should I use gross income or net income?</h3>
+<p>Most lender DTI calculations use gross income. If you use net income, the percentage will be higher and can be useful for personal budgeting. This calculator uses gross income because it matches the most common lending convention.</p>
+<h3>My income is irregular. How should I enter it?</h3>
+<p>Use an average monthly income based on a realistic period, such as the last 3 to 12 months. If your income is seasonal, a longer average is usually safer. If you are conservative, enter a lower average so you do not understate your DTI.</p>
+<h3>Is a lower DTI always better?</h3>
+<p>Lower DTI generally improves affordability and approval odds, but it is not the only factor. A very low DTI can still be paired with weak credit history or unstable income. Use DTI as one decision input, not the whole decision.</p>
+<div class="last-updated">Last updated: 2025-12-19</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

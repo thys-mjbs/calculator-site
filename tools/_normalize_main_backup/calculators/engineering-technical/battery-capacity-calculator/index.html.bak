@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Battery Capacity Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." name="description"/>
+<link href="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/" rel="canonical"/>
+<meta content="Battery Capacity Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Battery Capacity Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate the battery capacity you need (Ah and Wh) for a device, based on wattage, voltage, and how many hours you want it to run." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Battery Capacity Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/engineering-technical/battery-capacity-calculator/",
+        "description": "Calculate the battery capacity you need in amp-hours (Ah) and watt-hours (Wh) from a device wattage, battery voltage, and desired runtime. Optional settings include efficiency and depth of discharge."
+      }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a>
+        ›
+        <span>Battery Capacity Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Battery Capacity Calculator</h1>
+<div class="page-grid">
+<!-- Row 1 -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate required battery size (Ah)</h2>
+<p class="calculator-intro">
+                Enter your device power, battery voltage, and the runtime you
+                want. You will get the minimum battery capacity plus a practical
+                recommendation.
+              </p>
+<div class="form-group">
+<label for="loadWatts">Device load (watts, W)</label>
+<input aria-label="Device load in watts" id="loadWatts" inputmode="decimal" placeholder="e.g., 1200" type="text"/>
+</div>
+<div class="form-group">
+<label for="batteryVoltage">Battery/system voltage (V)</label>
+<input aria-label="Battery or system voltage in volts" id="batteryVoltage" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+<div class="form-group">
+<label for="runtimeHours">Desired runtime (hours)</label>
+<input aria-label="Desired runtime in hours" id="runtimeHours" inputmode="decimal" placeholder="e.g., 4" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<!-- FIX: was <diva> -->
+<div>
+<div class="form-group">
+<label for="efficiencyPercent">System efficiency (%)</label>
+<input aria-label="System efficiency percentage" id="efficiencyPercent" inputmode="decimal" placeholder="e.g., 90" type="text"/>
+</div>
+<div class="form-group">
+<label for="dodPercent">Usable depth of discharge, DoD (%)</label>
+<input aria-label="Usable depth of discharge percentage" id="dodPercent" inputmode="decimal" placeholder="e.g., 80" type="text"/>
+</div>
+<div class="form-group">
+<label for="singleBatteryAh">Single battery size (Ah)</label>
+<input aria-label="Single battery capacity in amp-hours" id="singleBatteryAh" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+<div class="form-group">
+<label for="singleBatteryVoltage">Single battery voltage (V)</label>
+<input aria-label="Single battery voltage in volts" id="singleBatteryVoltage" inputmode="decimal" placeholder="e.g., 12" type="text"/>
+</div>
+</div>
+</details>
+<button id="calculateButton" type="button">
+                Calculate capacity
+              </button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">
+                Electrical, mechanical, and practical engineering calculators
+                for common real-world tasks.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">
+                Conversions (Units, Currencies, etc.)
+              </h3>
+<p class="related-desc">
+                Convert units and measurements quickly when you are working
+                across specs, labels, and standards.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">
+                Core math tools for percentages, ratios, averages, rounding, and
+                everyday calculations.
+              </p>
+</a>
+</div>
+<!-- Row 3 -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Battery capacity calculator for runtime (Ah and Wh)</h2>
+<p>
+                This Battery Capacity Calculator estimates the battery size you
+                need to power a device for a specific number of hours. The
+                dominant use case is planning a battery setup for a known
+                electrical load (usually expressed in watts), at a known battery
+                or system voltage (such as 12V, 24V, or 48V), where you want a
+                quick, defensible answer in amp-hours (Ah) and watt-hours (Wh).
+                This is the decision most people are trying to make: “How big a
+                battery do I need to run this thing for that long?”
+              </p>
+<p>
+                You enter three basics: device load in watts, the battery or
+                system voltage, and your desired runtime in hours. The
+                calculator then converts that into energy required (watt-hours),
+                and finally into battery capacity (amp-hours). If you open the
+                Advanced section, you can include efficiency losses (common when
+                using an inverter or DC to DC conversion) and the usable depth
+                of discharge (how much of the battery you actually plan to use).
+                Those two optional settings are the difference between an
+                optimistic paper result and a practical setup that actually
+                delivers the runtime you expect.
+              </p>
+<p>
+                The results are shown as a minimum required battery capacity and
+                a practical recommendation. The minimum tells you the
+                theoretical amount of capacity needed under the assumptions you
+                selected. The recommendation is a simple “round up” guidance
+                because batteries are sold in standard sizes and because real
+                usage is rarely perfectly steady. If you provide a typical
+                single-battery size in the Advanced section (for example a 12V
+                100Ah battery), the calculator also estimates how many batteries
+                of that type you would need to meet the recommended capacity.
+                This is meant for quick planning, not for detailed electrical
+                design.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
+                  The load (watts) is treated as an average steady draw over the
+                  full runtime. If your device cycles on and off, use an average
+                  wattage.
+                </li>
+<li>
+                  If you leave efficiency blank, the calculator assumes 90%
+                  efficiency to reflect typical losses in wiring and conversion
+                  equipment.
+                </li>
+<li>
+                  If you leave depth of discharge blank, the calculator assumes
+                  80% usable capacity. This is a common practical planning
+                  value.
+                </li>
+<li>
+                  The calculator outputs energy in Wh and capacity in Ah using
+                  the relationship Wh = V × Ah. Voltage is assumed constant for
+                  planning purposes.
+                </li>
+<li>
+                  The optional “number of batteries” estimate assumes identical
+                  batteries and is a sizing guide only. Series/parallel wiring,
+                  surge currents, temperature, and manufacturer limits are not
+                  modeled.
+                </li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is the difference between Ah and Wh?</h3>
+<p>
+                Amp-hours (Ah) is capacity at a specific voltage. Watt-hours
+                (Wh) is energy and is easier to compare across voltages. A 12V
+                100Ah battery is roughly 1,200Wh (12 × 100), but the usable
+                energy depends on how much you are willing to discharge it and
+                on system losses.
+              </p>
+<h3>Why do efficiency and depth of discharge matter?</h3>
+<p>
+                Efficiency accounts for losses, especially when converting
+                battery power to another form (like DC to AC via an inverter).
+                Depth of discharge (DoD) reflects that you typically do not use
+                100% of a battery’s rated capacity in real life. Including both
+                makes the result more realistic and reduces the chance of
+                under-sizing.
+              </p>
+<h3>My device draw is in amps, not watts. Can I still use this?</h3>
+<p>
+                This page is locked to the “watts + voltage + hours” sizing
+                decision. If you only have amps, you can convert to watts using
+                watts = volts × amps, then enter the watts here. If you are
+                unsure which voltage applies (device vs inverter vs battery
+                bus), use the system voltage that your battery setup actually
+                runs at.
+              </p>
+<h3>Why is my result larger than what I expected from the battery label?</h3>
+<p>
+                Battery labels are usually nominal capacity at ideal conditions.
+                Real-world runtime is reduced by conversion losses, usable
+                discharge limits, and the fact that voltage and available
+                capacity can drop under higher loads. If you want a conservative
+                plan, keep DoD at 80% or lower and do not assume 100%
+                efficiency.
+              </p>
+<h3>When does this calculator not apply?</h3>
+<p>
+                This tool is not for precise engineering of battery banks, surge
+                loads, or motor starting currents. It also does not model
+                temperature effects, battery chemistry curves, or
+                manufacturer-specific limits. If you are designing a critical
+                system (medical, safety, or high-current industrial), use
+                detailed manufacturer data and a full electrical design
+                approach.
+              </p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067385801783501"
+     crossorigin="anonymous"></script>
+
+     <meta name="impact-site-verification" value="d4039235-92bd-4a7d-a275-d770b8f4a83d">
+
+    <title>About | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="home-layout" id="categories">
+        <div class="home-header">
+          <h1>About SnapCalc</h1>
+        </div>
+
+        <section class="seo-section">
+          <h2>About SnapCalc</h2>
+
+          <p>SnapCalc is a practical and dynamic calculator library created with the sole purpose of providing fast, easy-to-understand calculations that answer real-world problems. Whether it’s for personal finance, business accounting, loan comparisons, or even basic everyday tasks, SnapCalc delivers reliable results in an intuitive and accessible format. The goal is to provide users with a tool that cuts down on complexity, without sacrificing accuracy or usefulness.</p>
+
+          <p>SnapCalc is designed to be both efficient and straightforward. The calculators are lightweight and run directly in your browser, meaning no long load times or unnecessary steps to get the information you need. Each tool is tailored to answer a specific question, providing relevant outputs based on the inputs you provide. We emphasize practicality over novelty, ensuring that each tool delivers what you actually need to make informed decisions in your daily life.</p>
+
+          <p>The calculators are structured to minimize the need for excessive data. Instead, we focus on asking for only the most essential information. This simple approach allows users to achieve meaningful results quickly without being bogged down by unnecessary fields or questions. Additionally, for scenarios that benefit from more detailed information, optional inputs are provided, allowing users to refine the result as they see fit.</p>
+
+          <p>Transparency is another cornerstone of SnapCalc. We believe that a calculator should never feel like a black box. That’s why we make sure to explain the logic behind every result, showing users not just what the output means, but how it was derived. Where assumptions are made, we document them clearly so that you know exactly how each calculation works, and when the output may or may not apply to your specific situation.</p>
+
+          <p>What sets SnapCalc apart from other tools is the careful balance between simplicity and depth. Each tool is straightforward, yet equipped with enough flexibility for users who require more precision. For example, optional fields let you adjust inputs for greater accuracy, but no result will ever fail simply because an optional field is left blank. This consistency makes SnapCalc a go-to resource for users who need reliable results with minimal hassle.</p>
+
+          <p>SnapCalc does not attempt to replace professional financial advice, legal counsel, or specialized software. Rather, it serves as a quick reference to help users make informed decisions based on everyday calculations. The calculators are designed to be useful in a wide range of contexts, whether you’re checking your budget, evaluating a loan, or comparing basic financial options. However, we always recommend consulting a qualified professional for high-stakes decisions where detailed analysis and context are essential.</p>
+
+          <p>SnapCalc’s design focuses on clarity and accessibility. Since no personal accounts or logins are required, users can simply visit the site, input their data, and instantly receive the answers they need. This minimalist design ensures that SnapCalc remains lightweight, fast, and secure. By running entirely in the browser, we protect your privacy, ensuring that no personal data is ever collected or stored. For complete details on our privacy practices, please refer to our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</p>
+
+          <p>As SnapCalc continues to grow, our commitment to consistency remains unwavering. We strive to add new calculators based on real-world demand, ensuring that each new tool complements the existing ones in terms of design, functionality, and ease of use. Whether you are a homeowner trying to calculate your mortgage, a business owner assessing cash flow, or a traveler converting currencies, SnapCalc aims to provide you with a tool that works for your specific need, quickly and without complication.</p>
+
+          <p>We understand that clarity and simplicity are critical when it comes to making decisions based on calculations. That’s why we go the extra mile to ensure that each calculator provides not just an output, but an explanation of what the result means and how it can be applied in the real world. Whether you’re using SnapCalc to answer a simple question or to dive deeper into more complex calculations, we provide the context you need to make confident decisions.</p>
+
+          <p>We are committed to constantly improving the SnapCalc library. Each calculator is reviewed and updated regularly to reflect the latest information and best practices. Whether it’s adjusting formulas, updating assumptions, or introducing new tools based on user feedback, SnapCalc evolves to meet the needs of its users. Our focus remains on providing a reliable, consistent, and user-friendly resource that empowers individuals and businesses alike.</p>
+
+          <p>In conclusion, SnapCalc is not just a collection of calculators; it’s a thoughtfully designed library that balances simplicity, transparency, and accuracy. It’s about providing users with the tools they need to make better decisions, faster. Whether you need to evaluate a loan, plan your budget, or convert units, SnapCalc has a tool for you. The calculators are designed with clarity in mind, and our approach ensures that you understand the output and how to apply it in your own context. No fluff. No unnecessary complexity. Just practical, reliable tools that help you get the answers you need.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

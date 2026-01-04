@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Steps to Calories Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Convert your daily step count into an estimated number of calories burned from walking. Includes optional weight, cadence, and step length for a more accurate estimate.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/health-fitness/steps-to-calories-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Steps to Calories Calculator | SnapCalc">
+    <meta property="og:description" content="Convert your daily step count into an estimated number of calories burned from walking. Includes optional weight, cadence, and step length for a more accurate estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/health-fitness/steps-to-calories-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Steps to Calories Calculator | SnapCalc">
+    <meta name="twitter:description" content="Convert your daily step count into an estimated number of calories burned from walking. Includes optional weight, cadence, and step length for a more accurate estimate.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Steps to Calories Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/health-fitness/steps-to-calories-calculator/",
+      "description": "Convert a step count into an estimated number of calories burned from walking, with optional weight, cadence, and step length inputs."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/health-fitness/">Health &amp; Fitness</a> ›
+        <span>Steps to Calories Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Steps to Calories Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Convert steps into walking calories</h2>
+
+              <p class="calculator-intro">Enter your steps to estimate calories burned from walking. Add optional details for better accuracy.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="stepsInput">Steps (total)</label>
+                <input type="text" id="stepsInput" inputmode="numeric" placeholder="e.g., 8,000">
+              </div>
+
+              <div class="form-group">
+                <label for="weightKgInput">Weight (kg) (optional)</label>
+                <input type="text" id="weightKgInput" inputmode="decimal" placeholder="Default: 70">
+              </div>
+
+              <div class="form-group">
+                <label for="cadenceInput">Cadence (steps per minute) (optional)</label>
+                <input type="text" id="cadenceInput" inputmode="decimal" placeholder="Default: 100">
+              </div>
+
+              <div class="form-group">
+                <label for="stepLengthCmInput">Step length (cm) (optional)</label>
+                <input type="text" id="stepLengthCmInput" inputmode="decimal" placeholder="Default: 76.2">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate calories</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4q2Km6o" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Recovery</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Learn recovery techniques to support training performance and health.</p>
+    <div class="affiliate-cta">Explore fitness recovery books on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Track activity, calories, and body metrics with practical calculators designed for everyday use.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Convert time and plan schedules with simple tools for routines, deadlines, and daily planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle percentages, averages, unit math, and everyday calculations with fast, clean tools.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Steps to calories burned from walking</h2>
+
+              <p>This Steps to Calories Calculator estimates how many calories you burned by walking, based on your total step count. Most people track steps, not workout sessions, so the goal here is simple: turn a number like 8,000 steps into a usable estimate you can compare day to day. This is useful for weight management, basic activity tracking, and understanding whether an “active day” was actually active in energy terms.</p>
+
+              <p>The calculator is locked to one use case: calories burned from walking. It is not designed for running, hiking with heavy elevation, cycling, strength training, or sports. Those activities can burn very different calories per minute, and step-based conversions become unreliable. If your steps come mainly from running or steep hiking, this page will under-estimate or mis-estimate your burn.</p>
+
+              <p>To use it quickly, enter your total steps and press Calculate. For a more accurate estimate, add the optional Advanced inputs. Weight matters because heavier bodies burn more energy for the same movement. Cadence (steps per minute) matters because faster walking generally increases intensity. Step length helps estimate distance, which is a useful secondary insight and also sanity-checks whether the inputs look realistic.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>This calculator estimates calories for walking, not running or high-impact step counts. If your steps came from running, treat the result as a rough lower bound.</li>
+                <li>If you do not enter weight, the calculator uses 70 kg as a reasonable adult default. Enter your weight for a more personalized estimate.</li>
+                <li>If you do not enter cadence, the calculator assumes 100 steps per minute, which represents a normal purposeful walking pace for many adults.</li>
+                <li>If you do not enter step length, the calculator assumes 76.2 cm per step, which is a common average step length used for rough distance estimates.</li>
+                <li>Calorie burn is estimated using a standard MET-based approach, where cadence is used to choose an intensity band. This is a practical approximation and will not match lab measurements.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does weight change the calories result?</h3>
+              <p>Walking moves your body mass over time. With everything else equal, a heavier person generally uses more energy per minute than a lighter person. That is why entering your weight improves the estimate. If you leave it blank, the calculator must assume an average, which can be meaningfully wrong if you are far above or below that average.</p>
+
+              <h3>What is cadence, and what should I enter if I do not know it?</h3>
+              <p>Cadence is how many steps you take per minute. If you do not know it, leaving it blank is fine. The default of 100 steps per minute is a reasonable “normal walk” assumption. If you want a better estimate, you can time yourself for one minute and count steps, or count for 30 seconds and double it.</p>
+
+              <h3>My calories seem too high or too low. What is usually causing that?</h3>
+              <p>The most common causes are intensity and step source. If your steps were slow indoor movement (short steps, frequent stops), the estimate may be high unless you reduce cadence. If your steps include running or steep inclines, the estimate may be low because walking intensity bands do not capture the extra cost. Weight entry errors also matter, especially if you enter pounds as if they were kilograms.</p>
+
+              <h3>Is the distance estimate accurate?</h3>
+              <p>Distance is estimated from step count and step length. If you do not enter step length, the calculator uses a typical average. Real step length varies with height, terrain, walking speed, fatigue, and even footwear. Use the distance output as a helpful approximation and a sanity check, not as a replacement for GPS.</p>
+
+              <h3>How can I make this estimate more accurate without overthinking it?</h3>
+              <p>Do three things: enter your weight, enter a realistic cadence, and use a step length close to your real stride. The fastest way to approximate step length is to walk 20 steps on a flat surface, measure the total distance, and divide by 20. You do not need perfect precision. A decent estimate beats a generic average.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3Ytq4Hm" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Training Volume</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+    <p class="affiliate-copy">Understand training volume and recovery to prevent burnout and injury.</p>
+    <div class="affiliate-cta">Browse training volume books on Amazon</div>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

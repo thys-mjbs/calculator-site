@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Grocery Budget Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Plan a weekly or monthly grocery budget with per trip, per day, and per person targets, including a price buffer and a suggested category split.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/grocery-budget-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Grocery Budget Calculator | SnapCalc">
+    <meta property="og:description" content="Plan a weekly or monthly grocery budget with per trip, per day, and per person targets, including a price buffer and a suggested category split.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/grocery-budget-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Grocery Budget Calculator | SnapCalc">
+    <meta name="twitter:description" content="Plan a weekly or monthly grocery budget with per trip, per day, and per person targets, including a price buffer and a suggested category split.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Grocery Budget Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/everyday-life-tools/grocery-budget-calculator/",
+      "description": "Plan a weekly or monthly grocery budget with per trip, per day, and per person targets, including a price buffer and a suggested category split."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
+        <span>Grocery Budget Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Grocery Budget Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4pw7rhW" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Personal Productivity</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Improve productivity with tools designed for everyday personal use.</p>
+                <div class="affiliate-cta">Explore personal productivity tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Set a grocery budget you can actually stick to</h2>
+
+              <p class="calculator-intro">Enter your grocery budget and get per trip, per day, and per person targets with a built-in buffer for price changes.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="period">Budget period</label>
+                <select id="period">
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budgetAmount">Total grocery budget (for the period)</label>
+                <input type="text" id="budgetAmount" inputmode="decimal" placeholder="e.g., 3,500">
+              </div>
+
+              <div class="form-group">
+                <label for="householdSize">Household size (optional)</label>
+                <input type="text" id="householdSize" inputmode="decimal" placeholder="Default: 1">
+              </div>
+
+              <div class="form-group">
+                <label for="shoppingTrips">Number of shopping trips in the period (optional)</label>
+                <input type="text" id="shoppingTrips" inputmode="decimal" placeholder="Default: 1 per week, 4 per month">
+              </div>
+
+              <div class="form-group">
+                <label for="bufferPercent">Price buffer percent (optional)</label>
+                <input type="text" id="bufferPercent" inputmode="decimal" placeholder="Default: 10">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate grocery budget plan</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/48IF8Wg" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Habit Tracking</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Track habits consistently to support personal growth and routines.</p>
+                <div class="affiliate-cta">View habit tracking tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Plan daily routines, manage household tasks, and make practical decisions faster.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budget, track spending, and estimate costs to make smarter money decisions.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Support healthier habits with simple planning and goal-focused calculators.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3KwwP8h" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Life Organisation</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Organise personal life tasks, commitments, and responsibilities clearly.</p>
+                <div class="affiliate-cta">Browse life organisation tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Grocery budget calculator for weekly or monthly planning</h2>
+
+              <p>Grocery spending is one of the easiest parts of your budget to underestimate, because it is made up of many small decisions across the week. A single “grocery budget” number often feels fine on paper, but it does not tell you what to do when you are standing in a store with a cart half full. This grocery budget calculator turns a single budget amount into practical targets you can use in real life: how much you can spend per trip, per day, and per person.</p>
+
+              <p>You can use this calculator in two ways. If you want a quick answer, enter your total budget and choose whether it is for a week or a month. You will immediately get a simple plan that helps you pace your spending. If you want a more accurate plan, add your household size, the number of shopping trips you usually make, and a price buffer percent. The buffer is important because grocery prices, impulse buys, and “forgotten items” are normal. A small buffer makes your plan more realistic and reduces the chance that you run out of budget before the period ends.</p>
+
+              <p>The results are designed to be actionable. “Per trip” is the strongest control lever for most people, because it tells you a hard ceiling for each shop. “Per day” is useful if you shop irregularly or do a mix of big and small purchases. “Per person” helps households stay honest about the true cost of feeding multiple people. The calculator also includes a suggested category split so you can quickly check whether your basket is overloaded with extras compared to essentials. You do not have to follow the split perfectly, but it is a simple way to notice drift early.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>If you leave household size blank, the calculator assumes 1 person.</li>
+                <li>If you leave shopping trips blank, the calculator assumes 1 trip per week or 4 trips per month.</li>
+                <li>If you leave the buffer blank, the calculator uses a default 10% buffer to account for price changes and unplanned items.</li>
+                <li>For monthly budgets, the calculator uses an average month length (about 30.4 days) to produce a per day estimate.</li>
+                <li>The suggested category split is a generic starting point and may not match dietary needs, bulk buying patterns, or special diets.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What should I use as my grocery budget if I have no history?</h3>
+              <p>Start with a rough estimate that you can measure quickly. Pick a weekly amount you think is realistic, add a small buffer, and track actual spending for two to four weeks. After that, adjust the budget based on real data. If you are unsure, it is better to start slightly higher and then tighten than to start too low and constantly feel behind.</p>
+
+              <h3>Should I budget weekly or monthly?</h3>
+              <p>Weekly budgets are easier to control because groceries are usually bought weekly and the feedback loop is fast. Monthly budgets are useful if you get paid monthly or do bulk purchases. If you struggle to stay on track, use weekly. If you already have good discipline and want to smooth irregular costs, monthly can work.</p>
+
+              <h3>What is a good buffer percent?</h3>
+              <p>For most households, 5% to 15% is reasonable. Lower buffers assume stable prices and strong discipline. Higher buffers make sense if you often buy for guests, have kids with changing needs, or see frequent price swings. If your buffer needs to be above 20% for the plan to work, the base budget may be too tight.</p>
+
+              <h3>What if I make more or fewer shopping trips than planned?</h3>
+              <p>The plan still works. Use the “per day” target to pace spending, or recalculate with an updated trip count. If you do fewer trips, your per trip allowance goes up. If you do more trips, it goes down. The key is to keep total spending inside the effective budget after buffer, not to hit an exact number each trip.</p>
+
+              <h3>How do I use the category split without overthinking it?</h3>
+              <p>Treat it as a quick sanity check. If your “extras” category is consistently eating into essentials, you will feel it in the last week of the period. If essentials are too high, it might mean you are not meal planning, buying too many convenience items, or not taking advantage of bulk purchases. Use it to notice patterns, then change one behavior at a time.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>

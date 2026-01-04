@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Fraction Simplifier | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Simplify any fraction to its lowest terms, and optionally convert it to a mixed number, decimal, and percent." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/math-general-calculators/fraction-simplifier/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Fraction Simplifier | SnapCalc" property="og:title"/>
+<meta content="Simplify any fraction to its lowest terms, and optionally convert it to a mixed number, decimal, and percent." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/math-general-calculators/fraction-simplifier/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fraction Simplifier | SnapCalc" name="twitter:title"/>
+<meta content="Simplify any fraction to its lowest terms, and optionally convert it to a mixed number, decimal, and percent." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fraction Simplifier",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/math-general-calculators/fraction-simplifier/",
+      "description": "Simplify any fraction to its lowest terms, and optionally convert it to a mixed number, decimal, and percent."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
+        <span>Fraction Simplifier</span>
+</nav>
+<div class="page-layout">
+<h1>Fraction Simplifier</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Simplify a fraction to lowest terms</h2>
+<p class="calculator-intro">Enter a numerator and denominator. Optionally show mixed number, decimal, and percent forms.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="numeratorInput">Numerator</label>
+<input id="numeratorInput" inputmode="numeric" placeholder="e.g., 42" type="text"/>
+</div>
+<div class="form-group">
+<label for="denominatorInput">Denominator</label>
+<input id="denominatorInput" inputmode="numeric" placeholder="e.g., 56" type="text"/>
+</div>
+<div class="options-row">
+<label class="option-item">
+<input checked="" id="showMixedInput" type="checkbox"/>
+                  Show mixed number (if improper)
+                </label>
+<label class="option-item">
+<input checked="" id="showDecimalPercentInput" type="checkbox"/>
+                  Show decimal and percent
+                </label>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Simplify</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Work with ratios, percentages, fractions, rounding, and everyday math tasks.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Study support tools for practice, checking work, and improving accuracy under time pressure.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert between units and formats, including decimals, percentages, and common measurement types.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+                
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Simplify fractions to lowest terms and understand what the result means</h2>
+<p>A fraction simplifier reduces a fraction like 42/56 into an equivalent fraction with smaller numbers, such as 3/4. This is useful because simplified fractions are easier to read, compare, and use in follow-up calculations. If you are checking homework, working with recipes, measuring materials, or converting between formats, writing a fraction in lowest terms helps you avoid mistakes.</p>
+<p>This calculator takes your numerator and denominator and reduces them by dividing both by their greatest common divisor (GCD). The GCD is the largest whole number that divides both the numerator and denominator with no remainder. When you divide both parts of a fraction by the same non-zero number, the value of the fraction does not change. You only change how it is written.</p>
+<p>For many real situations you need more than a reduced fraction. That is why this tool can also show a mixed number (for improper fractions like 11/4), plus the decimal and percent versions. The simplified fraction is the “exact” form. The decimal and percent are “converted” forms that are often easier for calculators, budgets, and quick comparisons. Seeing all forms side-by-side makes it easier to understand the number you are working with.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Enter whole numbers for the numerator and denominator. If you have a decimal, convert it to a fraction first if you need an exact result.</li>
+<li>The denominator cannot be zero. A denominator of 0 is undefined, so the calculator will stop and ask you to correct it.</li>
+<li>Negative signs are normalized so the denominator is kept positive. For example, 1/(-2) is shown as -1/2.</li>
+<li>If the numerator is 0, the simplified result is 0/1. Mixed number, decimal, and percent are shown as 0 where applicable.</li>
+<li>Decimals and percents are rounded for readability. The simplified fraction is exact, so use that when precision matters.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What does “simplest form” or “lowest terms” mean?</h3>
+<p>It means the numerator and denominator share no common factor greater than 1. In other words, you cannot divide both numbers by the same whole number (other than 1) and still keep them as whole numbers. The value stays the same, but the fraction is as reduced as possible.</p>
+<h3>Why does dividing the numerator and denominator by the same number not change the value?</h3>
+<p>Because you are effectively multiplying by 1. If you divide both by 7, you are doing (numerator ÷ 7) / (denominator ÷ 7), which is the same as (numerator/denominator) × (1/1). You are just removing common factors that appear in both parts.</p>
+<h3>When should I use a mixed number instead of an improper fraction?</h3>
+<p>Mixed numbers are often preferred in everyday contexts like cooking or measurement (for example, 2 3/8 inches) because they are easier to picture. Improper fractions are often preferred in algebra and later steps of calculation because they are simpler to manipulate consistently.</p>
+<h3>My fraction is already simple, but the decimal looks long. Is that normal?</h3>
+<p>Yes. Some fractions create repeating decimals (like 1/3 = 0.333…). A simplified fraction can still have a long or repeating decimal. The fraction is exact, while the decimal display is an approximation that may be rounded for readability.</p>
+<h3>What if my numerator or denominator is negative?</h3>
+<p>That is fine. The calculator will keep the denominator positive and move any negative sign to the numerator. If both numerator and denominator are negative, they cancel out and the simplified fraction becomes positive.</p>
+<h3>How can I improve accuracy for work that needs precision?</h3>
+<p>Use the simplified fraction as your primary result because it is exact. If you must use decimals (for a spreadsheet or device input), increase decimal places on your end or keep the fraction form as long as possible and convert to decimal only at the final step.</p>
+<div class="last-updated">Last updated: 2025-12-17</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cooking Measurement Converter | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Convert recipe volumes between cups, tablespoons, teaspoons, milliliters, liters, and US fluid ounces with clear results and practical equivalents." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/conversions-units-currencies/cooking-measurement-converter/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cooking Measurement Converter | SnapCalc" property="og:title"/>
+<meta content="Convert recipe volumes between cups, tablespoons, teaspoons, milliliters, liters, and US fluid ounces with clear results and practical equivalents." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/conversions-units-currencies/cooking-measurement-converter/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cooking Measurement Converter | SnapCalc" name="twitter:title"/>
+<meta content="Convert recipe volumes between cups, tablespoons, teaspoons, milliliters, liters, and US fluid ounces with clear results and practical equivalents." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cooking Measurement Converter",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/conversions-units-currencies/cooking-measurement-converter/",
+      "description": "Convert common cooking volume measurements between cups, tablespoons, teaspoons, milliliters, liters, and US fluid ounces."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/conversions-units-currencies/">Conversions (Units, Currencies, etc.)</a> ›
+        <span>Cooking Measurement Converter</span>
+</nav>
+<div class="page-layout">
+<h1>Cooking Measurement Converter</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Convert recipe volume units</h2>
+<p class="calculator-intro">Convert common recipe measurements between US-style units and metric. This tool converts volume only (not grams).</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="amountInput">Amount</label>
+<input id="amountInput" inputmode="decimal" placeholder="e.g., 1.5" type="text"/>
+</div>
+<div class="input-group">
+<label for="fromUnit">From unit</label>
+<select id="fromUnit">
+<option value="cup">Cup (US)</option>
+<option value="tbsp">Tablespoon (US)</option>
+<option value="tsp">Teaspoon (US)</option>
+<option value="floz">Fluid ounce (US fl oz)</option>
+<option value="pint">Pint (US)</option>
+<option value="quart">Quart (US)</option>
+<option value="gallon">Gallon (US)</option>
+<option value="ml">Milliliter (mL)</option>
+<option value="l">Liter (L)</option>
+</select>
+</div>
+<div class="input-group">
+<label for="toUnit">To unit</label>
+<select id="toUnit">
+<option value="ml">Milliliter (mL)</option>
+<option value="l">Liter (L)</option>
+<option value="cup">Cup (US)</option>
+<option value="tbsp">Tablespoon (US)</option>
+<option value="tsp">Teaspoon (US)</option>
+<option value="floz">Fluid ounce (US fl oz)</option>
+<option value="pint">Pint (US)</option>
+<option value="quart">Quart (US)</option>
+<option value="gallon">Gallon (US)</option>
+</select>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Convert</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units for everyday tasks including distance, weight, temperature, and currency-style comparisons.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick utilities for common decisions like tips, splits, time planning, and simple checks.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Study-focused calculators and helpers for grades, scoring, and practice conversions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Convert cups to mL and other cooking measurements in one step</h2>
+<p>Recipes often mix measurement systems. A sauce might list milliliters, while an older baking recipe might use cups and teaspoons. This cooking measurement converter is built for the most common real-world need: converting recipe volume units (not weight) so you can measure accurately with the tools you actually have.</p>
+<p>Use it when you need to convert cups to mL, tablespoons to teaspoons, or US fluid ounces to liters. You enter an amount, choose a “from” unit, choose a “to” unit, and the calculator returns a clean converted value. It also shows practical equivalents in other common units so you can sanity-check your measurement and pick the easiest option (for example, converting a fraction of a cup into tablespoons and teaspoons).</p>
+<p>The output is designed for action. The primary number tells you the conversion you asked for. The supporting equivalents help you measure without doing extra math. This is especially useful when you have measuring spoons but no jug, or a jug marked in mL but no cup set. This calculator intentionally avoids grams and ounces by weight, because weight conversions depend on ingredient density and would turn this into a different tool with different inputs.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This converter handles volume units only (cups, spoons, fluid ounces, and metric volume). It does not convert to grams.</li>
+<li>US customary volumes are used for cup, tablespoon, teaspoon, pint, quart, gallon, and US fluid ounce.</li>
+<li>Results are rounded to two decimals for readability, which is usually appropriate for kitchen measuring tools.</li>
+<li>If your recipe uses “cup” but comes from a non-US region, the cup size may differ slightly. For strict accuracy, confirm the source country.</li>
+<li>For baking where precision matters, prefer metric volume (mL) when possible, and measure consistently within one system.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does this calculator not convert grams to cups?</h3>
+<p>Grams measure weight, while cups measure volume. The conversion depends on the ingredient. A cup of flour and a cup of sugar do not weigh the same. To do that correctly, you need an ingredient selector and density assumptions, which is a separate calculator.</p>
+<h3>Are these “US cups” or “metric cups”?</h3>
+<p>This tool uses US customary units. If a recipe is from Australia, New Zealand, or other regions that use a metric cup, your result can be slightly off. When the recipe source is unclear, use mL if the recipe provides it, or check the author’s region.</p>
+<h3>What should I do if I only have teaspoons and tablespoons?</h3>
+<p>Convert your recipe amount into tablespoons or teaspoons as the target unit. Then use the supporting equivalents to split the measurement into a combination that matches your spoon set. This is often easier than trying to estimate a partial cup by eye.</p>
+<h3>Why are my kitchen tools not matching the converted value exactly?</h3>
+<p>Many measuring cups and spoons vary slightly by brand and manufacturing tolerance, and some are rounded for readability. Small differences are normal. For best consistency, use the same set of tools throughout a recipe and avoid switching between systems mid-way.</p>
+<h3>How can I improve accuracy for baking?</h3>
+<p>Stay in one system and measure carefully. If your recipe is in cups, consider converting the whole recipe to mL and measuring with a jug marked in mL. If the recipe provides metric units, follow those directly. If you need weight precision, use a dedicated ingredient weight converter with a scale.</p>
+<div class="last-updated">Last updated: 2025-12-30</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+--&gt;
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

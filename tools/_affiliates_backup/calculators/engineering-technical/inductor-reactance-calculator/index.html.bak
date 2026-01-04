@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Inductor Reactance Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate inductive reactance (XL) in ohms from frequency and inductance. Useful for AC circuits, filters, and impedance checks at 50 Hz, 60 Hz, and any custom frequency.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/inductor-reactance-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Inductor Reactance Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate inductive reactance (XL) in ohms from frequency and inductance. Useful for AC circuits, filters, and impedance checks at 50 Hz, 60 Hz, and any custom frequency.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/inductor-reactance-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inductor Reactance Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate inductive reactance (XL) in ohms from frequency and inductance. Useful for AC circuits, filters, and impedance checks at 50 Hz, 60 Hz, and any custom frequency.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inductor Reactance Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/inductor-reactance-calculator/",
+      "description": "Calculate inductive reactance (XL) in ohms from frequency and inductance for AC circuits and impedance checks."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering & Technical</a> ›
+        <span>Inductor Reactance Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Inductor Reactance Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4oTOXXK" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Electrical Tools</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Resources and tools for electrical calculations, wiring, and circuit analysis.</p>
+                <div class="affiliate-cta">Explore electrical engineering tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate inductive reactance (XL)</h2>
+
+              <p class="calculator-intro">Enter frequency and inductance to calculate inductive reactance in ohms. Optionally compare reactance at a second frequency.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="frequencyHz">Frequency (Hz)</label>
+                <input type="text" id="frequencyHz" inputmode="decimal" placeholder="e.g., 50 or 60 or 1,000">
+              </div>
+
+              <div class="form-group">
+                <label for="inductanceValue">Inductance (value)</label>
+                <input type="text" id="inductanceValue" inputmode="decimal" placeholder="e.g., 10">
+              </div>
+
+              <div class="form-group">
+                <label for="inductanceUnit">Inductance unit</label>
+                <select id="inductanceUnit">
+                  <option value="H">H (henry)</option>
+                  <option value="mH" selected>mH (millihenry)</option>
+                  <option value="uH">µH (microhenry)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="compareFrequencyHz">Compare at another frequency (Hz) (optional)</label>
+                <input type="text" id="compareFrequencyHz" inputmode="decimal" placeholder="e.g., 1000">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate reactance</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4ac9bIx" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Voltage &amp; Current</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Calculate voltage, current, and resistance for electrical systems.</p>
+                <div class="affiliate-cta">View voltage and current calculators on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Solve practical electrical, mechanical, and circuit calculations for real projects.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units cleanly, including frequency, time, and measurement-related values.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle formulas, proportions, and everyday math that supports engineering work.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/3XQUR0L" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Technical References</div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+                <p class="affiliate-copy">Quick-reference guides for engineering standards and specifications.</p>
+                <div class="affiliate-cta">Browse technical reference guides on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Inductive reactance calculator (XL) for AC circuits</h2>
+
+              <p>An inductor resists changes in current, so in an AC circuit it behaves like a frequency-dependent opposition rather than a fixed resistance. That opposition is called inductive reactance, written as XL, and it is measured in ohms (Ω). The key practical point is simple: as frequency goes up, inductive reactance goes up. That is why inductors can block high-frequency noise, shape filters, and limit current in AC systems without wasting power like a resistor would.</p>
+
+              <p>This calculator converts your inductance and frequency into inductive reactance using the standard engineering relationship XL = 2πfL. You can enter inductance in henries, millihenries, or microhenries, and frequency in hertz. The result is the reactance magnitude at that frequency. If you also enter an optional second frequency, the calculator will show how the reactance changes and by what factor, which is useful when you are comparing 50 Hz and 60 Hz mains, checking the effect of switching frequency, or estimating filter behavior across a band.</p>
+
+              <p>Use the output as a sanity check during design and troubleshooting. If your inductor is supposed to act like a strong blocker at a certain frequency, you want XL to be large compared with the other impedances in the circuit. If you need current to flow easily, you want XL to be small compared with the other impedances. This is a magnitude-only view, which is usually what you need for quick sizing and checks before you move to full impedance and phase calculations.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Ideal inductor model: the calculation uses XL = 2πfL and ignores winding resistance (DCR), core losses, and parasitic capacitance.</li>
+                <li>Frequency is treated as a single steady value. For non-sinusoidal waveforms, use the dominant frequency or analyze harmonics separately.</li>
+                <li>Inductance is assumed constant at the operating current and frequency. Real inductors can change value due to saturation and material effects.</li>
+                <li>Results are magnitudes in ohms. The inductor impedance is reactive (jXL), so phase and power factor effects are not computed here.</li>
+                <li>If you enter a second frequency, the calculator compares the two reactances assuming the same inductance value.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is inductive reactance in plain language?</h3>
+              <p>Inductive reactance is how strongly an inductor opposes AC current. It is not a real resistance that turns power into heat in the ideal model. Instead, it comes from energy being stored in and released from the magnetic field. Higher frequency makes it harder for current to change quickly, so XL increases with frequency.</p>
+
+              <h3>Why does XL increase linearly with frequency?</h3>
+              <p>Because XL is proportional to frequency in the formula XL = 2πfL. Doubling the frequency doubles XL. This is why inductors are often used as chokes: they allow low-frequency or DC components through more easily, while opposing higher-frequency components more strongly.</p>
+
+              <h3>Should I use 50 Hz or 60 Hz for mains calculations?</h3>
+              <p>Use the actual mains frequency for your region and system. Many places use 50 Hz, while others use 60 Hz. If you are designing for both, use the compare frequency field to see the difference. Reactance at 60 Hz will be 60/50 = 1.2 times the reactance at 50 Hz for the same inductor.</p>
+
+              <h3>My inductor has a rated inductance, but the real circuit behaves differently. Why?</h3>
+              <p>Real inductors include winding resistance and losses, and the inductance can shift with temperature, current level, and frequency. If the core starts to saturate at higher current, the effective inductance drops, which reduces XL and can cause higher current than expected. Use this calculator as a starting point, then cross-check with datasheet curves and measured values when precision matters.</p>
+
+              <h3>How do I use XL to estimate current in a simple AC circuit?</h3>
+              <p>For a rough magnitude estimate, you can treat XL like an impedance magnitude and use I ≈ V / XL if the inductor is the main impedance in series. In real circuits, you must include other resistances and reactances (such as resistor values, capacitor reactance, and source impedance). This calculator gives you the XL piece so you can combine it with the rest of the circuit model.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <!--
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START -->
+<!-- AFFILIATES_DISABLED_START
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+<!-- AFFILIATES_DISABLED_END -->
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
+</html>
