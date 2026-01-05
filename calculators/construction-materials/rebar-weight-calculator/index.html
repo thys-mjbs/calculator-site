@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Rebar Weight Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/construction-materials/rebar-weight-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Rebar Weight Calculator | SnapCalc" property="og:title"/>
-<meta content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/construction-materials/rebar-weight-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Rebar Weight Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Rebar Weight Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/rebar-weight-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Rebar Weight Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/rebar-weight-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rebar Weight Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Get total weight in kg and lb plus per bar and per meter or foot weight.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Calculate rebar weight from bar diameter or US rebar size, length, and quantity. Outputs total weight in kg and lb with per bar and per meter or foot weight."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,153 +76,218 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
         <span>Rebar Weight Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Rebar Weight Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Estimate rebar weight from size, length, and quantity</h2>
-<p class="calculator-intro">Choose metric diameter (mm) or US rebar size (#). You can keep defaults for a quick estimate or adjust steel density for more accuracy.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="modeSelect">Input system</label>
-<select id="modeSelect">
-<option selected="" value="metric">Metric (mm, m)</option>
-<option value="us">US (rebar #, ft)</option>
-</select>
-</div>
-<div id="modeMetricBlock">
-<div class="form-group">
-<label for="diameterMm">Bar diameter (mm)</label>
-<input id="diameterMm" inputmode="decimal" placeholder="e.g., 12" type="text"/>
-</div>
-<div class="form-group">
-<label for="lengthM">Length per bar (m)</label>
-<input id="lengthM" inputmode="decimal" placeholder="e.g., 6" type="text"/>
-</div>
-<div class="form-group">
-<label for="quantityMetric">Quantity (bars)</label>
-<input id="quantityMetric" inputmode="numeric" placeholder="e.g., 40" type="text"/>
-</div>
-</div>
-<div class="hidden" id="modeUsBlock">
-<div class="form-group">
-<label for="barSize">Rebar size (US #)</label>
-<select id="barSize">
-<option value="3">#3</option>
-<option selected="" value="4">#4</option>
-<option value="5">#5</option>
-<option value="6">#6</option>
-<option value="7">#7</option>
-<option value="8">#8</option>
-<option value="9">#9</option>
-<option value="10">#10</option>
-<option value="11">#11</option>
-</select>
-</div>
-<div class="form-group">
-<label for="lengthFt">Length per bar (ft)</label>
-<input id="lengthFt" inputmode="decimal" placeholder="e.g., 20" type="text"/>
-</div>
-<div class="form-group">
-<label for="quantityUs">Quantity (bars)</label>
-<input id="quantityUs" inputmode="numeric" placeholder="e.g., 40" type="text"/>
-</div>
-</div>
-<div class="form-group">
-<label for="steelDensity">Steel density (kg/m³) (optional)</label>
-<input id="steelDensity" inputmode="decimal" placeholder="Default: 7850" type="text"/>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate rebar weight</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+      </nav>
+
+      <div class="page-layout">
+        <h1>Rebar Weight Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4rTwGMG" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Basic Math Practice</div>
+                <p class="affiliate-copy">Practice essential arithmetic skills including addition, subtraction, multiplication, and division.</p>
+                <div class="affiliate-cta">Explore basic math practice books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate rebar weight from size, length, and quantity</h2>
+
+              <p class="calculator-intro">Choose metric diameter (mm) or US rebar size (#). You can keep defaults for a quick estimate or adjust steel density for more accuracy.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="modeSelect">Input system</label>
+                <select id="modeSelect">
+                  <option value="metric" selected>Metric (mm, m)</option>
+                  <option value="us">US (rebar #, ft)</option>
+                </select>
+              </div>
+
+              <div id="modeMetricBlock">
+                <div class="form-group">
+                  <label for="diameterMm">Bar diameter (mm)</label>
+                  <input type="text" id="diameterMm" inputmode="decimal" placeholder="e.g., 12">
+                </div>
+
+                <div class="form-group">
+                  <label for="lengthM">Length per bar (m)</label>
+                  <input type="text" id="lengthM" inputmode="decimal" placeholder="e.g., 6">
+                </div>
+
+                <div class="form-group">
+                  <label for="quantityMetric">Quantity (bars)</label>
+                  <input type="text" id="quantityMetric" inputmode="numeric" placeholder="e.g., 40">
+                </div>
+              </div>
+
+              <div id="modeUsBlock" class="hidden">
+                <div class="form-group">
+                  <label for="barSize">Rebar size (US #)</label>
+                  <select id="barSize">
+                    <option value="3">#3</option>
+                    <option value="4" selected>#4</option>
+                    <option value="5">#5</option>
+                    <option value="6">#6</option>
+                    <option value="7">#7</option>
+                    <option value="8">#8</option>
+                    <option value="9">#9</option>
+                    <option value="10">#10</option>
+                    <option value="11">#11</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="lengthFt">Length per bar (ft)</label>
+                  <input type="text" id="lengthFt" inputmode="decimal" placeholder="e.g., 20">
+                </div>
+
+                <div class="form-group">
+                  <label for="quantityUs">Quantity (bars)</label>
+                  <input type="text" id="quantityUs" inputmode="numeric" placeholder="e.g., 40">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="steelDensity">Steel density (kg/m³) (optional)</label>
+                <input type="text" id="steelDensity" inputmode="decimal" placeholder="Default: 7850">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate rebar weight</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/construction-materials/">
-<h3 class="related-title">Construction &amp; Materials</h3>
-<p class="related-desc">Estimate quantities, weights, and coverage for common building materials and site work.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/engineering-technical/">
-<h3 class="related-title">Engineering &amp; Technical</h3>
-<p class="related-desc">Use practical calculators for electrical, mechanical, and technical sizing and checks.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/conversions-units-currencies/">
-<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-<p class="related-desc">Convert units for length, mass, volume, and other common measurement needs.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Rebar weight calculator for steel reinforcement estimating</h2>
-<p>This rebar weight calculator helps you estimate how much reinforcing steel weighs before you order, transport, or schedule a pour. Weight matters because it affects cost, shipping, handling, crane time, and sometimes even whether a delivery truck can access your site. If you are quoting a job or checking a takeoff, a fast and credible rebar weight estimate is usually more useful than a perfect one that takes too long to assemble.</p>
-<p>You can calculate weight using either metric inputs (bar diameter in millimeters and length in meters) or US inputs (rebar size number and length in feet). Enter the length per bar and the number of bars, then calculate. The calculator returns total weight, plus a practical breakdown such as weight per bar and weight per meter or per foot. That breakdown is what you use to sanity-check your inputs. If a single bar seems unreasonably heavy or light, the issue is usually a unit mix-up, a missing decimal, or a quantity that was meant to be bundles instead of bars.</p>
-<p>For most construction estimating, the default steel density value gives a good result. If you want to refine the estimate, you can optionally set the steel density (kg per cubic meter). Density can vary slightly by alloy and manufacturer, but small differences rarely change a job decision. The biggest driver is almost always the bar size and total length. If you are comparing multiple reinforcement options, keep the density the same and focus on the relative differences between designs.</p>
-<p>How the calculation works is straightforward. Rebar is modeled as a solid round steel rod. Weight is based on the steel volume and density. Volume is the cross-sectional area of the bar multiplied by its length. Cross-sectional area is derived from the bar diameter. The calculator applies unit conversions automatically depending on your input system. For US rebar size, the calculator uses standard nominal diameters for each bar number, then applies the same geometry and density method. This makes the results consistent across both input modes and avoids relying on rough lookup tables.</p>
-<p>The results are estimates intended for planning and costing. Real-world weight can differ because rebar has manufacturing tolerances, rib patterns, rust scale, cut losses, splices, hooks, bends, and waste. If you need procurement-grade accuracy, use your bar bending schedule and supplier mass tables. For everything else, this calculator gives you a fast check that is usually close enough for budgeting and logistics.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>Rebar is treated as a solid round bar using the nominal diameter (ribs and deformations are ignored).</li>
-<li>Steel density defaults to 7850 kg/m³ unless you enter a different value.</li>
-<li>Length per bar is assumed to be the straight bar length (bends, hooks, and detailing additions are not included).</li>
-<li>Quantity is the number of bars, not bundles. If you have bundles, multiply by bars per bundle first.</li>
-<li>Outputs are estimates and can differ from supplier invoices due to tolerances, cutting waste, and fabrication details.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>What is the fastest way to estimate rebar weight?</h3>
-<p>Use the metric mode if you know diameter in millimeters, or choose the US rebar size if you know the bar number. Enter a typical bar length and the count. The total weight and weight per bar will immediately show whether your inputs are plausible.</p>
-<h3>Why does my result look too high or too low?</h3>
-<p>The most common cause is a unit mistake, such as entering centimeters as millimeters, meters as feet, or vice versa. Another common issue is quantity entered as bundles instead of bars. Check the per bar weight first. If that is unrealistic, fix the size or length input.</p>
-<h3>Should I change the steel density value?</h3>
-<p>Usually no. Small density differences have a small impact compared with bar size and length. Only adjust density if you have a specific material spec from a supplier and you are doing detailed cost analysis.</p>
-<h3>Does this include waste, laps, hooks, or bends?</h3>
-<p>No. This calculator treats each bar as a straight length. For a more realistic procurement number, add a waste factor separately or use your detailing schedule. Many projects carry an allowance for cutting and tying losses depending on complexity.</p>
-<h3>Can I estimate total weight for a slab or footing quickly?</h3>
-<p>Yes, if you can approximate total bar count and average length. Use the output to get a planning weight, then refine later by splitting different bar sizes and lengths into separate runs and adding the totals together.</p>
-<div class="last-updated">Last updated: 2025-12-17</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
-</div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate quantities, weights, and coverage for common building materials and site work.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Use practical calculators for electrical, mechanical, and technical sizing and checks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units for length, mass, volume, and other common measurement needs.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/4aNZmR6" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Mental Math</div>
+                <p class="affiliate-copy">Improve speed and accuracy when performing calculations without tools.</p>
+                <div class="affiliate-cta">Browse mental math books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Rebar weight calculator for steel reinforcement estimating</h2>
+
+              <p>This rebar weight calculator helps you estimate how much reinforcing steel weighs before you order, transport, or schedule a pour. Weight matters because it affects cost, shipping, handling, crane time, and sometimes even whether a delivery truck can access your site. If you are quoting a job or checking a takeoff, a fast and credible rebar weight estimate is usually more useful than a perfect one that takes too long to assemble.</p>
+
+              <p>You can calculate weight using either metric inputs (bar diameter in millimeters and length in meters) or US inputs (rebar size number and length in feet). Enter the length per bar and the number of bars, then calculate. The calculator returns total weight, plus a practical breakdown such as weight per bar and weight per meter or per foot. That breakdown is what you use to sanity-check your inputs. If a single bar seems unreasonably heavy or light, the issue is usually a unit mix-up, a missing decimal, or a quantity that was meant to be bundles instead of bars.</p>
+
+              <p>For most construction estimating, the default steel density value gives a good result. If you want to refine the estimate, you can optionally set the steel density (kg per cubic meter). Density can vary slightly by alloy and manufacturer, but small differences rarely change a job decision. The biggest driver is almost always the bar size and total length. If you are comparing multiple reinforcement options, keep the density the same and focus on the relative differences between designs.</p>
+
+              <p>How the calculation works is straightforward. Rebar is modeled as a solid round steel rod. Weight is based on the steel volume and density. Volume is the cross-sectional area of the bar multiplied by its length. Cross-sectional area is derived from the bar diameter. The calculator applies unit conversions automatically depending on your input system. For US rebar size, the calculator uses standard nominal diameters for each bar number, then applies the same geometry and density method. This makes the results consistent across both input modes and avoids relying on rough lookup tables.</p>
+
+              <p>The results are estimates intended for planning and costing. Real-world weight can differ because rebar has manufacturing tolerances, rib patterns, rust scale, cut losses, splices, hooks, bends, and waste. If you need procurement-grade accuracy, use your bar bending schedule and supplier mass tables. For everything else, this calculator gives you a fast check that is usually close enough for budgeting and logistics.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Rebar is treated as a solid round bar using the nominal diameter (ribs and deformations are ignored).</li>
+                <li>Steel density defaults to 7850 kg/m³ unless you enter a different value.</li>
+                <li>Length per bar is assumed to be the straight bar length (bends, hooks, and detailing additions are not included).</li>
+                <li>Quantity is the number of bars, not bundles. If you have bundles, multiply by bars per bundle first.</li>
+                <li>Outputs are estimates and can differ from supplier invoices due to tolerances, cutting waste, and fabrication details.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the fastest way to estimate rebar weight?</h3>
+              <p>Use the metric mode if you know diameter in millimeters, or choose the US rebar size if you know the bar number. Enter a typical bar length and the count. The total weight and weight per bar will immediately show whether your inputs are plausible.</p>
+
+              <h3>Why does my result look too high or too low?</h3>
+              <p>The most common cause is a unit mistake, such as entering centimeters as millimeters, meters as feet, or vice versa. Another common issue is quantity entered as bundles instead of bars. Check the per bar weight first. If that is unrealistic, fix the size or length input.</p>
+
+              <h3>Should I change the steel density value?</h3>
+              <p>Usually no. Small density differences have a small impact compared with bar size and length. Only adjust density if you have a specific material spec from a supplier and you are doing detailed cost analysis.</p>
+
+              <h3>Does this include waste, laps, hooks, or bends?</h3>
+              <p>No. This calculator treats each bar as a straight length. For a more realistic procurement number, add a waste factor separately or use your detailing schedule. Many projects carry an allowance for cutting and tying losses depending on complexity.</p>
+
+              <h3>Can I estimate total weight for a slab or footing quickly?</h3>
+              <p>Yes, if you can approximate total bar count and average length. Use the output to get a planning weight, then refine later by splitting different bar sizes and lengths into separate runs and adding the totals together.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48DYihu" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Everyday Math</div>
+                <p class="affiliate-copy">Apply math concepts to daily life problems and practical scenarios.</p>
+                <div class="affiliate-cta">View everyday math books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
 </html>

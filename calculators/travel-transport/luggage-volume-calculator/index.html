@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Luggage Volume Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/travel-transport/luggage-volume-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Luggage Volume Calculator | SnapCalc" property="og:title"/>
-<meta content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/travel-transport/luggage-volume-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Luggage Volume Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Luggage Volume Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/luggage-volume-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Luggage Volume Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/luggage-volume-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luggage Volume Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate luggage volume in litres from suitcase dimensions. Estimate usable packing capacity with an optional space-loss factor.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Calculate luggage volume in litres from suitcase dimensions and estimate usable packing capacity with an optional space-loss factor."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,125 +76,185 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
         <span>Luggage Volume Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Luggage Volume Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Estimate suitcase capacity in litres</h2>
-<p class="calculator-intro">Enter your bag’s dimensions to estimate total volume and a more realistic usable packing capacity.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="unitSelect">Units</label>
-<select aria-label="Select units" id="unitSelect">
-<option selected="" value="cm">Centimetres (cm)</option>
-<option value="in">Inches (in)</option>
-</select>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Luggage Volume Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KKSVUA" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Vehicle Maintenance</div>
+    <p class="affiliate-copy">Track vehicle servicing, maintenance intervals, and running costs.</p>
+    <div class="affiliate-cta">Explore vehicle maintenance trackers on Amazon</div>
+  </a>
 </div>
-<div class="form-group">
-<label for="lengthInput">Length</label>
-<input aria-label="Length" id="lengthInput" inputmode="decimal" placeholder="e.g., 55" type="text"/>
-</div>
-<div class="form-group">
-<label for="widthInput">Width</label>
-<input aria-label="Width" id="widthInput" inputmode="decimal" placeholder="e.g., 35" type="text"/>
-</div>
-<div class="form-group">
-<label for="heightInput">Height (depth)</label>
-<input aria-label="Height" id="heightInput" inputmode="decimal" placeholder="e.g., 25" type="text"/>
-</div>
-<div class="form-group">
-<label for="usableFactorInput">Usable capacity factor (optional, %)</label>
-<input aria-label="Usable capacity factor percent" id="usableFactorInput" inputmode="decimal" placeholder="Default: 85" type="text"/>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate volume</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate suitcase capacity in litres</h2>
+
+              <p class="calculator-intro">Enter your bag’s dimensions to estimate total volume and a more realistic usable packing capacity.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="unitSelect">Units</label>
+                <select id="unitSelect" aria-label="Select units">
+                  <option value="cm" selected>Centimetres (cm)</option>
+                  <option value="in">Inches (in)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="lengthInput">Length</label>
+                <input type="text" id="lengthInput" inputmode="decimal" placeholder="e.g., 55" aria-label="Length">
+              </div>
+
+              <div class="form-group">
+                <label for="widthInput">Width</label>
+                <input type="text" id="widthInput" inputmode="decimal" placeholder="e.g., 35" aria-label="Width">
+              </div>
+
+              <div class="form-group">
+                <label for="heightInput">Height (depth)</label>
+                <input type="text" id="heightInput" inputmode="decimal" placeholder="e.g., 25" aria-label="Height">
+              </div>
+
+              <div class="form-group">
+                <label for="usableFactorInput">Usable capacity factor (optional, %)</label>
+                <input type="text" id="usableFactorInput" inputmode="decimal" placeholder="Default: 85" aria-label="Usable capacity factor percent">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate volume</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/travel-transport/">
-<h3 class="related-title">Travel &amp; Transport</h3>
-<p class="related-desc">Plan trips with practical tools for time, luggage, routes, and travel costs.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/conversions-units-currencies/">
-<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-<p class="related-desc">Convert measurements and units for everyday and technical use without guesswork.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/everyday-life-tools/">
-<h3 class="related-title">Everyday Life Tools</h3>
-<p class="related-desc">Quick calculators for common decisions like budgets, tips, schedules, and daily planning.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Calculate luggage volume in litres from suitcase dimensions</h2>
-<p>If you are comparing suitcases or trying to estimate how much you can realistically pack, the number that matters most is capacity in litres. Many brands list a litre rating, but it is not always consistent because they may measure slightly differently, round aggressively, or include parts of the shell that are not usable for packing. This calculator is built for one practical decision: estimate a bag’s capacity from its dimensions so you can compare options on the same basis. You enter length, width, and height, choose centimetres or inches, and the calculator converts the result into litres. It also gives a “usable” estimate using an optional factor to account for real-world space losses like rounded corners, internal lining, handles, wheel housings, and the fact that you cannot pack perfectly to the edges.</p>
-<p>Use the calculator with the dimensions you actually have. If you are measuring a bag at home, measure the inside packing cavity when possible because external shell dimensions often overstate how much you can fit. If you only have external dimensions from a product listing, the litre estimate will still be useful for comparison, but expect the usable capacity to be noticeably lower. The output shows total volume (geometric box volume) and usable volume (total volume multiplied by your chosen factor). For most hard-shell suitcases, a usable factor around 80% to 90% is a defensible approximation, with 85% as a practical default. The result also includes common capacity ranges (small, medium, large) so you can sanity-check whether your number is in the expected ballpark.</p>
-<p>What the outputs mean: “Total volume” is a pure maths calculation of a rectangular box: length × width × height. It is the best you can do with limited information, but it can be optimistic because luggage is rarely a perfect rectangle inside. “Estimated usable capacity” tries to answer the question you actually care about: how many litres of packable space you can reasonably rely on. If you enter a usable factor, you are telling the calculator how “rectangular” and unobstructed your bag is. If you leave it blank, the calculator uses a default factor and states that assumption. This tool is not for airline baggage dimension compliance, weight limits, or checked vs carry-on rules. It is strictly for capacity comparison and packing realism.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>The bag is approximated as a rectangular box using length × width × height.</li>
-<li>Litres are calculated from cubic centimetres (1,000 cm³ = 1 litre) after converting inches to centimetres when needed.</li>
-<li>If you do not provide a usable capacity factor, the calculator assumes 85% usable space by default.</li>
-<li>The usable capacity factor is a simple adjustment for lost space (rounded corners, lining, wheel housings, handles, and imperfect packing).</li>
-<li>This calculator is for capacity estimation and comparison, not airline size compliance or weight-based packing limits.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>Should I measure internal or external suitcase dimensions?</h3>
-<p>Internal dimensions are better because they describe the actual packing cavity. External dimensions often include shell thickness, rails, and wheel structures that do not translate into packable space. If you only have external dimensions (common in online listings), the total litre number is still useful for comparing similar bags, but treat the usable capacity estimate as the decision metric.</p>
-<h3>Why does the “usable capacity” differ from the total volume?</h3>
-<p>Total volume assumes a perfect rectangular box filled edge-to-edge. Real luggage has curves and obstructions, and you cannot pack perfectly with zero wasted space. The usable factor is a controlled way to bring the number closer to reality. If your bag has very rounded corners or major wheel housings inside, use a lower factor. If it is very boxy and unobstructed, use a higher factor.</p>
-<h3>What usable capacity factor should I use?</h3>
-<p>If you do not know, use the default 85%. If you want to be stricter, use 80% for bags with noticeable internal curves or bulky internal structures. If you have a very square, minimal-interior hard case, 90% can be reasonable. The point is consistency: pick one factor and apply it to the bags you are comparing.</p>
-<h3>My bag brand lists litres that do not match this calculator. Is this wrong?</h3>
-<p>Not necessarily. Brands may measure internal volume differently, include pockets, use different reference points for dimensions, or round marketing numbers. This calculator is a standardised comparison method: given dimensions, it produces a consistent estimate. If you want the closest alignment to real packing space, prioritise measuring internal dimensions and adjust the usable factor until it matches your lived experience with that specific bag.</p>
-<h3>Does this tell me how much weight I can pack?</h3>
-<p>No. Volume and weight are different constraints. Weight depends on airline limits, the bag’s own weight, and what you pack. This calculator answers one question: how much space you have in litres. If you also care about weight, treat it as a separate check after you have chosen an appropriate capacity.</p>
-<div class="last-updated">Last updated: 2025-12-30</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oYfbbA" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Route Planning</div>
+    <p class="affiliate-copy">Plan optimal travel routes for driving, public transport, and multi-stop journeys.</p>
+    <div class="affiliate-cta">View route planning tools on Amazon</div>
+  </a>
 </div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan trips with practical tools for time, luggage, routes, and travel costs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert measurements and units for everyday and technical use without guesswork.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick calculators for common decisions like budgets, tips, schedules, and daily planning.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/48XsOBX" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Parking Costs</div>
+    <p class="affiliate-copy">Estimate parking costs across cities and travel destinations.</p>
+    <div class="affiliate-cta">Browse parking cost calculators on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Calculate luggage volume in litres from suitcase dimensions</h2>
+
+              <p>If you are comparing suitcases or trying to estimate how much you can realistically pack, the number that matters most is capacity in litres. Many brands list a litre rating, but it is not always consistent because they may measure slightly differently, round aggressively, or include parts of the shell that are not usable for packing. This calculator is built for one practical decision: estimate a bag’s capacity from its dimensions so you can compare options on the same basis. You enter length, width, and height, choose centimetres or inches, and the calculator converts the result into litres. It also gives a “usable” estimate using an optional factor to account for real-world space losses like rounded corners, internal lining, handles, wheel housings, and the fact that you cannot pack perfectly to the edges.</p>
+
+              <p>Use the calculator with the dimensions you actually have. If you are measuring a bag at home, measure the inside packing cavity when possible because external shell dimensions often overstate how much you can fit. If you only have external dimensions from a product listing, the litre estimate will still be useful for comparison, but expect the usable capacity to be noticeably lower. The output shows total volume (geometric box volume) and usable volume (total volume multiplied by your chosen factor). For most hard-shell suitcases, a usable factor around 80% to 90% is a defensible approximation, with 85% as a practical default. The result also includes common capacity ranges (small, medium, large) so you can sanity-check whether your number is in the expected ballpark.</p>
+
+              <p>What the outputs mean: “Total volume” is a pure maths calculation of a rectangular box: length × width × height. It is the best you can do with limited information, but it can be optimistic because luggage is rarely a perfect rectangle inside. “Estimated usable capacity” tries to answer the question you actually care about: how many litres of packable space you can reasonably rely on. If you enter a usable factor, you are telling the calculator how “rectangular” and unobstructed your bag is. If you leave it blank, the calculator uses a default factor and states that assumption. This tool is not for airline baggage dimension compliance, weight limits, or checked vs carry-on rules. It is strictly for capacity comparison and packing realism.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The bag is approximated as a rectangular box using length × width × height.</li>
+                <li>Litres are calculated from cubic centimetres (1,000 cm³ = 1 litre) after converting inches to centimetres when needed.</li>
+                <li>If you do not provide a usable capacity factor, the calculator assumes 85% usable space by default.</li>
+                <li>The usable capacity factor is a simple adjustment for lost space (rounded corners, lining, wheel housings, handles, and imperfect packing).</li>
+                <li>This calculator is for capacity estimation and comparison, not airline size compliance or weight-based packing limits.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Should I measure internal or external suitcase dimensions?</h3>
+              <p>Internal dimensions are better because they describe the actual packing cavity. External dimensions often include shell thickness, rails, and wheel structures that do not translate into packable space. If you only have external dimensions (common in online listings), the total litre number is still useful for comparing similar bags, but treat the usable capacity estimate as the decision metric.</p>
+
+              <h3>Why does the “usable capacity” differ from the total volume?</h3>
+              <p>Total volume assumes a perfect rectangular box filled edge-to-edge. Real luggage has curves and obstructions, and you cannot pack perfectly with zero wasted space. The usable factor is a controlled way to bring the number closer to reality. If your bag has very rounded corners or major wheel housings inside, use a lower factor. If it is very boxy and unobstructed, use a higher factor.</p>
+
+              <h3>What usable capacity factor should I use?</h3>
+              <p>If you do not know, use the default 85%. If you want to be stricter, use 80% for bags with noticeable internal curves or bulky internal structures. If you have a very square, minimal-interior hard case, 90% can be reasonable. The point is consistency: pick one factor and apply it to the bags you are comparing.</p>
+
+              <h3>My bag brand lists litres that do not match this calculator. Is this wrong?</h3>
+              <p>Not necessarily. Brands may measure internal volume differently, include pockets, use different reference points for dimensions, or round marketing numbers. This calculator is a standardised comparison method: given dimensions, it produces a consistent estimate. If you want the closest alignment to real packing space, prioritise measuring internal dimensions and adjust the usable factor until it matches your lived experience with that specific bag.</p>
+
+              <h3>Does this tell me how much weight I can pack?</h3>
+              <p>No. Volume and weight are different constraints. Weight depends on airline limits, the bag’s own weight, and what you pack. This calculator answers one question: how much space you have in litres. If you also care about weight, treat it as a separate check after you have chosen an appropriate capacity.</p>
+
+              <div class="last-updated">Last updated: 2025-12-30</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
 </html>

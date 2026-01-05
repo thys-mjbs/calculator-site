@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Amortization Schedule Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/loans-credit/amortization-schedule-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Amortization Schedule Calculator | SnapCalc" property="og:title"/>
-<meta content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/loans-credit/amortization-schedule-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Amortization Schedule Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Amortization Schedule Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/loans-credit/amortization-schedule-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Amortization Schedule Calculator | SnapCalc">
+    <meta property="og:description" content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/loans-credit/amortization-schedule-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amortization Schedule Calculator | SnapCalc">
+    <meta name="twitter:description" content="Build a loan amortization schedule, estimate monthly payments, total interest, and payoff time, with optional extra payments.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Create a loan amortization schedule with monthly payment estimates, total interest, and payoff timing, including optional extra payments."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,122 +76,182 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
-        <a href="/categories/loans-credit/">Loans &amp; Credit</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/loans-credit/">Loans & Credit</a> ›
         <span>Amortization Schedule Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Amortization Schedule Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Amortization schedule and payoff breakdown</h2>
-<p class="calculator-intro">Enter your loan details to estimate your monthly payment, total interest, and a month-by-month amortization table. Add an optional extra monthly payment to see how much faster you can finish.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="loanAmount">Loan amount</label>
-<input id="loanAmount" inputmode="decimal" placeholder="e.g., 250,000" type="text"/>
-</div>
-<div class="form-group">
-<label for="annualRate">Interest rate (APR %)</label>
-<input id="annualRate" inputmode="decimal" placeholder="e.g., 11.75" type="text"/>
-</div>
-<div class="form-group">
-<label for="termYears">Loan term (years)</label>
-<input id="termYears" inputmode="numeric" placeholder="e.g., 5" type="text"/>
-</div>
-<div class="form-group">
-<label for="extraPayment">Extra payment per month (optional)</label>
-<input id="extraPayment" inputmode="decimal" placeholder="e.g., 500" type="text"/>
-</div>
-<div class="checkbox-row">
-<input checked="" id="showSchedule" type="checkbox"/>
-<label for="showSchedule">Show full amortization table</label>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate amortization</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+      </nav>
+
+      <div class="page-layout">
+        <h1>Amortization Schedule Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4q8k1UA" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Loan Repayment Strategies</div>
+                <p class="affiliate-copy">Learn structured methods for paying down loans faster and reducing total interest costs.</p>
+                <div class="affiliate-cta">Explore loan repayment books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Amortization schedule and payoff breakdown</h2>
+
+              <p class="calculator-intro">Enter your loan details to estimate your monthly payment, total interest, and a month-by-month amortization table. Add an optional extra monthly payment to see how much faster you can finish.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="loanAmount">Loan amount</label>
+                <input type="text" id="loanAmount" inputmode="decimal" placeholder="e.g., 250,000">
+              </div>
+
+              <div class="form-group">
+                <label for="annualRate">Interest rate (APR %)</label>
+                <input type="text" id="annualRate" inputmode="decimal" placeholder="e.g., 11.75">
+              </div>
+
+              <div class="form-group">
+                <label for="termYears">Loan term (years)</label>
+                <input type="text" id="termYears" inputmode="numeric" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="extraPayment">Extra payment per month (optional)</label>
+                <input type="text" id="extraPayment" inputmode="decimal" placeholder="e.g., 500">
+              </div>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="showSchedule" checked>
+                <label for="showSchedule">Show full amortization table</label>
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate amortization</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/loans-credit/">
-<h3 class="related-title">Loans &amp; Credit</h3>
-<p class="related-desc">Compare loan types, estimate repayments, and understand how interest and credit costs add up.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/personal-finance/">
-<h3 class="related-title">Personal Finance</h3>
-<p class="related-desc">Plan budgets, track take-home pay, and stress-test your cash flow before taking on debt.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/savings-investments/">
-<h3 class="related-title">Savings &amp; Investments</h3>
-<p class="related-desc">Model how saving, investing, and debt paydown trade off over time in real numbers.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Amortization schedule calculator for loans and monthly payments</h2>
-<p>An amortization schedule shows how a loan balance changes over time when you make regular payments. Each payment is split into two parts: interest (the cost of borrowing) and principal (the amount that actually reduces the balance). In the early months, interest usually takes a larger share of each payment because the balance is still high. Over time, as the balance shrinks, the interest portion drops and more of each payment goes toward principal.</p>
-<p>This calculator creates a month-by-month amortization table from three core inputs: loan amount, interest rate (APR), and loan term in years. It also estimates the fixed monthly payment for a standard fully amortizing loan. If you add an optional extra payment per month, the calculator re-runs the schedule using the same interest rate but a faster payoff. That lets you see two practical things most people care about: how much interest you can save and how many months you can cut off the loan.</p>
-<p>To use it, enter your loan amount (the principal), your annual interest rate (APR), and the loan term. If you do not know the exact APR, use the best estimate you have from a quote or statement. Then, optionally enter an extra monthly payment amount. An extra payment does not change the interest rate. It simply reduces the balance faster, which reduces future interest because interest is calculated on the remaining balance each month. The results include the estimated monthly payment, totals over the life of the loan, and (if enabled) a full amortization table showing every month’s payment split and remaining balance.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>Payments are calculated monthly using a standard fixed-rate amortization formula (APR divided by 12).</li>
-<li>If the interest rate is 0%, the payment is principal divided evenly across months (no interest added).</li>
-<li>Extra monthly payments (if provided) are applied directly to principal after the scheduled payment is applied.</li>
-<li>The final payment is adjusted automatically if the remaining balance is smaller than the scheduled principal portion.</li>
-<li>Results are estimates and may differ from your lender due to rounding rules, fees, insurance, or payment timing specifics.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>What is an amortization schedule and why does it matter?</h3>
-<p>An amortization schedule is a detailed table that shows each payment date (or payment number), how much of that payment is interest, how much is principal, and what balance remains afterward. It matters because it makes the cost of borrowing visible. You can see how much interest you pay early on, how quickly (or slowly) the balance falls, and what happens if you make extra payments.</p>
-<h3>Why is so much of my payment interest at the beginning?</h3>
-<p>Interest is calculated on the outstanding balance. At the start of a loan, the balance is at its highest, so the interest charge for that month is also at its highest. Your payment is fixed, so the principal portion starts smaller. As the balance decreases, the interest portion decreases too, leaving more of the fixed payment to reduce principal.</p>
-<h3>How do extra payments reduce total interest so much?</h3>
-<p>Extra payments reduce the balance sooner. Since future interest is calculated on the balance, a lower balance means lower interest every month after that. The effect compounds across the remaining term. Even a small extra payment can shorten the loan and remove many months of future interest charges.</p>
-<h3>Does an extra payment change my required monthly payment?</h3>
-<p>No. Your required scheduled payment is set by the original loan terms. Extra payments are voluntary amounts you add on top. Some lenders apply extras to principal by default, while others require you to specify principal-only. Always verify how your lender applies extra payments to avoid surprises.</p>
-<h3>When will my results differ from my lender’s statement?</h3>
-<p>Differences usually come from timing and fees. Lenders may calculate interest daily, round each month differently, or include additional charges like account fees, insurance, or taxes. If you want the closest match, use the exact APR, confirm whether interest is daily or monthly, and treat this schedule as a planning estimate rather than a legal payoff quote.</p>
-<div class="last-updated">Last updated: 2025-12-15</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
-</div>
-</footer>
-<script data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans & Credit</h3>
+              <p class="related-desc">Compare loan types, estimate repayments, and understand how interest and credit costs add up.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Plan budgets, track take-home pay, and stress-test your cash flow before taking on debt.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings & Investments</h3>
+              <p class="related-desc">Model how saving, investing, and debt paydown trade off over time in real numbers.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/44uB2jn" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Credit Scores</div>
+                <p class="affiliate-copy">Understand how credit scores work and how to improve them responsibly over time.</p>
+                <div class="affiliate-cta">View credit score improvement books on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Amortization schedule calculator for loans and monthly payments</h2>
+
+              <p>An amortization schedule shows how a loan balance changes over time when you make regular payments. Each payment is split into two parts: interest (the cost of borrowing) and principal (the amount that actually reduces the balance). In the early months, interest usually takes a larger share of each payment because the balance is still high. Over time, as the balance shrinks, the interest portion drops and more of each payment goes toward principal.</p>
+
+              <p>This calculator creates a month-by-month amortization table from three core inputs: loan amount, interest rate (APR), and loan term in years. It also estimates the fixed monthly payment for a standard fully amortizing loan. If you add an optional extra payment per month, the calculator re-runs the schedule using the same interest rate but a faster payoff. That lets you see two practical things most people care about: how much interest you can save and how many months you can cut off the loan.</p>
+
+              <p>To use it, enter your loan amount (the principal), your annual interest rate (APR), and the loan term. If you do not know the exact APR, use the best estimate you have from a quote or statement. Then, optionally enter an extra monthly payment amount. An extra payment does not change the interest rate. It simply reduces the balance faster, which reduces future interest because interest is calculated on the remaining balance each month. The results include the estimated monthly payment, totals over the life of the loan, and (if enabled) a full amortization table showing every month’s payment split and remaining balance.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Payments are calculated monthly using a standard fixed-rate amortization formula (APR divided by 12).</li>
+                <li>If the interest rate is 0%, the payment is principal divided evenly across months (no interest added).</li>
+                <li>Extra monthly payments (if provided) are applied directly to principal after the scheduled payment is applied.</li>
+                <li>The final payment is adjusted automatically if the remaining balance is smaller than the scheduled principal portion.</li>
+                <li>Results are estimates and may differ from your lender due to rounding rules, fees, insurance, or payment timing specifics.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is an amortization schedule and why does it matter?</h3>
+              <p>An amortization schedule is a detailed table that shows each payment date (or payment number), how much of that payment is interest, how much is principal, and what balance remains afterward. It matters because it makes the cost of borrowing visible. You can see how much interest you pay early on, how quickly (or slowly) the balance falls, and what happens if you make extra payments.</p>
+
+              <h3>Why is so much of my payment interest at the beginning?</h3>
+              <p>Interest is calculated on the outstanding balance. At the start of a loan, the balance is at its highest, so the interest charge for that month is also at its highest. Your payment is fixed, so the principal portion starts smaller. As the balance decreases, the interest portion decreases too, leaving more of the fixed payment to reduce principal.</p>
+
+              <h3>How do extra payments reduce total interest so much?</h3>
+              <p>Extra payments reduce the balance sooner. Since future interest is calculated on the balance, a lower balance means lower interest every month after that. The effect compounds across the remaining term. Even a small extra payment can shorten the loan and remove many months of future interest charges.</p>
+
+              <h3>Does an extra payment change my required monthly payment?</h3>
+              <p>No. Your required scheduled payment is set by the original loan terms. Extra payments are voluntary amounts you add on top. Some lenders apply extras to principal by default, while others require you to specify principal-only. Always verify how your lender applies extra payments to avoid surprises.</p>
+
+              <h3>When will my results differ from my lender’s statement?</h3>
+              <p>Differences usually come from timing and fees. Lenders may calculate interest daily, round each month differently, or include additional charges like account fees, insurance, or taxes. If you want the closest match, use the exact APR, confirm whether interest is daily or monthly, and treat this schedule as a planning estimate rather than a legal payoff quote.</p>
+
+              <div class="last-updated">Last updated: 2025-12-15</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/48DKzHw" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Interest Calculations</div>
+                <p class="affiliate-copy">Learn how interest is calculated across loans, credit cards, and repayment schedules.</p>
+                <div class="affiliate-cta">Browse interest calculation books on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
 </html>

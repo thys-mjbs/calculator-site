@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Percentage Increase Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/math-general-calculators/percentage-increase-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Percentage Increase Calculator | SnapCalc" property="og:title"/>
-<meta content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/math-general-calculators/percentage-increase-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Percentage Increase Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Percentage Increase Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/math-general-calculators/percentage-increase-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Percentage Increase Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/math-general-calculators/percentage-increase-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Percentage Increase Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Calculate percentage increase between two values. See the change amount and percent increase from an original value to a new value."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,112 +76,169 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/math-general-calculators/">Math &amp; General Calculators</a> ›
         <span>Percentage Increase Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Percentage Increase Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Calculate percent increase from an original value to a new value</h2>
-<p class="calculator-intro">Enter the original value and the new value. This calculator shows the change amount and the percentage increase (or decrease if the new value is lower).</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="originalValue">Original value</label>
-<input id="originalValue" inputmode="decimal" placeholder="e.g., 1,000" type="text"/>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Percentage Increase Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oYdQl4" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Math Refresh</div>
+    <p class="affiliate-copy">Refresh core math skills for everyday use and confidence.</p>
+    <div class="affiliate-cta">Explore math refresh books on Amazon</div>
+  </a>
 </div>
-<div class="form-group">
-<label for="newValue">New value</label>
-<input id="newValue" inputmode="decimal" placeholder="e.g., 1,250" type="text"/>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate percentage increase</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Calculate percent increase from an original value to a new value</h2>
+
+              <p class="calculator-intro">Enter the original value and the new value. This calculator shows the change amount and the percentage increase (or decrease if the new value is lower).</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="originalValue">Original value</label>
+                <input type="text" id="originalValue" inputmode="decimal" placeholder="e.g., 1,000">
+              </div>
+
+              <div class="form-group">
+                <label for="newValue">New value</label>
+                <input type="text" id="newValue" inputmode="decimal" placeholder="e.g., 1,250">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate percentage increase</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/math-general-calculators/">
-<h3 class="related-title">Math &amp; General Calculators</h3>
-<p class="related-desc">Handle everyday math like percentages, ratios, averages, and quick number checks.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/personal-finance/">
-<h3 class="related-title">Personal Finance</h3>
-<p class="related-desc">Estimate budgets, savings changes, and everyday money decisions with simple calculators.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/business-accounting/">
-<h3 class="related-title">Business &amp; Accounting</h3>
-<p class="related-desc">Work through pricing, margins, growth metrics, and basic accounting-style calculations.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Percentage increase calculator for comparing an original value to a new value</h2>
-<p>A percentage increase tells you how much a value grew relative to where it started. People use percent increase for price changes, salary adjustments, budget changes, sales growth, population growth, weight change, and almost anything where you have an “old” value and a “new” value. This calculator takes two numbers and shows both the change amount and the percentage change, so you do not have to do the math manually.</p>
-<p>To use the calculator, enter the original value (the starting number) and the new value (the ending number). The result includes the difference between the two values and the percentage change. If the new value is higher than the original value, the percentage will be positive and the label will show an increase. If the new value is lower, the percentage will be negative and the label will show a decrease. That makes it useful even if you are comparing values that went down, without needing a separate percent decrease tool.</p>
-<p>Understanding the outputs is straightforward. The change amount is simply new minus original. The percentage change is the change amount divided by the original value, multiplied by 100. That “relative to the original value” part is the key. A change of 50 might be huge if you started at 100, but minor if you started at 10,000. Percent change lets you compare changes across different scales.</p>
-<p>This calculator is useful for real-world situations where you need a quick, consistent answer. For example, if a product price moved from 799 to 899, the calculator shows both the absolute change (100) and the percentage change, which is easier to compare across multiple products. If you are tracking a KPI like monthly revenue, percent increase gives you a fast sense of growth rate rather than just raw currency movement. For personal planning, it is also helpful when checking whether a salary increase keeps up with inflation, or how much a monthly expense grew over time.</p>
-<p>If you need to apply a percentage increase to a starting number (for example, “increase 1,000 by 15%”), this calculator can still help if you enter the original value and the calculated new value. In many cases, people mix up percentage points and percent increase. This tool avoids that confusion by always anchoring the calculation to the original value and showing the full relationship between the two numbers.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>The original value must be greater than 0 to compute a meaningful percentage change.</li>
-<li>The new value can be any number, including 0, but the percentage is always measured relative to the original value.</li>
-<li>Results are shown with two decimals for consistency and easy comparison across scenarios.</li>
-<li>If the new value is lower than the original value, the result will display a negative percentage (a decrease).</li>
-<li>For currency-style use cases, this tool does not add currency symbols, but you can interpret the numbers as money if that fits your scenario.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>What is the formula for percentage increase?</h3>
-<p>The formula is: percentage change = ((new value − original value) ÷ original value) × 100. If the new value is larger, the result is positive (increase). If it is smaller, the result is negative (decrease).</p>
-<h3>Why can’t I calculate a percentage change from an original value of 0?</h3>
-<p>Percentage change is defined relative to the starting point. Dividing by 0 is not valid in normal arithmetic, so a percent increase from 0 is not a single defined number. In practical terms, any positive move from 0 is an “infinite” increase, which is why this calculator requires an original value greater than 0.</p>
-<h3>Is percentage increase the same as percentage points?</h3>
-<p>No. Percentage points describe the difference between two percentages (for example, from 10% to 12% is +2 percentage points). Percentage increase compares the size of a change relative to the original value. They are used for different kinds of comparisons.</p>
-<h3>How do I calculate percent increase for prices or salary?</h3>
-<p>Enter the old price or old salary as the original value, and the new price or new salary as the new value. The calculator will show the increase amount and the percentage change, which helps you compare different items or offers fairly.</p>
-<h3>What does a negative result mean?</h3>
-<p>A negative result means the new value is lower than the original value. The change amount will be negative, and the percentage change will also be negative. That is effectively a percentage decrease, displayed using the same consistent method.</p>
-<div class="last-updated">Last updated: 2025-12-13</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4oYdQl4" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Math Refresh</div>
+    <p class="affiliate-copy">Refresh core math skills for everyday use and confidence.</p>
+    <div class="affiliate-cta">Explore math refresh books on Amazon</div>
+  </a>
 </div>
-</footer>
-<script data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/math-general-calculators/">
+              <h3 class="related-title">Math &amp; General Calculators</h3>
+              <p class="related-desc">Handle everyday math like percentages, ratios, averages, and quick number checks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Estimate budgets, savings changes, and everyday money decisions with simple calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/business-accounting/">
+              <h3 class="related-title">Business &amp; Accounting</h3>
+              <p class="related-desc">Work through pricing, margins, growth metrics, and basic accounting-style calculations.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Percentage increase calculator for comparing an original value to a new value</h2>
+
+              <p>A percentage increase tells you how much a value grew relative to where it started. People use percent increase for price changes, salary adjustments, budget changes, sales growth, population growth, weight change, and almost anything where you have an “old” value and a “new” value. This calculator takes two numbers and shows both the change amount and the percentage change, so you do not have to do the math manually.</p>
+
+              <p>To use the calculator, enter the original value (the starting number) and the new value (the ending number). The result includes the difference between the two values and the percentage change. If the new value is higher than the original value, the percentage will be positive and the label will show an increase. If the new value is lower, the percentage will be negative and the label will show a decrease. That makes it useful even if you are comparing values that went down, without needing a separate percent decrease tool.</p>
+
+              <p>Understanding the outputs is straightforward. The change amount is simply new minus original. The percentage change is the change amount divided by the original value, multiplied by 100. That “relative to the original value” part is the key. A change of 50 might be huge if you started at 100, but minor if you started at 10,000. Percent change lets you compare changes across different scales.</p>
+
+              <p>This calculator is useful for real-world situations where you need a quick, consistent answer. For example, if a product price moved from 799 to 899, the calculator shows both the absolute change (100) and the percentage change, which is easier to compare across multiple products. If you are tracking a KPI like monthly revenue, percent increase gives you a fast sense of growth rate rather than just raw currency movement. For personal planning, it is also helpful when checking whether a salary increase keeps up with inflation, or how much a monthly expense grew over time.</p>
+
+              <p>If you need to apply a percentage increase to a starting number (for example, “increase 1,000 by 15%”), this calculator can still help if you enter the original value and the calculated new value. In many cases, people mix up percentage points and percent increase. This tool avoids that confusion by always anchoring the calculation to the original value and showing the full relationship between the two numbers.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The original value must be greater than 0 to compute a meaningful percentage change.</li>
+                <li>The new value can be any number, including 0, but the percentage is always measured relative to the original value.</li>
+                <li>Results are shown with two decimals for consistency and easy comparison across scenarios.</li>
+                <li>If the new value is lower than the original value, the result will display a negative percentage (a decrease).</li>
+                <li>For currency-style use cases, this tool does not add currency symbols, but you can interpret the numbers as money if that fits your scenario.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What is the formula for percentage increase?</h3>
+              <p>The formula is: percentage change = ((new value − original value) ÷ original value) × 100. If the new value is larger, the result is positive (increase). If it is smaller, the result is negative (decrease).</p>
+
+              <h3>Why can’t I calculate a percentage change from an original value of 0?</h3>
+              <p>Percentage change is defined relative to the starting point. Dividing by 0 is not valid in normal arithmetic, so a percent increase from 0 is not a single defined number. In practical terms, any positive move from 0 is an “infinite” increase, which is why this calculator requires an original value greater than 0.</p>
+
+              <h3>Is percentage increase the same as percentage points?</h3>
+              <p>No. Percentage points describe the difference between two percentages (for example, from 10% to 12% is +2 percentage points). Percentage increase compares the size of a change relative to the original value. They are used for different kinds of comparisons.</p>
+
+              <h3>How do I calculate percent increase for prices or salary?</h3>
+              <p>Enter the old price or old salary as the original value, and the new price or new salary as the new value. The calculator will show the increase amount and the percentage change, which helps you compare different items or offers fairly.</p>
+
+              <h3>What does a negative result mean?</h3>
+              <p>A negative result means the new value is lower than the original value. The change amount will be negative, and the percentage change will also be negative. That is effectively a percentage decrease, displayed using the same consistent method.</p>
+
+              <div class="last-updated">Last updated: 2025-12-13</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "[CLOUDFLARE_BEACON_TOKEN]"}'>
+    </script>
+  </body>
 </html>

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Commute Time Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/travel-transport/commute-time-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Commute Time Calculator | SnapCalc" property="og:title"/>
-<meta content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/travel-transport/commute-time-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Commute Time Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Commute Time Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/travel-transport/commute-time-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Commute Time Calculator | SnapCalc">
+    <meta property="og:description" content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/travel-transport/commute-time-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Commute Time Calculator | SnapCalc">
+    <meta name="twitter:description" content="Estimate your commute time from distance, speed, traffic delays, and stops. Get one-way and round-trip time plus an optional arrival time estimate.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Estimate commute time using distance, speed (or common travel modes), optional delays and stops, and an optional departure time for an arrival estimate."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,157 +76,222 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/travel-transport/">Travel &amp; Transport</a> ›
         <span>Commute Time Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Commute Time Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Estimate commute duration and arrival time</h2>
-<p class="calculator-intro">Use distance and either a travel mode or your own average speed. Add traffic delays and stops for a more realistic estimate.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="modeSelect">Travel mode</label>
-<select id="modeSelect">
-<option value="drivingCity">Driving (city)</option>
-<option value="drivingHighway">Driving (highway)</option>
-<option value="publicTransport">Public transport</option>
-<option value="cycling">Cycling</option>
-<option value="walking">Walking</option>
-<option value="custom">Custom speed</option>
-</select>
-</div>
-<div class="form-group">
-<label for="distanceInput">Distance</label>
-<input id="distanceInput" inputmode="decimal" placeholder="e.g., 18.5" type="text"/>
-</div>
-<div class="form-group">
-<label for="distanceUnitSelect">Distance unit</label>
-<select id="distanceUnitSelect">
-<option value="km">Kilometres (km)</option>
-<option value="mi">Miles (mi)</option>
-</select>
-</div>
-<div class="form-group">
-<label for="speedInput">Average speed</label>
-<input id="speedInput" inputmode="decimal" placeholder="e.g., 50" type="text"/>
-</div>
-<div class="form-group">
-<label for="speedUnitSelect">Speed unit</label>
-<select id="speedUnitSelect">
-<option value="kmh">km/h</option>
-<option value="mph">mph</option>
-</select>
-</div>
-<div class="form-group">
-<label for="delayMinutesInput">Extra delay (optional, minutes)</label>
-<input id="delayMinutesInput" inputmode="numeric" placeholder="e.g., 10" type="text"/>
-</div>
-<div class="form-group">
-<label for="stopsCountInput">Stops (optional, count)</label>
-<input id="stopsCountInput" inputmode="numeric" placeholder="e.g., 2" type="text"/>
-</div>
-<div class="form-group">
-<label for="minutesPerStopInput">Minutes per stop (optional)</label>
-<input id="minutesPerStopInput" inputmode="numeric" placeholder="e.g., 3" type="text"/>
-</div>
-<div class="form-group">
-<label for="departureTimeInput">Departure time (optional, 24h HH:MM)</label>
-<input id="departureTimeInput" inputmode="numeric" placeholder="e.g., 07:30" type="text"/>
-</div>
-<div class="form-group">
-<label>
-<input id="roundTripCheckbox" type="checkbox"/>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Commute Time Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4qbCsYt" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Fuel Costs</div>
+                <p class="affiliate-copy">Calculate fuel consumption and travel costs for road trips.</p>
+                <div class="affiliate-cta">Explore fuel cost calculation tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate commute duration and arrival time</h2>
+
+              <p class="calculator-intro">Use distance and either a travel mode or your own average speed. Add traffic delays and stops for a more realistic estimate.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="modeSelect">Travel mode</label>
+                <select id="modeSelect">
+                  <option value="drivingCity">Driving (city)</option>
+                  <option value="drivingHighway">Driving (highway)</option>
+                  <option value="publicTransport">Public transport</option>
+                  <option value="cycling">Cycling</option>
+                  <option value="walking">Walking</option>
+                  <option value="custom">Custom speed</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="distanceInput">Distance</label>
+                <input id="distanceInput" type="text" inputmode="decimal" placeholder="e.g., 18.5">
+              </div>
+
+              <div class="form-group">
+                <label for="distanceUnitSelect">Distance unit</label>
+                <select id="distanceUnitSelect">
+                  <option value="km">Kilometres (km)</option>
+                  <option value="mi">Miles (mi)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="speedInput">Average speed</label>
+                <input id="speedInput" type="text" inputmode="decimal" placeholder="e.g., 50">
+              </div>
+
+              <div class="form-group">
+                <label for="speedUnitSelect">Speed unit</label>
+                <select id="speedUnitSelect">
+                  <option value="kmh">km/h</option>
+                  <option value="mph">mph</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="delayMinutesInput">Extra delay (optional, minutes)</label>
+                <input id="delayMinutesInput" type="text" inputmode="numeric" placeholder="e.g., 10">
+              </div>
+
+              <div class="form-group">
+                <label for="stopsCountInput">Stops (optional, count)</label>
+                <input id="stopsCountInput" type="text" inputmode="numeric" placeholder="e.g., 2">
+              </div>
+
+              <div class="form-group">
+                <label for="minutesPerStopInput">Minutes per stop (optional)</label>
+                <input id="minutesPerStopInput" type="text" inputmode="numeric" placeholder="e.g., 3">
+              </div>
+
+              <div class="form-group">
+                <label for="departureTimeInput">Departure time (optional, 24h HH:MM)</label>
+                <input id="departureTimeInput" type="text" inputmode="numeric" placeholder="e.g., 07:30">
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input id="roundTripCheckbox" type="checkbox">
                   Calculate round trip (return journey)
                 </label>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate commute time</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate commute time</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/travel-transport/">
-<h3 class="related-title">Travel &amp; Transport</h3>
-<p class="related-desc">Plan trips, compare routes, estimate travel time, and budget transport costs.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/time-date-scheduling/">
-<h3 class="related-title">Time, Date &amp; Scheduling</h3>
-<p class="related-desc">Work with time zones, durations, dates, and schedules for everyday planning.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/conversions-units-currencies/">
-<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
-<p class="related-desc">Convert units and values quickly, including distances, speeds, and common measures.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Commute time estimator for driving, public transport, cycling, or walking</h2>
-<p>This commute time calculator estimates how long your trip will take based on distance and an average speed. It is built for normal, real-world planning, not perfect theory. If you want a quick answer, you can pick a travel mode like driving or walking and enter your distance. If you want a more realistic estimate, you can also add traffic or waiting delays and time spent stopping along the way.</p>
-<p>The main output is the estimated one-way commute time, shown in hours and minutes (plus total minutes for quick comparison). If you tick the round trip option, the calculator also doubles the time so you can estimate total daily commuting time. For many people, round trip is the number that actually matters because it affects sleep, childcare handoffs, gym plans, and how much buffer time you need in the morning and afternoon.</p>
-<p>If you also enter a departure time, the calculator can estimate your arrival time. This is useful when you want a simple “leave at 07:30, arrive about 08:05” answer. Arrival time is optional because many people do not want to type a time, and some commutes vary enough that a single arrival prediction is only a rough planning aid. If your arrival rolls past midnight, the calculator will note that it lands on the next day.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li><strong>Average speed is an average:</strong> The calculator assumes your speed is roughly steady over the trip. If your commute includes slow segments (school zones, city centres), use a lower speed or add delay minutes.</li>
-<li><strong>Delays are added on top:</strong> “Extra delay” and “stops” are treated as additional time after the base travel time is calculated from distance and speed.</li>
-<li><strong>Stops are simplified:</strong> Stops are modeled as a count times minutes per stop. This works for stop signs, parking gates, station transfers, or coffee pickups, but it is not a traffic simulation.</li>
-<li><strong>Mode speeds are typical defaults:</strong> Driving, public transport, cycling, and walking presets are generic starting points. Replace them with your own custom speed if your route is consistently faster or slower.</li>
-<li><strong>Arrival time is a planning estimate:</strong> The arrival time assumes you depart exactly at the time you enter and experience the full estimated duration. Use it as a guide and add buffer for uncertainty.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>Why does my commute time change so much when I tweak speed?</h3>
-<p>Time equals distance divided by speed, so speed changes affect time non-linearly. On longer commutes, small speed differences can shift the result by several minutes. If your actual speed varies a lot, it is usually better to use a conservative speed and then add a separate delay estimate for traffic rather than chasing a “perfect” speed value.</p>
-<h3>What speed should I use if I do not know my average?</h3>
-<p>Start with a travel mode preset (for example, city driving) and see if the result feels roughly right compared to your experience. If you have a mapping app estimate for your route, you can back into your average speed by dividing distance by time, then set a custom speed. If your commute is inconsistent, keep the speed modest and add a realistic delay.</p>
-<h3>How should I use the delay and stops fields?</h3>
-<p>Use “Extra delay” for things that are not captured by average speed, such as waiting for a train, queueing at a gate, searching for parking, or known bottlenecks. Use “Stops” when you can count them and each stop is roughly similar. If you are not sure, leave stops blank and put a single delay estimate in minutes. The calculator will still work.</p>
-<h3>Does round trip always mean exactly double?</h3>
-<p>No. Morning and evening travel conditions can be different, and public transport waits can vary by time of day. The round trip option doubles the one-way estimate because it is a quick planning shortcut. If your return is usually slower, you can either increase the delay minutes to represent the average of both directions or run the calculator twice using different inputs and compare the two results.</p>
-<h3>What if my distance is in miles and my speed is in mph?</h3>
-<p>You can select miles for distance and mph for speed. The calculator converts units behind the scenes and still outputs time in minutes and hours. The important thing is that distance and speed units match what you enter so the math stays consistent.</p>
-<div class="last-updated">Last updated: 2025-12-18</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
-</div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4pz475D" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Distance Measurement</div>
+                <p class="affiliate-copy">Measure distances between locations for planning and logistics.</p>
+                <div class="affiliate-cta">View distance measurement tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel &amp; Transport</h3>
+              <p class="related-desc">Plan trips, compare routes, estimate travel time, and budget transport costs.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Work with time zones, durations, dates, and schedules for everyday planning.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/conversions-units-currencies/">
+              <h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+              <p class="related-desc">Convert units and values quickly, including distances, speeds, and common measures.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/44NGbn1" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Trip Budgeting</div>
+                <p class="affiliate-copy">Plan and track travel expenses to stay within budget.</p>
+                <div class="affiliate-cta">Browse trip budgeting tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Commute time estimator for driving, public transport, cycling, or walking</h2>
+
+              <p>This commute time calculator estimates how long your trip will take based on distance and an average speed. It is built for normal, real-world planning, not perfect theory. If you want a quick answer, you can pick a travel mode like driving or walking and enter your distance. If you want a more realistic estimate, you can also add traffic or waiting delays and time spent stopping along the way.</p>
+
+              <p>The main output is the estimated one-way commute time, shown in hours and minutes (plus total minutes for quick comparison). If you tick the round trip option, the calculator also doubles the time so you can estimate total daily commuting time. For many people, round trip is the number that actually matters because it affects sleep, childcare handoffs, gym plans, and how much buffer time you need in the morning and afternoon.</p>
+
+              <p>If you also enter a departure time, the calculator can estimate your arrival time. This is useful when you want a simple “leave at 07:30, arrive about 08:05” answer. Arrival time is optional because many people do not want to type a time, and some commutes vary enough that a single arrival prediction is only a rough planning aid. If your arrival rolls past midnight, the calculator will note that it lands on the next day.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li><strong>Average speed is an average:</strong> The calculator assumes your speed is roughly steady over the trip. If your commute includes slow segments (school zones, city centres), use a lower speed or add delay minutes.</li>
+                <li><strong>Delays are added on top:</strong> “Extra delay” and “stops” are treated as additional time after the base travel time is calculated from distance and speed.</li>
+                <li><strong>Stops are simplified:</strong> Stops are modeled as a count times minutes per stop. This works for stop signs, parking gates, station transfers, or coffee pickups, but it is not a traffic simulation.</li>
+                <li><strong>Mode speeds are typical defaults:</strong> Driving, public transport, cycling, and walking presets are generic starting points. Replace them with your own custom speed if your route is consistently faster or slower.</li>
+                <li><strong>Arrival time is a planning estimate:</strong> The arrival time assumes you depart exactly at the time you enter and experience the full estimated duration. Use it as a guide and add buffer for uncertainty.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does my commute time change so much when I tweak speed?</h3>
+              <p>Time equals distance divided by speed, so speed changes affect time non-linearly. On longer commutes, small speed differences can shift the result by several minutes. If your actual speed varies a lot, it is usually better to use a conservative speed and then add a separate delay estimate for traffic rather than chasing a “perfect” speed value.</p>
+
+              <h3>What speed should I use if I do not know my average?</h3>
+              <p>Start with a travel mode preset (for example, city driving) and see if the result feels roughly right compared to your experience. If you have a mapping app estimate for your route, you can back into your average speed by dividing distance by time, then set a custom speed. If your commute is inconsistent, keep the speed modest and add a realistic delay.</p>
+
+              <h3>How should I use the delay and stops fields?</h3>
+              <p>Use “Extra delay” for things that are not captured by average speed, such as waiting for a train, queueing at a gate, searching for parking, or known bottlenecks. Use “Stops” when you can count them and each stop is roughly similar. If you are not sure, leave stops blank and put a single delay estimate in minutes. The calculator will still work.</p>
+
+              <h3>Does round trip always mean exactly double?</h3>
+              <p>No. Morning and evening travel conditions can be different, and public transport waits can vary by time of day. The round trip option doubles the one-way estimate because it is a quick planning shortcut. If your return is usually slower, you can either increase the delay minutes to represent the average of both directions or run the calculator twice using different inputs and compare the two results.</p>
+
+              <h3>What if my distance is in miles and my speed is in mph?</h3>
+              <p>You can select miles for distance and mph for speed. The calculator converts units behind the scenes and still outputs time in minutes and hours. The important thing is that distance and speed units match what you enter so the math stays consistent.</p>
+
+              <div class="last-updated">Last updated: 2025-12-18</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
 </html>

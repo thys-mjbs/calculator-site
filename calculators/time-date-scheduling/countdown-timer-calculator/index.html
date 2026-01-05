@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Countdown Timer Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/time-date-scheduling/countdown-timer-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Countdown Timer Calculator | SnapCalc" property="og:title"/>
-<meta content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/time-date-scheduling/countdown-timer-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Countdown Timer Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Countdown Timer Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/time-date-scheduling/countdown-timer-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Countdown Timer Calculator | SnapCalc">
+    <meta property="og:description" content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/time-date-scheduling/countdown-timer-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Countdown Timer Calculator | SnapCalc">
+    <meta name="twitter:description" content="Count down to a specific date and time and see exactly how long is left in days, hours, minutes, and seconds. Optional start time shows progress percent.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Calculate a live countdown to a target date and time. Optionally include a start date and time to show progress percent and elapsed time."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,123 +76,183 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
-        <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/time-date-scheduling/">Time, Date & Scheduling</a> ›
         <span>Countdown Timer Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Countdown Timer Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Count down to a specific date and time</h2>
-<p class="calculator-intro">Set a target date and time, then get a live countdown in days, hours, minutes, and seconds. Add an optional start time to see progress.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="targetDate">Target date (YYYY-MM-DD)</label>
-<input aria-label="Target date in YYYY-MM-DD format" id="targetDate" inputmode="numeric" placeholder="2026-01-01" type="text"/>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Countdown Timer Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3KTN9Ql" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Blocking</div>
+    <p class="affiliate-copy">Organise days into focused blocks to improve productivity and reduce distractions.</p>
+    <div class="affiliate-cta">Explore time blocking planners on Amazon</div>
+  </a>
 </div>
-<div class="form-group">
-<label for="targetTime">Target time (HH:MM, optional)</label>
-<input aria-label="Target time in HH:MM format" id="targetTime" inputmode="numeric" placeholder="09:00" type="text"/>
-</div>
-<details class="advanced-block">
-<summary>Advanced (optional)</summary>
-<div class="form-group" style="margin-top:10px;">
-<label for="startDate">Start date (YYYY-MM-DD, optional)</label>
-<input aria-label="Start date in YYYY-MM-DD format" id="startDate" inputmode="numeric" placeholder="2025-12-22" type="text"/>
-</div>
-<div class="form-group">
-<label for="startTime">Start time (HH:MM, optional)</label>
-<input aria-label="Start time in HH:MM format" id="startTime" inputmode="numeric" placeholder="09:00" type="text"/>
-</div>
-</details>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Start countdown</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Count down to a specific date and time</h2>
+
+              <p class="calculator-intro">Set a target date and time, then get a live countdown in days, hours, minutes, and seconds. Add an optional start time to see progress.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="targetDate">Target date (YYYY-MM-DD)</label>
+                <input type="text" id="targetDate" placeholder="2026-01-01" inputmode="numeric" aria-label="Target date in YYYY-MM-DD format">
+              </div>
+
+              <div class="form-group">
+                <label for="targetTime">Target time (HH:MM, optional)</label>
+                <input type="text" id="targetTime" placeholder="09:00" inputmode="numeric" aria-label="Target time in HH:MM format">
+              </div>
+
+              <details class="advanced-block">
+                <summary>Advanced (optional)</summary>
+
+                <div class="form-group" style="margin-top:10px;">
+                  <label for="startDate">Start date (YYYY-MM-DD, optional)</label>
+                  <input type="text" id="startDate" placeholder="2025-12-22" inputmode="numeric" aria-label="Start date in YYYY-MM-DD format">
+                </div>
+
+                <div class="form-group">
+                  <label for="startTime">Start time (HH:MM, optional)</label>
+                  <input type="text" id="startTime" placeholder="09:00" inputmode="numeric" aria-label="Start time in HH:MM format">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Start countdown</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/time-date-scheduling/">
-<h3 class="related-title">Time, Date &amp; Scheduling</h3>
-<p class="related-desc">Plan timelines, convert times, and calculate dates for meetings, deadlines, and schedules.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/travel-transport/">
-<h3 class="related-title">Travel &amp; Transport</h3>
-<p class="related-desc">Estimate arrival times, trip durations, and travel planning numbers for practical journeys.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/everyday-life-tools/">
-<h3 class="related-title">Everyday Life Tools</h3>
-<p class="related-desc">Quick utilities for daily decisions, planning, and simple real-world calculations.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Countdown timer to a date and time</h2>
-<p>A countdown timer is for one job: showing how much time is left until a specific moment. The most common use is counting down to a deadline, event, meeting, sale ending, exam start, flight departure, or any other fixed date and time. This calculator is built for that single intent: you pick a target date and time, and it shows the remaining time in a clear breakdown you can scan quickly.</p>
-<p>Use it when you want an exact answer rather than guessing. Humans are bad at estimating time gaps once you cross days and weeks. A countdown gives you a concrete number and a consistent countdown that updates in real time. That makes it easier to plan the last few steps, decide when to start, and avoid missing the target by thinking you have more time than you do.</p>
-<p>To use the calculator, enter a target date in YYYY-MM-DD format. Add a target time in HH:MM format if you care about the exact hour and minute. If you leave the time blank, the calculator assumes midnight at the start of that date. Then click Start countdown. The result shows the time remaining as days, hours, minutes, and seconds, plus the target moment in your device’s local time display so you can sanity-check that you entered what you meant.</p>
-<p>The Advanced section is optional and exists for one practical reason: progress tracking. If you add a start date and time, the calculator can show how much of the full window has already elapsed and how much remains as a percent. This is useful for study plans, project windows, shipping cutoffs, and any situation where you are working within a fixed start-to-finish timeframe. If you do not know the start moment, skip it. You still get a full countdown.</p>
-<p>The outputs are designed for decisions, not trivia. The main countdown breakdown tells you how tight things are right now. The “total hours remaining” style figure helps when you think in work blocks or shifts. Progress percent (when a start time is provided) helps when you need to check if you are on pace. If the target time is in the past, the calculator stops you and tells you to choose a future time, because a countdown to the past is not a countdown.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>The target date and time are interpreted in your device’s local time zone (the same zone your browser is using).</li>
-<li>If you leave the target time blank, the calculator assumes 00:00 (midnight) at the start of the target date.</li>
-<li>If you provide a start date and time, progress percent is calculated from that start moment to the target moment, and the start must be earlier than the target.</li>
-<li>Seconds are shown for clarity, but real-world schedules still depend on clocks and time zone settings, so verify the target moment line matches your intent.</li>
-<li>This calculator is for a single fixed target moment. It is not intended for recurring schedules, interval training, or time zone conversion between cities.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>Why does the countdown look wrong by an hour?</h3>
-<p>That usually happens because of time zone or daylight saving changes on the device. This calculator uses your browser’s local time zone to interpret the target moment. Check your device time zone settings and confirm the “Target moment” line matches what you intended.</p>
-<h3>What if I only know the date but not the time?</h3>
-<p>Leave the time blank. The calculator will assume midnight (00:00) at the start of that date. If your real deadline is end-of-day, enter a time like 23:59 to match that intent.</p>
-<h3>Can I use this to count down to a meeting in another country?</h3>
-<p>Not reliably. This tool is locked to a single intent: countdown in your current device time zone. If you need cross-time-zone coordination, use a time zone converter, then paste the local target date and time into this countdown.</p>
-<h3>What does “progress percent” mean and when should I use it?</h3>
-<p>Progress percent measures how much of the time window has passed from your start moment to the target moment. It is only useful when you have a real start time and you care about pacing. If you just need “time left,” skip the start inputs.</p>
-<h3>What happens when the countdown reaches zero?</h3>
-<p>The countdown stops at zero and shows that the target has been reached. If you need a new countdown, change the target date or time and start again.</p>
-<div class="last-updated">Last updated: 2025-12-22</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/3MJ25Bn" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Tracking</div>
+    <p class="affiliate-copy">Track hours worked, task duration, and productivity over time.</p>
+    <div class="affiliate-cta">View time tracking tools on Amazon</div>
+  </a>
 </div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date & Scheduling</h3>
+              <p class="related-desc">Plan timelines, convert times, and calculate dates for meetings, deadlines, and schedules.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/travel-transport/">
+              <h3 class="related-title">Travel & Transport</h3>
+              <p class="related-desc">Estimate arrival times, trip durations, and travel planning numbers for practical journeys.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick utilities for daily decisions, planning, and simple real-world calculations.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Countdown timer to a date and time</h2>
+
+              <p>A countdown timer is for one job: showing how much time is left until a specific moment. The most common use is counting down to a deadline, event, meeting, sale ending, exam start, flight departure, or any other fixed date and time. This calculator is built for that single intent: you pick a target date and time, and it shows the remaining time in a clear breakdown you can scan quickly.</p>
+
+              <p>Use it when you want an exact answer rather than guessing. Humans are bad at estimating time gaps once you cross days and weeks. A countdown gives you a concrete number and a consistent countdown that updates in real time. That makes it easier to plan the last few steps, decide when to start, and avoid missing the target by thinking you have more time than you do.</p>
+
+              <p>To use the calculator, enter a target date in YYYY-MM-DD format. Add a target time in HH:MM format if you care about the exact hour and minute. If you leave the time blank, the calculator assumes midnight at the start of that date. Then click Start countdown. The result shows the time remaining as days, hours, minutes, and seconds, plus the target moment in your device’s local time display so you can sanity-check that you entered what you meant.</p>
+
+              <p>The Advanced section is optional and exists for one practical reason: progress tracking. If you add a start date and time, the calculator can show how much of the full window has already elapsed and how much remains as a percent. This is useful for study plans, project windows, shipping cutoffs, and any situation where you are working within a fixed start-to-finish timeframe. If you do not know the start moment, skip it. You still get a full countdown.</p>
+
+              <p>The outputs are designed for decisions, not trivia. The main countdown breakdown tells you how tight things are right now. The “total hours remaining” style figure helps when you think in work blocks or shifts. Progress percent (when a start time is provided) helps when you need to check if you are on pace. If the target time is in the past, the calculator stops you and tells you to choose a future time, because a countdown to the past is not a countdown.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>The target date and time are interpreted in your device’s local time zone (the same zone your browser is using).</li>
+                <li>If you leave the target time blank, the calculator assumes 00:00 (midnight) at the start of the target date.</li>
+                <li>If you provide a start date and time, progress percent is calculated from that start moment to the target moment, and the start must be earlier than the target.</li>
+                <li>Seconds are shown for clarity, but real-world schedules still depend on clocks and time zone settings, so verify the target moment line matches your intent.</li>
+                <li>This calculator is for a single fixed target moment. It is not intended for recurring schedules, interval training, or time zone conversion between cities.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does the countdown look wrong by an hour?</h3>
+              <p>That usually happens because of time zone or daylight saving changes on the device. This calculator uses your browser’s local time zone to interpret the target moment. Check your device time zone settings and confirm the “Target moment” line matches what you intended.</p>
+
+              <h3>What if I only know the date but not the time?</h3>
+              <p>Leave the time blank. The calculator will assume midnight (00:00) at the start of that date. If your real deadline is end-of-day, enter a time like 23:59 to match that intent.</p>
+
+              <h3>Can I use this to count down to a meeting in another country?</h3>
+              <p>Not reliably. This tool is locked to a single intent: countdown in your current device time zone. If you need cross-time-zone coordination, use a time zone converter, then paste the local target date and time into this countdown.</p>
+
+              <h3>What does “progress percent” mean and when should I use it?</h3>
+              <p>Progress percent measures how much of the time window has passed from your start moment to the target moment. It is only useful when you have a real start time and you care about pacing. If you just need “time left,” skip the start inputs.</p>
+
+              <h3>What happens when the countdown reaches zero?</h3>
+              <p>The countdown stops at zero and shows that the target has been reached. If you need a new countdown, change the target date or time and start again.</p>
+
+              <div class="last-updated">Last updated: 2025-12-22</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
 </html>

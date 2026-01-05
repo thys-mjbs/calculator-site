@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Block Quantity Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/construction-materials/block-quantity-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Block Quantity Calculator | SnapCalc" property="og:title"/>
-<meta content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/construction-materials/block-quantity-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Block Quantity Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Block Quantity Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/construction-materials/block-quantity-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Block Quantity Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/construction-materials/block-quantity-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Block Quantity Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -33,23 +37,37 @@
       "description": "Calculate how many concrete blocks you need for a wall based on wall size, block size, mortar joint, openings, and wastage."
     }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,134 +76,197 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/construction-materials/">Construction &amp; Materials</a> ›
         <span>Block Quantity Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Block Quantity Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Estimate how many blocks you need for a wall</h2>
-<p class="calculator-intro">Enter your wall size and block size. Add openings and wastage if you want a more realistic order quantity.</p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="wallLength">Wall length (m)</label>
-<input id="wallLength" inputmode="decimal" placeholder="e.g., 6" type="text"/>
-</div>
-<div class="form-group">
-<label for="wallHeight">Wall height (m)</label>
-<input id="wallHeight" inputmode="decimal" placeholder="e.g., 2.4" type="text"/>
-</div>
-<div class="form-group">
-<label for="openingsArea">Openings area (m², optional)</label>
-<input id="openingsArea" inputmode="decimal" placeholder="e.g., 1.8" type="text"/>
-</div>
-<div class="form-group">
-<label for="blockLengthMm">Block length (mm)</label>
-<input id="blockLengthMm" inputmode="numeric" placeholder="e.g., 390" type="text"/>
-</div>
-<div class="form-group">
-<label for="blockHeightMm">Block height (mm)</label>
-<input id="blockHeightMm" inputmode="numeric" placeholder="e.g., 190" type="text"/>
-</div>
-<div class="form-group">
-<label for="mortarJointMm">Mortar joint thickness (mm)</label>
-<input id="mortarJointMm" inputmode="numeric" placeholder="e.g., 10" type="text"/>
-</div>
-<div class="form-group">
-<label for="wastePercent">Wastage (%, optional)</label>
-<input id="wastePercent" inputmode="decimal" placeholder="e.g., 5" type="text"/>
-</div>
-<div class="form-group">
-<label for="blocksPerPallet">Blocks per pallet (optional)</label>
-<input id="blocksPerPallet" inputmode="numeric" placeholder="e.g., 500" type="text"/>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Calculate blocks</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">
+      </nav>
+
+      <div class="page-layout">
+        <h1>Block Quantity Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4oPfhlD" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Mechanical Tools</div>
+                <p class="affiliate-copy">Tools for mechanical calculations, forces, torque, and motion analysis.</p>
+                <div class="affiliate-cta">Explore mechanical engineering tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Estimate how many blocks you need for a wall</h2>
+
+              <p class="calculator-intro">Enter your wall size and block size. Add openings and wastage if you want a more realistic order quantity.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="wallLength">Wall length (m)</label>
+                <input type="text" id="wallLength" inputmode="decimal" placeholder="e.g., 6">
+              </div>
+
+              <div class="form-group">
+                <label for="wallHeight">Wall height (m)</label>
+                <input type="text" id="wallHeight" inputmode="decimal" placeholder="e.g., 2.4">
+              </div>
+
+              <div class="form-group">
+                <label for="openingsArea">Openings area (m², optional)</label>
+                <input type="text" id="openingsArea" inputmode="decimal" placeholder="e.g., 1.8">
+              </div>
+
+              <div class="form-group">
+                <label for="blockLengthMm">Block length (mm)</label>
+                <input type="text" id="blockLengthMm" inputmode="numeric" placeholder="e.g., 390">
+              </div>
+
+              <div class="form-group">
+                <label for="blockHeightMm">Block height (mm)</label>
+                <input type="text" id="blockHeightMm" inputmode="numeric" placeholder="e.g., 190">
+              </div>
+
+              <div class="form-group">
+                <label for="mortarJointMm">Mortar joint thickness (mm)</label>
+                <input type="text" id="mortarJointMm" inputmode="numeric" placeholder="e.g., 10">
+              </div>
+
+              <div class="form-group">
+                <label for="wastePercent">Wastage (%, optional)</label>
+                <input type="text" id="wastePercent" inputmode="decimal" placeholder="e.g., 5">
+              </div>
+
+              <div class="form-group">
+                <label for="blocksPerPallet">Blocks per pallet (optional)</label>
+                <input type="text" id="blocksPerPallet" inputmode="numeric" placeholder="e.g., 500">
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate blocks</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
                   Share this calculator on WhatsApp
                 </button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/construction-materials/">
-<h3 class="related-title">Construction &amp; Materials</h3>
-<p class="related-desc">Estimate quantities, mixes, and material needs for common building tasks.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/engineering-technical/">
-<h3 class="related-title">Engineering &amp; Technical</h3>
-<p class="related-desc">Run practical engineering calculations for electrical, mechanical, and structural work.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/real-estate-property/">
-<h3 class="related-title">Real Estate &amp; Property</h3>
-<p class="related-desc">Plan renovations, compare costs, and estimate property-related figures.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Block quantity calculator for concrete block walls</h2>
-<p>This block quantity calculator estimates how many concrete blocks you need to build a wall based on wall dimensions and the block size you plan to use. It is designed for normal planning tasks like ordering materials, comparing quotes, or checking whether a delivery quantity makes sense before you start laying blocks. You can use it for garden walls, boundary walls, internal partitions, and similar masonry projects.</p>
-<p>The basic idea is simple: a wall has an area in square meters, and each block covers a certain area once you include mortar joints. If you know the net wall area and the effective face area of one block, you can estimate how many blocks are required. This calculator makes that process explicit and adds practical options for openings and wastage so your order quantity is closer to what happens on site.</p>
-<p>If you just want a quick answer, enter wall length and height, keep the default block size and mortar joint values, and leave openings and wastage as they are. If you want a more accurate estimate, include the total area of openings (doors, windows, gates), adjust the mortar joint thickness to match your workmanship and specification, and set a wastage percentage that reflects transport damage, cutting, breakage, and spare stock.</p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>Blocks are counted by face area (length by height) and the wall is assumed to be a single skin of blocks.</li>
-<li>Mortar joints are applied to both the effective block length and height to reflect laid size, not dry block size.</li>
-<li>Openings are entered as a single total area and are subtracted from the gross wall area to get net wall area.</li>
-<li>Wastage is applied as a percentage uplift to the calculated block count, then the final quantity is rounded up.</li>
-<li>This calculator estimates block quantity only; it does not calculate mortar, reinforcement, foundations, or plastering needs.</li>
-</ul>
-<h3>Common questions</h3>
-<h3>Why does mortar joint thickness change the number of blocks?</h3>
-<p>When blocks are laid, the mortar joints increase the effective size of each block module. A larger effective module means fewer blocks per square meter. Even a small change in joint thickness can shift the blocks-per-square-meter value enough to matter on bigger walls. If you use very thin joints or adhesive systems, reduce the joint thickness accordingly.</p>
-<h3>What should I put for openings if I do not know exact door and window sizes?</h3>
-<p>Use a reasonable estimate. For example, a standard door opening is roughly 0.8 to 0.9 m wide and about 2.0 m high. A small window might be around 1.0 m by 1.0 m. Add up the areas for the openings you expect and enter the total. If you later confirm exact sizes, you can rerun the calculation and update your order before delivery.</p>
-<h3>How much wastage should I allow?</h3>
-<p>There is no single correct number. For straightforward walls with minimal cutting and good handling, 3% to 5% is common. For more cutting, tricky access, or where breakage risk is higher, 7% to 10% can be more realistic. If you are ordering from a supplier with strict return rules, it is usually safer to include a small buffer rather than come up short.</p>
-<h3>Does this calculator work for different block sizes like 400×200 or 390×190?</h3>
-<p>Yes. Enter the block length and height in millimeters, and the calculator converts them into meters internally. The result depends on the effective laid size once mortar joints are included. If your blocks have a different nominal size, or you are using special units like hollow blocks with different dimensions, input the correct measurements for the face size you are laying.</p>
-<h3>Why does the result round up?</h3>
-<p>You cannot buy a fraction of a block, and you usually want a small buffer for breakages and on-site adjustments. Rounding up gives you an order quantity you can actually purchase and use. If you are trying to minimize excess, reduce wastage or confirm openings more precisely, but avoid rounding down unless you have spare stock available.</p>
-<div class="last-updated">Last updated: 2025-12-17</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
-</div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
-</script>
-</body>
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+              <a class="affiliate-link" href="https://amzn.to/4s1sv1C" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Load &amp; Stress</div>
+                <p class="affiliate-copy">Calculate loads, stresses, and safety factors in structures.</p>
+                <div class="affiliate-cta">View load and stress tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/construction-materials/">
+              <h3 class="related-title">Construction &amp; Materials</h3>
+              <p class="related-desc">Estimate quantities, mixes, and material needs for common building tasks.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/engineering-technical/">
+              <h3 class="related-title">Engineering &amp; Technical</h3>
+              <p class="related-desc">Run practical engineering calculations for electrical, mechanical, and structural work.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/real-estate-property/">
+              <h3 class="related-title">Real Estate &amp; Property</h3>
+              <p class="related-desc">Plan renovations, compare costs, and estimate property-related figures.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+                <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Block quantity calculator for concrete block walls</h2>
+
+              <p>This block quantity calculator estimates how many concrete blocks you need to build a wall based on wall dimensions and the block size you plan to use. It is designed for normal planning tasks like ordering materials, comparing quotes, or checking whether a delivery quantity makes sense before you start laying blocks. You can use it for garden walls, boundary walls, internal partitions, and similar masonry projects.</p>
+
+              <p>The basic idea is simple: a wall has an area in square meters, and each block covers a certain area once you include mortar joints. If you know the net wall area and the effective face area of one block, you can estimate how many blocks are required. This calculator makes that process explicit and adds practical options for openings and wastage so your order quantity is closer to what happens on site.</p>
+
+              <p>If you just want a quick answer, enter wall length and height, keep the default block size and mortar joint values, and leave openings and wastage as they are. If you want a more accurate estimate, include the total area of openings (doors, windows, gates), adjust the mortar joint thickness to match your workmanship and specification, and set a wastage percentage that reflects transport damage, cutting, breakage, and spare stock.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Blocks are counted by face area (length by height) and the wall is assumed to be a single skin of blocks.</li>
+                <li>Mortar joints are applied to both the effective block length and height to reflect laid size, not dry block size.</li>
+                <li>Openings are entered as a single total area and are subtracted from the gross wall area to get net wall area.</li>
+                <li>Wastage is applied as a percentage uplift to the calculated block count, then the final quantity is rounded up.</li>
+                <li>This calculator estimates block quantity only; it does not calculate mortar, reinforcement, foundations, or plastering needs.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>Why does mortar joint thickness change the number of blocks?</h3>
+              <p>When blocks are laid, the mortar joints increase the effective size of each block module. A larger effective module means fewer blocks per square meter. Even a small change in joint thickness can shift the blocks-per-square-meter value enough to matter on bigger walls. If you use very thin joints or adhesive systems, reduce the joint thickness accordingly.</p>
+
+              <h3>What should I put for openings if I do not know exact door and window sizes?</h3>
+              <p>Use a reasonable estimate. For example, a standard door opening is roughly 0.8 to 0.9 m wide and about 2.0 m high. A small window might be around 1.0 m by 1.0 m. Add up the areas for the openings you expect and enter the total. If you later confirm exact sizes, you can rerun the calculation and update your order before delivery.</p>
+
+              <h3>How much wastage should I allow?</h3>
+              <p>There is no single correct number. For straightforward walls with minimal cutting and good handling, 3% to 5% is common. For more cutting, tricky access, or where breakage risk is higher, 7% to 10% can be more realistic. If you are ordering from a supplier with strict return rules, it is usually safer to include a small buffer rather than come up short.</p>
+
+              <h3>Does this calculator work for different block sizes like 400×200 or 390×190?</h3>
+              <p>Yes. Enter the block length and height in millimeters, and the calculator converts them into meters internally. The result depends on the effective laid size once mortar joints are included. If your blocks have a different nominal size, or you are using special units like hollow blocks with different dimensions, input the correct measurements for the face size you are laying.</p>
+
+              <h3>Why does the result round up?</h3>
+              <p>You cannot buy a fraction of a block, and you usually want a small buffer for breakages and on-site adjustments. Rounding up gives you an order quantity you can actually purchase and use. If you are trying to minimize excess, reduce wastage or confirm openings more precisely, but avoid rounding down unless you have spare stock available.</p>
+
+              <div class="last-updated">Last updated: 2025-12-17</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+              <a class="affiliate-link" href="https://amzn.to/49c4xcs" target="_blank" rel="nofollow sponsored noopener">
+                <div class="affiliate-label">Design Tools</div>
+                <p class="affiliate-copy">Support engineering design with calculation and planning tools.</p>
+                <div class="affiliate-cta">Browse engineering design tools on Amazon</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+  </body>
 </html>

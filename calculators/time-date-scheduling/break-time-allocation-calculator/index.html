@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- SEO: title and description -->
-<title>Break Time Allocation Calculator | SnapCalc</title>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<meta content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule." name="description"/>
-<!-- Canonical URL (always trailing slash) -->
-<link href="https://snapcalc.site/calculators/time-date-scheduling/break-time-allocation-calculator/" rel="canonical"/>
-<!-- Open Graph (for sharing, previews) -->
-<meta content="Break Time Allocation Calculator | SnapCalc" property="og:title"/>
-<meta content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://snapcalc.site/calculators/time-date-scheduling/break-time-allocation-calculator/" property="og:url"/>
-<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Break Time Allocation Calculator | SnapCalc" name="twitter:title"/>
-<meta content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule." name="twitter:description"/>
-<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
-<!-- JSON-LD structured data for the calculator page -->
-<script type="application/ld+json">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: title and description -->
+    <title>Break Time Allocation Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule."
+    />
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link
+      rel="canonical"
+      href="https://snapcalc.site/calculators/time-date-scheduling/break-time-allocation-calculator/"
+    />
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Break Time Allocation Calculator | SnapCalc" />
+    <meta
+      property="og:description"
+      content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://snapcalc.site/calculators/time-date-scheduling/break-time-allocation-calculator/"
+    />
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Break Time Allocation Calculator | SnapCalc" />
+    <meta
+      name="twitter:description"
+      content="Split your total break time into a practical plan for a work shift, including a long break and short breaks with a simple suggested schedule."
+    />
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png" />
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -33,23 +52,33 @@
         "description": "Allocate total break time across a work shift into a long break and short breaks, with a simple suggested schedule and clear assumptions."
       }
     </script>
-<link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="/scripts/main.js"></script>
-<script defer="" src="/scripts/search.js"></script>
-<script defer="" src="script.js"></script>
 
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-<body>
-<header class="site-header">
-<div class="site-header-inner">
-<a class="site-logo" href="/">SnapCalc</a>
-<div class="site-search">
-<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
-<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
-</div>
-<nav class="site-nav">
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div id="siteSearchResults" class="site-search-results" aria-hidden="true"></div>
+        </div>
+
+        <nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -58,93 +87,136 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-</div>
-</header>
-<main class="site-main">
-<nav class="breadcrumbs">
-<a href="/">Home</a> ›
+      </div>
+    </header>
+
+    <main class="site-main">
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
         <a href="/categories/time-date-scheduling/">Time, Date &amp; Scheduling</a> ›
         <span>Break Time Allocation Calculator</span>
-</nav>
-<div class="page-layout">
-<h1>Break Time Allocation Calculator</h1>
-<div class="page-grid">
-<!-- Row 1: ad + main calculator + ad -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<div class="calculator-container">
-<h2>Plan breaks across a work shift</h2>
-<p class="calculator-intro">
+      </nav>
+
+      <div class="page-layout">
+        <h1>Break Time Allocation Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4s1wZoY" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Shift Scheduling</div>
+    <p class="affiliate-copy">Manage rotating shifts, availability, and workforce schedules efficiently.</p>
+    <div class="affiliate-cta">Explore shift scheduling tools on Amazon</div>
+  </a>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Plan breaks across a work shift</h2>
+
+              <p class="calculator-intro">
                 Enter your shift length and total break time. Optionally set a minimum long break and the number of short
                 breaks. You will get a clear break breakdown and a simple suggested timing plan.
               </p>
-<!-- CALCULATOR UI START -->
-<div class="form-group">
-<label for="shiftHours">Shift length (hours)</label>
-<input id="shiftHours" inputmode="decimal" placeholder="e.g. 8" type="text"/>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="shiftHours">Shift length (hours)</label>
+                <input type="text" id="shiftHours" inputmode="decimal" placeholder="e.g. 8" />
+              </div>
+
+              <div class="form-group">
+                <label for="totalBreakMinutes">Total break time available (minutes)</label>
+                <input type="text" id="totalBreakMinutes" inputmode="numeric" placeholder="e.g. 60" />
+              </div>
+
+              <div class="form-group">
+                <label for="minLongBreakMinutes">Advanced: Minimum long break (minutes)</label>
+                <input type="text" id="minLongBreakMinutes" inputmode="numeric" placeholder="e.g. 30 (optional)" />
+              </div>
+
+              <div class="form-group">
+                <label for="shortBreakCount">Advanced: Number of short breaks</label>
+                <input type="text" id="shortBreakCount" inputmode="numeric" placeholder="e.g. 2 (optional)" />
+              </div>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Allocate break time</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Advertisement area">
+  <a class="affiliate-link" href="https://amzn.to/4q8WuD1" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Time Zones</div>
+    <p class="affiliate-copy">Convert time zones accurately for travel, meetings, and remote work.</p>
+    <div class="affiliate-cta">View time zone conversion tools on Amazon</div>
+  </a>
 </div>
-<div class="form-group">
-<label for="totalBreakMinutes">Total break time available (minutes)</label>
-<input id="totalBreakMinutes" inputmode="numeric" placeholder="e.g. 60" type="text"/>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/time-date-scheduling/">
+              <h3 class="related-title">Time, Date &amp; Scheduling</h3>
+              <p class="related-desc">Plan time blocks, schedules, deadlines, and routines with practical tools.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/health-fitness/">
+              <h3 class="related-title">Health &amp; Fitness</h3>
+              <p class="related-desc">Use simple calculators for recovery, habits, training consistency, and wellbeing.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/everyday-life-tools/">
+              <h3 class="related-title">Everyday Life Tools</h3>
+              <p class="related-desc">Quick utilities for common daily decisions, planning, and basic calculations.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a class="affiliate-link" href="https://amzn.to/3KGUrHf" target="_blank" rel="nofollow sponsored noopener">
+    <div class="affiliate-label">Appointments</div>
+    <p class="affiliate-copy">Schedule appointments, meetings, and reminders with minimal friction.</p>
+    <div class="affiliate-cta">Browse appointment scheduling tools on Amazon</div>
+  </a>
 </div>
-<div class="form-group">
-<label for="minLongBreakMinutes">Advanced: Minimum long break (minutes)</label>
-<input id="minLongBreakMinutes" inputmode="numeric" placeholder="e.g. 30 (optional)" type="text"/>
-</div>
-<div class="form-group">
-<label for="shortBreakCount">Advanced: Number of short breaks</label>
-<input id="shortBreakCount" inputmode="numeric" placeholder="e.g. 2 (optional)" type="text"/>
-</div>
-<!-- CALCULATOR UI END -->
-<button id="calculateButton" type="button">Allocate break time</button>
-<div aria-live="polite" id="result"></div>
-<div class="share-buttons">
-<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
-</div>
-</div>
-    </div>
-    <div class="grid-slot">
-    </div>
-<!-- Row 2: related CATEGORIES (three thin tiles) -->
-    <div class="grid-slot">
-<a class="related-card" href="/categories/time-date-scheduling/">
-<h3 class="related-title">Time, Date &amp; Scheduling</h3>
-<p class="related-desc">Plan time blocks, schedules, deadlines, and routines with practical tools.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/health-fitness/">
-<h3 class="related-title">Health &amp; Fitness</h3>
-<p class="related-desc">Use simple calculators for recovery, habits, training consistency, and wellbeing.</p>
-</a>
-    </div>
-    <div class="grid-slot">
-<a class="related-card" href="/categories/everyday-life-tools/">
-<h3 class="related-title">Everyday Life Tools</h3>
-<p class="related-desc">Quick utilities for common daily decisions, planning, and basic calculations.</p>
-</a>
-    </div>
-<!-- Row 3: affiliate + SEO + affiliate -->
-    <div class="grid-slot">
-    </div>
-    <div class="grid-slot">
-<section class="seo-section">
-<h2>Break time allocation calculator for work shifts and daily schedules</h2>
-<p>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Break time allocation calculator for work shifts and daily schedules</h2>
+
+              <p>
                 This Break Time Allocation Calculator helps you turn a single number, your total break time, into a
                 practical break plan for a work shift. Most people know how long they are working and roughly how many
                 minutes of break they can take, but they struggle to decide how to split that break time. The result is
                 usually one of two problems: breaks that are too short to be restorative, or breaks that are taken too
                 late, too early, or in a way that breaks focus.
               </p>
-<p>
+
+              <p>
                 This calculator is intentionally focused on one job: planning breaks inside a fixed shift. It is not a
                 payroll or compliance tool and it does not attempt to model every labor law, union agreement, or company
                 policy. Instead, it gives you a clean, defensible plan: one long break (when you have enough time) plus a
                 number of short breaks, with a simple timing suggestion so you can apply it immediately.
               </p>
-<p>
+
+              <p>
                 How to use it: enter your shift length in hours and your total break time in minutes. If you do nothing
                 else, the calculator will use reasonable defaults to build a plan. If you want more control, open the
                 advanced fields and set a minimum long break (for example, 30 minutes) and the number of short breaks
@@ -153,76 +225,95 @@
                 long break around the middle, and another short break in the second half. The timing is expressed as
                 “minutes from shift start” so it works whether you start at 07:00 or 13:00.
               </p>
-<h3>Assumptions and how to use this calculator</h3>
-<ul>
-<li>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>
                   Shift length is treated as a fixed block of time. If your shift end time is flexible, use your planned
                   working time as the shift length.
                 </li>
-<li>
+                <li>
                   Total break time is assumed to be the total you are allowed or willing to take. The calculator does not
                   add extra breaks beyond what you enter.
                 </li>
-<li>
+                <li>
                   A long break is only created when the total break time is large enough to support it. If it is not, the
                   calculator allocates everything into short breaks.
                 </li>
-<li>
+                <li>
                   The suggested timing is a planning guide, not a rule. Move breaks earlier or later based on meetings,
                   commuting between sites, or workload spikes.
                 </li>
-<li>
+                <li>
                   Short break durations are split evenly from the remaining time after the long break, then rounded to a
                   practical whole minute.
                 </li>
-</ul>
-<h3>Common questions</h3>
-<h3>What if I only have a small amount of break time?</h3>
-<p>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What if I only have a small amount of break time?</h3>
+              <p>
                 If your total break time is too small to support a meaningful long break, the calculator will skip the long
                 break and split your time into short breaks. This avoids a “token” long break that is not actually useful.
               </p>
-<h3>Do I have to fill in the advanced fields?</h3>
-<p>
+
+              <h3>Do I have to fill in the advanced fields?</h3>
+              <p>
                 No. The advanced fields are optional. If you leave them blank, the calculator uses sensible defaults so you
                 still get a complete plan. Use advanced settings only if you want your break plan to match a specific
                 preference or policy.
               </p>
-<h3>Why does it suggest a long break near the middle of the shift?</h3>
-<p>
+
+              <h3>Why does it suggest a long break near the middle of the shift?</h3>
+              <p>
                 For most people, a mid-shift long break is the least disruptive and the easiest to remember. It also tends
                 to match real workplace patterns such as lunch. If your work has fixed meal times, keep the durations and
                 move the timing to match reality.
               </p>
-<h3>What if my break policy requires specific break lengths?</h3>
-<p>
+
+              <h3>What if my break policy requires specific break lengths?</h3>
+              <p>
                 Use the advanced minimum long break to match your policy and then set the number of short breaks to fit the
                 remaining time. If your policy is strict (for example, two 15-minute breaks plus a 30-minute lunch), you can
                 check whether your total break minutes supports that plan and adjust accordingly.
               </p>
-<h3>How can I make the plan more realistic for a meeting-heavy day?</h3>
-<p>
+
+              <h3>How can I make the plan more realistic for a meeting-heavy day?</h3>
+              <p>
                 Treat the schedule as a baseline and then move break windows around your calendar. The value is in the
                 allocation and the reminder that breaks should be spaced. If you expect a long meeting block, schedule a
                 short break immediately before and after it.
               </p>
-<div class="last-updated">Last updated: 2025-12-29</div>
-</section>
-    </div>
-    <div class="grid-slot">
-    </div>
-</div>
-</div>
 
-</main>
-<footer class="site-footer">
-<div class="site-footer-inner">
-<span>© 2025 SnapCalc</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/disclaimer.html">Disclaimer</a>
+              <div class="last-updated">Last updated: 2025-12-29</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+<div class="ad-block" aria-label="Affiliate link area">
+  <a href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+    <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+  </a>
 </div>
-</footer>
-<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
-</body>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'
+    ></script>
+  </body>
 </html>
