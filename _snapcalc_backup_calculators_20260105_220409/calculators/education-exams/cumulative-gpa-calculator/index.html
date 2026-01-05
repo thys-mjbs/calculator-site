@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cumulative GPA Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your cumulative GPA from course grades and credits, or update an existing GPA by adding new courses. Supports common GPA scales and shows total credits and quality points." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/education-exams/cumulative-gpa-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cumulative GPA Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your cumulative GPA from course grades and credits, or update an existing GPA by adding new courses. Supports common GPA scales and shows total credits and quality points." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/education-exams/cumulative-gpa-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cumulative GPA Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your cumulative GPA from course grades and credits, or update an existing GPA by adding new courses. Supports common GPA scales and shows total credits and quality points." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Cumulative GPA Calculator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "url": "https://snapcalc.site/calculators/education-exams/cumulative-gpa-calculator/",
+        "description": "Calculate your cumulative GPA from course grades and credits, or update an existing GPA by adding new courses. Supports common GPA scales and shows total credits and quality points."
+      }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+
+<script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+  <!-- Ads (Native banner) -->
+  <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+  <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Cumulative GPA Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Cumulative GPA Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate and update your cumulative GPA</h2>
+<p class="calculator-intro">
+                Add courses with their credits and grade points to calculate GPA, or update an existing
+                cumulative GPA by adding new courses. Optional target planning is included if you want
+                to estimate what average you need on future credits.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="scaleSelect">GPA scale</label>
+<select id="scaleSelect">
+<option value="4">4.0 scale (common)</option>
+<option value="5">5.0 scale</option>
+<option value="7">7.0 scale</option>
+<option value="10">10.0 scale</option>
+</select>
+</div>
+<div class="input-group">
+<label for="modeSelect">How do you want to calculate?</label>
+<select id="modeSelect">
+<option value="fromScratch">Calculate from course list</option>
+<option value="updateExisting">Update an existing cumulative GPA</option>
+</select>
+</div>
+<div id="modeFromScratch">
+<div class="course-header">
+<div class="course-title">Courses</div>
+<button class="small-button" id="addCourseButton" type="button">
+                    Add course
+                  </button>
+</div>
+<div aria-label="Course list" class="courses-container" id="coursesContainer">
+<!-- Rows injected by JS -->
+</div>
+<div class="input-group">
+<label for="roundSelect">Rounding</label>
+<select id="roundSelect">
+<option value="2">Show 2 decimals</option>
+<option value="3">Show 3 decimals</option>
+<option value="4">Show 4 decimals</option>
+</select>
+</div>
+</div>
+<div class="hidden" id="modeUpdateExisting">
+<div class="input-group">
+<label for="currentGpa">Current cumulative GPA (optional)</label>
+<input id="currentGpa" inputmode="decimal" placeholder="e.g., 3.25" type="text"/>
+</div>
+<div class="input-group">
+<label for="currentCredits">Total completed credits (required)</label>
+<input id="currentCredits" inputmode="decimal" placeholder="e.g., 60" type="text"/>
+</div>
+<div class="course-header">
+<div class="course-title">New courses to add</div>
+<button class="small-button" id="addCourseButton2" type="button">
+                    Add course
+                  </button>
+</div>
+<div aria-label="New course list" class="courses-container" id="coursesContainer2">
+<!-- Rows injected by JS -->
+</div>
+<div class="input-group">
+<label for="roundSelect2">Rounding</label>
+<select id="roundSelect2">
+<option value="2">Show 2 decimals</option>
+<option value="3">Show 3 decimals</option>
+<option value="4">Show 4 decimals</option>
+</select>
+</div>
+</div>
+<div class="optional-block">
+<div class="optional-title">Optional planning</div>
+<div class="input-group">
+<label for="targetGpa">Target GPA (optional)</label>
+<input id="targetGpa" inputmode="decimal" placeholder="e.g., 3.50" type="text"/>
+</div>
+<div class="input-group">
+<label for="plannedCredits">Future credits you still plan to take (optional)</label>
+<input id="plannedCredits" inputmode="decimal" placeholder="e.g., 30" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate GPA</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://try.krispcall.com/0gka10ewdh15" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/cloudtalk/cloudtalk-01052026.jpg" alt="KrispCall">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">
+                Grades, GPA, study planning, exam prep, and academic progress tools.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">
+                Percentages, averages, ratios, and everyday math helpers for quick checks.
+              </p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">
+                Plan study time, track deadlines, convert time zones, and manage schedules.
+              </p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate a cumulative GPA from credits and grades</h2>
+<p>
+                A cumulative GPA (grade point average) is usually a weighted average. “Weighted” means
+                classes with more credits count more. This Cumulative GPA Calculator helps you compute
+                your overall GPA from a list of courses, or update an existing GPA by adding new courses
+                from your latest term. You get a clean result plus the key parts behind it: total credits
+                and total quality points, so you can sanity-check your numbers.
+              </p>
+<p>
+                The fastest way to use this calculator is to choose your GPA scale (most people use a
+                4.0 scale), then add a few courses. Enter the credits for each course and the grade points
+                you received for that course on the selected scale. For example, on a 4.0 scale an A is
+                often 4.0, a B is often 3.0, and so on. If you are not sure of the exact conversion at your
+                institution, you can still use this calculator as a practical estimate by using the grade
+                points shown on your transcript or syllabus.
+              </p>
+<p>
+                If you already have a cumulative GPA and want to see how new results change it, use the
+                “Update an existing cumulative GPA” mode. Enter your total completed credits and, if you
+                know it, your current cumulative GPA. Then add the new courses you completed (or expect to
+                complete). The calculator combines your prior quality points with your new quality points
+                to produce an updated cumulative GPA.
+              </p>
+<p>
+                The optional planning fields are for people who want a second insight, not just a single
+                number. If you enter a target GPA and the number of future credits you still plan to take,
+                the calculator estimates the average GPA you would need on those future credits to reach
+                the target. This is useful for deciding whether a goal is realistic and what kind of term
+                performance you need to aim for.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>
+                  The calculator assumes GPA is a credit-weighted average: total quality points divided by
+                  total credits.
+                </li>
+<li>
+                  Grade points must be entered on the same scale you select (4.0, 5.0, 7.0, or 10.0). Mixing
+                  scales will give wrong results.
+                </li>
+<li>
+                  Credits must be positive. If your institution uses “units” or “credit hours,” treat them as
+                  credits for weighting.
+                </li>
+<li>
+                  Pass/Fail, audit, withdrawals, and non-GPA courses are excluded unless you intentionally
+                  include them with appropriate grade points (often 0 or not counted, depending on rules).
+                </li>
+<li>
+                  “Target GPA” planning assumes future credits will count toward GPA in the same way as past
+                  credits and that the scale stays the same.
+                </li>
+</ul>
+<h3>Common questions</h3>
+<h3>What is “quality points” and why does it matter?</h3>
+<p>
+                Quality points are simply grade points multiplied by credits for a course. A 4-credit class
+                at 3.5 grade points contributes 14.0 quality points. Your cumulative GPA is the sum of all
+                quality points divided by the sum of all credits. Showing quality points makes it easy to
+                verify your inputs and understand which courses affect your GPA the most.
+              </p>
+<h3>Do I have to enter every course I have ever taken?</h3>
+<p>
+                No. If you want an exact GPA from scratch, entering every course is the most accurate. But if
+                you already have a current cumulative GPA and total credits, you can use the update mode and
+                only enter new courses. That is usually the quickest and most realistic approach for students.
+              </p>
+<h3>My school uses letter grades. What should I enter?</h3>
+<p>
+                Enter the grade points equivalent for your institution on your chosen scale. Many systems are
+                close to A=4.0, B=3.0, C=2.0, D=1.0, F=0.0 on a 4.0 scale, but your school may use plus/minus
+                values (like 3.7 or 3.3). If you have a transcript, it often lists grade points directly.
+              </p>
+<h3>What if a course is pass/fail or doesn’t count toward GPA?</h3>
+<p>
+                If the course does not affect GPA at your institution, the cleanest approach is to leave it
+                out. If you must include it for some internal reason, you would need to mimic your school’s
+                rule, which is typically either “does not count” or “counts as 0 grade points” in some cases.
+                This calculator cannot guess your school’s policy, so excluding it is usually safest.
+              </p>
+<h3>How accurate is the “required average to hit a target GPA” estimate?</h3>
+<p>
+                It is mathematically correct under the assumptions: same scale, future credits count the same
+                way, and your target is reachable given the scale maximum. Real life can differ because schools
+                may cap repeat credits, treat retakes differently, or exclude certain modules. Use it as a
+                planning guide, then confirm with your academic rules if the decision is important.
+              </p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+</body>
+</html>

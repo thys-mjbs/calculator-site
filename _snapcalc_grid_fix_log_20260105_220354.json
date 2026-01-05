@@ -1,0 +1,3370 @@
+{
+  "root": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site",
+  "mode": "dry-run",
+  "backup_root": null,
+  "scanned": 420,
+  "changed_count": 420,
+  "unchanged_count": 0,
+  "results": [
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\accounts-payable-days-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\accounts-receivable-days-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\annual-recurring-revenue-arr-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\break-even-point-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\burn-rate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\cash-conversion-cycle-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\churn-rate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\compound-annual-growth-rate-cagr-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\contribution-margin-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\cost-of-goods-sold-cogs-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\customer-acquisition-cost-cac-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\customer-lifetime-value-ltv-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\days-inventory-outstanding-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\ebitda-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\expansion-revenue-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\fixed-vs-variable-cost-allocator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\forecasted-revenue-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\gross-margin-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 3,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\inventory-turnover-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\ltv-cac-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\markup-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\monthly-recurring-revenue-mrr-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\mrr-churn-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\mrr-growth-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\net-margin-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\operating-leverage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\operating-profit-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\revenue-growth-rate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\runway-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\business-accounting\\unit-economics-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\aggregate-weight-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\asphalt-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\asphalt-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\block-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\brick-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\cement-sand-stone-mix-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\concrete-bag-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\concrete-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\downpipe-capacity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\fill-dirt-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\floor-joist-spacing-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\formwork-area-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\gravel-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\gutter-length-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\mortar-mix-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\paint-coverage-calculator-construction-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\paving-brick-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\primer-coverage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\rebar-length-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\rebar-spacing-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\rebar-weight-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\roof-pitch-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\roofing-sheet-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\sand-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\shingle-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\soil-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\tile-adhesive-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\tile-grout-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\tile-quantity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\construction-materials\\topsoil-coverage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\angle-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\area-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\baking-conversion-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\capacitance-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\cooking-measurement-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\currency-converter-static-rate-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\currency-rate-difference-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\density-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\electric-charge-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\electric-current-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\energy-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\fluid-ounce-milliliter-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\force-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\frequency-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\fuel-consumption-converter-l-100km-km-l-mpg\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\inductance-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\length-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\luminous-intensity-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\power-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\pressure-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\resistance-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\speed-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\teaspoon-tablespoon-cup-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\temperature-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\time-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\torque-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\unit-price-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\voltage-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\volume-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\conversions-units-currencies\\weightmass-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\absence-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\assignment-weighting-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\bell-curve-position-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\class-attendance-percentage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\cumulative-gpa-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\essay-word-count-time-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\exam-time-allocation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\extra-credit-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\final-exam-score-needed-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\gpa-conversion-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\grade-curve-adjuster-simple\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\grade-percentage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\late-assignment-penalty-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\letter-grade-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\marks-to-percentage-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\normal-distribution-estimate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\pass-fail-threshold-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\percentage-to-marks-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\percentile-rank-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\quiz-average-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\reading-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\revision-schedule-generator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\semester-gpa-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\standard-score-z-score-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\study-session-breakdown-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\study-time-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\test-average-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\typing-speed-wpm-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\weighted-grade-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\education-exams\\words-per-minute-reading-speed-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\ac-to-dc-conversion-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\battery-capacity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\battery-life-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\belt-length-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\btu-to-kw-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\cable-length-resistance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\capacitive-reactance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\cooling-load-calculator-simple-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\dc-to-ac-inverter-load-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\gear-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\heat-dissipation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\hydraulic-force-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\hydraulic-pressure-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\impedance-calculator-basic\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\inductor-reactance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\motor-efficiency-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\motor-power-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\ohms-law-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\power-factor-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\pulley-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\recharge-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\resistor-color-code-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\rpm-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\series-and-parallel-capacitor-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\series-and-parallel-resistor-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\thermal-resistance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\torque-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\voltage-drop-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\wattage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\engineering-technical\\wire-gauge-awg-current-capacity-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\annual-fuel-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\appliance-running-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\calorie-maintenance-non-fitness-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\children-s-allowance-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\clothing-cost-per-wear-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\commute-time-and-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\discount-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\electricity-usage-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\family-budget-split-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\fuel-cost-per-trip-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\fuel-efficiency-calculator-km-l-or-l-100km\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\gift-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\grocery-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\household-chores-time-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\laundry-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\meal-cost-per-person-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\monthly-household-budget-allocator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\parking-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\pet-food-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\pet-ownership-annual-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\sales-price-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\sleep-cycle-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\sleep-debt-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\split-bill-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\subscription-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\subscription-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\tip-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\vat-sales-tax-calculator-everyday-use-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\water-usage-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\everyday-life-tools\\wedding-guest-budget-split-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\basal-metabolic-rate-bmr-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\bmi-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\body-fat-percentage-calculator-basic\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\body-measurements-progress-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\calorie-deficit-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\calorie-maintenance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\calorie-surplus-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\cycling-calories-burned-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\daily-meal-planner-calories-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\daily-water-intake-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\due-date-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\heart-rate-zones-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\ideal-body-weight-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\macro-split-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\menstrual-cycle-tracker-simple-calculator-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\ovulation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\pregnancy-weight-gain-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\protein-intake-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\running-calories-burned-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\sleep-need-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\steps-to-calories-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\swimming-calories-burned-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\target-heart-rate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\total-daily-energy-expenditure-tdee-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\vo2-max-estimate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\waist-to-height-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\waist-to-hip-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\walking-calories-burned-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\weight-loss-timeline-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\health-fitness\\workout-calories-burned-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\amortization-schedule-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\auto-loan-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\auto-loan-payment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\auto-loan-vs-cash-purchase-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\balloon-payment-loan-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\compound-interest-loan-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\credit-card-interest-accrued-daily-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\credit-card-payoff-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\credit-score-improvement-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\credit-utilization-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\debt-consolidation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\debt-consolidation-savings-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\debt-to-income-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\early-payoff-date-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\extra-payment-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\heloc-draw-vs-repayment-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\heloc-payment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\interest-only-loan-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\line-of-credit-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\loan-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\loan-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\loan-payment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\minimum-payment-trap-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\mortgage-affordability-loans-category-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\mortgage-payment-loans-category-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\personal-loan-emi-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\simple-interest-loan-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\student-loan-payment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\student-loan-refinance-savings-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\loans-credit\\student-loan-repayment-strategy-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\average-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\compound-interest-calculator-general-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\cost-per-unit-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\decimal-to-fraction-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\exponent-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\fraction-simplifier\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\fraction-to-decimal-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\greatest-common-divisor-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\least-common-multiple-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\margin-calculator-general-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\markup-calculator-general-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\mean-absolute-deviation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\median-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\mode-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\nth-root-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\number-sequence-generator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\percentage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\percentage-change-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\percentage-decrease-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\percentage-increase-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\power-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\proportion-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\random-number-generator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\range-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\rule-of-72-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\simple-interest-calculator-general-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\square-root-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\standard-deviation-simple-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\math-general-calculators\\unit-price-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\50-30-20-budget-rule-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\annual-bills-monthly-equivalent-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\apr-to-true-interest-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\cash-envelope-allocation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\cost-of-living-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\credit-card-payoff-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\credit-utilization-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\debt-avalanche-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\debt-consolidation-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\debt-snowball-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\detailed-budget-category-allocator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\hourly-wage-to-salary-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\income-tax-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\irregular-income-budget-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\loan-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\loan-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\long-term-savings-growth-simple-interest\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\minimum-payment-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\monthly-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\mortgage-affordability-personal-finance-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\paycheck-breakdown-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\paycheck-to-paycheck-survival-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\personal-loan-payment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\real-hourly-wage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\rent-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\savings-goal-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\savings-growth-variable-monthly-contributions\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\side-income-break-even-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\take-home-pay-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\personal-finance\\zero-based-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\adjustable-rate-mortgage-arm-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\amortization-schedule-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\balloon-mortgage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\cap-rate-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\cash-on-cash-return-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\closing-costs-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\debt-to-income-dti-for-home-buying\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\early-payoff-date-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\extra-mortgage-payment-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\gross-rent-multiplier-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\home-loan-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\homeowners-insurance-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\interest-only-mortgage-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\landlord-profitability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\loan-to-value-ltv-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\mortgage-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\mortgage-insurance-pmi-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\mortgage-repayment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\net-operating-income-noi-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\operating-expense-ratio-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\property-investment-roi-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\property-tax-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\property-transfer-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\refinance-break-even-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\refinance-savings-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\rent-increase-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\rent-vs-buy-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\rental-affordability-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\rental-yield-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\real-estate-property\\vacancy-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\advisor-fee-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\capital-gains-tax-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\compound-interest-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\dividend-reinvestment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\dividend-yield-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\dollar-cost-averaging-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\etf-cost-comparison-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\fund-expense-ratio-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\future-value-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\inflation-impact-on-savings-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\investment-fee-drag-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\investment-growth-over-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\investment-return-required-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\lump-sum-vs-monthly-investment-comparison\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\monthly-investment-contribution-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\one-time-vs-recurring-investment-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\portfolio-allocation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\present-value-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\real-rate-of-return-calculator-inflation-adjusted\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\rebalancing-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\retirement-contribution-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\retirement-savings-growth-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\retirement-shortfall-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\risk-tolerance-scoring-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\savings-goal-timeline-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\savings-rate-calculator-investing-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\simple-interest-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\tax-deferred-vs-taxable-investment-comparison\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\time-to-million-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\savings-investments\\wealth-projection-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\age-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\average-speed-time-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\birthday-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\break-time-allocation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\business-days-between-dates-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\commute-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\countdown-timer-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\daily-schedule-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\deadline-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\event-countdown-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\gantt-block-duration-calculator-simple\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\half-birthday-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\hours-worked-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\meeting-time-zone-converter\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\monthly-schedule-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\overtime-hours-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\pomodoro-session-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\project-timeline-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\sleep-duration-calculator-time-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\stopwatch-lap-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\task-sequencing-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\task-time-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\time-addition-and-subtraction-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\time-duration-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 2,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\timesheet-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\travel-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\weekly-schedule-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\weekly-work-hours-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\workday-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\time-date-scheduling\\world-clock-time-difference-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\airport-transfer-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\annual-fuel-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\average-speed-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\baggage-weight-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\car-loan-payment-calculator-travel-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\commute-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\commute-time-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\eta-estimated-time-of-arrival-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\flight-duration-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\flight-layover-impact-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\fuel-consumption-calculator-kml-l100km-mpg\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\fuel-cost-per-trip-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\fuel-split-calculator-group-travel\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\layover-time-planner\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\luggage-volume-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\parking-cost-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\public-transport-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\ride-share-cost-split-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\road-trip-budget-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\road-trip-daily-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\route-distance-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\taxi-fare-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\time-zone-converter-travel-version\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\toll-cost-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\travel-days-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\travel-speed-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\trip-time-estimator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\uber-taxi-tip-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\vehicle-depreciation-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    },
+    {
+      "path": "C:\\Users\\MBenson\\Documents\\GitHub\\calculator-site\\calculators\\travel-transport\\vehicle-ownership-cost-calculator\\index.html",
+      "changed": true,
+      "reason": "DRY RUN: Skipped premature </div> closures that would end page-grid early.",
+      "skipped_closings": 5,
+      "grid_slots_seen": 9,
+      "backup_path": null
+    }
+  ]
+}

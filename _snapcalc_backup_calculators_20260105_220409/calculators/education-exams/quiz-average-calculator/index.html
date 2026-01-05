@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Quiz Average Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate your quiz average from multiple quiz scores, points, and optional dropped lowest score. Get your overall percent, total points, and a quick summary of best and worst quizzes." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/education-exams/quiz-average-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Quiz Average Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate your quiz average from multiple quiz scores, points, and optional dropped lowest score. Get your overall percent, total points, and a quick summary of best and worst quizzes." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/education-exams/quiz-average-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Quiz Average Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate your quiz average from multiple quiz scores, points, and optional dropped lowest score. Get your overall percent, total points, and a quick summary of best and worst quizzes." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Quiz Average Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/education-exams/quiz-average-calculator/",
+      "description": "Calculate your quiz average from multiple quiz scores and points possible, with an option to drop the lowest score. Outputs overall percent, total points, and best/worst quiz summary."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+
+<script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+  <!-- Ads (Native banner) -->
+  <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+  <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/education-exams/">Education &amp; Exams</a> ›
+        <span>Quiz Average Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Quiz Average Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Calculate your quiz average from points and scores</h2>
+<p class="calculator-intro">Enter each quiz score as points earned and points possible. Optionally drop the lowest quiz (common in many courses) and estimate what you need on remaining quizzes to hit a target average.</p>
+<!-- CALCULATOR UI START -->
+<div class="input-group">
+<label for="dropLowestCount">Drop lowest quizzes (optional)</label>
+<input id="dropLowestCount" inputmode="numeric" placeholder="0" type="text"/>
+</div>
+<div aria-label="Quiz scores table" class="quiz-table" role="group">
+<div class="quiz-table-header">
+<div>Quiz</div>
+<div>Score (earned)</div>
+<div>Out of (possible)</div>
+<div></div>
+</div>
+<div aria-label="Quiz rows" class="quiz-rows" id="quizRows">
+<!-- Rows injected by script.js -->
+</div>
+<button class="secondary-button" id="addRowButton" type="button">Add another quiz</button>
+</div>
+<div class="input-group">
+<label for="targetAveragePercent">Target overall average % (optional)</label>
+<input id="targetAveragePercent" inputmode="decimal" placeholder="e.g., 75" type="text"/>
+</div>
+<div class="input-group">
+<label for="remainingQuizCount">Remaining quizzes (optional)</label>
+<input id="remainingQuizCount" inputmode="numeric" placeholder="e.g., 3" type="text"/>
+</div>
+<div class="input-group">
+<label for="pointsPerRemainingQuiz">Points per remaining quiz (optional)</label>
+<input id="pointsPerRemainingQuiz" inputmode="decimal" placeholder="e.g., 20" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate quiz average</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/krispcall/krispcall-1711.jpg" alt="CloudTalk">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/education-exams/">
+<h3 class="related-title">Education &amp; Exams</h3>
+<p class="related-desc">Calculate grades, averages, study targets, and exam score scenarios for common school and university workflows.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Work with percentages, ratios, rounding, and basic arithmetic tools used across school and everyday life.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan study time, deadlines, and schedules with simple date and time utilities that reduce last minute stress.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Quiz average calculator for points-based grades and dropped-lowest rules</h2>
+<p>Most classes calculate a quiz average in one of two ways. Some courses average percentages (for example, 80%, 90%, 70%), treating every quiz as equally important. Other courses total the points you earned across quizzes and divide by the total points possible. Those two methods can produce different results when quizzes have different point totals, and that difference matters when you are tracking your grade or deciding how much effort to put into the next quiz. This quiz average calculator uses the points-based approach by default because it matches how many learning platforms and gradebooks work. You enter each quiz as “points earned” and “points possible,” and the calculator returns your overall average as a percentage, plus a practical summary you can use immediately.</p>
+<p>The calculator is designed for quick use first, then optional refinement. If you only have a few quiz results, enter those and calculate. You will see your total points earned, total points possible, and your current average percent. You will also see which quiz was your best and worst (based on percent), and the spread between them, which helps you spot consistency problems. If your class policy drops the lowest quiz, you can enter a “drop lowest quizzes” number. The calculator will then remove the lowest quiz percentages (one by one) and recompute your average using the remaining quizzes. This is useful when a course allows a missed quiz or a “bad day” without permanently harming your grade, but you still want to track where you stand right now.</p>
+<p>There is also a target mode for planning. If you know the overall average percent you want to finish with, you can enter a target average, how many quizzes remain, and an estimated points value for each remaining quiz. The calculator will estimate the average percentage you need across the remaining quizzes to hit the target. This is not a guarantee because every course has different grading rules, but it is a strong planning estimate when quizzes are a major part of your mark. If you do not know the points per remaining quiz, use a typical value from your past quizzes. The goal is to turn “I need to do better” into a concrete number you can act on, like “I need around 82% on the next three quizzes.”</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This calculator treats each quiz as points earned divided by points possible, then combines quizzes using total points unless you drop quizzes.</li>
+<li>Dropping the lowest quizzes is based on percentage score per quiz, not raw points, because that is the usual intent of “drop the lowest.”</li>
+<li>If you enter a target average and remaining quizzes, the required remaining performance is estimated assuming remaining quizzes have the points value you provide.</li>
+<li>Extra credit, curved grades, and instructor-specific rules (like category weighting) are not included unless they are reflected in the points you enter.</li>
+<li>If you leave optional fields blank, the calculator still produces your current average using only the quizzes you entered.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is this an average of percentages or an average of points?</h3>
+<p>This calculator uses points-based averaging. It totals all points earned and divides by all points possible, which is equivalent to weighting quizzes by their point totals. This usually matches a gradebook when quizzes are not all worth the same. If all quizzes are worth the same number of points, the points-based result will match a straight average of percentages.</p>
+<h3>What happens if I drop the lowest quiz?</h3>
+<p>The calculator removes the lowest quiz percentage scores from the set, up to the number you specify, and then recalculates your points-based average using the remaining quizzes. If you ask to drop more quizzes than you have entered, the calculator will stop at the maximum possible and use what remains. Dropping quizzes can significantly change your average when one score is much lower than the rest.</p>
+<h3>Can I use this if my quizzes have different “out of” values?</h3>
+<p>Yes. Enter the earned and possible points for each quiz. Because the calculation is points-based, a quiz out of 50 naturally counts more than a quiz out of 10. That is a good thing if your course is designed that way. If your teacher instead treats every quiz as equal regardless of points, your real grade may differ.</p>
+<h3>What if I missed a quiz or got a zero?</h3>
+<p>If you missed a quiz and it counts as zero, enter 0 for the earned points and the full points possible. If your course drops the lowest quiz and the missed quiz is eligible to be dropped, set “drop lowest quizzes” to at least 1 and the calculator will show the best-case impact under that rule. If the missed quiz is not droppable, keep drop lowest at 0 to see the true impact.</p>
+<h3>How does the target average estimate work?</h3>
+<p>The target estimate assumes you will take a certain number of remaining quizzes, each worth the “points per remaining quiz” value you enter. It then calculates what average percentage you would need on those remaining quizzes so that your final combined points-based average reaches the target. If your remaining quizzes are likely to have different point totals, use a reasonable typical value and treat the result as a planning guide rather than a precise prediction.</p>
+<div class="last-updated">Last updated: 2025-12-18</div>
+</section>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>ETF Cost Comparison Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Compare the real cost impact of two ETFs over time, including expense ratios and optional trading and platform fees, and see which one leaves you with more money." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/savings-investments/etf-cost-comparison-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="ETF Cost Comparison Calculator | SnapCalc" property="og:title"/>
+<meta content="Compare the real cost impact of two ETFs over time, including expense ratios and optional trading and platform fees, and see which one leaves you with more money." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/savings-investments/etf-cost-comparison-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="ETF Cost Comparison Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Compare the real cost impact of two ETFs over time, including expense ratios and optional trading and platform fees, and see which one leaves you with more money." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ETF Cost Comparison Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/savings-investments/etf-cost-comparison-calculator/",
+      "description": "Compare two ETFs by estimating total cost and ending value over a holding period using expense ratios, an assumed market return, and optional trading and platform fees."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+
+<script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+  <!-- Ads (Native banner) -->
+  <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+  <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/savings-investments/">Savings &amp; Investments</a> ›
+        <span>ETF Cost Comparison Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>ETF Cost Comparison Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Compare two ETFs by total cost and ending value</h2>
+<p class="calculator-intro">Enter a holding period, an expected annual return, and each ETF’s expense ratio. Add optional trading and platform fees if you want a more realistic comparison.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="initialInvestment">Initial investment (currency)</label>
+<input id="initialInvestment" inputmode="decimal" placeholder="e.g., 100,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="holdingYears">Holding period (years)</label>
+<input id="holdingYears" inputmode="decimal" placeholder="e.g., 10" type="text"/>
+</div>
+<div class="form-group">
+<label for="grossReturn">Expected annual return before fees (%)</label>
+<input id="grossReturn" inputmode="decimal" placeholder="e.g., 7" type="text"/>
+</div>
+<div class="form-group">
+<label for="expenseA">ETF A expense ratio (%)</label>
+<input id="expenseA" inputmode="decimal" placeholder="e.g., 0.20" type="text"/>
+</div>
+<div class="form-group">
+<label for="expenseB">ETF B expense ratio (%)</label>
+<input id="expenseB" inputmode="decimal" placeholder="e.g., 0.07" type="text"/>
+</div>
+<details class="advanced-section">
+<summary>Advanced (optional)</summary>
+<div class="form-group">
+<label for="annualContribution">Annual contribution (currency, optional)</label>
+<input id="annualContribution" inputmode="decimal" placeholder="e.g., 12,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="platformFee">Platform / custody fee (%) per year (optional)</label>
+<input id="platformFee" inputmode="decimal" placeholder="e.g., 0.00" type="text"/>
+</div>
+<div class="form-group">
+<label for="buyCommission">Commission per buy (currency, optional)</label>
+<input id="buyCommission" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+</div>
+<div class="form-group">
+<label for="sellCommission">Commission per sell (currency, optional)</label>
+<input id="sellCommission" inputmode="decimal" placeholder="e.g., 0" type="text"/>
+</div>
+<div class="form-group">
+<label for="buysPerYear">Number of buys per year (optional)</label>
+<input id="buysPerYear" inputmode="decimal" placeholder="e.g., 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="spreadPct">Bid-ask spread cost per buy/sell (%) (optional)</label>
+<input id="spreadPct" inputmode="decimal" placeholder="e.g., 0.05" type="text"/>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Compare ETF costs</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/krispcall/krispcall-1711.jpg" alt="CloudTalk">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/savings-investments/">
+<h3 class="related-title">Savings &amp; Investments</h3>
+<p class="related-desc">Compare returns, fees, and growth scenarios for common investment choices.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Budgeting, savings targets, and everyday money decisions made simpler.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Cash flow, margins, and finance basics for clearer business decisions.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>ETF cost comparison calculator for expense ratios, fees, and real ending value</h2>
+<p>When two ETFs track a similar index, the deciding factor is often cost. The catch is that cost is not only the headline expense ratio. Your broker platform can add an ongoing fee, and trading frictions like commission and bid-ask spread can quietly chip away at returns. This ETF cost comparison calculator is built for one core decision: choosing between two ETFs for a long-term holding period based on which one is likely to leave you with more money.</p>
+<p>The calculator estimates each ETF’s ending value after fees, then shows the total cost paid along the way. You enter an initial investment, a holding period, and an expected annual return before fees. Then you enter ETF A and ETF B expense ratios. That is enough for a useful comparison in most real searches, because expense ratios compound against you every year. If you want a more realistic picture, open the Advanced section to include optional platform fees and trading costs.</p>
+<p>The results are designed to be decision-friendly. You will see which ETF is cheaper, by how much, and what that cost difference means in currency terms over your chosen time horizon. You also get a small breakdown so you can tell whether the gap is coming from annual fund fees, platform fees, or trading frictions. This keeps the page locked to the real-world intent: comparing two ETFs, not forecasting markets or building a full portfolio plan.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The “expected annual return before fees” is a simple average return assumption. It is not a guarantee and will vary in real markets.</li>
+<li>Annual fees (expense ratio plus optional platform fee) are modeled as a percentage drag on growth each year, which is a practical approximation for long-term comparisons.</li>
+<li>Trading costs are simplified into optional commission and bid-ask spread costs applied to buys and the final sell, rather than tracking exact intraday prices.</li>
+<li>If you add annual contributions, the calculator assumes contributions are spread across the year through a fixed number of buys per year (default 1).</li>
+<li>This tool compares costs only. It assumes both ETFs have similar exposure and does not adjust for tracking difference, liquidity differences beyond spread, or tax treatment differences.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Is the expense ratio the only ETF cost that matters?</h3>
+<p>No. Expense ratio is the most reliable long-run cost because it applies every year, but platform fees, commissions, and bid-ask spread can matter, especially for smaller balances or frequent buying. If you trade often or your platform charges a custody fee, use the Advanced inputs to avoid a misleading comparison.</p>
+<h3>What should I enter for “expected annual return before fees”?</h3>
+<p>Use a conservative long-term assumption that matches your ETF’s broad market exposure. Many people use something in the mid single digits to high single digits for equity-heavy ETFs, but the point here is not perfect forecasting. Because both ETFs use the same return assumption, the comparison remains useful even if the return is not exact.</p>
+<h3>How does the calculator treat platform or custody fees?</h3>
+<p>Platform fees are treated as an additional annual percentage drag, similar to an expense ratio. If your platform fee is charged as a fixed monthly amount instead of a percentage, this calculator will not model that accurately. In that case, you can approximate by converting your annual platform cost into a percentage of your expected average balance.</p>
+<h3>What is the bid-ask spread input and when should I use it?</h3>
+<p>Bid-ask spread is the difference between the best available buy price and sell price. It is a cost you effectively pay when you trade. If your ETF is liquid and spreads are tiny, you can leave it at 0. If the ETF is thinly traded or you are buying and selling larger amounts, adding a small spread can make the comparison more realistic.</p>
+<h3>Why can the “cheaper” ETF still end up close to the other one?</h3>
+<p>If the expense ratios are close and your holding period is short, the difference may be small. Trading costs can also dominate for small balances. The calculator’s breakdown helps you spot this quickly. In long holding periods with meaningful balances, small fee differences can become large currency differences because they compound.</p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

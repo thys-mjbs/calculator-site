@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Heat Dissipation Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the maximum heatsink thermal resistance you need to keep an electronic component within its safe temperature limit, based on power, ambient temperature, and thermal resistances." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/heat-dissipation-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Heat Dissipation Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate the maximum heatsink thermal resistance you need to keep an electronic component within its safe temperature limit, based on power, ambient temperature, and thermal resistances." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/heat-dissipation-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Heat Dissipation Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the maximum heatsink thermal resistance you need to keep an electronic component within its safe temperature limit, based on power, ambient temperature, and thermal resistances." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Heat Dissipation Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/engineering-technical/heat-dissipation-calculator/",
+      "description": "Estimate the maximum heatsink thermal resistance required to keep a component below its maximum junction temperature, using dissipated power, ambient temperature, and optional thermal resistances."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+
+<script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+  <!-- Ads (Native banner) -->
+  <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+  <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
+        <span>Heat Dissipation Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Heat Dissipation Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Find the heatsink you need (thermal resistance target)</h2>
+<p class="calculator-intro">Enter your device power and temperatures to estimate the maximum heatsink thermal resistance (°C/W) that keeps the component under its limit. Add datasheet and interface resistances for a realistic result.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="powerWatts">Power dissipated (W)</label>
+<input id="powerWatts" inputmode="decimal" placeholder="e.g., 12.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="ambientTemp">Ambient temperature (°C)</label>
+<input id="ambientTemp" inputmode="decimal" placeholder="e.g., 25" type="text"/>
+</div>
+<div class="form-group">
+<label for="maxJunctionTemp">Maximum junction temperature (°C)</label>
+<input id="maxJunctionTemp" inputmode="decimal" placeholder="e.g., 125" type="text"/>
+</div>
+<div class="form-group">
+<label for="rThetaJC">Junction to case thermal resistance RθJC (°C/W) (optional)</label>
+<input id="rThetaJC" inputmode="decimal" placeholder="e.g., 1.8" type="text"/>
+</div>
+<div class="form-group">
+<label for="rThetaCS">Case to heatsink (interface/TIM) RθCS (°C/W) (optional)</label>
+<input id="rThetaCS" inputmode="decimal" placeholder="e.g., 0.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="designMargin">Design margin (%) (optional)</label>
+<input id="designMargin" inputmode="decimal" placeholder="e.g., 20" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate heatsink target</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/krispcall/krispcall-1711.jpg" alt="CloudTalk">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Solve practical engineering problems with calculators for electronics, electrical, and general technical work.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Estimate quantities, dimensions, and material needs for building, fabrication, and workshop jobs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/math-general-calculators/">
+<h3 class="related-title">Math &amp; General Calculators</h3>
+<p class="related-desc">Use core math tools for ratios, percentages, unit conversions, and quick checks during planning or troubleshooting.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg" alt="The Clerk book cover">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Heat dissipation calculator to choose a heatsink (°C/W target)</h2>
+<p>This Heat Dissipation Calculator is built for one practical decision: choosing a heatsink that is good enough (low enough thermal resistance) to keep an electronic component under its maximum safe temperature. If you are sizing cooling for a regulator, MOSFET, LED, CPU module, or power device, the question is usually not “how much heat exists?” because you already know the power in watts. The real question is “what heatsink performance do I need so the device does not overheat at my ambient temperature?”</p>
+<p>The core output is a maximum allowed heatsink thermal resistance, usually written as RθSA (sink to ambient) in °C/W. Manufacturers often publish heatsink ratings in °C/W for specific mounting and airflow assumptions. A lower °C/W number means a better heatsink. This calculator turns your power and temperature limits into a clear target so you can compare heatsinks directly and avoid guessing.</p>
+<p>To use it quickly, enter the power dissipated (W), your expected ambient temperature (°C), and the maximum junction temperature (°C) from the datasheet. For a more realistic result, add the junction to case thermal resistance (RθJC) and the case to sink resistance (RθCS) from your mounting method (thermal pad, paste, insulator). If you do not enter those optional resistances, the calculator assumes they are zero and tells you what the heatsink alone would need to do. You can also apply a design margin to avoid running right at the limit.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Power is treated as steady-state heat (continuous dissipation), not short bursts or pulsed loads.</li>
+<li>Temperatures are assumed to reach equilibrium (no transient thermal capacitance modeling).</li>
+<li>Heatsink selection is based on thermal resistance ratings in °C/W, as commonly provided by heatsink vendors.</li>
+<li>If RθJC or RθCS are left blank, they are assumed to be 0 °C/W, which is optimistic and can under-size the heatsink.</li>
+<li>The design margin reduces the maximum allowed heatsink thermal resistance to give headroom for airflow changes, mounting variability, dust, and measurement uncertainty.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>What does “°C/W” actually mean for a heatsink?</h3>
+<p>It is the temperature rise per watt of heat. A heatsink rated at 5 °C/W will rise about 50 °C above ambient at 10 W under the conditions used for that rating. Real performance changes with orientation, airflow, enclosure constraints, and mounting, so the rating is a starting point, not a guarantee.</p>
+<h3>Why does the calculator ask for junction temperature instead of case temperature?</h3>
+<p>Most datasheets specify safe operating limits at the junction. The path from junction to ambient goes through multiple layers. If you only use case temperature, you can under-estimate the internal temperature rise. Adding RθJC and RθCS lets you convert a junction limit into a heatsink requirement.</p>
+<h3>I do not know RθCS. What should I enter?</h3>
+<p>If you have no data, use a conservative estimate rather than leaving it blank. Thermal pads, insulators, uneven mounting pressure, or thick adhesive can add meaningful resistance. If you leave it blank, the calculator assumes 0 °C/W and will recommend a weaker heatsink than you may actually need.</p>
+<h3>The result says the required heatsink resistance is negative or impossible. What does that mean?</h3>
+<p>It means your allowed total thermal resistance (from junction to ambient) is already consumed by the junction-to-case and interface resistances, or your temperatures are too tight for the power level. Practical fixes are to reduce power, lower ambient, choose a device with better RθJC, improve mounting, add airflow, or change the mechanical design.</p>
+<h3>How can I improve accuracy beyond this calculator?</h3>
+<p>Use a heatsink rating that matches your airflow and mounting, confirm the real power dissipation, and validate with a temperature measurement near the device case while operating at worst-case ambient. If your enclosure traps heat or airflow is restricted, treat the calculator output as a minimum and increase the design margin.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

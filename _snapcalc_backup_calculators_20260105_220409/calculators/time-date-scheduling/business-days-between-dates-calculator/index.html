@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Business Days Between Dates Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Calculate the number of business days (weekdays) between two dates. Optionally include start or end dates and exclude custom holiday dates for more accurate planning." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/time-date-and-scheduling/business-days-between-dates-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Business Days Between Dates Calculator | SnapCalc" property="og:title"/>
+<meta content="Calculate the number of business days (weekdays) between two dates. Optionally include start or end dates and exclude custom holiday dates for more accurate planning." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/time-date-and-scheduling/business-days-between-dates-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Business Days Between Dates Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Calculate the number of business days (weekdays) between two dates. Optionally include start or end dates and exclude custom holiday dates for more accurate planning." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Business Days Between Dates Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/time-date-and-scheduling/business-days-between-dates-calculator/",
+      "description": "Calculate the number of business days (weekdays) between two dates, with options to include or exclude boundary dates and exclude custom holiday dates."
+    }
+    </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
+
+<script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/#categories">Categories</a>
+  <a href="/about.html">About</a>
+  <a href="/methodology.html">Methodology</a>
+  <a href="/accuracy.html">Accuracy</a>
+  <a href="/hubs.html">Hubs</a>
+  <a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="site-main">
+  <!-- Ads (Native banner) -->
+  <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+  <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
+        <a href="/categories/time-date-and-scheduling/">Time, Date &amp; Scheduling</a> ›
+        <span>Business Days Between Dates Calculator</span>
+</nav>
+<div class="page-layout">
+<h1>Business Days Between Dates Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
+        <p></p>
+      </div>
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Count business days between two dates</h2>
+<p class="calculator-intro">Use this to count weekdays (Mon to Fri) between two dates for deadlines, delivery windows, and work schedules. You can include or exclude the start and end dates, and optionally remove holiday dates.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="startDate">Start date (YYYY-MM-DD)</label>
+<input id="startDate" inputmode="numeric" placeholder="2025-01-15" type="text"/>
+</div>
+<div class="form-group">
+<label for="endDate">End date (YYYY-MM-DD)</label>
+<input id="endDate" inputmode="numeric" placeholder="2025-02-01" type="text"/>
+</div>
+<div class="form-group">
+<label>Count rules</label>
+<div class="option-row">
+<input checked="" id="includeStart" type="checkbox"/>
+<label for="includeStart">Include start date (if it is a business day)</label>
+</div>
+<div class="option-row">
+<input checked="" id="includeEnd" type="checkbox"/>
+<label for="includeEnd">Include end date (if it is a business day)</label>
+</div>
+</div>
+<div class="form-group">
+<label>Optional holiday exclusion</label>
+<div class="option-row">
+<input id="excludeHolidays" type="checkbox"/>
+<label for="excludeHolidays">Exclude holiday dates listed below</label>
+</div>
+<label class="sub-label" for="holidayDates">Holiday dates (YYYY-MM-DD, separated by commas or new lines)</label>
+<textarea id="holidayDates" placeholder="2025-01-01
+2025-03-21" rows="4"></textarea>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate business days</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/krispcall/krispcall-1711.jpg" alt="CloudTalk">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/time-date-and-scheduling/">
+<h3 class="related-title">Time, Date &amp; Scheduling</h3>
+<p class="related-desc">Plan timelines, convert time zones, and calculate dates, durations, and schedules.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/business-accounting/">
+<h3 class="related-title">Business &amp; Accounting</h3>
+<p class="related-desc">Work out costs, margins, working capital timing, and other business planning numbers.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/travel-transport/">
+<h3 class="related-title">Travel &amp; Transport</h3>
+<p class="related-desc">Estimate travel timing, transport costs, and schedule planning for trips and deliveries.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Calculate the number of business days between two dates</h2>
+<p>This business days between dates calculator is for one simple decision: how many working days (weekdays) are in a date range. People typically search for this when they are setting a deadline, estimating a delivery window, planning staff availability, or checking how long a task should take in a work calendar. The output is a count of business days based on a standard Monday to Friday work week, with weekends removed.</p>
+<p>To use the calculator, enter a start date and an end date in the format YYYY-MM-DD. By default, the calculator counts the start date and the end date if they fall on business days. That default matches the most common real world interpretation of “between these dates” in operational planning: if you start work on a Wednesday and finish on the following Tuesday, both those days usually count as working days. If your situation is different, you can untick “Include start date” or “Include end date” to exclude either boundary.</p>
+<p>The result section gives you more than a single number because planning usually needs context. You will see the business day count (the primary answer), the total calendar days in the range (so you can sanity check the span), how many weekend days were excluded, and how many holidays were excluded if you choose to use the holiday feature. If you do not know your holiday calendar or you are working across multiple regions, leave the holiday option off and treat the result as a clean weekday-only estimate.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>Business days are Monday through Friday. Saturdays and Sundays are treated as non-business days.</li>
+<li>The date range is counted in whole days using your entered dates, not time-of-day. Enter dates in YYYY-MM-DD.</li>
+<li>By default, the start and end dates are included only if they are business days. You can change this with the checkboxes.</li>
+<li>Holiday exclusion is optional and only applies to the holiday dates you provide. No country or region holiday list is assumed.</li>
+<li>If a holiday date falls on a weekend, it does not reduce the business day count again because weekends are already excluded.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Does this include the start date and end date?</h3>
+<p>Yes by default, but only if those dates are business days. If your definition of “between” should exclude one boundary, untick the relevant checkbox. This lets you match common rules like “count full days after start” or “exclude the due date itself.”</p>
+<h3>What date format should I use?</h3>
+<p>Use YYYY-MM-DD, for example 2025-12-22. This avoids ambiguity between day-month and month-day formats. If the calculator cannot read the date, it will ask you to correct it.</p>
+<h3>What if the end date is before the start date?</h3>
+<p>The calculator treats that as invalid input because a negative range is usually a mistake. Swap the dates so the start date is the earlier date, then calculate again.</p>
+<h3>How do I exclude public holidays?</h3>
+<p>Tick the “Exclude holiday dates” option, then paste your holiday dates into the box as YYYY-MM-DD values separated by commas or new lines. Only the dates you provide are excluded, which is useful if you are working with a company calendar or a specific project schedule.</p>
+<h3>Why is my result different from another website or spreadsheet?</h3>
+<p>Most differences come from boundary rules and holiday lists. Some tools exclude the start date by default, some include it. Some tools assume a specific country’s public holidays automatically. This calculator makes those choices explicit so you can align the count with your real policy.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+      <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+</div>
+        <p></p>
+      </div>
+</div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>
