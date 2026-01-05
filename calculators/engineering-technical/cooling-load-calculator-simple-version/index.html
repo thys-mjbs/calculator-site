@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Cooling Load Calculator (Simple Version) | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/engineering-technical/cooling-load-calculator-simple-version/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Cooling Load Calculator (Simple Version) | SnapCalc">
-    <meta property="og:description" content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/engineering-technical/cooling-load-calculator-simple-version/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cooling Load Calculator (Simple Version) | SnapCalc">
-    <meta name="twitter:description" content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Cooling Load Calculator (Simple Version) | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/engineering-technical/cooling-load-calculator-simple-version/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Cooling Load Calculator (Simple Version) | SnapCalc" property="og:title"/>
+<meta content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/engineering-technical/cooling-load-calculator-simple-version/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cooling Load Calculator (Simple Version) | SnapCalc" name="twitter:title"/>
+<meta content="Estimate the cooling capacity you need (BTU/hr, kW, tons) to size an air conditioner for a single room using room dimensions and simple real-world factors." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,37 +33,23 @@
       "description": "Estimate the cooling capacity needed to size an air conditioner for a single room. Outputs include BTU per hour, kilowatts of cooling, and an approximate tonnage, with optional adjustments for ceiling height, insulation, sun exposure, people, and equipment heat."
     }
     </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -76,31 +58,158 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/engineering-technical/">Engineering &amp; Technical</a> ›
         <span>Cooling Load Calculator (Simple Version)</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Cooling Load Calculator (Simple Version)</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Cooling Load Calculator (Simple Version)</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-<div class="ad-block" aria-label="Sponsored content">
-  <script>
-    atOptions = {
-      'key' : '46d1518853679ded4bcb05a44dc473ed',
-      'format' : 'iframe',
-      'height' : 300,
-      'width' : 300,
-      'params' : {}
-    };
-  </script>
-  <script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script>
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate the AC size for one room</h2>
+<p class="calculator-intro">Enter your room size, then (optionally) add a few real-world factors. You will get a practical recommended cooling capacity in BTU/hr, kW, and tons, plus a suggested standard unit size to shop for.</p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="roomLengthM">Room length (m)</label>
+<input id="roomLengthM" inputmode="decimal" placeholder="e.g. 4.5" type="text"/>
+</div>
+<div class="form-group">
+<label for="roomWidthM">Room width (m)</label>
+<input id="roomWidthM" inputmode="decimal" placeholder="e.g. 3.6" type="text"/>
+</div>
+<div class="form-group">
+<label for="ceilingHeightM">Ceiling height (m) (optional)</label>
+<input id="ceilingHeightM" inputmode="decimal" placeholder="Default: 2.4" type="text"/>
+</div>
+<div class="form-group">
+<label for="insulationFactor">Insulation factor (optional)</label>
+<input id="insulationFactor" inputmode="decimal" placeholder="Default: 1.0 (good: 0.85, average: 1.0, poor: 1.15)" type="text"/>
+</div>
+<div class="form-group">
+<label for="sunFactor">Sun exposure factor (optional)</label>
+<input id="sunFactor" inputmode="decimal" placeholder="Default: 1.0 (shaded: 0.9, normal: 1.0, sunny: 1.1)" type="text"/>
+</div>
+<div class="form-group">
+<label for="peopleCount">People normally in the room (optional)</label>
+<input id="peopleCount" inputmode="numeric" placeholder="Default: 1" type="text"/>
+</div>
+<div class="form-group">
+<label for="equipmentWatts">Extra heat from equipment (watts) (optional)</label>
+<input id="equipmentWatts" inputmode="numeric" placeholder="Default: 0 (PCs, TVs, servers, etc.)" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate cooling load</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/engineering-technical/">
+<h3 class="related-title">Engineering &amp; Technical</h3>
+<p class="related-desc">Run practical electrical, thermal, and technical calculators for everyday engineering decisions.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert units like watts, kilowatts, BTU, temperature, and other common measurement systems.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/construction-materials/">
+<h3 class="related-title">Construction &amp; Materials</h3>
+<p class="related-desc">Plan room and building basics using dimensions, quantities, and material rules of thumb.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Cooling load calculator for sizing an air conditioner for a single room</h2>
+<p>This cooling load calculator is a simple, practical way to estimate the cooling capacity you need to size an air conditioner for one room. Most people are not trying to design a full HVAC system. They just want to choose a sensible BTU rating that will actually cool the space without wasting money on an oversized unit. This page is locked to that exact use case: one room, one decision, pick a realistic AC size.</p>
+<p>Start with the room length and width in metres. The calculator estimates a baseline cooling load using a common rule of thumb per floor area, then adjusts for the most common real-world drivers that change the answer: higher ceilings, better or worse insulation, how much direct sun the room gets, how many people are typically in the space, and whether you have heat-producing equipment like PCs, TVs, or networking gear. If you do not know these details, you can leave them blank and the calculator will use sensible defaults.</p>
+<p>Your results are shown in three ways because that is how people shop: BTU per hour (BTU/hr), kilowatts of cooling (kW), and approximate tons of cooling. You will also see a suggested “standard size to buy,” which rounds your estimate up to the next common unit size. That is the most practical move in real life because AC units come in discrete ratings, and it is safer to have a small margin than to land slightly under the true need on a very hot day.</p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>This is for a single room cooling estimate to choose an AC size, not a full Manual J or whole-building HVAC design.</li>
+<li>The baseline uses a typical moderate-climate rule of thumb per floor area, then applies simple multipliers for the most common adjustments.</li>
+<li>If you leave optional inputs blank, the calculator assumes a 2.4 m ceiling, average insulation (factor 1.0), normal sun exposure (factor 1.0), one person, and zero extra equipment heat.</li>
+<li>“People normally in the room” adds load only beyond the first person, because a single occupant is treated as part of normal use. Extra occupants are added as an additional sensible load.</li>
+<li>Equipment heat is treated as continuous heat release (watts converted to BTU/hr). If your equipment is only on sometimes, enter an average wattage instead of the peak rating.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does ceiling height change the cooling load?</h3>
+<p>Most simple sizing rules assume a standard ceiling height. If your room is taller, there is more air volume and usually more surface area involved, so you generally need more cooling capacity. This calculator scales the baseline by the ratio of your ceiling height to a standard 2.4 m default.</p>
+<h3>What insulation factor should I use if I am not sure?</h3>
+<p>If you are unsure, leave it blank and the calculator will use 1.0. As a rough guide, use about 0.85 for a well-insulated room (good roof insulation, decent sealing), 1.0 for typical construction, and 1.15 for a room that gains heat easily (poor insulation, lots of leakage, or thin materials). These factors are meant to adjust the estimate, not replace professional design.</p>
+<h3>How do I handle a room with lots of sunlight?</h3>
+<p>Sunlight can push your real cooling need up, especially with large windows or afternoon sun. If the room is mostly shaded, use about 0.9. For normal mixed sun, use 1.0. If the room gets strong direct sun for long periods, use about 1.1. If you have extreme glass exposure, this simple method can under-estimate and you should treat the result as a minimum.</p>
+<h3>What counts as equipment heat, and how do I estimate watts?</h3>
+<p>Anything that consumes electricity in the room mostly becomes heat: computers, monitors, TVs, gaming consoles, routers, and small servers. If you do not know the true draw, use a reasonable average. For example, a desktop PC plus monitor might average 150 to 300 W during typical use, while a TV might be 80 to 200 W depending on size. The calculator converts watts to BTU/hr using a standard power-to-heat conversion.</p>
+<h3>Should I pick the exact BTU number or round up to a standard size?</h3>
+<p>In practice you choose the next standard size up. If your estimate is near a boundary, rounding up helps on the hottest days and accounts for unknowns like air leakage and sun spikes. Oversizing can cause comfort issues in some setups, but for basic room units, a modest round-up is usually safer than coming in short. If you are close to the next size up by a large margin, reconsider your inputs or reduce factors you are not confident about.</p>
+<div class="last-updated">Last updated: 2025-12-22</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+          </div>
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>

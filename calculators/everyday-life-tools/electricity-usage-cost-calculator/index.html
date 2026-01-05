@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: title and description -->
-    <title>Electricity Usage Cost Calculator | SnapCalc</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates.">
-
-    <!-- Canonical URL (always trailing slash) -->
-    <link rel="canonical" href="https://snapcalc.site/calculators/everyday-life-tools/electricity-usage-cost-calculator/">
-
-    <!-- Open Graph (for sharing, previews) -->
-    <meta property="og:title" content="Electricity Usage Cost Calculator | SnapCalc">
-    <meta property="og:description" content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://snapcalc.site/calculators/everyday-life-tools/electricity-usage-cost-calculator/">
-    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Electricity Usage Cost Calculator | SnapCalc">
-    <meta name="twitter:description" content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates.">
-    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
-
-    <!-- JSON-LD structured data for the calculator page -->
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO: title and description -->
+<title>Electricity Usage Cost Calculator | SnapCalc</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates." name="description"/>
+<!-- Canonical URL (always trailing slash) -->
+<link href="https://snapcalc.site/calculators/everyday-life-tools/electricity-usage-cost-calculator/" rel="canonical"/>
+<!-- Open Graph (for sharing, previews) -->
+<meta content="Electricity Usage Cost Calculator | SnapCalc" property="og:title"/>
+<meta content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://snapcalc.site/calculators/everyday-life-tools/electricity-usage-cost-calculator/" property="og:url"/>
+<meta content="https://snapcalc.site/assets/share-default.png" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Electricity Usage Cost Calculator | SnapCalc" name="twitter:title"/>
+<meta content="Estimate how much it costs to run an appliance based on watts, hours used per day, and your electricity price per kWh. Get daily, weekly, monthly, and yearly cost estimates." name="twitter:description"/>
+<meta content="https://snapcalc.site/assets/share-default.png" name="twitter:image"/>
+<!-- JSON-LD structured data for the calculator page -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -37,37 +33,23 @@
       "description": "Estimate appliance running costs from watts, hours per day, and electricity price per kWh, with daily, weekly, monthly, and yearly totals."
     }
     </script>
+<link href="/styles/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="/scripts/main.js"></script>
+<script defer="" src="/scripts/search.js"></script>
+<script defer="" src="script.js"></script>
 
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-    <script src="script.js" defer></script>
-  
 <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
 </head>
-
-  <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">SnapCalc</a>
-
-        <div class="site-search">
-          <input
-            type="search"
-            id="siteSearchInput"
-            placeholder="Search calculators…"
-            autocomplete="off"
-            aria-label="Search calculators"
-          />
-          <div
-            id="siteSearchResults"
-            class="site-search-results"
-            aria-hidden="true"
-          ></div>
-        </div>        
-
-        <nav class="site-nav">
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">SnapCalc</a>
+<div class="site-search">
+<input aria-label="Search calculators" autocomplete="off" id="siteSearchInput" placeholder="Search calculators…" type="search"/>
+<div aria-hidden="true" class="site-search-results" id="siteSearchResults"></div>
+</div>
+<nav class="site-nav">
   <a href="/">Home</a>
   <a href="/#categories">Categories</a>
   <a href="/about.html">About</a>
@@ -76,31 +58,185 @@
   <a href="/hubs.html">Hubs</a>
   <a href="/contact.html">Contact</a>
 </nav>
-      </div>
-    </header>
-
-    <main class="site-main">
-      <!-- Breadcrumbs: required on every calculator -->
-      <nav class="breadcrumbs">
-        <a href="/">Home</a> ›
+</div>
+</header>
+<main class="site-main">
+<!-- Breadcrumbs: required on every calculator -->
+<nav class="breadcrumbs">
+<a href="/">Home</a> ›
         <a href="/categories/everyday-life-tools/">Everyday Life Tools</a> ›
         <span>Electricity Usage Cost Calculator</span>
-      </nav>
+</nav>
+<div class="page-layout">
+<h1>Electricity Usage Cost Calculator</h1>
+<div class="page-grid">
+<!-- Row 1: ad + main calculator + ad -->
+<div class="grid-slot">
 
-      <div class="page-layout">
-        <h1>Electricity Usage Cost Calculator</h1>
 
-        <div class="page-grid">
-          <!-- Row 1: ad + main calculator + ad -->
-          <div class="grid-slot">
-<div class="ad-block" aria-label="Sponsored content">
-  <script>
-    atOptions = {
-      'key' : '46d1518853679ded4bcb05a44dc473ed',
-      'format' : 'iframe',
-      'height' : 300,
-      'width' : 300,
-      'params' : {}
-    };
-  </script>
-  <script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script>
+
+
+
+    
+
+
+</div>
+</div>
+<div class="grid-slot">
+<div class="calculator-container">
+<h2>Estimate appliance running cost</h2>
+<p class="calculator-intro">
+                Enter the appliance power, how long you run it each day, and your electricity price per kWh to estimate daily, monthly, and yearly cost.
+              </p>
+<!-- CALCULATOR UI START -->
+<div class="form-group">
+<label for="wattsInput">Appliance power (watts)</label>
+<input id="wattsInput" inputmode="decimal" placeholder="e.g., 1500" type="text"/>
+<div class="field-hint">Check the label on the device or the manual. Use watts (W), not kW.</div>
+</div>
+<div class="form-group">
+<label for="hoursPerDayInput">Hours used per day</label>
+<input id="hoursPerDayInput" inputmode="decimal" placeholder="e.g., 3.5" type="text"/>
+<div class="field-hint">You can use decimals. Example: 1.5 = 1 hour 30 minutes.</div>
+</div>
+<div class="form-group">
+<label for="ratePerKwhInput">Electricity price (per kWh)</label>
+<input id="ratePerKwhInput" inputmode="decimal" placeholder="e.g., 2.50" type="text"/>
+<div class="field-hint">Look for “R/kWh” or “c/kWh” on your bill or tariff info.</div>
+</div>
+<details class="advanced-details">
+<summary class="advanced-summary">Advanced (optional)</summary>
+<div class="form-group">
+<label for="daysPerMonthInput">Days in your billing month</label>
+<input id="daysPerMonthInput" inputmode="numeric" placeholder="Default: 30" type="text"/>
+<div class="field-hint">If you are matching a billing cycle, enter 28–31. Leave blank to use 30.</div>
+</div>
+</details>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate electricity cost</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+</div>
+</div>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+</div>
+<!-- Row 2: related CATEGORIES (three thin tiles) -->
+<div class="grid-slot">
+<a class="related-card" href="/categories/everyday-life-tools/">
+<h3 class="related-title">Everyday Life Tools</h3>
+<p class="related-desc">Quick calculators for common day to day decisions, costs, and practical planning.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/personal-finance/">
+<h3 class="related-title">Personal Finance</h3>
+<p class="related-desc">Estimate expenses, plan budgets, and understand the real impact of everyday costs.</p>
+</a>
+</div>
+<div class="grid-slot">
+<a class="related-card" href="/categories/conversions-units-currencies/">
+<h3 class="related-title">Conversions (Units, Currencies, etc.)</h3>
+<p class="related-desc">Convert common units and values so you can compare prices and measurements correctly.</p>
+</a>
+</div>
+<!-- Row 3: affiliate + SEO + affiliate -->
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+<div class="grid-slot">
+<section class="seo-section">
+<h2>Electricity usage cost calculator for appliance running cost per day and per month</h2>
+<p>
+                This electricity usage cost calculator estimates what it costs to run one appliance based on three inputs: the appliance power in watts, how many hours you use it per day, and your electricity price per kilowatt-hour (kWh). The main purpose is simple: you want to know the running cost of a kettle, heater, geyser, air conditioner, fridge, or any other device so you can make a practical decision about usage.
+              </p>
+<p>
+                The core output is the estimated cost per day, plus roll-ups for a week, a month, and a year. These totals help you do quick reality checks. For example, an appliance that looks cheap per hour can become expensive when it runs for many hours every day. This is especially common with space heaters, pool pumps, heated towel rails, underfloor heating, and older fridges.
+              </p>
+<p>
+                To use the calculator, start with the watt rating. If the device label shows kilowatts (kW) instead, multiply by 1,000 to convert to watts. Next, enter how many hours per day it typically runs. If your usage varies, use an average. Finally, enter your electricity price per kWh as shown on your bill or tariff. If your bill uses cents per kWh, convert to the same unit you want to see in the result. For example, 250 cents per kWh is 2.50 per kWh. The calculator then converts watts to kW, calculates daily energy use in kWh, and multiplies by your rate to estimate cost.
+              </p>
+<p>
+                The results are estimates, but they are usually accurate enough to guide decisions like whether to reduce daily usage, replace an appliance, shift use to off-peak times (if your tariff changes by time), or compare two appliances with different watt ratings. If you want the monthly number to line up with a billing cycle, use the optional “Days in your billing month” input and enter the length of your cycle.
+              </p>
+<p>
+                This page is intentionally focused on a single appliance. If you want a whole-home bill estimator, that is a different problem and needs different inputs. Here, the goal is fast, appliance-level clarity for a specific purchase or usage decision.
+              </p>
+<h3>Assumptions and how to use this calculator</h3>
+<ul>
+<li>The appliance runs at the entered wattage for the full time. Real devices may cycle on and off.</li>
+<li>The electricity price per kWh is treated as constant. Tiered tariffs and time-of-use pricing are not modeled.</li>
+<li>Hours used per day is an average. If your usage swings widely, results will swing too.</li>
+<li>Monthly and yearly totals scale daily cost by days (month) and 365 (year). They are not a prediction of your bill.</li>
+<li>The estimate excludes fixed charges, service fees, and taxes that may appear on an electricity bill.</li>
+</ul>
+<h3>Common questions</h3>
+<h3>Why does my calculated cost not match my bill exactly?</h3>
+<p>
+                A bill usually includes more than energy usage. Many tariffs add fixed daily charges, network fees, and taxes. On top of that, some tariffs are tiered, so the price per kWh changes as your total usage increases. This calculator estimates the variable energy cost for one appliance only, using one price per kWh.
+              </p>
+<h3>What watt value should I enter if the appliance has multiple power levels?</h3>
+<p>
+                Use the typical running level, not the maximum label rating, unless you usually run it on maximum. If you switch between levels, estimate a weighted average. Example: 2 hours at 1,000 W and 1 hour at 2,000 W is an average of 1,333 W over 3 hours.
+              </p>
+<h3>How do I estimate the watts for appliances like fridges or air conditioners?</h3>
+<p>
+                Many of these devices cycle. The label wattage may be a peak value, while average usage is lower. If you only have the rated watts, you can still use the calculator as a conservative estimate by reducing the “hours used per day” to reflect the duty cycle. If you have a plug-in energy meter reading in kWh, that is more accurate and can be converted directly into a daily cost by multiplying kWh by your rate.
+              </p>
+<h3>Should I use 30 days for a month?</h3>
+<p>
+                For quick planning, yes. If you are trying to match a billing cycle, enter the number of days in that cycle (usually 28 to 31). The difference is not huge for most appliances, but it matters more for high-watt devices that run many hours per day.
+              </p>
+<h3>Does this calculator include standby power and vampire loads?</h3>
+<p>
+                No. Standby usage can be meaningful for devices that are always plugged in, like TVs, decoders, routers, and chargers. If you want to include standby power, you can approximate it by adding the standby watts into the appliance watt input as an average, or by running a separate calculation for standby usage and adding the costs together outside this calculator.
+              </p>
+<div class="last-updated">Last updated: 2025-12-29</div>
+</section>
+</div>
+<div class="grid-slot">
+
+
+
+
+
+    
+
+
+</div>
+
+
+
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<span>© 2025 SnapCalc</span>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/disclaimer.html">Disclaimer</a>
+</div>
+</footer>
+<script data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js">
+</script>
+</body>
+</html>
