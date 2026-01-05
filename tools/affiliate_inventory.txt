@@ -1,0 +1,26 @@
+[ADSTERRA_HTML]
+<script>
+  atOptions = {
+    'key' : '46d1518853679ded4bcb05a44dc473ed',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script>
+
+[AMAZON_STATIC]
+href=https://amzn.to/3NtbDRk
+img=/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg
+alt=Shop online
+
+[AFFILIATE_PROGRAMS]
+# format: href | img | alt
+https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk | /assets/affiliates/krispcall/krispcall-1711.jpg | CloudTalk
+https://try.krispcall.com/0gka10ewdh15 | /assets/affiliates/cloudtalk/cloudtalk-01052026.jpg | KrispCall
+
+[BOOKS]
+# format: href | img | alt
+https://www.amazon.com/Clerk-Financial-Thriller-Control-Collapse/dp/B0FBT234PL | /assets/affiliates/amazon/the-clerk/cover-12.12.10.58.jpg | The Clerk book cover
+https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8 | /assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg | The Clerk 2 book cover
