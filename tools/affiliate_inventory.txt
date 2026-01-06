@@ -17,8 +17,8 @@ alt=Shop online
 
 [AFFILIATE_PROGRAMS]
 # format: href | img | alt
-https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk | /assets/affiliates/krispcall/krispcall-1711.jpg | CloudTalk
-https://try.krispcall.com/0gka10ewdh15 | /assets/affiliates/cloudtalk/cloudtalk-01052026.jpg | KrispCall
+https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk | /assets/affiliates/cloudtalk/cloudtalk-01052026.jpg | CloudTalk
+https://try.krispcall.com/0gka10ewdh15 | /assets/affiliates/krispcall/krispcall-1711.jpg | KrispCall
 
 [BOOKS]
 # format: href | img | alt
