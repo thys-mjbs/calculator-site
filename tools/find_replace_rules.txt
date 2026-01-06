@@ -1,0 +1,15 @@
+# SnapCalc Generic Find + Replace Rules
+# Format:
+# - Each rule is a block with [FIND] ... [/FIND] and [REPLACE] ... [/REPLACE]
+# - Separate multiple rules with a line containing only: ----
+# - Matching is literal, case-sensitive, exact text match.
+
+[RULE]
+NAME=Copyright year update
+[FIND]
+© 2025
+[/FIND]
+[REPLACE]
+© 2026
+[/REPLACE]
+[/RULE]
