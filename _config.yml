@@ -6,6 +6,12 @@ baseurl: ""
 plugins:
   - jekyll-sitemap
 
+defaults:
+  - scope:
+      path: "diagnostic-insights/gated"
+    values:
+      sitemap: false
+
 # Keep Jekyll behaviour minimal so your static HTML keeps working.
 # No theme, no layouts, no collections are defined here.
 # GitHub Pages will run Jekyll and auto-generate:

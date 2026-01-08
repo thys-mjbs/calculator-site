@@ -1,3 +1,4 @@
+/* style.css */
 .calculator-container {
   max-width: 360px;
   padding: 20px;
@@ -33,38 +34,24 @@
 .input-group label {
   display: block;
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-/* Range sliders (diagnostic-primary interaction) */
-.input-group input[type="range"] {
+.form-group input[type="text"],
+.input-group input[type="text"] {
   width: 100%;
-  margin: 2px 0 6px;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
 }
 
-.live-value {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  font-size: 13px;
-  color: #333333;
-}
-
-.live-label {
-  color: #555555;
-}
-
-.live-number {
-  font-weight: 700;
-  color: #111111;
-}
-
-.micro-help {
-  margin: 6px 0 0;
-  font-size: 12px;
-  line-height: 1.35;
-  color: #666666;
+.form-group input[type="text"]:focus,
+.input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
 }
 
 #calculateButton {
@@ -96,44 +83,6 @@
   color: #0b4f2a;
 }
 
-/* Email gate */
-.email-gate {
-  margin-top: 14px;
-  padding: 12px;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-}
-
-.email-gate h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-}
-
-.email-gate-intro {
-  margin: 0 0 10px;
-  font-size: 13px;
-  color: #555555;
-  line-height: 1.45;
-}
-
-.email-gate ul {
-  margin: 0 0 10px;
-  padding-left: 18px;
-  font-size: 13px;
-  color: #333333;
-}
-
-.email-embed-slot {
-  border-radius: 8px;
-  border: 1px dashed #d0d0d0;
-  padding: 10px;
-  min-height: 64px;
-  box-sizing: border-box;
-  background: #fafafa;
-}
-
-/* WhatsApp share */
 .share-buttons {
   margin-top: 12px;
 }
@@ -171,15 +120,6 @@
   font-size: 13px;
   color: #555555;
   margin: 0;
-}
-
-/* Gumroad CTA tile (row 2 middle) */
-.product-cta-card .product-cta {
-  margin: 10px 0 0;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: underline;
-  color: #222222;
 }
 
 /* SEO section */
@@ -359,4 +299,123 @@
   .calculator-container {
     max-width: 100%;
   }
+}
+
+/* ------------------------------------------------------------
+   DI-SPECIFIC CLASSES (additive, baseline-safe)
+   ------------------------------------------------------------ */
+
+.di-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.di-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.di-label label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.di-hint {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 2px;
+}
+
+.di-inputs {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.di-inputs input[type="text"] {
+  width: 100%;
+}
+
+.di-inputs input[type="range"] {
+  width: 100%;
+}
+
+.di-gate {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.di-gate-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.di-gate-bullets {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #444444;
+}
+
+.email-embed-slot {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  background: #fbfbfb;
+  min-height: 64px;
+}
+
+.email-preview {
+  margin-top: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 10px;
+}
+
+.email-preview-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.email-preview-body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  color: #333333;
+}
+
+.di-boundary {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666666;
+}
+
+.gumroad-cta-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gumroad-cta-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
