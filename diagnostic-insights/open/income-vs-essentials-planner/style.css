@@ -1,0 +1,222 @@
+/* style.css */
+
+/* Calculator card only (DI-specific styles). Do not override global layout selectors. */
+
+.calculator-container {
+  max-width: 520px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.calculator-intro {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 14px;
+}
+
+.di-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.di-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.di-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.di-hint {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.di-inputs {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.di-inputs input[type="text"] {
+  width: 100%;
+  padding: 7px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.di-inputs input[type="text"]:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
+}
+
+.di-inputs input[type="range"] {
+  width: 100%;
+}
+
+#calculateButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+#result.error {
+  color: #b00020;
+  font-weight: 700;
+}
+
+#result.success {
+  color: #0b4f2a;
+}
+
+.di-result-headline {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.di-result-interpretation {
+  margin: 0 0 10px;
+  color: #333333;
+}
+
+.di-actions {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.di-actions li {
+  margin-bottom: 6px;
+}
+
+.di-gate {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.di-gate-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.di-gate-intro {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #444444;
+}
+
+.di-gate-bullets {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #444444;
+}
+
+.email-embed-slot {
+  min-height: 56px;
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fafafa;
+  margin-bottom: 12px;
+}
+
+.report-preview {
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fbfbfb;
+}
+
+.report-preview-header {
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+.report-preview-block {
+  padding: 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  margin-bottom: 8px;
+}
+
+.report-preview-title {
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #111111;
+}
+
+.report-preview-line {
+  font-size: 12px;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.share-buttons {
+  margin-top: 12px;
+}
+
+.share-buttons button {
+  width: 100%;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #007f3b;
+  background-color: #00a651;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .di-inputs {
+    grid-template-columns: 1fr;
+  }
+}
