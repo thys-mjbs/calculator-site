@@ -15,7 +15,7 @@
   },
   {
     "title": "Accounts Receivable Days Calculator | SnapCalc",
-    "url": "/calculators/business-and-accounting/accounts-receivable-days-calculator/",
+    "url": "/calculators/business-accounting/accounts-receivable-days-calculator/",
     "category": "Business & Accounting",
     "aliases": [
       "accounts receivable days calculator | snapcalc",
@@ -630,7 +630,7 @@
   },
   {
     "title": "Paint Coverage Calculator (Construction Version) | SnapCalc",
-    "url": "/calculators/construction-and-materials/paint-coverage-calculator-construction-version/",
+    "url": "/calculators/construction-materials/paint-coverage-calculator-construction-version/",
     "category": "Construction & Materials",
     "aliases": [
       "paint coverage calculator (construction version) | snapcalc",
@@ -3416,7 +3416,7 @@
   },
   {
     "title": "Greatest Common Divisor Calculator | SnapCalc",
-    "url": "/calculators/math-and-general-calculators/greatest-common-divisor-calculator/",
+    "url": "/calculators/math-general-calculators/greatest-common-divisor-calculator/",
     "category": "Math & General Calculators",
     "aliases": [
       "greatest common divisor calculator | snapcalc",
@@ -3611,7 +3611,7 @@
   },
   {
     "title": "Proportion Calculator | SnapCalc",
-    "url": "/calculators/math-and-general-calculators/proportion-calculator/",
+    "url": "/calculators/math-general-calculators/proportion-calculator/",
     "category": "Math & General Calculators",
     "aliases": [
       "proportion calculator | snapcalc",
@@ -5038,7 +5038,7 @@
   },
   {
     "title": "Business Days Between Dates Calculator | SnapCalc",
-    "url": "/calculators/time-date-and-scheduling/business-days-between-dates-calculator/",
+    "url": "/calculators/time-date-scheduling/business-days-between-dates-calculator/",
     "category": "Time, Date & Scheduling",
     "aliases": [
       "business days between dates calculator | snapcalc",
@@ -5313,7 +5313,7 @@
   },
   {
     "title": "Timesheet Calculator | SnapCalc",
-    "url": "/calculators/time-date-scheduling/timesheet-calculator/",
+    "url": "/calculators/time-date-scheduling/weekly-work-hours-calculator/",
     "category": "Time, Date & Scheduling",
     "aliases": [
       "timesheet calculator | snapcalc",
@@ -5354,7 +5354,7 @@
   },
   {
     "title": "Weekly Work Hours Calculator | SnapCalc",
-    "url": "/calculators/time-date-scheduling/weekly-work-hours-calculator/",
+    "url": "/calculators/time-date-scheduling/overtime-hours-calculator/",
     "category": "Time, Date & Scheduling",
     "aliases": [
       "weekly work hours calculator | snapcalc",
@@ -5701,7 +5701,7 @@
   },
   {
     "title": "Time Zone Converter (Travel Version) | SnapCalc",
-    "url": "/calculators/travel-transport/time-zone-converter-travel-version/",
+    "url": "/calculators/travel-transport/trip-time-estimator/",
     "category": "Travel & Transport",
     "aliases": [
       "time zone converter (travel version) | snapcalc",
@@ -5783,7 +5783,7 @@
   },
   {
     "title": "Vehicle Ownership Cost Calculator | SnapCalc",
-    "url": "/calculators/travel-transport/vehicle-ownership-cost-calculator/",
+    "url": "/calculators/travel-transport/time-zone-converter-travel-version/",
     "category": "Travel & Transport",
     "aliases": [
       "vehicle ownership cost calculator | snapcalc",
