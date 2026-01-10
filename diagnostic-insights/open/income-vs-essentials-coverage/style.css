@@ -1,3 +1,4 @@
+/* style.css */
 .calculator-container {
   max-width: 360px;
   padding: 20px;
@@ -308,9 +309,9 @@
 .di-row {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 10px;
-  border: 1px solid #e6e6e6;
+  gap: 8px;
+  padding: 10px 10px;
+  border: 1px solid #e3e3e3;
   border-radius: 8px;
   background: #ffffff;
   margin-bottom: 10px;
@@ -318,7 +319,7 @@
 
 .di-label label {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .di-hint {
@@ -346,65 +347,66 @@
   width: 100%;
 }
 
-.di-section {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #eeeeee;
+.di-gate {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
 }
 
-.di-section-title {
-  margin: 0 0 8px;
-  font-size: 14px;
-  font-weight: 800;
+.di-gate-title {
+  margin: 0 0 8px 0;
+  font-size: 15px;
 }
 
-.di-kv {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 6px 10px;
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.di-kv .k {
-  color: #333333;
-}
-
-.di-kv .v {
-  font-weight: 700;
-  color: #111111;
-  text-align: right;
-}
-
-.di-bullets {
-  margin: 0;
+.di-gate-bullets {
+  margin: 0 0 10px 0;
   padding-left: 18px;
   font-size: 13px;
-  color: #333333;
+  color: #444444;
 }
 
-.di-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  margin-top: 6px;
-}
-
-.di-table th,
-.di-table td {
-  border: 1px solid #e6e6e6;
-  padding: 6px 8px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.di-table th {
-  font-weight: 800;
+.email-embed-slot {
+  border: 1px dashed #d0d0d0;
+  border-radius: 8px;
+  padding: 10px;
   background: #fafafa;
+  min-height: 46px;
+  box-sizing: border-box;
 }
 
-.di-note {
+.di-report-preview-wrap {
+  margin-top: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 10px;
+}
+
+.di-report-preview-title {
   font-size: 12px;
-  color: #666666;
-  margin-top: 8px;
+  font-weight: 700;
+  color: #444444;
+  margin-bottom: 6px;
+}
+
+.di-report-preview {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #222222;
+  white-space: pre-wrap;
+}
+
+.gumroad-cta-tile {
+  text-align: left;
+}
+
+.gumroad-cta-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
