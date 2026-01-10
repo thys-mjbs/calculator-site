@@ -1,18 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
-  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
+  // 1) ELEMENT BINDINGS
   // ------------------------------------------------------------
-
-  // Required base elements (consistent across all calculators)
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
 
-  // Calculator-specific input elements
-  // Replace these bindings per calculator or add more as needed.
-  // Example:
-  // const inputA = document.getElementById("inputA");
-  // const inputB = document.getElementById("inputB");
   const incomeNumber = document.getElementById("incomeNumber");
   const incomeRange = document.getElementById("incomeRange");
 
@@ -61,37 +54,66 @@ document.addEventListener("DOMContentLoaded", function () {
   const proCombined = document.getElementById("proCombined");
   const proPlan = document.getElementById("proPlan");
 
-  // Optional: mode selector + grouped input blocks (only if calculator needs modes)
-  // Example:
-  // const modeSelect = document.getElementById("modeSelect");
-  // const modeBlockA = document.getElementById("modeBlockA");
-  // const modeBlockB = document.getElementById("modeBlockB");
-  
-
   // ------------------------------------------------------------
-  // 2) LIVE FORMATTING (OPTIONAL)
+  // 2) SAFE HELPERS (SELF-CONTAINED)
   // ------------------------------------------------------------
-  function attachLiveFormatting(inputEl) {
-    if (!inputEl) return;
-    inputEl.addEventListener("input", function () {
-      inputEl.value = formatInputWithCommas(inputEl.value);
-    });
+  function parseLooseNumber(value) {
+    if (value === null || value === undefined) return NaN;
+    const s = String(value).replace(/,/g, "").trim();
+    if (s === "") return NaN;
+    const n = Number(s);
+    return Number.isFinite(n) ? n : NaN;
   }
 
-  // Add every input that should live-format with commas
-  // Example:
-  // attachLiveFormatting(inputA);
-  // attachLiveFormatting(inputB);
-  attachLiveFormatting(incomeNumber);
-  attachLiveFormatting(housingNumber);
-  attachLiveFormatting(utilitiesNumber);
-  attachLiveFormatting(groceriesNumber);
-  attachLiveFormatting(transportNumber);
-  attachLiveFormatting(medicalNumber);
-  attachLiveFormatting(commitmentsNumber);
+  function clamp(value, min, max) {
+    if (!Number.isFinite(value)) return min;
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function formatWithCommas(n) {
+    if (!Number.isFinite(n)) return "";
+    return Math.round(n).toLocaleString("en-US");
+  }
+
+  function formatTwoDecimals(n) {
+    if (!Number.isFinite(n)) return "";
+    return (Math.round(n * 100) / 100).toFixed(2);
+  }
+
+  function formatRatio(x) {
+    if (!Number.isFinite(x)) return "";
+    return formatTwoDecimals(x) + "x";
+  }
+
+  function formatInputWithCommas(raw) {
+    // Keep digits, commas, one dot allowed (for decimals inputs like reliability/buffer)
+    const s = String(raw || "").replace(/[^\d.,]/g, "");
+    if (s === "") return "";
+
+    // If it contains a dot, do not comma-format aggressively (keep user intent)
+    const hasDot = s.includes(".");
+    const cleaned = s.replace(/,/g, "");
+
+    if (hasDot) {
+      // Limit to one dot
+      const parts = cleaned.split(".");
+      const left = parts[0] || "0";
+      const right = (parts[1] || "").replace(/\./g, "");
+      // Add commas to left only
+      const leftNum = left.replace(/^0+(?=\d)/, "");
+      const leftFmt = (leftNum === "" ? "0" : leftNum).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return leftFmt + "." + right;
+    }
+
+    // Integer formatting
+    const digits = cleaned.replace(/\./g, "");
+    const leftNum = digits.replace(/^0+(?=\d)/, "");
+    const leftFmt = (leftNum === "" ? "0" : leftNum).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return leftFmt;
+  }
 
   // ------------------------------------------------------------
-  // 3) RESULT HELPERS (CONSISTENT)
+  // 3) RESULT HELPERS
   // ------------------------------------------------------------
   function setResultError(message) {
     if (!resultDiv) return;
@@ -113,71 +135,64 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.textContent = "";
   }
 
-  // ------------------------------------------------------------
-  // 4) OPTIONAL MODE HANDLING (ONLY IF USED)
-  // ------------------------------------------------------------
-  // If your calculator has multiple modes, implement showMode() and hook it up.
-  // If not used, leave the placeholders empty and do nothing.
-  function showMode(mode) {
-    // Example pattern:
-    // modeBlockA.classList.add("hidden");
-    // modeBlockB.classList.add("hidden");
-    // if (mode === "a") modeBlockA.classList.remove("hidden");
-    // if (mode === "b") modeBlockB.classList.remove("hidden");
-    
-
-    clearResult();
+  function clearPaidOutputsIfInvalid() {
+    if (proHeadline) proHeadline.textContent = "Run the analysis to generate your results.";
+    if (proEssentials) proEssentials.textContent = "";
+    if (proConservativeIncome) proConservativeIncome.textContent = "";
+    if (proRatio) proRatio.textContent = "";
+    if (proMargin) proMargin.textContent = "";
+    if (proTargets) proTargets.textContent = "";
+    if (proBuffer) proBuffer.textContent = "";
+    if (proLevers) proLevers.innerHTML = "";
+    if (proSensitivity) proSensitivity.innerHTML = "";
+    if (proCombined) proCombined.textContent = "";
+    if (proPlan) proPlan.innerHTML = "";
   }
 
-  // Example:
-  // if (modeSelect) {
-  //   showMode(modeSelect.value);
-  //   modeSelect.addEventListener("change", function () {
-  //     showMode(modeSelect.value);
-  //   });
-  // }
-  
+  function validateNonNegative(value, fieldLabel) {
+    if (!Number.isFinite(value) || value < 0) {
+      setResultError("Enter a valid " + fieldLabel + " (0 or higher).");
+      return false;
+    }
+    return true;
+  }
 
   // ------------------------------------------------------------
-  // Helpers required for DI binding and parsing
+  // 4) LIVE FORMATTING
   // ------------------------------------------------------------
-  function parseLooseNumber(value) {
-    if (value === null || value === undefined) return NaN;
-    const s = String(value).replace(/,/g, "").trim();
-    if (s === "") return NaN;
-    const n = Number(s);
-    return Number.isFinite(n) ? n : NaN;
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
   }
 
-  function clamp(value, min, max) {
-    if (!Number.isFinite(value)) return min;
-    return Math.min(max, Math.max(min, value));
-  }
+  attachLiveFormatting(incomeNumber);
+  attachLiveFormatting(housingNumber);
+  attachLiveFormatting(utilitiesNumber);
+  attachLiveFormatting(groceriesNumber);
+  attachLiveFormatting(transportNumber);
+  attachLiveFormatting(medicalNumber);
+  attachLiveFormatting(commitmentsNumber);
 
-  function formatWithCommas(n) {
-    if (!Number.isFinite(n)) return "";
-    return formatNumber(Math.round(n));
-  }
-
-  function formatRatio(x) {
-    if (!Number.isFinite(x)) return "";
-    return formatNumberTwoDecimals(x) + "x";
-  }
-
-  function bindRangeAndNumber(rangeEl, numberEl, min, max, step, decimals) {
+  // ------------------------------------------------------------
+  // 5) RANGE <-> NUMBER BINDING
+  // ------------------------------------------------------------
+  function bindRangeAndNumber(rangeEl, numberEl, min, max, decimals) {
     if (!rangeEl || !numberEl) return;
 
     const d = Number.isFinite(decimals) ? decimals : 0;
 
-    function toFixedSafe(v) {
+    function toText(v) {
       if (!Number.isFinite(v)) return "";
-      return d > 0 ? v.toFixed(d) : formatWithCommas(v);
+      if (d > 0) return v.toFixed(d);
+      return formatWithCommas(v);
     }
 
     function setBoth(next) {
       const c = clamp(next, min, max);
       rangeEl.value = String(c);
-      numberEl.value = toFixedSafe(c);
+      numberEl.value = toText(c);
     }
 
     rangeEl.addEventListener("input", function () {
@@ -199,92 +214,50 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.key === "Enter") commitTyped();
     });
 
-    setBoth(parseLooseNumber(rangeEl.value));
+    const initial = parseLooseNumber(rangeEl.value);
+    setBoth(Number.isFinite(initial) ? initial : min);
   }
 
-  bindRangeAndNumber(incomeRange, incomeNumber, 0, 300000, 100, 0);
-  bindRangeAndNumber(housingRange, housingNumber, 0, 250000, 100, 0);
-  bindRangeAndNumber(utilitiesRange, utilitiesNumber, 0, 80000, 100, 0);
-  bindRangeAndNumber(groceriesRange, groceriesNumber, 0, 120000, 100, 0);
-  bindRangeAndNumber(transportRange, transportNumber, 0, 120000, 100, 0);
-  bindRangeAndNumber(medicalRange, medicalNumber, 0, 120000, 100, 0);
+  bindRangeAndNumber(incomeRange, incomeNumber, 0, 300000, 0);
+  bindRangeAndNumber(housingRange, housingNumber, 0, 250000, 0);
+  bindRangeAndNumber(utilitiesRange, utilitiesNumber, 0, 80000, 0);
+  bindRangeAndNumber(groceriesRange, groceriesNumber, 0, 120000, 0);
+  bindRangeAndNumber(transportRange, transportNumber, 0, 120000, 0);
+  bindRangeAndNumber(medicalRange, medicalNumber, 0, 120000, 0);
 
-  bindRangeAndNumber(reliabilityRange, reliabilityNumber, 0.5, 1.0, 0.01, 2);
-  bindRangeAndNumber(variabilityRange, variabilityNumber, 0, 40, 1, 0);
-  bindRangeAndNumber(commitmentsRange, commitmentsNumber, 0, 500000, 1000, 0);
-  bindRangeAndNumber(bufferMonthsRange, bufferMonthsNumber, 0, 12, 0.5, 1);
-  bindRangeAndNumber(errorMarginRange, errorMarginNumber, 0, 30, 1, 0);
-  bindRangeAndNumber(confidenceRange, confidenceNumber, 50, 100, 1, 0);
+  bindRangeAndNumber(reliabilityRange, reliabilityNumber, 0.5, 1.0, 2);
+  bindRangeAndNumber(variabilityRange, variabilityNumber, 0, 40, 0);
+  bindRangeAndNumber(commitmentsRange, commitmentsNumber, 0, 500000, 0);
+  bindRangeAndNumber(bufferMonthsRange, bufferMonthsNumber, 0, 12, 1);
+  bindRangeAndNumber(errorMarginRange, errorMarginNumber, 0, 30, 0);
+  bindRangeAndNumber(confidenceRange, confidenceNumber, 50, 100, 0);
 
   // ------------------------------------------------------------
-  // 5) VALIDATION HELPERS (OPTIONAL)
-  // ------------------------------------------------------------
-  function validatePositive(value, fieldLabel) {
-    if (!Number.isFinite(value) || value <= 0) {
-      setResultError("Enter a valid " + fieldLabel + " greater than 0.");
-      return false;
-    }
-    return true;
-  }
-
-  function validateNonNegative(value, fieldLabel) {
-    if (!Number.isFinite(value) || value < 0) {
-      setResultError("Enter a valid " + fieldLabel + " (0 or higher).");
-      return false;
-    }
-    return true;
-  }
-
-  function clearPaidOutputsIfInvalid() {
-    if (proHeadline) proHeadline.textContent = "Run the analysis to generate your paid results.";
-    if (proEssentials) proEssentials.textContent = "";
-    if (proConservativeIncome) proConservativeIncome.textContent = "";
-    if (proRatio) proRatio.textContent = "";
-    if (proMargin) proMargin.textContent = "";
-    if (proTargets) proTargets.textContent = "";
-    if (proBuffer) proBuffer.textContent = "";
-    if (proLevers) proLevers.innerHTML = "";
-    if (proSensitivity) proSensitivity.innerHTML = "";
-    if (proCombined) proCombined.textContent = "";
-    if (proPlan) proPlan.innerHTML = "";
-  }
-
-  // ------------------------------------------------------------
-  // 6) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
+  // 6) MAIN CALCULATE HANDLER
   // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      // Optional: if you have modes, read it here:
-      // const mode = modeSelect ? modeSelect.value : "default";
-      
-
-      // Parse inputs using toNumber() (from /scripts/main.js)
-      // Example:
-      // const a = toNumber(inputA ? inputA.value : "");
-      // const b = toNumber(inputB ? inputB.value : "");
-      const income = toNumber(incomeNumber ? incomeNumber.value : "");
-      const housing = toNumber(housingNumber ? housingNumber.value : "");
-      const utilities = toNumber(utilitiesNumber ? utilitiesNumber.value : "");
-      const groceries = toNumber(groceriesNumber ? groceriesNumber.value : "");
-      const transport = toNumber(transportNumber ? transportNumber.value : "");
-      const medical = toNumber(medicalNumber ? medicalNumber.value : "");
+      const income = parseLooseNumber(incomeNumber ? incomeNumber.value : "");
+      const housing = parseLooseNumber(housingNumber ? housingNumber.value : "");
+      const utilities = parseLooseNumber(utilitiesNumber ? utilitiesNumber.value : "");
+      const groceries = parseLooseNumber(groceriesNumber ? groceriesNumber.value : "");
+      const transport = parseLooseNumber(transportNumber ? transportNumber.value : "");
+      const medical = parseLooseNumber(medicalNumber ? medicalNumber.value : "");
 
       const reliability = parseLooseNumber(reliabilityNumber ? reliabilityNumber.value : "");
-      const variabilityPct = toNumber(variabilityNumber ? variabilityNumber.value : "");
-      const commitments = toNumber(commitmentsNumber ? commitmentsNumber.value : "");
+      const variabilityPct = parseLooseNumber(variabilityNumber ? variabilityNumber.value : "");
+      const commitments = parseLooseNumber(commitmentsNumber ? commitmentsNumber.value : "");
       const bufferMonths = parseLooseNumber(bufferMonthsNumber ? bufferMonthsNumber.value : "");
-      const errorMarginPct = toNumber(errorMarginNumber ? errorMarginNumber.value : "");
-      const confidencePct = toNumber(confidenceNumber ? confidenceNumber.value : "");
+      const errorMarginPct = parseLooseNumber(errorMarginNumber ? errorMarginNumber.value : "");
+      const confidencePct = parseLooseNumber(confidenceNumber ? confidenceNumber.value : "");
 
-      // Basic existence guard (optional but recommended)
-      // Example:
-      // if (!inputA || !inputB) return;
-      if (!incomeNumber || !housingNumber || !utilitiesNumber || !groceriesNumber || !transportNumber || !medicalNumber) return;
-      if (!reliabilityNumber || !variabilityNumber || !commitmentsNumber || !bufferMonthsNumber || !errorMarginNumber || !confidenceNumber) return;
+      if (
+        !incomeNumber || !housingNumber || !utilitiesNumber || !groceriesNumber || !transportNumber || !medicalNumber ||
+        !reliabilityNumber || !variabilityNumber || !commitmentsNumber || !bufferMonthsNumber || !errorMarginNumber || !confidenceNumber
+      ) return;
 
       clearResult();
 
-      // Validation (use validatePositive/validateNonNegative or custom)
       if (!validateNonNegative(income, "monthly take-home income")) { clearPaidOutputsIfInvalid(); return; }
       if (!validateNonNegative(housing, "housing")) { clearPaidOutputsIfInvalid(); return; }
       if (!validateNonNegative(utilities, "utilities")) { clearPaidOutputsIfInvalid(); return; }
@@ -331,7 +304,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Calculation logic
       const stableThresholdRatio = 1.25;
 
       const fixedTotal = essentialsBase + commitments;
@@ -406,8 +378,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       function money(n) { return formatWithCommas(n); }
 
-      // Render Slot 2 summary result
-      const summarySentence = classification + ". Conservative coverage ratio is " + formatRatio(coverageRatio) + " with a monthly margin of " + money(monthlyMargin) + ".";
+      const summarySentence =
+        classification + ". Conservative coverage ratio is " + formatRatio(coverageRatio) +
+        " with a monthly margin of " + money(monthlyMargin) + ".";
+
       const actions = [];
       actions.push("To reach Stable: increase income by " + money(incomeIncreaseTarget) + " or reduce essentials by " + money(essentialsDecreaseTarget) + ".");
       if (leverComputed.length > 0) {
@@ -421,10 +395,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "<p>" + summarySentence + "</p>" +
         "<ul><li>" + actions[0] + "</li><li>" + actions[1] + "</li></ul>";
 
-      // Render Slot 8 paid panel
-      if (proHeadline) {
-        proHeadline.textContent = classification + " (based on conservative coverage)";
-      }
+      // Slot 8 panel
+      if (proHeadline) proHeadline.textContent = classification + " (based on conservative coverage)";
       if (proEssentials) proEssentials.textContent = money(adjustedEssentials);
       if (proConservativeIncome) proConservativeIncome.textContent = money(conservativeIncome);
       if (proRatio) proRatio.textContent = formatRatio(coverageRatio);
@@ -449,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return (
             "<div class=\"di-lever-item\">" +
               "<div class=\"di-lever-title\">" + x.label + "</div>" +
-              "<div class=\"di-lever-meta\">Share: " + formatNumberTwoDecimals(x.sharePct) + "%</div>" +
+              "<div class=\"di-lever-meta\">Share: " + formatTwoDecimals(x.sharePct) + "%</div>" +
               "<div class=\"di-lever-meta\">Required change (single lever): " + money(x.requiredChange) + "</div>" +
             "</div>"
           );
@@ -480,11 +452,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const plan = [];
-      if (incomeIncreaseTarget > 0) {
-        plan.push("Close the Stable gap by increasing conservative income by " + money(incomeIncreaseTarget) + " if costs cannot move enough.");
-      } else {
-        plan.push("Maintain Stable by protecting conservative income against variability and reliability slippage.");
-      }
+      if (incomeIncreaseTarget > 0) plan.push("Close the Stable gap by increasing conservative income by " + money(incomeIncreaseTarget) + " if costs cannot move enough.");
+      else plan.push("Maintain Stable by protecting conservative income against variability and reliability slippage.");
 
       if (essentialsDecreaseTarget > 0 && leverComputed.length > 0) {
         plan.push("Start with " + leverComputed[0].label + " because it has the largest share. Target " + money(leverComputed[0].requiredChange) + " change for a single lever route.");
@@ -495,11 +464,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       plan.push("Do not add new fixed commitments until the Combined stress scenario remains Stable.");
-      if (bufferMonths > 0) {
-        plan.push("Build the buffer target of " + money(bufferTarget) + " using your selected buffer depth of " + bufferMonths.toFixed(1) + " months.");
-      } else {
-        plan.push("Set a non-zero buffer depth to generate a buffer target and reduce fragility.");
-      }
+
+      if (bufferMonths > 0) plan.push("Build the buffer target of " + money(bufferTarget) + " using your selected buffer depth of " + bufferMonths.toFixed(1) + " months.");
+      else plan.push("Set a non-zero buffer depth to generate a buffer target and reduce fragility.");
 
       plan.push("Re-run this tool after changes to housing, transport, commitments, or reliability to confirm the Stable gap stays closed.");
 
@@ -507,13 +474,12 @@ document.addEventListener("DOMContentLoaded", function () {
         proPlan.innerHTML = plan.slice(0, 7).map(function (p) { return "<li>" + p + "</li>"; }).join("");
       }
 
-      // Output
       setResultSuccess(resultHtml);
     });
   }
 
   // ------------------------------------------------------------
-  // 7) WHATSAPP SHARE (CONSISTENT)
+  // 7) WHATSAPP SHARE
   // ------------------------------------------------------------
   if (shareButton) {
     shareButton.addEventListener("click", function () {
