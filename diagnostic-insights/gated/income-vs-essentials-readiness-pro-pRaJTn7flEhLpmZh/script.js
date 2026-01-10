@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
-  // 1) ELEMENT BINDINGS
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
   // ------------------------------------------------------------
 
+  // Required base elements (consistent across all calculators)
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
 
+  // Calculator-specific input elements
   const incomeNumber = document.getElementById("incomeNumber");
   const incomeRange = document.getElementById("incomeRange");
 
@@ -44,9 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const confidenceRange = document.getElementById("confidenceRange");
 
   // ------------------------------------------------------------
-  // 2) HELPERS (MANDATORY)
+  // 2) REQUIRED LOCAL HELPERS (SELF-CONTAINED)
   // ------------------------------------------------------------
-
   function parseLooseNumber(raw) {
     if (raw === null || raw === undefined) return NaN;
     const s = String(raw).trim();
@@ -86,14 +87,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const min = parseLooseNumber(rangeEl.min);
     const max = parseLooseNumber(rangeEl.max);
     const step = parseLooseNumber(rangeEl.step);
-
     const allowDecimals = options && options.allowDecimals === true;
+
+    function decimalsFromStep(st) {
+      if (!Number.isFinite(st) || st <= 0) return 0;
+      const parts = String(st).split(".");
+      return parts[1] ? parts[1].length : 0;
+    }
 
     function formatForNumberInput(n) {
       if (!Number.isFinite(n)) return "";
       if (allowDecimals) {
-        const decimals = Number.isFinite(step) && step > 0 ? Math.max(0, (String(step).split(".")[1] || "").length) : 2;
-        return n.toFixed(decimals);
+        const d = decimalsFromStep(step);
+        return n.toFixed(d);
       }
       return formatWithCommas(n);
     }
@@ -113,9 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     numberEl.addEventListener("input", function () {
-      if (!allowDecimals) {
-        numberEl.value = formatInputWithCommas(numberEl.value);
-      }
+      if (!allowDecimals) numberEl.value = formatInputWithCommas(numberEl.value);
     });
 
     function commitTyped() {
@@ -136,18 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function setResultError(message) {
-    if (!resultDiv) return;
-    resultDiv.className = "di-results di-results-error";
-    resultDiv.textContent = message;
-  }
-
-  function setResultHtml(html) {
-    if (!resultDiv) return;
-    resultDiv.className = "di-results di-results-ok";
-    resultDiv.innerHTML = html;
-  }
-
+  // ------------------------------------------------------------
+  // 3) LIVE FORMATTING (OPTIONAL)
+  // ------------------------------------------------------------
   function attachLiveFormatting(inputEl) {
     if (!inputEl) return;
     inputEl.addEventListener("input", function () {
@@ -155,10 +150,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ------------------------------------------------------------
-  // 3) BIND INPUTS
-  // ------------------------------------------------------------
+  // Add every input that should live-format with commas
+  attachLiveFormatting(incomeNumber);
+  attachLiveFormatting(housingNumber);
+  attachLiveFormatting(utilitiesNumber);
+  attachLiveFormatting(foodNumber);
+  attachLiveFormatting(transportNumber);
+  attachLiveFormatting(debtNumber);
+  attachLiveFormatting(commitmentsNumber);
 
+  // ------------------------------------------------------------
+  // 4) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
+  function setResultError(message) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("success");
+    resultDiv.classList.add("error");
+    resultDiv.textContent = message;
+  }
+
+  function setResultSuccess(html) {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error");
+    resultDiv.classList.add("success");
+    resultDiv.innerHTML = html;
+  }
+
+  function clearResult() {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error", "success");
+    resultDiv.textContent = "";
+  }
+
+  // ------------------------------------------------------------
+  // 5) VALIDATION HELPERS (OPTIONAL)
+  // ------------------------------------------------------------
+  function validatePositive(value, fieldLabel) {
+    if (!Number.isFinite(value) || value <= 0) {
+      setResultError("Enter a valid " + fieldLabel + " greater than 0.");
+      return false;
+    }
+    return true;
+  }
+
+  function validateNonNegative(value, fieldLabel) {
+    if (!Number.isFinite(value) || value < 0) {
+      setResultError("Enter a valid " + fieldLabel + " (0 or higher).");
+      return false;
+    }
+    return true;
+  }
+
+  // ------------------------------------------------------------
+  // 6) INPUT BINDING (RANGE + NUMBER SYNC)
+  // ------------------------------------------------------------
   bindRangeAndNumber(incomeRange, incomeNumber, { allowDecimals: false });
   bindRangeAndNumber(housingRange, housingNumber, { allowDecimals: false });
   bindRangeAndNumber(utilitiesRange, utilitiesNumber, { allowDecimals: false });
@@ -173,43 +218,9 @@ document.addEventListener("DOMContentLoaded", function () {
   bindRangeAndNumber(errorMarginRange, errorMarginNumber, { allowDecimals: false });
   bindRangeAndNumber(confidenceRange, confidenceNumber, { allowDecimals: false });
 
-  attachLiveFormatting(incomeNumber);
-  attachLiveFormatting(housingNumber);
-  attachLiveFormatting(utilitiesNumber);
-  attachLiveFormatting(foodNumber);
-  attachLiveFormatting(transportNumber);
-  attachLiveFormatting(debtNumber);
-  attachLiveFormatting(commitmentsNumber);
-
   // ------------------------------------------------------------
-  // 4) CALCULATION
+  // 7) CALCULATION HELPERS (PAID-ONLY DEPENDENCIES)
   // ------------------------------------------------------------
-
-  function validateNonNegative(n, label) {
-    if (!Number.isFinite(n) || n < 0) {
-      setResultError("Enter a valid " + label + " (0 or higher).");
-      return false;
-    }
-    return true;
-  }
-
-  function validatePositive(n, label) {
-    if (!Number.isFinite(n) || n <= 0) {
-      setResultError("Enter a valid " + label + " greater than 0.");
-      return false;
-    }
-    return true;
-  }
-
-  function pickTopDrivers(drivers) {
-    return drivers
-      .slice()
-      .sort(function (a, b) { return b.value - a.value; })
-      .filter(function (d) { return Number.isFinite(d.value) && d.value > 0; })
-      .slice(0, 3)
-      .map(function (d) { return d.label; });
-  }
-
   function computeSafetyLoading(errorMarginPct, confidencePct) {
     const em = clamp(errorMarginPct, 0, 25) / 100;
     const conf = clamp(confidencePct, 50, 100) / 100;
@@ -231,6 +242,15 @@ document.addEventListener("DOMContentLoaded", function () {
     return "Stable";
   }
 
+  function pickTopDrivers(drivers) {
+    return drivers
+      .slice()
+      .sort(function (a, b) { return b.value - a.value; })
+      .filter(function (d) { return Number.isFinite(d.value) && d.value > 0; })
+      .slice(0, 3)
+      .map(function (d) { return d.label; });
+  }
+
   function correctionTargetToStable(adjustedIncome, adjustedEssentials, stableThreshold) {
     const targetIncome = adjustedEssentials * stableThreshold;
     if (adjustedIncome >= targetIncome) return 0;
@@ -242,23 +262,26 @@ document.addEventListener("DOMContentLoaded", function () {
     return adjustedEssentials * m;
   }
 
+  // ------------------------------------------------------------
+  // 8) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
+  // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      if (!resultDiv) return;
+      clearResult();
 
-      const income = parseLooseNumber(incomeNumber && incomeNumber.value);
-      const housing = parseLooseNumber(housingNumber && housingNumber.value);
-      const utilities = parseLooseNumber(utilitiesNumber && utilitiesNumber.value);
-      const food = parseLooseNumber(foodNumber && foodNumber.value);
-      const transport = parseLooseNumber(transportNumber && transportNumber.value);
-      const debt = parseLooseNumber(debtNumber && debtNumber.value);
+      const income = parseLooseNumber(incomeNumber ? incomeNumber.value : "");
+      const housing = parseLooseNumber(housingNumber ? housingNumber.value : "");
+      const utilities = parseLooseNumber(utilitiesNumber ? utilitiesNumber.value : "");
+      const food = parseLooseNumber(foodNumber ? foodNumber.value : "");
+      const transport = parseLooseNumber(transportNumber ? transportNumber.value : "");
+      const debt = parseLooseNumber(debtNumber ? debtNumber.value : "");
 
-      const reliability = parseLooseNumber(reliabilityNumber && reliabilityNumber.value);
-      const variabilityPct = parseLooseNumber(variabilityNumber && variabilityNumber.value);
-      const commitments = parseLooseNumber(commitmentsNumber && commitmentsNumber.value);
-      const bufferMonths = parseLooseNumber(bufferMonthsNumber && bufferMonthsNumber.value);
-      const errorMarginPct = parseLooseNumber(errorMarginNumber && errorMarginNumber.value);
-      const confidencePct = parseLooseNumber(confidenceNumber && confidenceNumber.value);
+      const reliability = parseLooseNumber(reliabilityNumber ? reliabilityNumber.value : "");
+      const variabilityPct = parseLooseNumber(variabilityNumber ? variabilityNumber.value : "");
+      const commitments = parseLooseNumber(commitmentsNumber ? commitmentsNumber.value : "");
+      const bufferMonths = parseLooseNumber(bufferMonthsNumber ? bufferMonthsNumber.value : "");
+      const errorMarginPct = parseLooseNumber(errorMarginNumber ? errorMarginNumber.value : "");
+      const confidencePct = parseLooseNumber(confidenceNumber ? confidenceNumber.value : "");
 
       if (!validatePositive(income, "monthly income")) return;
       if (!validateNonNegative(housing, "housing")) return;
@@ -268,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!validateNonNegative(debt, "minimum debt payments")) return;
 
       if (!Number.isFinite(reliability) || reliability < 0.50 || reliability > 1.00) {
-        setResultError("Income reliability factor must be between 0.50 and 1.00.");
+        setResultError("Income reliability must be between 0.50 and 1.00.");
         return;
       }
       if (!validateNonNegative(variabilityPct, "income variability")) return;
@@ -294,13 +317,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const essentialsBase = housing + utilities + food + transport + debt + commitments;
       if (!Number.isFinite(essentialsBase) || essentialsBase <= 0) {
-        setResultError("Adjusted essentials must be greater than 0.");
+        setResultError("Essentials must be greater than 0.");
         return;
       }
 
       const safetyLoading = computeSafetyLoading(errorMarginPct, confidencePct);
       const essentialsAdjusted = essentialsBase * (1 + safetyLoading);
-
       const incomeAdjusted = computeAdjustedIncome(income, reliability, variabilityPct);
 
       if (!Number.isFinite(incomeAdjusted) || incomeAdjusted <= 0) {
@@ -315,6 +337,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const classification = classifyCoverage(ratio);
+      const monthlyMargin = incomeAdjusted - essentialsAdjusted;
+
+      let interpretation = "";
+      if (classification === "Underprepared") {
+        interpretation = "Adjusted income does not cover adjusted essentials with a safe margin.";
+      } else if (classification === "Borderline") {
+        interpretation = "Adjusted essentials are covered, but the margin is thin once uncertainty is applied.";
+      } else {
+        interpretation = "Adjusted essentials are covered with a meaningful margin, even after uncertainty is applied.";
+      }
 
       const drivers = [
         { label: "Housing", value: housing },
@@ -330,28 +362,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const correctionToStable = correctionTargetToStable(incomeAdjusted, essentialsAdjusted, stableThreshold);
       const bufferAmount = bufferTargetAmount(essentialsAdjusted, bufferMonths);
 
-      const monthlyMargin = incomeAdjusted - essentialsAdjusted;
-
-      let interpretation = "";
-      if (classification === "Underprepared") {
-        interpretation = "Your adjusted income does not cover adjusted essentials with a safe margin. The structure is fragile.";
-      } else if (classification === "Borderline") {
-        interpretation = "You cover adjusted essentials, but the margin is thin once uncertainty is applied.";
-      } else {
-        interpretation = "You cover adjusted essentials with a meaningful margin, even after uncertainty is applied.";
-      }
-
       const driversList = topDrivers.length
         ? "<ul class=\"di-mini-list\">" + topDrivers.map(function (d) { return "<li>" + d + "</li>"; }).join("") + "</ul>"
         : "<p class=\"di-muted\">No dominant drivers detected.</p>";
 
-      const correctionText = correctionToStable <= 0
-        ? "0"
-        : formatWithCommas(correctionToStable);
+      const correctionText = correctionToStable <= 0 ? "0" : formatWithCommas(correctionToStable);
 
-      const bufferText = formatWithCommas(bufferAmount);
-
-      const html =
+      const resultHtml =
         "<div class=\"di-result-block\">" +
           "<p class=\"di-headline\"><strong>Readiness:</strong> " + classification + "</p>" +
           "<p class=\"di-subline\">" + interpretation + "</p>" +
@@ -366,23 +383,23 @@ document.addEventListener("DOMContentLoaded", function () {
           "<h3 class=\"di-subhead\">Minimum correction target</h3>" +
           "<p class=\"di-muted\">To reach stable coverage (" + stableThreshold.toFixed(2) + "), you need about <strong>" + correctionText + "</strong> more adjusted income per month, or the same reduction in adjusted essentials.</p>" +
           "<h3 class=\"di-subhead\">Buffer target</h3>" +
-          "<p class=\"di-muted\">For <strong>" + formatWithCommas(bufferMonths) + "</strong> month(s) of buffer, target about <strong>" + bufferText + "</strong> in cash reserves (based on adjusted essentials).</p>" +
+          "<p class=\"di-muted\">For <strong>" + formatWithCommas(bufferMonths) + "</strong> month(s) of buffer, target about <strong>" + formatWithCommas(bufferAmount) + "</strong> in cash reserves (based on adjusted essentials).</p>" +
         "</div>";
 
-      setResultHtml(html);
+      setResultSuccess(resultHtml);
     });
   }
 
   // ------------------------------------------------------------
-  // 5) WHATSAPP SHARE (BASELINE PATTERN)
+  // 9) WHATSAPP SHARE (CONSISTENT)
   // ------------------------------------------------------------
-
   if (shareButton) {
     shareButton.addEventListener("click", function () {
       const pageUrl = window.location.href;
-      const message = "Check this readiness diagnostic: " + pageUrl;
+      const message = "Income vs Essentials Readiness Check Pro - check this diagnostic: " + pageUrl;
       const encoded = encodeURIComponent(message);
-      window.location.href = "https://api.whatsapp.com/send?text=" + encoded;
+      const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
+      window.open(waUrl, "_blank");
     });
   }
 });
