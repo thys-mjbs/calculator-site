@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
-  // 1) ELEMENT BINDINGS
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
   // ------------------------------------------------------------
+
+  // Required base elements (consistent across all calculators)
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
 
+  // Calculator-specific input elements
   const incomeNumber = document.getElementById("incomeNumber");
   const incomeRange = document.getElementById("incomeRange");
 
@@ -21,41 +24,63 @@ document.addEventListener("DOMContentLoaded", function () {
   const transportNumber = document.getElementById("transportNumber");
   const transportRange = document.getElementById("transportRange");
 
+  const medicalNumber = document.getElementById("medicalNumber");
+  const medicalRange = document.getElementById("medicalRange");
+
   const debtMinNumber = document.getElementById("debtMinNumber");
   const debtMinRange = document.getElementById("debtMinRange");
 
-  // Preview bindings
-  const pvIncome = document.getElementById("pvIncome");
-  const pvEssentials = document.getElementById("pvEssentials");
-  const pvRatio = document.getElementById("pvRatio");
-  const pvClass = document.getElementById("pvClass");
-  const pvDriver1 = document.getElementById("pvDriver1");
-  const pvDriver2 = document.getElementById("pvDriver2");
-  const pvDriver3 = document.getElementById("pvDriver3");
-  const pvCorrection = document.getElementById("pvCorrection");
+  // Report preview bindings (MANDATORY)
+  const previewInputs = document.getElementById("previewInputs");
+  const previewResult = document.getElementById("previewResult");
+  const previewCorrection = document.getElementById("previewCorrection");
+  const previewNextSteps = document.getElementById("previewNextSteps");
 
   // ------------------------------------------------------------
-  // 2) HELPERS
+  // 2) LIVE FORMATTING (OPTIONAL)
   // ------------------------------------------------------------
   function parseLooseNumber(raw) {
     if (raw === null || raw === undefined) return NaN;
     const s = String(raw).trim();
     if (!s) return NaN;
-    const cleaned = s.replace(/,/g, "").replace(/\s+/g, "");
+    const cleaned = s.replace(/,/g, "");
     const n = Number(cleaned);
     return Number.isFinite(n) ? n : NaN;
   }
 
   function clamp(n, min, max) {
-    if (!Number.isFinite(n)) return NaN;
-    return Math.min(Math.max(n, min), max);
+    if (!Number.isFinite(n)) return min;
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
   }
 
   function formatWithCommas(n) {
     if (!Number.isFinite(n)) return "";
-    return Math.round(n).toLocaleString("en-US");
+    const rounded = Math.round(n);
+    return String(rounded).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      const n = parseLooseNumber(inputEl.value);
+      if (!Number.isFinite(n)) return;
+      inputEl.value = formatWithCommas(n);
+    });
+  }
+
+  attachLiveFormatting(incomeNumber);
+  attachLiveFormatting(housingNumber);
+  attachLiveFormatting(utilitiesNumber);
+  attachLiveFormatting(groceriesNumber);
+  attachLiveFormatting(transportNumber);
+  attachLiveFormatting(medicalNumber);
+  attachLiveFormatting(debtMinNumber);
+
+  // ------------------------------------------------------------
+  // 3) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
   function setResultError(message) {
     if (!resultDiv) return;
     resultDiv.classList.remove("success");
@@ -70,261 +95,240 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.innerHTML = html;
   }
 
-  function attachLiveFormatting(inputEl) {
-    if (!inputEl) return;
-    inputEl.addEventListener("input", function () {
-      const n = parseLooseNumber(inputEl.value);
-      if (!Number.isFinite(n)) return;
-      inputEl.value = formatWithCommas(n);
-    });
+  function clearResult() {
+    if (!resultDiv) return;
+    resultDiv.classList.remove("error", "success");
+    resultDiv.textContent = "";
   }
 
-  function bindRangeAndNumber(rangeEl, numberEl) {
+  // ------------------------------------------------------------
+  // 4) RANGE + NUMBER BINDING (DI REQUIRED)
+  // ------------------------------------------------------------
+  function bindRangeAndNumber(rangeEl, numberEl, min, max, step, defaultValue) {
     if (!rangeEl || !numberEl) return;
 
-    const min = parseLooseNumber(rangeEl.min);
-    const max = parseLooseNumber(rangeEl.max);
+    rangeEl.min = String(min);
+    rangeEl.max = String(max);
+    rangeEl.step = String(step);
+
+    const initial = clamp(defaultValue, min, max);
+    rangeEl.value = String(initial);
+    numberEl.value = formatWithCommas(initial);
 
     rangeEl.addEventListener("input", function () {
       const v = parseLooseNumber(rangeEl.value);
-      if (!Number.isFinite(v)) return;
-      numberEl.value = formatWithCommas(v);
+      const clamped = clamp(v, min, max);
+      numberEl.value = formatWithCommas(clamped);
     });
 
-    function clampAndSyncFromNumber() {
+    function commitNumberToRange() {
       const typed = parseLooseNumber(numberEl.value);
-      if (!Number.isFinite(typed)) return;
+      if (!Number.isFinite(typed)) {
+        numberEl.value = formatWithCommas(parseLooseNumber(rangeEl.value));
+        return;
+      }
+      if (typed < 0) {
+        numberEl.value = formatWithCommas(parseLooseNumber(rangeEl.value));
+        return;
+      }
       const clamped = clamp(typed, min, max);
-      if (!Number.isFinite(clamped)) return;
+      rangeEl.value = String(clamped);
       numberEl.value = formatWithCommas(clamped);
-      rangeEl.value = String(Math.round(clamped));
     }
 
-    numberEl.addEventListener("blur", clampAndSyncFromNumber);
+    numberEl.addEventListener("blur", commitNumberToRange);
     numberEl.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        clampAndSyncFromNumber();
-        numberEl.blur();
-      }
+      if (e.key === "Enter") commitNumberToRange();
     });
   }
 
-  function getBoundValue(rangeEl, numberEl) {
-    const n = parseLooseNumber(numberEl ? numberEl.value : "");
-    if (Number.isFinite(n)) return n;
-    const r = parseLooseNumber(rangeEl ? rangeEl.value : "");
-    return r;
+  bindRangeAndNumber(incomeRange, incomeNumber, 0, 200000, 500, 30000);
+  bindRangeAndNumber(housingRange, housingNumber, 0, 120000, 250, 12000);
+  bindRangeAndNumber(utilitiesRange, utilitiesNumber, 0, 30000, 100, 2500);
+  bindRangeAndNumber(groceriesRange, groceriesNumber, 0, 60000, 200, 5000);
+  bindRangeAndNumber(transportRange, transportNumber, 0, 50000, 200, 3000);
+  bindRangeAndNumber(medicalRange, medicalNumber, 0, 50000, 200, 2000);
+  bindRangeAndNumber(debtMinRange, debtMinNumber, 0, 80000, 200, 1500);
+
+  // ------------------------------------------------------------
+  // 5) VALIDATION HELPERS (OPTIONAL)
+  // ------------------------------------------------------------
+  function validateNonNegative(value, fieldLabel) {
+    if (!Number.isFinite(value) || value < 0) {
+      setResultError("Enter a valid " + fieldLabel + " (0 or higher).");
+      return false;
+    }
+    return true;
   }
 
-  function computeTopDrivers(items) {
-    const sorted = items
+  function validatePositive(value, fieldLabel) {
+    if (!Number.isFinite(value) || value <= 0) {
+      setResultError("Enter a valid " + fieldLabel + " greater than 0.");
+      return false;
+    }
+    return true;
+  }
+
+  // ------------------------------------------------------------
+  // 6) REPORT PREVIEW BINDING (MANDATORY)
+  // ------------------------------------------------------------
+  function setPreview(htmlInputs, htmlResult, htmlCorrection, htmlNextSteps) {
+    if (!previewInputs || !previewResult || !previewCorrection || !previewNextSteps) return;
+    previewInputs.innerHTML = htmlInputs;
+    previewResult.innerHTML = htmlResult;
+    previewCorrection.innerHTML = htmlCorrection;
+    previewNextSteps.innerHTML = htmlNextSteps;
+  }
+
+  function getTopDrivers(expenses) {
+    const sorted = expenses
       .slice()
       .sort(function (a, b) {
-        return (b.value || 0) - (a.value || 0);
+        return b.value - a.value;
       });
-
-    return [
-      sorted[0] ? sorted[0].label : "N/A",
-      sorted[1] ? sorted[1].label : "N/A",
-      sorted[2] ? sorted[2].label : "N/A"
-    ];
+    const top = sorted.filter(function (x) { return x.value > 0; }).slice(0, 3);
+    return top.map(function (x) { return x.label; });
   }
 
-  function setPreviewValues(payload) {
-    if (!payload) return;
-
-    if (pvIncome) pvIncome.textContent = formatWithCommas(payload.income);
-    if (pvEssentials) pvEssentials.textContent = formatWithCommas(payload.essentials);
-    if (pvRatio) pvRatio.textContent = payload.ratio.toFixed(2);
-    if (pvClass) pvClass.textContent = payload.classification;
-
-    if (pvDriver1) pvDriver1.textContent = payload.drivers[0] || "N/A";
-    if (pvDriver2) pvDriver2.textContent = payload.drivers[1] || "N/A";
-    if (pvDriver3) pvDriver3.textContent = payload.drivers[2] || "N/A";
-
-    if (pvCorrection) pvCorrection.textContent = payload.correctionText;
+  function classify(ratio) {
+    if (!Number.isFinite(ratio)) return { label: "", note: "" };
+    if (ratio < 1.0) {
+      return { label: "Underprepared", note: "Your essentials are not reliably covered by income." };
+    }
+    if (ratio < 1.25) {
+      return { label: "Borderline", note: "Essentials are covered, but buffer is thin." };
+    }
+    return { label: "Stable", note: "You have meaningful headroom above essentials." };
   }
 
   // ------------------------------------------------------------
-  // 3) INIT DEFAULTS + BINDINGS
-  // ------------------------------------------------------------
-  attachLiveFormatting(incomeNumber);
-  attachLiveFormatting(housingNumber);
-  attachLiveFormatting(utilitiesNumber);
-  attachLiveFormatting(groceriesNumber);
-  attachLiveFormatting(transportNumber);
-  attachLiveFormatting(debtMinNumber);
-
-  bindRangeAndNumber(incomeRange, incomeNumber);
-  bindRangeAndNumber(housingRange, housingNumber);
-  bindRangeAndNumber(utilitiesRange, utilitiesNumber);
-  bindRangeAndNumber(groceriesRange, groceriesNumber);
-  bindRangeAndNumber(transportRange, transportNumber);
-  bindRangeAndNumber(debtMinRange, debtMinNumber);
-
-  // Set initial synced values (from sliders)
-  function syncAllFromRanges() {
-    if (incomeRange && incomeNumber) incomeNumber.value = formatWithCommas(parseLooseNumber(incomeRange.value));
-    if (housingRange && housingNumber) housingNumber.value = formatWithCommas(parseLooseNumber(housingRange.value));
-    if (utilitiesRange && utilitiesNumber) utilitiesNumber.value = formatWithCommas(parseLooseNumber(utilitiesRange.value));
-    if (groceriesRange && groceriesNumber) groceriesNumber.value = formatWithCommas(parseLooseNumber(groceriesRange.value));
-    if (transportRange && transportNumber) transportNumber.value = formatWithCommas(parseLooseNumber(transportRange.value));
-    if (debtMinRange && debtMinNumber) debtMinNumber.value = formatWithCommas(parseLooseNumber(debtMinRange.value));
-  }
-  syncAllFromRanges();
-
-  // ------------------------------------------------------------
-  // 4) MAIN CALCULATE HANDLER
+  // 7) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
   // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      // Parse inputs (allow commas)
-      const income = getBoundValue(incomeRange, incomeNumber);
-      const housing = getBoundValue(housingRange, housingNumber);
-      const utilities = getBoundValue(utilitiesRange, utilitiesNumber);
-      const groceries = getBoundValue(groceriesRange, groceriesNumber);
-      const transport = getBoundValue(transportRange, transportNumber);
-      const debtMin = getBoundValue(debtMinRange, debtMinNumber);
+      clearResult();
+
+      // Parse inputs (accept commas, reject non-numeric)
+      const income = parseLooseNumber(incomeNumber ? incomeNumber.value : "");
+      const housing = parseLooseNumber(housingNumber ? housingNumber.value : "");
+      const utilities = parseLooseNumber(utilitiesNumber ? utilitiesNumber.value : "");
+      const groceries = parseLooseNumber(groceriesNumber ? groceriesNumber.value : "");
+      const transport = parseLooseNumber(transportNumber ? transportNumber.value : "");
+      const medical = parseLooseNumber(medicalNumber ? medicalNumber.value : "");
+      const debtMin = parseLooseNumber(debtMinNumber ? debtMinNumber.value : "");
 
       // Existence guard
-      if (
-        !incomeNumber || !incomeRange ||
-        !housingNumber || !housingRange ||
-        !utilitiesNumber || !utilitiesRange ||
-        !groceriesNumber || !groceriesRange ||
-        !transportNumber || !transportRange ||
-        !debtMinNumber || !debtMinRange
-      ) {
+      if (!incomeNumber || !housingNumber || !utilitiesNumber || !groceriesNumber || !transportNumber || !medicalNumber || !debtMinNumber) {
         return;
       }
 
-      // Validation
-      const values = [
-        { label: "Monthly income", value: income, allowZero: true },
-        { label: "Housing", value: housing, allowZero: true },
-        { label: "Utilities", value: utilities, allowZero: true },
-        { label: "Groceries and essentials", value: groceries, allowZero: true },
-        { label: "Transport", value: transport, allowZero: true },
-        { label: "Debt minimums", value: debtMin, allowZero: true }
-      ];
+      // Validation (EDGE CASES)
+      if (!validateNonNegative(housing, "housing")) return;
+      if (!validateNonNegative(utilities, "utilities")) return;
+      if (!validateNonNegative(groceries, "groceries and essentials")) return;
+      if (!validateNonNegative(transport, "transport")) return;
+      if (!validateNonNegative(medical, "medical and insurance")) return;
+      if (!validateNonNegative(debtMin, "debt minimums")) return;
 
-      for (let i = 0; i < values.length; i++) {
-        const v = values[i].value;
-        if (!Number.isFinite(v)) {
-          setResultError("Enter valid numbers for all fields.");
-          return;
-        }
-        if (v < 0) {
-          setResultError(values[i].label + " cannot be negative.");
-          return;
-        }
-      }
+      if (!validatePositive(income, "income")) return;
 
-      if (!Number.isFinite(income) || income <= 0) {
-        setResultError("Enter a valid Monthly income greater than 0.");
+      const essentialsTotal = housing + utilities + groceries + transport + medical + debtMin;
+
+      if (!Number.isFinite(essentialsTotal) || essentialsTotal <= 0) {
+        setResultError("Enter valid essential expenses. Total essentials must be greater than 0.");
         return;
       }
 
-      const essentials = housing + utilities + groceries + transport + debtMin;
-
-      if (!Number.isFinite(essentials) || essentials <= 0) {
-        setResultError("Total essentials must be greater than 0.");
-        return;
-      }
-
-      const ratio = income / essentials;
+      const ratio = income / essentialsTotal;
 
       if (!Number.isFinite(ratio) || ratio <= 0) {
-        setResultError("Your inputs produced an invalid result. Check your numbers and try again.");
+        setResultError("Could not compute a valid coverage ratio from your inputs.");
         return;
       }
 
-      // Classification thresholds
-      let classification = "stable";
-      if (ratio < 1.0) classification = "underprepared";
-      else if (ratio < 1.2) classification = "borderline";
+      const classification = classify(ratio);
 
-      // Drivers (largest essentials)
-      const driverLabels = computeTopDrivers([
+      const targetStableRatio = 1.25;
+      let correction = 0;
+      if (ratio < targetStableRatio) {
+        const requiredIncome = essentialsTotal * targetStableRatio;
+        correction = requiredIncome - income;
+        if (!Number.isFinite(correction) || correction < 0) correction = 0;
+      }
+
+      const expenses = [
         { label: "Housing", value: housing },
         { label: "Utilities", value: utilities },
         { label: "Groceries and essentials", value: groceries },
         { label: "Transport", value: transport },
+        { label: "Medical and insurance", value: medical },
         { label: "Debt minimums", value: debtMin }
-      ]);
+      ];
 
-      // Minimum correction target (high-level)
-      // Underprepared: close the gap to zero
-      // Borderline: reach a basic margin target (ratio 1.2)
-      // Stable: maintain buffer, no minimum required
-      let correctionText = "No minimum correction required for this baseline check.";
-      let correctionAmount = 0;
+      const topDrivers = getTopDrivers(expenses);
 
-      if (classification === "underprepared") {
-        correctionAmount = essentials - income;
-        correctionText = "Minimum correction to reach break-even: " + formatWithCommas(correctionAmount) + " per month.";
-      } else if (classification === "borderline") {
-        const targetIncome = 1.2 * essentials;
-        correctionAmount = targetIncome - income;
-        if (correctionAmount < 0) correctionAmount = 0;
-        correctionText = "Minimum correction to reach a basic buffer: " + formatWithCommas(correctionAmount) + " per month.";
-      } else {
-        correctionText = "Baseline is stable. Focus on maintaining buffer and protecting against shocks.";
-      }
+      // On-page output: exactly 1 headline, 1 sentence, exactly 2 actions
+      const ratioRounded = Math.round(ratio * 100) / 100;
+      const headline = classification.label + " (coverage ratio " + ratioRounded.toFixed(2) + ")";
+      const sentence = classification.note;
 
-      // On-page output: exactly 1 headline, 1 sentence, 2 actions
-      const headline = "Readiness: " + classification + " (coverage ratio " + ratio.toFixed(2) + ")";
-      let sentence = "Your income covers your essentials with room for normal variation.";
-      if (classification === "underprepared") {
-        sentence = "Your essentials exceed your income, so the month is structurally short before any discretionary spending.";
-      } else if (classification === "borderline") {
-        sentence = "Your essentials are covered, but the margin is thin, so small variations can break the month.";
-      }
+      const action1 = (correction > 0)
+        ? "Move your baseline toward stable by improving monthly headroom by " + formatWithCommas(correction) + " (reduce the biggest driver or lift income)."
+        : "Protect your headroom by keeping essentials stable and avoiding new fixed commitments.";
 
-      let action1 = "Confirm your biggest driver (" + driverLabels[0] + ") is accurate and unavoidable.";
-      let action2 = "Set a minimum correction target and apply it using one lever: raise income, lower essentials, or both.";
-
-      if (classification === "stable") {
-        action1 = "Lock a buffer for irregular costs before expanding lifestyle spending.";
-        action2 = "Stress-test your essentials for a higher-cost month and keep the ratio above your comfort threshold.";
-      } else if (classification === "underprepared") {
-        action1 = "Close the break-even gap first (" + formatWithCommas(essentials - income) + " per month) before optimizations.";
-        action2 = "Focus on the top drivers first (" + driverLabels[0] + ", " + driverLabels[1] + ") to find real leverage.";
-      } else if (classification === "borderline") {
-        action1 = "Build a buffer margin toward 1.2x essentials, starting with the top driver (" + driverLabels[0] + ").";
-        action2 = "Reduce fragility by smoothing variable essentials (utilities, groceries, transport) month to month.";
-      }
+      const action2 = (ratio < 1.25)
+        ? "Create a buffer before adding optional spending. Treat buffer as non-negotiable until stable."
+        : "Use the surplus to build a buffer first, then direct the remainder into debt reduction or planned goals.";
 
       const resultHtml =
-        '<div class="di-result-headline">' + headline + "</div>" +
-        '<div class="di-result-sentence">' + sentence + "</div>" +
-        '<ul class="di-actions">' +
+        '<p class="di-result-headline">' + headline + "</p>" +
+        '<p class="di-result-sentence">' + sentence + "</p>" +
+        '<ol class="di-actions">' +
           "<li>" + action1 + "</li>" +
           "<li>" + action2 + "</li>" +
-        "</ul>";
+        "</ol>";
 
       setResultSuccess(resultHtml);
 
-      // Preview binding rule: update preview on every successful calculation
-      setPreviewValues({
-        income: income,
-        essentials: essentials,
-        ratio: ratio,
-        classification: classification,
-        drivers: driverLabels,
-        correctionText: correctionText
-      });
+      // Report preview update (MANDATORY)
+      const driversText = (topDrivers.length > 0) ? topDrivers.slice(0, 3).join(", ") : "None";
+
+      const previewInputsHtml =
+        "Income: " + formatWithCommas(income) + "<br>" +
+        "Essentials total: " + formatWithCommas(essentialsTotal) + "<br>" +
+        "Top drivers: " + driversText;
+
+      const previewResultHtml =
+        "Coverage ratio: " + ratioRounded.toFixed(2) + "<br>" +
+        "Classification: " + classification.label;
+
+      const correctionText = (correction > 0)
+        ? ("Increase monthly headroom by about " + formatWithCommas(correction) + " to reach stable.")
+        : "No minimum correction required to reach stable based on this baseline.";
+
+      const previewCorrectionHtml = "Target: " + correctionText;
+
+      const step1 = (correction > 0)
+        ? ("Reduce your biggest essential or lift income until headroom improves by " + formatWithCommas(correction) + ".")
+        : "Keep essentials flat and keep surplus from leaking into new fixed costs.";
+
+      const step2 = (ratio < 1.25)
+        ? "Build a buffer before optional upgrades or new commitments."
+        : "Build buffer first, then allocate remaining surplus to priorities.";
+
+      const previewNextStepsHtml = "1) " + step1 + "<br>" + "2) " + step2;
+
+      setPreview(previewInputsHtml, previewResultHtml, previewCorrectionHtml, previewNextStepsHtml);
     });
   }
 
   // ------------------------------------------------------------
-  // 5) WHATSAPP SHARE
+  // 8) WHATSAPP SHARE (CONSISTENT)
   // ------------------------------------------------------------
   if (shareButton) {
     shareButton.addEventListener("click", function () {
       const pageUrl = window.location.href;
-      const message = "Income vs Essentials Diagnostic - check this diagnostic: " + pageUrl;
+      const message = "Income vs Essentials Diagnostic - check this calculator: " + pageUrl;
       const encoded = encodeURIComponent(message);
       const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
       window.open(waUrl, "_blank");
