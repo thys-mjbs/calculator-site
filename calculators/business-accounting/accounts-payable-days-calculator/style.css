@@ -46,8 +46,19 @@
   box-sizing: border-box;
 }
 
+.form-group select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
 .form-group input[type="text"]:focus,
-.input-group input[type="text"]:focus {
+.input-group input[type="text"]:focus,
+.form-group select:focus {
   outline: none;
   border-color: #0077cc;
   box-shadow: 0 0 0 1px rgba(0, 119, 204, 0.15);
@@ -298,121 +309,4 @@
   .calculator-container {
     max-width: 100%;
   }
-}
-
-/* DIAGNOSTIC-ONLY STYLES (APPEND-ONLY) */
-.di-controls {
-  margin-top: 10px;
-}
-
-.di-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px 0;
-  border-top: 1px solid #e6e6e6;
-}
-
-.di-row:first-child {
-  border-top: none;
-  padding-top: 0;
-}
-
-.di-label label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.di-hint {
-  font-size: 12px;
-  color: #666666;
-}
-
-.di-inputs {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
-.di-inputs input[type="text"] {
-  width: 100%;
-  padding: 6px 8px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
-}
-
-.di-inputs input[type="range"] {
-  width: 100%;
-}
-
-.di-secondary {
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  font-size: 14px;
-}
-
-.di-secondary h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-}
-
-.di-kv {
-  margin: 0 0 8px;
-  padding-left: 18px;
-}
-
-.di-kv li {
-  margin: 4px 0;
-}
-
-.di-email {
-  margin-top: 12px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-}
-
-.di-email h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-}
-
-.di-email ul {
-  padding-left: 18px;
-  margin: 0 0 10px;
-}
-
-.di-email-button {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #0077cc;
-  background: #0077cc;
-  color: #ffffff;
-  box-sizing: border-box;
-}
-
-.gumroad-cta-tile {
-  display: block;
-  padding: 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.gumroad-cta-tile img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
