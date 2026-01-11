@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title and description -->
+    <title>Emergency Fund Calculator | SnapCalc</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Calculate your recommended emergency fund target based on essential monthly expenses, then see your gap and an estimated timeline to reach the goal.">
+
+    <!-- Canonical URL (always trailing slash) -->
+    <link rel="canonical" href="https://snapcalc.site/calculators/personal-finance/emergency-fund-calculator/">
+
+    <!-- Open Graph (for sharing, previews) -->
+    <meta property="og:title" content="Emergency Fund Calculator | SnapCalc">
+    <meta property="og:description" content="Calculate your recommended emergency fund target based on essential monthly expenses, then see your gap and an estimated timeline to reach the goal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://snapcalc.site/calculators/personal-finance/emergency-fund-calculator/">
+    <meta property="og:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emergency Fund Calculator | SnapCalc">
+    <meta name="twitter:description" content="Calculate your recommended emergency fund target based on essential monthly expenses, then see your gap and an estimated timeline to reach the goal.">
+    <meta name="twitter:image" content="https://snapcalc.site/assets/share-default.png">
+
+    <!-- JSON-LD structured data for the calculator page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Emergency Fund Calculator",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "All",
+      "url": "https://snapcalc.site/calculators/personal-finance/emergency-fund-calculator/",
+      "description": "Calculate an emergency fund target from essential monthly expenses and months of coverage, then estimate the savings gap and time to reach your goal."
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/search.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">SnapCalc</a>
+
+        <div class="site-search">
+          <input
+            type="search"
+            id="siteSearchInput"
+            placeholder="Search calculators…"
+            autocomplete="off"
+            aria-label="Search calculators"
+          />
+          <div
+            id="siteSearchResults"
+            class="site-search-results"
+            aria-hidden="true"
+          ></div>
+        </div>        
+
+	<nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/#categories">Categories</a>
+          <a href="/about.html">About</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/accuracy.html">Accuracy</a>
+          <a href="/hubs.html">Hubs</a>
+          <a href="/products.html">Products</a>
+          <a href="/diagnostic-insights.html">Diagnosis</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+
+      <!-- Ads (Native banner) -->
+      <script async="async" data-cfasync="false" src="https://pl28402284.effectivegatecpm.com/0ebd073c7baf207558a86b92738ee2ed/invoke.js"></script>
+      <div id="container-0ebd073c7baf207558a86b92738ee2ed"></div>
+
+      <!-- Breadcrumbs: required on every calculator -->
+      <nav class="breadcrumbs">
+        <a href="/">Home</a> ›
+        <a href="/categories/personal-finance/">Personal Finance</a> ›
+        <span>Emergency Fund Calculator</span>
+      </nav>
+
+      <div class="page-layout">
+        <h1>Emergency Fund Calculator</h1>
+
+        <div class="page-grid">
+          <!-- Row 1: ad + main calculator + ad -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Sponsored content">
+<script>
+atOptions = {
+'key' : '46d1518853679ded4bcb05a44dc473ed',
+'format' : 'iframe',
+'height' : 300,
+'width' : 300,
+'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script>
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="calculator-container">
+              <h2>Emergency fund target and timeline</h2>
+
+              <p class="calculator-intro">Set a target in months of essential expenses, see your gap, and estimate how long it could take to reach your emergency fund.</p>
+
+              <!-- CALCULATOR UI START -->
+              <div class="form-group">
+                <label for="monthlyEssentials">Essential monthly expenses</label>
+                <input type="text" id="monthlyEssentials" inputmode="decimal" placeholder="e.g., 18,500">
+              </div>
+
+              <div class="form-group">
+                <label for="targetMonths">Target months of coverage (default 3)</label>
+                <input type="text" id="targetMonths" inputmode="numeric" placeholder="e.g., 3">
+              </div>
+
+              <div class="form-group">
+                <label for="currentSavings">Current emergency savings (optional)</label>
+                <input type="text" id="currentSavings" inputmode="decimal" placeholder="e.g., 12,000">
+              </div>
+
+              <div class="form-group">
+                <label for="monthlyContribution">Monthly contribution (optional)</label>
+                <input type="text" id="monthlyContribution" inputmode="decimal" placeholder="e.g., 1,500">
+              </div>
+
+              <details class="advanced-block">
+                <summary>Advanced (optional)</summary>
+                <div class="form-group advanced-inner">
+                  <label for="annualApy">Estimated annual interest rate on savings (APY %, default 0)</label>
+                  <input type="text" id="annualApy" inputmode="decimal" placeholder="e.g., 4.5">
+                </div>
+              </details>
+              <!-- CALCULATOR UI END -->
+
+              <button id="calculateButton" type="button">Calculate emergency fund</button>
+
+              <div id="result" aria-live="polite"></div>
+
+              <div class="share-buttons">
+                <button id="shareWhatsAppButton" type="button">
+                  Share this calculator on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://get.cloudtalk.io/gfwvqzdos1w2-1xtqvk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/cloudtalk/cloudtalk-01052026.jpg" alt="CloudTalk">
+</a>
+
+</div>
+          </div>
+
+          <!-- Row 2: related CATEGORIES (three thin tiles) -->
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/personal-finance/">
+              <h3 class="related-title">Personal Finance</h3>
+              <p class="related-desc">Budgeting, savings planning, and everyday money decisions made simpler with practical calculators.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/savings-investments/">
+              <h3 class="related-title">Savings &amp; Investments</h3>
+              <p class="related-desc">Estimate growth, compare savings options, and plan contributions toward specific financial goals.</p>
+            </a>
+          </div>
+
+          <div class="grid-slot">
+            <a class="related-card" href="/categories/loans-credit/">
+              <h3 class="related-title">Loans &amp; Credit</h3>
+              <p class="related-desc">Understand repayments, interest costs, and how debt affects cash flow and monthly affordability.</p>
+            </a>
+          </div>
+
+          <!-- Row 3: affiliate + SEO + affiliate -->
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://www.amazon.com/Clerk-system-shadow-Someone-mapping-ebook/dp/B0FBX487S8" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/the-clerk-2/cover-12.12.11.05.jpg" alt="The Clerk 2 book cover">
+</a>
+
+</div>
+          </div>
+
+          <div class="grid-slot">
+            <section class="seo-section">
+              <h2>Emergency fund calculator for months of expenses, savings gap, and time to goal</h2>
+
+              <p>An emergency fund is a cash buffer designed to cover essential living costs when income is interrupted or a large unplanned expense hits. The dominant use case for this calculator is simple and practical: you want to decide how big your emergency fund should be, based on the number of months you want to stay stable without relying on new debt. This page is not for retirement planning, investment portfolio allocation, or long term wealth forecasting. It focuses on one decision only: what is a reasonable emergency fund target for you right now, and how far are you from it. To keep it useful for normal users, the calculator uses essential monthly expenses as the baseline. That is the amount you must pay each month to keep the lights on and protect your core obligations, such as housing, utilities, basic groceries, transport to work, and minimum debt repayments. Non essentials like travel, luxury subscriptions, and discretionary spending are intentionally excluded because they can be reduced quickly in a real emergency. Once you enter your essential monthly expenses, you can set your target coverage in months. Many people start with 3 months as a baseline, then adjust upward if their income is variable, if they have dependants, or if replacing their income could take longer than average. The calculator turns those inputs into a target amount, then compares that target with your current emergency savings to show your gap. If you add a monthly contribution, it also estimates how long it could take to reach the goal.</p>
+
+              <p>The most useful output is the target fund amount in currency terms. That is calculated as essential monthly expenses multiplied by your chosen months of coverage. The next output is your gap, which is simply the target minus current savings, floored at zero. This immediately tells you whether your buffer is underbuilt, on track, or already complete. For many users, the more actionable metric is time to goal. If you contribute a fixed amount each month, the calculator estimates how many months it could take to close the gap. If you also include an estimated annual interest rate (APY), the timeline will include the effect of monthly compounding, which can shorten the time slightly, especially for longer timelines or higher rates. Because interest rates and contribution behaviour are not perfectly stable in real life, the timeline is an estimate, not a guarantee. To make the result usable even with incomplete data, the calculator does not require current savings, contribution amount, or interest rate. If you skip them, you still get a valid target amount and a clear gap based on defaults and the numbers you entered. The result area also shows an implied coverage figure: how many months your current emergency savings would last given your essential expenses. This helps you interpret the number in a real decision context, such as whether you can handle a short job loss, a medical excess payment, or a delayed payment cycle without missing obligations.</p>
+
+              <p>To use this calculator effectively, focus on realism rather than perfection. Start by estimating a clean monthly essential expense number. If you are unsure, use your last one to three months of bank statements and isolate non negotiables. If your expenses fluctuate, use a slightly higher conservative estimate so you are not underfunding the buffer. Next, choose a months of coverage target that matches your risk profile and your likely time to replace income. A stable salaried role in a high demand field may justify fewer months than a self employed role with irregular revenue. If you have high fixed obligations, such as large rent, dependants, or multiple insurance excesses, more months usually improves stability. Finally, if you are planning the build, enter a monthly contribution you can sustain and treat the timeline output as a planning reference. If the timeline is too long, you have only a few realistic levers: increase contributions, reduce essential expenses, or temporarily redirect money from other goals. This calculator deliberately does not recommend investment products or high risk strategies for your emergency fund, because emergency funds prioritise liquidity and certainty. The point is not maximum return. The point is avoiding forced borrowing, missed payments, and panic decisions when something goes wrong.</p>
+
+              <h3>Assumptions and how to use this calculator</h3>
+              <ul>
+                <li>Essential monthly expenses should include only non negotiable costs (housing, utilities, basic food, transport, and minimum debt repayments), not discretionary spending.</li>
+                <li>If you leave the months of coverage blank, the calculator assumes a default of 3 months as a common starting point.</li>
+                <li>Current emergency savings is treated as cash or cash like savings you can access quickly without penalties.</li>
+                <li>If monthly contribution is blank or zero, the calculator will not estimate a time to goal and will instead focus on target, gap, and current coverage.</li>
+                <li>Interest rate (APY) is optional and applied as a simplified monthly compound estimate; real rates and balances can change over time.</li>
+              </ul>
+
+              <h3>Common questions</h3>
+
+              <h3>What counts as “essential monthly expenses” for an emergency fund?</h3>
+              <p>Include costs you must pay to stay stable: housing, basic utilities, basic groceries, transport needed for work, essential insurance premiums, and minimum debt repayments. Exclude discretionary spending that you could cut quickly.</p>
+
+              <h3>How many months of emergency fund should I aim for?</h3>
+              <p>There is no single correct number. Many people start with 3 months and adjust based on income stability, dependants, job market conditions, and how quickly they could replace income. If your income is irregular, more months is usually safer.</p>
+
+              <h3>Should my emergency fund include debt repayment beyond minimum payments?</h3>
+              <p>Typically, no. The emergency fund is to keep you current on essentials and minimum obligations without defaulting. Extra debt payoff is usually a separate goal once the emergency buffer is stable.</p>
+
+              <h3>Do I need to enter a monthly contribution for this calculator to be useful?</h3>
+              <p>No. The core utility is the target amount and the gap versus what you already have. The monthly contribution is only for estimating a rough timeline to reach the target.</p>
+
+              <h3>Should I invest my emergency fund to earn higher returns?</h3>
+              <p>An emergency fund prioritises immediate access and low risk. Higher return options often add volatility or access restrictions, which can defeat the purpose when you need the money quickly.</p>
+
+              <div class="last-updated">Last updated: 2026-01-11</div>
+            </section>
+          </div>
+
+          <div class="grid-slot">
+            <div class="ad-block" aria-label="Sponsored content">
+<a class="affiliate-link" href="https://amzn.to/3NtbDRk" target="_blank" rel="nofollow sponsored noopener">
+  <img src="/assets/affiliates/amazon/shop-amazon/shop-amazon-now-01052026.jpg" alt="Shop online">
+</a>
+
+</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span>© 2025 SnapCalc</span>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+    </footer>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4ecbefe1d75b4fd0a89f6e1e5a57a409"}'>
+    </script>
+
+    <!-- Ads (Social bar) -->
+    <script src="https://pl28401807.effectivegatecpm.com/16/d6/13/16d6138b6d74e1866cb0f7a3960bfd77.js"></script>
+
+  </body>
+</html>
