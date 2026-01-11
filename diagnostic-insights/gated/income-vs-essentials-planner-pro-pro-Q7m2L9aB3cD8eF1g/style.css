@@ -1,0 +1,185 @@
+.calculator-container {
+  max-width: 360px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.calculator-container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.calculator-intro {
+  font-size: 14px;
+  margin-bottom: 14px;
+  line-height: 1.45;
+}
+
+.di-controls {
+  margin-top: 14px;
+}
+
+.di-row {
+  margin: 12px 0;
+}
+
+.di-label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.di-hint {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.di-inputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.di-number {
+  width: 140px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.di-range {
+  flex: 1;
+}
+
+.calculate-btn,
+.share-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.calculate-btn {
+  background: #0b5cff;
+  color: #fff;
+}
+
+.share-btn {
+  background: #25d366;
+  color: #fff;
+}
+
+#result {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+#result.success {
+  border-color: #1f9d55;
+}
+
+#result.error {
+  border-color: #d64545;
+}
+
+@media (max-width: 900px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+}
+
+/* DIAGNOSTIC-ONLY STYLES (APPEND-ONLY) */
+
+.di-result-root {
+  margin-top: 10px;
+}
+
+.di-muted {
+  opacity: 0.85;
+}
+
+.di-error {
+  font-weight: 700;
+}
+
+.di-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.di-kpi {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.di-kpi-label {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.di-kpi-value {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.di-kpi-sub {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+.di-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.di-badge-good {
+  border-color: #1f9d55;
+}
+
+.di-badge-warn {
+  border-color: #d89a2b;
+}
+
+.di-badge-bad {
+  border-color: #d64545;
+}
+
+.di-section {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.di-section-title {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 520px) {
+  .di-kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
