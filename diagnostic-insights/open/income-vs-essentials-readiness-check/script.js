@@ -1,33 +1,27 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function () {
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
-  const secondaryPanel = document.getElementById("diSecondaryPanel");
+  const secondaryDiv = document.getElementById("diSecondary");
 
   const incomeNumber = document.getElementById("incomeNumber");
   const incomeRange = document.getElementById("incomeRange");
 
-  const housingNumber = document.getElementById("housingNumber");
-  const housingRange = document.getElementById("housingRange");
+  const essentialsNumber = document.getElementById("essentialsNumber");
+  const essentialsRange = document.getElementById("essentialsRange");
 
-  const utilitiesNumber = document.getElementById("utilitiesNumber");
-  const utilitiesRange = document.getElementById("utilitiesRange");
+  const nonMonthlyNumber = document.getElementById("nonMonthlyNumber");
+  const nonMonthlyRange = document.getElementById("nonMonthlyRange");
 
-  const foodNumber = document.getElementById("foodNumber");
-  const foodRange = document.getElementById("foodRange");
-
-  const transportNumber = document.getElementById("transportNumber");
-  const transportRange = document.getElementById("transportRange");
-
-  const debtMinNumber = document.getElementById("debtMinNumber");
-  const debtMinRange = document.getElementById("debtMinRange");
+  const bufferNumber = document.getElementById("bufferNumber");
+  const bufferRange = document.getElementById("bufferRange");
 
   function setResultError(message) {
     if (!resultDiv) return;
     resultDiv.classList.remove("success");
     resultDiv.classList.add("error");
     resultDiv.textContent = message;
-    if (secondaryPanel) secondaryPanel.innerHTML = "";
   }
 
   function setResultSuccess(html) {
@@ -37,253 +31,266 @@ document.addEventListener("DOMContentLoaded", function () {
     resultDiv.innerHTML = html;
   }
 
-  function setSecondaryHtml(html) {
-    if (!secondaryPanel) return;
-    secondaryPanel.innerHTML = html;
-  }
-
   function clearResult() {
     if (!resultDiv) return;
     resultDiv.classList.remove("error", "success");
     resultDiv.textContent = "";
-    if (secondaryPanel) secondaryPanel.innerHTML = "";
   }
 
-  function parseLooseNumber(raw) {
-    if (raw === null || raw === undefined) return NaN;
-    const s = String(raw).trim().replace(/,/g, "");
-    if (s === "") return NaN;
-    const n = Number(s);
-    return Number.isFinite(n) ? n : NaN;
+  function setSecondary(html) {
+    if (!secondaryDiv) return;
+    secondaryDiv.innerHTML = html;
   }
 
-  function clamp(value, min, max) {
-    if (!Number.isFinite(value)) return min;
-    if (value < min) return min;
-    if (value > max) return max;
-    return value;
+  function clearSecondary() {
+    if (!secondaryDiv) return;
+    secondaryDiv.innerHTML = "";
+  }
+
+  function parseLooseNumber(value) {
+    if (typeof value !== "string") return NaN;
+    const cleaned = value.replace(/,/g, "").trim();
+    if (cleaned === "") return NaN;
+    const num = Number(cleaned);
+    return Number.isFinite(num) ? num : NaN;
+  }
+
+  function clamp(n, min, max) {
+    if (!Number.isFinite(n)) return min;
+    return Math.min(max, Math.max(min, n));
   }
 
   function formatWithCommas(n) {
     if (!Number.isFinite(n)) return "";
-    return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const rounded = Math.round(n);
+    return String(rounded).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function formatPercentTwoDecimals(n) {
+    if (!Number.isFinite(n)) return "";
+    return (Math.round(n * 100) / 100).toFixed(2) + "%";
+  }
+
+  function formatRatioTwoDecimals(n) {
+    if (!Number.isFinite(n)) return "";
+    return (Math.round(n * 100) / 100).toFixed(2);
   }
 
   function formatInputWithCommas(raw) {
-    const n = parseLooseNumber(raw);
-    if (!Number.isFinite(n)) return raw === "" ? "" : raw.replace(/[^\d,.-]/g, "");
-    return formatWithCommas(n);
+    const num = parseLooseNumber(raw);
+    if (!Number.isFinite(num)) return raw.replace(/[^\d,.-]/g, "");
+    return formatWithCommas(num);
   }
 
   function attachLiveFormatting(inputEl) {
     if (!inputEl) return;
     inputEl.addEventListener("input", function () {
       inputEl.value = formatInputWithCommas(inputEl.value);
-      clearResult();
     });
   }
 
-  function bindRangeAndNumber(rangeEl, numberEl) {
+  function bindRangeAndNumber(rangeEl, numberEl, min, max, step, isPercent) {
     if (!rangeEl || !numberEl) return;
 
-    const min = Number(rangeEl.min);
-    const max = Number(rangeEl.max);
+    function syncNumberToRange() {
+      const v = parseLooseNumber(rangeEl.value);
+      const clamped = clamp(v, min, max);
+      numberEl.value = isPercent ? String(Math.round(clamped)) : formatWithCommas(clamped);
+    }
+
+    function syncRangeToNumber() {
+      const v = parseLooseNumber(numberEl.value);
+      if (!Number.isFinite(v)) return;
+      const clamped = clamp(v, min, max);
+      rangeEl.value = String(clamped);
+    }
 
     rangeEl.addEventListener("input", function () {
-      const v = clamp(Number(rangeEl.value), min, max);
-      numberEl.value = formatWithCommas(v);
+      syncNumberToRange();
       clearResult();
+      clearSecondary();
     });
 
-    function commitNumberToRange() {
-      const typed = parseLooseNumber(numberEl.value);
-      if (!Number.isFinite(typed)) {
-        numberEl.value = formatWithCommas(Number(rangeEl.value));
+    numberEl.addEventListener("input", function () {
+      if (!isPercent) numberEl.value = formatInputWithCommas(numberEl.value);
+      clearResult();
+      clearSecondary();
+    });
+
+    function commitNumber() {
+      const v = parseLooseNumber(numberEl.value);
+      if (!Number.isFinite(v)) {
+        syncNumberToRange();
         return;
       }
-      const v = clamp(typed, min, max);
-      rangeEl.value = String(v);
-      numberEl.value = formatWithCommas(v);
+      const clamped = clamp(v, min, max);
+      rangeEl.value = String(clamped);
+      numberEl.value = isPercent ? String(Math.round(clamped)) : formatWithCommas(clamped);
     }
 
-    numberEl.addEventListener("blur", function () {
-      commitNumberToRange();
-      clearResult();
-    });
-
+    numberEl.addEventListener("blur", commitNumber);
     numberEl.addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
-        commitNumberToRange();
-        clearResult();
+        commitNumber();
+        numberEl.blur();
       }
     });
 
-    const initial = clamp(parseLooseNumber(numberEl.value), min, max);
-    if (Number.isFinite(initial)) {
-      rangeEl.value = String(initial);
-      numberEl.value = formatWithCommas(initial);
-    } else {
-      const rv = clamp(Number(rangeEl.value), min, max);
-      numberEl.value = formatWithCommas(rv);
-    }
+    rangeEl.min = String(min);
+    rangeEl.max = String(max);
+    rangeEl.step = String(step);
+
+    syncNumberToRange();
   }
 
   attachLiveFormatting(incomeNumber);
-  attachLiveFormatting(housingNumber);
-  attachLiveFormatting(utilitiesNumber);
-  attachLiveFormatting(foodNumber);
-  attachLiveFormatting(transportNumber);
-  attachLiveFormatting(debtMinNumber);
+  attachLiveFormatting(essentialsNumber);
+  attachLiveFormatting(nonMonthlyNumber);
 
-  bindRangeAndNumber(incomeRange, incomeNumber);
-  bindRangeAndNumber(housingRange, housingNumber);
-  bindRangeAndNumber(utilitiesRange, utilitiesNumber);
-  bindRangeAndNumber(foodRange, foodNumber);
-  bindRangeAndNumber(transportRange, transportNumber);
-  bindRangeAndNumber(debtMinRange, debtMinNumber);
-
-  function validateNonNegative(value, label) {
-    if (!Number.isFinite(value) || value < 0) {
-      setResultError("Enter a valid " + label + " (0 or higher).");
-      return false;
-    }
-    return true;
-  }
-
-  function validatePositive(value, label) {
-    if (!Number.isFinite(value) || value <= 0) {
-      setResultError("Enter a valid " + label + " greater than 0.");
-      return false;
-    }
-    return true;
-  }
-
-  function computeEssentials(parts) {
-    let total = 0;
-    for (let i = 0; i < parts.length; i++) total += parts[i];
-    return total;
-  }
-
-  function largestDriverLabel(values) {
-    const pairs = [
-      { label: "Housing", value: values.housing },
-      { label: "Utilities", value: values.utilities },
-      { label: "Food", value: values.food },
-      { label: "Transport", value: values.transport },
-      { label: "Debt minimums", value: values.debtMin }
-    ];
-
-    let best = pairs[0];
-    for (let i = 1; i < pairs.length; i++) {
-      if (pairs[i].value > best.value) best = pairs[i];
-    }
-    return best.label;
-  }
-
-  function classifyRatio(ratio) {
-    if (!Number.isFinite(ratio)) return { status: "Unknown", key: "unknown" };
-    if (ratio < 1.0) return { status: "Underprepared", key: "underprepared" };
-    if (ratio < 1.2) return { status: "Borderline", key: "borderline" };
-    return { status: "Stable", key: "stable" };
-  }
-
-  function requiredIncomeForTarget(essentials, targetRatio) {
-    if (!Number.isFinite(essentials) || essentials <= 0) return NaN;
-    return essentials * targetRatio;
-  }
-
-  function requiredEssentialsForTarget(income, targetRatio) {
-    if (!Number.isFinite(income) || income <= 0) return NaN;
-    return income / targetRatio;
-  }
+  bindRangeAndNumber(incomeRange, incomeNumber, 0, 500000, 500, false);
+  bindRangeAndNumber(essentialsRange, essentialsNumber, 0, 400000, 500, false);
+  bindRangeAndNumber(nonMonthlyRange, nonMonthlyNumber, 0, 200000, 250, false);
+  bindRangeAndNumber(bufferRange, bufferNumber, 0, 50, 1, true);
 
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      const income = parseLooseNumber(incomeNumber ? incomeNumber.value : "");
-      const housing = parseLooseNumber(housingNumber ? housingNumber.value : "");
-      const utilities = parseLooseNumber(utilitiesNumber ? utilitiesNumber.value : "");
-      const food = parseLooseNumber(foodNumber ? foodNumber.value : "");
-      const transport = parseLooseNumber(transportNumber ? transportNumber.value : "");
-      const debtMin = parseLooseNumber(debtMinNumber ? debtMinNumber.value : "");
+      clearResult();
+      clearSecondary();
 
-      if (!validatePositive(income, "monthly income")) return;
-      if (!validateNonNegative(housing, "housing essentials")) return;
-      if (!validateNonNegative(utilities, "utilities and services")) return;
-      if (!validateNonNegative(food, "food essentials")) return;
-      if (!validateNonNegative(transport, "transport essentials")) return;
-      if (!validateNonNegative(debtMin, "minimum debt payments")) return;
+      if (!incomeNumber || !essentialsNumber || !nonMonthlyNumber || !bufferNumber) return;
 
-      const essentials = computeEssentials([housing, utilities, food, transport, debtMin]);
+      const income = parseLooseNumber(incomeNumber.value);
+      const essentials = parseLooseNumber(essentialsNumber.value);
+      const nonMonthly = parseLooseNumber(nonMonthlyNumber.value);
+      const bufferPct = parseLooseNumber(bufferNumber.value);
+
+      if (!Number.isFinite(income) || income < 0) {
+        setResultError("Enter a valid monthly take-home income (0 or higher).");
+        return;
+      }
 
       if (!Number.isFinite(essentials) || essentials <= 0) {
-        setResultError("Essentials must be greater than 0 to compute the coverage ratio.");
+        setResultError("Enter a valid monthly essential expenses amount greater than 0.");
         return;
       }
 
-      const ratio = income / essentials;
-      if (!Number.isFinite(ratio) || Number.isNaN(ratio)) {
-        setResultError("Inputs produced an invalid result. Check values and try again.");
+      if (!Number.isFinite(nonMonthly) || nonMonthly < 0) {
+        setResultError("Enter a valid non-monthly essentials amount (0 or higher).");
         return;
       }
 
-      const classification = classifyRatio(ratio);
-      const ratioText = ratio.toFixed(2);
+      if (!Number.isFinite(bufferPct) || bufferPct < 0 || bufferPct > 50) {
+        setResultError("Enter a valid buffer target between 0 and 50.");
+        return;
+      }
 
+      const baseEssentials = essentials + nonMonthly;
+      if (!Number.isFinite(baseEssentials) || baseEssentials <= 0) {
+        setResultError("Essentials total must be greater than 0.");
+        return;
+      }
+
+      const bufferMultiplier = 1 + bufferPct / 100;
+      const requiredIncome = baseEssentials * bufferMultiplier;
+
+      if (!Number.isFinite(requiredIncome) || requiredIncome <= 0) {
+        setResultError("Unable to calculate a valid required income. Check inputs.");
+        return;
+      }
+
+      const coverageRatio = income / requiredIncome;
+      if (!Number.isFinite(coverageRatio)) {
+        setResultError("Unable to calculate a valid coverage ratio. Check inputs.");
+        return;
+      }
+
+      const stableThreshold = 1.15;
+      const borderlineThreshold = 1.0;
+
+      let status = "";
       let interpretation = "";
+
+      if (coverageRatio < borderlineThreshold) {
+        status = "Underprepared";
+        interpretation = "Income does not cover essentials plus the chosen buffer. The baseline is structurally short.";
+      } else if (coverageRatio < stableThreshold) {
+        status = "Borderline";
+        interpretation = "Income covers essentials, but the margin is thin. Normal variance can break the month.";
+      } else {
+        status = "Stable";
+        interpretation = "Income covers essentials plus a meaningful buffer. The baseline is resilient to normal variance.";
+      }
+
+      const gapToBorderline = Math.max(0, requiredIncome - income);
+      const requiredForStable = requiredIncome * stableThreshold;
+      const gapToStable = Math.max(0, requiredForStable - income);
+
       let action1 = "";
       let action2 = "";
 
-      const biggest = largestDriverLabel({ housing, utilities, food, transport, debtMin });
-
-      if (classification.key === "underprepared") {
-        interpretation = "Income does not cover essentials. The baseline is running at a deficit, so the system is structurally fragile.";
-        const incomeToBreakEven = requiredIncomeForTarget(essentials, 1.0);
-        const gap = incomeToBreakEven - income;
-        action1 = "Reduce the biggest essentials driver first (" + biggest + ") until essentials fit income.";
-        action2 = "Increase reliable monthly income by at least " + formatWithCommas(Math.ceil(gap)) + " to reach break-even coverage.";
-      } else if (classification.key === "borderline") {
-        interpretation = "Income covers essentials, but margin is thin. Small variance can break the month.";
-        const incomeToStable = requiredIncomeForTarget(essentials, 1.2);
-        const addNeeded = incomeToStable - income;
-        action1 = "Build buffer by lowering the biggest essentials driver first (" + biggest + ").";
-        action2 = "Increase reliable monthly income by at least " + formatWithCommas(Math.ceil(addNeeded)) + " to reach a stable buffer target.";
+      if (status === "Stable") {
+        const protectMargin = income - requiredIncome;
+        action1 = "Protect the margin by keeping essentials flat as income changes.";
+        action2 = "Use the margin intentionally (buffer building, debt reduction, or skill investment) instead of lifestyle creep.";
+        if (protectMargin < 0) {
+          action1 = "Re-check inputs. The calculation indicates no margin despite a stable classification.";
+        }
       } else {
-        interpretation = "Income covers essentials with a meaningful buffer. The baseline is structurally stable at this snapshot.";
-        action1 = "Lock the baseline by preventing essentials creep, starting with " + biggest + ".";
-        action2 = "Allocate the margin intentionally to either emergency buffer or high-cost debt reduction, not random spending.";
+        const incomeIncreaseToBorderline = gapToBorderline;
+        const essentialsCutToBorderline = Math.max(0, baseEssentials - (income / bufferMultiplier));
+
+        action1 =
+          "To reach the minimum baseline (borderline), increase reliable monthly income by " +
+          formatWithCommas(incomeIncreaseToBorderline) +
+          " or reduce essentials by about " +
+          formatWithCommas(essentialsCutToBorderline) +
+          ".";
+
+        const incomeIncreaseToStable = gapToStable;
+        const essentialsCutToStable = Math.max(0, baseEssentials - (income / (bufferMultiplier * stableThreshold)));
+
+        action2 =
+          "To reach stable, increase reliable monthly income by " +
+          formatWithCommas(incomeIncreaseToStable) +
+          " or reduce essentials by about " +
+          formatWithCommas(essentialsCutToStable) +
+          ".";
       }
 
-      const surplus = income - essentials;
-      const breakEvenIncome = requiredIncomeForTarget(essentials, 1.0);
-      const stableIncome = requiredIncomeForTarget(essentials, 1.2);
-      const maxEssentialsForStable = requiredEssentialsForTarget(income, 1.2);
+      const headlineHtml =
+        "<div><strong>Readiness:</strong> " +
+        status +
+        " (coverage ratio " +
+        formatRatioTwoDecimals(coverageRatio) +
+        ")</div>" +
+        "<div>" +
+        interpretation +
+        "</div>" +
+        '<div class="di-actions"><strong>Two immediate actions:</strong><ul><li>' +
+        action1 +
+        "</li><li>" +
+        action2 +
+        "</li></ul></div>";
 
-      const resultHtml =
-        `<p><strong>${classification.status}</strong> (Coverage ratio: <strong>${ratioText}</strong>)</p>` +
-        `<p>${interpretation}</p>` +
-        `<p><strong>Immediate actions:</strong></p>` +
-        `<p>1) ${action1}</p>` +
-        `<p>2) ${action2}</p>`;
+      setResultSuccess(headlineHtml);
 
-      setResultSuccess(resultHtml);
-
+      const percentCovered = (coverageRatio * 100);
       const secondaryHtml =
-        `<h3>Assessment summary</h3>` +
-        `<ul class="di-kv">` +
-        `<li><strong>Outcome:</strong> ${classification.status}</li>` +
-        `<li><strong>Income:</strong> ${formatWithCommas(income)}</li>` +
-        `<li><strong>Essentials total:</strong> ${formatWithCommas(essentials)}</li>` +
-        `<li><strong>Monthly surplus or gap:</strong> ${formatWithCommas(Math.round(surplus))}</li>` +
-        `<li><strong>Biggest essentials driver:</strong> ${biggest}</li>` +
-        `</ul>` +
-        `<h3>Core signals</h3>` +
-        `<ul class="di-kv">` +
-        `<li><strong>Break-even income target (1.00):</strong> ${formatWithCommas(Math.ceil(breakEvenIncome))}</li>` +
-        `<li><strong>Stable buffer income target (1.20):</strong> ${formatWithCommas(Math.ceil(stableIncome))}</li>` +
-        `<li><strong>Max essentials for stable at current income (1.20):</strong> ${formatWithCommas(Math.floor(maxEssentialsForStable))}</li>` +
-        `</ul>`;
+        '<div class="di-secondary-title">Outcome details</div>' +
+        '<div class="di-secondary-grid">' +
+        '<div class="di-kv"><span class="k">Status</span><span class="v">' + status + "</span></div>" +
+        '<div class="di-kv"><span class="k">Coverage</span><span class="v">' + formatPercentTwoDecimals(percentCovered) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Income</span><span class="v">' + formatWithCommas(income) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Essentials (monthly)</span><span class="v">' + formatWithCommas(essentials) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Essentials (non-monthly avg)</span><span class="v">' + formatWithCommas(nonMonthly) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Buffer target</span><span class="v">' + formatPercentTwoDecimals(bufferPct) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Required income (with buffer)</span><span class="v">' + formatWithCommas(requiredIncome) + "</span></div>" +
+        '<div class="di-kv"><span class="k">Primary correction signal</span><span class="v">' +
+        (gapToBorderline > 0 ? ("Gap to baseline: " + formatWithCommas(gapToBorderline)) : "Maintain margin") +
+        "</span></div>" +
+        "</div>";
 
-      setSecondaryHtml(secondaryHtml);
+      setSecondary(secondaryHtml);
     });
   }
 
