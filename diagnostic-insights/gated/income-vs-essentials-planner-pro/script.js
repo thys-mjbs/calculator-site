@@ -1,13 +1,19 @@
 // script.js
 document.addEventListener("DOMContentLoaded", function () {
   // ------------------------------------------------------------
-  // 1) ELEMENT BINDINGS
+  // 1) ELEMENT BINDINGS (REPLACE IDS PER CALCULATOR)
   // ------------------------------------------------------------
+
+  // Required base elements (consistent across all calculators)
   const calculateButton = document.getElementById("calculateButton");
   const resultDiv = document.getElementById("result");
   const shareButton = document.getElementById("shareWhatsAppButton");
 
-  // Free-core (6)
+  // Calculator-specific input elements
+  // Replace these bindings per calculator or add more as needed.
+  // Example:
+  // const inputA = document.getElementById("inputA");
+  // const inputB = document.getElementById("inputB");
   const incomeNumber = document.getElementById("incomeNumber");
   const incomeRange = document.getElementById("incomeRange");
 
@@ -23,61 +29,146 @@ document.addEventListener("DOMContentLoaded", function () {
   const transportNumber = document.getElementById("transportNumber");
   const transportRange = document.getElementById("transportRange");
 
-  const debtNumber = document.getElementById("debtNumber");
-  const debtRange = document.getElementById("debtRange");
+  const debtMinimumsNumber = document.getElementById("debtMinimumsNumber");
+  const debtMinimumsRange = document.getElementById("debtMinimumsRange");
 
-  // Paid-only (6)
-  const reliabilityNumber = document.getElementById("reliabilityNumber");
-  const reliabilityRange = document.getElementById("reliabilityRange");
+  const incomeReliabilityNumber = document.getElementById("incomeReliabilityNumber");
+  const incomeReliabilityRange = document.getElementById("incomeReliabilityRange");
 
-  const commitmentsNumber = document.getElementById("commitmentsNumber");
-  const commitmentsRange = document.getElementById("commitmentsRange");
+  const fixedCommitmentsNumber = document.getElementById("fixedCommitmentsNumber");
+  const fixedCommitmentsRange = document.getElementById("fixedCommitmentsRange");
+
+  const irregularEssentialsNumber = document.getElementById("irregularEssentialsNumber");
+  const irregularEssentialsRange = document.getElementById("irregularEssentialsRange");
 
   const bufferMonthsNumber = document.getElementById("bufferMonthsNumber");
   const bufferMonthsRange = document.getElementById("bufferMonthsRange");
 
-  const errorMarginNumber = document.getElementById("errorMarginNumber");
-  const errorMarginRange = document.getElementById("errorMarginRange");
+  const estimationErrorNumber = document.getElementById("estimationErrorNumber");
+  const estimationErrorRange = document.getElementById("estimationErrorRange");
 
-  const driftRiskNumber = document.getElementById("driftRiskNumber");
-  const driftRiskRange = document.getElementById("driftRiskRange");
+  const essentialsGrowthNumber = document.getElementById("essentialsGrowthNumber");
+  const essentialsGrowthRange = document.getElementById("essentialsGrowthRange");
 
-  const feasibleCutNumber = document.getElementById("feasibleCutNumber");
-  const feasibleCutRange = document.getElementById("feasibleCutRange");
+  // Optional: mode selector + grouped input blocks (only if calculator needs modes)
+  // Example:
+  // const modeSelect = document.getElementById("modeSelect");
+  // const modeBlockA = document.getElementById("modeBlockA");
+  // const modeBlockB = document.getElementById("modeBlockB");
 
   // ------------------------------------------------------------
-  // 2) HELPERS (parse, clamp, formatting, result setters)
+  // 2) LIVE FORMATTING (OPTIONAL)
   // ------------------------------------------------------------
-  function parseLooseNumber(raw) {
-    if (raw === null || raw === undefined) return NaN;
-    const s = String(raw).trim();
-    if (!s) return NaN;
-    const cleaned = s.replace(/,/g, "");
-    const n = Number(cleaned);
-    return Number.isFinite(n) ? n : NaN;
+  function attachLiveFormatting(inputEl) {
+    if (!inputEl) return;
+    inputEl.addEventListener("input", function () {
+      inputEl.value = formatInputWithCommas(inputEl.value);
+    });
   }
 
-  function clamp(n, min, max) {
-    if (!Number.isFinite(n)) return NaN;
-    return Math.min(max, Math.max(min, n));
+  // Add every input that should live-format with commas
+  // Example:
+  // attachLiveFormatting(inputA);
+  // attachLiveFormatting(inputB);
+  attachLiveFormatting(incomeNumber);
+  attachLiveFormatting(housingNumber);
+  attachLiveFormatting(utilitiesNumber);
+  attachLiveFormatting(groceriesNumber);
+  attachLiveFormatting(transportNumber);
+  attachLiveFormatting(debtMinimumsNumber);
+  attachLiveFormatting(fixedCommitmentsNumber);
+  attachLiveFormatting(irregularEssentialsNumber);
+
+  // ------------------------------------------------------------
+  // 2B) RANGE + NUMBER BINDING (DI PATTERN)
+  // ------------------------------------------------------------
+  function clamp(value, min, max) {
+    if (!Number.isFinite(value)) return NaN;
+    if (value < min) return min;
+    if (value > max) return max;
+    return value;
   }
 
-  function formatWithCommas(n) {
-    if (!Number.isFinite(n)) return "";
-    const rounded = Math.round(n);
-    return String(rounded).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  function formatInt(value) {
+    if (!Number.isFinite(value)) return "";
+    return Math.round(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  function formatRatioTwoDecimals(n) {
-    if (!Number.isFinite(n)) return "";
-    return n.toFixed(2);
+  function formatPct(value) {
+    if (!Number.isFinite(value)) return "";
+    return Math.round(value).toString();
   }
 
-  function formatPercentOneDecimal(n) {
-    if (!Number.isFinite(n)) return "";
-    return n.toFixed(1) + "%";
+  function bindRangeAndNumber(rangeEl, numberEl, options) {
+    if (!rangeEl || !numberEl) return;
+
+    const min = toNumber(rangeEl.min);
+    const max = toNumber(rangeEl.max);
+    const isPercent = options && options.isPercent;
+    const isWhole = options && options.isWhole;
+
+    function syncFromRange() {
+      const v = toNumber(rangeEl.value);
+      if (!Number.isFinite(v)) return;
+      if (isPercent || isWhole) {
+        numberEl.value = String(Math.round(v));
+      } else {
+        numberEl.value = formatInt(v);
+      }
+    }
+
+    function commitFromNumber() {
+      const raw = toNumber(numberEl.value);
+      if (!Number.isFinite(raw)) {
+        numberEl.value = "";
+        return;
+      }
+      const clamped = clamp(raw, min, max);
+      if (!Number.isFinite(clamped)) return;
+
+      rangeEl.value = String(clamped);
+
+      if (isPercent || isWhole) {
+        numberEl.value = String(Math.round(clamped));
+      } else {
+        numberEl.value = formatInt(clamped);
+      }
+    }
+
+    rangeEl.addEventListener("input", function () {
+      syncFromRange();
+    });
+
+    numberEl.addEventListener("blur", function () {
+      commitFromNumber();
+    });
+
+    numberEl.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        commitFromNumber();
+      }
+    });
+
+    syncFromRange();
   }
 
+  bindRangeAndNumber(incomeRange, incomeNumber, {});
+  bindRangeAndNumber(housingRange, housingNumber, {});
+  bindRangeAndNumber(utilitiesRange, utilitiesNumber, {});
+  bindRangeAndNumber(groceriesRange, groceriesNumber, {});
+  bindRangeAndNumber(transportRange, transportNumber, {});
+  bindRangeAndNumber(debtMinimumsRange, debtMinimumsNumber, {});
+  bindRangeAndNumber(incomeReliabilityRange, incomeReliabilityNumber, { isPercent: true });
+  bindRangeAndNumber(fixedCommitmentsRange, fixedCommitmentsNumber, {});
+  bindRangeAndNumber(irregularEssentialsRange, irregularEssentialsNumber, {});
+  bindRangeAndNumber(bufferMonthsRange, bufferMonthsNumber, { isWhole: true });
+  bindRangeAndNumber(estimationErrorRange, estimationErrorNumber, { isPercent: true });
+  bindRangeAndNumber(essentialsGrowthRange, essentialsGrowthNumber, { isPercent: true });
+
+  // ------------------------------------------------------------
+  // 3) RESULT HELPERS (CONSISTENT)
+  // ------------------------------------------------------------
   function setResultError(message) {
     if (!resultDiv) return;
     resultDiv.classList.remove("success");
@@ -99,87 +190,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ------------------------------------------------------------
-  // 3) RANGE + NUMBER BINDING (bi-directional sync, clamp on blur/enter)
+  // 4) OPTIONAL MODE HANDLING (ONLY IF USED)
   // ------------------------------------------------------------
-  function bindRangeAndNumber(rangeEl, numberEl) {
-    if (!rangeEl || !numberEl) return;
-
-    const min = parseLooseNumber(rangeEl.min);
-    const max = parseLooseNumber(rangeEl.max);
-    const step = parseLooseNumber(rangeEl.step) || 1;
-
-    function snapToStep(value) {
-      if (!Number.isFinite(value)) return NaN;
-      if (!Number.isFinite(step) || step <= 0) return value;
-      return Math.round(value / step) * step;
-    }
-
-    function commitValue(n) {
-      const snapped = snapToStep(n);
-      const clamped = clamp(snapped, min, max);
-      if (!Number.isFinite(clamped)) return false;
-      rangeEl.value = String(clamped);
-      numberEl.value = formatWithCommas(clamped);
-      numberEl.dataset.lastValid = String(clamped);
-      return true;
-    }
-
-    commitValue(parseLooseNumber(rangeEl.value));
-
-    rangeEl.addEventListener("input", function () {
-      commitValue(parseLooseNumber(rangeEl.value));
-      clearResult();
-    });
-
-    numberEl.addEventListener("input", function () {
-      const n = parseLooseNumber(numberEl.value);
-      if (Number.isFinite(n)) numberEl.value = formatWithCommas(n);
-      clearResult();
-    });
-
-    function handleCommit() {
-      const n = parseLooseNumber(numberEl.value);
-      if (!Number.isFinite(n)) {
-        if (numberEl.dataset.lastValid !== undefined) {
-          commitValue(parseLooseNumber(numberEl.dataset.lastValid));
-        } else {
-          commitValue(parseLooseNumber(rangeEl.value));
-        }
-        return;
-      }
-      const ok = commitValue(n);
-      if (!ok && numberEl.dataset.lastValid !== undefined) {
-        commitValue(parseLooseNumber(numberEl.dataset.lastValid));
-      }
-    }
-
-    numberEl.addEventListener("blur", handleCommit);
-    numberEl.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        handleCommit();
-        numberEl.blur();
-      }
-    });
+  // If your calculator has multiple modes, implement showMode() and hook it up.
+  // If not used, leave the placeholders empty and do nothing.
+  function showMode(mode) {
+    clearResult();
   }
 
-  // Bind all 12 inputs
-  bindRangeAndNumber(incomeRange, incomeNumber);
-  bindRangeAndNumber(housingRange, housingNumber);
-  bindRangeAndNumber(utilitiesRange, utilitiesNumber);
-  bindRangeAndNumber(groceriesRange, groceriesNumber);
-  bindRangeAndNumber(transportRange, transportNumber);
-  bindRangeAndNumber(debtRange, debtNumber);
-
-  bindRangeAndNumber(reliabilityRange, reliabilityNumber);
-  bindRangeAndNumber(commitmentsRange, commitmentsNumber);
-  bindRangeAndNumber(bufferMonthsRange, bufferMonthsNumber);
-  bindRangeAndNumber(errorMarginRange, errorMarginNumber);
-  bindRangeAndNumber(driftRiskRange, driftRiskNumber);
-  bindRangeAndNumber(feasibleCutRange, feasibleCutNumber);
-
   // ------------------------------------------------------------
-  // 4) VALIDATION HELPERS
+  // 5) VALIDATION HELPERS (OPTIONAL)
   // ------------------------------------------------------------
   function validatePositive(value, fieldLabel) {
     if (!Number.isFinite(value) || value <= 0) {
@@ -197,462 +217,323 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
-  function validatePercentRange(value, fieldLabel, min, max) {
-    if (!Number.isFinite(value) || value < min || value > max) {
-      setResultError("Enter a valid " + fieldLabel + " between " + min + " and " + max + ".");
-      return false;
-    }
-    return true;
+  function formatRatio(value) {
+    if (!Number.isFinite(value)) return "";
+    return value.toFixed(2);
   }
 
-  function validateIntegerRange(value, fieldLabel, min, max) {
-    if (!Number.isFinite(value) || value < min || value > max) {
-      setResultError("Enter a valid " + fieldLabel + " between " + min + " and " + max + ".");
-      return false;
-    }
-    return true;
+  function classify(ratio, stableRatio) {
+    if (!Number.isFinite(ratio) || ratio <= 0) return "Underprepared";
+    if (ratio < 1.0) return "Underprepared";
+    if (ratio < stableRatio) return "Borderline";
+    return "Stable";
   }
 
-  // ------------------------------------------------------------
-  // 5) CORE PAID ENGINE (cannot be approximated from free page)
-  // ------------------------------------------------------------
-  const STABLE_RATIO = 1.25;
-  const BUFFER_BUILD_MONTHS = 12;
-
-  function computeEngine(inputs) {
-    const income = inputs.income;
-    const baseEssentials = inputs.baseEssentials;
-    const commitments = inputs.commitments;
-
-    const reliability = inputs.reliability; // 0.40..1.00
-    const errorFactor = inputs.errorFactor; // 1..1.30
-    const driftFactor = inputs.driftFactor; // 1..1.20
-
-    // Conservative baseline mechanics
-    const conservativeIncome = income * reliability;
-    const driftedEssentials = baseEssentials * driftFactor;
-    const totalOutflow = driftedEssentials + commitments;
-
-    const ratio = conservativeIncome / totalOutflow;
-    const margin = conservativeIncome - totalOutflow;
-
-    // Buffer target (confidence-adjusted): build to target buffer months within 12 months
-    const targetBufferAmount = totalOutflow * inputs.bufferMonths * errorFactor;
-    const requiredMonthlyBufferBuild = inputs.bufferMonths > 0 ? (targetBufferAmount / BUFFER_BUILD_MONTHS) : 0;
-
-    // Stability target: must clear stable ratio AND still fund buffer build rate
-    const requiredConservativeIncomeForStable = (STABLE_RATIO * totalOutflow) + requiredMonthlyBufferBuild;
-
-    const gapIncomeIncreaseConservative = Math.max(0, requiredConservativeIncomeForStable - conservativeIncome);
-
-    // Convert conservative income gap back to nominal income increase (reliability-adjusted)
-    const incomeIncreaseNominal = reliability > 0 ? (gapIncomeIncreaseConservative / reliability) : NaN;
-
-    // If income fixed, compute allowed outflow such that: conservativeIncome >= STABLE_RATIO*outflow + bufferBuild
-    const allowedOutflow = Math.max(0, (conservativeIncome - requiredMonthlyBufferBuild) / STABLE_RATIO);
-    const requiredOutflowDecrease = Math.max(0, totalOutflow - allowedOutflow);
-
-    // Classification
-    let classification = "Borderline";
-    if (ratio < 1.0) classification = "Underprepared";
-    else if (ratio >= STABLE_RATIO && margin >= requiredMonthlyBufferBuild) classification = "Stable";
-
+  function computeTargets(conservativeIncome, essentials, stableRatio) {
+    const gapIncome = Math.max(0, (essentials * stableRatio) - conservativeIncome);
+    const maxEssentialsForStable = conservativeIncome / stableRatio;
+    const gapEssentials = Math.max(0, essentials - maxEssentialsForStable);
     return {
-      conservativeIncome,
-      driftedEssentials,
-      totalOutflow,
-      ratio,
-      margin,
-      requiredMonthlyBufferBuild,
-      requiredConservativeIncomeForStable,
-      gapIncomeIncreaseConservative,
-      incomeIncreaseNominal,
-      allowedOutflow,
-      requiredOutflowDecrease,
-      classification
+      incomeIncreaseNeeded: gapIncome,
+      essentialsDecreaseNeeded: gapEssentials
     };
   }
 
-  function scenarioPack(baseInputs) {
-    // Minimum 3 stress scenarios, each recalculates classification and targets.
-    const scenarios = [];
-
-    // 1) Modest income drop or worsening reliability
-    scenarios.push({
-      name: "Income reliability worsens (-10 points)",
-      mutate: function (x) {
-        const newRel = clamp(x.reliability * 100 - 10, 40, 100) / 100;
-        x.reliability = newRel;
-        return x;
-      }
-    });
-
-    // 2) Essentials increase
-    scenarios.push({
-      name: "Essentials drift rises (+10 points)",
-      mutate: function (x) {
-        const newDrift = clamp(x.driftRiskPct + 10, 0, 20);
-        x.driftRiskPct = newDrift;
-        x.driftFactor = 1 + (newDrift / 100);
-        return x;
-      }
-    });
-
-    // 3) Combined moderate stress
-    scenarios.push({
-      name: "Combined stress (reliability -7, drift +7, commitments +5%)",
-      mutate: function (x) {
-        const newRel = clamp(x.reliability * 100 - 7, 40, 100) / 100;
-        const newDrift = clamp(x.driftRiskPct + 7, 0, 20);
-        x.reliability = newRel;
-        x.driftRiskPct = newDrift;
-        x.driftFactor = 1 + (newDrift / 100);
-        x.commitments = x.commitments * 1.05;
-        return x;
-      }
-    });
-
-    const out = [];
-    for (let i = 0; i < scenarios.length; i++) {
-      const s = scenarios[i];
-      const cloned = JSON.parse(JSON.stringify(baseInputs));
-      const mutated = s.mutate(cloned);
-      const engine = computeEngine(mutated);
-      out.push({
-        name: s.name,
-        classification: engine.classification,
-        incomeIncreaseNominal: engine.incomeIncreaseNominal,
-        outflowDecrease: engine.requiredOutflowDecrease
-      });
-    }
-    return out;
-  }
-
-  function buildLevers(baseInputs, engine, feasibilityPct) {
-    const levers = [
-      { key: "Housing", amount: baseInputs.housing },
-      { key: "Utilities", amount: baseInputs.utilities },
-      { key: "Groceries", amount: baseInputs.groceries },
-      { key: "Transport", amount: baseInputs.transport },
-      { key: "Debt minimums", amount: baseInputs.debt },
-      { key: "Fixed commitments", amount: baseInputs.commitments }
-    ];
-
-    const totalOutflow = engine.totalOutflow;
-    const requiredOutflowDecrease = engine.requiredOutflowDecrease;
-
-    const ranked = levers
-      .map(function (l) {
-        const share = totalOutflow > 0 ? (l.amount / totalOutflow) : 0;
-        const requiredSingle = clamp(requiredOutflowDecrease, 0, l.amount); // spec clamp
-        const feasibleCap = clamp(l.amount * (feasibilityPct / 100), 0, l.amount);
-        return {
-          key: l.key,
-          amount: l.amount,
-          share: share,
-          requiredSingle: requiredSingle,
-          feasibleCap: feasibleCap
-        };
-      })
-      .sort(function (a, b) {
-        return b.share - a.share;
-      })
-      .slice(0, 5);
-
-    return ranked;
-  }
-
-  function combinedSplitTop3(rankedLevers, requiredOutflowDecrease) {
-    const top3 = rankedLevers.slice(0, 3);
-    const denom = top3.reduce(function (sum, l) { return sum + l.amount; }, 0);
-
-    const rows = top3.map(function (l) {
-      const portion = denom > 0 ? (l.amount / denom) : 0;
-      const raw = requiredOutflowDecrease * portion;
-      const clamped = clamp(raw, 0, l.amount);
-      return { key: l.key, amount: l.amount, split: clamped };
-    });
-
-    return rows;
-  }
-
-  function actionPlan(engine, rankedLevers, combinedRows, scenarios, baseInputs) {
-    const actions = [];
-    const needIncome = engine.incomeIncreaseNominal > 0.5 && Number.isFinite(engine.incomeIncreaseNominal);
-    const needCut = engine.requiredOutflowDecrease > 0.5;
-
-    // 1) Primary target
-    if (needIncome && needCut) {
-      actions.push("Primary target: either increase monthly income by " + formatWithCommas(engine.incomeIncreaseNominal) + " or reduce baseline outflow by " + formatWithCommas(engine.requiredOutflowDecrease) + " to reach Stable with buffer funding.");
-    } else if (needIncome) {
-      actions.push("Primary target: increase monthly income by " + formatWithCommas(engine.incomeIncreaseNominal) + " to reach Stable with buffer funding (given reliability and drift).");
-    } else if (needCut) {
-      actions.push("Primary target: reduce baseline outflow by " + formatWithCommas(engine.requiredOutflowDecrease) + " to reach Stable with buffer funding.");
-    } else {
-      actions.push("Primary target: you are meeting Stable with the current buffer funding rate. Keep the baseline consistent and re-check when commitments change.");
-    }
-
-    // 2) Buffer build action (if any)
-    if (engine.requiredMonthlyBufferBuild > 0.5) {
-      actions.push("Buffer target: allocate " + formatWithCommas(engine.requiredMonthlyBufferBuild) + " per month for " + baseInputs.bufferMonths + " months of buffer (confidence-adjusted).");
-    }
-
-    // 3-5) Combined split actions (computed, lever-mapped)
-    if (needCut && combinedRows.length) {
-      for (let i = 0; i < combinedRows.length && actions.length < 7; i++) {
-        const r = combinedRows[i];
-        if (r.split > 0.5) actions.push("Combined correction: reduce " + r.key + " by " + formatWithCommas(r.split) + " (proportional split).");
-      }
-    }
-
-    // 6) Scenario-driven risk action: if any scenario flips to Underprepared
-    const worst = scenarios.find(function (s) { return s.classification === "Underprepared"; });
-    if (worst && actions.length < 7) {
-      actions.push("Stress risk: under '" + worst.name + "' you fall to Underprepared. Reduce drift/commitments or increase reliability to avoid fragile months.");
-    }
-
-    // 7) Biggest lever single-lever ceiling note (computed)
-    if (rankedLevers.length && actions.length < 7) {
-      const top = rankedLevers[0];
-      if (engine.requiredOutflowDecrease > 0.5) {
-        const single = clamp(engine.requiredOutflowDecrease, 0, top.amount);
-        actions.push("Single-lever check: if only '" + top.key + "' changes, it would require " + formatWithCommas(single) + " reduction (clamped to the lever size).");
-      }
-    }
-
-    return actions.slice(0, 7);
+  function pct(value) {
+    if (!Number.isFinite(value)) return "";
+    return (value * 100).toFixed(1) + "%";
   }
 
   // ------------------------------------------------------------
-  // 6) MAIN CALCULATE HANDLER
+  // 6) MAIN CALCULATE HANDLER (CALCULATOR-SPECIFIC)
   // ------------------------------------------------------------
   if (calculateButton) {
     calculateButton.addEventListener("click", function () {
-      // Existence guard
+      // Parse inputs using toNumber() (from /scripts/main.js)
+      const income = toNumber(incomeNumber ? incomeNumber.value : "");
+      const housing = toNumber(housingNumber ? housingNumber.value : "");
+      const utilities = toNumber(utilitiesNumber ? utilitiesNumber.value : "");
+      const groceries = toNumber(groceriesNumber ? groceriesNumber.value : "");
+      const transport = toNumber(transportNumber ? transportNumber.value : "");
+      const debtMinimums = toNumber(debtMinimumsNumber ? debtMinimumsNumber.value : "");
+
+      const incomeReliabilityPct = toNumber(incomeReliabilityNumber ? incomeReliabilityNumber.value : "");
+      const fixedCommitments = toNumber(fixedCommitmentsNumber ? fixedCommitmentsNumber.value : "");
+      const irregularEssentials = toNumber(irregularEssentialsNumber ? irregularEssentialsNumber.value : "");
+      const bufferMonths = toNumber(bufferMonthsNumber ? bufferMonthsNumber.value : "");
+      const estimationErrorPct = toNumber(estimationErrorNumber ? estimationErrorNumber.value : "");
+      const essentialsGrowthPct = toNumber(essentialsGrowthNumber ? essentialsGrowthNumber.value : "");
+
+      // Basic existence guard (optional but recommended)
       if (
-        !incomeNumber || !housingNumber || !utilitiesNumber || !groceriesNumber || !transportNumber || !debtNumber ||
-        !reliabilityNumber || !commitmentsNumber || !bufferMonthsNumber || !errorMarginNumber || !driftRiskNumber || !feasibleCutNumber
-      ) {
-        return;
-      }
+        !incomeNumber || !housingNumber || !utilitiesNumber || !groceriesNumber || !transportNumber || !debtMinimumsNumber ||
+        !incomeReliabilityNumber || !fixedCommitmentsNumber || !irregularEssentialsNumber || !bufferMonthsNumber || !estimationErrorNumber || !essentialsGrowthNumber
+      ) return;
 
-      // Parse inputs
-      const income = parseLooseNumber(incomeNumber.value);
-      const housing = parseLooseNumber(housingNumber.value);
-      const utilities = parseLooseNumber(utilitiesNumber.value);
-      const groceries = parseLooseNumber(groceriesNumber.value);
-      const transport = parseLooseNumber(transportNumber.value);
-      const debt = parseLooseNumber(debtNumber.value);
+      // Validation
+      clearResult();
 
-      const reliabilityPct = parseLooseNumber(reliabilityNumber.value);
-      const commitments = parseLooseNumber(commitmentsNumber.value);
-      const bufferMonths = parseLooseNumber(bufferMonthsNumber.value);
-      const errorMarginPct = parseLooseNumber(errorMarginNumber.value);
-      const driftRiskPct = parseLooseNumber(driftRiskNumber.value);
-      const feasibleCutPct = parseLooseNumber(feasibleCutNumber.value);
-
-      // Validation (free-core)
       if (!validatePositive(income, "monthly income")) return;
+
       if (!validateNonNegative(housing, "housing")) return;
       if (!validateNonNegative(utilities, "utilities")) return;
       if (!validateNonNegative(groceries, "groceries")) return;
       if (!validateNonNegative(transport, "transport")) return;
-      if (!validateNonNegative(debt, "debt minimums")) return;
+      if (!validateNonNegative(debtMinimums, "debt minimums")) return;
 
-      const baseEssentials = housing + utilities + groceries + transport + debt;
-      if (!Number.isFinite(baseEssentials) || baseEssentials <= 0) {
-        setResultError("Total essentials must be greater than 0.");
+      if (!validatePositive(incomeReliabilityPct, "income reliability")) return;
+      if (incomeReliabilityPct < 50 || incomeReliabilityPct > 100) {
+        setResultError("Income reliability must be between 50 and 100.");
         return;
       }
 
-      // Validation (paid-only categories required)
-      if (!validatePercentRange(reliabilityPct, "income reliability", 40, 100)) return;
-      if (!validateNonNegative(commitments, "fixed commitments")) return;
-      if (!validateIntegerRange(bufferMonths, "target buffer months", 0, 12)) return;
-      if (!validatePercentRange(errorMarginPct, "estimation error margin", 0, 30)) return;
-      if (!validatePercentRange(driftRiskPct, "essentials drift risk", 0, 20)) return;
-      if (!validatePercentRange(feasibleCutPct, "max feasible cut per lever", 0, 60)) return;
+      if (!validateNonNegative(fixedCommitments, "fixed commitments")) return;
+      if (!validateNonNegative(irregularEssentials, "irregular essentials")) return;
 
-      const baseInputs = {
-        income: income,
-        housing: housing,
-        utilities: utilities,
-        groceries: groceries,
-        transport: transport,
-        debt: debt,
-        baseEssentials: baseEssentials,
-
-        reliability: reliabilityPct / 100,
-        commitments: commitments,
-        bufferMonths: Math.round(bufferMonths),
-        errorFactor: 1 + (errorMarginPct / 100),
-        driftFactor: 1 + (driftRiskPct / 100),
-        driftRiskPct: driftRiskPct
-      };
-
-      const engine = computeEngine(baseInputs);
-
-      if (!Number.isFinite(engine.ratio) || engine.totalOutflow <= 0 || !Number.isFinite(engine.totalOutflow)) {
-        setResultError("Unable to compute a valid result from these inputs.");
+      if (!validateNonNegative(bufferMonths, "target buffer depth")) return;
+      if (bufferMonths > 12) {
+        setResultError("Target buffer depth must be 12 or less.");
         return;
       }
 
-      const rankedLevers = buildLevers(baseInputs, engine, feasibleCutPct);
-      const combinedRows = combinedSplitTop3(rankedLevers, engine.requiredOutflowDecrease);
-      const scenarios = scenarioPack(baseInputs);
-      const plan = actionPlan(engine, rankedLevers, combinedRows, scenarios, baseInputs);
+      if (!validateNonNegative(estimationErrorPct, "estimation error margin")) return;
+      if (estimationErrorPct > 25) {
+        setResultError("Estimation error margin must be 25 or less.");
+        return;
+      }
 
-      // Paid results block (A-H)
-      const ratioText = formatRatioTwoDecimals(engine.ratio) + "x";
-      const marginText = formatWithCommas(engine.margin);
-      const outflowText = formatWithCommas(engine.totalOutflow);
-      const essentialsText = formatWithCommas(engine.driftedEssentials);
+      if (!validateNonNegative(essentialsGrowthPct, "near-term essentials growth")) return;
+      if (essentialsGrowthPct > 20) {
+        setResultError("Near-term essentials growth must be 20 or less.");
+        return;
+      }
 
-      const incomeIncreaseText = Number.isFinite(engine.incomeIncreaseNominal) ? formatWithCommas(engine.incomeIncreaseNominal) : "";
-      const outflowDecreaseText = formatWithCommas(engine.requiredOutflowDecrease);
+      const coreEssentials = housing + utilities + groceries + transport + debtMinimums;
+      const commitmentsBeyond = fixedCommitments + irregularEssentials;
+      const totalEssentials = coreEssentials + commitmentsBeyond;
 
-      const bufferBuildText = formatWithCommas(engine.requiredMonthlyBufferBuild);
+      if (!Number.isFinite(totalEssentials) || totalEssentials <= 0) {
+        setResultError("Enter essential expenses that total greater than 0.");
+        return;
+      }
 
-      // Lever table rows
-      const leverRowsHtml = rankedLevers.map(function (l) {
-        const sharePct = formatPercentOneDecimal(l.share * 100);
-        const requiredSingle = formatWithCommas(l.requiredSingle);
-        const feasibleCap = formatWithCommas(l.feasibleCap);
+      // Paid-only mechanics
+      const stableRatio = 1.25;
+
+      const reliabilityFactor = incomeReliabilityPct / 100;
+      const conservativeIncome = income * reliabilityFactor;
+
+      const ratioBase = income / totalEssentials;
+      const ratioConservative = conservativeIncome / totalEssentials;
+
+      if (!Number.isFinite(ratioConservative) || ratioConservative <= 0) {
+        setResultError("Inputs produced an invalid result. Check your numbers and try again.");
+        return;
+      }
+
+      const classification = classify(ratioConservative, stableRatio);
+      const margin = conservativeIncome - totalEssentials;
+
+      const targets = computeTargets(conservativeIncome, totalEssentials, stableRatio);
+
+      // Confidence-adjusted buffer
+      const errorFactor = 1 + (estimationErrorPct / 100);
+      const volatilityFactor = 1 + (1 - reliabilityFactor);
+      const adjustedBufferTarget = totalEssentials * bufferMonths * errorFactor * volatilityFactor;
+
+      // Lever ranking (Top 5)
+      const leverList = [
+        { key: "Housing", amount: housing },
+        { key: "Utilities", amount: utilities },
+        { key: "Groceries", amount: groceries },
+        { key: "Transport", amount: transport },
+        { key: "Debt minimums", amount: debtMinimums },
+        { key: "Commitments beyond essentials", amount: commitmentsBeyond }
+      ].filter(function (x) { return Number.isFinite(x.amount) && x.amount > 0; });
+
+      leverList.sort(function (a, b) { return b.amount - a.amount; });
+
+      const top5 = leverList.slice(0, 5);
+      const essentialsDecreaseNeeded = targets.essentialsDecreaseNeeded;
+
+      const leverRows = top5.map(function (l) {
+        const share = l.amount / totalEssentials;
+        const requiredSolo = Math.min(l.amount, essentialsDecreaseNeeded);
+        return {
+          label: l.key,
+          share: share,
+          amount: l.amount,
+          requiredSolo: requiredSolo
+        };
+      });
+
+      // Combined correction option (top 3 proportional split)
+      const top3 = top5.slice(0, 3);
+      const top3Sum = top3.reduce(function (acc, l) { return acc + l.amount; }, 0);
+
+      const combinedSplit = top3.map(function (l) {
+        const weight = top3Sum > 0 ? (l.amount / top3Sum) : 0;
+        const suggested = essentialsDecreaseNeeded * weight;
+        const clamped = Math.min(l.amount, suggested);
+        return {
+          label: l.key,
+          suggested: clamped
+        };
+      });
+
+      // Sensitivity scenarios (min 3)
+      function scenarioResult(name, scenarioIncome, scenarioEssentials) {
+        const scenarioRatio = scenarioIncome / scenarioEssentials;
+        const scenarioClass = classify(scenarioRatio, stableRatio);
+        const scenarioTargets = computeTargets(scenarioIncome, scenarioEssentials, stableRatio);
+        return {
+          name: name,
+          classification: scenarioClass,
+          incomeIncrease: scenarioTargets.incomeIncreaseNeeded,
+          essentialsDecrease: scenarioTargets.essentialsDecreaseNeeded
+        };
+      }
+
+      const growthFactor = 1 + (Math.max(0, essentialsGrowthPct) / 100);
+
+      const s1Income = income * Math.max(0.4, reliabilityFactor - 0.10) * 0.90;
+      const s1Essentials = totalEssentials;
+      const s1 = scenarioResult("Income stress (drop + reliability worsening)", s1Income, s1Essentials);
+
+      const s2Income = conservativeIncome;
+      const s2Essentials = totalEssentials * Math.max(1.0, growthFactor);
+      const s2 = scenarioResult("Essentials stress (near-term increase)", s2Income, s2Essentials);
+
+      const s3Income = s1Income;
+      const s3Essentials = s2Essentials;
+      const s3 = scenarioResult("Combined stress (income + essentials)", s3Income, s3Essentials);
+
+      // Next actions (max 5) and ranked action plan (max 7)
+      const primaryLever = leverRows.length ? leverRows[0].label : "Top lever";
+      const primarySolo = leverRows.length ? leverRows[0].requiredSolo : 0;
+
+      const actions = [];
+
+      if (targets.incomeIncreaseNeeded > 0) {
+        actions.push("Income path: increase reliable monthly income by " + formatInt(targets.incomeIncreaseNeeded) + " to reach Stable.");
+      } else {
+        actions.push("Income path: no increase required to meet Stable at current conservative baseline.");
+      }
+
+      if (targets.essentialsDecreaseNeeded > 0) {
+        actions.push("Essentials path: reduce monthly essentials by " + formatInt(targets.essentialsDecreaseNeeded) + " to reach Stable.");
+      } else {
+        actions.push("Essentials path: no reduction required to meet Stable at current conservative baseline.");
+      }
+
+      if (targets.essentialsDecreaseNeeded > 0 && primarySolo > 0) {
+        actions.push("Single-lever option: if only " + primaryLever + " changes, reduce it by " + formatInt(primarySolo) + " to reach Stable.");
+      }
+
+      if (bufferMonths > 0) {
+        actions.push("Buffer target: build " + formatInt(adjustedBufferTarget) + " total buffer (adjusted for reliability and estimation error).");
+      }
+
+      actions.push("Stress check: under Combined stress, the gap becomes income +" + formatInt(s3.incomeIncrease) + " or essentials -" + formatInt(s3.essentialsDecrease) + ".");
+
+      const nextActions = actions.slice(0, 5);
+
+      const plan = [];
+      plan.push("Baseline status: " + classification + " using conservative income (" + formatInt(conservativeIncome) + ").");
+      if (targets.essentialsDecreaseNeeded > 0 && combinedSplit.length === 3) {
+        plan.push("Combined correction: reduce " + combinedSplit[0].label + " by " + formatInt(combinedSplit[0].suggested) + ", " + combinedSplit[1].label + " by " + formatInt(combinedSplit[1].suggested) + ", and " + combinedSplit[2].label + " by " + formatInt(combinedSplit[2].suggested) + ".");
+      }
+      if (targets.incomeIncreaseNeeded > 0) {
+        plan.push("Income lever: close the remaining gap with a reliable income increase of " + formatInt(targets.incomeIncreaseNeeded) + " if reductions are constrained.");
+      }
+      if (leverRows.length >= 2 && targets.essentialsDecreaseNeeded > 0) {
+        plan.push("Top lever focus: prioritize changes in " + leverRows[0].label + " then " + leverRows[1].label + " because they dominate essentials share.");
+      }
+      if (bufferMonths > 0) {
+        plan.push("Buffer build: target " + formatInt(adjustedBufferTarget) + " total buffer; re-run after any major lever change.");
+      }
+      plan.push("Scenario guardrail: if essentials increase by " + formatPct(Math.max(0, essentialsGrowthPct) / 100) + ", your gap becomes income +" + formatInt(s2.incomeIncrease) + " or essentials -" + formatInt(s2.essentialsDecrease) + ".");
+      plan.push("Scenario guardrail: if income weakens (drop + reliability), your gap becomes income +" + formatInt(s1.incomeIncrease) + " or essentials -" + formatInt(s1.essentialsDecrease) + ".");
+
+      const rankedPlan = plan.slice(0, 7);
+
+      // Build output HTML (PAID RESULTS BLOCK)
+      const leverTableRowsHtml = leverRows.map(function (r) {
         return (
           "<tr>" +
-            "<td>" + l.key + "</td>" +
-            "<td>" + sharePct + "</td>" +
-            "<td>" + requiredSingle + "</td>" +
-            "<td>" + feasibleCap + "</td>" +
+            "<td>" + r.label + "</td>" +
+            "<td>" + pct(r.share) + "</td>" +
+            "<td>" + formatInt(r.requiredSolo) + "</td>" +
           "</tr>"
         );
       }).join("");
 
-      // Sensitivity rows
-      const sensitivityRowsHtml = scenarios.map(function (s) {
-        const inc = Number.isFinite(s.incomeIncreaseNominal) ? formatWithCommas(s.incomeIncreaseNominal) : "";
-        const dec = formatWithCommas(s.outflowDecrease);
+      const combinedRowsHtml = combinedSplit.map(function (c) {
+        return "<tr><td>" + c.label + "</td><td>" + formatInt(c.suggested) + "</td></tr>";
+      }).join("");
+
+      const sensitivityRowsHtml = [s1, s2, s3].map(function (s) {
         return (
           "<tr>" +
             "<td>" + s.name + "</td>" +
             "<td>" + s.classification + "</td>" +
-            "<td>" + inc + "</td>" +
-            "<td>" + dec + "</td>" +
+            "<td>+" + formatInt(s.incomeIncrease) + "</td>" +
+            "<td>-" + formatInt(s.essentialsDecrease) + "</td>" +
           "</tr>"
         );
       }).join("");
 
-      // Combined correction rows
-      const combinedRowsHtml = combinedRows.map(function (r) {
-        return (
-          "<tr>" +
-            "<td>" + r.key + "</td>" +
-            "<td>" + formatWithCommas(r.split) + "</td>" +
-          "</tr>"
-        );
-      }).join("");
-
-      // Next actions (max 5) must reference computed items
-      const nextActions = [];
-      if (engine.requiredOutflowDecrease > 0.5) {
-        nextActions.push("Use the combined correction split across the top 3 levers to reduce baseline outflow by " + outflowDecreaseText + ".");
-      } else {
-        nextActions.push("Maintain Stable: keep total baseline outflow near " + outflowText + " while preserving the buffer funding rate.");
-      }
-
-      if (Number.isFinite(engine.incomeIncreaseNominal) && engine.incomeIncreaseNominal > 0.5) {
-        nextActions.push("Income path: increase monthly income by " + incomeIncreaseText + " (given your reliability input) to clear Stable plus buffer funding.");
-      }
-
-      if (engine.requiredMonthlyBufferBuild > 0.5) {
-        nextActions.push("Buffer funding: allocate " + bufferBuildText + " per month to build the target buffer.");
-      }
-
-      if (rankedLevers.length) {
-        nextActions.push("Largest lever: '" + rankedLevers[0].key + "' drives the biggest change leverage in this model.");
-      }
-
-      const worstScenario = scenarios.find(function (x) { return x.classification !== "Stable"; });
-      if (worstScenario) {
-        nextActions.push("Stress check: under '" + worstScenario.name + "', targets update. Use the sensitivity panel to plan for that case.");
-      }
-
-      const nextActionsHtml = nextActions.slice(0, 5).map(function (a) { return "<li>" + a + "</li>"; }).join("");
-
-      const planHtml = plan.map(function (a) { return "<li>" + a + "</li>"; }).join("");
+      const nextActionsHtml = nextActions.map(function (a) { return "<li>" + a + "</li>"; }).join("");
+      const rankedPlanHtml = rankedPlan.map(function (a) { return "<li>" + a + "</li>"; }).join("");
 
       const resultHtml =
-        '<div class="paid-results">' +
+        '<div class="di-results">' +
+          '<div class="di-badge">' + classification + '</div>' +
+          '<div class="di-muted">Stable threshold ratio: ' + formatRatio(stableRatio) + '</div>' +
 
-          // A) Headline
-          '<p class="paid-headline">Classification: ' + engine.classification + '</p>' +
-          '<p class="paid-subline">Conservative baseline uses reliability-adjusted income and drift-adjusted outflow.</p>' +
-
-          // B) Core numbers
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Core numbers</div>' +
-            '<div class="paid-kv">' +
-              '<div class="kv-item"><p class="kv-label">Total essentials (drift-adjusted)</p><p class="kv-value">' + essentialsText + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Fixed commitments</p><p class="kv-value">' + formatWithCommas(baseInputs.commitments) + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Total baseline outflow</p><p class="kv-value">' + outflowText + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Conservative income</p><p class="kv-value">' + formatWithCommas(engine.conservativeIncome) + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Coverage ratio</p><p class="kv-value">' + ratioText + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Monthly margin</p><p class="kv-value">' + marginText + '</p></div>' +
-            '</div>' +
-            '<p class="paid-note">Buffer funding rate (per month): ' + (engine.requiredMonthlyBufferBuild > 0 ? bufferBuildText : "0") + '</p>' +
+          '<h3>Core numbers</h3>' +
+          '<div class="di-kv">' +
+            '<div><strong>Total essentials:</strong> ' + formatInt(totalEssentials) + '</div>' +
+            '<div><strong>Coverage ratio (base):</strong> ' + formatRatio(ratioBase) + '</div>' +
+            '<div><strong>Coverage ratio (conservative):</strong> ' + formatRatio(ratioConservative) + '</div>' +
+            '<div><strong>Monthly margin (conservative):</strong> ' + formatInt(margin) + '</div>' +
           '</div>' +
 
-          // C) Stability target
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Stability target</div>' +
-            '<div class="paid-kv">' +
-              '<div class="kv-item"><p class="kv-label">Stable threshold ratio</p><p class="kv-value">' + STABLE_RATIO.toFixed(2) + 'x</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Gap to Stable via income increase</p><p class="kv-value">' + (incomeIncreaseText ? incomeIncreaseText : "0") + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Gap to Stable via outflow decrease</p><p class="kv-value">' + outflowDecreaseText + '</p></div>' +
-              '<div class="kv-item"><p class="kv-label">Allowed outflow at Stable (given buffer)</p><p class="kv-value">' + formatWithCommas(engine.allowedOutflow) + '</p></div>' +
-            '</div>' +
+          '<h3>Stability target</h3>' +
+          '<div class="di-kv">' +
+            '<div><strong>Gap to Stable (income increase):</strong> +' + formatInt(targets.incomeIncreaseNeeded) + '</div>' +
+            '<div><strong>Gap to Stable (essentials decrease):</strong> -' + formatInt(targets.essentialsDecreaseNeeded) + '</div>' +
           '</div>' +
 
-          // D) Lever ranking
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Lever impact ranking (top 5)</div>' +
-            '<table class="paid-table">' +
-              '<thead><tr><th>Lever</th><th>Share of outflow</th><th>Required change if only this lever changes</th><th>Feasible cap (your input)</th></tr></thead>' +
-              '<tbody>' + leverRowsHtml + '</tbody>' +
-            '</table>' +
-            '<p class="paid-note">Required change is clamped to the lever size. Feasible cap is your stated ceiling used for the ranked plan.</p>' +
+          '<h3>Stability buffer target (adjusted)</h3>' +
+          '<div class="di-kv">' +
+            '<div><strong>Target buffer depth:</strong> ' + formatPct(bufferMonths / 12).replace("%", "") + ' months</div>' +
+            '<div><strong>Adjusted buffer target:</strong> ' + formatInt(adjustedBufferTarget) + '</div>' +
           '</div>' +
 
-          // E) Next actions (max 5)
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Next actions (computed)</div>' +
-            '<ul class="paid-bullets">' + nextActionsHtml + '</ul>' +
-          '</div>' +
+          '<h3>Lever impact ranking (top 5)</h3>' +
+          '<table>' +
+            '<thead><tr><th>Lever</th><th>Share of essentials</th><th>Required change (lever alone) to reach Stable</th></tr></thead>' +
+            '<tbody>' + leverTableRowsHtml + '</tbody>' +
+          '</table>' +
 
-          // F) Sensitivity panel
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Sensitivity panel (stress scenarios)</div>' +
-            '<table class="paid-table">' +
-              '<thead><tr><th>Scenario</th><th>Classification</th><th>Income increase to Stable</th><th>Outflow decrease to Stable</th></tr></thead>' +
-              '<tbody>' + sensitivityRowsHtml + '</tbody>' +
-            '</table>' +
-          '</div>' +
+          '<h3>Next actions (max 5)</h3>' +
+          '<ul class="di-actions">' + nextActionsHtml + '</ul>' +
 
-          // G) Combined correction option
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Combined correction option (top 3 levers)</div>' +
-            '<table class="paid-table">' +
-              '<thead><tr><th>Lever</th><th>Suggested reduction</th></tr></thead>' +
-              '<tbody>' + combinedRowsHtml + '</tbody>' +
-            '</table>' +
-          '</div>' +
+          '<h3>Sensitivity panel</h3>' +
+          '<table>' +
+            '<thead><tr><th>Scenario</th><th>Classification</th><th>Gap (income +)</th><th>Gap (essentials -)</th></tr></thead>' +
+            '<tbody>' + sensitivityRowsHtml + '</tbody>' +
+          '</table>' +
 
-          // H) Ranked action plan (max 7)
-          '<div class="paid-section">' +
-            '<div class="paid-section-title">Ranked action plan (computed)</div>' +
-            '<ul class="paid-bullets">' + planHtml + '</ul>' +
-          '</div>' +
+          '<h3>Combined correction option (top 3 split)</h3>' +
+          '<table>' +
+            '<thead><tr><th>Lever</th><th>Suggested reduction</th></tr></thead>' +
+            '<tbody>' + combinedRowsHtml + '</tbody>' +
+          '</table>' +
 
+          '<h3>Ranked action plan (max 7)</h3>' +
+          '<ul>' + rankedPlanHtml + '</ul>' +
         '</div>';
 
       setResultSuccess(resultHtml);
@@ -665,7 +546,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (shareButton) {
     shareButton.addEventListener("click", function () {
       const pageUrl = window.location.href;
-      const message = "Income vs Essentials Planner Pro - check this tool: " + pageUrl;
+      const message = "Income vs Essentials Pro Tool - check this calculator: " + pageUrl;
       const encoded = encodeURIComponent(message);
       const waUrl = "https://api.whatsapp.com/send?text=" + encoded;
       window.open(waUrl, "_blank");
