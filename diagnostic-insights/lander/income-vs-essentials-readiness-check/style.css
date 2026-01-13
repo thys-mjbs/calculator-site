@@ -10,13 +10,13 @@
 
 .di-lander .home-header h1 {
   color: #ffffff;
-  max-width: 26ch;
+  max-width: 30ch;
   margin: 0 auto;
 }
 
 .di-lander .di-subhead {
   color: rgba(255, 255, 255, 0.84);
-  max-width: 60ch;
+  max-width: 64ch;
   margin: 10px auto 0 auto;
 }
 
@@ -43,6 +43,7 @@
   transform: translateZ(0);
   max-width: 100%;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .di-lander .di-btn-primary {
@@ -158,7 +159,12 @@
   color: #334155;
 }
 
-.di-lander .di-btn-full {
+.di-lander .di-card .di-btn-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -167,7 +173,7 @@
   border-radius: 12px;
   padding: 12px 14px;
   font-weight: 800;
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.10);
 }
 
 .di-lander .di-card .di-btn-primary {
@@ -177,7 +183,7 @@
 
 .di-lander .di-card .di-btn-primary:hover {
   filter: brightness(1.06);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
 }
 
 .di-lander .di-card .di-btn-secondary {
@@ -188,7 +194,7 @@
 
 .di-lander .di-card .di-btn-secondary:hover {
   filter: brightness(1.08);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
 }
 
 .di-lander .di-card-emphasis {
@@ -200,13 +206,9 @@
   border-radius: 14px;
   background: #ffffff;
   border: 1px solid #e7e7e7;
-  padding: 12px 12px;
+  padding: 12px;
   margin-bottom: 10px;
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.07);
-}
-
-.di-lander .di-faq-item:hover {
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.09);
 }
 
 .di-lander .di-faq-body p {
