@@ -40,4 +40,3 @@ There must be **no `.nojekyll` file** in the repo root.
    https://snapcalc.site/sitemap.xml
 
 Google will re-check the sitemap automatically over time. No further action is required.
-deploy trigger
