@@ -1,0 +1,151 @@
+.di-lander .di-subhead {
+  max-width: 52ch;
+  margin: 10px auto 0 auto;
+}
+
+.di-lander .di-cta-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.di-lander .di-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 12px 14px;
+  min-width: 160px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+}
+
+.di-lander .di-btn-primary {
+  background: #111111;
+  color: #ffffff;
+}
+
+.di-lander .di-btn-secondary {
+  background: #ffffff;
+  color: #111111;
+  border-color: #d8d8d8;
+}
+
+.di-lander .di-btn-full {
+  width: 100%;
+}
+
+.di-lander .di-microcopy {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555555;
+  text-align: center;
+}
+
+.di-lander .di-proof-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.di-lander .di-proof-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  padding: 10px 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.di-lander .di-proof-item strong {
+  font-size: 13px;
+  color: #111111;
+}
+
+.di-lander .di-proof-item span {
+  font-size: 13px;
+  color: #444444;
+}
+
+.di-lander .di-steps {
+  padding-left: 18px;
+  margin: 10px 0 0 0;
+}
+
+.di-lander .di-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.di-lander .di-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+.di-lander .di-card-emphasis {
+  border-color: #d0d0d0;
+}
+
+.di-lander .di-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.di-lander .di-card-line {
+  margin: 8px 0;
+}
+
+.di-lander .di-risk p {
+  margin: 8px 0;
+}
+
+.di-lander .di-faq-item {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.di-lander .di-faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.di-lander .di-faq-body p {
+  margin: 10px 0 0 0;
+  color: #444444;
+}
+
+.di-lander .di-final-line {
+  margin: 8px 0 0 0;
+}
+
+@media (min-width: 720px) {
+  .di-lander .di-proof-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .di-lander .di-proof-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .di-lander .di-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
