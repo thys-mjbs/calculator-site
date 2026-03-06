@@ -7,7 +7,11 @@
       "Bash(rm:*)",
       "Bash(xargs grep:*)",
       "Bash(xargs sh:*)",
-      "Bash(do:*)"
+      "Bash(do:*)",
+      "Bash(grep:*)",
+      "Bash(for f in calculators/math-general-calculators/percentage-increase-calculator/index.html calculators/math-general-calculators/percentage-decrease-calculator/index.html calculators/conversions-units-currencies/length-converter/index.html)",
+      "Read(//c/Users/MBenson/Documents/GitHub/calculator-site/**)",
+      "Bash(done)"
     ]
   }
 }

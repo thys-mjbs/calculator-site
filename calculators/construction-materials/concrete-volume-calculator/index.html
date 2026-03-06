@@ -216,30 +216,33 @@
       </div>
 
 <div class="grid-slot">
-<section class="seo-section">
+<section class=”seo-section”>
 <h2>Concrete volume calculator for slabs, footings, walls, and columns</h2>
-<p>This calculator estimates how much concrete you need based on your shape and dimensions. It is useful for common jobs like slabs and pads, strip footings, concrete walls, round columns, and circular pads.</p>
-<p>Choose your units, pick the shape, and enter the measurements. The calculator returns the concrete volume in cubic meters (m³), litres, and cubic yards (yd³).</p>
-<p>It also provides an ordering estimate that adds a waste allowance, which helps cover spillage, uneven excavation, formwork gaps, and over-excavation.</p>
+<p>This concrete volume calculator estimates how much concrete you need for five common structural shapes: rectangular slabs and pads, strip footings and beams, walls, round columns (cylinders), and circular slabs and pads. It supports five unit systems — metres, centimetres, millimetres, feet, and inches — so you can work from your plans without converting everything first.</p>
+<p>To use it, select your unit system and the shape you are pouring, then enter the dimensions. The calculator returns the theoretical concrete volume in cubic metres (m³), litres, and cubic yards (yd³). It also shows an ordering estimate that adds a 10% waste allowance to account for the gap between the geometric calculation and what you actually need on site.</p>
+<p>Concrete volume calculations are straightforward in principle — you are calculating the volume of a geometric shape — but errors are common in practice because the values span very different scales. A slab for a shed might be 4 m × 3 m but only 0.1 m thick. Getting thickness right is the single most common source of error. Always double-check that your thickness is in the same unit you selected in the unit dropdown, not in a different unit.</p>
+<p>The 10% waste allowance in the ordering estimate is a common default for small to medium residential pours. In practice the right allowance depends on several factors: how level the sub-base is, how tight the formwork is, whether the excavation is precise or slightly over-dug, and the mix workability. A rough excavation for a footing can easily consume 15–20% more concrete than the geometric volume suggests. For large commercial pours, suppliers and estimators often apply more refined waste factors. For home projects, the 10% estimate is a reasonable starting point and the right direction — you do not want to run short mid-pour.</p>
+<p>This calculator is for volume estimation only. It does not cover reinforcement design (rebar or mesh), concrete mix selection, pour sequencing, or structural requirements. For any load-bearing element — a footing, a structural slab, or a column — always work from engineering drawings or consult a qualified structural engineer. Volume estimation is just the first step in planning a concrete pour.</p>
 <h3>Assumptions and how to use this calculator</h3>
 <ul>
-<li>All inputs are converted to meters internally before calculating volume.</li>
-<li>The ordering estimate adds a default waste allowance of 10% (common on many small-to-medium pours).</li>
-<li>Truck counts are estimates based on typical 6 m³ and 8 m³ loads. Your supplier may differ.</li>
-<li>This tool estimates volume only. It does not design reinforcement, mix strength, or structural details.</li>
+<li>All inputs are converted to metres internally before calculating volume.</li>
+<li>Circular slab and round column volumes use π × (diameter/2)² × depth/height.</li>
+<li>The ordering estimate adds a 10% waste allowance to the calculated volume.</li>
+<li>Truck load estimates are based on typical 6 m³ and 8 m³ truck capacities. Your supplier may offer different load sizes.</li>
+<li>This tool estimates volume only. It does not design reinforcement, mix strength, or structural specifications.</li>
 </ul>
 <h3>Common questions</h3>
-<h3>How do I calculate concrete for a slab?</h3>
-<p>Select “Rectangular slab / pad” and enter length, width, and thickness. Thickness is usually the most commonly mistyped value, so double-check the unit you selected.</p>
-<h3>What thickness should I use?</h3>
-<p>This depends on the job and local standards. If you are unsure, use the thickness from your plan or builder and treat this calculator as a volume check, not a design tool.</p>
+<h3>How do I calculate concrete volume for a slab?</h3>
+<p>Select “Rectangular slab / pad”, choose your unit system, then enter length, width, and thickness. Thickness is the dimension most commonly entered in the wrong unit — for example, entering 100 when the unit is metres instead of millimetres. Double-check your unit selection before reading the result. A standard residential slab is often 100 mm thick, which is 0.1 m, not 100 m.</p>
+<h3>What slab thickness should I use?</h3>
+<p>This depends entirely on the application and local building standards. A light-duty residential slab is often 100 mm. A driveway may be 100–150 mm. A heavier-use floor or structural slab might be 150–200 mm or more. Use the thickness specified in your plans or by your engineer. If you are estimating only, treat the result as indicative and seek professional guidance for anything structural.</p>
 <h3>Why add a waste allowance?</h3>
-<p>Concrete pours rarely match the perfect geometric shape. Waste allowance helps cover small losses and real-world variability so you do not run short mid-pour.</p>
-<h3>Should I order exactly the calculated volume?</h3>
-<p>Usually no. Ordering slightly more is common. This calculator shows both the exact volume and a 10% extra estimate so you can decide what is appropriate.</p>
-<h3>Does this include rebar, mesh, or formwork?</h3>
-<p>No. It calculates concrete volume only. Materials like reinforcement and formwork are separate quantities.</p>
-<div class="last-updated">Last updated: 2025-12-12</div>
+<p>No real pour matches a perfect geometric shape. Sub-bases are never perfectly flat, formwork has small gaps, excavations are slightly over-dug, and some concrete is lost to spillage and mixing residue. Running short of concrete mid-pour is a significant problem — you cannot leave a pour partially completed. Ordering a modest amount more than the geometric volume is the standard practice on site.</p>
+<h3>Should I order exactly the calculated geometric volume?</h3>
+<p>No. Always order the ordering estimate amount (calculated volume plus waste) or more, not the bare geometric volume. If your pour is at the boundary of a truck load size, round up to the next load rather than trying to pour the exact amount and risk running short.</p>
+<h3>Does this calculator include rebar, mesh, or formwork materials?</h3>
+<p>No. This tool calculates concrete volume only. Reinforcement (rebar, mesh, fibres), formwork materials (ply, stakes, brackets), and other pour supplies are separate quantities and costs that you need to estimate separately from the concrete volume.</p>
+<div class=”last-updated”>Last updated: 2026-03-06</div>
 </section>
 </div>
 <div class="grid-slot">

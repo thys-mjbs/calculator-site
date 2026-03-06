@@ -160,29 +160,31 @@
 <div class="grid-slot">
 <section class="seo-section">
 <h2>Use Ohm’s Law to calculate voltage, current, or resistance</h2>
-<p>This Ohm’s Law calculator helps you solve basic circuit relationships using the standard formula: V = I × R. If you know any two values, you can calculate the third.</p>
-<p>Select what you want to calculate, enter the two known values, and press Calculate. The result is shown with units so you can sanity check it against what you expect.</p>
-<p>This is useful for quick checks when troubleshooting simple DC circuits, sizing resistors, estimating current draw, or verifying basic lab calculations.</p>
+<p>This Ohm’s Law calculator solves the fundamental relationship between voltage, current, and resistance in a resistive circuit. The formula is V = I × R, where V is voltage measured in volts, I is current measured in amps, and R is resistance measured in ohms. Given any two of these values, you can calculate the third. This calculator handles all three cases in one place.</p>
+<p>To use it, select what you want to calculate from the dropdown, enter the two known values in the fields that appear, and click Calculate. The result is displayed with its unit so you can quickly verify whether the answer makes sense for your circuit.</p>
+<p>Ohm’s Law is one of the most used relationships in electronics and electrical engineering. It is applied when selecting resistor values for a circuit, estimating how much current a load will draw at a given voltage, checking that a component is operating within its rated current or voltage limits, and troubleshooting unexpected behavior in simple DC circuits. Understanding the relationship between the three variables — and being able to calculate any one from the other two — is a core skill for anyone working with electronics, from beginners building their first circuits to engineers doing quick field checks.</p>
+<p>The three forms of the equation are: voltage equals current multiplied by resistance (V = I × R), current equals voltage divided by resistance (I = V ÷ R), and resistance equals voltage divided by current (R = V ÷ I). A common way to remember them is the "VIR triangle" where you cover the variable you want and read the remaining two in the correct relationship. For example, covering V gives I × R; covering I gives V ÷ R; covering R gives V ÷ I.</p>
+<p>Real-world circuits are more complex than Ohm’s Law alone describes. Wires have small but non-zero resistance, components have tolerances, temperature affects resistance in many materials, and some components like diodes and transistors are explicitly non-linear. Ohm’s Law is most accurate for simple resistive loads in DC circuits at room temperature. For more complex analysis — AC circuits, reactive components, or systems where impedance varies with frequency — additional tools and concepts are needed beyond what this calculator covers.</p>
 <h3>Assumptions and how to use this calculator</h3>
 <ul>
-<li>Uses Ohm’s Law for linear, resistive behavior (V = I × R).</li>
-<li>Assumes steady-state values (no time-varying behavior).</li>
-<li>Does not model AC impedance, phase angle, or reactive components.</li>
-<li>Enter values in base units: volts (V), amps (A), ohms (Ω).</li>
-<li>For division calculations, the denominator must be greater than zero.</li>
+<li>Uses Ohm’s Law for linear, resistive behavior (V = I × R). Does not model non-linear components.</li>
+<li>Assumes steady-state DC values. Time-varying signals require additional analysis.</li>
+<li>Does not model AC impedance, phase angle, capacitive, or inductive reactance.</li>
+<li>Enter values in base units: volts (V) for voltage, amps (A) for current, ohms (Ω) for resistance.</li>
+<li>For calculations that involve division (current and resistance modes), the denominator must be greater than zero.</li>
 </ul>
 <h3>Common questions</h3>
 <h3>What is Ohm’s Law?</h3>
-<p>Ohm’s Law describes the relationship between voltage (V), current (I), and resistance (R) in a simple resistive circuit: V = I × R.</p>
+<p>Ohm’s Law states that the voltage across a resistor equals the current through it multiplied by its resistance: V = I × R. Named after German physicist Georg Ohm, it describes the linear relationship between these three quantities in resistive materials and components. It is the starting point for almost all DC circuit analysis.</p>
 <h3>When should I calculate current?</h3>
-<p>Calculate current when you know the applied voltage and the resistance, and you want to estimate how much current will flow (I = V ÷ R).</p>
+<p>Calculate current when you know the supply voltage and the resistance of the load, and you want to know how much current will flow. This is common when checking whether a resistor or component will stay within its current rating. The formula is I = V ÷ R. For example, a 12 V supply across a 100 Ω resistor produces 0.12 A (120 mA) of current.</p>
 <h3>When should I calculate resistance?</h3>
-<p>Calculate resistance when you know the voltage and current and want the equivalent resistance of a component or load (R = V ÷ I).</p>
+<p>Calculate resistance when you know the voltage and the current and want to find the effective resistance of a load or choose an appropriate resistor value. The formula is R = V ÷ I. For example, if you measure 9 V across a component drawing 45 mA (0.045 A), the effective resistance is 200 Ω.</p>
 <h3>Why does my real-world circuit not match the result?</h3>
-<p>Real circuits include internal resistance, wiring losses, temperature effects, and sometimes non-linear components. Ohm’s Law is a simplified model and works best for resistors and near-linear loads.</p>
+<p>Ohm’s Law is a simplified model. Real circuits include internal resistance of the power source, resistance in wiring and connectors, temperature-dependent resistance in materials, and components that are inherently non-linear (like LEDs, transistors, and diodes). The calculated result is a theoretical value assuming ideal conditions. Small differences from real measurements are normal.</p>
 <h3>Does this work for AC circuits?</h3>
-<p>Not directly. AC circuits often use impedance (Z) instead of resistance (R), and calculations can involve phase and frequency.</p>
-<div class="last-updated">Last updated: 2025-12-12</div>
+<p>Not directly. In AC circuits, the opposition to current includes not just resistance but also reactance from inductors and capacitors. The combined quantity is called impedance (Z), and it involves both magnitude and phase angle. For AC analysis, you need to use the full impedance form: V = I × Z, where Z may be a complex number. This calculator only handles the DC resistive case.</p>
+<div class="last-updated">Last updated: 2026-03-06</div>
 </section>
 </div>
 <div class="grid-slot">
