@@ -1,0 +1,11 @@
+{
+  "name": "snapcalc",
+  "version": "1.0.0",
+  "description": "SnapCalc static calculator site",
+  "scripts": {
+    "build": "node scripts/generate-sitemap.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
