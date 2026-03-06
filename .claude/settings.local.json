@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(find calculators:*)",
+      "Bash(xargs sed:*)",
+      "Bash(rm:*)",
+      "Bash(xargs grep:*)",
+      "Bash(xargs sh:*)",
+      "Bash(do:*)"
+    ]
+  }
+}

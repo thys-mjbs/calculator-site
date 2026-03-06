@@ -34,7 +34,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -78,20 +78,7 @@
 <h1>Zero-Based Budget Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -101,6 +88,44 @@ atOptions = {
 <div class="form-group">
 <label for="monthlyIncome">Monthly take-home income (R)</label>
 <input id="monthlyIncome" inputmode="decimal" placeholder="e.g. 35,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="housing">Housing (rent / mortgage)</label>
+<input id="housing" inputmode="decimal" placeholder="e.g., 1,200" type="text"/>
+</div>
+<div class="form-group">
+<label for="utilities">Utilities</label>
+<input id="utilities" inputmode="decimal" placeholder="e.g., 150" type="text"/>
+</div>
+<div class="form-group">
+<label for="transport">Transport</label>
+<input id="transport" inputmode="decimal" placeholder="e.g., 300" type="text"/>
+</div>
+<div class="form-group">
+<label for="food">Food &amp; groceries</label>
+<input id="food" inputmode="decimal" placeholder="e.g., 400" type="text"/>
+</div>
+<div class="form-group">
+<label for="debtPayments">Debt repayments</label>
+<input id="debtPayments" inputmode="decimal" placeholder="e.g., 200" type="text"/>
+</div>
+<div class="form-group">
+<label for="savingsInvesting">Savings &amp; investing</label>
+<input id="savingsInvesting" inputmode="decimal" placeholder="e.g., 500" type="text"/>
+</div>
+<div class="form-group">
+<label for="insurance">Insurance</label>
+<input id="insurance" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+<div class="form-group">
+<label for="other">Other expenses</label>
+<input id="other" inputmode="decimal" placeholder="e.g., 200" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Check my budget</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">

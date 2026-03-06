@@ -35,7 +35,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -79,20 +79,7 @@
 <h1>Grade Percentage Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -102,6 +89,20 @@ atOptions = {
 <div class="form-group">
 <label for="pointsEarned">Points earned</label>
 <input id="pointsEarned" inputmode="decimal" placeholder="e.g. 42" type="text"/>
+</div>
+<div class="form-group">
+<label for="pointsPossible">Total points possible</label>
+<input id="pointsPossible" inputmode="decimal" placeholder="e.g. 50" type="text"/>
+</div>
+<div class="form-group">
+<label for="targetPercent">Target percentage (optional)</label>
+<input id="targetPercent" inputmode="decimal" placeholder="e.g. 80" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate grade</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">

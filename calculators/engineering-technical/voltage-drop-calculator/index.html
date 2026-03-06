@@ -34,7 +34,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -78,20 +78,7 @@
 <h1>Voltage Drop Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -105,6 +92,59 @@ atOptions = {
 <option value="ac1">AC single-phase</option>
 <option value="ac3">AC three-phase</option>
 </select>
+</div>
+<div class="form-group">
+<label for="supplyVoltage">Supply voltage (V)</label>
+<input id="supplyVoltage" inputmode="decimal" placeholder="e.g., 230" type="text"/>
+</div>
+<div class="form-group">
+<label for="loadCurrent">Load current (A)</label>
+<input id="loadCurrent" inputmode="decimal" placeholder="e.g., 16" type="text"/>
+</div>
+<div class="form-group">
+<label for="oneWayLength">One-way cable length (m)</label>
+<input id="oneWayLength" inputmode="decimal" placeholder="e.g., 25" type="text"/>
+</div>
+<div class="form-group">
+<label for="conductorMaterial">Conductor material</label>
+<select id="conductorMaterial">
+<option value="copper" selected>Copper</option>
+<option value="aluminum">Aluminium</option>
+</select>
+</div>
+<div class="form-group">
+<label for="cableSize">Cable size (mm²)</label>
+<select id="cableSize">
+<option value="1.5">1.5 mm²</option>
+<option value="2.5">2.5 mm²</option>
+<option value="4">4 mm²</option>
+<option value="6" selected>6 mm²</option>
+<option value="10">10 mm²</option>
+<option value="16">16 mm²</option>
+<option value="25">25 mm²</option>
+<option value="35">35 mm²</option>
+<option value="50">50 mm²</option>
+<option value="70">70 mm²</option>
+<option value="95">95 mm²</option>
+<option value="120">120 mm²</option>
+<option value="custom">Custom (enter resistance)</option>
+</select>
+</div>
+<div id="customResistanceBlock" style="display:none">
+<div class="form-group">
+<label for="customResistance">Conductor resistance (Ω/km)</label>
+<input id="customResistance" inputmode="decimal" placeholder="e.g., 3.08" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="maxDropPercent">Max allowable voltage drop (%)</label>
+<input id="maxDropPercent" inputmode="decimal" placeholder="Default: 5" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate voltage drop</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">

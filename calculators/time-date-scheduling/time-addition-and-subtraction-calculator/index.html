@@ -34,7 +34,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -78,20 +78,7 @@
 <h1>Time Addition &amp; Subtraction Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -104,6 +91,32 @@ atOptions = {
 <option value="add">Add duration</option>
 <option value="subtract">Subtract duration</option>
 </select>
+</div>
+<div class="form-group">
+<label for="startDate">Start date</label>
+<input id="startDate" type="date"/>
+</div>
+<div class="form-group">
+<label for="startTime">Start time</label>
+<input id="startTime" type="time"/>
+</div>
+<div class="form-group">
+<label for="days">Days</label>
+<input id="days" inputmode="numeric" placeholder="e.g., 3" type="text"/>
+</div>
+<div class="form-group">
+<label for="hours">Hours</label>
+<input id="hours" inputmode="numeric" placeholder="e.g., 4" type="text"/>
+</div>
+<div class="form-group">
+<label for="minutes">Minutes</label>
+<input id="minutes" inputmode="numeric" placeholder="e.g., 30" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate result</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">

@@ -34,7 +34,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -78,20 +78,7 @@
 <h1>Contribution Margin Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -106,6 +93,36 @@ atOptions = {
 <option value="total">Totals: revenue and variable costs</option>
 <option value="unit">Per unit: price, variable cost, units sold</option>
 </select>
+</div>
+<div id="modeTotalBlock">
+<div class="form-group">
+<label for="revenueInput">Total revenue</label>
+<input id="revenueInput" inputmode="decimal" placeholder="e.g., 500,000" type="text"/>
+</div>
+<div class="form-group">
+<label for="variableCostsInput">Total variable costs</label>
+<input id="variableCostsInput" inputmode="decimal" placeholder="e.g., 300,000" type="text"/>
+</div>
+</div>
+<div id="modeUnitBlock">
+<div class="form-group">
+<label for="pricePerUnitInput">Selling price per unit</label>
+<input id="pricePerUnitInput" inputmode="decimal" placeholder="e.g., 50" type="text"/>
+</div>
+<div class="form-group">
+<label for="variableCostPerUnitInput">Variable cost per unit</label>
+<input id="variableCostPerUnitInput" inputmode="decimal" placeholder="e.g., 30" type="text"/>
+</div>
+<div class="form-group">
+<label for="unitsSoldInput">Units sold</label>
+<input id="unitsSoldInput" inputmode="decimal" placeholder="e.g., 1,000" type="text"/>
+</div>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate contribution margin</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">

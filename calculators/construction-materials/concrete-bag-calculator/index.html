@@ -34,7 +34,7 @@
     }
     </script>
 <link href="/styles/main.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+
 <script defer="" src="/scripts/main.js"></script>
 <script defer="" src="/scripts/search.js"></script>
 <script defer="" src="script.js"></script>
@@ -78,20 +78,7 @@
 <h1>Concrete Bag Calculator</h1>
 <div class="page-grid">
 <!-- Row 1: ad + main calculator + ad -->
-<div class="grid-slot">
-      <div class="ad-block" aria-label="Sponsored content">
-<script>
-atOptions = {
-'key' : '46d1518853679ded4bcb05a44dc473ed',
-'format' : 'iframe',
-'height' : 300,
-'width' : 300,
-'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/46d1518853679ded4bcb05a44dc473ed/invoke.js"></script></div>
-        <p></p>
-      </div>
+<div class="grid-slot"></div>
 
 <div class="grid-slot">
 <div class="calculator-container">
@@ -107,6 +94,52 @@ atOptions = {
 <option value="volume">I know the concrete volume (m³)</option>
 <option value="slab">Slab size (length × width × thickness)</option>
 </select>
+</div>
+<div id="modeBlockVolume">
+<div class="form-group">
+<label for="volumeM3">Concrete volume (m³)</label>
+<input id="volumeM3" inputmode="decimal" placeholder="e.g., 0.75" type="text"/>
+</div>
+</div>
+<div id="modeBlockSlab">
+<div class="form-group">
+<label for="slabLengthM">Slab length (m)</label>
+<input id="slabLengthM" inputmode="decimal" placeholder="e.g., 4.0" type="text"/>
+</div>
+<div class="form-group">
+<label for="slabWidthM">Slab width (m)</label>
+<input id="slabWidthM" inputmode="decimal" placeholder="e.g., 3.0" type="text"/>
+</div>
+<div class="form-group">
+<label for="slabThicknessMm">Slab thickness (mm)</label>
+<input id="slabThicknessMm" inputmode="decimal" placeholder="e.g., 100" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="bagPreset">Bag size</label>
+<select id="bagPreset">
+<option value="20">20 kg bag</option>
+<option value="25">25 kg bag</option>
+<option value="40" selected>40 kg bag</option>
+<option value="50">50 kg bag</option>
+<option value="custom">Custom (enter yield)</option>
+</select>
+</div>
+<div id="customYieldBlock" style="display:none">
+<div class="form-group">
+<label for="customYieldM3">Yield per bag (m³)</label>
+<input id="customYieldM3" inputmode="decimal" placeholder="e.g., 0.018" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label for="wastePercent">Waste allowance (%)</label>
+<input id="wastePercent" inputmode="decimal" placeholder="Default: 10" type="text"/>
+</div>
+<!-- CALCULATOR UI END -->
+<button id="calculateButton" type="button">Calculate bags needed</button>
+<div aria-live="polite" id="result"></div>
+<div class="share-buttons">
+<button id="shareWhatsAppButton" type="button">Share this calculator on WhatsApp</button>
 </div>
 </div>
 <div class="grid-slot">
