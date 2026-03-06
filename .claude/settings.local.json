@@ -12,7 +12,9 @@
       "Bash(for f in calculators/math-general-calculators/percentage-increase-calculator/index.html calculators/math-general-calculators/percentage-decrease-calculator/index.html calculators/conversions-units-currencies/length-converter/index.html)",
       "Read(//c/Users/MBenson/Documents/GitHub/calculator-site/**)",
       "Bash(done)",
-      "Bash(for f in contact.html privacy-policy.html terms.html disclaimer.html methodology.html accuracy.html hubs.html products.html diagnostic-insights.html)"
+      "Bash(for f in contact.html privacy-policy.html terms.html disclaimer.html methodology.html accuracy.html hubs.html products.html diagnostic-insights.html)",
+      "Bash(for f in contact.html privacy-policy.html terms.html disclaimer.html about.html)",
+      "Bash(echo EXIT:$?:*)"
     ]
   }
 }
